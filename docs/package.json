@@ -1,7 +1,7 @@
 {
   "name": "pasthk",
-  "version": "2.0.0",
-  "description": "pasthk 0.1",
+  "version": "1.0.0",
+  "description": "PastHK",
   "license": "MIT",
   "type": "module",
   "scripts": {
