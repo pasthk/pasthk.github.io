@@ -12,13 +12,13 @@ export default defineUserConfig({
     themeColor: false,
     fullscreen: false,
     pageInfo: false,
+    footer: "",
+    copyright: "北京大學考古文物學院考古系吳某",
+    displayFooter: true,
     author: {
         name: "NG, Kin-chung",
         url: "https://pasthk.github.io",
       },
-    footer: "",
-    copyright: "北京大學考古文物學院考古系吳某",
-    displayFooter: true,
     navbar: [
       {
         text: "關於",
