@@ -1,18 +1,12 @@
 {
-  "name": "pasthk",
-  "version": "1.0.0",
-  "description": "PastHK",
-  "license": "MIT",
-  "type": "module",
-  "scripts": {
-    "docs:build": "vuepress build docs",
-    "docs:clean-dev": "vuepress dev docs --clean-cache",
-    "docs:dev": "vuepress dev docs"
-  },
   "devDependencies": {
-    "@vuepress/client": "2.0.0-beta.60",
-    "vue": "^3.2.45",
-    "vuepress": "2.0.0-beta.60",
-    "vuepress-theme-hope": "2.0.0-beta.156"
+    "vuepress": "^2.0.0-beta.60"
+  },
+  "scripts": {
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs"
+  },
+  "dependencies": {
+    "vuepress-theme-hope": "^2.0.0-beta.158"
   }
 }
