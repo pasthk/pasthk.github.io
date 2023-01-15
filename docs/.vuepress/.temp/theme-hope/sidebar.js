@@ -1,1 +1,1 @@
-export const sidebarData = {"/":["README.md"]};
+export const sidebarData = {"/":["README.md","about.md"]};
