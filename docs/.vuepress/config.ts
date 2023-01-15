@@ -12,8 +12,9 @@ export default defineUserConfig({
     themeColor: false,
     fullscreen: false,
     pageInfo: false,
+    contributors: false,
     footer: "",
-    copyright: "北京大學考古文物學院考古系吳某",
+    copyright: "香港歷史研究索引集",
     displayFooter: true,
     author: {
         name: "NG, Kin-chung",
