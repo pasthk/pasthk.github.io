@@ -13,6 +13,7 @@ export default defineUserConfig({
     fullscreen: false,
     pageInfo: false,
     contributors: false,
+    lastUpdated: false,
     footer: "",
     copyright: "香港歷史研究索引集",
     displayFooter: true,
