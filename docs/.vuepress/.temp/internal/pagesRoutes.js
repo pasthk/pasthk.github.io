@@ -6,5 +6,6 @@ export const pagesRoutes = [
   ["v-97947b32","/archaeology/report.html",{"y":"a","title":"調查、發掘報告"},["/archaeology/report","/archaeology/report.md"]],
   ["v-0dc31440","/archaeology/research.html",{"y":"a","title":"專題研究"},["/archaeology/research","/archaeology/research.md"]],
   ["v-67f50686","/archaeology/seminar.html",{"y":"a","title":"研討會"},["/archaeology/seminar","/archaeology/seminar.md"]],
+  ["v-3469c352","/folkloristics/",{"y":"a","title":"民俗文獻"},["/folkloristics/index.html","/folkloristics/README.md"]],
   ["v-3706649a","/404.html",{"y":"p","title":""},["/404"]],
 ]

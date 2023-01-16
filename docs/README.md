@@ -9,4 +9,6 @@ index: false
 features:
   - title: 考古學文獻
     link: /archaeology
+  - title: 民俗學文獻
+    link: /folkloristics
 ---

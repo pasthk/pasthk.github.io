@@ -1,1 +1,1 @@
-export const sidebarData = {"/":[{"text":"考古學文獻","prefix":"archaeology/","collapsible":true,"children":["research.md","news.md","seminar.md","report.md"]}]};
+export const sidebarData = {"/":[{"text":"民俗文獻","prefix":"folkloristics/","collapsible":true,"children":[]},{"text":"考古學文獻","prefix":"archaeology/","collapsible":true,"children":["research.md","news.md","seminar.md","report.md"]}]};
