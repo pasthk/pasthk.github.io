@@ -5,7 +5,7 @@ export default defineUserConfig({
   base: "/",
   lang: "zh-TW",
   title: "追跡香江",
-  description: "香港歷史研究索引集",
+  description: "香港文史研究索引集",
   theme: hopeTheme({
     hostname: "https://pasthk.github.io",
     darkmode: "disable",
@@ -15,7 +15,7 @@ export default defineUserConfig({
     contributors: false,
     lastUpdated: false,
     footer: "",
-    copyright: "香港歷史研究索引集",
+    copyright: "香港文史研究索引集",
     displayFooter: true,
     author: {
         name: "NG, Kin-chung",
