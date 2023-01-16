@@ -15,8 +15,14 @@ export const pagesComponents = {
   "v-0dc31440": defineAsyncComponent(() => import(/* webpackChunkName: "v-0dc31440" */"/Users/ngkinchung/Documents/GitHub/pasthk.github.io/docs/.vuepress/.temp/pages/archaeology/research.html.vue")),
   // path: /archaeology/seminar.html
   "v-67f50686": defineAsyncComponent(() => import(/* webpackChunkName: "v-67f50686" */"/Users/ngkinchung/Documents/GitHub/pasthk.github.io/docs/.vuepress/.temp/pages/archaeology/seminar.html.vue")),
+  // path: /archaeology/yearbook.html
+  "v-4ae409b5": defineAsyncComponent(() => import(/* webpackChunkName: "v-4ae409b5" */"/Users/ngkinchung/Documents/GitHub/pasthk.github.io/docs/.vuepress/.temp/pages/archaeology/yearbook.html.vue")),
   // path: /folkloristics/
   "v-3469c352": defineAsyncComponent(() => import(/* webpackChunkName: "v-3469c352" */"/Users/ngkinchung/Documents/GitHub/pasthk.github.io/docs/.vuepress/.temp/pages/folkloristics/index.html.vue")),
+  // path: /folkloristics/news.html
+  "v-1cbb4a58": defineAsyncComponent(() => import(/* webpackChunkName: "v-1cbb4a58" */"/Users/ngkinchung/Documents/GitHub/pasthk.github.io/docs/.vuepress/.temp/pages/folkloristics/news.html.vue")),
+  // path: /folkloristics/research.html
+  "v-6468fa0c": defineAsyncComponent(() => import(/* webpackChunkName: "v-6468fa0c" */"/Users/ngkinchung/Documents/GitHub/pasthk.github.io/docs/.vuepress/.temp/pages/folkloristics/research.html.vue")),
   // path: /404.html
   "v-3706649a": defineAsyncComponent(() => import(/* webpackChunkName: "v-3706649a" */"/Users/ngkinchung/Documents/GitHub/pasthk.github.io/docs/.vuepress/.temp/pages/404.html.vue")),
 }
