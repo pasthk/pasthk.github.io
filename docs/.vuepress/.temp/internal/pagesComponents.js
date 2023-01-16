@@ -7,6 +7,8 @@ export const pagesComponents = {
   "v-22a39d25": defineAsyncComponent(() => import(/* webpackChunkName: "v-22a39d25" */"/Users/ngkinchung/Documents/GitHub/pasthk.github.io/docs/.vuepress/.temp/pages/about.html.vue")),
   // path: /archaeology/
   "v-0ed39efe": defineAsyncComponent(() => import(/* webpackChunkName: "v-0ed39efe" */"/Users/ngkinchung/Documents/GitHub/pasthk.github.io/docs/.vuepress/.temp/pages/archaeology/index.html.vue")),
+  // path: /archaeology/news.html
+  "v-9b123eb0": defineAsyncComponent(() => import(/* webpackChunkName: "v-9b123eb0" */"/Users/ngkinchung/Documents/GitHub/pasthk.github.io/docs/.vuepress/.temp/pages/archaeology/news.html.vue")),
   // path: /archaeology/report.html
   "v-97947b32": defineAsyncComponent(() => import(/* webpackChunkName: "v-97947b32" */"/Users/ngkinchung/Documents/GitHub/pasthk.github.io/docs/.vuepress/.temp/pages/archaeology/report.html.vue")),
   // path: /archaeology/research.html
