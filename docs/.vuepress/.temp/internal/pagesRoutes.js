@@ -1,10 +1,6 @@
 export const pagesRoutes = [
   ["v-8daa1a0e","/",{"y":"h","title":"主頁"},["/index.html","/README.md"]],
   ["v-22a39d25","/about.html",{"y":"a","title":"關於"},["/about","/about.md"]],
-  ["v-3469c352","/folkloristics/",{"y":"a","title":"民俗學文獻"},["/folkloristics/index.html","/folkloristics/README.md"]],
-  ["v-884316f0","/folkloristics/cheung-chau-jiao-festival.html",{"y":"a","title":"長洲太平清醮"},["/folkloristics/cheung-chau-jiao-festival","/folkloristics/cheung-chau-jiao-festival.md"]],
-  ["v-6468fa0c","/folkloristics/research.html",{"y":"a","title":"專題研究"},["/folkloristics/research","/folkloristics/research.md"]],
-  ["v-4657c6be","/folkloristics/tai-hang-fire-dragon-dance.html",{"y":"a","title":"大坑舞火龍"},["/folkloristics/tai-hang-fire-dragon-dance","/folkloristics/tai-hang-fire-dragon-dance.md"]],
   ["v-0ed39efe","/archaeology/",{"y":"a","title":"考古學文獻"},["/archaeology/index.html","/archaeology/README.md"]],
   ["v-61b4b68f","/archaeology/junk-island-site-sai-kung.html",{"y":"a","title":"西貢佛頭洲遺址"},["/archaeology/junk-island-site-sai-kung","/archaeology/junk-island-site-sai-kung.md"]],
   ["v-4d51b941","/archaeology/lei-cheng-uk-han-tomb-kowloon.html",{"y":"a","title":"九龍李鄭屋漢墓"},["/archaeology/lei-cheng-uk-han-tomb-kowloon","/archaeology/lei-cheng-uk-han-tomb-kowloon.md"]],
@@ -15,5 +11,9 @@ export const pagesRoutes = [
   ["v-67f50686","/archaeology/seminar.html",{"y":"a","title":"研討會"},["/archaeology/seminar","/archaeology/seminar.md"]],
   ["v-2249e415","/archaeology/tai-wan-site-lamma-island.html",{"y":"a","title":"南丫島大灣遺址"},["/archaeology/tai-wan-site-lamma-island","/archaeology/tai-wan-site-lamma-island.md"]],
   ["v-4ae409b5","/archaeology/yearbook.html",{"y":"a","title":"年鑒"},["/archaeology/yearbook","/archaeology/yearbook.md"]],
+  ["v-3469c352","/folkloristics/",{"y":"a","title":"民俗學文獻"},["/folkloristics/index.html","/folkloristics/README.md"]],
+  ["v-884316f0","/folkloristics/cheung-chau-jiao-festival.html",{"y":"a","title":"長洲太平清醮"},["/folkloristics/cheung-chau-jiao-festival","/folkloristics/cheung-chau-jiao-festival.md"]],
+  ["v-6468fa0c","/folkloristics/research.html",{"y":"a","title":"專題研究"},["/folkloristics/research","/folkloristics/research.md"]],
+  ["v-4657c6be","/folkloristics/tai-hang-fire-dragon-dance.html",{"y":"a","title":"大坑舞火龍"},["/folkloristics/tai-hang-fire-dragon-dance","/folkloristics/tai-hang-fire-dragon-dance.md"]],
   ["v-3706649a","/404.html",{"y":"p","title":""},["/404"]],
 ]

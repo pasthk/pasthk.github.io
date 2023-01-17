@@ -5,14 +5,6 @@ export const pagesComponents = {
   "v-8daa1a0e": defineAsyncComponent(() => import(/* webpackChunkName: "v-8daa1a0e" */"/Users/ngkinchung/Documents/GitHub/pasthk.github.io/docs/.vuepress/.temp/pages/index.html.vue")),
   // path: /about.html
   "v-22a39d25": defineAsyncComponent(() => import(/* webpackChunkName: "v-22a39d25" */"/Users/ngkinchung/Documents/GitHub/pasthk.github.io/docs/.vuepress/.temp/pages/about.html.vue")),
-  // path: /folkloristics/
-  "v-3469c352": defineAsyncComponent(() => import(/* webpackChunkName: "v-3469c352" */"/Users/ngkinchung/Documents/GitHub/pasthk.github.io/docs/.vuepress/.temp/pages/folkloristics/index.html.vue")),
-  // path: /folkloristics/cheung-chau-jiao-festival.html
-  "v-884316f0": defineAsyncComponent(() => import(/* webpackChunkName: "v-884316f0" */"/Users/ngkinchung/Documents/GitHub/pasthk.github.io/docs/.vuepress/.temp/pages/folkloristics/cheung-chau-jiao-festival.html.vue")),
-  // path: /folkloristics/research.html
-  "v-6468fa0c": defineAsyncComponent(() => import(/* webpackChunkName: "v-6468fa0c" */"/Users/ngkinchung/Documents/GitHub/pasthk.github.io/docs/.vuepress/.temp/pages/folkloristics/research.html.vue")),
-  // path: /folkloristics/tai-hang-fire-dragon-dance.html
-  "v-4657c6be": defineAsyncComponent(() => import(/* webpackChunkName: "v-4657c6be" */"/Users/ngkinchung/Documents/GitHub/pasthk.github.io/docs/.vuepress/.temp/pages/folkloristics/tai-hang-fire-dragon-dance.html.vue")),
   // path: /archaeology/
   "v-0ed39efe": defineAsyncComponent(() => import(/* webpackChunkName: "v-0ed39efe" */"/Users/ngkinchung/Documents/GitHub/pasthk.github.io/docs/.vuepress/.temp/pages/archaeology/index.html.vue")),
   // path: /archaeology/junk-island-site-sai-kung.html
@@ -33,6 +25,14 @@ export const pagesComponents = {
   "v-2249e415": defineAsyncComponent(() => import(/* webpackChunkName: "v-2249e415" */"/Users/ngkinchung/Documents/GitHub/pasthk.github.io/docs/.vuepress/.temp/pages/archaeology/tai-wan-site-lamma-island.html.vue")),
   // path: /archaeology/yearbook.html
   "v-4ae409b5": defineAsyncComponent(() => import(/* webpackChunkName: "v-4ae409b5" */"/Users/ngkinchung/Documents/GitHub/pasthk.github.io/docs/.vuepress/.temp/pages/archaeology/yearbook.html.vue")),
+  // path: /folkloristics/
+  "v-3469c352": defineAsyncComponent(() => import(/* webpackChunkName: "v-3469c352" */"/Users/ngkinchung/Documents/GitHub/pasthk.github.io/docs/.vuepress/.temp/pages/folkloristics/index.html.vue")),
+  // path: /folkloristics/cheung-chau-jiao-festival.html
+  "v-884316f0": defineAsyncComponent(() => import(/* webpackChunkName: "v-884316f0" */"/Users/ngkinchung/Documents/GitHub/pasthk.github.io/docs/.vuepress/.temp/pages/folkloristics/cheung-chau-jiao-festival.html.vue")),
+  // path: /folkloristics/research.html
+  "v-6468fa0c": defineAsyncComponent(() => import(/* webpackChunkName: "v-6468fa0c" */"/Users/ngkinchung/Documents/GitHub/pasthk.github.io/docs/.vuepress/.temp/pages/folkloristics/research.html.vue")),
+  // path: /folkloristics/tai-hang-fire-dragon-dance.html
+  "v-4657c6be": defineAsyncComponent(() => import(/* webpackChunkName: "v-4657c6be" */"/Users/ngkinchung/Documents/GitHub/pasthk.github.io/docs/.vuepress/.temp/pages/folkloristics/tai-hang-fire-dragon-dance.html.vue")),
   // path: /404.html
   "v-3706649a": defineAsyncComponent(() => import(/* webpackChunkName: "v-3706649a" */"/Users/ngkinchung/Documents/GitHub/pasthk.github.io/docs/.vuepress/.temp/pages/404.html.vue")),
 }
