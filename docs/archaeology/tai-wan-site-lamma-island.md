@@ -3,13 +3,14 @@ title: 南丫島大灣遺址
 category: 考古
 date: 2023-01-16
 ---
-## 調查、發掘報告
+## 調查報告
+1. 〈香港考古發現5000年前居住遺跡〉，《中學地理教學參考》1996年第6期，第46頁。
+2. 〈大灣（南丫島）具考古研究價值的地點〉，香港：古物古蹟辦事處檔案，編號：AM77-0041。
+3. 〈2006年南丫島大灣丈量約份第3LM約第1045號地段小型屋宇考古調查工作報告〉，香港：古物古蹟辦事處檔案，編號：LI26。
+4. "Archaeological Survey cum Archaeological Watching Brief for Small House Development at Lot No. 1090 RP in D.D.3 LM at Tai Wan on Lamma Island", Hong Kong: Antiquities and Monuments Office, LI29.
+5. "Archaeological Investigation on 4 Small House Developments at Lot Nos. 1026SA and 1028 RP, Lots nos 1026SB, Lot Nos. 1104RP, 1105SB and 1117SA and Lot Nos. 1104SA, 1105SA at Tai Wan on Lamma Island Final Report", Hong Kong: Antiquities and Monuments Office, LI30.
+## 發掘報告
 1. 區家發、馮永驅、李果、鄧聰、商志（香覃）：〈香港南丫島大灣遺址發掘簡報〉，載香港中文大學中國考古藝術研究中心編：《南中國及鄰近地區古文化研究——慶祝鄭德坤教授從事學術活動六十週年論文集》，香港：香港中文大學出版社，1994年，第195-208頁。
-2. 〈香港考古發現5000年前居住遺跡〉，《中學地理教學參考》1996年第6期，第46頁。
-3. 〈大灣（南丫島）具考古研究價值的地點〉，香港：古物古蹟辦事處檔案，編號：AM77-0041。
-4. 〈2006年南丫島大灣丈量約份第3LM約第1045號地段小型屋宇考古調查工作報告〉，香港：古物古蹟辦事處檔案，編號：LI26。
-5. "Archaeological Survey cum Archaeological Watching Brief for Small House Development at Lot No. 1090 RP in D.D. 3 LM at Tai Wan on Lamma Island"，香港：古物古蹟辦事處檔案，編號：LI29。
-6. "Archaeological Investigation on 4 Small House Developments at Lot Nos. 1026SA and 1028 RP, Lots nos 1026SB, Lot Nos. 1104RP, 1105SB and 1117SA and Lot Nos. 1104SA, 1105SA at Tai Wan on Lamma Island Final report"，香港：古物古蹟辦事處檔案，編號：LI30。
 ## 研究
 1. 楊伯達：〈香港南丫島大灣遺址出土牙璋初探〉，載香港中文大學中國考古藝術研究中心編：《南中國及鄰近地區古文化研究——慶祝鄭德坤教授從事學術活動六十週年論文集》，香港：香港中文大學出版社，1994年，第119-124頁。
 2. 林巳奈夫：〈試論香港南丫島大灣出土的牙璋〉，載香港中文大學中國考古藝術研究中心編：《南中國及鄰近地區古文化研究——慶祝鄭德坤教授從事學術活動六十週年論文集》，香港：香港中文大學出版社，1994年，第125-134頁。

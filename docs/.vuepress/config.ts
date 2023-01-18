@@ -23,9 +23,13 @@ export default defineUserConfig({
       },
     navbar: [
       {
+        text: "資料庫",
+        link: "/database/",
+      }, 
+      {
         text: "關於",
         link: "/about.md",
-      },   
+      }, 
     ],
       plugins: {
         mdEnhance: {
