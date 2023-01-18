@@ -1,13 +1,10 @@
 <template><div><h2 id="調查、發掘報告" tabindex="-1"><a class="header-anchor" href="#調查、發掘報告" aria-hidden="true">#</a> 調查、發掘報告</h2>
 <ol>
-<li>屈志仁：《李鄭屋漢墓》（香港：香港市政局，1983年）。</li>
-<li>香港歷史博物館編：《李鄭屋漢墓》（香港：香港歷史博物館，2005年）。</li>
-<li>〈李鄭屋漢墓〉（香港：古物古蹟辦事處檔案，編號：AM77-0091）。</li>
+<li>屈志仁：《李鄭屋漢墓》，香港：香港市政局，1983年。</li>
+<li>香港歷史博物館編：《李鄭屋漢墓》，香港：香港歷史博物館，2005年。</li>
+<li>〈李鄭屋漢墓〉，香港：古物古蹟辦事處檔案，編號：AM77-0091。</li>
 </ol>
 <h2 id="新聞報道" tabindex="-1"><a class="header-anchor" href="#新聞報道" aria-hidden="true">#</a> 新聞報道</h2>
-<blockquote>
-<p>報道按日期舊至新排序。</p>
-</blockquote>
 <ol>
 <li>〈<a href="https://mmis.hkpl.gov.hk/coverpage/-/coverpage/view?_coverpage_WAR_mmisportalportlet_hsf=%E6%9D%8E%E9%84%AD%E5%B1%8B&amp;p_r_p_-1078056564_c=QF757YsWv59a9PNz3lScYqgi6uOtkx55&amp;_coverpage_WAR_mmisportalportlet_o=132&amp;_coverpage_WAR_mmisportalportlet_actual_q=%28%20verbatim_dc.collection%3A%28%22Old%5C%20HK%5C%20Newspapers%22%29%20%29%20AND+%28%20%28%20allTermsMandatory%3A%28true%29%20OR+all_dc.title%3A%28%E6%9D%8E%E9%84%AD%E5%B1%8B%29%20OR+all_dc.creator%3A%28%E6%9D%8E%E9%84%AD%E5%B1%8B%29%20OR+all_dc.contributor%3A%28%E6%9D%8E%E9%84%AD%E5%B1%8B%29%20OR+all_dc.subject%3A%28%E6%9D%8E%E9%84%AD%E5%B1%8B%29%20OR+fulltext%3A%28%E6%9D%8E%E9%84%AD%E5%B1%8B%29%20OR+all_dc.description%3A%28%E6%9D%8E%E9%84%AD%E5%B1%8B%29%20%29%20%29&amp;_coverpage_WAR_mmisportalportlet_sort_order=asc&amp;_coverpage_WAR_mmisportalportlet_sort_field=dc.publicationdate_bsort" target="_blank" rel="noopener noreferrer">李鄭屋村山坵發現古塚　塚内有陶器二十餘件　似是千五年前古物<ExternalLinkIcon/></a>〉，《工商日報》，1955年8月10日，第5頁。</li>
 <li>〈<a href="https://mmis.hkpl.gov.hk/coverpage/-/coverpage/view?_coverpage_WAR_mmisportalportlet_hsf=%E6%9D%8E%E9%84%AD%E5%B1%8B&amp;p_r_p_-1078056564_c=QF757YsWv5%2FH7zGe%2FKF%2BFB8IQlsDeA58&amp;_coverpage_WAR_mmisportalportlet_o=133&amp;_coverpage_WAR_mmisportalportlet_actual_q=%28%20verbatim_dc.collection%3A%28%22Old%5C%20HK%5C%20Newspapers%22%29%20%29%20AND+%28%20%28%20allTermsMandatory%3A%28true%29%20OR+all_dc.title%3A%28%E6%9D%8E%E9%84%AD%E5%B1%8B%29%20OR+all_dc.creator%3A%28%E6%9D%8E%E9%84%AD%E5%B1%8B%29%20OR+all_dc.contributor%3A%28%E6%9D%8E%E9%84%AD%E5%B1%8B%29%20OR+all_dc.subject%3A%28%E6%9D%8E%E9%84%AD%E5%B1%8B%29%20OR+fulltext%3A%28%E6%9D%8E%E9%84%AD%E5%B1%8B%29%20OR+all_dc.description%3A%28%E6%9D%8E%E9%84%AD%E5%B1%8B%29%20%29%20%29&amp;_coverpage_WAR_mmisportalportlet_sort_order=asc&amp;_coverpage_WAR_mmisportalportlet_sort_field=dc.publicationdate_bsort" target="_blank" rel="noopener noreferrer">李鄭屋村發現古塚　港大教授認爲可能建於漢唐之間　推測塚內埋葬者係一鄉紳<ExternalLinkIcon/></a>〉，《工商晚報》，1955年8月10日，第4頁。</li>
