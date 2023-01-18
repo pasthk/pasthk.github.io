@@ -1,4 +1,4 @@
-<template><div><h2 id="調查、發掘報告" tabindex="-1"><a class="header-anchor" href="#調查、發掘報告" aria-hidden="true">#</a> 調查、發掘報告</h2>
+<template><div><h2 id="發掘報告" tabindex="-1"><a class="header-anchor" href="#發掘報告" aria-hidden="true">#</a> 發掘報告</h2>
 <ol>
 <li>屈志仁：《李鄭屋漢墓》，香港：香港市政局，1983年。</li>
 <li>香港歷史博物館編：《李鄭屋漢墓》，香港：香港歷史博物館，2005年。</li>

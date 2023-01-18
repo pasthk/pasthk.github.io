@@ -1,1 +1,0 @@
-import{_ as t,V as n,W as _,X as e}from"./framework-5acaca34.js";const c={},l=e("ul",null,[e("li",null,"檔案")],-1),o=[l];function s(r,a){return n(),_("div",null,o)}const d=t(c,[["render",s],["__file","index.html.vue"]]);export{d as default};
