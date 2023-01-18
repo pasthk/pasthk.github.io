@@ -5,7 +5,7 @@
 <h2 id="舞火龍" tabindex="-1"><a class="header-anchor" href="#舞火龍" aria-hidden="true">#</a> 舞火龍</h2>
 <ul>
 <li><RouterLink to="/folkloristics/tai-hang-fire-dragon-dance.html">大坑舞火龍</RouterLink></li>
-<li>薄扶林舞火龍</li>
+<li><RouterLink to="/folkloristics/pok-fu-lam-fire-dragon-dance.html">薄扶林舞火龍</RouterLink></li>
 </ul>
 </div></template>
 
