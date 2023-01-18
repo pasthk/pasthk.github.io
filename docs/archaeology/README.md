@@ -12,5 +12,6 @@ date: 2023-01-15
 - [聖山遺址](sacred-hill-site-kowloon.md)
 ### 西貢
 - [佛頭洲遺址](junk-island-site-sai-kung.md)
+- [黃地峒遺址](wong-tei-tung-sai-kung.md)
 ### 南丫島
 - [大灣遺址](tai-wan-site-lamma-island.md)

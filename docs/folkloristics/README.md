@@ -8,4 +8,4 @@ date: 2023-01-16
 - [長洲太平清醮](cheung-chau-jiao-festival.md)
 ## 舞火龍
 - [大坑舞火龍](tai-hang-fire-dragon-dance.md)
-- 薄扶林舞火龍
+- [薄扶林舞火龍](pok-fu-lam-fire-dragon-dance.md)
