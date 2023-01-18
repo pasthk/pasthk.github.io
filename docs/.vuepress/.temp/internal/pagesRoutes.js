@@ -10,6 +10,7 @@ export const pagesRoutes = [
   ["v-6fab00de","/archaeology/sacred-hill-site-kowloon.html",{"y":"a","title":"九龍聖山遺址"},["/archaeology/sacred-hill-site-kowloon","/archaeology/sacred-hill-site-kowloon.md"]],
   ["v-67f50686","/archaeology/seminar.html",{"y":"a","title":"研討會"},["/archaeology/seminar","/archaeology/seminar.md"]],
   ["v-2249e415","/archaeology/tai-wan-site-lamma-island.html",{"y":"a","title":"南丫島大灣遺址"},["/archaeology/tai-wan-site-lamma-island","/archaeology/tai-wan-site-lamma-island.md"]],
+  ["v-b7f45a38","/archaeology/wong-tei-tung-sai-kung.html",{"y":"a","title":"西貢黃地峒遺址"},["/archaeology/wong-tei-tung-sai-kung","/archaeology/wong-tei-tung-sai-kung.md"]],
   ["v-4ae409b5","/archaeology/yearbook.html",{"y":"a","title":"年鑒"},["/archaeology/yearbook","/archaeology/yearbook.md"]],
   ["v-3469c352","/folkloristics/",{"y":"a","title":"民俗學文獻"},["/folkloristics/index.html","/folkloristics/README.md"]],
   ["v-884316f0","/folkloristics/cheung-chau-jiao-festival.html",{"y":"a","title":"長洲太平清醮"},["/folkloristics/cheung-chau-jiao-festival","/folkloristics/cheung-chau-jiao-festival.md"]],

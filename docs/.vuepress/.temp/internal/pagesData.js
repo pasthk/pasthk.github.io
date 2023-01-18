@@ -21,6 +21,8 @@ export const pagesData = {
   "v-67f50686": () => import(/* webpackChunkName: "v-67f50686" */"/Users/ngkinchung/Documents/GitHub/pasthk.github.io/docs/.vuepress/.temp/pages/archaeology/seminar.html.js").then(({ data }) => data),
   // path: /archaeology/tai-wan-site-lamma-island.html
   "v-2249e415": () => import(/* webpackChunkName: "v-2249e415" */"/Users/ngkinchung/Documents/GitHub/pasthk.github.io/docs/.vuepress/.temp/pages/archaeology/tai-wan-site-lamma-island.html.js").then(({ data }) => data),
+  // path: /archaeology/wong-tei-tung-sai-kung.html
+  "v-b7f45a38": () => import(/* webpackChunkName: "v-b7f45a38" */"/Users/ngkinchung/Documents/GitHub/pasthk.github.io/docs/.vuepress/.temp/pages/archaeology/wong-tei-tung-sai-kung.html.js").then(({ data }) => data),
   // path: /archaeology/yearbook.html
   "v-4ae409b5": () => import(/* webpackChunkName: "v-4ae409b5" */"/Users/ngkinchung/Documents/GitHub/pasthk.github.io/docs/.vuepress/.temp/pages/archaeology/yearbook.html.js").then(({ data }) => data),
   // path: /folkloristics/
