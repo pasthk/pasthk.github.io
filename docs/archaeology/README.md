@@ -1,5 +1,5 @@
 ---
-title: 考古
+title: 考古學
 category: 文化
 index: false
 date: 2023-01-15

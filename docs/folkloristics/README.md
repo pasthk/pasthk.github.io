@@ -1,5 +1,5 @@
 ---
-title: 民俗
+title: 民俗學
 category: 文化
 index: false
 date: 2023-01-16
