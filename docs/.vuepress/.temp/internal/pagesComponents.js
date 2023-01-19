@@ -13,6 +13,8 @@ export const pagesComponents = {
   "v-61b4b68f": defineAsyncComponent(() => import(/* webpackChunkName: "v-61b4b68f" */"/Users/ngkinchung/Documents/GitHub/pasthk.github.io/docs/.vuepress/.temp/pages/archaeology/junk-island-site-sai-kung.html.vue")),
   // path: /archaeology/lei-cheng-uk-han-tomb-kowloon.html
   "v-4d51b941": defineAsyncComponent(() => import(/* webpackChunkName: "v-4d51b941" */"/Users/ngkinchung/Documents/GitHub/pasthk.github.io/docs/.vuepress/.temp/pages/archaeology/lei-cheng-uk-han-tomb-kowloon.html.vue")),
+  // path: /archaeology/lung-kwu-tan-tuen-mun.html
+  "v-d85a044e": defineAsyncComponent(() => import(/* webpackChunkName: "v-d85a044e" */"/Users/ngkinchung/Documents/GitHub/pasthk.github.io/docs/.vuepress/.temp/pages/archaeology/lung-kwu-tan-tuen-mun.html.vue")),
   // path: /archaeology/news.html
   "v-9b123eb0": defineAsyncComponent(() => import(/* webpackChunkName: "v-9b123eb0" */"/Users/ngkinchung/Documents/GitHub/pasthk.github.io/docs/.vuepress/.temp/pages/archaeology/news.html.vue")),
   // path: /archaeology/people.html
@@ -51,8 +53,6 @@ export const pagesComponents = {
   "v-67892b0e": defineAsyncComponent(() => import(/* webpackChunkName: "v-67892b0e" */"/Users/ngkinchung/Documents/GitHub/pasthk.github.io/docs/.vuepress/.temp/pages/folkloristics/yu-lan-festival.html.vue")),
   // path: /meteorology/
   "v-94c20fa0": defineAsyncComponent(() => import(/* webpackChunkName: "v-94c20fa0" */"/Users/ngkinchung/Documents/GitHub/pasthk.github.io/docs/.vuepress/.temp/pages/meteorology/index.html.vue")),
-  // path: /meteorology/t.html
-  "v-445b7d15": defineAsyncComponent(() => import(/* webpackChunkName: "v-445b7d15" */"/Users/ngkinchung/Documents/GitHub/pasthk.github.io/docs/.vuepress/.temp/pages/meteorology/t.html.vue")),
   // path: /geology/
   "v-44a73662": defineAsyncComponent(() => import(/* webpackChunkName: "v-44a73662" */"/Users/ngkinchung/Documents/GitHub/pasthk.github.io/docs/.vuepress/.temp/pages/geology/index.html.vue")),
   // path: /religious-studies/

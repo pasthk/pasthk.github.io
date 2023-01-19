@@ -11,6 +11,8 @@ export const pagesData = {
   "v-61b4b68f": () => import(/* webpackChunkName: "v-61b4b68f" */"/Users/ngkinchung/Documents/GitHub/pasthk.github.io/docs/.vuepress/.temp/pages/archaeology/junk-island-site-sai-kung.html.js").then(({ data }) => data),
   // path: /archaeology/lei-cheng-uk-han-tomb-kowloon.html
   "v-4d51b941": () => import(/* webpackChunkName: "v-4d51b941" */"/Users/ngkinchung/Documents/GitHub/pasthk.github.io/docs/.vuepress/.temp/pages/archaeology/lei-cheng-uk-han-tomb-kowloon.html.js").then(({ data }) => data),
+  // path: /archaeology/lung-kwu-tan-tuen-mun.html
+  "v-d85a044e": () => import(/* webpackChunkName: "v-d85a044e" */"/Users/ngkinchung/Documents/GitHub/pasthk.github.io/docs/.vuepress/.temp/pages/archaeology/lung-kwu-tan-tuen-mun.html.js").then(({ data }) => data),
   // path: /archaeology/news.html
   "v-9b123eb0": () => import(/* webpackChunkName: "v-9b123eb0" */"/Users/ngkinchung/Documents/GitHub/pasthk.github.io/docs/.vuepress/.temp/pages/archaeology/news.html.js").then(({ data }) => data),
   // path: /archaeology/people.html
@@ -49,8 +51,6 @@ export const pagesData = {
   "v-67892b0e": () => import(/* webpackChunkName: "v-67892b0e" */"/Users/ngkinchung/Documents/GitHub/pasthk.github.io/docs/.vuepress/.temp/pages/folkloristics/yu-lan-festival.html.js").then(({ data }) => data),
   // path: /meteorology/
   "v-94c20fa0": () => import(/* webpackChunkName: "v-94c20fa0" */"/Users/ngkinchung/Documents/GitHub/pasthk.github.io/docs/.vuepress/.temp/pages/meteorology/index.html.js").then(({ data }) => data),
-  // path: /meteorology/t.html
-  "v-445b7d15": () => import(/* webpackChunkName: "v-445b7d15" */"/Users/ngkinchung/Documents/GitHub/pasthk.github.io/docs/.vuepress/.temp/pages/meteorology/t.html.js").then(({ data }) => data),
   // path: /geology/
   "v-44a73662": () => import(/* webpackChunkName: "v-44a73662" */"/Users/ngkinchung/Documents/GitHub/pasthk.github.io/docs/.vuepress/.temp/pages/geology/index.html.js").then(({ data }) => data),
   // path: /religious-studies/

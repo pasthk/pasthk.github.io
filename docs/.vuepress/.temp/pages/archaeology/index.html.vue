@@ -29,7 +29,7 @@
 <li>沙洲</li>
 <li>小欖</li>
 <li>藍地</li>
-<li>龍鼓灘</li>
+<li><RouterLink to="/archaeology/lung-kwu-tan-tuen-mun.html">龍鼓灘</RouterLink></li>
 <li>龍鼓上灘</li>
 <li>龍鼓洲</li>
 <li>湧浪</li>
