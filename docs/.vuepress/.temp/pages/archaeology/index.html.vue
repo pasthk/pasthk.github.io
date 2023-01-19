@@ -1,5 +1,4 @@
-<template><div><h2 id="通論" tabindex="-1"><a class="header-anchor" href="#通論" aria-hidden="true">#</a> 通論</h2>
-<h2 id="考古遺址" tabindex="-1"><a class="header-anchor" href="#考古遺址" aria-hidden="true">#</a> 考古遺址</h2>
+<template><div><h2 id="考古遺址" tabindex="-1"><a class="header-anchor" href="#考古遺址" aria-hidden="true">#</a> 考古遺址</h2>
 <h3 id="綜合" tabindex="-1"><a class="header-anchor" href="#綜合" aria-hidden="true">#</a> 綜合</h3>
 <ol>
 <li>陳公哲：〈香港考古發掘〉，《考古學報》1957年第4期，第1-16頁。</li>
@@ -12,7 +11,6 @@
 <li>&quot;Report of the Hong Kong Archaeological Survey Volume IV Part I&quot;, Hong Kong: Antiquities and Monuments Office, ID8.</li>
 <li>&quot;Report of the Hong Kong Archaeological Survey Volume IV Part II&quot;, Hong Kong: Antiquities and Monuments Office, ID9.</li>
 <li>&quot;Report of the Hong Kong Archaeological Survey Volume IV Part III&quot;, Hong Kong: Antiquities and Monuments Office, ID10.</li>
-<li>〈香港漢代考古發現與研究〉，香港：古物古蹟辦事處檔案，編號：ID26。</li>
 </ol>
 <h3 id="九龍" tabindex="-1"><a class="header-anchor" href="#九龍" aria-hidden="true">#</a> 九龍</h3>
 <ul>
@@ -42,6 +40,42 @@
 <ul>
 <li><RouterLink to="/archaeology/tai-wan-site-lamma-island.html">大灣遺址</RouterLink></li>
 </ul>
+<h2 id="專題研究" tabindex="-1"><a class="header-anchor" href="#專題研究" aria-hidden="true">#</a> 專題研究</h2>
+<h3 id="通論" tabindex="-1"><a class="header-anchor" href="#通論" aria-hidden="true">#</a> 通論</h3>
+<ol>
+<li>楊式挺：〈香港與廣東大陸的歷史關係——赴港考古印象記〉，《嶺南文史》1983年第2期，第12-16頁。</li>
+<li>安志敏：〈對香港考古學的幾點認識〉，《文物》1995年第7期，第64-68頁。</li>
+<li>商志（香覃）、吳偉鴻：〈香港考古學發展史簡論（上）（1921-1996）〉，《考古與文物》1997年第2期，第39-55頁。</li>
+<li>商志（香覃）、吳偉鴻：〈香港考古學發展史簡論（下）（1921-1996）〉，《考古與文物》1997年第3期，第39-53，68頁。</li>
+<li>商志（香覃）、吳偉鴻：〈香港新石器時代文化的分期與斷代〉，《考古》1997年第6期，第11-19頁。</li>
+<li>商志（香覃）、韓德勤：〈香港地區青銅時代考古及有關問題的探討〉，《文物》1997年第6期，第51-59頁。</li>
+<li>吳偉鴻：〈香港考古六十年〉，《文物天地》1997年第3期，第7-10頁。</li>
+<li>安志敏：〈香港考古的回顧與展望〉，《考古》1997年第6期，第1-10，97-98頁。</li>
+<li>鄧聰：〈古代香港歷史的新發現〉，《歷史研究》1997年第3期，第32-51頁。</li>
+<li>鄧聰：〈1925-1936年香港考古工作試述〉，《考古》1997年第6期，第20-26，64頁。</li>
+<li>楊式挺：〈從考古材料看香港與祖國內的歷史關係（上）〉，《嶺南文史》1997年第2期，第18-25頁。</li>
+<li>楊式挺：〈從考古材料看香港與祖國內的歷史關係（下）〉，《嶺南文史》1997年第3期，第20-27，19頁。</li>
+<li>孫德榮：〈試論香港的合約考古〉，《華夏考古》2007年第4期，第42-45頁。</li>
+<li>孫德榮：〈香港近年的考古發現與研究〉，《考古》2007年第6期，第3-9頁。</li>
+<li>商志（香覃）、吳偉鴻：《香港考古學敘研》，北京：文物出版社，2010年。</li>
+<li>孫德榮：〈行李待領：誰擁有香港的考古遺產〉，《華夏考古》2011年第1期，第139-145頁。</li>
+<li>〈香港漢代考古發現與研究〉，香港：古物古蹟辦事處檔案，編號：ID26。</li>
+</ol>
+<h3 id="玉石器" tabindex="-1"><a class="header-anchor" href="#玉石器" aria-hidden="true">#</a> 玉石器</h3>
+<ol>
+<li>呂紅亮：〈香港新石器時代打製時期研究〉，《南方民族考古》2014年第十輯，第21-44頁。</li>
+</ol>
+<h3 id="陶瓷器" tabindex="-1"><a class="header-anchor" href="#陶瓷器" aria-hidden="true">#</a> 陶瓷器</h3>
+<ol>
+<li>黃慧怡：〈香港出土宋元瓷器的初步研究〉，《考古》2007年第6期，第46-58頁。</li>
+<li>鄭培凱、李果、余君岳、尹翠琪、范夢園：〈香港陶瓷考古研究與九至十五世紀海外貿易〉，《福建文博》2011年第2期，第19-31頁。</li>
+<li>任浦升：〈香港出土明清時期景德鎮、福建、廣東及香港青花瓷研究〉，《文博學刊》2022年第3期，第100-109頁。</li>
+</ol>
+<h3 id="學位論文" tabindex="-1"><a class="header-anchor" href="#學位論文" aria-hidden="true">#</a> 學位論文</h3>
+<ol>
+<li>黃韻璋：《環珠江口玦飾製作工藝探討——以香港白芒遺址為例》，廈門大學2009年碩士論文，指導教師：吳春明。</li>
+<li>陳偉駒：《嶺南地區新石器時代文化的時空框架與生計方式研究》，吉林大學2016年博士論文，指導教師：陳勝前。</li>
+</ol>
 <h2 id="資料庫" tabindex="-1"><a class="header-anchor" href="#資料庫" aria-hidden="true">#</a> 資料庫</h2>
 <ul>
 <li><a href="https://hkaas.amo.gov.hk/hkaas/main.jsp?lang=2" target="_blank" rel="noopener noreferrer">香港考古資料系統<ExternalLinkIcon/></a> Hong Kong Archaeological Archive System</li>
