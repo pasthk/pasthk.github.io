@@ -37,16 +37,20 @@ export const pagesData = {
   "v-5a73fc12": () => import(/* webpackChunkName: "v-5a73fc12" */"/Users/ngkinchung/Documents/GitHub/pasthk.github.io/docs/.vuepress/.temp/pages/database/archive.html.js").then(({ data }) => data),
   // path: /folkloristics/
   "v-3469c352": () => import(/* webpackChunkName: "v-3469c352" */"/Users/ngkinchung/Documents/GitHub/pasthk.github.io/docs/.vuepress/.temp/pages/folkloristics/index.html.js").then(({ data }) => data),
-  // path: /folkloristics/cheung-chau-jiao-festival.html
-  "v-884316f0": () => import(/* webpackChunkName: "v-884316f0" */"/Users/ngkinchung/Documents/GitHub/pasthk.github.io/docs/.vuepress/.temp/pages/folkloristics/cheung-chau-jiao-festival.html.js").then(({ data }) => data),
-  // path: /folkloristics/pok-fu-lam-fire-dragon-dance.html
-  "v-0caccfe9": () => import(/* webpackChunkName: "v-0caccfe9" */"/Users/ngkinchung/Documents/GitHub/pasthk.github.io/docs/.vuepress/.temp/pages/folkloristics/pok-fu-lam-fire-dragon-dance.html.js").then(({ data }) => data),
+  // path: /folkloristics/fire-dragon-dance.html
+  "v-5fbecafb": () => import(/* webpackChunkName: "v-5fbecafb" */"/Users/ngkinchung/Documents/GitHub/pasthk.github.io/docs/.vuepress/.temp/pages/folkloristics/fire-dragon-dance.html.js").then(({ data }) => data),
+  // path: /folkloristics/jiao-festival.html
+  "v-a1d36dda": () => import(/* webpackChunkName: "v-a1d36dda" */"/Users/ngkinchung/Documents/GitHub/pasthk.github.io/docs/.vuepress/.temp/pages/folkloristics/jiao-festival.html.js").then(({ data }) => data),
   // path: /folkloristics/research.html
   "v-6468fa0c": () => import(/* webpackChunkName: "v-6468fa0c" */"/Users/ngkinchung/Documents/GitHub/pasthk.github.io/docs/.vuepress/.temp/pages/folkloristics/research.html.js").then(({ data }) => data),
-  // path: /folkloristics/tai-hang-fire-dragon-dance.html
-  "v-4657c6be": () => import(/* webpackChunkName: "v-4657c6be" */"/Users/ngkinchung/Documents/GitHub/pasthk.github.io/docs/.vuepress/.temp/pages/folkloristics/tai-hang-fire-dragon-dance.html.js").then(({ data }) => data),
+  // path: /folkloristics/tin-hou-festival.html
+  "v-36a03248": () => import(/* webpackChunkName: "v-36a03248" */"/Users/ngkinchung/Documents/GitHub/pasthk.github.io/docs/.vuepress/.temp/pages/folkloristics/tin-hou-festival.html.js").then(({ data }) => data),
+  // path: /folkloristics/yu-lan-festival.html
+  "v-67892b0e": () => import(/* webpackChunkName: "v-67892b0e" */"/Users/ngkinchung/Documents/GitHub/pasthk.github.io/docs/.vuepress/.temp/pages/folkloristics/yu-lan-festival.html.js").then(({ data }) => data),
   // path: /meteorology/
   "v-94c20fa0": () => import(/* webpackChunkName: "v-94c20fa0" */"/Users/ngkinchung/Documents/GitHub/pasthk.github.io/docs/.vuepress/.temp/pages/meteorology/index.html.js").then(({ data }) => data),
+  // path: /meteorology/t.html
+  "v-445b7d15": () => import(/* webpackChunkName: "v-445b7d15" */"/Users/ngkinchung/Documents/GitHub/pasthk.github.io/docs/.vuepress/.temp/pages/meteorology/t.html.js").then(({ data }) => data),
   // path: /geology/
   "v-44a73662": () => import(/* webpackChunkName: "v-44a73662" */"/Users/ngkinchung/Documents/GitHub/pasthk.github.io/docs/.vuepress/.temp/pages/geology/index.html.js").then(({ data }) => data),
   // path: /religious-studies/
