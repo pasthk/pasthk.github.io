@@ -3,8 +3,3 @@ User-agent:*
 Disallow:
 
 Sitemap: https://pasthk.github.io/sitemap.xml
-
-User-agent:*
-Disallow:
-
-Sitemap: https://pasthk.github.io/sitemap.xml
