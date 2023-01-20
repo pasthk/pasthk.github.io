@@ -8,17 +8,8 @@ export default defineUserConfig({
   description: "香港人文與科學研究索引集",
   head:[
     ["link", { rel: "preconnect", href: "https://fonts.googleapis.com" }],
-    [
-      "link",
-      { rel: "preconnect", href: "https://fonts.gstatic.com", crossorigin: "" },
-    ],
-    [
-      "link",
-      {
-        href: "https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400&display=swap",
-        rel: "stylesheet",
-      },
-    ],
+    ["link", { rel: "preconnect", href: "https://fonts.gstatic.com", crossorigin: "" },],
+    ["link", { href: "https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400&display=swap", rel: "stylesheet", },],
   ],
   theme: hopeTheme({
     hostname: "https://pasthk.github.io",
