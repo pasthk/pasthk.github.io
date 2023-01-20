@@ -16,7 +16,7 @@ export default defineUserConfig({
     lastUpdated: false,
     footer: "",
     copyright: "香港人文與科學研究索引集",
-    displayFooter: false,
+    displayFooter: true,
     author: {
         name: "NG, Kin-chung",
         url: "https://pasthk.github.io",
