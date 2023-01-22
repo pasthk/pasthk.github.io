@@ -1,5 +1,6 @@
 import { defineUserConfig } from "vuepress";
 import { hopeTheme } from "vuepress-theme-hope";
+import { googleAnalyticsPlugin } from '@vuepress/plugin-google-analytics'
 
 export default defineUserConfig({
   base: "/",
@@ -18,6 +19,11 @@ export default defineUserConfig({
     ["link", { rel: "preconnect", href: "https://fonts.googleapis.com" }],
     ["link", { rel: "preconnect", href: "https://fonts.gstatic.com", crossorigin: "" },],
     ["link", { href: "https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400&display=swap", rel: "stylesheet", },],
+  ],
+  plugins: [
+    googleAnalyticsPlugin({
+      id: 'G-0FJ0KYS5QB',
+    }),
   ],
   theme: hopeTheme({
     hostname: "https://pasthk.github.io",
