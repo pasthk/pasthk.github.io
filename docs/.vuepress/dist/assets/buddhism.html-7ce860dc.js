@@ -1,0 +1,1 @@
+import{_ as t,V as a,W as s,X as e,Y as c}from"./framework-7d8fed28.js";const r={},d=e("h2",{id:"通論",tabindex:"-1"},[e("a",{class:"header-anchor",href:"#通論","aria-hidden":"true"},"#"),c(" 通論")],-1),o=[d];function n(_,i){return a(),s("div",null,o)}const l=t(r,[["render",n],["__file","buddhism.html.vue"]]);export{l as default};
