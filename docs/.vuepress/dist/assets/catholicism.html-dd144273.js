@@ -1,0 +1,1 @@
+import{_ as t,V as a,W as c,X as e,Y as s}from"./framework-a294bee4.js";const o={},r=e("h2",{id:"通論",tabindex:"-1"},[e("a",{class:"header-anchor",href:"#通論","aria-hidden":"true"},"#"),s(" 通論")],-1),n=[r];function _(i,d){return a(),c("div",null,n)}const l=t(o,[["render",_],["__file","catholicism.html.vue"]]);export{l as default};
