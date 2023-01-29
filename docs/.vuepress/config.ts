@@ -17,9 +17,6 @@ export default defineUserConfig({
         src: "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
       }
     ],
-    ["link", { rel: "preconnect", href: "https://fonts.googleapis.com" }],
-    ["link", { rel: "preconnect", href: "https://fonts.gstatic.com", crossorigin: "" },],
-    ["link", { href: "https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400&display=swap", rel: "stylesheet", },],
   ],
   plugins: [
     googleAnalyticsPlugin({
@@ -62,6 +59,7 @@ export default defineUserConfig({
                   sub: true,
                   mark: true,
                   container: true,
+                  tabs: true,
                 },
       },
   }),
