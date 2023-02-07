@@ -21,7 +21,7 @@ date: 2023-01-15
 - [黃竹坑](wong-chuk-hang-hong-kong-island.md)
 @tab 九龍
 - [李鄭屋漢墓](lei-cheng-uk-han-tomb-kowloon.md)
-- [聖山（宋皇臺）遺址](sacred-hill-site-kowloon.md)
+- [聖山（宋王臺）遺址](sacred-hill-site-kowloon.md)
 @tab 西貢
 - [黃地峒遺址](wong-tei-tung-sai-kung.md)
 - [沙下遺址](sha-ha-sai-kung.md)
