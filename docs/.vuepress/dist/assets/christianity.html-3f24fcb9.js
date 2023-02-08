@@ -1,0 +1,1 @@
+import{_ as t,V as a,W as c,X as e,Y as r}from"./framework-840817b6.js";const s={},n=e("h2",{id:"通論",tabindex:"-1"},[e("a",{class:"header-anchor",href:"#通論","aria-hidden":"true"},"#"),r(" 通論")],-1),i=[n];function o(_,d){return a(),c("div",null,i)}const l=t(s,[["render",o],["__file","christianity.html.vue"]]);export{l as default};

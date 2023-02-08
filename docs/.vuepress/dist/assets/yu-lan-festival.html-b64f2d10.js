@@ -1,0 +1,1 @@
+import{_ as a,V as t,W as s,X as e,Y as c}from"./framework-840817b6.js";const n={},r=e("h2",{id:"新聞報道",tabindex:"-1"},[e("a",{class:"header-anchor",href:"#新聞報道","aria-hidden":"true"},"#"),c(" 新聞報道")],-1),o=[r];function _(d,i){return t(),s("div",null,o)}const h=a(n,[["render",_],["__file","yu-lan-festival.html.vue"]]);export{h as default};
