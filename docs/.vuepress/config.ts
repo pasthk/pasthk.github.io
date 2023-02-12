@@ -51,15 +51,15 @@ export default defineUserConfig({
         link: "/about.md",
       }, 
     ],
-      plugins: {
-        mdEnhance: {
-                  footnote: true,
-                  imgLazyload: true,
-                  sup: true,
-                  sub: true,
-                  mark: true,
-                  container: true,
-                  tabs: true,
+    plugins: {
+      mdEnhance: {
+        footnote: true,
+        imgLazyload: true,
+        sup: true,
+        sub: true,
+        mark: true,
+        container: true,
+        tabs: true,
                 },
       },
   }),

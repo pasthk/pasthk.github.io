@@ -60,7 +60,7 @@ date: 2023-01-16
 50. 〈李鄭物漢墓展覽博物館下周舉行〉，《大公報》，1983年8月11日，第2張第6版。
 51. 〈李鄭屋漢墓展覽今起博物館舉行〉，《大公報》，1983年8月20日，第2張第6版。
 52.  〈[歷史博物館李鄭屋分館名稱更改](https://www.info.gov.hk/gia/general/199806/22/0620095.htm)〉（香港：政府新聞處，1998年6月22日）。
-## 研究
+## 文章
 1. 黃福鑾：〈[李鄭屋村古墓擬即南宋太后衣冠塚攷（一）](https://mmis.hkpl.gov.hk/coverpage/-/coverpage/view?_coverpage_WAR_mmisportalportlet_hsf=%E6%9D%8E%E9%84%AD%E5%B1%8B&p_r_p_-1078056564_c=QF757YsWv5%2FH7zGe%2FKF%2BFNDldC8QvmwZ&_coverpage_WAR_mmisportalportlet_o=150&_coverpage_WAR_mmisportalportlet_actual_q=%28%20verbatim_dc.collection%3A%28%22Old%5C%20HK%5C%20Newspapers%22%29%20%29%20AND+%28%20%28%20allTermsMandatory%3A%28true%29%20OR+all_dc.title%3A%28%E6%9D%8E%E9%84%AD%E5%B1%8B%29%20OR+all_dc.creator%3A%28%E6%9D%8E%E9%84%AD%E5%B1%8B%29%20OR+all_dc.contributor%3A%28%E6%9D%8E%E9%84%AD%E5%B1%8B%29%20OR+all_dc.subject%3A%28%E6%9D%8E%E9%84%AD%E5%B1%8B%29%20OR+fulltext%3A%28%E6%9D%8E%E9%84%AD%E5%B1%8B%29%20OR+all_dc.description%3A%28%E6%9D%8E%E9%84%AD%E5%B1%8B%29%20%29%20%29&_coverpage_WAR_mmisportalportlet_sort_order=asc&_coverpage_WAR_mmisportalportlet_sort_field=dc.publicationdate_bsort)〉，《華僑日報》，1955年9月22日，第4張第1頁。
     - 一、唐以前九龍可能未有中原人留居
     - 二、唐以前我國對外交易及廣東開闢與九龍無關

@@ -12,5 +12,5 @@ date: 2023-01-18
 1. 張森水主編：《2006年香港考古重大發現——西貢黃地峒舊石器時代晚期遺址》，香港：中國評論學術出版社，2010年。
 2. 〈香港西貢黃地峒遺址二零零五年度考古發掘工作報告〉，香港：古物古蹟辦事處檔案，編號：SK48。
 ## 新聞報道
-## 研究
+## 文章
 1. Tracey L-D Lu, "[Report on the Date of the Wong Tei Tung Archaeological Assemblage](https://www.amo.gov.hk/filemanager/amo/common/form/Report-on-the-Date-of-the-Wong-Tei-Tung-Archaeological-Assemblage.pdf)"  

@@ -11,7 +11,7 @@ date: 2023-01-20
 ## 發掘報告
 1. 〈[龍津石橋全面發掘報告](https://www.amo.gov.hk/filemanager/amo/common/form/Lung_Tsun_Stone_Bridge_Remnants.pdf)〉，香港：古物古蹟辦事處檔案，編號：KL24。
 ## 新聞報道
-## 研究文章
+## 文章
 1. 鍾寶賢、高添強：〈[「龍津橋及其鄰近區域」歷史研究](https://www.amo.gov.hk/filemanager/amo/common/form/research_ltsb_surrounding_final.pdf)〉，香港：古物古蹟辦事處檔案，編號：KL25，2012年12月。
 ## 會議文件
 1. 建築署、康樂及文化事務署：〈啟德龍津石橋保育長廊，Lung Tsun Stone Bridge Preservation Corridor at Kai Tak）〉，香港：海濱事務委員會會議文件，編號：TFKT/20/2017，2017年11月1日。
