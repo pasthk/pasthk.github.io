@@ -11,8 +11,6 @@ date: 2023-01-19
 - [香港中文大學粵語審音配詞字庫](https://humanum.arts.cuhk.edu.hk/Lexis/lexi-can/)
 - [香港手語瀏覽器](http://www.cslds.org/hkslbrowser/index.jsp?lang=tc)
 - [中央研究院國際電腦漢字及異體字知識庫](https://chardb.iis.sinica.edu.tw/)
-- [香港地理資訊地圖](https://www.map.gov.hk/gm/)
-- [香港地理數據站](https://geodata.gov.hk/gs/?l=zh-Hant-HK)
 - [Adobe Acrobat](https://www.adobe.com/hk_zh/acrobat/online.html?promoid=YSYYG5TN&mv=other)
 - [Atlas.ti Web](https://atlasti.com/atlas-ti-web)
 - [diagrams.net](https://app.diagrams.net/)

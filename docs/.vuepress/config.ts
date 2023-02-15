@@ -60,7 +60,7 @@ export default defineUserConfig({
         mark: true,
         container: true,
         tabs: true,
-                },
       },
+    },
   }),
 });
