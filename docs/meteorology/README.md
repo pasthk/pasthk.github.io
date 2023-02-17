@@ -6,4 +6,4 @@ date: 2023-01-19
 ---
 ## 通論
 ## 專題
-- [熱帶氣旋](/meteorology/tropical-cyclone/README.md)
+- [熱帶氣旋](/meteorology/tropical-cyclone/)
