@@ -6,7 +6,7 @@ date: 2023-01-18
 ## 調查報告
 1. 〈掃管笏具考古研究價值的地點〉，香港：古物古蹟辦事處檔案，編號：AM77-0045。
 2. 〈掃管笏寶龍軍營具考古研究價值的地點〉，香港：古物古蹟辦事處檔案，編號：AM98-0925。
-3. "Report of Archaeological Survey at So Kwun Wat", Tuen Mun 1997, Hong Kong: Antiquities and Monuments Office, TM1.
+3. "Report of Archaeological Survey at So Kwun Wat, Tuen Mun 1997", Hong Kong: Antiquities and Monuments Office, TM1.
 4. 〈屯門掃管笏考古調查報告〉，香港：古物古蹟辦事處檔案，編號：TM7。
 5. 〈屯門掃管笏段公路擴建工程考古勘查報告〉，香港：古物古蹟辦事處檔案，編號：TM8。
 6. 〈2003年屯門掃管笏丈量約份375之974地段及丈量約份381之417地段小型屋宇考古調查報告〉，香港：古物古蹟辦事處檔案，編號：TM30。
