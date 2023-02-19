@@ -6,7 +6,7 @@ date: 2023-02-19
 ## 調查報告
 1. "Report on the Archaeological Investigation of Yung Long South 1992-1993 (I)", Hong Kong: Antiquities and Monuments Office, TM47.
 2. "Report on the Archaeological Investigation of Yung Long South (II) Illustrations and Data", Hong Kong: Antiquities and Monuments Office, TM48.
-3. "Yung Long South (YLS) Catalogue (Phase I)", Hong Kong: Antiquities and Monuments Office, 檔案，編號：TM54.
+3. "Yung Long South (YLS) Catalogue (Phase I)", Hong Kong: Antiquities and Monuments Office, TM54.
 4. "Yung Long South (YLS) Catalogue (Phase II)", Hong Kong: Antiquities and Monuments Office, TM55.
 
 ## 發掘報告
