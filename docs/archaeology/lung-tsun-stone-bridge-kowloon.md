@@ -5,7 +5,7 @@ date: 2023-01-20
 ---
 ## 調查報告
 1. 〈龍津石橋〉，香港：古物古蹟辦事處檔案，編號：AM99-1458。
-2. "Report on Archaeological Investigations at Kowloon Walled City, Hong Kong (Phase III)", Hong Kong: Antiquities and Monuments Office, KL10.
+2. "Report on Archaeological Investigations at Kowloon Walled City, Hong Kong (Phase Ⅲ)", Hong Kong: Antiquities and Monuments Office, KL10.
 3. 〈[龍津石橋保育長廊詮釋準則和指引](https://www.amo.gov.hk/filemanager/amo/common/form/20130824_ltsb_preservation_corridor.pdf)〉，香港：古物古蹟辦事處檔案，編號：KL26。
 4. "Preliminary Archaeological Survey at Lung Tsun Stone Bridge as part of Lung Tsun Stone Bridge Preservation Corridor at Kai Tak Development", Hong Kong: Antiquities and Monuments Office, KL40.
 ## 發掘報告

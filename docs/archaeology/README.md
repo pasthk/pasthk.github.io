@@ -34,9 +34,11 @@ date: 2023-01-15
 - [龍鼓灘遺址](lung-kwu-tan-tuen-mun.md)
 - [龍鼓上灘遺址](lung-kwu-sheung-tan-tuen-mun.md)
 - 龍鼓洲遺址
-- 湧浪遺址
+- [湧浪遺址](yung-long-tun-mun.md)
 - 泥圍遺址
 - 青磚圍遺址
+@tab 荃灣
+- [馬灣東灣仔北遺址](tung-wan-tsai-north-ma-wan-island-tsuen-wan.md)
 @tab 南丫島
 - [大灣遺址](tai-wan-site-lamma-island.md)
 @tab 蒲台島
