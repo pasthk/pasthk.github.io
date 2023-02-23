@@ -15,7 +15,7 @@ date: 2023-01-16
 6. "[Brief on the Cultural Remains of Song-Yuan Period Discovered during Archaeological Watching Brief at the Launching Shaft Area of the Sung Wong Toi Station of Shatin to Central Link - Tai Wai to Hung Hom Section](https://www.amo.gov.hk/filemanager/amo/common/form/brief_4-2014.pdf)", April 2014.（〈沙田至中環綫（大圍至紅磡段）於宋王臺車站豎井範圍進行考古監察期間發現宋元時期文物簡報〉，2014年4月。）
 7. "[Interim Report on the Archaeological Survey cum Excavation Findings in Sacred Hill (North) for Shatin to Central Link (Tai Wai to Hung Hom Section)](https://www.amo.gov.hk/filemanager/amo/common/form/Interim-Report.pdf)", April 2014.（〈沙田至中環綫（大圍至紅磡段）聖山（北）考古調查暨發掘中期報告〉，2014年4月。）
 8. "[Brief on the Sheetpile Proposal for Retaining T1 Area at the Launching Shaft Area, of the To Kwa Wan Station of Shatin to Central Link - Tai Wai to Hung Hom Section](https://www.amo.gov.hk/filemanager/amo/common/form/scl_6th_brief.pdf)", May 2014.（〈沙田至中環綫（大圍至紅磡段）有關位於土瓜灣站豎井範圍T1區的板樁建議〉，2014年5月。）
-9.  吳震霖、金志偉、劉文鎖：〈香港九龍聖山遺址考古發掘簡報〉，《考古與文物》2016年第6期，第3-25頁。
+9.  吳震霖、金志偉、劉文鎖：〈香港九龍聖山遺址考古發掘簡報〉，《考古與文物》2016年第6期，頁3-25。
 10. "Archaeological Excavation Report for Sacred Hill Area (Phases 1 to 3 Archaeological Works) for Shatin to Central Link - Tai Wai to Hung Hom Section (revised in June 2021)", June 2017.（〈沙田至中環綫（大圍至紅磡段）聖山區域最終考古報告（第一期至第三期考古工作）〉，2017年6月。）
 11. "Archaeological Report for Sacred Hill Area (Licence Nos. 409 and 424) for Shatin to Central Link (Tai Wai to Hung Hom Section)", August 2020.（〈沙田至中環綫（大圍至紅磡段）聖山區域考古報告（牌照編號 409 及424）〉，2020年8月。）
 ## 工作匯報
