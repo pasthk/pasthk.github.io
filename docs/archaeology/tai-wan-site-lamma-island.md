@@ -5,9 +5,9 @@ date: 2023-01-16
 ---
 ## 調查報告
 1. 〈香港考古發現5000年前居住遺跡〉，《中學地理教學參考》1996年第6期，第46頁。
-2. 〈大灣（南丫島）具考古研究價值的地點〉，香港：古物古蹟辦事處檔案，編號：AM77-0041。
+2. 〈大灣（南丫島）具考古研究價值的地點〉（香港：古物古蹟辦事處檔案），編號：AM77-0041。
 3. "Archaeological Survey for the Proposed "Sitting-out Area" at Tai Wan To, Lamma Island", Hong Kong: Antiquities and Monuments Office, LI24.
-4. 〈2006年南丫島大灣丈量約份第3LM約第1045號地段小型屋宇考古調查工作報告〉，香港：古物古蹟辦事處檔案，編號：LI26。
+4. 〈2006年南丫島大灣丈量約份第3LM約第1045號地段小型屋宇考古調查工作報告〉（香港：古物古蹟辦事處檔案），編號：LI26。
 5. "Archaeological Survey cum Archaeological Watching Brief for Small House Development at Lot No. 1090 RP in D.D.3 LM at Tai Wan on Lamma Island", Hong Kong: Antiquities and Monuments Office, LI29.
 6. "Archaeological Investigation on 4 Small House Developments at Lot Nos. 1026SA and 1028 RP, Lots nos 1026SB, Lot Nos. 1104RP, 1105SB and 1117SA and Lot Nos. 1104SA, 1105SA at Tai Wan on Lamma Island Final Report", Hong Kong: Antiquities and Monuments Office, LI30.
 ## 發掘報告

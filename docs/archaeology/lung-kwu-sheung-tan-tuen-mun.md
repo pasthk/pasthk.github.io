@@ -4,7 +4,7 @@ category: 考古
 date: 2023-01-25
 ---
 ## 調查報告
-1. 〈龍鼓上灘具考古研究價值的地點〉，香港：古物古蹟辦事處檔案，編號：AM78-0209。
+1. 〈龍鼓上灘具考古研究價值的地點〉（香港：古物古蹟辦事處檔案），編號：AM78-0209。
 ## 發掘報告
 1. "Report on Salvage Excavations at Lung Kwu Sheung Tan 1990", Hong Kong: Antiquities and Monuments Office, TM46.
 ## 新聞報道

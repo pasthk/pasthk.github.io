@@ -8,7 +8,7 @@ date: 2023-01-15
 ::: tabs
 @tab 綜合
 1. 陳公哲：〈香港考古發掘〉，《考古學報》1957年第4期，第1-16頁。
-2. 〈第二次全港考古調查工作述評〉，香港：古物古蹟辦事處檔案，編號：ID23。
+2. 〈第二次全港考古調查工作述評〉（香港：古物古蹟辦事處檔案），編號：ID23。
 3. "Report of the Hong Kong Archaeological Survey Volume I An Introduction to the Survey", Hong Kong: Antiquities and Monuments Office, ID19.
 4. "Report of the Hong Kong Archaeological Survey Volume II Recommendations on Antiquities and Monuments Policy and Legislation", Hong Kong: Antiquities and Monuments Office, ID20.
 5. "Report of the Hong Kong Archaeological Survey Volume III Part I", Hong Kong: Antiquities and Monuments Office, ID5.

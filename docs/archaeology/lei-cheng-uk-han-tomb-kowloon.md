@@ -4,9 +4,9 @@ category: 考古
 date: 2023-01-16
 ---
 ## 發掘報告
-1. 屈志仁：《李鄭屋漢墓》，香港：香港市政局，1983年。
-2. 香港歷史博物館編：《李鄭屋漢墓》，香港：香港歷史博物館，2005年。
-3. 〈李鄭屋漢墓〉，香港：古物古蹟辦事處檔案，編號：AM77-0091。
+1. 屈志仁：《李鄭屋漢墓》（香港：香港市政局，1983年）。
+2. 香港歷史博物館編：《李鄭屋漢墓》（香港：香港歷史博物館，2005年）。
+3. 〈李鄭屋漢墓〉（香港：古物古蹟辦事處檔案），編號：AM77-0091。
 ## 新聞報道
 1. 〈[李鄭屋村山坵發現古塚　塚内有陶器二十餘件　似是千五年前古物](https://mmis.hkpl.gov.hk/coverpage/-/coverpage/view?_coverpage_WAR_mmisportalportlet_hsf=%E6%9D%8E%E9%84%AD%E5%B1%8B&p_r_p_-1078056564_c=QF757YsWv59a9PNz3lScYqgi6uOtkx55&_coverpage_WAR_mmisportalportlet_o=132&_coverpage_WAR_mmisportalportlet_actual_q=%28%20verbatim_dc.collection%3A%28%22Old%5C%20HK%5C%20Newspapers%22%29%20%29%20AND+%28%20%28%20allTermsMandatory%3A%28true%29%20OR+all_dc.title%3A%28%E6%9D%8E%E9%84%AD%E5%B1%8B%29%20OR+all_dc.creator%3A%28%E6%9D%8E%E9%84%AD%E5%B1%8B%29%20OR+all_dc.contributor%3A%28%E6%9D%8E%E9%84%AD%E5%B1%8B%29%20OR+all_dc.subject%3A%28%E6%9D%8E%E9%84%AD%E5%B1%8B%29%20OR+fulltext%3A%28%E6%9D%8E%E9%84%AD%E5%B1%8B%29%20OR+all_dc.description%3A%28%E6%9D%8E%E9%84%AD%E5%B1%8B%29%20%29%20%29&_coverpage_WAR_mmisportalportlet_sort_order=asc&_coverpage_WAR_mmisportalportlet_sort_field=dc.publicationdate_bsort)〉，《工商日報》，1955年8月10日，第5頁。
 2. 〈[李鄭屋村發現古塚　港大教授認爲可能建於漢唐之間　推測塚內埋葬者係一鄉紳](https://mmis.hkpl.gov.hk/coverpage/-/coverpage/view?_coverpage_WAR_mmisportalportlet_hsf=%E6%9D%8E%E9%84%AD%E5%B1%8B&p_r_p_-1078056564_c=QF757YsWv5%2FH7zGe%2FKF%2BFB8IQlsDeA58&_coverpage_WAR_mmisportalportlet_o=133&_coverpage_WAR_mmisportalportlet_actual_q=%28%20verbatim_dc.collection%3A%28%22Old%5C%20HK%5C%20Newspapers%22%29%20%29%20AND+%28%20%28%20allTermsMandatory%3A%28true%29%20OR+all_dc.title%3A%28%E6%9D%8E%E9%84%AD%E5%B1%8B%29%20OR+all_dc.creator%3A%28%E6%9D%8E%E9%84%AD%E5%B1%8B%29%20OR+all_dc.contributor%3A%28%E6%9D%8E%E9%84%AD%E5%B1%8B%29%20OR+all_dc.subject%3A%28%E6%9D%8E%E9%84%AD%E5%B1%8B%29%20OR+fulltext%3A%28%E6%9D%8E%E9%84%AD%E5%B1%8B%29%20OR+all_dc.description%3A%28%E6%9D%8E%E9%84%AD%E5%B1%8B%29%20%29%20%29&_coverpage_WAR_mmisportalportlet_sort_order=asc&_coverpage_WAR_mmisportalportlet_sort_field=dc.publicationdate_bsort)〉，《工商晚報》，1955年8月10日，第4頁。
