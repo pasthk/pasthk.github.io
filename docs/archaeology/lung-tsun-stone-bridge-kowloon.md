@@ -3,6 +3,8 @@ title: 九龍龍津石橋
 category: 考古
 date: 2023-01-20
 ---
+<adsense></adsense>
+
 ## 調查報告
 1. 〈龍津石橋〉（香港：古物古蹟辦事處檔案），編號：AM99-1458。
 2. "Report on Archaeological Investigations at Kowloon Walled City, Hong Kong (Phase Ⅲ)", Hong Kong: Antiquities and Monuments Office, KL10.

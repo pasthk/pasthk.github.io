@@ -4,6 +4,8 @@ category: 考古
 index: false
 date: 2023-01-15
 ---
+<adsense></adsense>
+
 ## 考古遺址
 ::: tabs
 @tab 綜合

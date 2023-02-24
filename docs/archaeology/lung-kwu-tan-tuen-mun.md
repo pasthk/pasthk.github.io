@@ -3,6 +3,8 @@ title: 屯門龍鼓灘遺址
 category: 考古
 date: 2023-01-19
 ---
+<adsense></adsense>
+
 ## 調查報告
 1. 〈龍鼓灘具考古研究價值的地點〉（香港：古物古蹟辦事處檔案），編號：AM78-0208。
 2. "Auger survey of Lung Kwu Tan", Hong Kong: Antiquities and Monuments Office, TM3.

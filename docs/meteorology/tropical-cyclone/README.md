@@ -4,6 +4,8 @@ category: 自然
 index: false
 date: 2023-01-19
 ---
+<adsense></adsense>
+
 > 參考資料：
     > 1. [1917-1941年香港熱帶氣旋警告信號歷史記錄](https://www.hko.gov.hk/tc/informtc/tcsignaldb/index.html)
     > 2. [熱帶氣旋警告信號](https://www.hko.gov.hk/tc/wxinfo/climat/warndb/warndb1.shtml)（注：1946年起）

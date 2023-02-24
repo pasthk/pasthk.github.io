@@ -3,6 +3,8 @@ title: 九龍寨城遺址
 category: 考古
 date: 2023-01-20
 ---
+<adsense></adsense>
+
 ## 調查報告
 1. "Report on Archaeological Investigation at Kowloon Walled City, Hong Kong", Hong Kong: Antiquities and Monuments Office, KL1.
 2. "Report on Archaeological Investigations at Kowloon Walled City, Hong Kong (Phase Ⅲ)", Hong Kong: Antiquities and Monuments Office, KL10.

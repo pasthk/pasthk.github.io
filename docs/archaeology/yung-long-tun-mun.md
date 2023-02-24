@@ -3,6 +3,8 @@ title: 屯門湧浪遺址
 category: 考古
 date: 2023-02-19
 ---
+<adsense></adsense>
+
 ## 調查報告
 1. "Report on the Archaeological Investigation of Yung Long South 1992-1993 (I)", Hong Kong: Antiquities and Monuments Office, TM47.
 2. "Report on the Archaeological Investigation of Yung Long South (II) Illustrations and Data", Hong Kong: Antiquities and Monuments Office, TM48.
