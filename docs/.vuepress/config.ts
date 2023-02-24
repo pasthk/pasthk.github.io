@@ -23,9 +23,11 @@ export default defineUserConfig({
   ],
   plugins: [
     registerComponentsPlugin({
+      // options
+    }),
+    registerComponentsPlugin({
       components: {
-        Adsense_unit: path.resolve(__dirname, './components/adsense.vue'),
-      // componentsDir: path.resolve(__dirname, './components')
+        adsense: path.resolve(__dirname, './components/adsense.vue'),
       },
     }),
     googleAnalyticsPlugin({
