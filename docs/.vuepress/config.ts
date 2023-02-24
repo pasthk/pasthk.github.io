@@ -7,7 +7,7 @@ export default defineUserConfig({
   base: "/",
   lang: "zh-TW",
   title: "追跡香江",
-  description: "香港人文與科學研究索引集",
+  description: "香港專題研究索引集",
   head:[
     [
       "script",
@@ -35,7 +35,7 @@ export default defineUserConfig({
     contributors: false,
     lastUpdated: false,
     footer: "",
-    copyright: "香港人文與科學研究索引集",
+    copyright: "香港專題研究索引集",
     displayFooter: true,
     author: {
         name: "NG, Kin-chung",
