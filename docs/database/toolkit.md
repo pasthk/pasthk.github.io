@@ -3,6 +3,8 @@ title: 工具集
 category: 資料庫
 date: 2023-01-19
 ---
+<adsense></adsense>
+
 - [中國近代海關機構職銜名稱英漢對照](http://archdtsu.mh.sinica.edu.tw/imhkmh/images/namelist1.htm)
 - [中央研究院兩千年中西曆轉換](https://sinocal.sinica.edu.tw/)
 - [漢英法律詞彙](https://www.glossary.doj.gov.hk/index.php)

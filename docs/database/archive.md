@@ -3,6 +3,8 @@ title: 歷史檔案
 category: 資料庫
 date: 2023-01-18
 ---
+<adsense></adsense>
+
 1.	Archive in Margaret Thatcher Foundation
 2.	Frank Fischbeck珍藏集
 3.	Hong Kong and the West until 1860

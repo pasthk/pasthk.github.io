@@ -4,3 +4,4 @@ category: 自然
 index: false
 date: 2023-01-20
 ---
+<adsense></adsense>
