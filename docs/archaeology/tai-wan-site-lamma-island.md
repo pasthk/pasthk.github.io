@@ -6,7 +6,7 @@ date: 2023-01-16
 <adsense></adsense>
 
 ## 調查報告
-1. 〈香港考古發現5000年前居住遺跡〉，《中學地理教學參考》1996年第6期，頁46。
+1. 〈香港考古發現5000年前居住遺跡〉，《中學地理教學參考》，1996年第6期，頁46。
 2. 〈大灣（南丫島）具考古研究價值的地點〉（香港：古物古蹟辦事處檔案），編號：AM77-0041。
 3. "Archaeological Survey for the Proposed "Sitting-out Area" at Tai Wan To, Lamma Island", Hong Kong: Antiquities and Monuments Office, LI24.
 4. 〈2006年南丫島大灣丈量約份第3LM約第1045號地段小型屋宇考古調查工作報告〉（香港：古物古蹟辦事處檔案），編號：LI26。
