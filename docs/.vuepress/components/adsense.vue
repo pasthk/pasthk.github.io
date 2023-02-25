@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="ads">
     <ins class="adsbygoogle"
          style="display:block;"
          data-ad-layout="in-article"

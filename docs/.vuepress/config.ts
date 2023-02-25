@@ -23,9 +23,6 @@ export default defineUserConfig({
   ],
   plugins: [
     registerComponentsPlugin({
-      // options
-    }),
-    registerComponentsPlugin({
       components: {
         adsense: path.resolve(__dirname, './components/adsense.vue'),
       },
