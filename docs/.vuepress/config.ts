@@ -11,7 +11,7 @@ export default defineUserConfig({
   lang: "zh-TW",
   title: "追跡香江",
   description: "香港專題研究索引集",
-  head:[
+  head: [
     [
       "script",
       {
@@ -44,7 +44,7 @@ export default defineUserConfig({
     lastUpdated: false,
     footer: "",
     copyright: "香港專題研究索引集",
-    displayFooter: true,
+    displayFooter: false,
     author: {
         name: "NG, Kin-chung",
         url: "https://pasthk.github.io",
