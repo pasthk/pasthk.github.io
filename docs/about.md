@@ -5,7 +5,7 @@ date: 2023-10-20
 ---
 這是一個興趣使然的課餘項目，意在搜集和整理香港自然史、文化史、藝術史等各類研究文獻，並製作成資料索引集，予芸芸學子使用。
 
-中文文獻參考《[香港大學中文學報](https://www.hkujcs.hku.hk/style-sheet-chinese)》的註釋格式。英文文獻統一使用APA格式。
+中文文獻格式參考《[香港大學中文學報](https://www.hkujcs.hku.hk/style-sheet-chinese)》。英文文獻統一使用APA格式。
 
 資料主要來源（排名不分先後）：
 - 香港公共圖書館多媒體資訊系統：[香港舊報紙](https://mmis.hkpl.gov.hk/zh/old-hk-collection)

@@ -58,6 +58,10 @@ export default defineUserConfig({
         text: "關於",
         link: "/about.md",
       }, 
+      {
+        text: "安陽・一九二八",
+        link: "https://ay1928.github.io/",
+      }, 
     ],
     plugins: {
       mdEnhance: {
