@@ -1,0 +1,1 @@
+import{_ as o,V as c,W as n,Z as t,C as s}from"./framework-a2a04862.js";const a={};function r(l,_){const e=s("adsense");return c(),n("div",null,[t(e)])}const p=o(a,[["render",r],["__file","tropical-cyclone.html.vue"]]);export{p as default};
