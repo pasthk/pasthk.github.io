@@ -1,0 +1,1 @@
+import{_ as o,V as s,W as t,Z as n,C as a}from"./framework-2687907e.js";const c={};function _(r,l){const e=a("adsense");return s(),t("div",null,[n(e)])}const f=o(c,[["render",_],["__file","jiao-festival.html.vue"]]);export{f as default};
