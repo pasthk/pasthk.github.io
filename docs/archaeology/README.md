@@ -28,6 +28,10 @@ date: 2023-01-15
 - [黃地峒遺址](wong-tei-tung-sai-kung.md)
 - [沙下遺址](sha-ha-sai-kung.md)
 - [佛頭洲遺址](junk-island-site-sai-kung.md)
+- [蠔涌](ho-chung-sai-kung.md)
+- [鹹田](ham-tin-sai-kung.md)
+- [東龍洲](tung-lung-chau-sai-kung.md)
+- [滘西洲](kau-sai-chau-sai-kung.md)
 @tab 屯門
 - [掃管笏遺址](so-kwun-wat-tuen-mun.md)
 - 沙洲遺址
