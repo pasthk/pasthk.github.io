@@ -2,7 +2,7 @@
 User-agent:*
 Disallow:
 
-Sitemap: https://pasthk.github.io/sitemap.xml
+Sitemap: https://www.pasthk.com/sitemap.xml
 
 User-agent:*
 Disallow:
