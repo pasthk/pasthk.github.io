@@ -42,6 +42,7 @@ export default defineUserConfig({
     pageInfo: false,
     contributors: false,
     lastUpdated: false,
+    favicon: "/favicon.ico",
     footer: "",
     copyright: "香港專題研究索引集",
     displayFooter: false,
