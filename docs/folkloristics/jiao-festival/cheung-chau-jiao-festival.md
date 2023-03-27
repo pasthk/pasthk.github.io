@@ -106,4 +106,4 @@ date: 2023-02-17
 2. 高崇：〈地方文化與旅遊經濟的互推互強——以香港長洲包山節為例〉，《廣西民族大學學報（哲學社會科學版》，2012年第34卷第4期，頁55-59。
 3. 王爽：〈香港長洲太平清醮聲景研究與非物質文化遺產保護〉，《遺產與保護研究》，2017年第2期，頁96-99。
 ## 專著
-1. 馬木池：《[殖民管治下的傳統節慶：長洲太平清醮的流變](https://www.lcsd.gov.hk/CE/Museum/ICHO/documents/10969700/23711288/CheungChauJiaoFestival_ebook.pdf?fbclid=IwAR3HmM809BahftzGzScvJ8MImxWMKG2KypTMfoc8sCLxFQOS1aANaobGiXA)》，2022年。
+1. 馬木池：《[殖民管治下的傳統節慶：長洲太平清醮的流變](https://www.lcsd.gov.hk/CE/Museum/ICHO/documents/10969700/23711288/CheungChauJiaoFestival_ebook.pdf?fbclid=IwAR3HmM809BahftzGzScvJ8MImxWMKG2KypTMfoc8sCLxFQOS1aANaobGiXA)》（2022年）。
