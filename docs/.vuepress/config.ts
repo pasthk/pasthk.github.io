@@ -28,14 +28,14 @@ export default defineUserConfig({
       },
     }),
     googleAnalyticsPlugin({
-      id: 'G-0FJ0KYS5QB',
+      id: 'G-DEPPXHZVCM',
     }),
     searchProPlugin({
       indexContent: true,
     }),
   ],
   theme: hopeTheme({
-    hostname: "https://pasthk.github.io",
+    hostname: "https://www.pasthk.com",
     darkmode: "disable",
     themeColor: false,
     fullscreen: false,
@@ -47,7 +47,7 @@ export default defineUserConfig({
     displayFooter: false,
     author: {
         name: "NG, Kin-chung",
-        url: "https://pasthk.github.io",
+        url: "https://www.pasthk.com",
       },
     navbar: [
       {
