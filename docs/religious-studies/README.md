@@ -4,6 +4,7 @@ category: 宗教
 index: false
 date: 2023-01-19
 ---
+<adsense></adsense>
 ## 通論
 ## 專題
 - [佛教](buddhism.md)

@@ -1,6 +1,7 @@
 ---
-title: 圖書館學
+title: 圖書館
 category: 文化
 index: false
 date: 2023-03-20
 ---
+<adsense></adsense>
