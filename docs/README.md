@@ -11,6 +11,10 @@ features:
     link: /archaeology
   - title: 民俗學
     link: /folkloristics
+  - title: 宗教研究
+    link: /religious-studies
+  - title: 圖書館
+    link: /library
   - title: 氣象學
     link: /meteorology
 ---
