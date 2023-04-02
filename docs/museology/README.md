@@ -1,5 +1,5 @@
 ---
-title: 博物館學
+title: 博物館
 category: 文化
 index: false
 date: 2023-01-19
