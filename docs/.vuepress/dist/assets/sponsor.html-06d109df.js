@@ -1,0 +1,1 @@
+import{_ as o,W as s,X as n,$ as t,C as c}from"./framework-c8ebc670.js";const r={};function _(a,l){const e=c("adsense");return s(),n("div",null,[t(e)])}const p=o(r,[["render",_],["__file","sponsor.html.vue"]]);export{p as default};

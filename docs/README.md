@@ -9,12 +9,12 @@ index: false
 features:
   - title: 考古學
     link: /archaeology
-  - title: 民俗學
+  - title: 民俗
     link: /folkloristics
   - title: 宗教研究
     link: /religious-studies
   - title: 圖書館
     link: /library
-  - title: 氣象學
+  - title: 氣象
     link: /meteorology
 ---
