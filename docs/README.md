@@ -13,7 +13,7 @@ features:
     link: /folkloristics
   - title: 圖書館
     link: /library
-  - title: 圖書館
+  - title: 博物館
     link: /museology
   - title: 宗教研究
     link: /religious-studies
