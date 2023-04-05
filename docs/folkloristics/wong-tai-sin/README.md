@@ -1,6 +1,7 @@
 ---
 title: 黃大仙信俗
 category: 民俗
+index: false
 date: 2023-01-20
 ---
 <adsense></adsense>
