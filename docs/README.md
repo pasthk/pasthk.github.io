@@ -19,4 +19,6 @@ features:
     link: /religious-studies
   - title: 氣象
     link: /meteorology
+  - title: 地質
+    link: /geology
 ---
