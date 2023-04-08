@@ -41,7 +41,7 @@ export default defineUserConfig({
     fullscreen: false,
     pageInfo: false,
     contributors: false,
-    lastUpdated: false,
+    lastUpdated: true,
     favicon: "/favicon.ico",
     footer: "",
     copyright: "香港專題研究索引集",
@@ -54,17 +54,20 @@ export default defineUserConfig({
       {
         text: "資料庫",
         link: "/database/",
-      }, 
+      },
       {
         text: "關於",
         link: "/about.md",
-      }, 
+      },
       {
         text: "安陽・一九二八",
         link: "https://ay1928.github.io/",
-      }, 
+      },
     ],
     plugins: {
+      feed: {
+        rss: true,
+      },
       mdEnhance: {
         footnote: true,
         imgLazyload: true,
