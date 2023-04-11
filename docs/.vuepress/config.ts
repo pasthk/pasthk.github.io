@@ -68,7 +68,6 @@ export default defineUserConfig({
       feed: {
         rss: true,
         atom: true,
-        json: true,
       },
       mdEnhance: {
         footnote: true,
