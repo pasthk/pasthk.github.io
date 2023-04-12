@@ -4,7 +4,7 @@
   <title>追跡香江</title>
   <subtitle>香港專題研究索引集</subtitle>
   <icon>https://www.pasthk.com/favicon.ico</icon>
-  <updated>2023-04-11T10:58:15.742Z</updated>
+  <updated>2023-04-12T05:56:20.496Z</updated>
   <generator>vuepress-plugin-feed2</generator>
   <link rel="self" href="https://www.pasthk.com/atom.xml"/>
   <link rel="alternate" href="https://www.pasthk.com/"/>
@@ -382,7 +382,7 @@
     <published>2023-04-04T00:00:00.000Z</published>
   </entry>
   <entry>
-    <title type="text">相機與菲林</title>
+    <title type="text">拍攝器材</title>
     <id>https://www.pasthk.com/advertisement/camera-and-film.html</id>
     <link href="https://www.pasthk.com/advertisement/camera-and-film.html"/>
     <updated>2023-04-04T07:15:11.000Z</updated>
@@ -402,7 +402,7 @@
     <published>2023-04-04T00:00:00.000Z</published>
   </entry>
   <entry>
-    <title type="text">家電用品</title>
+    <title type="text">家電</title>
     <id>https://www.pasthk.com/advertisement/home-appliance.html</id>
     <link href="https://www.pasthk.com/advertisement/home-appliance.html"/>
     <updated>2023-04-03T06:12:29.000Z</updated>
@@ -752,7 +752,7 @@
     <published>2023-04-02T00:00:00.000Z</published>
   </entry>
   <entry>
-    <title type="text">大茶樓</title>
+    <title type="text">茶樓</title>
     <id>https://www.pasthk.com/advertisement/chinese-restaurant.html</id>
     <link href="https://www.pasthk.com/advertisement/chinese-restaurant.html"/>
     <updated>2023-04-02T13:54:57.000Z</updated>
@@ -882,6 +882,51 @@
     <published>2023-04-02T00:00:00.000Z</published>
   </entry>
   <entry>
+    <title type="text">醫院</title>
+    <id>https://www.pasthk.com/hospital/</id>
+    <link href="https://www.pasthk.com/hospital/"/>
+    <updated>2023-04-04T11:35:28.000Z</updated>
+    <summary type="html"><![CDATA[<ul>
+<li><a href="/hospital/tung-wah-hospital.html" target="blank">東華醫院</a></li>
+<li><a href="/hospital/hong-kong-sanatorium-and-hospital.html" target="blank">養和醫院</a></li>
+<li><a href="/hospital/st-pauls-hospital.html" target="blank">聖保祿醫院</a></li>
+</ul>
+]]></summary>
+    <content type="html"><![CDATA[<ul>
+<li><a href="/hospital/tung-wah-hospital.html" target="blank">東華醫院</a></li>
+<li><a href="/hospital/hong-kong-sanatorium-and-hospital.html" target="blank">養和醫院</a></li>
+<li><a href="/hospital/st-pauls-hospital.html" target="blank">聖保祿醫院</a></li>
+</ul>
+]]></content>
+    <category term="醫療"/>
+    <published>2023-03-31T00:00:00.000Z</published>
+  </entry>
+  <entry>
+    <title type="text">聖保祿醫院</title>
+    <id>https://www.pasthk.com/hospital/st-pauls-hospital.html</id>
+    <link href="https://www.pasthk.com/hospital/st-pauls-hospital.html"/>
+    <updated>2023-03-31T06:20:47.000Z</updated>
+    <summary type="html"><![CDATA[<h2> 新聞報道</h2>
+<ol>
+<li>〈聖保祿醫院舉行賣物會〉，《工商日報》，1936年9月22日，<a href="https://mmis.hkpl.gov.hk/coverpage/-/coverpage/view?_coverpage_WAR_mmisportalportlet_hsf=%E8%81%96%E4%BF%9D%E7%A5%BF%E9%86%AB%E9%99%A2&amp;_coverpage_WAR_mmisportalportlet_actual_q=%28%20verbatim_dc.collection%3A%28%22Old%5C%20HK%5C%20Newspapers%22%29%20%29%20AND+%28%20%28%20allTermsMandatory%3A%28true%29%20OR+all_dc.title%3A%28%E8%81%96%E4%BF%9D%E7%A5%BF%E9%86%AB%E9%99%A2%29%20OR+all_dc.creator%3A%28%E8%81%96%E4%BF%9D%E7%A5%BF%E9%86%AB%E9%99%A2%29%20OR+all_dc.contributor%3A%28%E8%81%96%E4%BF%9D%E7%A5%BF%E9%86%AB%E9%99%A2%29%20OR+all_dc.subject%3A%28%E8%81%96%E4%BF%9D%E7%A5%BF%E9%86%AB%E9%99%A2%29%20OR+fulltext%3A%28%E8%81%96%E4%BF%9D%E7%A5%BF%E9%86%AB%E9%99%A2%29%20OR+all_dc.description%3A%28%E8%81%96%E4%BF%9D%E7%A5%BF%E9%86%AB%E9%99%A2%29%20%29%20%29&amp;_coverpage_WAR_mmisportalportlet_sort_field=dc.publicationdate_bsort&amp;p_r_p_-1078056564_c=QF757YsWv5%2F6rByrziBvQ6dsowcsbn%2Bu&amp;_coverpage_WAR_mmisportalportlet_o=0&amp;_coverpage_WAR_mmisportalportlet_sort_order=asc" target="_blank" rel="noopener noreferrer">第3張第2版</a>。</li>
+<li>〈聖保祿醫院賣物會〉，《香港華字日報》，1936年9月22日，<a href="https://mmis.hkpl.gov.hk/coverpage/-/coverpage/view?_coverpage_WAR_mmisportalportlet_hsf=%E8%81%96%E4%BF%9D%E7%A5%BF%E9%86%AB%E9%99%A2&amp;p_r_p_-1078056564_c=QF757YsWv59H%2FuxqfBwEJON7YrYnC8nV&amp;_coverpage_WAR_mmisportalportlet_o=1&amp;_coverpage_WAR_mmisportalportlet_actual_q=%28%20verbatim_dc.collection%3A%28%22Old%5C%20HK%5C%20Newspapers%22%29%20%29%20AND+%28%20%28%20allTermsMandatory%3A%28true%29%20OR+all_dc.title%3A%28%E8%81%96%E4%BF%9D%E7%A5%BF%E9%86%AB%E9%99%A2%29%20OR+all_dc.creator%3A%28%E8%81%96%E4%BF%9D%E7%A5%BF%E9%86%AB%E9%99%A2%29%20OR+all_dc.contributor%3A%28%E8%81%96%E4%BF%9D%E7%A5%BF%E9%86%AB%E9%99%A2%29%20OR+all_dc.subject%3A%28%E8%81%96%E4%BF%9D%E7%A5%BF%E9%86%AB%E9%99%A2%29%20OR+fulltext%3A%28%E8%81%96%E4%BF%9D%E7%A5%BF%E9%86%AB%E9%99%A2%29%20OR+all_dc.description%3A%28%E8%81%96%E4%BF%9D%E7%A5%BF%E9%86%AB%E9%99%A2%29%20%29%20%29&amp;_coverpage_WAR_mmisportalportlet_sort_order=asc&amp;_coverpage_WAR_mmisportalportlet_sort_field=dc.publicationdate_bsort" target="_blank" rel="noopener noreferrer">第3張第2頁</a>。</li>
+<li>〈聖保祿醫院增療肺設備〉，《華僑日報》，1947年9月30日，<a href="https://mmis.hkpl.gov.hk/coverpage/-/coverpage/view?_coverpage_WAR_mmisportalportlet_hsf=%E8%81%96%E4%BF%9D%E7%A5%BF%E9%86%AB%E9%99%A2&amp;p_r_p_-1078056564_c=QF757YsWv58JCjtBMMIqogla1VfhpMXI&amp;_coverpage_WAR_mmisportalportlet_o=2&amp;_coverpage_WAR_mmisportalportlet_actual_q=%28%20verbatim_dc.collection%3A%28%22Old%5C%20HK%5C%20Newspapers%22%29%20%29%20AND+%28%20%28%20allTermsMandatory%3A%28true%29%20OR+all_dc.title%3A%28%E8%81%96%E4%BF%9D%E7%A5%BF%E9%86%AB%E9%99%A2%29%20OR+all_dc.creator%3A%28%E8%81%96%E4%BF%9D%E7%A5%BF%E9%86%AB%E9%99%A2%29%20OR+all_dc.contributor%3A%28%E8%81%96%E4%BF%9D%E7%A5%BF%E9%86%AB%E9%99%A2%29%20OR+all_dc.subject%3A%28%E8%81%96%E4%BF%9D%E7%A5%BF%E9%86%AB%E9%99%A2%29%20OR+fulltext%3A%28%E8%81%96%E4%BF%9D%E7%A5%BF%E9%86%AB%E9%99%A2%29%20OR+all_dc.description%3A%28%E8%81%96%E4%BF%9D%E7%A5%BF%E9%86%AB%E9%99%A2%29%20%29%20%29&amp;_coverpage_WAR_mmisportalportlet_sort_order=asc&amp;_coverpage_WAR_mmisportalportlet_sort_field=dc.publicationdate_bsort" target="_blank" rel="noopener noreferrer">第1張第4頁</a>。</li>
+</ol>]]></summary>
+    <content type="html"><![CDATA[<h2> 新聞報道</h2>
+<ol>
+<li>〈聖保祿醫院舉行賣物會〉，《工商日報》，1936年9月22日，<a href="https://mmis.hkpl.gov.hk/coverpage/-/coverpage/view?_coverpage_WAR_mmisportalportlet_hsf=%E8%81%96%E4%BF%9D%E7%A5%BF%E9%86%AB%E9%99%A2&amp;_coverpage_WAR_mmisportalportlet_actual_q=%28%20verbatim_dc.collection%3A%28%22Old%5C%20HK%5C%20Newspapers%22%29%20%29%20AND+%28%20%28%20allTermsMandatory%3A%28true%29%20OR+all_dc.title%3A%28%E8%81%96%E4%BF%9D%E7%A5%BF%E9%86%AB%E9%99%A2%29%20OR+all_dc.creator%3A%28%E8%81%96%E4%BF%9D%E7%A5%BF%E9%86%AB%E9%99%A2%29%20OR+all_dc.contributor%3A%28%E8%81%96%E4%BF%9D%E7%A5%BF%E9%86%AB%E9%99%A2%29%20OR+all_dc.subject%3A%28%E8%81%96%E4%BF%9D%E7%A5%BF%E9%86%AB%E9%99%A2%29%20OR+fulltext%3A%28%E8%81%96%E4%BF%9D%E7%A5%BF%E9%86%AB%E9%99%A2%29%20OR+all_dc.description%3A%28%E8%81%96%E4%BF%9D%E7%A5%BF%E9%86%AB%E9%99%A2%29%20%29%20%29&amp;_coverpage_WAR_mmisportalportlet_sort_field=dc.publicationdate_bsort&amp;p_r_p_-1078056564_c=QF757YsWv5%2F6rByrziBvQ6dsowcsbn%2Bu&amp;_coverpage_WAR_mmisportalportlet_o=0&amp;_coverpage_WAR_mmisportalportlet_sort_order=asc" target="_blank" rel="noopener noreferrer">第3張第2版</a>。</li>
+<li>〈聖保祿醫院賣物會〉，《香港華字日報》，1936年9月22日，<a href="https://mmis.hkpl.gov.hk/coverpage/-/coverpage/view?_coverpage_WAR_mmisportalportlet_hsf=%E8%81%96%E4%BF%9D%E7%A5%BF%E9%86%AB%E9%99%A2&amp;p_r_p_-1078056564_c=QF757YsWv59H%2FuxqfBwEJON7YrYnC8nV&amp;_coverpage_WAR_mmisportalportlet_o=1&amp;_coverpage_WAR_mmisportalportlet_actual_q=%28%20verbatim_dc.collection%3A%28%22Old%5C%20HK%5C%20Newspapers%22%29%20%29%20AND+%28%20%28%20allTermsMandatory%3A%28true%29%20OR+all_dc.title%3A%28%E8%81%96%E4%BF%9D%E7%A5%BF%E9%86%AB%E9%99%A2%29%20OR+all_dc.creator%3A%28%E8%81%96%E4%BF%9D%E7%A5%BF%E9%86%AB%E9%99%A2%29%20OR+all_dc.contributor%3A%28%E8%81%96%E4%BF%9D%E7%A5%BF%E9%86%AB%E9%99%A2%29%20OR+all_dc.subject%3A%28%E8%81%96%E4%BF%9D%E7%A5%BF%E9%86%AB%E9%99%A2%29%20OR+fulltext%3A%28%E8%81%96%E4%BF%9D%E7%A5%BF%E9%86%AB%E9%99%A2%29%20OR+all_dc.description%3A%28%E8%81%96%E4%BF%9D%E7%A5%BF%E9%86%AB%E9%99%A2%29%20%29%20%29&amp;_coverpage_WAR_mmisportalportlet_sort_order=asc&amp;_coverpage_WAR_mmisportalportlet_sort_field=dc.publicationdate_bsort" target="_blank" rel="noopener noreferrer">第3張第2頁</a>。</li>
+<li>〈聖保祿醫院增療肺設備〉，《華僑日報》，1947年9月30日，<a href="https://mmis.hkpl.gov.hk/coverpage/-/coverpage/view?_coverpage_WAR_mmisportalportlet_hsf=%E8%81%96%E4%BF%9D%E7%A5%BF%E9%86%AB%E9%99%A2&amp;p_r_p_-1078056564_c=QF757YsWv58JCjtBMMIqogla1VfhpMXI&amp;_coverpage_WAR_mmisportalportlet_o=2&amp;_coverpage_WAR_mmisportalportlet_actual_q=%28%20verbatim_dc.collection%3A%28%22Old%5C%20HK%5C%20Newspapers%22%29%20%29%20AND+%28%20%28%20allTermsMandatory%3A%28true%29%20OR+all_dc.title%3A%28%E8%81%96%E4%BF%9D%E7%A5%BF%E9%86%AB%E9%99%A2%29%20OR+all_dc.creator%3A%28%E8%81%96%E4%BF%9D%E7%A5%BF%E9%86%AB%E9%99%A2%29%20OR+all_dc.contributor%3A%28%E8%81%96%E4%BF%9D%E7%A5%BF%E9%86%AB%E9%99%A2%29%20OR+all_dc.subject%3A%28%E8%81%96%E4%BF%9D%E7%A5%BF%E9%86%AB%E9%99%A2%29%20OR+fulltext%3A%28%E8%81%96%E4%BF%9D%E7%A5%BF%E9%86%AB%E9%99%A2%29%20OR+all_dc.description%3A%28%E8%81%96%E4%BF%9D%E7%A5%BF%E9%86%AB%E9%99%A2%29%20%29%20%29&amp;_coverpage_WAR_mmisportalportlet_sort_order=asc&amp;_coverpage_WAR_mmisportalportlet_sort_field=dc.publicationdate_bsort" target="_blank" rel="noopener noreferrer">第1張第4頁</a>。</li>
+</ol>
+<h2> 專著</h2>
+<ol>
+<li>香港中文大學天主教研究中心：《聖保祿醫院歷史足跡——關愛服務百二載》（香港：香港中文大學天主教研究中心，2018年）。</li>
+</ol>
+]]></content>
+    <category term="醫療"/>
+    <published>2023-03-31T00:00:00.000Z</published>
+  </entry>
+  <entry>
     <title type="text">大會堂公共圖書館</title>
     <id>https://www.pasthk.com/library/city-hall-public-library.html</id>
     <link href="https://www.pasthk.com/library/city-hall-public-library.html"/>
@@ -932,51 +977,6 @@
 </ol>
 ]]></content>
     <category term="文化"/>
-    <published>2023-03-31T00:00:00.000Z</published>
-  </entry>
-  <entry>
-    <title type="text">醫院</title>
-    <id>https://www.pasthk.com/hospital/</id>
-    <link href="https://www.pasthk.com/hospital/"/>
-    <updated>2023-04-04T11:35:28.000Z</updated>
-    <summary type="html"><![CDATA[<ul>
-<li><a href="/hospital/tung-wah-hospital.html" target="blank">東華醫院</a></li>
-<li><a href="/hospital/hong-kong-sanatorium-and-hospital.html" target="blank">養和醫院</a></li>
-<li><a href="/hospital/st-pauls-hospital.html" target="blank">聖保祿醫院</a></li>
-</ul>
-]]></summary>
-    <content type="html"><![CDATA[<ul>
-<li><a href="/hospital/tung-wah-hospital.html" target="blank">東華醫院</a></li>
-<li><a href="/hospital/hong-kong-sanatorium-and-hospital.html" target="blank">養和醫院</a></li>
-<li><a href="/hospital/st-pauls-hospital.html" target="blank">聖保祿醫院</a></li>
-</ul>
-]]></content>
-    <category term="醫療"/>
-    <published>2023-03-31T00:00:00.000Z</published>
-  </entry>
-  <entry>
-    <title type="text">聖保祿醫院</title>
-    <id>https://www.pasthk.com/hospital/st-pauls-hospital.html</id>
-    <link href="https://www.pasthk.com/hospital/st-pauls-hospital.html"/>
-    <updated>2023-03-31T06:20:47.000Z</updated>
-    <summary type="html"><![CDATA[<h2> 新聞報道</h2>
-<ol>
-<li>〈聖保祿醫院舉行賣物會〉，《工商日報》，1936年9月22日，<a href="https://mmis.hkpl.gov.hk/coverpage/-/coverpage/view?_coverpage_WAR_mmisportalportlet_hsf=%E8%81%96%E4%BF%9D%E7%A5%BF%E9%86%AB%E9%99%A2&amp;_coverpage_WAR_mmisportalportlet_actual_q=%28%20verbatim_dc.collection%3A%28%22Old%5C%20HK%5C%20Newspapers%22%29%20%29%20AND+%28%20%28%20allTermsMandatory%3A%28true%29%20OR+all_dc.title%3A%28%E8%81%96%E4%BF%9D%E7%A5%BF%E9%86%AB%E9%99%A2%29%20OR+all_dc.creator%3A%28%E8%81%96%E4%BF%9D%E7%A5%BF%E9%86%AB%E9%99%A2%29%20OR+all_dc.contributor%3A%28%E8%81%96%E4%BF%9D%E7%A5%BF%E9%86%AB%E9%99%A2%29%20OR+all_dc.subject%3A%28%E8%81%96%E4%BF%9D%E7%A5%BF%E9%86%AB%E9%99%A2%29%20OR+fulltext%3A%28%E8%81%96%E4%BF%9D%E7%A5%BF%E9%86%AB%E9%99%A2%29%20OR+all_dc.description%3A%28%E8%81%96%E4%BF%9D%E7%A5%BF%E9%86%AB%E9%99%A2%29%20%29%20%29&amp;_coverpage_WAR_mmisportalportlet_sort_field=dc.publicationdate_bsort&amp;p_r_p_-1078056564_c=QF757YsWv5%2F6rByrziBvQ6dsowcsbn%2Bu&amp;_coverpage_WAR_mmisportalportlet_o=0&amp;_coverpage_WAR_mmisportalportlet_sort_order=asc" target="_blank" rel="noopener noreferrer">第3張第2版</a>。</li>
-<li>〈聖保祿醫院賣物會〉，《香港華字日報》，1936年9月22日，<a href="https://mmis.hkpl.gov.hk/coverpage/-/coverpage/view?_coverpage_WAR_mmisportalportlet_hsf=%E8%81%96%E4%BF%9D%E7%A5%BF%E9%86%AB%E9%99%A2&amp;p_r_p_-1078056564_c=QF757YsWv59H%2FuxqfBwEJON7YrYnC8nV&amp;_coverpage_WAR_mmisportalportlet_o=1&amp;_coverpage_WAR_mmisportalportlet_actual_q=%28%20verbatim_dc.collection%3A%28%22Old%5C%20HK%5C%20Newspapers%22%29%20%29%20AND+%28%20%28%20allTermsMandatory%3A%28true%29%20OR+all_dc.title%3A%28%E8%81%96%E4%BF%9D%E7%A5%BF%E9%86%AB%E9%99%A2%29%20OR+all_dc.creator%3A%28%E8%81%96%E4%BF%9D%E7%A5%BF%E9%86%AB%E9%99%A2%29%20OR+all_dc.contributor%3A%28%E8%81%96%E4%BF%9D%E7%A5%BF%E9%86%AB%E9%99%A2%29%20OR+all_dc.subject%3A%28%E8%81%96%E4%BF%9D%E7%A5%BF%E9%86%AB%E9%99%A2%29%20OR+fulltext%3A%28%E8%81%96%E4%BF%9D%E7%A5%BF%E9%86%AB%E9%99%A2%29%20OR+all_dc.description%3A%28%E8%81%96%E4%BF%9D%E7%A5%BF%E9%86%AB%E9%99%A2%29%20%29%20%29&amp;_coverpage_WAR_mmisportalportlet_sort_order=asc&amp;_coverpage_WAR_mmisportalportlet_sort_field=dc.publicationdate_bsort" target="_blank" rel="noopener noreferrer">第3張第2頁</a>。</li>
-<li>〈聖保祿醫院增療肺設備〉，《華僑日報》，1947年9月30日，<a href="https://mmis.hkpl.gov.hk/coverpage/-/coverpage/view?_coverpage_WAR_mmisportalportlet_hsf=%E8%81%96%E4%BF%9D%E7%A5%BF%E9%86%AB%E9%99%A2&amp;p_r_p_-1078056564_c=QF757YsWv58JCjtBMMIqogla1VfhpMXI&amp;_coverpage_WAR_mmisportalportlet_o=2&amp;_coverpage_WAR_mmisportalportlet_actual_q=%28%20verbatim_dc.collection%3A%28%22Old%5C%20HK%5C%20Newspapers%22%29%20%29%20AND+%28%20%28%20allTermsMandatory%3A%28true%29%20OR+all_dc.title%3A%28%E8%81%96%E4%BF%9D%E7%A5%BF%E9%86%AB%E9%99%A2%29%20OR+all_dc.creator%3A%28%E8%81%96%E4%BF%9D%E7%A5%BF%E9%86%AB%E9%99%A2%29%20OR+all_dc.contributor%3A%28%E8%81%96%E4%BF%9D%E7%A5%BF%E9%86%AB%E9%99%A2%29%20OR+all_dc.subject%3A%28%E8%81%96%E4%BF%9D%E7%A5%BF%E9%86%AB%E9%99%A2%29%20OR+fulltext%3A%28%E8%81%96%E4%BF%9D%E7%A5%BF%E9%86%AB%E9%99%A2%29%20OR+all_dc.description%3A%28%E8%81%96%E4%BF%9D%E7%A5%BF%E9%86%AB%E9%99%A2%29%20%29%20%29&amp;_coverpage_WAR_mmisportalportlet_sort_order=asc&amp;_coverpage_WAR_mmisportalportlet_sort_field=dc.publicationdate_bsort" target="_blank" rel="noopener noreferrer">第1張第4頁</a>。</li>
-</ol>]]></summary>
-    <content type="html"><![CDATA[<h2> 新聞報道</h2>
-<ol>
-<li>〈聖保祿醫院舉行賣物會〉，《工商日報》，1936年9月22日，<a href="https://mmis.hkpl.gov.hk/coverpage/-/coverpage/view?_coverpage_WAR_mmisportalportlet_hsf=%E8%81%96%E4%BF%9D%E7%A5%BF%E9%86%AB%E9%99%A2&amp;_coverpage_WAR_mmisportalportlet_actual_q=%28%20verbatim_dc.collection%3A%28%22Old%5C%20HK%5C%20Newspapers%22%29%20%29%20AND+%28%20%28%20allTermsMandatory%3A%28true%29%20OR+all_dc.title%3A%28%E8%81%96%E4%BF%9D%E7%A5%BF%E9%86%AB%E9%99%A2%29%20OR+all_dc.creator%3A%28%E8%81%96%E4%BF%9D%E7%A5%BF%E9%86%AB%E9%99%A2%29%20OR+all_dc.contributor%3A%28%E8%81%96%E4%BF%9D%E7%A5%BF%E9%86%AB%E9%99%A2%29%20OR+all_dc.subject%3A%28%E8%81%96%E4%BF%9D%E7%A5%BF%E9%86%AB%E9%99%A2%29%20OR+fulltext%3A%28%E8%81%96%E4%BF%9D%E7%A5%BF%E9%86%AB%E9%99%A2%29%20OR+all_dc.description%3A%28%E8%81%96%E4%BF%9D%E7%A5%BF%E9%86%AB%E9%99%A2%29%20%29%20%29&amp;_coverpage_WAR_mmisportalportlet_sort_field=dc.publicationdate_bsort&amp;p_r_p_-1078056564_c=QF757YsWv5%2F6rByrziBvQ6dsowcsbn%2Bu&amp;_coverpage_WAR_mmisportalportlet_o=0&amp;_coverpage_WAR_mmisportalportlet_sort_order=asc" target="_blank" rel="noopener noreferrer">第3張第2版</a>。</li>
-<li>〈聖保祿醫院賣物會〉，《香港華字日報》，1936年9月22日，<a href="https://mmis.hkpl.gov.hk/coverpage/-/coverpage/view?_coverpage_WAR_mmisportalportlet_hsf=%E8%81%96%E4%BF%9D%E7%A5%BF%E9%86%AB%E9%99%A2&amp;p_r_p_-1078056564_c=QF757YsWv59H%2FuxqfBwEJON7YrYnC8nV&amp;_coverpage_WAR_mmisportalportlet_o=1&amp;_coverpage_WAR_mmisportalportlet_actual_q=%28%20verbatim_dc.collection%3A%28%22Old%5C%20HK%5C%20Newspapers%22%29%20%29%20AND+%28%20%28%20allTermsMandatory%3A%28true%29%20OR+all_dc.title%3A%28%E8%81%96%E4%BF%9D%E7%A5%BF%E9%86%AB%E9%99%A2%29%20OR+all_dc.creator%3A%28%E8%81%96%E4%BF%9D%E7%A5%BF%E9%86%AB%E9%99%A2%29%20OR+all_dc.contributor%3A%28%E8%81%96%E4%BF%9D%E7%A5%BF%E9%86%AB%E9%99%A2%29%20OR+all_dc.subject%3A%28%E8%81%96%E4%BF%9D%E7%A5%BF%E9%86%AB%E9%99%A2%29%20OR+fulltext%3A%28%E8%81%96%E4%BF%9D%E7%A5%BF%E9%86%AB%E9%99%A2%29%20OR+all_dc.description%3A%28%E8%81%96%E4%BF%9D%E7%A5%BF%E9%86%AB%E9%99%A2%29%20%29%20%29&amp;_coverpage_WAR_mmisportalportlet_sort_order=asc&amp;_coverpage_WAR_mmisportalportlet_sort_field=dc.publicationdate_bsort" target="_blank" rel="noopener noreferrer">第3張第2頁</a>。</li>
-<li>〈聖保祿醫院增療肺設備〉，《華僑日報》，1947年9月30日，<a href="https://mmis.hkpl.gov.hk/coverpage/-/coverpage/view?_coverpage_WAR_mmisportalportlet_hsf=%E8%81%96%E4%BF%9D%E7%A5%BF%E9%86%AB%E9%99%A2&amp;p_r_p_-1078056564_c=QF757YsWv58JCjtBMMIqogla1VfhpMXI&amp;_coverpage_WAR_mmisportalportlet_o=2&amp;_coverpage_WAR_mmisportalportlet_actual_q=%28%20verbatim_dc.collection%3A%28%22Old%5C%20HK%5C%20Newspapers%22%29%20%29%20AND+%28%20%28%20allTermsMandatory%3A%28true%29%20OR+all_dc.title%3A%28%E8%81%96%E4%BF%9D%E7%A5%BF%E9%86%AB%E9%99%A2%29%20OR+all_dc.creator%3A%28%E8%81%96%E4%BF%9D%E7%A5%BF%E9%86%AB%E9%99%A2%29%20OR+all_dc.contributor%3A%28%E8%81%96%E4%BF%9D%E7%A5%BF%E9%86%AB%E9%99%A2%29%20OR+all_dc.subject%3A%28%E8%81%96%E4%BF%9D%E7%A5%BF%E9%86%AB%E9%99%A2%29%20OR+fulltext%3A%28%E8%81%96%E4%BF%9D%E7%A5%BF%E9%86%AB%E9%99%A2%29%20OR+all_dc.description%3A%28%E8%81%96%E4%BF%9D%E7%A5%BF%E9%86%AB%E9%99%A2%29%20%29%20%29&amp;_coverpage_WAR_mmisportalportlet_sort_order=asc&amp;_coverpage_WAR_mmisportalportlet_sort_field=dc.publicationdate_bsort" target="_blank" rel="noopener noreferrer">第1張第4頁</a>。</li>
-</ol>
-<h2> 專著</h2>
-<ol>
-<li>香港中文大學天主教研究中心：《聖保祿醫院歷史足跡——關愛服務百二載》（香港：香港中文大學天主教研究中心，2018年）。</li>
-</ol>
-]]></content>
-    <category term="醫療"/>
     <published>2023-03-31T00:00:00.000Z</published>
   </entry>
   <entry>
@@ -1314,17 +1314,18 @@
     <link href="https://www.pasthk.com/advertisement/"/>
     <updated>2023-04-04T07:15:11.000Z</updated>
     <summary type="html"><![CDATA[<ul>
-<li>琴行</li>
+<li><a href="/advertisement/music-company.html" target="blank">琴行</a></li>
 <li><a href="/advertisement/cake-shop.html" target="blank">餅家</a></li>
-<li>茶莊</li>
-<li><a href="/advertisement/camera-and-film.html" target="blank">相機與菲林</a></li>
-</ul>
-]]></summary>
+<li><a href="/advertisement/tea-house.html" target="blank">茶莊</a></li>
+<li><a href="/advertisement/chinese-restaurant.html" target="blank">茶樓</a></li>
+<li><a href="/advertisement/camera-and-film.html" target="blank">攝影</a></li>
+</ul>]]></summary>
     <content type="html"><![CDATA[<ul>
-<li>琴行</li>
+<li><a href="/advertisement/music-company.html" target="blank">琴行</a></li>
 <li><a href="/advertisement/cake-shop.html" target="blank">餅家</a></li>
-<li>茶莊</li>
-<li><a href="/advertisement/camera-and-film.html" target="blank">相機與菲林</a></li>
+<li><a href="/advertisement/tea-house.html" target="blank">茶莊</a></li>
+<li><a href="/advertisement/chinese-restaurant.html" target="blank">茶樓</a></li>
+<li><a href="/advertisement/camera-and-film.html" target="blank">攝影</a></li>
 </ul>
 ]]></content>
     <category term="廣告"/>
@@ -1588,13 +1589,13 @@
     <updated>2023-03-15T13:39:20.000Z</updated>
     <summary type="html"><![CDATA[<h2> 調查報告</h2>
 <ol>
-<li>〈鹹田（西貢）具考古研究價值的地點〉（香港：古物古蹟辦事處檔案），編號：AM98-0914。</li>
+<li>〈鹹田（西貢）具考古研究價值的地點〉（香港：古物古蹟辦事處檔案，編號：AM98-0914）。</li>
 <li>"Survey-Cum-Excavation at Ham Tin, Sai Kung, New Territories: Stage I Archaeological Survey", Hong Kong: Antiquities and Monuments Office, SK18.</li>
 <li>"Archaeological Watching Brief for Ham Tin and Sai Wan, Sai Kung - Final Watching Brief Report", Hong Kong: Antiquities and Monuments Office, SK57.</li>
 </ol>]]></summary>
     <content type="html"><![CDATA[<h2> 調查報告</h2>
 <ol>
-<li>〈鹹田（西貢）具考古研究價值的地點〉（香港：古物古蹟辦事處檔案），編號：AM98-0914。</li>
+<li>〈鹹田（西貢）具考古研究價值的地點〉（香港：古物古蹟辦事處檔案，編號：AM98-0914）。</li>
 <li>"Survey-Cum-Excavation at Ham Tin, Sai Kung, New Territories: Stage I Archaeological Survey", Hong Kong: Antiquities and Monuments Office, SK18.</li>
 <li>"Archaeological Watching Brief for Ham Tin and Sai Wan, Sai Kung - Final Watching Brief Report", Hong Kong: Antiquities and Monuments Office, SK57.</li>
 </ol>
@@ -1604,7 +1605,7 @@
 </ol>
 <h2> 文章</h2>
 <ol>
-<li>〈香港西貢蠔涌遺址西區（HC2000）環境考古研究文章〉（香港：古物古蹟辦事處檔案），編號：SK27。</li>
+<li>〈香港西貢蠔涌遺址西區（HC2000）環境考古研究文章〉（香港：古物古蹟辦事處檔案，編號：SK27）。</li>
 </ol>
 ]]></content>
     <category term="考古"/>
@@ -1617,30 +1618,30 @@
     <updated>2023-03-15T13:39:20.000Z</updated>
     <summary type="html"><![CDATA[<h2> 調查報告</h2>
 <ol>
-<li>〈蠔涌古徑〉（香港：古物古蹟辦事處檔案），編號：AM93-0542。</li>
-<li>〈蠔涌具考古研究價值的地點〉（香港：古物古蹟辦事處檔案），編號：AM93-0543。</li>
-<li>〈香港西貢公路蠔涌路段擴闊工程考古調查報告〉（香港：古物古蹟辦事處檔案），編號：SK9。</li>
-<li>〈2005年西貢蠔涌丈量約份第244約第610SB、610SC及610SD號地段小型屋宇考古調查工作報告〉（香港：古物古蹟辦事處檔案），編號：SK54。</li>
-<li>〈2009年西貢蠔涌丈量約份244約第2107B、2110及2110號地段小型屋宇考古調查工作報告〉（香港：古物古蹟辦事處檔案），編號：SK55。</li>
-<li>〈香港西貢蠔涌2012考古調查報告〉（香港：古物古蹟辦事處檔案），編號：SK56。</li>
+<li>〈蠔涌古徑〉（香港：古物古蹟辦事處檔案，編號：AM93-0542）。</li>
+<li>〈蠔涌具考古研究價值的地點〉（香港：古物古蹟辦事處檔案，編號：AM93-0543）。</li>
+<li>〈香港西貢公路蠔涌路段擴闊工程考古調查報告〉（香港：古物古蹟辦事處檔案，編號：SK9）。</li>
+<li>〈2005年西貢蠔涌丈量約份第244約第610SB、610SC及610SD號地段小型屋宇考古調查工作報告〉（香港：古物古蹟辦事處檔案，編號：SK54）。</li>
+<li>〈2009年西貢蠔涌丈量約份244約第2107B、2110及2110號地段小型屋宇考古調查工作報告〉（香港：古物古蹟辦事處檔案，編號：SK55）。</li>
+<li>〈香港西貢蠔涌2012考古調查報告〉（香港：古物古蹟辦事處檔案，編號：SK56）。</li>
 </ol>]]></summary>
     <content type="html"><![CDATA[<h2> 調查報告</h2>
 <ol>
-<li>〈蠔涌古徑〉（香港：古物古蹟辦事處檔案），編號：AM93-0542。</li>
-<li>〈蠔涌具考古研究價值的地點〉（香港：古物古蹟辦事處檔案），編號：AM93-0543。</li>
-<li>〈香港西貢公路蠔涌路段擴闊工程考古調查報告〉（香港：古物古蹟辦事處檔案），編號：SK9。</li>
-<li>〈2005年西貢蠔涌丈量約份第244約第610SB、610SC及610SD號地段小型屋宇考古調查工作報告〉（香港：古物古蹟辦事處檔案），編號：SK54。</li>
-<li>〈2009年西貢蠔涌丈量約份244約第2107B、2110及2110號地段小型屋宇考古調查工作報告〉（香港：古物古蹟辦事處檔案），編號：SK55。</li>
-<li>〈香港西貢蠔涌2012考古調查報告〉（香港：古物古蹟辦事處檔案），編號：SK56。</li>
+<li>〈蠔涌古徑〉（香港：古物古蹟辦事處檔案，編號：AM93-0542）。</li>
+<li>〈蠔涌具考古研究價值的地點〉（香港：古物古蹟辦事處檔案，編號：AM93-0543）。</li>
+<li>〈香港西貢公路蠔涌路段擴闊工程考古調查報告〉（香港：古物古蹟辦事處檔案，編號：SK9）。</li>
+<li>〈2005年西貢蠔涌丈量約份第244約第610SB、610SC及610SD號地段小型屋宇考古調查工作報告〉（香港：古物古蹟辦事處檔案，編號：SK54）。</li>
+<li>〈2009年西貢蠔涌丈量約份244約第2107B、2110及2110號地段小型屋宇考古調查工作報告〉（香港：古物古蹟辦事處檔案，編號：SK55）。</li>
+<li>〈香港西貢蠔涌2012考古調查報告〉（香港：古物古蹟辦事處檔案，編號：SK56）。</li>
 </ol>
 <h2> 發掘報告</h2>
 <ol>
-<li>〈香港西貢蠔涌遺址西區（HC2000）發掘報告〉（香港：古物古蹟辦事處檔案），編號：SK20。</li>
-<li>〈香港西貢蠔涌遺址C區發掘報告〉（香港：古物古蹟辦事處檔案），編號：SK40。</li>
+<li>〈香港西貢蠔涌遺址西區（HC2000）發掘報告〉（香港：古物古蹟辦事處檔案，編號：SK20）。</li>
+<li>〈香港西貢蠔涌遺址C區發掘報告〉（香港：古物古蹟辦事處檔案，編號：SK40）。</li>
 </ol>
 <h2> 文章</h2>
 <ol>
-<li>〈香港西貢蠔涌遺址西區（HC2000）環境考古研究文章〉（香港：古物古蹟辦事處檔案），編號：SK27。</li>
+<li>〈香港西貢蠔涌遺址西區（HC2000）環境考古研究文章〉（香港：古物古蹟辦事處檔案，編號：SK27）。</li>
 </ol>
 ]]></content>
     <category term="考古"/>
@@ -1654,24 +1655,24 @@
     <summary type="html"><![CDATA[<h2> 調查報告</h2>
 <ol>
 <li>"Survey and Assessment for the Proposed Extension of Public Golf Course at Kau Sai Chau, Sai Kung", Hong Kong: Antiquities and Monuments Office, SK13.</li>
-<li>〈西貢滘西洲公眾高爾夫球場擬擴建工程2001年考古調查及評估報告〉（香港：古物古蹟辦事處檔案），編號：SK28。</li>
+<li>〈西貢滘西洲公眾高爾夫球場擬擴建工程2001年考古調查及評估報告〉（香港：古物古蹟辦事處檔案，編號：SK28）。</li>
 </ol>
 <h2> 發掘報告</h2>
 <ol>
 <li>"Report on an Archaeological Survey and Excavation of Northern Kau Sai Chau", Hong Kong: Antiquities and Monuments Office, SK1.</li>
 <li>〈Report on Final Archaeological Excavation at Kau Sai Chau (Phase II)", Hong Kong: Antiquities and Monuments Office, SK2.</li>
-<li>〈西貢滘西洲公眾高爾夫球場擬擴建工程2004年考古調查及發掘報告〉（香港：古物古蹟辦事處檔案），編號：SK35。</li>
+<li>〈西貢滘西洲公眾高爾夫球場擬擴建工程2004年考古調查及發掘報告〉（香港：古物古蹟辦事處檔案，編號：SK35）。</li>
 </ol>]]></summary>
     <content type="html"><![CDATA[<h2> 調查報告</h2>
 <ol>
 <li>"Survey and Assessment for the Proposed Extension of Public Golf Course at Kau Sai Chau, Sai Kung", Hong Kong: Antiquities and Monuments Office, SK13.</li>
-<li>〈西貢滘西洲公眾高爾夫球場擬擴建工程2001年考古調查及評估報告〉（香港：古物古蹟辦事處檔案），編號：SK28。</li>
+<li>〈西貢滘西洲公眾高爾夫球場擬擴建工程2001年考古調查及評估報告〉（香港：古物古蹟辦事處檔案，編號：SK28）。</li>
 </ol>
 <h2> 發掘報告</h2>
 <ol>
 <li>"Report on an Archaeological Survey and Excavation of Northern Kau Sai Chau", Hong Kong: Antiquities and Monuments Office, SK1.</li>
 <li>〈Report on Final Archaeological Excavation at Kau Sai Chau (Phase II)", Hong Kong: Antiquities and Monuments Office, SK2.</li>
-<li>〈西貢滘西洲公眾高爾夫球場擬擴建工程2004年考古調查及發掘報告〉（香港：古物古蹟辦事處檔案），編號：SK35。</li>
+<li>〈西貢滘西洲公眾高爾夫球場擬擴建工程2004年考古調查及發掘報告〉（香港：古物古蹟辦事處檔案，編號：SK35）。</li>
 </ol>
 ]]></content>
     <category term="考古"/>
@@ -1707,22 +1708,22 @@
     <summary type="html"><![CDATA[<h2> 調查報告</h2>
 <ol>
 <li>"Tung Lung Fort A Ch'ing Dynasty Fortification on Tung Lung Island, Hong Kong", Hong Kong: Antiquities and Monuments Office, SK32.</li>
-<li>〈2016-2017東龍洲考古調查最終報告——東龍洲南堂考古調查報告（第四稿）〉（香港：古物古蹟辦事處檔案），編號：SK65。</li>
-<li>〈東龍洲南堂考古調查中期報告〉（香港：古物古蹟辦事處檔案），編號：SK67。</li>
-<li>〈東龍洲南堂考古調查最終報告（第五稿）〉（香港：古物古蹟辦事處檔案），編號：SK69。</li>
-<li>〈東龍洲南堂考古調查最終報告〉（香港：古物古蹟辦事處檔案），編號：SK72。</li>
-<li>〈東龍洲考古調查報告〉（香港：古物古蹟辦事處檔案），編號：SK73。</li>
-<li>〈東龍洲南堂考古調查最終報告（第三稿）〉（香港：古物古蹟辦事處檔案），編號：SK74。</li>
+<li>〈2016-2017東龍洲考古調查最終報告——東龍洲南堂考古調查報告（第四稿）〉（香港：古物古蹟辦事處檔案，編號：SK65。</li>
+<li>〈東龍洲南堂考古調查中期報告〉（香港：古物古蹟辦事處檔案，編號：SK67）。</li>
+<li>〈東龍洲南堂考古調查最終報告（第五稿）〉（香港：古物古蹟辦事處檔案，編號：SK69）。</li>
+<li>〈東龍洲南堂考古調查最終報告〉（香港：古物古蹟辦事處檔案，編號：SK72）。</li>
+<li>〈東龍洲考古調查報告〉（香港：古物古蹟辦事處檔案，編號：SK73）。</li>
+<li>〈東龍洲南堂考古調查最終報告（第三稿）〉（香港：古物古蹟辦事處檔案，編號：SK74）。</li>
 </ol>]]></summary>
     <content type="html"><![CDATA[<h2> 調查報告</h2>
 <ol>
 <li>"Tung Lung Fort A Ch'ing Dynasty Fortification on Tung Lung Island, Hong Kong", Hong Kong: Antiquities and Monuments Office, SK32.</li>
-<li>〈2016-2017東龍洲考古調查最終報告——東龍洲南堂考古調查報告（第四稿）〉（香港：古物古蹟辦事處檔案），編號：SK65。</li>
-<li>〈東龍洲南堂考古調查中期報告〉（香港：古物古蹟辦事處檔案），編號：SK67。</li>
-<li>〈東龍洲南堂考古調查最終報告（第五稿）〉（香港：古物古蹟辦事處檔案），編號：SK69。</li>
-<li>〈東龍洲南堂考古調查最終報告〉（香港：古物古蹟辦事處檔案），編號：SK72。</li>
-<li>〈東龍洲考古調查報告〉（香港：古物古蹟辦事處檔案），編號：SK73。</li>
-<li>〈東龍洲南堂考古調查最終報告（第三稿）〉（香港：古物古蹟辦事處檔案），編號：SK74。</li>
+<li>〈2016-2017東龍洲考古調查最終報告——東龍洲南堂考古調查報告（第四稿）〉（香港：古物古蹟辦事處檔案，編號：SK65。</li>
+<li>〈東龍洲南堂考古調查中期報告〉（香港：古物古蹟辦事處檔案，編號：SK67）。</li>
+<li>〈東龍洲南堂考古調查最終報告（第五稿）〉（香港：古物古蹟辦事處檔案，編號：SK69）。</li>
+<li>〈東龍洲南堂考古調查最終報告〉（香港：古物古蹟辦事處檔案，編號：SK72）。</li>
+<li>〈東龍洲考古調查報告〉（香港：古物古蹟辦事處檔案，編號：SK73）。</li>
+<li>〈東龍洲南堂考古調查最終報告（第三稿）〉（香港：古物古蹟辦事處檔案，編號：SK74）。</li>
 </ol>
 ]]></content>
     <category term="考古"/>
@@ -1807,14 +1808,14 @@
     <updated>2023-03-01T08:18:46.000Z</updated>
     <summary type="html"><![CDATA[<h2> 調查報告</h2>
 <ol>
-<li>〈流浮山具考古研究價值的地點〉（香港：古物古蹟辦事處檔案），編號：AM96-0647。</li>
-<li>〈2001年流浮山坑口村擬修建水渠工地考古調查及評估報告〉（香港：古物古蹟辦事處檔案），編號：AM96-0647。</li>
+<li>〈流浮山具考古研究價值的地點〉（香港：古物古蹟辦事處檔案，編號：AM96-0647）。</li>
+<li>〈2001年流浮山坑口村擬修建水渠工地考古調查及評估報告〉（香港：古物古蹟辦事處檔案，編號：AM96-0647）。</li>
 </ol>
 ]]></summary>
     <content type="html"><![CDATA[<h2> 調查報告</h2>
 <ol>
-<li>〈流浮山具考古研究價值的地點〉（香港：古物古蹟辦事處檔案），編號：AM96-0647。</li>
-<li>〈2001年流浮山坑口村擬修建水渠工地考古調查及評估報告〉（香港：古物古蹟辦事處檔案），編號：AM96-0647。</li>
+<li>〈流浮山具考古研究價值的地點〉（香港：古物古蹟辦事處檔案，編號：AM96-0647）。</li>
+<li>〈2001年流浮山坑口村擬修建水渠工地考古調查及評估報告〉（香港：古物古蹟辦事處檔案，編號：AM96-0647）。</li>
 </ol>
 ]]></content>
     <category term="考古"/>
@@ -1993,7 +1994,7 @@
 </ol>
 <h2> 文章</h2>
 <ol>
-<li>〈馬灣東灣仔北史前遺址出土遺物地質材料研究〉（香港：古物古蹟辦事處檔案），編號：TW5。</li>
+<li>〈馬灣東灣仔北史前遺址出土遺物地質材料研究〉（香港：古物古蹟辦事處檔案，編號：TW5。</li>
 <li>韓康信：〈香港東灣仔北遺址新石器時代人骨〉，《第四紀研究》，1999年第2期，頁184-195。</li>
 <li>韓康信、董新林：〈香港馬灣東灣仔北史前遺址出土人骨鑒定〉，《考古》，1999年第6期，頁18-25。</li>
 <li>楊建軍：〈香港馬灣島東灣仔北遺址的分期及相關問題〉，《江漢考古》，2015年第6期，頁48-54。</li>
@@ -2234,15 +2235,15 @@
 <li>〈精巧飄色民族舞　神鑾麟獅彩旗飄　長洲會景巡遊盛　吸引數以萬計外籍遊客坊眾及旅遊可欣賞　遊行歷時兩小時半老中青幼參加表演熱烈〉，《華僑日報》，1990年5月7日，<a href="https://mmis.hkpl.gov.hk/coverpage/-/coverpage/view?_coverpage_WAR_mmisportalportlet_hsf=%E6%B8%85%E9%86%AE&amp;p_r_p_-1078056564_c=QF757YsWv59H%2FuxqfBwEJMHEKFHWpTwo&amp;_coverpage_WAR_mmisportalportlet_o=145&amp;_coverpage_WAR_mmisportalportlet_actual_q=%28%20verbatim_dc.collection%3A%28%22Old%5C%20HK%5C%20Newspapers%22%29%20%29%20AND+%28%20%28%20allTermsMandatory%3A%28true%29%20OR+all_dc.title%3A%28%E6%B8%85%E9%86%AE%29%20OR+all_dc.creator%3A%28%E6%B8%85%E9%86%AE%29%20OR+all_dc.contributor%3A%28%E6%B8%85%E9%86%AE%29%20OR+all_dc.subject%3A%28%E6%B8%85%E9%86%AE%29%20OR+fulltext%3A%28%E6%B8%85%E9%86%AE%29%20OR+all_dc.description%3A%28%E6%B8%85%E9%86%AE%29%20%29%20%29&amp;_coverpage_WAR_mmisportalportlet_sort_order=asc&amp;_coverpage_WAR_mmisportalportlet_sort_field=dc.publicationdate_bsort" target="_blank" rel="noopener noreferrer">頁4</a>。</li>
 <li>〈長洲太平清醮　掀起全島歡騰　盛大飄色會景巡遊吸引中外遊客爭看　政務司曹廣榮主禮傳統節目設計精巧〉，《華僑日報》，1991年5月24日，<a href="https://mmis.hkpl.gov.hk/coverpage/-/coverpage/view?_coverpage_WAR_mmisportalportlet_hsf=%E6%B8%85%E9%86%AE&amp;p_r_p_-1078056564_c=QF757YsWv58JCjtBMMIqosrCLneazo2i&amp;_coverpage_WAR_mmisportalportlet_o=147&amp;_coverpage_WAR_mmisportalportlet_actual_q=%28%20verbatim_dc.collection%3A%28%22Old%5C%20HK%5C%20Newspapers%22%29%20%29%20AND+%28%20%28%20allTermsMandatory%3A%28true%29%20OR+all_dc.title%3A%28%E6%B8%85%E9%86%AE%29%20OR+all_dc.creator%3A%28%E6%B8%85%E9%86%AE%29%20OR+all_dc.contributor%3A%28%E6%B8%85%E9%86%AE%29%20OR+all_dc.subject%3A%28%E6%B8%85%E9%86%AE%29%20OR+fulltext%3A%28%E6%B8%85%E9%86%AE%29%20OR+all_dc.description%3A%28%E6%B8%85%E9%86%AE%29%20%29%20%29&amp;_coverpage_WAR_mmisportalportlet_sort_order=asc&amp;_coverpage_WAR_mmisportalportlet_sort_field=dc.publicationdate_bsort" target="_blank" rel="noopener noreferrer">頁6</a>。</li>
 </ol>
+<h2> 專著</h2>
+<ol>
+<li>馬木池：《<a href="https://www.lcsd.gov.hk/CE/Museum/ICHO/documents/10969700/23711288/CheungChauJiaoFestival_ebook.pdf?fbclid=IwAR3HmM809BahftzGzScvJ8MImxWMKG2KypTMfoc8sCLxFQOS1aANaobGiXA" target="_blank" rel="noopener noreferrer">殖民管治下的傳統節慶：長洲太平清醮的流變</a>》（2022年）。</li>
+</ol>
 <h2> 文章</h2>
 <ol>
 <li>鄧力恆：〈<a href="https://schina-publication.hkust.edu.hk/sites/default/files/pubs/news-049.03.pdf" target="_blank" rel="noopener noreferrer">從長洲節慶到香港節日：從星島日報看長洲太平清醮的演變，1964-1965</a>〉，《田野與文獻》，2007年第49期，頁15-21。</li>
 <li>高崇：〈地方文化與旅遊經濟的互推互強——以香港長洲包山節為例〉，《廣西民族大學學報（哲學社會科學版》，2012年第34卷第4期，頁55-59。</li>
 <li>王爽：〈香港長洲太平清醮聲景研究與非物質文化遺產保護〉，《遺產與保護研究》，2017年第2期，頁96-99。</li>
-</ol>
-<h2> 專著</h2>
-<ol>
-<li>馬木池：《<a href="https://www.lcsd.gov.hk/CE/Museum/ICHO/documents/10969700/23711288/CheungChauJiaoFestival_ebook.pdf?fbclid=IwAR3HmM809BahftzGzScvJ8MImxWMKG2KypTMfoc8sCLxFQOS1aANaobGiXA" target="_blank" rel="noopener noreferrer">殖民管治下的傳統節慶：長洲太平清醮的流變</a>》（2022年）。</li>
 </ol>
 ]]></content>
     <category term="民俗"/>
@@ -3969,12 +3970,12 @@
     <updated>2023-02-24T15:50:20.000Z</updated>
     <summary type="html"><![CDATA[<h2> 調查報告</h2>
 <ol>
-<li>〈香港仔黃竹坑加氣站選址考古調查報告〉（香港：古物古蹟辦事處檔案），編號：HKI3。</li>
+<li>〈香港仔黃竹坑加氣站選址考古調查報告〉（香港：古物古蹟辦事處檔案，編號：HKI3）。</li>
 </ol>
 ]]></summary>
     <content type="html"><![CDATA[<h2> 調查報告</h2>
 <ol>
-<li>〈香港仔黃竹坑加氣站選址考古調查報告〉（香港：古物古蹟辦事處檔案），編號：HKI3。</li>
+<li>〈香港仔黃竹坑加氣站選址考古調查報告〉（香港：古物古蹟辦事處檔案，編號：HKI3）。</li>
 </ol>
 ]]></content>
     <category term="考古"/>
@@ -4007,7 +4008,7 @@
     <updated>2023-02-24T15:50:20.000Z</updated>
     <summary type="html"><![CDATA[<h2> 調查報告</h2>
 <ol>
-<li>〈龍鼓上灘具考古研究價值的地點〉（香港：古物古蹟辦事處檔案），編號：AM78-0209。</li>
+<li>〈龍鼓上灘具考古研究價值的地點〉（香港：古物古蹟辦事處檔案，編號：AM78-0209）。</li>
 </ol>
 <h2> 發掘報告</h2>
 <ol>
@@ -4019,7 +4020,7 @@
 </ol>]]></summary>
     <content type="html"><![CDATA[<h2> 調查報告</h2>
 <ol>
-<li>〈龍鼓上灘具考古研究價值的地點〉（香港：古物古蹟辦事處檔案），編號：AM78-0209。</li>
+<li>〈龍鼓上灘具考古研究價值的地點〉（香港：古物古蹟辦事處檔案，編號：AM78-0209）。</li>
 </ol>
 <h2> 發掘報告</h2>
 <ol>
@@ -4050,9 +4051,9 @@
 </ol>
 <h2> 發掘報告</h2>
 <ol>
-<li>〈前九龍寨城衙門〉（香港：古物古蹟辦事處檔案），編號：AM90-0422。</li>
-<li>〈九龍寨城南門遺蹟〉（香港：古物古蹟辦事處檔案），編號：AM96-0764。</li>
-<li>〈九龍寨城遺址〉（香港：古物古蹟辦事處檔案），編號：AM99-1442。</li>
+<li>〈前九龍寨城衙門〉（香港：古物古蹟辦事處檔案，編號：AM90-0422）。</li>
+<li>〈九龍寨城南門遺蹟〉（香港：古物古蹟辦事處檔案，編號：AM96-0764）。</li>
+<li>〈九龍寨城遺址〉（香港：古物古蹟辦事處檔案，編號：AM99-1442）。</li>
 <li>"Sewerage Interception Scheme in Kowloon City - Pumping Station, Rising Mains and Trunk Sewers: Archaeological Survey-Cum-Excavation", Hong Kong: Antiquities and Monuments Office, KL20.</li>
 </ol>
 <h2> 專著</h2>
@@ -4071,30 +4072,30 @@
     <updated>2023-02-24T15:50:20.000Z</updated>
     <summary type="html"><![CDATA[<h2> 調查報告</h2>
 <ol>
-<li>〈龍津石橋〉（香港：古物古蹟辦事處檔案），編號：AM99-1458。</li>
+<li>〈龍津石橋〉（香港：古物古蹟辦事處檔案，編號：AM99-1458）。</li>
 <li>"Report on Archaeological Investigations at Kowloon Walled City, Hong Kong (Phase Ⅲ)", Hong Kong: Antiquities and Monuments Office, KL10.</li>
-<li>〈<a href="https://www.amo.gov.hk/filemanager/amo/common/form/20130824_ltsb_preservation_corridor.pdf" target="_blank" rel="noopener noreferrer">龍津石橋保育長廊詮釋準則和指引</a>〉（香港：古物古蹟辦事處檔案），編號：KL26。</li>
+<li>〈<a href="https://www.amo.gov.hk/filemanager/amo/common/form/20130824_ltsb_preservation_corridor.pdf" target="_blank" rel="noopener noreferrer">龍津石橋保育長廊詮釋準則和指引</a>〉（香港：古物古蹟辦事處檔案，編號：KL26）。</li>
 <li>"Preliminary Archaeological Survey at Lung Tsun Stone Bridge as part of Lung Tsun Stone Bridge Preservation Corridor at Kai Tak Development", Hong Kong: Antiquities and Monuments Office, KL40.</li>
 </ol>]]></summary>
     <content type="html"><![CDATA[<h2> 調查報告</h2>
 <ol>
-<li>〈龍津石橋〉（香港：古物古蹟辦事處檔案），編號：AM99-1458。</li>
+<li>〈龍津石橋〉（香港：古物古蹟辦事處檔案，編號：AM99-1458）。</li>
 <li>"Report on Archaeological Investigations at Kowloon Walled City, Hong Kong (Phase Ⅲ)", Hong Kong: Antiquities and Monuments Office, KL10.</li>
-<li>〈<a href="https://www.amo.gov.hk/filemanager/amo/common/form/20130824_ltsb_preservation_corridor.pdf" target="_blank" rel="noopener noreferrer">龍津石橋保育長廊詮釋準則和指引</a>〉（香港：古物古蹟辦事處檔案），編號：KL26。</li>
+<li>〈<a href="https://www.amo.gov.hk/filemanager/amo/common/form/20130824_ltsb_preservation_corridor.pdf" target="_blank" rel="noopener noreferrer">龍津石橋保育長廊詮釋準則和指引</a>〉（香港：古物古蹟辦事處檔案，編號：KL26）。</li>
 <li>"Preliminary Archaeological Survey at Lung Tsun Stone Bridge as part of Lung Tsun Stone Bridge Preservation Corridor at Kai Tak Development", Hong Kong: Antiquities and Monuments Office, KL40.</li>
 </ol>
 <h2> 發掘報告</h2>
 <ol>
-<li>〈<a href="https://www.amo.gov.hk/filemanager/amo/common/form/Lung_Tsun_Stone_Bridge_Remnants.pdf" target="_blank" rel="noopener noreferrer">龍津石橋全面發掘報告</a>〉（香港：古物古蹟辦事處檔案），編號：KL24。</li>
+<li>〈<a href="https://www.amo.gov.hk/filemanager/amo/common/form/Lung_Tsun_Stone_Bridge_Remnants.pdf" target="_blank" rel="noopener noreferrer">龍津石橋全面發掘報告</a>〉（香港：古物古蹟辦事處檔案，編號：KL24）。</li>
 </ol>
 <h2> 新聞報道</h2>
 <h2> 文章</h2>
 <ol>
-<li>鍾寶賢、高添強：〈<a href="https://www.amo.gov.hk/filemanager/amo/common/form/research_ltsb_surrounding_final.pdf" target="_blank" rel="noopener noreferrer">「龍津橋及其鄰近區域」歷史研究</a>〉（香港：古物古蹟辦事處檔案，2012年12月），編號：KL25。</li>
+<li>鍾寶賢、高添強：〈<a href="https://www.amo.gov.hk/filemanager/amo/common/form/research_ltsb_surrounding_final.pdf" target="_blank" rel="noopener noreferrer">「龍津橋及其鄰近區域」歷史研究</a>〉（香港：古物古蹟辦事處檔案，2012年12月，編號：KL25）。</li>
 </ol>
 <h2> 會議文件</h2>
 <ol>
-<li>建築署、康樂及文化事務署：〈啟德龍津石橋保育長廊，Lung Tsun Stone Bridge Preservation Corridor at Kai Tak）〉（香港：海濱事務委員會會議文件，2017年11月1日），編號：TFKT/20/2017。</li>
+<li>建築署、康樂及文化事務署：〈啟德龍津石橋保育長廊，Lung Tsun Stone Bridge Preservation Corridor at Kai Tak）〉（香港：海濱事務委員會會議文件，2017年11月1日，編號：TFKT/20/2017）。</li>
 <li>建築署、康樂及文化事務署：〈啟德龍津石橋保育長廊〉（香港：海濱事務委員會會議簡報，2017年11月1日）。</li>
 </ol>
 ]]></content>
@@ -4108,12 +4109,12 @@
     <updated>2023-02-24T15:50:20.000Z</updated>
     <summary type="html"><![CDATA[<h2> 調查報告</h2>
 <ol>
-<li>〈大灣（蒲台島）具考古研究價值的地點〉（香港：古物古蹟辦事處檔案），編號：AM90-0445。</li>
+<li>〈大灣（蒲台島）具考古研究價值的地點〉（香港：古物古蹟辦事處檔案，編號：AM90-0445）。</li>
 </ol>
 ]]></summary>
     <content type="html"><![CDATA[<h2> 調查報告</h2>
 <ol>
-<li>〈大灣（蒲台島）具考古研究價值的地點〉（香港：古物古蹟辦事處檔案），編號：AM90-0445。</li>
+<li>〈大灣（蒲台島）具考古研究價值的地點〉（香港：古物古蹟辦事處檔案，編號：AM90-0445）。</li>
 </ol>
 ]]></content>
     <category term="考古"/>
@@ -4177,45 +4178,45 @@
     <updated>2023-02-24T15:50:20.000Z</updated>
     <summary type="html"><![CDATA[<h2> 調查報告</h2>
 <ol>
-<li>〈龍鼓灘具考古研究價值的地點〉（香港：古物古蹟辦事處檔案），編號：AM78-0208。</li>
+<li>〈龍鼓灘具考古研究價值的地點〉（香港：古物古蹟辦事處檔案，編號：AM78-0208）。</li>
 <li>"Auger survey of Lung Kwu Tan", Hong Kong: Antiquities and Monuments Office, TM3.</li>
-<li>〈屯門龍鼓灘遺址一九九九年十一月敷設電話工程考古調查報告〉（香港：古物古蹟辦事處檔案），編號：TM10。</li>
-<li>〈屯門龍鼓灘遺址2001年8月敷設電話線工程考古調查報告〉（香港：古物古蹟辦事處檔案），編號：TM16。</li>
-<li>〈香港龍鼓灘新石器時代遺址〉（香港：古物古蹟辦事處檔案），編號：TM20。</li>
+<li>〈屯門龍鼓灘遺址一九九九年十一月敷設電話工程考古調查報告〉（香港：古物古蹟辦事處檔案，編號：TM10）。</li>
+<li>〈屯門龍鼓灘遺址2001年8月敷設電話線工程考古調查報告〉（香港：古物古蹟辦事處檔案，編號：TM16）。</li>
+<li>〈香港龍鼓灘新石器時代遺址〉（香港：古物古蹟辦事處檔案，編號：TM20）。</li>
 <li>"Lung Kwu Tan 1997", Hong Kong: Antiquities and Monuments Office, TM21.</li>
-<li>〈屯門龍鼓灘沙埔崗村丈量約份第137約第296，821及315 ARP號地段小型屋宇地盤考古調查報告〉（香港：古物古蹟辦事處檔案），編號：TM25。</li>
+<li>〈屯門龍鼓灘沙埔崗村丈量約份第137約第296，821及315 ARP號地段小型屋宇地盤考古調查報告〉（香港：古物古蹟辦事處檔案，編號：TM25）。</li>
 <li>"Survey-cum-Excavation at Small House Lots No. 121B &amp; 121RP in DD137, Lung Kwu Tan, Tuen Mun Stage 1 - Archaeological Survey Report", Hong Kong: Antiquities and Monuments Office, TM27.</li>
-<li>〈2004年屯門龍鼓灘四座小型屋宇地段搶救發掘及考古調查考古調查工作報告〉（香港：古物古蹟辦事處檔案），編號：TM35。</li>
+<li>〈2004年屯門龍鼓灘四座小型屋宇地段搶救發掘及考古調查考古調查工作報告〉（香港：古物古蹟辦事處檔案，編號：TM35）。</li>
 <li>"Archaeological Survey at Eleven Small House Lots in DD137 at Lung Kwu Tan, Tuen Mun", Hong Kong: Antiquities and Monuments Office, TM38.</li>
-<li>〈屯門龍鼓灘丈量約份137第153及159RP號地段小型屋宇考古調查報告〉（香港：古物古蹟辦事處檔案），編號：TM39。</li>
-<li>〈屯門龍鼓灘丈量約份第137約第909號地段小型屋宇考古調查最終報告〉（香港：古物古蹟辦事處檔案），編號：TM78。</li>
+<li>〈屯門龍鼓灘丈量約份137第153及159RP號地段小型屋宇考古調查報告〉（香港：古物古蹟辦事處檔案，編號：TM39）。</li>
+<li>〈屯門龍鼓灘丈量約份第137約第909號地段小型屋宇考古調查最終報告〉（香港：古物古蹟辦事處檔案，編號：TM78）。</li>
 </ol>]]></summary>
     <content type="html"><![CDATA[<h2> 調查報告</h2>
 <ol>
-<li>〈龍鼓灘具考古研究價值的地點〉（香港：古物古蹟辦事處檔案），編號：AM78-0208。</li>
+<li>〈龍鼓灘具考古研究價值的地點〉（香港：古物古蹟辦事處檔案，編號：AM78-0208）。</li>
 <li>"Auger survey of Lung Kwu Tan", Hong Kong: Antiquities and Monuments Office, TM3.</li>
-<li>〈屯門龍鼓灘遺址一九九九年十一月敷設電話工程考古調查報告〉（香港：古物古蹟辦事處檔案），編號：TM10。</li>
-<li>〈屯門龍鼓灘遺址2001年8月敷設電話線工程考古調查報告〉（香港：古物古蹟辦事處檔案），編號：TM16。</li>
-<li>〈香港龍鼓灘新石器時代遺址〉（香港：古物古蹟辦事處檔案），編號：TM20。</li>
+<li>〈屯門龍鼓灘遺址一九九九年十一月敷設電話工程考古調查報告〉（香港：古物古蹟辦事處檔案，編號：TM10）。</li>
+<li>〈屯門龍鼓灘遺址2001年8月敷設電話線工程考古調查報告〉（香港：古物古蹟辦事處檔案，編號：TM16）。</li>
+<li>〈香港龍鼓灘新石器時代遺址〉（香港：古物古蹟辦事處檔案，編號：TM20）。</li>
 <li>"Lung Kwu Tan 1997", Hong Kong: Antiquities and Monuments Office, TM21.</li>
-<li>〈屯門龍鼓灘沙埔崗村丈量約份第137約第296，821及315 ARP號地段小型屋宇地盤考古調查報告〉（香港：古物古蹟辦事處檔案），編號：TM25。</li>
+<li>〈屯門龍鼓灘沙埔崗村丈量約份第137約第296，821及315 ARP號地段小型屋宇地盤考古調查報告〉（香港：古物古蹟辦事處檔案，編號：TM25）。</li>
 <li>"Survey-cum-Excavation at Small House Lots No. 121B &amp; 121RP in DD137, Lung Kwu Tan, Tuen Mun Stage 1 - Archaeological Survey Report", Hong Kong: Antiquities and Monuments Office, TM27.</li>
-<li>〈2004年屯門龍鼓灘四座小型屋宇地段搶救發掘及考古調查考古調查工作報告〉（香港：古物古蹟辦事處檔案），編號：TM35。</li>
+<li>〈2004年屯門龍鼓灘四座小型屋宇地段搶救發掘及考古調查考古調查工作報告〉（香港：古物古蹟辦事處檔案，編號：TM35）。</li>
 <li>"Archaeological Survey at Eleven Small House Lots in DD137 at Lung Kwu Tan, Tuen Mun", Hong Kong: Antiquities and Monuments Office, TM38.</li>
-<li>〈屯門龍鼓灘丈量約份137第153及159RP號地段小型屋宇考古調查報告〉（香港：古物古蹟辦事處檔案），編號：TM39。</li>
-<li>〈屯門龍鼓灘丈量約份第137約第909號地段小型屋宇考古調查最終報告〉（香港：古物古蹟辦事處檔案），編號：TM78。</li>
+<li>〈屯門龍鼓灘丈量約份137第153及159RP號地段小型屋宇考古調查報告〉（香港：古物古蹟辦事處檔案，編號：TM39）。</li>
+<li>〈屯門龍鼓灘丈量約份第137約第909號地段小型屋宇考古調查最終報告〉（香港：古物古蹟辦事處檔案，編號：TM78）。</li>
 </ol>
 <h2> 發掘報告</h2>
 <ol>
 <li>"Report of the Excavation at Sha Po Kong (Lung Kwu Tan - Lot No. 894 in D.D. 137)", Hong Kong: Antiquities and Monuments Office, TM18.</li>
-<li>〈香港屯門龍鼓灘遺址2001年度發掘報告〉（香港：古物古蹟辦事處檔案），編號：TM22。</li>
-<li>〈屯門龍鼓灘遺址2002年考古搶救發掘工作報告〉（香港：古物古蹟辦事處檔案），編號：TM23。</li>
+<li>〈香港屯門龍鼓灘遺址2001年度發掘報告〉（香港：古物古蹟辦事處檔案，編號：TM22）。</li>
+<li>〈屯門龍鼓灘遺址2002年考古搶救發掘工作報告〉（香港：古物古蹟辦事處檔案，編號：TM23）。</li>
 <li>"Survey-cum-Excavation at Small House Lots No. 121B &amp; 121RP in DD137, Lung Kwu Tan, Tuen Mun Stage 2 - Archaeological Rescue Excavation Report", Hong Kong: Antiquities and Monuments Office, TM28.</li>
-<li>〈2004年屯門龍鼓灘四座小型屋宇地段搶救發掘及考古調查搶救發掘工作報告〉（香港：古物古蹟辦事處檔案），編號：TM36。</li>
-<li>〈屯門龍鼓灘丈量約份137第147A-G號地段小型屋宇考古搶救發掘報告〉（香港：古物古蹟辦事處檔案），編號：TM40。</li>
-<li>〈屯門龍鼓灘丈量約份137第331A號地段小型村屋地考古搶救發掘報告〉（香港：古物古蹟辦事處檔案），編號：TM42。</li>
-<li>〈2005年屯門龍鼓灘丈量約份137第332SA地段搶救發掘工作報告〉（香港：古物古蹟辦事處檔案），編號：TM44。</li>
-<li>〈龍鼓洲遺址搶救發掘工作報告〉（香港：古物古蹟辦事處檔案），編號：TM51。</li>
+<li>〈2004年屯門龍鼓灘四座小型屋宇地段搶救發掘及考古調查搶救發掘工作報告〉（香港：古物古蹟辦事處檔案，編號：TM36）。</li>
+<li>〈屯門龍鼓灘丈量約份137第147A-G號地段小型屋宇考古搶救發掘報告〉（香港：古物古蹟辦事處檔案，編號：TM40）。</li>
+<li>〈屯門龍鼓灘丈量約份137第331A號地段小型村屋地考古搶救發掘報告〉（香港：古物古蹟辦事處檔案，編號：TM42）。</li>
+<li>〈2005年屯門龍鼓灘丈量約份137第332SA地段搶救發掘工作報告〉（香港：古物古蹟辦事處檔案，編號：TM44）。</li>
+<li>〈龍鼓洲遺址搶救發掘工作報告〉（香港：古物古蹟辦事處檔案，編號：TM51）。</li>
 </ol>
 ]]></content>
     <category term="考古"/>
@@ -4452,35 +4453,35 @@
     <updated>2023-02-25T15:03:23.000Z</updated>
     <summary type="html"><![CDATA[<h2> 調查報告</h2>
 <ol>
-<li>〈沙下具考古研究價值的地點〉（香港：古物古蹟辦事處檔案），編號：AM96-0767。</li>
-<li>〈西貢沙下（Sha Ha）遺址考古調查中期報告〉（香港：古物古蹟辦事處檔案），編號：SK6。</li>
+<li>〈沙下具考古研究價值的地點〉（香港：古物古蹟辦事處檔案，編號：AM96-0767）。</li>
+<li>〈西貢沙下（Sha Ha）遺址考古調查中期報告〉（香港：古物古蹟辦事處檔案，編號：SK6）。</li>
 <li>"Landscape Archaeological at Sha Ha, Sai Kung, East New Territories, Hong Kong", Hong Kong: Antiquities and Monuments Office, SK19.</li>
-<li>〈西貢沙下遺址2002年F區考古調查報告〉（香港：古物古蹟辦事處檔案），編號：SK21。</li>
+<li>〈西貢沙下遺址2002年F區考古調查報告〉（香港：古物古蹟辦事處檔案，編號：SK21）。</li>
 <li>"The Prehistoric and Historic Environments, Vegetations and Subsistence Strategies at Sha Ha, Sai Kung, Hong Kong", Hong Kong: Antiquities and Monuments Office, SK31.</li>
-<li>〈香港西貢區沙下（Sha Ha）遺址考古調查報告〉（香港：古物古蹟辦事處檔案），編號：SK45。</li>
-<li>〈2000年和2002年沙下考古遺址採集標本整理文字記錄〉（香港：古物古蹟辦事處檔案），編號：SK50。</li>
-<li>〈西貢沙下遺址2005年考古調查工作報告〉（香港：古物古蹟辦事處檔案），編號：SK59。</li>
+<li>〈香港西貢區沙下（Sha Ha）遺址考古調查報告〉（香港：古物古蹟辦事處檔案，編號：SK45）。</li>
+<li>〈2000年和2002年沙下考古遺址採集標本整理文字記錄〉（香港：古物古蹟辦事處檔案，編號：SK50）。</li>
+<li>〈西貢沙下遺址2005年考古調查工作報告〉（香港：古物古蹟辦事處檔案，編號：SK59）。</li>
 </ol>]]></summary>
     <content type="html"><![CDATA[<h2> 調查報告</h2>
 <ol>
-<li>〈沙下具考古研究價值的地點〉（香港：古物古蹟辦事處檔案），編號：AM96-0767。</li>
-<li>〈西貢沙下（Sha Ha）遺址考古調查中期報告〉（香港：古物古蹟辦事處檔案），編號：SK6。</li>
+<li>〈沙下具考古研究價值的地點〉（香港：古物古蹟辦事處檔案，編號：AM96-0767）。</li>
+<li>〈西貢沙下（Sha Ha）遺址考古調查中期報告〉（香港：古物古蹟辦事處檔案，編號：SK6）。</li>
 <li>"Landscape Archaeological at Sha Ha, Sai Kung, East New Territories, Hong Kong", Hong Kong: Antiquities and Monuments Office, SK19.</li>
-<li>〈西貢沙下遺址2002年F區考古調查報告〉（香港：古物古蹟辦事處檔案），編號：SK21。</li>
+<li>〈西貢沙下遺址2002年F區考古調查報告〉（香港：古物古蹟辦事處檔案，編號：SK21）。</li>
 <li>"The Prehistoric and Historic Environments, Vegetations and Subsistence Strategies at Sha Ha, Sai Kung, Hong Kong", Hong Kong: Antiquities and Monuments Office, SK31.</li>
-<li>〈香港西貢區沙下（Sha Ha）遺址考古調查報告〉（香港：古物古蹟辦事處檔案），編號：SK45。</li>
-<li>〈2000年和2002年沙下考古遺址採集標本整理文字記錄〉（香港：古物古蹟辦事處檔案），編號：SK50。</li>
-<li>〈西貢沙下遺址2005年考古調查工作報告〉（香港：古物古蹟辦事處檔案），編號：SK59。</li>
+<li>〈香港西貢區沙下（Sha Ha）遺址考古調查報告〉（香港：古物古蹟辦事處檔案，編號：SK45）。</li>
+<li>〈2000年和2002年沙下考古遺址採集標本整理文字記錄〉（香港：古物古蹟辦事處檔案，編號：SK50）。</li>
+<li>〈西貢沙下遺址2005年考古調查工作報告〉（香港：古物古蹟辦事處檔案，編號：SK59）。</li>
 </ol>
 <h2> 發掘報告</h2>
 <ol>
 <li>香港古物古蹟辦事處、河南省文物考古研究所：〈2002年度香港西貢沙下遺址C02區和DⅡ02區考古發掘簡報〉，《華夏考古》，2004年第4期，頁3-47。</li>
 <li>陝西省考古研究所、香港古物古蹟辦事處：〈香港西貢沙下遺址發掘簡報〉，《考古與文物》，2006年第6期，頁34-45。</li>
 <li>香港古物古蹟辦事處、廣州市文物考古研究所：〈香港西貢沙下遺址DⅠ區發掘簡報〉，《華夏考古》，2007年第4期，頁3-34。</li>
-<li>〈香港沙下遺址2002年考古發掘A區及E區發掘報告〉（香港：古物古蹟辦事處檔案），編號：SK61。</li>
-<li>〈2002年度香港西貢沙下遺址C02區和D02區考古發掘報告〉（香港：古物古蹟辦事處檔案），編號：SK62。</li>
-<li>〈香港特別行政區西貢沙下遺址B區發掘簡報〉（香港：古物古蹟辦事處檔案），編號：SK70。</li>
-<li>〈香港西貢沙下遺址DI區整理報告〉（香港：古物古蹟辦事處檔案），編號：SK71。</li>
+<li>〈香港沙下遺址2002年考古發掘A區及E區發掘報告〉（香港：古物古蹟辦事處檔案，編號：SK61）。</li>
+<li>〈2002年度香港西貢沙下遺址C02區和D02區考古發掘報告〉（香港：古物古蹟辦事處檔案，編號：SK62）。</li>
+<li>〈香港特別行政區西貢沙下遺址B區發掘簡報〉（香港：古物古蹟辦事處檔案，編號：SK70）。</li>
+<li>〈香港西貢沙下遺址DI區整理報告〉（香港：古物古蹟辦事處檔案，編號：SK71）。</li>
 </ol>
 <h2> 新聞報道</h2>
 <ol>
@@ -4489,7 +4490,7 @@
 </ol>
 <h2> 研究</h2>
 <ol>
-<li>〈香港沙下遺址環境變遷研究 （包括：摘要及剖面分析數據）〉（香港：古物古蹟辦事處檔案），編號：SK47。</li>
+<li>〈香港沙下遺址環境變遷研究 （包括：摘要及剖面分析數據）〉（香港：古物古蹟辦事處檔案，編號：SK47）。</li>
 </ol>
 ]]></content>
     <category term="考古"/>
@@ -4502,44 +4503,44 @@
     <updated>2023-02-24T15:50:20.000Z</updated>
     <summary type="html"><![CDATA[<h2> 調查報告</h2>
 <ol>
-<li>〈掃管笏具考古研究價值的地點〉（香港：古物古蹟辦事處檔案），編號：AM77-0045。</li>
-<li>〈掃管笏寶龍軍營具考古研究價值的地點〉（香港：古物古蹟辦事處檔案），編號：AM98-0925。</li>
+<li>〈掃管笏具考古研究價值的地點〉（香港：古物古蹟辦事處檔案，編號：AM77-0045）。</li>
+<li>〈掃管笏寶龍軍營具考古研究價值的地點〉（香港：古物古蹟辦事處檔案，編號：AM98-0925）。</li>
 <li>"Report of Archaeological Survey at So Kwun Wat, Tuen Mun 1997", Hong Kong: Antiquities and Monuments Office, TM1.</li>
-<li>〈屯門掃管笏考古調查報告〉（香港：古物古蹟辦事處檔案），編號：TM7。</li>
-<li>〈屯門掃管笏段公路擴建工程考古勘查報告〉（香港：古物古蹟辦事處檔案），編號：TM8。</li>
-<li>〈2003年屯門掃管笏丈量約份375之974地段及丈量約份381之417地段小型屋宇考古調查報告〉（香港：古物古蹟辦事處檔案），編號：TM30。</li>
-<li>〈掃管笏村電力支站考古調查報告〉（香港：古物古蹟辦事處檔案），編號：TM41。</li>
+<li>〈屯門掃管笏考古調查報告〉（香港：古物古蹟辦事處檔案，編號：TM7）。</li>
+<li>〈屯門掃管笏段公路擴建工程考古勘查報告〉（香港：古物古蹟辦事處檔案，編號：TM8）。</li>
+<li>〈2003年屯門掃管笏丈量約份375之974地段及丈量約份381之417地段小型屋宇考古調查報告〉（香港：古物古蹟辦事處檔案，編號：TM30）。</li>
+<li>〈掃管笏村電力支站考古調查報告〉（香港：古物古蹟辦事處檔案，編號：TM41）。</li>
 </ol>]]></summary>
     <content type="html"><![CDATA[<h2> 調查報告</h2>
 <ol>
-<li>〈掃管笏具考古研究價值的地點〉（香港：古物古蹟辦事處檔案），編號：AM77-0045。</li>
-<li>〈掃管笏寶龍軍營具考古研究價值的地點〉（香港：古物古蹟辦事處檔案），編號：AM98-0925。</li>
+<li>〈掃管笏具考古研究價值的地點〉（香港：古物古蹟辦事處檔案，編號：AM77-0045）。</li>
+<li>〈掃管笏寶龍軍營具考古研究價值的地點〉（香港：古物古蹟辦事處檔案，編號：AM98-0925）。</li>
 <li>"Report of Archaeological Survey at So Kwun Wat, Tuen Mun 1997", Hong Kong: Antiquities and Monuments Office, TM1.</li>
-<li>〈屯門掃管笏考古調查報告〉（香港：古物古蹟辦事處檔案），編號：TM7。</li>
-<li>〈屯門掃管笏段公路擴建工程考古勘查報告〉（香港：古物古蹟辦事處檔案），編號：TM8。</li>
-<li>〈2003年屯門掃管笏丈量約份375之974地段及丈量約份381之417地段小型屋宇考古調查報告〉（香港：古物古蹟辦事處檔案），編號：TM30。</li>
-<li>〈掃管笏村電力支站考古調查報告〉（香港：古物古蹟辦事處檔案），編號：TM41。</li>
+<li>〈屯門掃管笏考古調查報告〉（香港：古物古蹟辦事處檔案，編號：TM7）。</li>
+<li>〈屯門掃管笏段公路擴建工程考古勘查報告〉（香港：古物古蹟辦事處檔案，編號：TM8）。</li>
+<li>〈2003年屯門掃管笏丈量約份375之974地段及丈量約份381之417地段小型屋宇考古調查報告〉（香港：古物古蹟辦事處檔案，編號：TM30）。</li>
+<li>〈掃管笏村電力支站考古調查報告〉（香港：古物古蹟辦事處檔案，編號：TM41）。</li>
 </ol>
 <h2> 發掘報告</h2>
 <ol>
 <li>香港古物古蹟辦事處、中國社會科學院考古研究所：〈<a href="http://www.kaogu.cn/cn/%E7%A0%94%E7%A9%B6%E6%96%B0%E8%AE%BA/%E9%A6%99%E6%B8%AF%E5%B1%AF%E9%97%A8%E6%89%AB%E7%AE%A1%E7%AC%8F%E9%81%97%E5%9D%80%E5%8F%91%E6%8E%98%E7%AE%80%E6%8A%A5.pdf" target="_blank" rel="noopener noreferrer">香港屯門掃管笏遺址發掘簡報</a>〉，《考古》2010年第7期，頁17-30。</li>
-<li>〈2000年屯門掃管笏遺址搶救發掘（第二區塊）工作報告〉（香港：古物古蹟辦事處檔案），編號：TM24。</li>
-<li>〈屯門掃管笏古文化遺址2001年搶救發掘工作報告〉（香港：古物古蹟辦事處檔案），編號：TM37。</li>
-<li>〈2000年屯門掃管笏遺址搶救發掘（第二區塊）工作報告〉（香港：古物古蹟辦事處檔案），編號：TM56。</li>
-<li>〈屯門掃管笏2008-2011年考古發掘及整理工作報告〉（香港：古物古蹟辦事處檔案），編號：TM67。</li>
-<li>〈2000年屯門掃管笏遺址考古搶救發掘工作報告〉（香港：古物古蹟辦事處檔案），編號：TM73。</li>
+<li>〈2000年屯門掃管笏遺址搶救發掘（第二區塊）工作報告〉（香港：古物古蹟辦事處檔案，編號：TM24）。</li>
+<li>〈屯門掃管笏古文化遺址2001年搶救發掘工作報告〉（香港：古物古蹟辦事處檔案，編號：TM37）。</li>
+<li>〈2000年屯門掃管笏遺址搶救發掘（第二區塊）工作報告〉（香港：古物古蹟辦事處檔案，編號：TM56）。</li>
+<li>〈屯門掃管笏2008-2011年考古發掘及整理工作報告〉（香港：古物古蹟辦事處檔案，編號：TM67）。</li>
+<li>〈2000年屯門掃管笏遺址考古搶救發掘工作報告〉（香港：古物古蹟辦事處檔案，編號：TM73）。</li>
 </ol>
 <h2> 新聞報道</h2>
 <ol>
 <li>〈<a href="https://www.info.gov.hk/gia/general/200005/16/0516078.htm" target="_blank" rel="noopener noreferrer">屯門掃管笏遺址發現新石器時代居民活動遺蹟</a>〉（香港：政府新聞處，2000年5月16日）。</li>
 </ol>
-<h2> 文章</h2>
-<ol>
-<li>〈屯門掃管笏2008-2009年出土玦、石範和石刀的研究文章〉（香港：古物古蹟辦事處檔案），編號：TM72。</li>
-</ol>
 <h2> 專著</h2>
 <ol>
 <li>莫世民：《掃管笏——舊日的足跡》（香港：明文出版社，2020年）。</li>
+</ol>
+<h2> 文章</h2>
+<ol>
+<li>〈屯門掃管笏2008-2009年出土玦、石範和石刀的研究文章〉（香港：古物古蹟辦事處檔案，編號：TM72。</li>
 </ol>
 <h2> 小冊子</h2>
 <ol>
@@ -4556,12 +4557,12 @@
     <updated>2023-02-24T15:50:20.000Z</updated>
     <summary type="html"><![CDATA[<h2> 調查報告</h2>
 <ol>
-<li>〈舂坎灣具考古研究價值的地點〉（香港：古物古蹟辦事處檔案），編號：AM77-0054。</li>
+<li>〈舂坎灣具考古研究價值的地點〉（香港：古物古蹟辦事處檔案，編號：AM77-0054）。</li>
 </ol>
 ]]></summary>
     <content type="html"><![CDATA[<h2> 調查報告</h2>
 <ol>
-<li>〈舂坎灣具考古研究價值的地點〉（香港：古物古蹟辦事處檔案），編號：AM77-0054。</li>
+<li>〈舂坎灣具考古研究價值的地點〉（香港：古物古蹟辦事處檔案，編號：AM77-0054）。</li>
 </ol>
 ]]></content>
     <category term="考古"/>
@@ -4658,27 +4659,27 @@
     <updated>2023-02-24T15:50:20.000Z</updated>
     <summary type="html"><![CDATA[<h2> 調查報告</h2>
 <ol>
-<li>〈黃地峒具考古研究價值的地點〉（香港：古物古蹟辦事處檔案），編號：AM06-0006/A。</li>
-<li>〈西貢深涌黃地峒考古調查進度報告〉（香港：古物古蹟辦事處檔案），編號：SK33。</li>
-<li>〈香港西貢深涌黃地峒遺址2004年度考古調查報告〉（香港：古物古蹟辦事處檔案），編號：SK34。</li>
-<li>〈香港深涌黃地峒遺址2004年度考古調查光釋光測年及孢粉分析報告〉（香港：古物古蹟辦事處檔案），編號：SK36。</li>
+<li>〈黃地峒具考古研究價值的地點〉（香港：古物古蹟辦事處檔案，編號：AM06-0006/A）。</li>
+<li>〈西貢深涌黃地峒考古調查進度報告〉（香港：古物古蹟辦事處檔案，編號：SK33）。</li>
+<li>〈香港西貢深涌黃地峒遺址2004年度考古調查報告〉（香港：古物古蹟辦事處檔案，編號：SK34）。</li>
+<li>〈香港深涌黃地峒遺址2004年度考古調查光釋光測年及孢粉分析報告〉（香港：古物古蹟辦事處檔案，編號：SK36。</li>
 </ol>
 <h2> 發掘報告</h2>
 <ol>
 <li>張森水主編：《2006年香港考古重大發現——西貢黃地峒舊石器時代晚期遺址》（香港：中國評論學術出版社，2010年）。</li>
-<li>〈香港西貢黃地峒遺址二零零五年度考古發掘工作報告〉（香港：古物古蹟辦事處檔案），編號：SK48。</li>
+<li>〈香港西貢黃地峒遺址二零零五年度考古發掘工作報告〉（香港：古物古蹟辦事處檔案，編號：SK48）。</li>
 </ol>]]></summary>
     <content type="html"><![CDATA[<h2> 調查報告</h2>
 <ol>
-<li>〈黃地峒具考古研究價值的地點〉（香港：古物古蹟辦事處檔案），編號：AM06-0006/A。</li>
-<li>〈西貢深涌黃地峒考古調查進度報告〉（香港：古物古蹟辦事處檔案），編號：SK33。</li>
-<li>〈香港西貢深涌黃地峒遺址2004年度考古調查報告〉（香港：古物古蹟辦事處檔案），編號：SK34。</li>
-<li>〈香港深涌黃地峒遺址2004年度考古調查光釋光測年及孢粉分析報告〉（香港：古物古蹟辦事處檔案），編號：SK36。</li>
+<li>〈黃地峒具考古研究價值的地點〉（香港：古物古蹟辦事處檔案，編號：AM06-0006/A）。</li>
+<li>〈西貢深涌黃地峒考古調查進度報告〉（香港：古物古蹟辦事處檔案，編號：SK33）。</li>
+<li>〈香港西貢深涌黃地峒遺址2004年度考古調查報告〉（香港：古物古蹟辦事處檔案，編號：SK34）。</li>
+<li>〈香港深涌黃地峒遺址2004年度考古調查光釋光測年及孢粉分析報告〉（香港：古物古蹟辦事處檔案，編號：SK36。</li>
 </ol>
 <h2> 發掘報告</h2>
 <ol>
 <li>張森水主編：《2006年香港考古重大發現——西貢黃地峒舊石器時代晚期遺址》（香港：中國評論學術出版社，2010年）。</li>
-<li>〈香港西貢黃地峒遺址二零零五年度考古發掘工作報告〉（香港：古物古蹟辦事處檔案），編號：SK48。</li>
+<li>〈香港西貢黃地峒遺址二零零五年度考古發掘工作報告〉（香港：古物古蹟辦事處檔案，編號：SK48）。</li>
 </ol>
 <h2> 文章</h2>
 <ol>
@@ -4715,7 +4716,7 @@
 <ol>
 <li>屈志仁：《李鄭屋漢墓》（香港：香港市政局，1983年）。</li>
 <li>香港歷史博物館編：《李鄭屋漢墓》（香港：香港歷史博物館，2005年）。</li>
-<li>〈李鄭屋漢墓〉（香港：古物古蹟辦事處檔案），編號：AM77-0091。</li>
+<li>〈李鄭屋漢墓〉（香港：古物古蹟辦事處檔案，編號：AM77-0091）。</li>
 </ol>
 <h2> 新聞報道</h2>
 <ol>
@@ -4776,7 +4777,7 @@
 <ol>
 <li>屈志仁：《李鄭屋漢墓》（香港：香港市政局，1983年）。</li>
 <li>香港歷史博物館編：《李鄭屋漢墓》（香港：香港歷史博物館，2005年）。</li>
-<li>〈李鄭屋漢墓〉（香港：古物古蹟辦事處檔案），編號：AM77-0091。</li>
+<li>〈李鄭屋漢墓〉（香港：古物古蹟辦事處檔案，編號：AM77-0091）。</li>
 </ol>
 <h2> 新聞報道</h2>
 <ol>
@@ -4965,19 +4966,19 @@
     <updated>2023-02-25T15:03:23.000Z</updated>
     <summary type="html"><![CDATA[<h2> 調查報告</h2>
 <ol>
-<li>〈香港考古發現5000年前居住遺跡〉，《中學地理教學參考》，1996年第6期，頁46。</li>
-<li>〈大灣（南丫島）具考古研究價值的地點〉（香港：古物古蹟辦事處檔案），編號：AM77-0041。</li>
+<li>〈香港考古發現5000年前居住遺跡〉，《中學地理教學參考》，1996年第6期，頁46）。</li>
+<li>〈大灣（南丫島）具考古研究價值的地點〉（香港：古物古蹟辦事處檔案，編號：AM77-0041）。</li>
 <li>"Archaeological Survey for the Proposed "Sitting-out Area" at Tai Wan To, Lamma Island", Hong Kong: Antiquities and Monuments Office, LI24.</li>
-<li>〈2006年南丫島大灣丈量約份第3LM約第1045號地段小型屋宇考古調查工作報告〉（香港：古物古蹟辦事處檔案），編號：LI26。</li>
+<li>〈2006年南丫島大灣丈量約份第3LM約第1045號地段小型屋宇考古調查工作報告〉（香港：古物古蹟辦事處檔案，編號：LI26）。</li>
 <li>"Archaeological Survey cum Archaeological Watching Brief for Small House Development at Lot No. 1090 RP in D.D.3 LM at Tai Wan on Lamma Island", Hong Kong: Antiquities and Monuments Office, LI29.</li>
 <li>"Archaeological Investigation on 4 Small House Developments at Lot Nos. 1026SA and 1028 RP, Lots nos 1026SB, Lot Nos. 1104RP, 1105SB and 1117SA and Lot Nos. 1104SA, 1105SA at Tai Wan on Lamma Island Final Report", Hong Kong: Antiquities and Monuments Office, LI30.</li>
 </ol>]]></summary>
     <content type="html"><![CDATA[<h2> 調查報告</h2>
 <ol>
-<li>〈香港考古發現5000年前居住遺跡〉，《中學地理教學參考》，1996年第6期，頁46。</li>
-<li>〈大灣（南丫島）具考古研究價值的地點〉（香港：古物古蹟辦事處檔案），編號：AM77-0041。</li>
+<li>〈香港考古發現5000年前居住遺跡〉，《中學地理教學參考》，1996年第6期，頁46）。</li>
+<li>〈大灣（南丫島）具考古研究價值的地點〉（香港：古物古蹟辦事處檔案，編號：AM77-0041）。</li>
 <li>"Archaeological Survey for the Proposed "Sitting-out Area" at Tai Wan To, Lamma Island", Hong Kong: Antiquities and Monuments Office, LI24.</li>
-<li>〈2006年南丫島大灣丈量約份第3LM約第1045號地段小型屋宇考古調查工作報告〉（香港：古物古蹟辦事處檔案），編號：LI26。</li>
+<li>〈2006年南丫島大灣丈量約份第3LM約第1045號地段小型屋宇考古調查工作報告〉（香港：古物古蹟辦事處檔案，編號：LI26）。</li>
 <li>"Archaeological Survey cum Archaeological Watching Brief for Small House Development at Lot No. 1090 RP in D.D.3 LM at Tai Wan on Lamma Island", Hong Kong: Antiquities and Monuments Office, LI29.</li>
 <li>"Archaeological Investigation on 4 Small House Developments at Lot Nos. 1026SA and 1028 RP, Lots nos 1026SB, Lot Nos. 1104RP, 1105SB and 1117SA and Lot Nos. 1104SA, 1105SA at Tai Wan on Lamma Island Final Report", Hong Kong: Antiquities and Monuments Office, LI30.</li>
 </ol>
@@ -5180,7 +5181,7 @@
 <li>孫德榮：〈香港近年的考古發現與研究〉，《考古》，2007年第6期，頁3-9。</li>
 <li>商志（香覃）、吳偉鴻：《香港考古學敘研》（北京：文物出版社，2010年）。</li>
 <li>孫德榮：〈行李待領：誰擁有香港的考古遺產〉，《華夏考古》，2011年第1期，頁139-145。</li>
-<li>〈香港漢代考古發現與研究〉（香港：古物古蹟辦事處檔案），編號：ID26。</li>
+<li>〈香港漢代考古發現與研究〉（香港：古物古蹟辦事處檔案，編號：ID26。</li>
 </ol>]]></summary>
     <content type="html"><![CDATA[<h2> 通論</h2>
 <ol>
@@ -5200,7 +5201,7 @@
 <li>孫德榮：〈香港近年的考古發現與研究〉，《考古》，2007年第6期，頁3-9。</li>
 <li>商志（香覃）、吳偉鴻：《香港考古學敘研》（北京：文物出版社，2010年）。</li>
 <li>孫德榮：〈行李待領：誰擁有香港的考古遺產〉，《華夏考古》，2011年第1期，頁139-145。</li>
-<li>〈香港漢代考古發現與研究〉（香港：古物古蹟辦事處檔案），編號：ID26。</li>
+<li>〈香港漢代考古發現與研究〉（香港：古物古蹟辦事處檔案，編號：ID26。</li>
 </ol>
 <h2> 玉石器</h2>
 <ol>

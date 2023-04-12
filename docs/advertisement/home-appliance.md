@@ -1,5 +1,5 @@
 ---
-title: 家電用品
+title: 家電
 category: 廣告
 date: 2023-04-02
 ---

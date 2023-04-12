@@ -6,8 +6,8 @@
     <link>https://www.pasthk.com/</link>
     <description>香港專題研究索引集</description>
     <language>zh-TW</language>
-    <pubDate>Tue, 11 Apr 2023 10:58:15 GMT</pubDate>
-    <lastBuildDate>Tue, 11 Apr 2023 10:58:15 GMT</lastBuildDate>
+    <pubDate>Wed, 12 Apr 2023 05:56:20 GMT</pubDate>
+    <lastBuildDate>Wed, 12 Apr 2023 05:56:20 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>考古</category>
@@ -281,10 +281,10 @@
 ]]></content:encoded>
     </item>
     <item>
-      <title>相機與菲林</title>
+      <title>拍攝器材</title>
       <link>https://www.pasthk.com/advertisement/camera-and-film.html</link>
       <guid>https://www.pasthk.com/advertisement/camera-and-film.html</guid>
-      <source url="https://www.pasthk.com/rss.xml">相機與菲林</source>
+      <source url="https://www.pasthk.com/rss.xml">拍攝器材</source>
       <description>Agfa ISO-RAPID IF 1. 〈請用「立拍」相機將聖誕情趣拍成照片永留紀念〉，《工商日報》，1965年12月15日，第6頁。</description>
       <category>廣告</category>
       <pubDate>Tue, 04 Apr 2023 00:00:00 GMT</pubDate>
@@ -296,10 +296,10 @@
 ]]></content:encoded>
     </item>
     <item>
-      <title>家電用品</title>
+      <title>家電</title>
       <link>https://www.pasthk.com/advertisement/home-appliance.html</link>
       <guid>https://www.pasthk.com/advertisement/home-appliance.html</guid>
-      <source url="https://www.pasthk.com/rss.xml">家電用品</source>
+      <source url="https://www.pasthk.com/rss.xml">家電</source>
       <description>風扇 1. 〈上海華生電風扇〉，《工商晚報》，1931年8月1日，第3版。</description>
       <category>廣告</category>
       <pubDate>Sun, 02 Apr 2023 00:00:00 GMT</pubDate>
@@ -581,10 +581,10 @@
 ]]></content:encoded>
     </item>
     <item>
-      <title>大茶樓</title>
+      <title>茶樓</title>
       <link>https://www.pasthk.com/advertisement/chinese-restaurant.html</link>
       <guid>https://www.pasthk.com/advertisement/chinese-restaurant.html</guid>
-      <source url="https://www.pasthk.com/rss.xml">大茶樓</source>
+      <source url="https://www.pasthk.com/rss.xml">茶樓</source>
       <description>龍鳳大茶樓 1. 〈龍鳳月餅〉，《大公報》，1953年9月18日，第1張；第4版。 雲天大茶樓 1. 〈雲天月餅〉，《華僑日報》，1953年9月18日，第2張第1頁。</description>
       <category>廣告</category>
       <pubDate>Sun, 02 Apr 2023 00:00:00 GMT</pubDate>
@@ -671,38 +671,6 @@
 ]]></content:encoded>
     </item>
     <item>
-      <title>大會堂公共圖書館</title>
-      <link>https://www.pasthk.com/library/city-hall-public-library.html</link>
-      <guid>https://www.pasthk.com/library/city-hall-public-library.html</guid>
-      <source url="https://www.pasthk.com/rss.xml">大會堂公共圖書館</source>
-      <description>1. 〈大會堂圖書館遷址　莊士敦道舊水手館〉，《香港工商日報》，1933年6月27日，第3張第1版 (https://mmis.hkpl.gov.hk/coverpage/-/coverpage/view?coverpageWARmmisportalportlethsf=%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9...</description>
-      <category>文化</category>
-      <pubDate>Fri, 31 Mar 2023 00:00:00 GMT</pubDate>
-      <content:encoded><![CDATA[<ol>
-<li>〈大會堂圖書館遷址　莊士敦道舊水手館〉，《香港工商日報》，1933年6月27日，<a href="https://mmis.hkpl.gov.hk/coverpage/-/coverpage/view?_coverpage_WAR_mmisportalportlet_hsf=%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8&amp;p_r_p_-1078056564_c=QF757YsWv5%2BZh7v7hMb5iQMk2n8KcIzx&amp;_coverpage_WAR_mmisportalportlet_o=0&amp;_coverpage_WAR_mmisportalportlet_actual_q=%28%20verbatim_dc.collection%3A%28%22Old%5C%20HK%5C%20Newspapers%22%29%20%29%20AND+%28%20%28%20allTermsMandatory%3A%28true%29%20OR+all_dc.title%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+all_dc.creator%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+all_dc.contributor%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+all_dc.subject%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+fulltext%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+all_dc.description%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20%29%20%29&amp;_coverpage_WAR_mmisportalportlet_sort_field=dc.publicationdate_bsort&amp;_coverpage_WAR_mmisportalportlet_sort_order=asc" target="_blank" rel="noopener noreferrer">第3張第1版</a>。</li>
-<li>〈大會堂圖書館將於短期內結束　以樓下作後備警察總部　書籍將移其他地方保存〉，《大公報》，1941年3月13日，<a href="https://mmis.hkpl.gov.hk/coverpage/-/coverpage/view?_coverpage_WAR_mmisportalportlet_hsf=%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8&amp;p_r_p_-1078056564_c=QF757YsWv59H%2FuxqfBwEJFwQ%2B777NlFZ&amp;_coverpage_WAR_mmisportalportlet_o=1&amp;_coverpage_WAR_mmisportalportlet_actual_q=%28%20verbatim_dc.collection%3A%28%22Old%5C%20HK%5C%20Newspapers%22%29%20%29%20AND+%28%20%28%20allTermsMandatory%3A%28true%29%20OR+all_dc.title%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+all_dc.creator%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+all_dc.contributor%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+all_dc.subject%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+fulltext%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+all_dc.description%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20%29%20%29&amp;_coverpage_WAR_mmisportalportlet_sort_order=asc&amp;_coverpage_WAR_mmisportalportlet_sort_field=dc.publicationdate_bsort" target="_blank" rel="noopener noreferrer">第2張；第6版</a>。</li>
-<li>〈美新聞處贈書大會堂圖書館〉，《工商晚報》，1953年6月1日，<a href="https://mmis.hkpl.gov.hk/coverpage/-/coverpage/view?_coverpage_WAR_mmisportalportlet_hsf=%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8&amp;p_r_p_-1078056564_c=QF757YsWv5%2FH7zGe%2FKF%2BFJGp1a312kOl&amp;_coverpage_WAR_mmisportalportlet_o=2&amp;_coverpage_WAR_mmisportalportlet_actual_q=%28%20verbatim_dc.collection%3A%28%22Old%5C%20HK%5C%20Newspapers%22%29%20%29%20AND+%28%20%28%20allTermsMandatory%3A%28true%29%20OR+all_dc.title%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+all_dc.creator%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+all_dc.contributor%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+all_dc.subject%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+fulltext%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+all_dc.description%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20%29%20%29&amp;_coverpage_WAR_mmisportalportlet_sort_order=asc&amp;_coverpage_WAR_mmisportalportlet_sort_field=dc.publicationdate_bsort" target="_blank" rel="noopener noreferrer">第4頁</a>。</li>
-<li>〈未來大會堂圖書館藏書達廿五萬冊　大部分藏書可供市民借用〉，《華僑日報》，1959年6月28日，<a href="https://mmis.hkpl.gov.hk/coverpage/-/coverpage/view?_coverpage_WAR_mmisportalportlet_hsf=%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8&amp;p_r_p_-1078056564_c=QF757YsWv5%2FH7zGe%2FKF%2BFMXnjRQE6v8r&amp;_coverpage_WAR_mmisportalportlet_o=5&amp;_coverpage_WAR_mmisportalportlet_actual_q=%28%20verbatim_dc.collection%3A%28%22Old%5C%20HK%5C%20Newspapers%22%29%20%29%20AND+%28%20%28%20allTermsMandatory%3A%28true%29%20OR+all_dc.title%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+all_dc.creator%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+all_dc.contributor%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+all_dc.subject%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+fulltext%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+all_dc.description%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20%29%20%29&amp;_coverpage_WAR_mmisportalportlet_sort_order=asc&amp;_coverpage_WAR_mmisportalportlet_sort_field=dc.publicationdate_bsort" target="_blank" rel="noopener noreferrer">第3張第4頁</a>。</li>
-<li>〈中區未來大會堂圖書館分三部門　藏書豐富一九六二年啟用〉，《華僑日報》，1959年7月5日，<a href="https://mmis.hkpl.gov.hk/coverpage/-/coverpage/view?p_r_p_-1078056564_c=QF757YsWv5%2FH7zGe%2FKF%2BFExZKmumLO1h&amp;_coverpage_WAR_mmisportalportlet_o=6&amp;_coverpage_WAR_mmisportalportlet_actual_q=%28%20verbatim_dc.collection%3A%28%22Old%5C%20HK%5C%20Newspapers%22%29%20%29%20AND+%28%20%28%20allTermsMandatory%3A%28true%29%20OR+all_dc.title%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+all_dc.creator%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+all_dc.contributor%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+all_dc.subject%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+fulltext%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+all_dc.description%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20%29%20%29&amp;_coverpage_WAR_mmisportalportlet_sort_order=asc&amp;_coverpage_WAR_mmisportalportlet_sort_field=dc.publicationdate_bsort&amp;_coverpage_WAR_mmisportalportlet_log=Y" target="_blank" rel="noopener noreferrer">第4張第3頁</a>。</li>
-<li>〈新大會堂圖書館購書費三十萬元　可引致本港書籍銷量增加〉，《工商日報》，1960年3月31日，<a href="https://mmis.hkpl.gov.hk/coverpage/-/coverpage/view?_coverpage_WAR_mmisportalportlet_hsf=%E5%A4%A7%E6%9C%83%E5%A0%82&amp;p_r_p_-1078056564_c=QF757YsWv588VgQiieHy%2B7F06Nd0CNUk&amp;_coverpage_WAR_mmisportalportlet_o=7&amp;_coverpage_WAR_mmisportalportlet_actual_q=%28%20verbatim_dc.collection%3A%28%22Old%5C%20HK%5C%20Newspapers%22%29%20%29%20AND+%28%20%28%20allTermsMandatory%3A%28true%29%20OR+all_dc.title%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+all_dc.creator%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+all_dc.contributor%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+all_dc.subject%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+fulltext%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+all_dc.description%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20%29%20%29&amp;_coverpage_WAR_mmisportalportlet_sort_order=asc&amp;_coverpage_WAR_mmisportalportlet_sort_field=dc.publicationdate_bsort&amp;_coverpage_WAR_mmisportalportlet_formDate=1680241267360" target="_blank" rel="noopener noreferrer">第7頁</a>。</li>
-<li>〈大會堂圖書館是屬於綜合性〉，《工商晚報》，1960年12月7日，<a href="https://mmis.hkpl.gov.hk/coverpage/-/coverpage/view?_coverpage_WAR_mmisportalportlet_hsf=%E5%A4%A7%E6%9C%83%E5%A0%82&amp;p_r_p_-1078056564_c=QF757YsWv5%2FH7zGe%2FKF%2BFDq1viilzV2u&amp;_coverpage_WAR_mmisportalportlet_o=8&amp;_coverpage_WAR_mmisportalportlet_actual_q=%28%20verbatim_dc.collection%3A%28%22Old%5C%20HK%5C%20Newspapers%22%29%20%29%20AND+%28%20%28%20allTermsMandatory%3A%28true%29%20OR+all_dc.title%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+all_dc.creator%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+all_dc.contributor%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+all_dc.subject%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+fulltext%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+all_dc.description%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20%29%20%29&amp;_coverpage_WAR_mmisportalportlet_sort_order=asc&amp;_coverpage_WAR_mmisportalportlet_sort_field=dc.publicationdate_bsort&amp;_coverpage_WAR_mmisportalportlet_formDate=1680241267360" target="_blank" rel="noopener noreferrer">第4頁</a>。</li>
-<li>〈精神食糧倉庫　大會堂圖書館中英文書並重　同時特設兒童部門〉，《工商晚報》，1961年10月25日，<a href="https://mmis.hkpl.gov.hk/coverpage/-/coverpage/view?_coverpage_WAR_mmisportalportlet_hsf=%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8&amp;p_r_p_-1078056564_c=QF757YsWv5%2FH7zGe%2FKF%2BFGabPbc2dbIW&amp;_coverpage_WAR_mmisportalportlet_o=9&amp;_coverpage_WAR_mmisportalportlet_actual_q=%28%20verbatim_dc.collection%3A%28%22Old%5C%20HK%5C%20Newspapers%22%29%20%29%20AND+%28%20%28%20allTermsMandatory%3A%28true%29%20OR+all_dc.title%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+all_dc.creator%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+all_dc.contributor%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+all_dc.subject%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+fulltext%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+all_dc.description%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20%29%20%29&amp;_coverpage_WAR_mmisportalportlet_sort_order=asc&amp;_coverpage_WAR_mmisportalportlet_sort_field=dc.publicationdate_bsort&amp;_coverpage_WAR_mmisportalportlet_formDate=1680241771289" target="_blank" rel="noopener noreferrer">第4頁</a>。</li>
-<li>〈大會堂圖書館應有適量中文書　因居民百份之九十九為中國人　市局議員李有璇提醒免受批評〉，《華僑日報》，1961年12月5日，<a href="https://mmis.hkpl.gov.hk/coverpage/-/coverpage/view?_coverpage_WAR_mmisportalportlet_hsf=%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8&amp;p_r_p_-1078056564_c=QF757YsWv5%2FH7zGe%2FKF%2BFMEPapE4wH%2Fa&amp;_coverpage_WAR_mmisportalportlet_o=11&amp;_coverpage_WAR_mmisportalportlet_actual_q=%28%20verbatim_dc.collection%3A%28%22Old%5C%20HK%5C%20Newspapers%22%29%20%29%20AND+%28%20%28%20allTermsMandatory%3A%28true%29%20OR+all_dc.title%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+all_dc.creator%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+all_dc.contributor%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+all_dc.subject%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+fulltext%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+all_dc.description%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20%29%20%29&amp;_coverpage_WAR_mmisportalportlet_sort_order=asc&amp;_coverpage_WAR_mmisportalportlet_sort_field=dc.publicationdate_bsort&amp;_coverpage_WAR_mmisportalportlet_formDate=1680241771289" target="_blank" rel="noopener noreferrer">第2張第1頁</a>。</li>
-<li>〈大會堂圖書館三月五日開放　開幕之日及翌日歡迎各界人士參觀〉，《華僑日報》，1962年2月15日，<a href="https://mmis.hkpl.gov.hk/coverpage/-/coverpage/view?_coverpage_WAR_mmisportalportlet_hsf=%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8&amp;p_r_p_-1078056564_c=QF757YsWv5%2FH7zGe%2FKF%2BFKFwnq2WVs%2F0&amp;_coverpage_WAR_mmisportalportlet_o=12&amp;_coverpage_WAR_mmisportalportlet_actual_q=%28%20verbatim_dc.collection%3A%28%22Old%5C%20HK%5C%20Newspapers%22%29%20%29%20AND+%28%20%28%20allTermsMandatory%3A%28true%29%20OR+all_dc.title%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+all_dc.creator%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+all_dc.contributor%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+all_dc.subject%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+fulltext%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+all_dc.description%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20%29%20%29&amp;_coverpage_WAR_mmisportalportlet_sort_order=asc&amp;_coverpage_WAR_mmisportalportlet_sort_field=dc.publicationdate_bsort&amp;_coverpage_WAR_mmisportalportlet_formDate=1680241771289" target="_blank" rel="noopener noreferrer">第2張第1頁</a>。</li>
-<li>〈大會堂圖書館申請借書證逢週末暫停〉，《工商日報》，1962年3月9日，<a href="https://mmis.hkpl.gov.hk/coverpage/-/coverpage/view?_coverpage_WAR_mmisportalportlet_hsf=%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8&amp;p_r_p_-1078056564_c=QF757YsWv59aWaK3fC5bIykPqMTENvL5&amp;_coverpage_WAR_mmisportalportlet_o=13&amp;_coverpage_WAR_mmisportalportlet_actual_q=%28%20verbatim_dc.collection%3A%28%22Old%5C%20HK%5C%20Newspapers%22%29%20%29%20AND+%28%20%28%20allTermsMandatory%3A%28true%29%20OR+all_dc.title%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+all_dc.creator%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+all_dc.contributor%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+all_dc.subject%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+fulltext%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+all_dc.description%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20%29%20%29&amp;_coverpage_WAR_mmisportalportlet_sort_order=asc&amp;_coverpage_WAR_mmisportalportlet_sort_field=dc.publicationdate_bsort&amp;_coverpage_WAR_mmisportalportlet_formDate=1680241771289" target="_blank" rel="noopener noreferrer">第7頁</a>。</li>
-<li>〈大會堂圖書館周六周日暫停發借書證〉，《大公報》，1962年3月9日，<a href="https://mmis.hkpl.gov.hk/coverpage/-/coverpage/view?_coverpage_WAR_mmisportalportlet_hsf=%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8&amp;p_r_p_-1078056564_c=QF757YsWv59H%2FuxqfBwEJAhiS7QTIKLr&amp;_coverpage_WAR_mmisportalportlet_o=14&amp;_coverpage_WAR_mmisportalportlet_actual_q=%28%20verbatim_dc.collection%3A%28%22Old%5C%20HK%5C%20Newspapers%22%29%20%29%20AND+%28%20%28%20allTermsMandatory%3A%28true%29%20OR+all_dc.title%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+all_dc.creator%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+all_dc.contributor%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+all_dc.subject%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+fulltext%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+all_dc.description%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20%29%20%29&amp;_coverpage_WAR_mmisportalportlet_sort_order=asc&amp;_coverpage_WAR_mmisportalportlet_sort_field=dc.publicationdate_bsort&amp;_coverpage_WAR_mmisportalportlet_formDate=1680241771289" target="_blank" rel="noopener noreferrer">第1張；第4版</a>。</li>
-<li>〈大會堂圖書館借書證只限成年人申請　每日定時在高座六樓辦手續〉，《華僑日報》，1962年3月15日，<a href="https://mmis.hkpl.gov.hk/coverpage/-/coverpage/view?_coverpage_WAR_mmisportalportlet_hsf=%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8&amp;p_r_p_-1078056564_c=QF757YsWv5%2FH7zGe%2FKF%2BFI7lJyuvBLrC&amp;_coverpage_WAR_mmisportalportlet_o=15&amp;_coverpage_WAR_mmisportalportlet_actual_q=%28%20verbatim_dc.collection%3A%28%22Old%5C%20HK%5C%20Newspapers%22%29%20%29%20AND+%28%20%28%20allTermsMandatory%3A%28true%29%20OR+all_dc.title%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+all_dc.creator%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+all_dc.contributor%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+all_dc.subject%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+fulltext%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+all_dc.description%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20%29%20%29&amp;_coverpage_WAR_mmisportalportlet_sort_order=asc&amp;_coverpage_WAR_mmisportalportlet_sort_field=dc.publicationdate_bsort&amp;_coverpage_WAR_mmisportalportlet_formDate=1680241771289" target="_blank" rel="noopener noreferrer">第4張第2頁</a>。</li>
-<li>〈大會堂圖書館日發證一千張〉，《工商晚報》，年月日，<a href="https://mmis.hkpl.gov.hk/coverpage/-/coverpage/view?_coverpage_WAR_mmisportalportlet_hsf=%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8&amp;p_r_p_-1078056564_c=QF757YsWv5%2FH7zGe%2FKF%2BFDlNGTj4VaMl&amp;_coverpage_WAR_mmisportalportlet_o=16&amp;_coverpage_WAR_mmisportalportlet_actual_q=%28%20verbatim_dc.collection%3A%28%22Old%5C%20HK%5C%20Newspapers%22%29%20%29%20AND+%28%20%28%20allTermsMandatory%3A%28true%29%20OR+all_dc.title%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+all_dc.creator%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+all_dc.contributor%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+all_dc.subject%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+fulltext%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+all_dc.description%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20%29%20%29&amp;_coverpage_WAR_mmisportalportlet_sort_order=asc&amp;_coverpage_WAR_mmisportalportlet_sort_field=dc.publicationdate_bsort&amp;_coverpage_WAR_mmisportalportlet_formDate=1680241771289" target="_blank" rel="noopener noreferrer">第4頁</a>。</li>
-<li>〈大會堂圖書館申請借書證　規定接受時間〉，《工商日報》，1962年3月15日，<a href="https://mmis.hkpl.gov.hk/coverpage/-/coverpage/view?_coverpage_WAR_mmisportalportlet_hsf=%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8&amp;p_r_p_-1078056564_c=QF757YsWv59aWaK3fC5bIx4Yn%2F1JfkWc&amp;_coverpage_WAR_mmisportalportlet_o=17&amp;_coverpage_WAR_mmisportalportlet_actual_q=%28%20verbatim_dc.collection%3A%28%22Old%5C%20HK%5C%20Newspapers%22%29%20%29%20AND+%28%20%28%20allTermsMandatory%3A%28true%29%20OR+all_dc.title%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+all_dc.creator%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+all_dc.contributor%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+all_dc.subject%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+fulltext%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+all_dc.description%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20%29%20%29&amp;_coverpage_WAR_mmisportalportlet_sort_order=asc&amp;_coverpage_WAR_mmisportalportlet_sort_field=dc.publicationdate_bsort&amp;_coverpage_WAR_mmisportalportlet_formDate=1680241771289" target="_blank" rel="noopener noreferrer">第7頁</a>。</li>
-<li>〈大會堂圖書館不接受少年借書〉，《大公報》，1962年3月16日，<a href="https://mmis.hkpl.gov.hk/coverpage/-/coverpage/view?_coverpage_WAR_mmisportalportlet_hsf=%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8&amp;p_r_p_-1078056564_c=QF757YsWv59H%2FuxqfBwEJMm%2BxYiMDaHA&amp;_coverpage_WAR_mmisportalportlet_o=18&amp;_coverpage_WAR_mmisportalportlet_actual_q=%28%20verbatim_dc.collection%3A%28%22Old%5C%20HK%5C%20Newspapers%22%29%20%29%20AND+%28%20%28%20allTermsMandatory%3A%28true%29%20OR+all_dc.title%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+all_dc.creator%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+all_dc.contributor%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+all_dc.subject%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+fulltext%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+all_dc.description%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20%29%20%29&amp;_coverpage_WAR_mmisportalportlet_sort_order=asc&amp;_coverpage_WAR_mmisportalportlet_sort_field=dc.publicationdate_bsort&amp;_coverpage_WAR_mmisportalportlet_formDate=1680241771289" target="_blank" rel="noopener noreferrer">第1張；第3版</a>。</li>
-<li>〈閱書熱！大會堂圖書館學生擠迫　教署盼各校應先行接洽〉，《華僑日報》，1962年3月21日，<a href="https://mmis.hkpl.gov.hk/coverpage/-/coverpage/view?_coverpage_WAR_mmisportalportlet_hsf=%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8&amp;p_r_p_-1078056564_c=QF757YsWv5%2FH7zGe%2FKF%2BFEOPfd7jHKrf&amp;_coverpage_WAR_mmisportalportlet_o=19&amp;_coverpage_WAR_mmisportalportlet_actual_q=%28%20verbatim_dc.collection%3A%28%22Old%5C%20HK%5C%20Newspapers%22%29%20%29%20AND+%28%20%28%20allTermsMandatory%3A%28true%29%20OR+all_dc.title%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+all_dc.creator%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+all_dc.contributor%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+all_dc.subject%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+fulltext%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+all_dc.description%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20%29%20%29&amp;_coverpage_WAR_mmisportalportlet_sort_order=asc&amp;_coverpage_WAR_mmisportalportlet_sort_field=dc.publicationdate_bsort&amp;_coverpage_WAR_mmisportalportlet_formDate=1680241771289" target="_blank" rel="noopener noreferrer">第4張第3頁</a>。</li>
-<li>〈大會堂圖書館周五停放一天〉，《大公報》，1962年4月17日，<a href="https://mmis.hkpl.gov.hk/coverpage/-/coverpage/view?_coverpage_WAR_mmisportalportlet_hsf=%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8&amp;p_r_p_-1078056564_c=QF757YsWv59H%2FuxqfBwEJFMSmBJOu%2FgV&amp;_coverpage_WAR_mmisportalportlet_o=20&amp;_coverpage_WAR_mmisportalportlet_actual_q=%28%20verbatim_dc.collection%3A%28%22Old%5C%20HK%5C%20Newspapers%22%29%20%29%20AND+%28%20%28%20allTermsMandatory%3A%28true%29%20OR+all_dc.title%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+all_dc.creator%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+all_dc.contributor%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+all_dc.subject%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+fulltext%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+all_dc.description%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20%29%20%29&amp;_coverpage_WAR_mmisportalportlet_sort_order=asc&amp;_coverpage_WAR_mmisportalportlet_sort_field=dc.publicationdate_bsort&amp;_coverpage_WAR_mmisportalportlet_formDate=1680241771289" target="_blank" rel="noopener noreferrer">第1張；第4版</a>。</li>
-<li>〈大會堂圖書館借出書籍統計〉，《工商日報》，1962年6月6日，<a href="https://mmis.hkpl.gov.hk/coverpage/-/coverpage/view?_coverpage_WAR_mmisportalportlet_hsf=%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8&amp;p_r_p_-1078056564_c=QF757YsWv5%2FUIR3fUSXuYk%2FqulKYwbYk&amp;_coverpage_WAR_mmisportalportlet_o=21&amp;_coverpage_WAR_mmisportalportlet_actual_q=%28%20verbatim_dc.collection%3A%28%22Old%5C%20HK%5C%20Newspapers%22%29%20%29%20AND+%28%20%28%20allTermsMandatory%3A%28true%29%20OR+all_dc.title%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+all_dc.creator%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+all_dc.contributor%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+all_dc.subject%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+fulltext%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+all_dc.description%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20%29%20%29&amp;_coverpage_WAR_mmisportalportlet_sort_order=asc&amp;_coverpage_WAR_mmisportalportlet_sort_field=dc.publicationdate_bsort&amp;_coverpage_WAR_mmisportalportlet_formDate=1680241771289" target="_blank" rel="noopener noreferrer">第5頁</a>。</li>
-<li>〈羅旭龢爵士遺屬　贈書大會堂圖書館　該館為示謝意特設立旭龢室〉，《工商日報》，1962年6月14日，<a href="https://mmis.hkpl.gov.hk/coverpage/-/coverpage/view?_coverpage_WAR_mmisportalportlet_hsf=%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8&amp;p_r_p_-1078056564_c=QF757YsWv5%2FUIR3fUSXuYjqsIkQVAK5r&amp;_coverpage_WAR_mmisportalportlet_o=22&amp;_coverpage_WAR_mmisportalportlet_actual_q=%28%20verbatim_dc.collection%3A%28%22Old%5C%20HK%5C%20Newspapers%22%29%20%29%20AND+%28%20%28%20allTermsMandatory%3A%28true%29%20OR+all_dc.title%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+all_dc.creator%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+all_dc.contributor%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+all_dc.subject%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+fulltext%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+all_dc.description%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20%29%20%29&amp;_coverpage_WAR_mmisportalportlet_sort_order=asc&amp;_coverpage_WAR_mmisportalportlet_sort_field=dc.publicationdate_bsort&amp;_coverpage_WAR_mmisportalportlet_formDate=1680241771289" target="_blank" rel="noopener noreferrer">第6頁</a>。</li>
-</ol>
-]]></content:encoded>
-    </item>
-    <item>
       <title>醫院</title>
       <link>https://www.pasthk.com/hospital/</link>
       <guid>https://www.pasthk.com/hospital/</guid>
@@ -734,6 +702,38 @@
 <h2> 專著</h2>
 <ol>
 <li>香港中文大學天主教研究中心：《聖保祿醫院歷史足跡——關愛服務百二載》（香港：香港中文大學天主教研究中心，2018年）。</li>
+</ol>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>大會堂公共圖書館</title>
+      <link>https://www.pasthk.com/library/city-hall-public-library.html</link>
+      <guid>https://www.pasthk.com/library/city-hall-public-library.html</guid>
+      <source url="https://www.pasthk.com/rss.xml">大會堂公共圖書館</source>
+      <description>1. 〈大會堂圖書館遷址　莊士敦道舊水手館〉，《香港工商日報》，1933年6月27日，第3張第1版 (https://mmis.hkpl.gov.hk/coverpage/-/coverpage/view?coverpageWARmmisportalportlethsf=%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9...</description>
+      <category>文化</category>
+      <pubDate>Fri, 31 Mar 2023 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<ol>
+<li>〈大會堂圖書館遷址　莊士敦道舊水手館〉，《香港工商日報》，1933年6月27日，<a href="https://mmis.hkpl.gov.hk/coverpage/-/coverpage/view?_coverpage_WAR_mmisportalportlet_hsf=%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8&amp;p_r_p_-1078056564_c=QF757YsWv5%2BZh7v7hMb5iQMk2n8KcIzx&amp;_coverpage_WAR_mmisportalportlet_o=0&amp;_coverpage_WAR_mmisportalportlet_actual_q=%28%20verbatim_dc.collection%3A%28%22Old%5C%20HK%5C%20Newspapers%22%29%20%29%20AND+%28%20%28%20allTermsMandatory%3A%28true%29%20OR+all_dc.title%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+all_dc.creator%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+all_dc.contributor%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+all_dc.subject%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+fulltext%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+all_dc.description%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20%29%20%29&amp;_coverpage_WAR_mmisportalportlet_sort_field=dc.publicationdate_bsort&amp;_coverpage_WAR_mmisportalportlet_sort_order=asc" target="_blank" rel="noopener noreferrer">第3張第1版</a>。</li>
+<li>〈大會堂圖書館將於短期內結束　以樓下作後備警察總部　書籍將移其他地方保存〉，《大公報》，1941年3月13日，<a href="https://mmis.hkpl.gov.hk/coverpage/-/coverpage/view?_coverpage_WAR_mmisportalportlet_hsf=%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8&amp;p_r_p_-1078056564_c=QF757YsWv59H%2FuxqfBwEJFwQ%2B777NlFZ&amp;_coverpage_WAR_mmisportalportlet_o=1&amp;_coverpage_WAR_mmisportalportlet_actual_q=%28%20verbatim_dc.collection%3A%28%22Old%5C%20HK%5C%20Newspapers%22%29%20%29%20AND+%28%20%28%20allTermsMandatory%3A%28true%29%20OR+all_dc.title%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+all_dc.creator%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+all_dc.contributor%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+all_dc.subject%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+fulltext%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+all_dc.description%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20%29%20%29&amp;_coverpage_WAR_mmisportalportlet_sort_order=asc&amp;_coverpage_WAR_mmisportalportlet_sort_field=dc.publicationdate_bsort" target="_blank" rel="noopener noreferrer">第2張；第6版</a>。</li>
+<li>〈美新聞處贈書大會堂圖書館〉，《工商晚報》，1953年6月1日，<a href="https://mmis.hkpl.gov.hk/coverpage/-/coverpage/view?_coverpage_WAR_mmisportalportlet_hsf=%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8&amp;p_r_p_-1078056564_c=QF757YsWv5%2FH7zGe%2FKF%2BFJGp1a312kOl&amp;_coverpage_WAR_mmisportalportlet_o=2&amp;_coverpage_WAR_mmisportalportlet_actual_q=%28%20verbatim_dc.collection%3A%28%22Old%5C%20HK%5C%20Newspapers%22%29%20%29%20AND+%28%20%28%20allTermsMandatory%3A%28true%29%20OR+all_dc.title%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+all_dc.creator%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+all_dc.contributor%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+all_dc.subject%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+fulltext%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+all_dc.description%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20%29%20%29&amp;_coverpage_WAR_mmisportalportlet_sort_order=asc&amp;_coverpage_WAR_mmisportalportlet_sort_field=dc.publicationdate_bsort" target="_blank" rel="noopener noreferrer">第4頁</a>。</li>
+<li>〈未來大會堂圖書館藏書達廿五萬冊　大部分藏書可供市民借用〉，《華僑日報》，1959年6月28日，<a href="https://mmis.hkpl.gov.hk/coverpage/-/coverpage/view?_coverpage_WAR_mmisportalportlet_hsf=%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8&amp;p_r_p_-1078056564_c=QF757YsWv5%2FH7zGe%2FKF%2BFMXnjRQE6v8r&amp;_coverpage_WAR_mmisportalportlet_o=5&amp;_coverpage_WAR_mmisportalportlet_actual_q=%28%20verbatim_dc.collection%3A%28%22Old%5C%20HK%5C%20Newspapers%22%29%20%29%20AND+%28%20%28%20allTermsMandatory%3A%28true%29%20OR+all_dc.title%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+all_dc.creator%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+all_dc.contributor%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+all_dc.subject%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+fulltext%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+all_dc.description%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20%29%20%29&amp;_coverpage_WAR_mmisportalportlet_sort_order=asc&amp;_coverpage_WAR_mmisportalportlet_sort_field=dc.publicationdate_bsort" target="_blank" rel="noopener noreferrer">第3張第4頁</a>。</li>
+<li>〈中區未來大會堂圖書館分三部門　藏書豐富一九六二年啟用〉，《華僑日報》，1959年7月5日，<a href="https://mmis.hkpl.gov.hk/coverpage/-/coverpage/view?p_r_p_-1078056564_c=QF757YsWv5%2FH7zGe%2FKF%2BFExZKmumLO1h&amp;_coverpage_WAR_mmisportalportlet_o=6&amp;_coverpage_WAR_mmisportalportlet_actual_q=%28%20verbatim_dc.collection%3A%28%22Old%5C%20HK%5C%20Newspapers%22%29%20%29%20AND+%28%20%28%20allTermsMandatory%3A%28true%29%20OR+all_dc.title%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+all_dc.creator%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+all_dc.contributor%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+all_dc.subject%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+fulltext%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+all_dc.description%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20%29%20%29&amp;_coverpage_WAR_mmisportalportlet_sort_order=asc&amp;_coverpage_WAR_mmisportalportlet_sort_field=dc.publicationdate_bsort&amp;_coverpage_WAR_mmisportalportlet_log=Y" target="_blank" rel="noopener noreferrer">第4張第3頁</a>。</li>
+<li>〈新大會堂圖書館購書費三十萬元　可引致本港書籍銷量增加〉，《工商日報》，1960年3月31日，<a href="https://mmis.hkpl.gov.hk/coverpage/-/coverpage/view?_coverpage_WAR_mmisportalportlet_hsf=%E5%A4%A7%E6%9C%83%E5%A0%82&amp;p_r_p_-1078056564_c=QF757YsWv588VgQiieHy%2B7F06Nd0CNUk&amp;_coverpage_WAR_mmisportalportlet_o=7&amp;_coverpage_WAR_mmisportalportlet_actual_q=%28%20verbatim_dc.collection%3A%28%22Old%5C%20HK%5C%20Newspapers%22%29%20%29%20AND+%28%20%28%20allTermsMandatory%3A%28true%29%20OR+all_dc.title%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+all_dc.creator%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+all_dc.contributor%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+all_dc.subject%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+fulltext%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+all_dc.description%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20%29%20%29&amp;_coverpage_WAR_mmisportalportlet_sort_order=asc&amp;_coverpage_WAR_mmisportalportlet_sort_field=dc.publicationdate_bsort&amp;_coverpage_WAR_mmisportalportlet_formDate=1680241267360" target="_blank" rel="noopener noreferrer">第7頁</a>。</li>
+<li>〈大會堂圖書館是屬於綜合性〉，《工商晚報》，1960年12月7日，<a href="https://mmis.hkpl.gov.hk/coverpage/-/coverpage/view?_coverpage_WAR_mmisportalportlet_hsf=%E5%A4%A7%E6%9C%83%E5%A0%82&amp;p_r_p_-1078056564_c=QF757YsWv5%2FH7zGe%2FKF%2BFDq1viilzV2u&amp;_coverpage_WAR_mmisportalportlet_o=8&amp;_coverpage_WAR_mmisportalportlet_actual_q=%28%20verbatim_dc.collection%3A%28%22Old%5C%20HK%5C%20Newspapers%22%29%20%29%20AND+%28%20%28%20allTermsMandatory%3A%28true%29%20OR+all_dc.title%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+all_dc.creator%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+all_dc.contributor%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+all_dc.subject%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+fulltext%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+all_dc.description%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20%29%20%29&amp;_coverpage_WAR_mmisportalportlet_sort_order=asc&amp;_coverpage_WAR_mmisportalportlet_sort_field=dc.publicationdate_bsort&amp;_coverpage_WAR_mmisportalportlet_formDate=1680241267360" target="_blank" rel="noopener noreferrer">第4頁</a>。</li>
+<li>〈精神食糧倉庫　大會堂圖書館中英文書並重　同時特設兒童部門〉，《工商晚報》，1961年10月25日，<a href="https://mmis.hkpl.gov.hk/coverpage/-/coverpage/view?_coverpage_WAR_mmisportalportlet_hsf=%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8&amp;p_r_p_-1078056564_c=QF757YsWv5%2FH7zGe%2FKF%2BFGabPbc2dbIW&amp;_coverpage_WAR_mmisportalportlet_o=9&amp;_coverpage_WAR_mmisportalportlet_actual_q=%28%20verbatim_dc.collection%3A%28%22Old%5C%20HK%5C%20Newspapers%22%29%20%29%20AND+%28%20%28%20allTermsMandatory%3A%28true%29%20OR+all_dc.title%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+all_dc.creator%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+all_dc.contributor%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+all_dc.subject%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+fulltext%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+all_dc.description%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20%29%20%29&amp;_coverpage_WAR_mmisportalportlet_sort_order=asc&amp;_coverpage_WAR_mmisportalportlet_sort_field=dc.publicationdate_bsort&amp;_coverpage_WAR_mmisportalportlet_formDate=1680241771289" target="_blank" rel="noopener noreferrer">第4頁</a>。</li>
+<li>〈大會堂圖書館應有適量中文書　因居民百份之九十九為中國人　市局議員李有璇提醒免受批評〉，《華僑日報》，1961年12月5日，<a href="https://mmis.hkpl.gov.hk/coverpage/-/coverpage/view?_coverpage_WAR_mmisportalportlet_hsf=%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8&amp;p_r_p_-1078056564_c=QF757YsWv5%2FH7zGe%2FKF%2BFMEPapE4wH%2Fa&amp;_coverpage_WAR_mmisportalportlet_o=11&amp;_coverpage_WAR_mmisportalportlet_actual_q=%28%20verbatim_dc.collection%3A%28%22Old%5C%20HK%5C%20Newspapers%22%29%20%29%20AND+%28%20%28%20allTermsMandatory%3A%28true%29%20OR+all_dc.title%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+all_dc.creator%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+all_dc.contributor%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+all_dc.subject%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+fulltext%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+all_dc.description%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20%29%20%29&amp;_coverpage_WAR_mmisportalportlet_sort_order=asc&amp;_coverpage_WAR_mmisportalportlet_sort_field=dc.publicationdate_bsort&amp;_coverpage_WAR_mmisportalportlet_formDate=1680241771289" target="_blank" rel="noopener noreferrer">第2張第1頁</a>。</li>
+<li>〈大會堂圖書館三月五日開放　開幕之日及翌日歡迎各界人士參觀〉，《華僑日報》，1962年2月15日，<a href="https://mmis.hkpl.gov.hk/coverpage/-/coverpage/view?_coverpage_WAR_mmisportalportlet_hsf=%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8&amp;p_r_p_-1078056564_c=QF757YsWv5%2FH7zGe%2FKF%2BFKFwnq2WVs%2F0&amp;_coverpage_WAR_mmisportalportlet_o=12&amp;_coverpage_WAR_mmisportalportlet_actual_q=%28%20verbatim_dc.collection%3A%28%22Old%5C%20HK%5C%20Newspapers%22%29%20%29%20AND+%28%20%28%20allTermsMandatory%3A%28true%29%20OR+all_dc.title%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+all_dc.creator%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+all_dc.contributor%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+all_dc.subject%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+fulltext%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+all_dc.description%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20%29%20%29&amp;_coverpage_WAR_mmisportalportlet_sort_order=asc&amp;_coverpage_WAR_mmisportalportlet_sort_field=dc.publicationdate_bsort&amp;_coverpage_WAR_mmisportalportlet_formDate=1680241771289" target="_blank" rel="noopener noreferrer">第2張第1頁</a>。</li>
+<li>〈大會堂圖書館申請借書證逢週末暫停〉，《工商日報》，1962年3月9日，<a href="https://mmis.hkpl.gov.hk/coverpage/-/coverpage/view?_coverpage_WAR_mmisportalportlet_hsf=%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8&amp;p_r_p_-1078056564_c=QF757YsWv59aWaK3fC5bIykPqMTENvL5&amp;_coverpage_WAR_mmisportalportlet_o=13&amp;_coverpage_WAR_mmisportalportlet_actual_q=%28%20verbatim_dc.collection%3A%28%22Old%5C%20HK%5C%20Newspapers%22%29%20%29%20AND+%28%20%28%20allTermsMandatory%3A%28true%29%20OR+all_dc.title%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+all_dc.creator%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+all_dc.contributor%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+all_dc.subject%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+fulltext%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+all_dc.description%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20%29%20%29&amp;_coverpage_WAR_mmisportalportlet_sort_order=asc&amp;_coverpage_WAR_mmisportalportlet_sort_field=dc.publicationdate_bsort&amp;_coverpage_WAR_mmisportalportlet_formDate=1680241771289" target="_blank" rel="noopener noreferrer">第7頁</a>。</li>
+<li>〈大會堂圖書館周六周日暫停發借書證〉，《大公報》，1962年3月9日，<a href="https://mmis.hkpl.gov.hk/coverpage/-/coverpage/view?_coverpage_WAR_mmisportalportlet_hsf=%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8&amp;p_r_p_-1078056564_c=QF757YsWv59H%2FuxqfBwEJAhiS7QTIKLr&amp;_coverpage_WAR_mmisportalportlet_o=14&amp;_coverpage_WAR_mmisportalportlet_actual_q=%28%20verbatim_dc.collection%3A%28%22Old%5C%20HK%5C%20Newspapers%22%29%20%29%20AND+%28%20%28%20allTermsMandatory%3A%28true%29%20OR+all_dc.title%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+all_dc.creator%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+all_dc.contributor%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+all_dc.subject%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+fulltext%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+all_dc.description%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20%29%20%29&amp;_coverpage_WAR_mmisportalportlet_sort_order=asc&amp;_coverpage_WAR_mmisportalportlet_sort_field=dc.publicationdate_bsort&amp;_coverpage_WAR_mmisportalportlet_formDate=1680241771289" target="_blank" rel="noopener noreferrer">第1張；第4版</a>。</li>
+<li>〈大會堂圖書館借書證只限成年人申請　每日定時在高座六樓辦手續〉，《華僑日報》，1962年3月15日，<a href="https://mmis.hkpl.gov.hk/coverpage/-/coverpage/view?_coverpage_WAR_mmisportalportlet_hsf=%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8&amp;p_r_p_-1078056564_c=QF757YsWv5%2FH7zGe%2FKF%2BFI7lJyuvBLrC&amp;_coverpage_WAR_mmisportalportlet_o=15&amp;_coverpage_WAR_mmisportalportlet_actual_q=%28%20verbatim_dc.collection%3A%28%22Old%5C%20HK%5C%20Newspapers%22%29%20%29%20AND+%28%20%28%20allTermsMandatory%3A%28true%29%20OR+all_dc.title%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+all_dc.creator%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+all_dc.contributor%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+all_dc.subject%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+fulltext%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+all_dc.description%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20%29%20%29&amp;_coverpage_WAR_mmisportalportlet_sort_order=asc&amp;_coverpage_WAR_mmisportalportlet_sort_field=dc.publicationdate_bsort&amp;_coverpage_WAR_mmisportalportlet_formDate=1680241771289" target="_blank" rel="noopener noreferrer">第4張第2頁</a>。</li>
+<li>〈大會堂圖書館日發證一千張〉，《工商晚報》，年月日，<a href="https://mmis.hkpl.gov.hk/coverpage/-/coverpage/view?_coverpage_WAR_mmisportalportlet_hsf=%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8&amp;p_r_p_-1078056564_c=QF757YsWv5%2FH7zGe%2FKF%2BFDlNGTj4VaMl&amp;_coverpage_WAR_mmisportalportlet_o=16&amp;_coverpage_WAR_mmisportalportlet_actual_q=%28%20verbatim_dc.collection%3A%28%22Old%5C%20HK%5C%20Newspapers%22%29%20%29%20AND+%28%20%28%20allTermsMandatory%3A%28true%29%20OR+all_dc.title%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+all_dc.creator%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+all_dc.contributor%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+all_dc.subject%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+fulltext%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+all_dc.description%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20%29%20%29&amp;_coverpage_WAR_mmisportalportlet_sort_order=asc&amp;_coverpage_WAR_mmisportalportlet_sort_field=dc.publicationdate_bsort&amp;_coverpage_WAR_mmisportalportlet_formDate=1680241771289" target="_blank" rel="noopener noreferrer">第4頁</a>。</li>
+<li>〈大會堂圖書館申請借書證　規定接受時間〉，《工商日報》，1962年3月15日，<a href="https://mmis.hkpl.gov.hk/coverpage/-/coverpage/view?_coverpage_WAR_mmisportalportlet_hsf=%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8&amp;p_r_p_-1078056564_c=QF757YsWv59aWaK3fC5bIx4Yn%2F1JfkWc&amp;_coverpage_WAR_mmisportalportlet_o=17&amp;_coverpage_WAR_mmisportalportlet_actual_q=%28%20verbatim_dc.collection%3A%28%22Old%5C%20HK%5C%20Newspapers%22%29%20%29%20AND+%28%20%28%20allTermsMandatory%3A%28true%29%20OR+all_dc.title%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+all_dc.creator%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+all_dc.contributor%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+all_dc.subject%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+fulltext%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+all_dc.description%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20%29%20%29&amp;_coverpage_WAR_mmisportalportlet_sort_order=asc&amp;_coverpage_WAR_mmisportalportlet_sort_field=dc.publicationdate_bsort&amp;_coverpage_WAR_mmisportalportlet_formDate=1680241771289" target="_blank" rel="noopener noreferrer">第7頁</a>。</li>
+<li>〈大會堂圖書館不接受少年借書〉，《大公報》，1962年3月16日，<a href="https://mmis.hkpl.gov.hk/coverpage/-/coverpage/view?_coverpage_WAR_mmisportalportlet_hsf=%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8&amp;p_r_p_-1078056564_c=QF757YsWv59H%2FuxqfBwEJMm%2BxYiMDaHA&amp;_coverpage_WAR_mmisportalportlet_o=18&amp;_coverpage_WAR_mmisportalportlet_actual_q=%28%20verbatim_dc.collection%3A%28%22Old%5C%20HK%5C%20Newspapers%22%29%20%29%20AND+%28%20%28%20allTermsMandatory%3A%28true%29%20OR+all_dc.title%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+all_dc.creator%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+all_dc.contributor%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+all_dc.subject%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+fulltext%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+all_dc.description%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20%29%20%29&amp;_coverpage_WAR_mmisportalportlet_sort_order=asc&amp;_coverpage_WAR_mmisportalportlet_sort_field=dc.publicationdate_bsort&amp;_coverpage_WAR_mmisportalportlet_formDate=1680241771289" target="_blank" rel="noopener noreferrer">第1張；第3版</a>。</li>
+<li>〈閱書熱！大會堂圖書館學生擠迫　教署盼各校應先行接洽〉，《華僑日報》，1962年3月21日，<a href="https://mmis.hkpl.gov.hk/coverpage/-/coverpage/view?_coverpage_WAR_mmisportalportlet_hsf=%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8&amp;p_r_p_-1078056564_c=QF757YsWv5%2FH7zGe%2FKF%2BFEOPfd7jHKrf&amp;_coverpage_WAR_mmisportalportlet_o=19&amp;_coverpage_WAR_mmisportalportlet_actual_q=%28%20verbatim_dc.collection%3A%28%22Old%5C%20HK%5C%20Newspapers%22%29%20%29%20AND+%28%20%28%20allTermsMandatory%3A%28true%29%20OR+all_dc.title%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+all_dc.creator%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+all_dc.contributor%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+all_dc.subject%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+fulltext%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+all_dc.description%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20%29%20%29&amp;_coverpage_WAR_mmisportalportlet_sort_order=asc&amp;_coverpage_WAR_mmisportalportlet_sort_field=dc.publicationdate_bsort&amp;_coverpage_WAR_mmisportalportlet_formDate=1680241771289" target="_blank" rel="noopener noreferrer">第4張第3頁</a>。</li>
+<li>〈大會堂圖書館周五停放一天〉，《大公報》，1962年4月17日，<a href="https://mmis.hkpl.gov.hk/coverpage/-/coverpage/view?_coverpage_WAR_mmisportalportlet_hsf=%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8&amp;p_r_p_-1078056564_c=QF757YsWv59H%2FuxqfBwEJFMSmBJOu%2FgV&amp;_coverpage_WAR_mmisportalportlet_o=20&amp;_coverpage_WAR_mmisportalportlet_actual_q=%28%20verbatim_dc.collection%3A%28%22Old%5C%20HK%5C%20Newspapers%22%29%20%29%20AND+%28%20%28%20allTermsMandatory%3A%28true%29%20OR+all_dc.title%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+all_dc.creator%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+all_dc.contributor%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+all_dc.subject%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+fulltext%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+all_dc.description%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20%29%20%29&amp;_coverpage_WAR_mmisportalportlet_sort_order=asc&amp;_coverpage_WAR_mmisportalportlet_sort_field=dc.publicationdate_bsort&amp;_coverpage_WAR_mmisportalportlet_formDate=1680241771289" target="_blank" rel="noopener noreferrer">第1張；第4版</a>。</li>
+<li>〈大會堂圖書館借出書籍統計〉，《工商日報》，1962年6月6日，<a href="https://mmis.hkpl.gov.hk/coverpage/-/coverpage/view?_coverpage_WAR_mmisportalportlet_hsf=%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8&amp;p_r_p_-1078056564_c=QF757YsWv5%2FUIR3fUSXuYk%2FqulKYwbYk&amp;_coverpage_WAR_mmisportalportlet_o=21&amp;_coverpage_WAR_mmisportalportlet_actual_q=%28%20verbatim_dc.collection%3A%28%22Old%5C%20HK%5C%20Newspapers%22%29%20%29%20AND+%28%20%28%20allTermsMandatory%3A%28true%29%20OR+all_dc.title%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+all_dc.creator%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+all_dc.contributor%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+all_dc.subject%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+fulltext%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+all_dc.description%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20%29%20%29&amp;_coverpage_WAR_mmisportalportlet_sort_order=asc&amp;_coverpage_WAR_mmisportalportlet_sort_field=dc.publicationdate_bsort&amp;_coverpage_WAR_mmisportalportlet_formDate=1680241771289" target="_blank" rel="noopener noreferrer">第5頁</a>。</li>
+<li>〈羅旭龢爵士遺屬　贈書大會堂圖書館　該館為示謝意特設立旭龢室〉，《工商日報》，1962年6月14日，<a href="https://mmis.hkpl.gov.hk/coverpage/-/coverpage/view?_coverpage_WAR_mmisportalportlet_hsf=%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8&amp;p_r_p_-1078056564_c=QF757YsWv5%2FUIR3fUSXuYjqsIkQVAK5r&amp;_coverpage_WAR_mmisportalportlet_o=22&amp;_coverpage_WAR_mmisportalportlet_actual_q=%28%20verbatim_dc.collection%3A%28%22Old%5C%20HK%5C%20Newspapers%22%29%20%29%20AND+%28%20%28%20allTermsMandatory%3A%28true%29%20OR+all_dc.title%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+all_dc.creator%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+all_dc.contributor%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+all_dc.subject%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+fulltext%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+all_dc.description%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20%29%20%29&amp;_coverpage_WAR_mmisportalportlet_sort_order=asc&amp;_coverpage_WAR_mmisportalportlet_sort_field=dc.publicationdate_bsort&amp;_coverpage_WAR_mmisportalportlet_formDate=1680241771289" target="_blank" rel="noopener noreferrer">第6頁</a>。</li>
 </ol>
 ]]></content:encoded>
     </item>
@@ -930,14 +930,15 @@
       <link>https://www.pasthk.com/advertisement/</link>
       <guid>https://www.pasthk.com/advertisement/</guid>
       <source url="https://www.pasthk.com/rss.xml">廣告</source>
-      <description>琴行; 餅家 (cake-shop.md); 茶莊; 相機與菲林 (camera-and-film.md);</description>
+      <description>琴行 (music-company.md); 餅家 (cake-shop.md); 茶莊 (tea-house.md); 茶樓 (chinese-restaurant.md); 攝影 (camera-and-film.md);</description>
       <category>廣告</category>
       <pubDate>Sun, 02 Apr 2023 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<ul>
-<li>琴行</li>
+<li><a href="/advertisement/music-company.html" target="blank">琴行</a></li>
 <li><a href="/advertisement/cake-shop.html" target="blank">餅家</a></li>
-<li>茶莊</li>
-<li><a href="/advertisement/camera-and-film.html" target="blank">相機與菲林</a></li>
+<li><a href="/advertisement/tea-house.html" target="blank">茶莊</a></li>
+<li><a href="/advertisement/chinese-restaurant.html" target="blank">茶樓</a></li>
+<li><a href="/advertisement/camera-and-film.html" target="blank">攝影</a></li>
 </ul>
 ]]></content:encoded>
     </item>
@@ -1140,12 +1141,12 @@
       <link>https://www.pasthk.com/archaeology/ham-tin-sai-kung.html</link>
       <guid>https://www.pasthk.com/archaeology/ham-tin-sai-kung.html</guid>
       <source url="https://www.pasthk.com/rss.xml">西貢鹹田</source>
-      <description>調查報告 1. 〈鹹田（西貢）具考古研究價值的地點〉（香港：古物古蹟辦事處檔案），編號：AM98-0914。 2. &amp;quot;Survey-Cum-Excavation at Ham Tin, Sai Kung, New Territories: Stage I Archaeological Survey&amp;quot;, Hong Kong: Antiquities an...</description>
+      <description>調查報告 1. 〈鹹田（西貢）具考古研究價值的地點〉（香港：古物古蹟辦事處檔案，編號：AM98-0914）。 2. &amp;quot;Survey-Cum-Excavation at Ham Tin, Sai Kung, New Territories: Stage I Archaeological Survey&amp;quot;, Hong Kong: Antiquities an...</description>
       <category>考古</category>
       <pubDate>Wed, 15 Mar 2023 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<h2> 調查報告</h2>
 <ol>
-<li>〈鹹田（西貢）具考古研究價值的地點〉（香港：古物古蹟辦事處檔案），編號：AM98-0914。</li>
+<li>〈鹹田（西貢）具考古研究價值的地點〉（香港：古物古蹟辦事處檔案，編號：AM98-0914）。</li>
 <li>"Survey-Cum-Excavation at Ham Tin, Sai Kung, New Territories: Stage I Archaeological Survey", Hong Kong: Antiquities and Monuments Office, SK18.</li>
 <li>"Archaeological Watching Brief for Ham Tin and Sai Wan, Sai Kung - Final Watching Brief Report", Hong Kong: Antiquities and Monuments Office, SK57.</li>
 </ol>
@@ -1155,7 +1156,7 @@
 </ol>
 <h2> 文章</h2>
 <ol>
-<li>〈香港西貢蠔涌遺址西區（HC2000）環境考古研究文章〉（香港：古物古蹟辦事處檔案），編號：SK27。</li>
+<li>〈香港西貢蠔涌遺址西區（HC2000）環境考古研究文章〉（香港：古物古蹟辦事處檔案，編號：SK27）。</li>
 </ol>
 ]]></content:encoded>
     </item>
@@ -1164,26 +1165,26 @@
       <link>https://www.pasthk.com/archaeology/ho-chung-sai-kung.html</link>
       <guid>https://www.pasthk.com/archaeology/ho-chung-sai-kung.html</guid>
       <source url="https://www.pasthk.com/rss.xml">西貢蠔涌</source>
-      <description>調查報告 1. 〈蠔涌古徑〉（香港：古物古蹟辦事處檔案），編號：AM93-0542。 2. 〈蠔涌具考古研究價值的地點〉（香港：古物古蹟辦事處檔案），編號：AM93-0543。 3. 〈香港西貢公路蠔涌路段擴闊工程考古調查報告〉（香港：古物古蹟辦事處檔案），編號：SK9。 4. 〈2005年西貢蠔涌丈量約份第244約第610SB、610SC及610SD...</description>
+      <description>調查報告 1. 〈蠔涌古徑〉（香港：古物古蹟辦事處檔案，編號：AM93-0542）。 2. 〈蠔涌具考古研究價值的地點〉（香港：古物古蹟辦事處檔案，編號：AM93-0543）。 3. 〈香港西貢公路蠔涌路段擴闊工程考古調查報告〉（香港：古物古蹟辦事處檔案，編號：SK9）。 4. 〈2005年西貢蠔涌丈量約份第244約第610SB、610SC及610SD...</description>
       <category>考古</category>
       <pubDate>Wed, 15 Mar 2023 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<h2> 調查報告</h2>
 <ol>
-<li>〈蠔涌古徑〉（香港：古物古蹟辦事處檔案），編號：AM93-0542。</li>
-<li>〈蠔涌具考古研究價值的地點〉（香港：古物古蹟辦事處檔案），編號：AM93-0543。</li>
-<li>〈香港西貢公路蠔涌路段擴闊工程考古調查報告〉（香港：古物古蹟辦事處檔案），編號：SK9。</li>
-<li>〈2005年西貢蠔涌丈量約份第244約第610SB、610SC及610SD號地段小型屋宇考古調查工作報告〉（香港：古物古蹟辦事處檔案），編號：SK54。</li>
-<li>〈2009年西貢蠔涌丈量約份244約第2107B、2110及2110號地段小型屋宇考古調查工作報告〉（香港：古物古蹟辦事處檔案），編號：SK55。</li>
-<li>〈香港西貢蠔涌2012考古調查報告〉（香港：古物古蹟辦事處檔案），編號：SK56。</li>
+<li>〈蠔涌古徑〉（香港：古物古蹟辦事處檔案，編號：AM93-0542）。</li>
+<li>〈蠔涌具考古研究價值的地點〉（香港：古物古蹟辦事處檔案，編號：AM93-0543）。</li>
+<li>〈香港西貢公路蠔涌路段擴闊工程考古調查報告〉（香港：古物古蹟辦事處檔案，編號：SK9）。</li>
+<li>〈2005年西貢蠔涌丈量約份第244約第610SB、610SC及610SD號地段小型屋宇考古調查工作報告〉（香港：古物古蹟辦事處檔案，編號：SK54）。</li>
+<li>〈2009年西貢蠔涌丈量約份244約第2107B、2110及2110號地段小型屋宇考古調查工作報告〉（香港：古物古蹟辦事處檔案，編號：SK55）。</li>
+<li>〈香港西貢蠔涌2012考古調查報告〉（香港：古物古蹟辦事處檔案，編號：SK56）。</li>
 </ol>
 <h2> 發掘報告</h2>
 <ol>
-<li>〈香港西貢蠔涌遺址西區（HC2000）發掘報告〉（香港：古物古蹟辦事處檔案），編號：SK20。</li>
-<li>〈香港西貢蠔涌遺址C區發掘報告〉（香港：古物古蹟辦事處檔案），編號：SK40。</li>
+<li>〈香港西貢蠔涌遺址西區（HC2000）發掘報告〉（香港：古物古蹟辦事處檔案，編號：SK20）。</li>
+<li>〈香港西貢蠔涌遺址C區發掘報告〉（香港：古物古蹟辦事處檔案，編號：SK40）。</li>
 </ol>
 <h2> 文章</h2>
 <ol>
-<li>〈香港西貢蠔涌遺址西區（HC2000）環境考古研究文章〉（香港：古物古蹟辦事處檔案），編號：SK27。</li>
+<li>〈香港西貢蠔涌遺址西區（HC2000）環境考古研究文章〉（香港：古物古蹟辦事處檔案，編號：SK27）。</li>
 </ol>
 ]]></content:encoded>
     </item>
@@ -1198,13 +1199,13 @@
       <content:encoded><![CDATA[<h2> 調查報告</h2>
 <ol>
 <li>"Survey and Assessment for the Proposed Extension of Public Golf Course at Kau Sai Chau, Sai Kung", Hong Kong: Antiquities and Monuments Office, SK13.</li>
-<li>〈西貢滘西洲公眾高爾夫球場擬擴建工程2001年考古調查及評估報告〉（香港：古物古蹟辦事處檔案），編號：SK28。</li>
+<li>〈西貢滘西洲公眾高爾夫球場擬擴建工程2001年考古調查及評估報告〉（香港：古物古蹟辦事處檔案，編號：SK28）。</li>
 </ol>
 <h2> 發掘報告</h2>
 <ol>
 <li>"Report on an Archaeological Survey and Excavation of Northern Kau Sai Chau", Hong Kong: Antiquities and Monuments Office, SK1.</li>
 <li>〈Report on Final Archaeological Excavation at Kau Sai Chau (Phase II)", Hong Kong: Antiquities and Monuments Office, SK2.</li>
-<li>〈西貢滘西洲公眾高爾夫球場擬擴建工程2004年考古調查及發掘報告〉（香港：古物古蹟辦事處檔案），編號：SK35。</li>
+<li>〈西貢滘西洲公眾高爾夫球場擬擴建工程2004年考古調查及發掘報告〉（香港：古物古蹟辦事處檔案，編號：SK35）。</li>
 </ol>
 ]]></content:encoded>
     </item>
@@ -1235,12 +1236,12 @@
       <content:encoded><![CDATA[<h2> 調查報告</h2>
 <ol>
 <li>"Tung Lung Fort A Ch'ing Dynasty Fortification on Tung Lung Island, Hong Kong", Hong Kong: Antiquities and Monuments Office, SK32.</li>
-<li>〈2016-2017東龍洲考古調查最終報告——東龍洲南堂考古調查報告（第四稿）〉（香港：古物古蹟辦事處檔案），編號：SK65。</li>
-<li>〈東龍洲南堂考古調查中期報告〉（香港：古物古蹟辦事處檔案），編號：SK67。</li>
-<li>〈東龍洲南堂考古調查最終報告（第五稿）〉（香港：古物古蹟辦事處檔案），編號：SK69。</li>
-<li>〈東龍洲南堂考古調查最終報告〉（香港：古物古蹟辦事處檔案），編號：SK72。</li>
-<li>〈東龍洲考古調查報告〉（香港：古物古蹟辦事處檔案），編號：SK73。</li>
-<li>〈東龍洲南堂考古調查最終報告（第三稿）〉（香港：古物古蹟辦事處檔案），編號：SK74。</li>
+<li>〈2016-2017東龍洲考古調查最終報告——東龍洲南堂考古調查報告（第四稿）〉（香港：古物古蹟辦事處檔案，編號：SK65。</li>
+<li>〈東龍洲南堂考古調查中期報告〉（香港：古物古蹟辦事處檔案，編號：SK67）。</li>
+<li>〈東龍洲南堂考古調查最終報告（第五稿）〉（香港：古物古蹟辦事處檔案，編號：SK69）。</li>
+<li>〈東龍洲南堂考古調查最終報告〉（香港：古物古蹟辦事處檔案，編號：SK72）。</li>
+<li>〈東龍洲考古調查報告〉（香港：古物古蹟辦事處檔案，編號：SK73）。</li>
+<li>〈東龍洲南堂考古調查最終報告（第三稿）〉（香港：古物古蹟辦事處檔案，編號：SK74）。</li>
 </ol>
 ]]></content:encoded>
     </item>
@@ -1305,13 +1306,13 @@
       <link>https://www.pasthk.com/archaeology/lau-fau-shan-yuan-long.html</link>
       <guid>https://www.pasthk.com/archaeology/lau-fau-shan-yuan-long.html</guid>
       <source url="https://www.pasthk.com/rss.xml">元朗流浮山</source>
-      <description>調查報告 1. 〈流浮山具考古研究價值的地點〉（香港：古物古蹟辦事處檔案），編號：AM96-0647。 2. 〈2001年流浮山坑口村擬修建水渠工地考古調查及評估報告〉（香港：古物古蹟辦事處檔案），編號：AM96-0647。</description>
+      <description>調查報告 1. 〈流浮山具考古研究價值的地點〉（香港：古物古蹟辦事處檔案，編號：AM96-0647）。 2. 〈2001年流浮山坑口村擬修建水渠工地考古調查及評估報告〉（香港：古物古蹟辦事處檔案，編號：AM96-0647）。</description>
       <category>考古</category>
       <pubDate>Sun, 26 Feb 2023 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<h2> 調查報告</h2>
 <ol>
-<li>〈流浮山具考古研究價值的地點〉（香港：古物古蹟辦事處檔案），編號：AM96-0647。</li>
-<li>〈2001年流浮山坑口村擬修建水渠工地考古調查及評估報告〉（香港：古物古蹟辦事處檔案），編號：AM96-0647。</li>
+<li>〈流浮山具考古研究價值的地點〉（香港：古物古蹟辦事處檔案，編號：AM96-0647）。</li>
+<li>〈2001年流浮山坑口村擬修建水渠工地考古調查及評估報告〉（香港：古物古蹟辦事處檔案，編號：AM96-0647）。</li>
 </ol>
 ]]></content:encoded>
     </item>
@@ -1437,7 +1438,7 @@
 </ol>
 <h2> 文章</h2>
 <ol>
-<li>〈馬灣東灣仔北史前遺址出土遺物地質材料研究〉（香港：古物古蹟辦事處檔案），編號：TW5。</li>
+<li>〈馬灣東灣仔北史前遺址出土遺物地質材料研究〉（香港：古物古蹟辦事處檔案，編號：TW5。</li>
 <li>韓康信：〈香港東灣仔北遺址新石器時代人骨〉，《第四紀研究》，1999年第2期，頁184-195。</li>
 <li>韓康信、董新林：〈香港馬灣東灣仔北史前遺址出土人骨鑒定〉，《考古》，1999年第6期，頁18-25。</li>
 <li>楊建軍：〈香港馬灣島東灣仔北遺址的分期及相關問題〉，《江漢考古》，2015年第6期，頁48-54。</li>
@@ -1602,15 +1603,15 @@
 <li>〈精巧飄色民族舞　神鑾麟獅彩旗飄　長洲會景巡遊盛　吸引數以萬計外籍遊客坊眾及旅遊可欣賞　遊行歷時兩小時半老中青幼參加表演熱烈〉，《華僑日報》，1990年5月7日，<a href="https://mmis.hkpl.gov.hk/coverpage/-/coverpage/view?_coverpage_WAR_mmisportalportlet_hsf=%E6%B8%85%E9%86%AE&amp;p_r_p_-1078056564_c=QF757YsWv59H%2FuxqfBwEJMHEKFHWpTwo&amp;_coverpage_WAR_mmisportalportlet_o=145&amp;_coverpage_WAR_mmisportalportlet_actual_q=%28%20verbatim_dc.collection%3A%28%22Old%5C%20HK%5C%20Newspapers%22%29%20%29%20AND+%28%20%28%20allTermsMandatory%3A%28true%29%20OR+all_dc.title%3A%28%E6%B8%85%E9%86%AE%29%20OR+all_dc.creator%3A%28%E6%B8%85%E9%86%AE%29%20OR+all_dc.contributor%3A%28%E6%B8%85%E9%86%AE%29%20OR+all_dc.subject%3A%28%E6%B8%85%E9%86%AE%29%20OR+fulltext%3A%28%E6%B8%85%E9%86%AE%29%20OR+all_dc.description%3A%28%E6%B8%85%E9%86%AE%29%20%29%20%29&amp;_coverpage_WAR_mmisportalportlet_sort_order=asc&amp;_coverpage_WAR_mmisportalportlet_sort_field=dc.publicationdate_bsort" target="_blank" rel="noopener noreferrer">頁4</a>。</li>
 <li>〈長洲太平清醮　掀起全島歡騰　盛大飄色會景巡遊吸引中外遊客爭看　政務司曹廣榮主禮傳統節目設計精巧〉，《華僑日報》，1991年5月24日，<a href="https://mmis.hkpl.gov.hk/coverpage/-/coverpage/view?_coverpage_WAR_mmisportalportlet_hsf=%E6%B8%85%E9%86%AE&amp;p_r_p_-1078056564_c=QF757YsWv58JCjtBMMIqosrCLneazo2i&amp;_coverpage_WAR_mmisportalportlet_o=147&amp;_coverpage_WAR_mmisportalportlet_actual_q=%28%20verbatim_dc.collection%3A%28%22Old%5C%20HK%5C%20Newspapers%22%29%20%29%20AND+%28%20%28%20allTermsMandatory%3A%28true%29%20OR+all_dc.title%3A%28%E6%B8%85%E9%86%AE%29%20OR+all_dc.creator%3A%28%E6%B8%85%E9%86%AE%29%20OR+all_dc.contributor%3A%28%E6%B8%85%E9%86%AE%29%20OR+all_dc.subject%3A%28%E6%B8%85%E9%86%AE%29%20OR+fulltext%3A%28%E6%B8%85%E9%86%AE%29%20OR+all_dc.description%3A%28%E6%B8%85%E9%86%AE%29%20%29%20%29&amp;_coverpage_WAR_mmisportalportlet_sort_order=asc&amp;_coverpage_WAR_mmisportalportlet_sort_field=dc.publicationdate_bsort" target="_blank" rel="noopener noreferrer">頁6</a>。</li>
 </ol>
+<h2> 專著</h2>
+<ol>
+<li>馬木池：《<a href="https://www.lcsd.gov.hk/CE/Museum/ICHO/documents/10969700/23711288/CheungChauJiaoFestival_ebook.pdf?fbclid=IwAR3HmM809BahftzGzScvJ8MImxWMKG2KypTMfoc8sCLxFQOS1aANaobGiXA" target="_blank" rel="noopener noreferrer">殖民管治下的傳統節慶：長洲太平清醮的流變</a>》（2022年）。</li>
+</ol>
 <h2> 文章</h2>
 <ol>
 <li>鄧力恆：〈<a href="https://schina-publication.hkust.edu.hk/sites/default/files/pubs/news-049.03.pdf" target="_blank" rel="noopener noreferrer">從長洲節慶到香港節日：從星島日報看長洲太平清醮的演變，1964-1965</a>〉，《田野與文獻》，2007年第49期，頁15-21。</li>
 <li>高崇：〈地方文化與旅遊經濟的互推互強——以香港長洲包山節為例〉，《廣西民族大學學報（哲學社會科學版》，2012年第34卷第4期，頁55-59。</li>
 <li>王爽：〈香港長洲太平清醮聲景研究與非物質文化遺產保護〉，《遺產與保護研究》，2017年第2期，頁96-99。</li>
-</ol>
-<h2> 專著</h2>
-<ol>
-<li>馬木池：《<a href="https://www.lcsd.gov.hk/CE/Museum/ICHO/documents/10969700/23711288/CheungChauJiaoFestival_ebook.pdf?fbclid=IwAR3HmM809BahftzGzScvJ8MImxWMKG2KypTMfoc8sCLxFQOS1aANaobGiXA" target="_blank" rel="noopener noreferrer">殖民管治下的傳統節慶：長洲太平清醮的流變</a>》（2022年）。</li>
 </ol>
 ]]></content:encoded>
     </item>
@@ -3219,12 +3220,12 @@
       <link>https://www.pasthk.com/archaeology/wong-chuk-hang-hong-kong-island.html</link>
       <guid>https://www.pasthk.com/archaeology/wong-chuk-hang-hong-kong-island.html</guid>
       <source url="https://www.pasthk.com/rss.xml">香港黃竹坑遺址</source>
-      <description>調查報告 1. 〈香港仔黃竹坑加氣站選址考古調查報告〉（香港：古物古蹟辦事處檔案），編號：HKI3。</description>
+      <description>調查報告 1. 〈香港仔黃竹坑加氣站選址考古調查報告〉（香港：古物古蹟辦事處檔案，編號：HKI3）。</description>
       <category>考古</category>
       <pubDate>Thu, 26 Jan 2023 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<h2> 調查報告</h2>
 <ol>
-<li>〈香港仔黃竹坑加氣站選址考古調查報告〉（香港：古物古蹟辦事處檔案），編號：HKI3。</li>
+<li>〈香港仔黃竹坑加氣站選址考古調查報告〉（香港：古物古蹟辦事處檔案，編號：HKI3）。</li>
 </ol>
 ]]></content:encoded>
     </item>
@@ -3248,12 +3249,12 @@
       <link>https://www.pasthk.com/archaeology/lung-kwu-sheung-tan-tuen-mun.html</link>
       <guid>https://www.pasthk.com/archaeology/lung-kwu-sheung-tan-tuen-mun.html</guid>
       <source url="https://www.pasthk.com/rss.xml">屯門龍鼓上灘遺址</source>
-      <description>調查報告 1. 〈龍鼓上灘具考古研究價值的地點〉（香港：古物古蹟辦事處檔案），編號：AM78-0209。 發掘報告 1. &amp;quot;Report on Salvage Excavations at Lung Kwu Sheung Tan 1990&amp;quot;, Hong Kong: Antiquities and Monuments Office, TM46. 新聞報道...</description>
+      <description>調查報告 1. 〈龍鼓上灘具考古研究價值的地點〉（香港：古物古蹟辦事處檔案，編號：AM78-0209）。 發掘報告 1. &amp;quot;Report on Salvage Excavations at Lung Kwu Sheung Tan 1990&amp;quot;, Hong Kong: Antiquities and Monuments Office, TM46. 新聞報道...</description>
       <category>考古</category>
       <pubDate>Wed, 25 Jan 2023 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<h2> 調查報告</h2>
 <ol>
-<li>〈龍鼓上灘具考古研究價值的地點〉（香港：古物古蹟辦事處檔案），編號：AM78-0209。</li>
+<li>〈龍鼓上灘具考古研究價值的地點〉（香港：古物古蹟辦事處檔案，編號：AM78-0209）。</li>
 </ol>
 <h2> 發掘報告</h2>
 <ol>
@@ -3280,9 +3281,9 @@
 </ol>
 <h2> 發掘報告</h2>
 <ol>
-<li>〈前九龍寨城衙門〉（香港：古物古蹟辦事處檔案），編號：AM90-0422。</li>
-<li>〈九龍寨城南門遺蹟〉（香港：古物古蹟辦事處檔案），編號：AM96-0764。</li>
-<li>〈九龍寨城遺址〉（香港：古物古蹟辦事處檔案），編號：AM99-1442。</li>
+<li>〈前九龍寨城衙門〉（香港：古物古蹟辦事處檔案，編號：AM90-0422）。</li>
+<li>〈九龍寨城南門遺蹟〉（香港：古物古蹟辦事處檔案，編號：AM96-0764）。</li>
+<li>〈九龍寨城遺址〉（香港：古物古蹟辦事處檔案，編號：AM99-1442）。</li>
 <li>"Sewerage Interception Scheme in Kowloon City - Pumping Station, Rising Mains and Trunk Sewers: Archaeological Survey-Cum-Excavation", Hong Kong: Antiquities and Monuments Office, KL20.</li>
 </ol>
 <h2> 專著</h2>
@@ -3297,28 +3298,28 @@
       <link>https://www.pasthk.com/archaeology/lung-tsun-stone-bridge-kowloon.html</link>
       <guid>https://www.pasthk.com/archaeology/lung-tsun-stone-bridge-kowloon.html</guid>
       <source url="https://www.pasthk.com/rss.xml">九龍龍津石橋</source>
-      <description>調查報告 1. 〈龍津石橋〉（香港：古物古蹟辦事處檔案），編號：AM99-1458。 2. &amp;quot;Report on Archaeological Investigations at Kowloon Walled City, Hong Kong (Phase Ⅲ)&amp;quot;, Hong Kong: Antiquities and Monuments Office,...</description>
+      <description>調查報告 1. 〈龍津石橋〉（香港：古物古蹟辦事處檔案，編號：AM99-1458）。 2. &amp;quot;Report on Archaeological Investigations at Kowloon Walled City, Hong Kong (Phase Ⅲ)&amp;quot;, Hong Kong: Antiquities and Monuments Office,...</description>
       <category>考古</category>
       <pubDate>Fri, 20 Jan 2023 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<h2> 調查報告</h2>
 <ol>
-<li>〈龍津石橋〉（香港：古物古蹟辦事處檔案），編號：AM99-1458。</li>
+<li>〈龍津石橋〉（香港：古物古蹟辦事處檔案，編號：AM99-1458）。</li>
 <li>"Report on Archaeological Investigations at Kowloon Walled City, Hong Kong (Phase Ⅲ)", Hong Kong: Antiquities and Monuments Office, KL10.</li>
-<li>〈<a href="https://www.amo.gov.hk/filemanager/amo/common/form/20130824_ltsb_preservation_corridor.pdf" target="_blank" rel="noopener noreferrer">龍津石橋保育長廊詮釋準則和指引</a>〉（香港：古物古蹟辦事處檔案），編號：KL26。</li>
+<li>〈<a href="https://www.amo.gov.hk/filemanager/amo/common/form/20130824_ltsb_preservation_corridor.pdf" target="_blank" rel="noopener noreferrer">龍津石橋保育長廊詮釋準則和指引</a>〉（香港：古物古蹟辦事處檔案，編號：KL26）。</li>
 <li>"Preliminary Archaeological Survey at Lung Tsun Stone Bridge as part of Lung Tsun Stone Bridge Preservation Corridor at Kai Tak Development", Hong Kong: Antiquities and Monuments Office, KL40.</li>
 </ol>
 <h2> 發掘報告</h2>
 <ol>
-<li>〈<a href="https://www.amo.gov.hk/filemanager/amo/common/form/Lung_Tsun_Stone_Bridge_Remnants.pdf" target="_blank" rel="noopener noreferrer">龍津石橋全面發掘報告</a>〉（香港：古物古蹟辦事處檔案），編號：KL24。</li>
+<li>〈<a href="https://www.amo.gov.hk/filemanager/amo/common/form/Lung_Tsun_Stone_Bridge_Remnants.pdf" target="_blank" rel="noopener noreferrer">龍津石橋全面發掘報告</a>〉（香港：古物古蹟辦事處檔案，編號：KL24）。</li>
 </ol>
 <h2> 新聞報道</h2>
 <h2> 文章</h2>
 <ol>
-<li>鍾寶賢、高添強：〈<a href="https://www.amo.gov.hk/filemanager/amo/common/form/research_ltsb_surrounding_final.pdf" target="_blank" rel="noopener noreferrer">「龍津橋及其鄰近區域」歷史研究</a>〉（香港：古物古蹟辦事處檔案，2012年12月），編號：KL25。</li>
+<li>鍾寶賢、高添強：〈<a href="https://www.amo.gov.hk/filemanager/amo/common/form/research_ltsb_surrounding_final.pdf" target="_blank" rel="noopener noreferrer">「龍津橋及其鄰近區域」歷史研究</a>〉（香港：古物古蹟辦事處檔案，2012年12月，編號：KL25）。</li>
 </ol>
 <h2> 會議文件</h2>
 <ol>
-<li>建築署、康樂及文化事務署：〈啟德龍津石橋保育長廊，Lung Tsun Stone Bridge Preservation Corridor at Kai Tak）〉（香港：海濱事務委員會會議文件，2017年11月1日），編號：TFKT/20/2017。</li>
+<li>建築署、康樂及文化事務署：〈啟德龍津石橋保育長廊，Lung Tsun Stone Bridge Preservation Corridor at Kai Tak）〉（香港：海濱事務委員會會議文件，2017年11月1日，編號：TFKT/20/2017）。</li>
 <li>建築署、康樂及文化事務署：〈啟德龍津石橋保育長廊〉（香港：海濱事務委員會會議簡報，2017年11月1日）。</li>
 </ol>
 ]]></content:encoded>
@@ -3328,12 +3329,12 @@
       <link>https://www.pasthk.com/archaeology/tai-wan-site-po-toi.html</link>
       <guid>https://www.pasthk.com/archaeology/tai-wan-site-po-toi.html</guid>
       <source url="https://www.pasthk.com/rss.xml">蒲台島大灣遺址</source>
-      <description>調查報告 1. 〈大灣（蒲台島）具考古研究價值的地點〉（香港：古物古蹟辦事處檔案），編號：AM90-0445。</description>
+      <description>調查報告 1. 〈大灣（蒲台島）具考古研究價值的地點〉（香港：古物古蹟辦事處檔案，編號：AM90-0445）。</description>
       <category>考古</category>
       <pubDate>Fri, 20 Jan 2023 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<h2> 調查報告</h2>
 <ol>
-<li>〈大灣（蒲台島）具考古研究價值的地點〉（香港：古物古蹟辦事處檔案），編號：AM90-0445。</li>
+<li>〈大灣（蒲台島）具考古研究價值的地點〉（香港：古物古蹟辦事處檔案，編號：AM90-0445）。</li>
 </ol>
 ]]></content:encoded>
     </item>
@@ -3373,35 +3374,35 @@
       <link>https://www.pasthk.com/archaeology/lung-kwu-tan-tuen-mun.html</link>
       <guid>https://www.pasthk.com/archaeology/lung-kwu-tan-tuen-mun.html</guid>
       <source url="https://www.pasthk.com/rss.xml">屯門龍鼓灘遺址</source>
-      <description>調查報告 1. 〈龍鼓灘具考古研究價值的地點〉（香港：古物古蹟辦事處檔案），編號：AM78-0208。 2. &amp;quot;Auger survey of Lung Kwu Tan&amp;quot;, Hong Kong: Antiquities and Monuments Office, TM3. 3. 〈屯門龍鼓灘遺址一九九九年十一月敷設電話工程考古調查報告〉（香港：古物古蹟...</description>
+      <description>調查報告 1. 〈龍鼓灘具考古研究價值的地點〉（香港：古物古蹟辦事處檔案，編號：AM78-0208）。 2. &amp;quot;Auger survey of Lung Kwu Tan&amp;quot;, Hong Kong: Antiquities and Monuments Office, TM3. 3. 〈屯門龍鼓灘遺址一九九九年十一月敷設電話工程考古調查報告〉（香港：古物古蹟...</description>
       <category>考古</category>
       <pubDate>Thu, 19 Jan 2023 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<h2> 調查報告</h2>
 <ol>
-<li>〈龍鼓灘具考古研究價值的地點〉（香港：古物古蹟辦事處檔案），編號：AM78-0208。</li>
+<li>〈龍鼓灘具考古研究價值的地點〉（香港：古物古蹟辦事處檔案，編號：AM78-0208）。</li>
 <li>"Auger survey of Lung Kwu Tan", Hong Kong: Antiquities and Monuments Office, TM3.</li>
-<li>〈屯門龍鼓灘遺址一九九九年十一月敷設電話工程考古調查報告〉（香港：古物古蹟辦事處檔案），編號：TM10。</li>
-<li>〈屯門龍鼓灘遺址2001年8月敷設電話線工程考古調查報告〉（香港：古物古蹟辦事處檔案），編號：TM16。</li>
-<li>〈香港龍鼓灘新石器時代遺址〉（香港：古物古蹟辦事處檔案），編號：TM20。</li>
+<li>〈屯門龍鼓灘遺址一九九九年十一月敷設電話工程考古調查報告〉（香港：古物古蹟辦事處檔案，編號：TM10）。</li>
+<li>〈屯門龍鼓灘遺址2001年8月敷設電話線工程考古調查報告〉（香港：古物古蹟辦事處檔案，編號：TM16）。</li>
+<li>〈香港龍鼓灘新石器時代遺址〉（香港：古物古蹟辦事處檔案，編號：TM20）。</li>
 <li>"Lung Kwu Tan 1997", Hong Kong: Antiquities and Monuments Office, TM21.</li>
-<li>〈屯門龍鼓灘沙埔崗村丈量約份第137約第296，821及315 ARP號地段小型屋宇地盤考古調查報告〉（香港：古物古蹟辦事處檔案），編號：TM25。</li>
+<li>〈屯門龍鼓灘沙埔崗村丈量約份第137約第296，821及315 ARP號地段小型屋宇地盤考古調查報告〉（香港：古物古蹟辦事處檔案，編號：TM25）。</li>
 <li>"Survey-cum-Excavation at Small House Lots No. 121B &amp; 121RP in DD137, Lung Kwu Tan, Tuen Mun Stage 1 - Archaeological Survey Report", Hong Kong: Antiquities and Monuments Office, TM27.</li>
-<li>〈2004年屯門龍鼓灘四座小型屋宇地段搶救發掘及考古調查考古調查工作報告〉（香港：古物古蹟辦事處檔案），編號：TM35。</li>
+<li>〈2004年屯門龍鼓灘四座小型屋宇地段搶救發掘及考古調查考古調查工作報告〉（香港：古物古蹟辦事處檔案，編號：TM35）。</li>
 <li>"Archaeological Survey at Eleven Small House Lots in DD137 at Lung Kwu Tan, Tuen Mun", Hong Kong: Antiquities and Monuments Office, TM38.</li>
-<li>〈屯門龍鼓灘丈量約份137第153及159RP號地段小型屋宇考古調查報告〉（香港：古物古蹟辦事處檔案），編號：TM39。</li>
-<li>〈屯門龍鼓灘丈量約份第137約第909號地段小型屋宇考古調查最終報告〉（香港：古物古蹟辦事處檔案），編號：TM78。</li>
+<li>〈屯門龍鼓灘丈量約份137第153及159RP號地段小型屋宇考古調查報告〉（香港：古物古蹟辦事處檔案，編號：TM39）。</li>
+<li>〈屯門龍鼓灘丈量約份第137約第909號地段小型屋宇考古調查最終報告〉（香港：古物古蹟辦事處檔案，編號：TM78）。</li>
 </ol>
 <h2> 發掘報告</h2>
 <ol>
 <li>"Report of the Excavation at Sha Po Kong (Lung Kwu Tan - Lot No. 894 in D.D. 137)", Hong Kong: Antiquities and Monuments Office, TM18.</li>
-<li>〈香港屯門龍鼓灘遺址2001年度發掘報告〉（香港：古物古蹟辦事處檔案），編號：TM22。</li>
-<li>〈屯門龍鼓灘遺址2002年考古搶救發掘工作報告〉（香港：古物古蹟辦事處檔案），編號：TM23。</li>
+<li>〈香港屯門龍鼓灘遺址2001年度發掘報告〉（香港：古物古蹟辦事處檔案，編號：TM22）。</li>
+<li>〈屯門龍鼓灘遺址2002年考古搶救發掘工作報告〉（香港：古物古蹟辦事處檔案，編號：TM23）。</li>
 <li>"Survey-cum-Excavation at Small House Lots No. 121B &amp; 121RP in DD137, Lung Kwu Tan, Tuen Mun Stage 2 - Archaeological Rescue Excavation Report", Hong Kong: Antiquities and Monuments Office, TM28.</li>
-<li>〈2004年屯門龍鼓灘四座小型屋宇地段搶救發掘及考古調查搶救發掘工作報告〉（香港：古物古蹟辦事處檔案），編號：TM36。</li>
-<li>〈屯門龍鼓灘丈量約份137第147A-G號地段小型屋宇考古搶救發掘報告〉（香港：古物古蹟辦事處檔案），編號：TM40。</li>
-<li>〈屯門龍鼓灘丈量約份137第331A號地段小型村屋地考古搶救發掘報告〉（香港：古物古蹟辦事處檔案），編號：TM42。</li>
-<li>〈2005年屯門龍鼓灘丈量約份137第332SA地段搶救發掘工作報告〉（香港：古物古蹟辦事處檔案），編號：TM44。</li>
-<li>〈龍鼓洲遺址搶救發掘工作報告〉（香港：古物古蹟辦事處檔案），編號：TM51。</li>
+<li>〈2004年屯門龍鼓灘四座小型屋宇地段搶救發掘及考古調查搶救發掘工作報告〉（香港：古物古蹟辦事處檔案，編號：TM36）。</li>
+<li>〈屯門龍鼓灘丈量約份137第147A-G號地段小型屋宇考古搶救發掘報告〉（香港：古物古蹟辦事處檔案，編號：TM40）。</li>
+<li>〈屯門龍鼓灘丈量約份137第331A號地段小型村屋地考古搶救發掘報告〉（香港：古物古蹟辦事處檔案，編號：TM42）。</li>
+<li>〈2005年屯門龍鼓灘丈量約份137第332SA地段搶救發掘工作報告〉（香港：古物古蹟辦事處檔案，編號：TM44）。</li>
+<li>〈龍鼓洲遺址搶救發掘工作報告〉（香港：古物古蹟辦事處檔案，編號：TM51）。</li>
 </ol>
 ]]></content:encoded>
     </item>
@@ -3563,29 +3564,29 @@
       <link>https://www.pasthk.com/archaeology/sha-ha-sai-kung.html</link>
       <guid>https://www.pasthk.com/archaeology/sha-ha-sai-kung.html</guid>
       <source url="https://www.pasthk.com/rss.xml">西貢沙下遺址</source>
-      <description>調查報告 1. 〈沙下具考古研究價值的地點〉（香港：古物古蹟辦事處檔案），編號：AM96-0767。 2. 〈西貢沙下（Sha Ha）遺址考古調查中期報告〉（香港：古物古蹟辦事處檔案），編號：SK6。 3. &amp;quot;Landscape Archaeological at Sha Ha, Sai Kung, East New Territories, Hong...</description>
+      <description>調查報告 1. 〈沙下具考古研究價值的地點〉（香港：古物古蹟辦事處檔案，編號：AM96-0767）。 2. 〈西貢沙下（Sha Ha）遺址考古調查中期報告〉（香港：古物古蹟辦事處檔案，編號：SK6）。 3. &amp;quot;Landscape Archaeological at Sha Ha, Sai Kung, East New Territories, Hong...</description>
       <category>考古</category>
       <pubDate>Wed, 18 Jan 2023 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<h2> 調查報告</h2>
 <ol>
-<li>〈沙下具考古研究價值的地點〉（香港：古物古蹟辦事處檔案），編號：AM96-0767。</li>
-<li>〈西貢沙下（Sha Ha）遺址考古調查中期報告〉（香港：古物古蹟辦事處檔案），編號：SK6。</li>
+<li>〈沙下具考古研究價值的地點〉（香港：古物古蹟辦事處檔案，編號：AM96-0767）。</li>
+<li>〈西貢沙下（Sha Ha）遺址考古調查中期報告〉（香港：古物古蹟辦事處檔案，編號：SK6）。</li>
 <li>"Landscape Archaeological at Sha Ha, Sai Kung, East New Territories, Hong Kong", Hong Kong: Antiquities and Monuments Office, SK19.</li>
-<li>〈西貢沙下遺址2002年F區考古調查報告〉（香港：古物古蹟辦事處檔案），編號：SK21。</li>
+<li>〈西貢沙下遺址2002年F區考古調查報告〉（香港：古物古蹟辦事處檔案，編號：SK21）。</li>
 <li>"The Prehistoric and Historic Environments, Vegetations and Subsistence Strategies at Sha Ha, Sai Kung, Hong Kong", Hong Kong: Antiquities and Monuments Office, SK31.</li>
-<li>〈香港西貢區沙下（Sha Ha）遺址考古調查報告〉（香港：古物古蹟辦事處檔案），編號：SK45。</li>
-<li>〈2000年和2002年沙下考古遺址採集標本整理文字記錄〉（香港：古物古蹟辦事處檔案），編號：SK50。</li>
-<li>〈西貢沙下遺址2005年考古調查工作報告〉（香港：古物古蹟辦事處檔案），編號：SK59。</li>
+<li>〈香港西貢區沙下（Sha Ha）遺址考古調查報告〉（香港：古物古蹟辦事處檔案，編號：SK45）。</li>
+<li>〈2000年和2002年沙下考古遺址採集標本整理文字記錄〉（香港：古物古蹟辦事處檔案，編號：SK50）。</li>
+<li>〈西貢沙下遺址2005年考古調查工作報告〉（香港：古物古蹟辦事處檔案，編號：SK59）。</li>
 </ol>
 <h2> 發掘報告</h2>
 <ol>
 <li>香港古物古蹟辦事處、河南省文物考古研究所：〈2002年度香港西貢沙下遺址C02區和DⅡ02區考古發掘簡報〉，《華夏考古》，2004年第4期，頁3-47。</li>
 <li>陝西省考古研究所、香港古物古蹟辦事處：〈香港西貢沙下遺址發掘簡報〉，《考古與文物》，2006年第6期，頁34-45。</li>
 <li>香港古物古蹟辦事處、廣州市文物考古研究所：〈香港西貢沙下遺址DⅠ區發掘簡報〉，《華夏考古》，2007年第4期，頁3-34。</li>
-<li>〈香港沙下遺址2002年考古發掘A區及E區發掘報告〉（香港：古物古蹟辦事處檔案），編號：SK61。</li>
-<li>〈2002年度香港西貢沙下遺址C02區和D02區考古發掘報告〉（香港：古物古蹟辦事處檔案），編號：SK62。</li>
-<li>〈香港特別行政區西貢沙下遺址B區發掘簡報〉（香港：古物古蹟辦事處檔案），編號：SK70。</li>
-<li>〈香港西貢沙下遺址DI區整理報告〉（香港：古物古蹟辦事處檔案），編號：SK71。</li>
+<li>〈香港沙下遺址2002年考古發掘A區及E區發掘報告〉（香港：古物古蹟辦事處檔案，編號：SK61）。</li>
+<li>〈2002年度香港西貢沙下遺址C02區和D02區考古發掘報告〉（香港：古物古蹟辦事處檔案，編號：SK62）。</li>
+<li>〈香港特別行政區西貢沙下遺址B區發掘簡報〉（香港：古物古蹟辦事處檔案，編號：SK70）。</li>
+<li>〈香港西貢沙下遺址DI區整理報告〉（香港：古物古蹟辦事處檔案，編號：SK71）。</li>
 </ol>
 <h2> 新聞報道</h2>
 <ol>
@@ -3594,7 +3595,7 @@
 </ol>
 <h2> 研究</h2>
 <ol>
-<li>〈香港沙下遺址環境變遷研究 （包括：摘要及剖面分析數據）〉（香港：古物古蹟辦事處檔案），編號：SK47。</li>
+<li>〈香港沙下遺址環境變遷研究 （包括：摘要及剖面分析數據）〉（香港：古物古蹟辦事處檔案，編號：SK47）。</li>
 </ol>
 ]]></content:encoded>
     </item>
@@ -3603,39 +3604,39 @@
       <link>https://www.pasthk.com/archaeology/so-kwun-wat-tuen-mun.html</link>
       <guid>https://www.pasthk.com/archaeology/so-kwun-wat-tuen-mun.html</guid>
       <source url="https://www.pasthk.com/rss.xml">屯門掃管笏遺址</source>
-      <description>調查報告 1. 〈掃管笏具考古研究價值的地點〉（香港：古物古蹟辦事處檔案），編號：AM77-0045。 2. 〈掃管笏寶龍軍營具考古研究價值的地點〉（香港：古物古蹟辦事處檔案），編號：AM98-0925。 3. &amp;quot;Report of Archaeological Survey at So Kwun Wat, Tuen Mun 1997&amp;quot;, Hong K...</description>
+      <description>調查報告 1. 〈掃管笏具考古研究價值的地點〉（香港：古物古蹟辦事處檔案，編號：AM77-0045）。 2. 〈掃管笏寶龍軍營具考古研究價值的地點〉（香港：古物古蹟辦事處檔案，編號：AM98-0925）。 3. &amp;quot;Report of Archaeological Survey at So Kwun Wat, Tuen Mun 1997&amp;quot;, Hong K...</description>
       <category>考古</category>
       <pubDate>Wed, 18 Jan 2023 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<h2> 調查報告</h2>
 <ol>
-<li>〈掃管笏具考古研究價值的地點〉（香港：古物古蹟辦事處檔案），編號：AM77-0045。</li>
-<li>〈掃管笏寶龍軍營具考古研究價值的地點〉（香港：古物古蹟辦事處檔案），編號：AM98-0925。</li>
+<li>〈掃管笏具考古研究價值的地點〉（香港：古物古蹟辦事處檔案，編號：AM77-0045）。</li>
+<li>〈掃管笏寶龍軍營具考古研究價值的地點〉（香港：古物古蹟辦事處檔案，編號：AM98-0925）。</li>
 <li>"Report of Archaeological Survey at So Kwun Wat, Tuen Mun 1997", Hong Kong: Antiquities and Monuments Office, TM1.</li>
-<li>〈屯門掃管笏考古調查報告〉（香港：古物古蹟辦事處檔案），編號：TM7。</li>
-<li>〈屯門掃管笏段公路擴建工程考古勘查報告〉（香港：古物古蹟辦事處檔案），編號：TM8。</li>
-<li>〈2003年屯門掃管笏丈量約份375之974地段及丈量約份381之417地段小型屋宇考古調查報告〉（香港：古物古蹟辦事處檔案），編號：TM30。</li>
-<li>〈掃管笏村電力支站考古調查報告〉（香港：古物古蹟辦事處檔案），編號：TM41。</li>
+<li>〈屯門掃管笏考古調查報告〉（香港：古物古蹟辦事處檔案，編號：TM7）。</li>
+<li>〈屯門掃管笏段公路擴建工程考古勘查報告〉（香港：古物古蹟辦事處檔案，編號：TM8）。</li>
+<li>〈2003年屯門掃管笏丈量約份375之974地段及丈量約份381之417地段小型屋宇考古調查報告〉（香港：古物古蹟辦事處檔案，編號：TM30）。</li>
+<li>〈掃管笏村電力支站考古調查報告〉（香港：古物古蹟辦事處檔案，編號：TM41）。</li>
 </ol>
 <h2> 發掘報告</h2>
 <ol>
 <li>香港古物古蹟辦事處、中國社會科學院考古研究所：〈<a href="http://www.kaogu.cn/cn/%E7%A0%94%E7%A9%B6%E6%96%B0%E8%AE%BA/%E9%A6%99%E6%B8%AF%E5%B1%AF%E9%97%A8%E6%89%AB%E7%AE%A1%E7%AC%8F%E9%81%97%E5%9D%80%E5%8F%91%E6%8E%98%E7%AE%80%E6%8A%A5.pdf" target="_blank" rel="noopener noreferrer">香港屯門掃管笏遺址發掘簡報</a>〉，《考古》2010年第7期，頁17-30。</li>
-<li>〈2000年屯門掃管笏遺址搶救發掘（第二區塊）工作報告〉（香港：古物古蹟辦事處檔案），編號：TM24。</li>
-<li>〈屯門掃管笏古文化遺址2001年搶救發掘工作報告〉（香港：古物古蹟辦事處檔案），編號：TM37。</li>
-<li>〈2000年屯門掃管笏遺址搶救發掘（第二區塊）工作報告〉（香港：古物古蹟辦事處檔案），編號：TM56。</li>
-<li>〈屯門掃管笏2008-2011年考古發掘及整理工作報告〉（香港：古物古蹟辦事處檔案），編號：TM67。</li>
-<li>〈2000年屯門掃管笏遺址考古搶救發掘工作報告〉（香港：古物古蹟辦事處檔案），編號：TM73。</li>
+<li>〈2000年屯門掃管笏遺址搶救發掘（第二區塊）工作報告〉（香港：古物古蹟辦事處檔案，編號：TM24）。</li>
+<li>〈屯門掃管笏古文化遺址2001年搶救發掘工作報告〉（香港：古物古蹟辦事處檔案，編號：TM37）。</li>
+<li>〈2000年屯門掃管笏遺址搶救發掘（第二區塊）工作報告〉（香港：古物古蹟辦事處檔案，編號：TM56）。</li>
+<li>〈屯門掃管笏2008-2011年考古發掘及整理工作報告〉（香港：古物古蹟辦事處檔案，編號：TM67）。</li>
+<li>〈2000年屯門掃管笏遺址考古搶救發掘工作報告〉（香港：古物古蹟辦事處檔案，編號：TM73）。</li>
 </ol>
 <h2> 新聞報道</h2>
 <ol>
 <li>〈<a href="https://www.info.gov.hk/gia/general/200005/16/0516078.htm" target="_blank" rel="noopener noreferrer">屯門掃管笏遺址發現新石器時代居民活動遺蹟</a>〉（香港：政府新聞處，2000年5月16日）。</li>
 </ol>
-<h2> 文章</h2>
-<ol>
-<li>〈屯門掃管笏2008-2009年出土玦、石範和石刀的研究文章〉（香港：古物古蹟辦事處檔案），編號：TM72。</li>
-</ol>
 <h2> 專著</h2>
 <ol>
 <li>莫世民：《掃管笏——舊日的足跡》（香港：明文出版社，2020年）。</li>
+</ol>
+<h2> 文章</h2>
+<ol>
+<li>〈屯門掃管笏2008-2009年出土玦、石範和石刀的研究文章〉（香港：古物古蹟辦事處檔案，編號：TM72。</li>
 </ol>
 <h2> 小冊子</h2>
 <ol>
@@ -3648,12 +3649,12 @@
       <link>https://www.pasthk.com/archaeology/chung-hom-wan-hong-kong-island.html</link>
       <guid>https://www.pasthk.com/archaeology/chung-hom-wan-hong-kong-island.html</guid>
       <source url="https://www.pasthk.com/rss.xml">香港舂坎灣遺址</source>
-      <description>調查報告 1. 〈舂坎灣具考古研究價值的地點〉（香港：古物古蹟辦事處檔案），編號：AM77-0054。</description>
+      <description>調查報告 1. 〈舂坎灣具考古研究價值的地點〉（香港：古物古蹟辦事處檔案，編號：AM77-0054）。</description>
       <category>考古</category>
       <pubDate>Wed, 18 Jan 2023 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<h2> 調查報告</h2>
 <ol>
-<li>〈舂坎灣具考古研究價值的地點〉（香港：古物古蹟辦事處檔案），編號：AM77-0054。</li>
+<li>〈舂坎灣具考古研究價值的地點〉（香港：古物古蹟辦事處檔案，編號：AM77-0054）。</li>
 </ol>
 ]]></content:encoded>
     </item>
@@ -3715,20 +3716,20 @@
       <link>https://www.pasthk.com/archaeology/wong-tei-tung-sai-kung.html</link>
       <guid>https://www.pasthk.com/archaeology/wong-tei-tung-sai-kung.html</guid>
       <source url="https://www.pasthk.com/rss.xml">西貢黃地峒遺址</source>
-      <description>調查報告 1. 〈黃地峒具考古研究價值的地點〉（香港：古物古蹟辦事處檔案），編號：AM06-0006/A。 2. 〈西貢深涌黃地峒考古調查進度報告〉（香港：古物古蹟辦事處檔案），編號：SK33。 3. 〈香港西貢深涌黃地峒遺址2004年度考古調查報告〉（香港：古物古蹟辦事處檔案），編號：SK34。 4. 〈香港深涌黃地峒遺址2004年度考古調查光釋光測...</description>
+      <description>調查報告 1. 〈黃地峒具考古研究價值的地點〉（香港：古物古蹟辦事處檔案，編號：AM06-0006/A）。 2. 〈西貢深涌黃地峒考古調查進度報告〉（香港：古物古蹟辦事處檔案，編號：SK33）。 3. 〈香港西貢深涌黃地峒遺址2004年度考古調查報告〉（香港：古物古蹟辦事處檔案，編號：SK34）。 4. 〈香港深涌黃地峒遺址2004年度考古調查光釋光測...</description>
       <category>考古</category>
       <pubDate>Wed, 18 Jan 2023 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<h2> 調查報告</h2>
 <ol>
-<li>〈黃地峒具考古研究價值的地點〉（香港：古物古蹟辦事處檔案），編號：AM06-0006/A。</li>
-<li>〈西貢深涌黃地峒考古調查進度報告〉（香港：古物古蹟辦事處檔案），編號：SK33。</li>
-<li>〈香港西貢深涌黃地峒遺址2004年度考古調查報告〉（香港：古物古蹟辦事處檔案），編號：SK34。</li>
-<li>〈香港深涌黃地峒遺址2004年度考古調查光釋光測年及孢粉分析報告〉（香港：古物古蹟辦事處檔案），編號：SK36。</li>
+<li>〈黃地峒具考古研究價值的地點〉（香港：古物古蹟辦事處檔案，編號：AM06-0006/A）。</li>
+<li>〈西貢深涌黃地峒考古調查進度報告〉（香港：古物古蹟辦事處檔案，編號：SK33）。</li>
+<li>〈香港西貢深涌黃地峒遺址2004年度考古調查報告〉（香港：古物古蹟辦事處檔案，編號：SK34）。</li>
+<li>〈香港深涌黃地峒遺址2004年度考古調查光釋光測年及孢粉分析報告〉（香港：古物古蹟辦事處檔案，編號：SK36。</li>
 </ol>
 <h2> 發掘報告</h2>
 <ol>
 <li>張森水主編：《2006年香港考古重大發現——西貢黃地峒舊石器時代晚期遺址》（香港：中國評論學術出版社，2010年）。</li>
-<li>〈香港西貢黃地峒遺址二零零五年度考古發掘工作報告〉（香港：古物古蹟辦事處檔案），編號：SK48。</li>
+<li>〈香港西貢黃地峒遺址二零零五年度考古發掘工作報告〉（香港：古物古蹟辦事處檔案，編號：SK48）。</li>
 </ol>
 <h2> 文章</h2>
 <ol>
@@ -3755,14 +3756,14 @@
       <link>https://www.pasthk.com/archaeology/lei-cheng-uk-han-tomb-kowloon.html</link>
       <guid>https://www.pasthk.com/archaeology/lei-cheng-uk-han-tomb-kowloon.html</guid>
       <source url="https://www.pasthk.com/rss.xml">九龍李鄭屋漢墓</source>
-      <description>發掘報告 1. 屈志仁：《李鄭屋漢墓》（香港：香港市政局，1983年）。 2. 香港歷史博物館編：《李鄭屋漢墓》（香港：香港歷史博物館，2005年）。 3. 〈李鄭屋漢墓〉（香港：古物古蹟辦事處檔案），編號：AM77-0091。 新聞報道 1. 〈李鄭屋村山坵發現古塚　塚内有陶器二十餘件　似是千五年前古物〉，《工商日報》，1955年8月10日，第5頁 ...</description>
+      <description>發掘報告 1. 屈志仁：《李鄭屋漢墓》（香港：香港市政局，1983年）。 2. 香港歷史博物館編：《李鄭屋漢墓》（香港：香港歷史博物館，2005年）。 3. 〈李鄭屋漢墓〉（香港：古物古蹟辦事處檔案，編號：AM77-0091）。 新聞報道 1. 〈李鄭屋村山坵發現古塚　塚内有陶器二十餘件　似是千五年前古物〉，《工商日報》，1955年8月10日，第5頁 ...</description>
       <category>考古</category>
       <pubDate>Mon, 16 Jan 2023 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<h2> 發掘報告</h2>
 <ol>
 <li>屈志仁：《李鄭屋漢墓》（香港：香港市政局，1983年）。</li>
 <li>香港歷史博物館編：《李鄭屋漢墓》（香港：香港歷史博物館，2005年）。</li>
-<li>〈李鄭屋漢墓〉（香港：古物古蹟辦事處檔案），編號：AM77-0091。</li>
+<li>〈李鄭屋漢墓〉（香港：古物古蹟辦事處檔案，編號：AM77-0091）。</li>
 </ol>
 <h2> 新聞報道</h2>
 <ol>
@@ -3927,15 +3928,15 @@
       <link>https://www.pasthk.com/archaeology/tai-wan-site-lamma-island.html</link>
       <guid>https://www.pasthk.com/archaeology/tai-wan-site-lamma-island.html</guid>
       <source url="https://www.pasthk.com/rss.xml">南丫島大灣遺址</source>
-      <description>調查報告 1. 〈香港考古發現5000年前居住遺跡〉，《中學地理教學參考》，1996年第6期，頁46。 2. 〈大灣（南丫島）具考古研究價值的地點〉（香港：古物古蹟辦事處檔案），編號：AM77-0041。 3. &amp;quot;Archaeological Survey for the Proposed &amp;quot;Sitting-out Area&amp;quot; at Tai Wan T...</description>
+      <description>調查報告 1. 〈香港考古發現5000年前居住遺跡〉，《中學地理教學參考》，1996年第6期，頁46）。 2. 〈大灣（南丫島）具考古研究價值的地點〉（香港：古物古蹟辦事處檔案，編號：AM77-0041）。 3. &amp;quot;Archaeological Survey for the Proposed &amp;quot;Sitting-out Area&amp;quot; at Tai Wan ...</description>
       <category>考古</category>
       <pubDate>Mon, 16 Jan 2023 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<h2> 調查報告</h2>
 <ol>
-<li>〈香港考古發現5000年前居住遺跡〉，《中學地理教學參考》，1996年第6期，頁46。</li>
-<li>〈大灣（南丫島）具考古研究價值的地點〉（香港：古物古蹟辦事處檔案），編號：AM77-0041。</li>
+<li>〈香港考古發現5000年前居住遺跡〉，《中學地理教學參考》，1996年第6期，頁46）。</li>
+<li>〈大灣（南丫島）具考古研究價值的地點〉（香港：古物古蹟辦事處檔案，編號：AM77-0041）。</li>
 <li>"Archaeological Survey for the Proposed "Sitting-out Area" at Tai Wan To, Lamma Island", Hong Kong: Antiquities and Monuments Office, LI24.</li>
-<li>〈2006年南丫島大灣丈量約份第3LM約第1045號地段小型屋宇考古調查工作報告〉（香港：古物古蹟辦事處檔案），編號：LI26。</li>
+<li>〈2006年南丫島大灣丈量約份第3LM約第1045號地段小型屋宇考古調查工作報告〉（香港：古物古蹟辦事處檔案，編號：LI26）。</li>
 <li>"Archaeological Survey cum Archaeological Watching Brief for Small House Development at Lot No. 1090 RP in D.D.3 LM at Tai Wan on Lamma Island", Hong Kong: Antiquities and Monuments Office, LI29.</li>
 <li>"Archaeological Investigation on 4 Small House Developments at Lot Nos. 1026SA and 1028 RP, Lots nos 1026SB, Lot Nos. 1104RP, 1105SB and 1117SA and Lot Nos. 1104SA, 1105SA at Tai Wan on Lamma Island Final Report", Hong Kong: Antiquities and Monuments Office, LI30.</li>
 </ol>
@@ -4061,7 +4062,7 @@
       <link>https://www.pasthk.com/archaeology/</link>
       <guid>https://www.pasthk.com/archaeology/</guid>
       <source url="https://www.pasthk.com/rss.xml">考古學</source>
-      <description>考古遺址 ::: tabs tab 綜合 1. 陳公哲：〈香港考古發掘〉，《考古學報》1957年第4期，第1-16頁。 2. 〈第二次全港考古調查工作述評〉（香港：古物古蹟辦事處檔案），編號：ID23。 3. &amp;quot;Report of the Hong Kong Archaeological Survey Volume I An Introduction ...</description>
+      <description>考古遺址 ::: tabs tab 綜合 1. 陳公哲：〈香港考古發掘〉，《考古學報》1957年第4期，第1-16頁。 2. 〈第二次全港考古調查工作述評〉（香港：古物古蹟辦事處檔案，編號：ID23）。 3. &amp;quot;Report of the Hong Kong Archaeological Survey Volume I An Introduction ...</description>
       <category>考古</category>
       <pubDate>Sun, 15 Jan 2023 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<h2> 考古遺址</h2>
@@ -4100,7 +4101,7 @@
 <li>孫德榮：〈香港近年的考古發現與研究〉，《考古》，2007年第6期，頁3-9。</li>
 <li>商志（香覃）、吳偉鴻：《香港考古學敘研》（北京：文物出版社，2010年）。</li>
 <li>孫德榮：〈行李待領：誰擁有香港的考古遺產〉，《華夏考古》，2011年第1期，頁139-145。</li>
-<li>〈香港漢代考古發現與研究〉（香港：古物古蹟辦事處檔案），編號：ID26。</li>
+<li>〈香港漢代考古發現與研究〉（香港：古物古蹟辦事處檔案，編號：ID26。</li>
 </ol>
 <h2> 玉石器</h2>
 <ol>
