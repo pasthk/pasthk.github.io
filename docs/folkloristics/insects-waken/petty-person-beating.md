@@ -1,6 +1,5 @@
 ---
 title: 打小人
-category: 民俗
 date: 2023-03-07
 ---
 <adsense></adsense>

@@ -1,6 +1,5 @@
 ---
 title: 茶莊
-category: 廣告
 date: 2023-04-02
 ---
 <adsense></adsense>

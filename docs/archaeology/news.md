@@ -1,6 +1,5 @@
 ---
 title: 新聞報道
-category: 文化
 index: false
 date: 2023-01-16
 ---

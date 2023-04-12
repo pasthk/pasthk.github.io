@@ -1,6 +1,5 @@
 ---
 title: 地震
-category: 自然
 date: 2023-04-06
 ---
 <adsense></adsense>

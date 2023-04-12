@@ -1,6 +1,5 @@
 ---
 title: 香港黃竹坑遺址
-category: 考古
 date: 2023-01-26
 ---
 <adsense></adsense>

@@ -1,6 +1,5 @@
 ---
 title: 考古學
-category: 考古
 index: false
 date: 2023-01-15
 ---

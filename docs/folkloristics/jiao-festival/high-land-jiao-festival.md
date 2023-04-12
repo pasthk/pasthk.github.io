@@ -1,6 +1,5 @@
 ---
 title: 西貢糧船灣太平清醮
-category: 民俗
 date: 2023-03-25
 ---
 <adsense></adsense>

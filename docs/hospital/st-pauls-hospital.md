@@ -1,6 +1,5 @@
 ---
 title: 聖保祿醫院
-category: 醫療
 date: 2023-03-31
 ---
 <adsense></adsense>

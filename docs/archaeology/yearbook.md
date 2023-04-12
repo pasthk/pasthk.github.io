@@ -1,6 +1,5 @@
 ---
 title: 考古學年鑒
-category: 考古
 order: -2
 date: 2023-01-16
 ---

@@ -1,6 +1,5 @@
 ---
 title: 九龍聖山（宋皇臺）遺址
-category: 考古
 date: 2023-01-16
 ---
 <adsense></adsense>

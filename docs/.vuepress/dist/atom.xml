@@ -4,28 +4,66 @@
   <title>追跡香江</title>
   <subtitle>香港專題研究索引集</subtitle>
   <icon>https://www.pasthk.com/favicon.ico</icon>
-  <updated>2023-04-12T11:19:36.761Z</updated>
+  <updated>2023-04-12T17:09:14.145Z</updated>
   <generator>vuepress-plugin-feed2</generator>
   <link rel="self" href="https://www.pasthk.com/atom.xml"/>
   <link rel="alternate" href="https://www.pasthk.com/"/>
-  <category term="公共衛生"/>
-  <category term="社會"/>
-  <category term="考古"/>
-  <category term="自然"/>
-  <category term="民俗"/>
-  <category term="醫療"/>
-  <category term="廣告"/>
-  <category term="文化"/>
-  <category term="熱帶氣旋"/>
   <category term="其他"/>
-  <category term="資料庫"/>
+  <category term="社會"/>
   <category term="地圖"/>
-  <category term="宗教"/>
+  <entry>
+    <title type="text">香港大學馮平山圖書館</title>
+    <id>https://www.pasthk.com/library/fung-ping-shan-library-university-of-hong-kong.html</id>
+    <link href="https://www.pasthk.com/library/fung-ping-shan-library-university-of-hong-kong.html"/>
+    <updated>2023-04-12T17:09:14.176Z</updated>
+    <summary type="html"><![CDATA[<h2> 新聞報道</h2>
+<ol>
+<li>〈港督將為馮平山圖書館開幕〉，《香港工商日報》，1932年11月22日，<a href="https://mmis.hkpl.gov.hk/coverpage/-/coverpage/view?p_r_p_-1078056564_c=QF757YsWv5%2BgO%2FPMVI16yVh9%2FyWncBMS&amp;_coverpage_WAR_mmisportalportlet_o=0&amp;_coverpage_WAR_mmisportalportlet_actual_q=%28%20verbatim_dc.collection%3A%28%22Old%5C%20HK%5C%20Newspapers%22%29%20%29%20AND+%28%20%28%20allTermsMandatory%3A%28true%29%20OR+all_dc.title%3A%28%E9%A6%AE%E5%B9%B3%E5%B1%B1%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+all_dc.creator%3A%28%E9%A6%AE%E5%B9%B3%E5%B1%B1%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+all_dc.contributor%3A%28%E9%A6%AE%E5%B9%B3%E5%B1%B1%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+all_dc.subject%3A%28%E9%A6%AE%E5%B9%B3%E5%B1%B1%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+fulltext%3A%28%E9%A6%AE%E5%B9%B3%E5%B1%B1%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+all_dc.description%3A%28%E9%A6%AE%E5%B9%B3%E5%B1%B1%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20%29%20%29&amp;_coverpage_WAR_mmisportalportlet_sort_order=asc&amp;_coverpage_WAR_mmisportalportlet_sort_field=dc.publicationdate_bsort&amp;_coverpage_WAR_mmisportalportlet_log=Y" target="_blank" rel="noopener noreferrer">第3張第1版</a>。</li>
+<li>〈馮平山圖書館〉，《香港華字日報》，1932年12月13日，<a href="https://mmis.hkpl.gov.hk/coverpage/-/coverpage/view?p_r_p_-1078056564_c=QF757YsWv5%2FH7zGe%2FKF%2BFA8Kyt4eLZfb&amp;_coverpage_WAR_mmisportalportlet_o=1&amp;_coverpage_WAR_mmisportalportlet_actual_q=%28%20verbatim_dc.collection%3A%28%22Old%5C%20HK%5C%20Newspapers%22%29%20%29%20AND+%28%20%28%20allTermsMandatory%3A%28true%29%20OR+all_dc.title%3A%28%E9%A6%AE%E5%B9%B3%E5%B1%B1%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+all_dc.creator%3A%28%E9%A6%AE%E5%B9%B3%E5%B1%B1%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+all_dc.contributor%3A%28%E9%A6%AE%E5%B9%B3%E5%B1%B1%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+all_dc.subject%3A%28%E9%A6%AE%E5%B9%B3%E5%B1%B1%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+fulltext%3A%28%E9%A6%AE%E5%B9%B3%E5%B1%B1%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+all_dc.description%3A%28%E9%A6%AE%E5%B9%B3%E5%B1%B1%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20%29%20%29&amp;_coverpage_WAR_mmisportalportlet_sort_order=asc&amp;_coverpage_WAR_mmisportalportlet_sort_field=dc.publicationdate_bsort&amp;_coverpage_WAR_mmisportalportlet_log=Y" target="_blank" rel="noopener noreferrer">第2張第4頁</a>。
+<ul>
+<li>…決定明日開幕…</li>
+</ul>
+</li>
+<li>〈馮平山圖書館已由港督行開幕禮〉，《工商晚報》，1932年12月15日，<a href="https://mmis.hkpl.gov.hk/coverpage/-/coverpage/view?_coverpage_WAR_mmisportalportlet_hsf=%E9%A6%AE%E5%B9%B3%E5%B1%B1%E5%9C%96%E6%9B%B8%E9%A4%A8&amp;p_r_p_-1078056564_c=QF757YsWv5%2FH7zGe%2FKF%2BFDsKeKCPqv09&amp;_coverpage_WAR_mmisportalportlet_o=2&amp;_coverpage_WAR_mmisportalportlet_actual_q=%28%20verbatim_dc.collection%3A%28%22Old%5C%20HK%5C%20Newspapers%22%29%20%29%20AND+%28%20%28%20allTermsMandatory%3A%28true%29%20OR+all_dc.title%3A%28%E9%A6%AE%E5%B9%B3%E5%B1%B1%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+all_dc.creator%3A%28%E9%A6%AE%E5%B9%B3%E5%B1%B1%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+all_dc.contributor%3A%28%E9%A6%AE%E5%B9%B3%E5%B1%B1%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+all_dc.subject%3A%28%E9%A6%AE%E5%B9%B3%E5%B1%B1%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+fulltext%3A%28%E9%A6%AE%E5%B9%B3%E5%B1%B1%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+all_dc.description%3A%28%E9%A6%AE%E5%B9%B3%E5%B1%B1%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20%29%20%29&amp;_coverpage_WAR_mmisportalportlet_sort_order=asc&amp;_coverpage_WAR_mmisportalportlet_sort_field=dc.publicationdate_bsort&amp;_coverpage_WAR_mmisportalportlet_formDate=1681319073968" target="_blank" rel="noopener noreferrer">第4版</a>。</li>
+<li>t.b.c</li>
+</ol>]]></summary>
+    <content type="html"><![CDATA[<h2> 新聞報道</h2>
+<ol>
+<li>〈港督將為馮平山圖書館開幕〉，《香港工商日報》，1932年11月22日，<a href="https://mmis.hkpl.gov.hk/coverpage/-/coverpage/view?p_r_p_-1078056564_c=QF757YsWv5%2BgO%2FPMVI16yVh9%2FyWncBMS&amp;_coverpage_WAR_mmisportalportlet_o=0&amp;_coverpage_WAR_mmisportalportlet_actual_q=%28%20verbatim_dc.collection%3A%28%22Old%5C%20HK%5C%20Newspapers%22%29%20%29%20AND+%28%20%28%20allTermsMandatory%3A%28true%29%20OR+all_dc.title%3A%28%E9%A6%AE%E5%B9%B3%E5%B1%B1%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+all_dc.creator%3A%28%E9%A6%AE%E5%B9%B3%E5%B1%B1%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+all_dc.contributor%3A%28%E9%A6%AE%E5%B9%B3%E5%B1%B1%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+all_dc.subject%3A%28%E9%A6%AE%E5%B9%B3%E5%B1%B1%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+fulltext%3A%28%E9%A6%AE%E5%B9%B3%E5%B1%B1%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+all_dc.description%3A%28%E9%A6%AE%E5%B9%B3%E5%B1%B1%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20%29%20%29&amp;_coverpage_WAR_mmisportalportlet_sort_order=asc&amp;_coverpage_WAR_mmisportalportlet_sort_field=dc.publicationdate_bsort&amp;_coverpage_WAR_mmisportalportlet_log=Y" target="_blank" rel="noopener noreferrer">第3張第1版</a>。</li>
+<li>〈馮平山圖書館〉，《香港華字日報》，1932年12月13日，<a href="https://mmis.hkpl.gov.hk/coverpage/-/coverpage/view?p_r_p_-1078056564_c=QF757YsWv5%2FH7zGe%2FKF%2BFA8Kyt4eLZfb&amp;_coverpage_WAR_mmisportalportlet_o=1&amp;_coverpage_WAR_mmisportalportlet_actual_q=%28%20verbatim_dc.collection%3A%28%22Old%5C%20HK%5C%20Newspapers%22%29%20%29%20AND+%28%20%28%20allTermsMandatory%3A%28true%29%20OR+all_dc.title%3A%28%E9%A6%AE%E5%B9%B3%E5%B1%B1%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+all_dc.creator%3A%28%E9%A6%AE%E5%B9%B3%E5%B1%B1%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+all_dc.contributor%3A%28%E9%A6%AE%E5%B9%B3%E5%B1%B1%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+all_dc.subject%3A%28%E9%A6%AE%E5%B9%B3%E5%B1%B1%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+fulltext%3A%28%E9%A6%AE%E5%B9%B3%E5%B1%B1%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+all_dc.description%3A%28%E9%A6%AE%E5%B9%B3%E5%B1%B1%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20%29%20%29&amp;_coverpage_WAR_mmisportalportlet_sort_order=asc&amp;_coverpage_WAR_mmisportalportlet_sort_field=dc.publicationdate_bsort&amp;_coverpage_WAR_mmisportalportlet_log=Y" target="_blank" rel="noopener noreferrer">第2張第4頁</a>。
+<ul>
+<li>…決定明日開幕…</li>
+</ul>
+</li>
+<li>〈馮平山圖書館已由港督行開幕禮〉，《工商晚報》，1932年12月15日，<a href="https://mmis.hkpl.gov.hk/coverpage/-/coverpage/view?_coverpage_WAR_mmisportalportlet_hsf=%E9%A6%AE%E5%B9%B3%E5%B1%B1%E5%9C%96%E6%9B%B8%E9%A4%A8&amp;p_r_p_-1078056564_c=QF757YsWv5%2FH7zGe%2FKF%2BFDsKeKCPqv09&amp;_coverpage_WAR_mmisportalportlet_o=2&amp;_coverpage_WAR_mmisportalportlet_actual_q=%28%20verbatim_dc.collection%3A%28%22Old%5C%20HK%5C%20Newspapers%22%29%20%29%20AND+%28%20%28%20allTermsMandatory%3A%28true%29%20OR+all_dc.title%3A%28%E9%A6%AE%E5%B9%B3%E5%B1%B1%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+all_dc.creator%3A%28%E9%A6%AE%E5%B9%B3%E5%B1%B1%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+all_dc.contributor%3A%28%E9%A6%AE%E5%B9%B3%E5%B1%B1%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+all_dc.subject%3A%28%E9%A6%AE%E5%B9%B3%E5%B1%B1%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+fulltext%3A%28%E9%A6%AE%E5%B9%B3%E5%B1%B1%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+all_dc.description%3A%28%E9%A6%AE%E5%B9%B3%E5%B1%B1%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20%29%20%29&amp;_coverpage_WAR_mmisportalportlet_sort_order=asc&amp;_coverpage_WAR_mmisportalportlet_sort_field=dc.publicationdate_bsort&amp;_coverpage_WAR_mmisportalportlet_formDate=1681319073968" target="_blank" rel="noopener noreferrer">第4版</a>。</li>
+<li>t.b.c</li>
+</ol>
+<h2> 資料庫</h2>
+<ul>
+<li><a href="https://digitalrepository.lib.hku.hk/fpslrbo" target="_blank" rel="noopener noreferrer">馮平山圖書館善本書影像庫</a> Fung Ping Shan Library Rare Books Online</li>
+<li><a href="https://fpslidx.lib.hku.hk/exhibits/show/fpslidx/home" target="_blank" rel="noopener noreferrer">馮平山圖書館藏善本書錄</a> Fung Ping Shan Library Rare Books Online</li>
+<li><a href="https://digitalrepository.lib.hku.hk/collection/dn403k06t" target="_blank" rel="noopener noreferrer">馮平山圖書館藏木魚書</a> HKU Fung Ping Shan Library Wooden-Fish Books</li>
+</ul>
+]]></content>
+    <published>2023-04-13T00:00:00.000Z</published>
+  </entry>
+  <entry>
+    <title type="text">捐贈</title>
+    <id>https://www.pasthk.com/donation.html</id>
+    <link href="https://www.pasthk.com/donation.html"/>
+    <updated>2023-04-12T11:19:46.000Z</updated>
+    <summary type="html"><![CDATA[<h2> 捐贈方式</h2>
+]]></summary>
+    <content type="html"><![CDATA[<h2> 捐贈方式</h2>
+]]></content>
+    <category term="其他"/>
+    <published>2023-04-01T00:00:00.000Z</published>
+  </entry>
   <entry>
     <title type="text">霍亂</title>
     <id>https://www.pasthk.com/public-health/cholera.html</id>
     <link href="https://www.pasthk.com/public-health/cholera.html"/>
-    <updated>2023-04-12T11:19:36.797Z</updated>
+    <updated>2023-04-12T11:19:46.000Z</updated>
     <summary type="html"><![CDATA[<h2> 新聞報道</h2>
 <ol>
 <li>〈暴病身亡〉，《循環日報》，<a href="https://mmis.hkpl.gov.hk/coverpage/-/coverpage/view?_coverpage_WAR_mmisportalportlet_hsf=%E9%9C%8D%E4%BA%82&amp;p_r_p_-1078056564_c=QF757YsWv58JCjtBMMIqohlo8VZiTiK%2F&amp;_coverpage_WAR_mmisportalportlet_o=5&amp;_coverpage_WAR_mmisportalportlet_actual_q=%28%20verbatim_dc.collection%3A%28%22Old%5C%20HK%5C%20Newspapers%22%29%20%29%20AND+%28%20%28%20allTermsMandatory%3A%28true%29%20OR+all_dc.title%3A%28%E9%9C%8D%E4%BA%82%29%20OR+all_dc.creator%3A%28%E9%9C%8D%E4%BA%82%29%20OR+all_dc.contributor%3A%28%E9%9C%8D%E4%BA%82%29%20OR+all_dc.subject%3A%28%E9%9C%8D%E4%BA%82%29%20OR+fulltext%3A%28%E9%9C%8D%E4%BA%82%29%20OR+all_dc.description%3A%28%E9%9C%8D%E4%BA%82%29%20%29%20%29&amp;_coverpage_WAR_mmisportalportlet_sort_order=asc&amp;_coverpage_WAR_mmisportalportlet_sort_field=dc.publicationdate_bsort" target="_blank" rel="noopener noreferrer">1883年7月7日</a>。</li>
@@ -61,14 +99,13 @@
 <li>〈〉，《》，年月日，第頁。</li>
 </ol>
 ]]></content>
-    <category term="公共衛生"/>
     <published>2023-04-12T00:00:00.000Z</published>
   </entry>
   <entry>
     <title type="text">鼠疫</title>
     <id>https://www.pasthk.com/public-health/plague.html</id>
     <link href="https://www.pasthk.com/public-health/plague.html"/>
-    <updated>2023-04-12T11:19:36.801Z</updated>
+    <updated>2023-04-12T11:19:46.000Z</updated>
     <summary type="html"><![CDATA[<h2> 新聞報道</h2>
 <ol>
 <li>〈預防鼠疫法〉，《香港華字日報》，<a href="https://mmis.hkpl.gov.hk/coverpage/-/coverpage/view?_coverpage_WAR_mmisportalportlet_hsf=%E9%BC%A0%E7%96%AB&amp;p_r_p_-1078056564_c=QF757YsWv5%2BakvA8rFW5EvIMwx%2FVL9Yl&amp;_coverpage_WAR_mmisportalportlet_o=0&amp;_coverpage_WAR_mmisportalportlet_actual_q=%28%20verbatim_dc.collection%3A%28%22Old%5C%20HK%5C%20Newspapers%22%29%20%29%20AND+%28%20%28%20allTermsMandatory%3A%28true%29%20OR+all_dc.title%3A%28%E9%BC%A0%E7%96%AB%29%20OR+all_dc.creator%3A%28%E9%BC%A0%E7%96%AB%29%20OR+all_dc.contributor%3A%28%E9%BC%A0%E7%96%AB%29%20OR+all_dc.subject%3A%28%E9%BC%A0%E7%96%AB%29%20OR+fulltext%3A%28%E9%BC%A0%E7%96%AB%29%20OR+all_dc.description%3A%28%E9%BC%A0%E7%96%AB%29%20%29%20%29&amp;_coverpage_WAR_mmisportalportlet_sort_field=dc.publicationdate_bsort&amp;_coverpage_WAR_mmisportalportlet_sort_order=asc" target="_blank" rel="noopener noreferrer">1901年6月1日</a>。</li>
@@ -86,14 +123,13 @@
 <li>黃雁鴻：〈19世紀末檔案文獻對香港鼠疫的記載〉，《歷史檔案》，2018年第1期，頁109-114。</li>
 </ol>
 ]]></content>
-    <category term="公共衛生"/>
     <published>2023-04-12T00:00:00.000Z</published>
   </entry>
   <entry>
     <title type="text">公共衛生</title>
     <id>https://www.pasthk.com/public-health/</id>
     <link href="https://www.pasthk.com/public-health/"/>
-    <updated>2023-04-12T11:19:36.803Z</updated>
+    <updated>2023-04-12T11:19:46.000Z</updated>
     <summary type="html"><![CDATA[<h2> 疾病</h2>
 <ul>
 <li><a href="/public-health/cholera.html" target="blank">霍亂</a></li>
@@ -237,7 +273,6 @@
 <h3> Photographs and Slides</h3>
 <h3> The East Asian Tertiary / Quaternary newsletter, 1984 no.1 - 1995 no.21</h3>
 ]]></content>
-    <category term="考古"/>
     <published>2023-04-06T00:00:00.000Z</published>
   </entry>
   <entry>
@@ -270,7 +305,6 @@
 <li>〈香港過去地震記錄〉，《香港天文台》，取自<a href="https://www.hko.gov.hk/tc/gts/equake/felt_intro1.htm" target="_blank" rel="noopener noreferrer">https://www.hko.gov.hk/tc/gts/equake/felt_intro1.htm</a>。</li>
 </ol>
 ]]></content>
-    <category term="自然"/>
     <published>2023-04-06T00:00:00.000Z</published>
   </entry>
   <entry>
@@ -307,7 +341,6 @@
 <li>邢光福、吳振揚、陶奎元、伍世良、陳榮、姜楊、李龍明、余明剛：〈<a href="http://geochina.cgs.gov.cn/geochinaen/article/pdf/20110425" target="_blank" rel="noopener noreferrer">香港國家地質公園糧船灣組火山岩岩石學研究</a>〉，《中國地質》，2011年第38卷第4期，頁1079-1093。</li>
 </ol>
 ]]></content>
-    <category term="自然"/>
     <published>2023-04-05T00:00:00.000Z</published>
   </entry>
   <entry>
@@ -315,7 +348,6 @@
     <id>https://www.pasthk.com/folkloristics/ching-ming-festival/</id>
     <link href="https://www.pasthk.com/folkloristics/ching-ming-festival/"/>
     <updated>2023-04-05T05:14:21.000Z</updated>
-    <category term="民俗"/>
     <published>2023-04-05T00:00:00.000Z</published>
   </entry>
   <entry>
@@ -331,7 +363,6 @@
 <li><a href="/folkloristics/tin-hau/tin-hau-festival.html" target="blank">天后誕</a></li>
 </ul>
 ]]></content>
-    <category term="民俗"/>
     <published>2023-01-19T00:00:00.000Z</published>
   </entry>
   <entry>
@@ -357,7 +388,6 @@
 </li>
 </ol>
 ]]></content>
-    <category term="民俗"/>
     <published>2023-04-05T00:00:00.000Z</published>
   </entry>
   <entry>
@@ -377,7 +407,6 @@
 <li>《善道同行—嗇色園黃大仙祠百載道情》編輯委員會：《善道同行—嗇色園黃大仙祠百載道情》（香港：中華書局，2022年）。</li>
 </ol>
 ]]></content>
-    <category term="民俗"/>
     <published>2023-01-20T00:00:00.000Z</published>
   </entry>
   <entry>
@@ -402,7 +431,6 @@
 <li>〈養和醫院新病室落成〉，《香港華字日報》，1930年2月25日，<a href="https://mmis.hkpl.gov.hk/coverpage/-/coverpage/view?_coverpage_WAR_mmisportalportlet_hsf=%E9%A4%8A%E5%92%8C&amp;p_r_p_-1078056564_c=QF757YsWv59H%2FuxqfBwEJIW1dxqHsULL&amp;_coverpage_WAR_mmisportalportlet_o=7&amp;_coverpage_WAR_mmisportalportlet_actual_q=%28%20verbatim_dc.collection%3A%28%22Old%5C%20HK%5C%20Newspapers%22%29%20%29%20AND+%28%20%28%20allTermsMandatory%3A%28true%29%20OR+all_dc.title%3A%28%E9%A4%8A%E5%92%8C%29%20OR+all_dc.creator%3A%28%E9%A4%8A%E5%92%8C%29%20OR+all_dc.contributor%3A%28%E9%A4%8A%E5%92%8C%29%20OR+all_dc.subject%3A%28%E9%A4%8A%E5%92%8C%29%20OR+fulltext%3A%28%E9%A4%8A%E5%92%8C%29%20OR+all_dc.description%3A%28%E9%A4%8A%E5%92%8C%29%20%29%20%29&amp;_coverpage_WAR_mmisportalportlet_sort_order=asc&amp;_coverpage_WAR_mmisportalportlet_sort_field=dc.publicationdate_bsort" target="_blank" rel="noopener noreferrer">第3張第2頁</a>。</li>
 </ol>
 ]]></content>
-    <category term="醫療"/>
     <published>2023-04-04T00:00:00.000Z</published>
   </entry>
   <entry>
@@ -436,7 +464,6 @@
 <li>〈<a href="https://www.legco.gov.hk/yr11-12/chinese/panels/hs/papers/hs0611cb2-2279-3-c.pdf" target="_blank" rel="noopener noreferrer">重建廣華醫院</a>〉（立法會CB（2）2279/11-12（03）號文件，2012年6月11日）。</li>
 </ol>
 ]]></content>
-    <category term="醫療"/>
     <published>2023-04-04T00:00:00.000Z</published>
   </entry>
   <entry>
@@ -472,7 +499,6 @@
 <h2> 專著</h2>
 <h2> 文章</h2>
 ]]></content>
-    <category term="醫療"/>
     <published>2023-04-04T00:00:00.000Z</published>
   </entry>
   <entry>
@@ -492,7 +518,6 @@
 <li>〈請用「立拍」相機將聖誕情趣拍成照片永留紀念〉，《工商日報》，1965年12月15日，第6頁。</li>
 </ol>
 ]]></content>
-    <category term="廣告"/>
     <published>2023-04-04T00:00:00.000Z</published>
   </entry>
   <entry>
@@ -510,7 +535,6 @@
 <li>〈上海華生電風扇〉，《工商晚報》，1931年8月1日，第3版。</li>
 </ol>
 ]]></content>
-    <category term="廣告"/>
     <published>2023-04-02T00:00:00.000Z</published>
   </entry>
   <entry>
@@ -533,7 +557,6 @@
 <li>〈美著名建築設計專家　胡禮特作品今起公展　由美新處主辦連展一個月〉，《華僑日報》，1962年9月28日，<a href="https://mmis.hkpl.gov.hk/coverpage/-/coverpage/view?_coverpage_WAR_mmisportalportlet_hsf=%E5%A4%A7%E6%9C%83%E5%A0%82%E5%8D%9A%E7%89%A9%E9%A4%A8&amp;p_r_p_-1078056564_c=QF757YsWv5%2FH7zGe%2FKF%2BFKaeEiSZjMK%2B&amp;_coverpage_WAR_mmisportalportlet_o=4&amp;_coverpage_WAR_mmisportalportlet_actual_q=%28%20verbatim_dc.collection%3A%28%22Old%5C%20HK%5C%20Newspapers%22%29%20%29%20AND+%28%20%28%20allTermsMandatory%3A%28true%29%20OR+all_dc.title%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%8D%9A%E7%89%A9%E9%A4%A8%29%20OR+all_dc.creator%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%8D%9A%E7%89%A9%E9%A4%A8%29%20OR+all_dc.contributor%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%8D%9A%E7%89%A9%E9%A4%A8%29%20OR+all_dc.subject%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%8D%9A%E7%89%A9%E9%A4%A8%29%20OR+fulltext%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%8D%9A%E7%89%A9%E9%A4%A8%29%20OR+all_dc.description%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%8D%9A%E7%89%A9%E9%A4%A8%29%20%29%20%29&amp;_coverpage_WAR_mmisportalportlet_sort_order=asc&amp;_coverpage_WAR_mmisportalportlet_sort_field=dc.publicationdate_bsort" target="_blank" rel="noopener noreferrer">第4張第2頁</a>。</li>
 </ol>
 ]]></content>
-    <category term="文化"/>
     <published>2023-04-02T00:00:00.000Z</published>
   </entry>
   <entry>
@@ -564,7 +587,6 @@
 <h2> 1908年</h2>
 <h2> 1909年</h2>
 ]]></content>
-    <category term="熱帶氣旋"/>
     <published>2023-04-02T00:00:00.000Z</published>
   </entry>
   <entry>
@@ -604,7 +626,6 @@
 <li>〈風雨損失之調查〉，《香港華字日報》，1919年8月23日，<a href="https://mmis.hkpl.gov.hk/coverpage/-/coverpage/view?_coverpage_WAR_mmisportalportlet_hsf=%E9%A2%A8%E7%90%83&amp;p_r_p_-1078056564_c=QF757YsWv5%2BakvA8rFW5En1B0xrRbVXD&amp;_coverpage_WAR_mmisportalportlet_o=4&amp;_coverpage_WAR_mmisportalportlet_actual_q=%28%20verbatim_dc.collection%3A%28%22Old%5C%20HK%5C%20Newspapers%22%29%20%29%20AND+%28%20%28%20allTermsMandatory%3A%28true%29%20OR+all_dc.title%3A%28%E9%A2%A8%E7%90%83%29%20OR+all_dc.creator%3A%28%E9%A2%A8%E7%90%83%29%20OR+all_dc.contributor%3A%28%E9%A2%A8%E7%90%83%29%20OR+all_dc.subject%3A%28%E9%A2%A8%E7%90%83%29%20OR+fulltext%3A%28%E9%A2%A8%E7%90%83%29%20OR+all_dc.description%3A%28%E9%A2%A8%E7%90%83%29%20%29%20%29&amp;_coverpage_WAR_mmisportalportlet_sort_order=asc&amp;_coverpage_WAR_mmisportalportlet_sort_field=dc.publicationdate_bsort" target="_blank" rel="noopener noreferrer">第1張第3頁</a>。</li>
 </ol>
 ]]></content>
-    <category term="熱帶氣旋"/>
     <published>2023-04-02T00:00:00.000Z</published>
   </entry>
   <entry>
@@ -662,14 +683,13 @@
 </ol>
 <h2> 1929年</h2>
 ]]></content>
-    <category term="熱帶氣旋"/>
     <published>2023-04-02T00:00:00.000Z</published>
   </entry>
   <entry>
     <title type="text">1930年代</title>
     <id>https://www.pasthk.com/meteorology/tropical-cyclone/1930s.html</id>
     <link href="https://www.pasthk.com/meteorology/tropical-cyclone/1930s.html"/>
-    <updated>2023-04-09T13:41:19.000Z</updated>
+    <updated>2023-04-12T11:19:46.000Z</updated>
     <summary type="html"><![CDATA[<h2> 1930年</h2>
 <ol>
 <li>〈昨日本港之狂風暴雨〉，《香港工商日報》，1930年8月22日，<a href="https://mmis.hkpl.gov.hk/coverpage/-/coverpage/view?_coverpage_WAR_mmisportalportlet_hsf=%E9%A2%A8%E7%90%83&amp;p_r_p_-1078056564_c=QF757YsWv5%2Bx%2BFRfM7YCs3Q73KMgEHbq&amp;_coverpage_WAR_mmisportalportlet_o=11&amp;_coverpage_WAR_mmisportalportlet_actual_q=%28%20verbatim_dc.collection%3A%28%22Old%5C%20HK%5C%20Newspapers%22%29%20%29%20AND+%28%20%28%20allTermsMandatory%3A%28true%29%20OR+all_dc.title%3A%28%E9%A2%A8%E7%90%83%29%20OR+all_dc.creator%3A%28%E9%A2%A8%E7%90%83%29%20OR+all_dc.contributor%3A%28%E9%A2%A8%E7%90%83%29%20OR+all_dc.subject%3A%28%E9%A2%A8%E7%90%83%29%20OR+fulltext%3A%28%E9%A2%A8%E7%90%83%29%20OR+all_dc.description%3A%28%E9%A2%A8%E7%90%83%29%20%29%20%29&amp;_coverpage_WAR_mmisportalportlet_sort_order=asc&amp;_coverpage_WAR_mmisportalportlet_sort_field=dc.publicationdate_bsort" target="_blank" rel="noopener noreferrer">第3張第1版</a>。
@@ -846,7 +866,6 @@
 <h2> 1938年</h2>
 <h2> 1939年</h2>
 ]]></content>
-    <category term="熱帶氣旋"/>
     <published>2023-04-02T00:00:00.000Z</published>
   </entry>
   <entry>
@@ -878,7 +897,6 @@
 <li>〈陳意齋餅家〉，《工商晚報》，1953年9月19日，第4頁。</li>
 </ol>
 ]]></content>
-    <category term="廣告"/>
     <published>2023-04-02T00:00:00.000Z</published>
   </entry>
   <entry>
@@ -904,7 +922,6 @@
 <li>〈雲天月餅〉，《華僑日報》，1953年9月18日，第2張第1頁。</li>
 </ol>
 ]]></content>
-    <category term="廣告"/>
     <published>2023-04-02T00:00:00.000Z</published>
   </entry>
   <entry>
@@ -928,7 +945,6 @@
 <li>〈美華琴行〉，《工商晚報》，1953年9月19日，第4頁。</li>
 </ol>
 ]]></content>
-    <category term="廣告"/>
     <published>2023-04-02T00:00:00.000Z</published>
   </entry>
   <entry>
@@ -954,7 +970,6 @@
 </li>
 </ol>
 ]]></content>
-    <category term="廣告"/>
     <published>2023-04-02T00:00:00.000Z</published>
   </entry>
   <entry>
@@ -972,7 +987,6 @@
 <li>〈陳春蘭〉，《工商日報》，1953年9月18日，第5頁。</li>
 </ol>
 ]]></content>
-    <category term="廣告"/>
     <published>2023-04-02T00:00:00.000Z</published>
   </entry>
   <entry>
@@ -1008,20 +1022,7 @@
 </li>
 </ol>
 ]]></content>
-    <category term="廣告"/>
     <published>2023-04-02T00:00:00.000Z</published>
-  </entry>
-  <entry>
-    <title type="text">捐贈</title>
-    <id>https://www.pasthk.com/donation.html</id>
-    <link href="https://www.pasthk.com/donation.html"/>
-    <updated>2023-04-12T11:19:36.861Z</updated>
-    <summary type="html"><![CDATA[<h2> 捐贈方式</h2>
-]]></summary>
-    <content type="html"><![CDATA[<h2> 捐贈方式</h2>
-]]></content>
-    <category term="其他"/>
-    <published>2023-04-01T00:00:00.000Z</published>
   </entry>
   <entry>
     <title type="text">醫院</title>
@@ -1040,7 +1041,6 @@
 <li><a href="/hospital/st-pauls-hospital.html" target="blank">聖保祿醫院</a></li>
 </ul>
 ]]></content>
-    <category term="醫療"/>
     <published>2023-03-31T00:00:00.000Z</published>
   </entry>
   <entry>
@@ -1065,7 +1065,6 @@
 <li>香港中文大學天主教研究中心：《聖保祿醫院歷史足跡——關愛服務百二載》（香港：香港中文大學天主教研究中心，2018年）。</li>
 </ol>
 ]]></content>
-    <category term="醫療"/>
     <published>2023-03-31T00:00:00.000Z</published>
   </entry>
   <entry>
@@ -1118,7 +1117,6 @@
 <li>〈羅旭龢爵士遺屬　贈書大會堂圖書館　該館為示謝意特設立旭龢室〉，《工商日報》，1962年6月14日，<a href="https://mmis.hkpl.gov.hk/coverpage/-/coverpage/view?_coverpage_WAR_mmisportalportlet_hsf=%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8&amp;p_r_p_-1078056564_c=QF757YsWv5%2FUIR3fUSXuYjqsIkQVAK5r&amp;_coverpage_WAR_mmisportalportlet_o=22&amp;_coverpage_WAR_mmisportalportlet_actual_q=%28%20verbatim_dc.collection%3A%28%22Old%5C%20HK%5C%20Newspapers%22%29%20%29%20AND+%28%20%28%20allTermsMandatory%3A%28true%29%20OR+all_dc.title%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+all_dc.creator%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+all_dc.contributor%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+all_dc.subject%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+fulltext%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+all_dc.description%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20%29%20%29&amp;_coverpage_WAR_mmisportalportlet_sort_order=asc&amp;_coverpage_WAR_mmisportalportlet_sort_field=dc.publicationdate_bsort&amp;_coverpage_WAR_mmisportalportlet_formDate=1680241771289" target="_blank" rel="noopener noreferrer">第6頁</a>。</li>
 </ol>
 ]]></content>
-    <category term="文化"/>
     <published>2023-03-31T00:00:00.000Z</published>
   </entry>
   <entry>
@@ -1393,7 +1391,6 @@
 <li>《孟氏圖書館中文圖書目錄》</li>
 </ol>
 ]]></content>
-    <category term="文化"/>
     <published>2023-03-28T00:00:00.000Z</published>
   </entry>
   <entry>
@@ -1447,7 +1444,6 @@
 <li>盧雪燕編著：《寄情人間─香港中山圖書館捐贈善本舊籍特展》（台北： 國立故宮博物院，2011年）。</li>
 </ol>
 ]]></content>
-    <category term="文化"/>
     <published>2023-03-28T00:00:00.000Z</published>
   </entry>
   <entry>
@@ -1470,7 +1466,6 @@
 <li><a href="/advertisement/camera-and-film.html" target="blank">攝影</a></li>
 </ul>
 ]]></content>
-    <category term="廣告"/>
     <published>2023-04-02T00:00:00.000Z</published>
   </entry>
   <entry>
@@ -1500,7 +1495,6 @@
 <li>駱偉：〈弘揚國粹　堅持不懈——香港學海書樓開展國學講座歷程、內容和特點〉，《圖書館論壇》，2007年第6期，頁220-225。</li>
 </ol>
 ]]></content>
-    <category term="文化"/>
     <published>2023-03-28T00:00:00.000Z</published>
   </entry>
   <entry>
@@ -1517,7 +1511,6 @@
 <li>〈西貢糧船灣舉行　太平清醮酬神會〉，《工商晚報》，1978年5月7日，<a href="https://mmis.hkpl.gov.hk/coverpage/-/coverpage/view?_coverpage_WAR_mmisportalportlet_hsf=%E6%B8%85%E9%86%AE&amp;p_r_p_-1078056564_c=QF757YsWv5%2FH7zGe%2FKF%2BFFfGufAujNW4&amp;_coverpage_WAR_mmisportalportlet_o=96&amp;_coverpage_WAR_mmisportalportlet_actual_q=%28%20verbatim_dc.collection%3A%28%22Old%5C%20HK%5C%20Newspapers%22%29%20%29%20AND+%28%20%28%20allTermsMandatory%3A%28true%29%20OR+all_dc.title%3A%28%E6%B8%85%E9%86%AE%29%20OR+all_dc.creator%3A%28%E6%B8%85%E9%86%AE%29%20OR+all_dc.contributor%3A%28%E6%B8%85%E9%86%AE%29%20OR+all_dc.subject%3A%28%E6%B8%85%E9%86%AE%29%20OR+fulltext%3A%28%E6%B8%85%E9%86%AE%29%20OR+all_dc.description%3A%28%E6%B8%85%E9%86%AE%29%20%29%20%29&amp;_coverpage_WAR_mmisportalportlet_sort_order=asc&amp;_coverpage_WAR_mmisportalportlet_sort_field=dc.publicationdate_bsort" target="_blank" rel="noopener noreferrer">第2頁</a>。</li>
 </ol>
 ]]></content>
-    <category term="民俗"/>
     <published>2023-03-25T00:00:00.000Z</published>
   </entry>
   <entry>
@@ -1534,7 +1527,6 @@
 <li>〈沙江圍太平清醮連日上演神功戲〉，《華僑日報》，1988年12月25日，<a href="https://mmis.hkpl.gov.hk/coverpage/-/coverpage/view?_coverpage_WAR_mmisportalportlet_hsf=%E6%B8%85%E9%86%AE&amp;p_r_p_-1078056564_c=QF757YsWv59H%2FuxqfBwEJFFsoGFXWtnD&amp;_coverpage_WAR_mmisportalportlet_o=132&amp;_coverpage_WAR_mmisportalportlet_actual_q=%28%20verbatim_dc.collection%3A%28%22Old%5C%20HK%5C%20Newspapers%22%29%20%29%20AND+%28%20%28%20allTermsMandatory%3A%28true%29%20OR+all_dc.title%3A%28%E6%B8%85%E9%86%AE%29%20OR+all_dc.creator%3A%28%E6%B8%85%E9%86%AE%29%20OR+all_dc.contributor%3A%28%E6%B8%85%E9%86%AE%29%20OR+all_dc.subject%3A%28%E6%B8%85%E9%86%AE%29%20OR+fulltext%3A%28%E6%B8%85%E9%86%AE%29%20OR+all_dc.description%3A%28%E6%B8%85%E9%86%AE%29%20%29%20%29&amp;_coverpage_WAR_mmisportalportlet_sort_order=asc&amp;_coverpage_WAR_mmisportalportlet_sort_field=dc.publicationdate_bsort" target="_blank" rel="noopener noreferrer">頁10</a>。</li>
 </ol>
 ]]></content>
-    <category term="民俗"/>
     <published>2023-03-25T00:00:00.000Z</published>
   </entry>
   <entry>
@@ -1551,7 +1543,6 @@
 <li>〈大埔泰亨鄉五年一度　太平清醮極熱鬧　演劇助興昨逢正誕進香者眾　理民府官沙田警司頒發錦旗〉，《華僑日報》，1970年11月15日，<a href="https://mmis.hkpl.gov.hk/coverpage/-/coverpage/view?_coverpage_WAR_mmisportalportlet_hsf=%E6%B8%85%E9%86%AE&amp;p_r_p_-1078056564_c=QF757YsWv59IJkls4ouG36wtURH5ZqU9&amp;_coverpage_WAR_mmisportalportlet_o=73&amp;_coverpage_WAR_mmisportalportlet_actual_q=%28%20verbatim_dc.collection%3A%28%22Old%5C%20HK%5C%20Newspapers%22%29%20%29%20AND+%28%20%28%20allTermsMandatory%3A%28true%29%20OR+all_dc.title%3A%28%E6%B8%85%E9%86%AE%29%20OR+all_dc.creator%3A%28%E6%B8%85%E9%86%AE%29%20OR+all_dc.contributor%3A%28%E6%B8%85%E9%86%AE%29%20OR+all_dc.subject%3A%28%E6%B8%85%E9%86%AE%29%20OR+fulltext%3A%28%E6%B8%85%E9%86%AE%29%20OR+all_dc.description%3A%28%E6%B8%85%E9%86%AE%29%20%29%20%29&amp;_coverpage_WAR_mmisportalportlet_sort_order=asc&amp;_coverpage_WAR_mmisportalportlet_sort_field=dc.publicationdate_bsort" target="_blank" rel="noopener noreferrer">第3張第2頁</a>。</li>
 </ol>
 ]]></content>
-    <category term="民俗"/>
     <published>2023-03-25T00:00:00.000Z</published>
   </entry>
   <entry>
@@ -1559,17 +1550,33 @@
     <id>https://www.pasthk.com/library/</id>
     <link href="https://www.pasthk.com/library/"/>
     <updated>2023-04-05T05:14:21.000Z</updated>
-    <summary type="html"><![CDATA[<ul>
+    <summary type="html"><![CDATA[<h2> 公共圖書館</h2>
+<ul>
+<li><a href="/library/city-hall-public-library.html" target="blank">大會堂公共圖書館</a></li>
+</ul>
+<h2> 大學圖書館</h2>
+<ul>
+<li><a href="/library/fung-ping-shan-library-university-of-hong-kong.html" target="blank">香港大學馮平山圖書館</a></li>
+</ul>
+<h2> 私人圖書館</h2>
+<ul>
 <li><a href="/library/hok-hoi-library.html" target="blank">學海書樓</a></li>
 <li><a href="/library/man-chi-library.html" target="blank">孟氏圖書館</a>（1970年改為<a href="/library/sun-yat-sen-library.html" target="blank">中山圖書館</a>）</li>
+</ul>]]></summary>
+    <content type="html"><![CDATA[<h2> 公共圖書館</h2>
+<ul>
+<li><a href="/library/city-hall-public-library.html" target="blank">大會堂公共圖書館</a></li>
 </ul>
-]]></summary>
-    <content type="html"><![CDATA[<ul>
+<h2> 大學圖書館</h2>
+<ul>
+<li><a href="/library/fung-ping-shan-library-university-of-hong-kong.html" target="blank">香港大學馮平山圖書館</a></li>
+</ul>
+<h2> 私人圖書館</h2>
+<ul>
 <li><a href="/library/hok-hoi-library.html" target="blank">學海書樓</a></li>
 <li><a href="/library/man-chi-library.html" target="blank">孟氏圖書館</a>（1970年改為<a href="/library/sun-yat-sen-library.html" target="blank">中山圖書館</a>）</li>
 </ul>
 ]]></content>
-    <category term="文化"/>
     <published>2023-03-20T00:00:00.000Z</published>
   </entry>
   <entry>
@@ -1638,7 +1645,6 @@
 <p>主頁：<a href="https://lib.hku.hk" target="_blank" rel="noopener noreferrer">https://lib.hku.hk</a></p>
 </div>
 ]]></content>
-    <category term="資料庫"/>
     <published>2023-03-24T00:00:00.000Z</published>
   </entry>
   <entry>
@@ -1672,7 +1678,6 @@
 <p>地址：香港中央圖書館5樓報刊閱覽區</p>
 </div>
 ]]></content>
-    <category term="資料庫"/>
     <published>2023-03-24T00:00:00.000Z</published>
   </entry>
   <entry>
@@ -1680,7 +1685,6 @@
     <id>https://www.pasthk.com/database/newspaper/</id>
     <link href="https://www.pasthk.com/database/newspaper/"/>
     <updated>2023-03-24T07:00:32.000Z</updated>
-    <category term="資料庫"/>
     <published>2023-03-24T00:00:00.000Z</published>
   </entry>
   <entry>
@@ -1721,7 +1725,6 @@
 <p>主頁：<a href="https://lib.hku.hk" target="_blank" rel="noopener noreferrer">https://lib.hku.hk</a></p>
 </div>
 ]]></content>
-    <category term="資料庫"/>
     <published>2023-03-24T00:00:00.000Z</published>
   </entry>
   <entry>
@@ -1750,7 +1753,6 @@
 <li>〈香港西貢蠔涌遺址西區（HC2000）環境考古研究文章〉（香港：古物古蹟辦事處檔案，編號：SK27）。</li>
 </ol>
 ]]></content>
-    <category term="考古"/>
     <published>2023-03-15T00:00:00.000Z</published>
   </entry>
   <entry>
@@ -1786,7 +1788,6 @@
 <li>〈香港西貢蠔涌遺址西區（HC2000）環境考古研究文章〉（香港：古物古蹟辦事處檔案，編號：SK27）。</li>
 </ol>
 ]]></content>
-    <category term="考古"/>
     <published>2023-03-15T00:00:00.000Z</published>
   </entry>
   <entry>
@@ -1817,7 +1818,6 @@
 <li>〈西貢滘西洲公眾高爾夫球場擬擴建工程2004年考古調查及發掘報告〉（香港：古物古蹟辦事處檔案，編號：SK35）。</li>
 </ol>
 ]]></content>
-    <category term="考古"/>
     <published>2023-03-15T00:00:00.000Z</published>
   </entry>
   <entry>
@@ -1839,7 +1839,6 @@
 <li>〈西貢南圍丈量約份第214約第249SO、249SR及249SS號地段考古調查工作報告〉（香港：古物古蹟辦事處檔案，編號：SK53）。</li>
 </ol>
 ]]></content>
-    <category term="考古"/>
     <published>2023-03-15T00:00:00.000Z</published>
   </entry>
   <entry>
@@ -1868,7 +1867,6 @@
 <li>〈東龍洲南堂考古調查最終報告（第三稿）〉（香港：古物古蹟辦事處檔案，編號：SK74）。</li>
 </ol>
 ]]></content>
-    <category term="考古"/>
     <published>2023-03-15T00:00:00.000Z</published>
   </entry>
   <entry>
@@ -1903,7 +1901,6 @@
 <li>閔洲民：〈民俗：香港的獨特街景〉，《滬港經濟》，2014年第5期，頁36，45。</li>
 </ol>
 ]]></content>
-    <category term="民俗"/>
     <published>2023-03-07T00:00:00.000Z</published>
   </entry>
   <entry>
@@ -1921,7 +1918,6 @@
 <li><a href="/folkloristics/insects-waken/petty-person-beating.html" target="blank">打小人</a></li>
 </ul>
 ]]></content>
-    <category term="民俗"/>
     <published>2023-03-07T00:00:00.000Z</published>
   </entry>
   <entry>
@@ -1940,7 +1936,6 @@
 <li>〈今日「驚蟄」　婦女祭白虎〉，《華僑日報》，1954年3月6日，<a href="https://mmis.hkpl.gov.hk/coverpage/-/coverpage/view?_coverpage_WAR_mmisportalportlet_hsf=%E9%A9%9A%E8%9F%84&amp;p_r_p_-1078056564_c=QF757YsWv5%2FH7zGe%2FKF%2BFMSYl1Z8IbWY&amp;_coverpage_WAR_mmisportalportlet_o=3&amp;_coverpage_WAR_mmisportalportlet_actual_q=%28%20verbatim_dc.collection%3A%28%22Old%5C%20HK%5C%20Newspapers%22%29%20%29%20AND+%28%20%28%20allTermsMandatory%3A%28true%29%20OR+all_dc.title%3A%28%E9%A9%9A%E8%9F%84%29%20OR+all_dc.creator%3A%28%E9%A9%9A%E8%9F%84%29%20OR+all_dc.contributor%3A%28%E9%A9%9A%E8%9F%84%29%20OR+all_dc.subject%3A%28%E9%A9%9A%E8%9F%84%29%20OR+fulltext%3A%28%E9%A9%9A%E8%9F%84%29%20OR+all_dc.description%3A%28%E9%A9%9A%E8%9F%84%29%20%29%20%29&amp;_coverpage_WAR_mmisportalportlet_sort_order=asc&amp;_coverpage_WAR_mmisportalportlet_sort_field=dc.publicationdate_bsort" target="_blank" rel="noopener noreferrer">第4張第1頁</a>。（注：報道也提到打小人。）</li>
 </ol>
 ]]></content>
-    <category term="民俗"/>
     <published>2023-03-07T00:00:00.000Z</published>
   </entry>
   <entry>
@@ -1960,7 +1955,6 @@
 <li>〈2001年流浮山坑口村擬修建水渠工地考古調查及評估報告〉（香港：古物古蹟辦事處檔案，編號：AM96-0647）。</li>
 </ol>
 ]]></content>
-    <category term="考古"/>
     <published>2023-02-26T00:00:00.000Z</published>
   </entry>
   <entry>
@@ -2001,7 +1995,6 @@
 <li>〈今日端午節　本港四處龍舟競賽　港督蒞臨鐘聲頒獎　油蔴地公司專輪開往香港仔〉，《工商日報》，1951年6月9日，<a href="https://mmis.hkpl.gov.hk/coverpage/-/coverpage/view?_coverpage_WAR_mmisportalportlet_hsf=%E7%AB%AF%E5%8D%88&amp;p_r_p_-1078056564_c=QF757YsWv5%2BZh7v7hMb5iaHEWmyhbqHf&amp;_coverpage_WAR_mmisportalportlet_o=131&amp;_coverpage_WAR_mmisportalportlet_actual_q=%28%20verbatim_dc.collection%3A%28%22Old%5C%20HK%5C%20Newspapers%22%29%20%29%20AND+%28%20%28%20allTermsMandatory%3A%28true%29%20OR+all_dc.title%3A%28%E7%AB%AF%E5%8D%88%29%20OR+all_dc.creator%3A%28%E7%AB%AF%E5%8D%88%29%20OR+all_dc.contributor%3A%28%E7%AB%AF%E5%8D%88%29%20OR+all_dc.subject%3A%28%E7%AB%AF%E5%8D%88%29%20OR+fulltext%3A%28%E7%AB%AF%E5%8D%88%29%20OR+all_dc.description%3A%28%E7%AB%AF%E5%8D%88%29%20%29%20%29&amp;_coverpage_WAR_mmisportalportlet_sort_order=asc&amp;_coverpage_WAR_mmisportalportlet_sort_field=dc.publicationdate_bsort&amp;_coverpage_WAR_mmisportalportlet_formDate=1629255138229" target="_blank" rel="noopener noreferrer">第6頁</a>。</li>
 </ol>
 ]]></content>
-    <category term="民俗"/>
     <published>2023-02-26T00:00:00.000Z</published>
   </entry>
   <entry>
@@ -2028,7 +2021,6 @@
 <li>〈潮汕人盂蘭會　幽衣盡為雨所濕〉，《工商晚報》，1933年9月11日，<a href="https://mmis.hkpl.gov.hk/coverpage/-/coverpage/view?_coverpage_WAR_mmisportalportlet_hsf=%E7%9B%82%E8%98%AD&amp;p_r_p_-1078056564_c=QF757YsWv5%2FH7zGe%2FKF%2BFP4j6rHcNcDO&amp;_coverpage_WAR_mmisportalportlet_o=23&amp;_coverpage_WAR_mmisportalportlet_actual_q=%28%20verbatim_dc.collection%3A%28%22Old%5C%20HK%5C%20Newspapers%22%29%20%29%20AND+%28%20%28%20allTermsMandatory%3A%28true%29%20OR+all_dc.title%3A%28%E7%9B%82%E8%98%AD%29%20OR+all_dc.creator%3A%28%E7%9B%82%E8%98%AD%29%20OR+all_dc.contributor%3A%28%E7%9B%82%E8%98%AD%29%20OR+all_dc.subject%3A%28%E7%9B%82%E8%98%AD%29%20OR+fulltext%3A%28%E7%9B%82%E8%98%AD%29%20OR+all_dc.description%3A%28%E7%9B%82%E8%98%AD%29%20%29%20%29&amp;_coverpage_WAR_mmisportalportlet_sort_order=asc&amp;_coverpage_WAR_mmisportalportlet_sort_field=dc.publicationdate_bsort" target="_blank" rel="noopener noreferrer">第4版</a>。</li>
 </ol>
 ]]></content>
-    <category term="民俗"/>
     <published>2023-02-26T00:00:00.000Z</published>
   </entry>
   <entry>
@@ -2049,7 +2041,6 @@
 <li>〈<a href="https://www.lcsd.gov.hk/CE/Museum/ICHO/zh_TW/web/icho/representative_list_pokfulam_fire_dragon.html" target="_blank" rel="noopener noreferrer">中秋節——薄扶林舞火龍</a>〉，非物質文化遺產辦事處。</li>
 </ol>
 ]]></content>
-    <category term="民俗"/>
     <published>2023-02-25T00:00:00.000Z</published>
   </entry>
   <entry>
@@ -2067,7 +2058,6 @@
 <li><a href="/folkloristics/fire-dragon-dance/pok-fu-lam-fire-dragon-dance.html" target="blank">薄扶林舞火龍</a></li>
 </ul>
 ]]></content>
-    <category term="民俗"/>
     <published>2023-02-25T00:00:00.000Z</published>
   </entry>
   <entry>
@@ -2108,7 +2098,6 @@
 </li>
 </ol>
 ]]></content>
-    <category term="民俗"/>
     <published>2023-02-25T00:00:00.000Z</published>
   </entry>
   <entry>
@@ -2143,7 +2132,6 @@
 <li>陳琴：〈香港東灣仔遺址商時期陶器及文化面貌分析〉，《四川文物》，2017年第2期，頁49-55。</li>
 </ol>
 ]]></content>
-    <category term="考古"/>
     <published>2023-02-23T00:00:00.000Z</published>
   </entry>
   <entry>
@@ -2178,7 +2166,6 @@
 <li>〈中國考古家應邀參觀湧浪考古工程交換發掘所得意見〉，《華僑日報》，1986年3月2日，第4張第1頁。</li>
 </ol>
 ]]></content>
-    <category term="考古"/>
     <published>2023-02-19T00:00:00.000Z</published>
   </entry>
   <entry>
@@ -2196,7 +2183,6 @@
 <li><a href="https://mcms.lcsd.gov.hk/Search/search/enquire?&amp;request_locale=zh_HK" target="_blank" rel="noopener noreferrer">康樂及文化事務署博物館藏品目錄檢索</a></li>
 </ul>
 ]]></content>
-    <category term="文化"/>
     <published>2023-01-19T00:00:00.000Z</published>
   </entry>
   <entry>
@@ -2388,7 +2374,6 @@
 <li>王爽：〈香港長洲太平清醮聲景研究與非物質文化遺產保護〉，《遺產與保護研究》，2017年第2期，頁96-99。</li>
 </ol>
 ]]></content>
-    <category term="民俗"/>
     <published>2023-02-17T00:00:00.000Z</published>
   </entry>
   <entry>
@@ -2409,7 +2394,6 @@
 <li><a href="/folkloristics/jiao-festival/cheung-chau-jiao-festival.html" target="blank">長洲太平清醮</a></li>
 </ul>
 ]]></content>
-    <category term="民俗"/>
     <published>2023-01-16T00:00:00.000Z</published>
   </entry>
   <entry>
@@ -2835,7 +2819,6 @@
 <li>〈颶風掠過港南　風球昨除下〉，《工商日報》，1949年10月23日，<a href="https://mmis.hkpl.gov.hk/coverpage/-/coverpage/view?_coverpage_WAR_mmisportalportlet_hsf=%E9%A2%A8%E7%90%83&amp;p_r_p_-1078056564_c=QF757YsWv5%2Bh5KT9sfcXnPgorHUhZwiq&amp;_coverpage_WAR_mmisportalportlet_o=302&amp;_coverpage_WAR_mmisportalportlet_actual_q=%28%20verbatim_dc.collection%3A%28%22Old%5C%20HK%5C%20Newspapers%22%29%20%29%20AND+%28%20%28%20allTermsMandatory%3A%28true%29%20OR+all_dc.title%3A%28%E9%A2%A8%E7%90%83%29%20OR+all_dc.creator%3A%28%E9%A2%A8%E7%90%83%29%20OR+all_dc.contributor%3A%28%E9%A2%A8%E7%90%83%29%20OR+all_dc.subject%3A%28%E9%A2%A8%E7%90%83%29%20OR+fulltext%3A%28%E9%A2%A8%E7%90%83%29%20OR+all_dc.description%3A%28%E9%A2%A8%E7%90%83%29%20%29%20%29&amp;_coverpage_WAR_mmisportalportlet_sort_order=asc&amp;_coverpage_WAR_mmisportalportlet_sort_field=dc.publicationdate_bsort" target="_blank" rel="noopener noreferrer">第6頁</a>。</li>
 </ol>
 ]]></content>
-    <category term="熱帶氣旋"/>
     <published>2023-02-16T00:00:00.000Z</published>
   </entry>
   <entry>
@@ -3467,7 +3450,6 @@
 <h3> 葦黛 Wilda</h3>
 <h3> 娜拉 Nora</h3>
 ]]></content>
-    <category term="熱帶氣旋"/>
     <published>2023-02-16T00:00:00.000Z</published>
   </entry>
   <entry>
@@ -3786,7 +3768,6 @@
 <h3> 愛茜 Elsie</h3>
 <h3> 霍蘿茜 Flossie</h3>
 ]]></content>
-    <category term="熱帶氣旋"/>
     <published>2023-02-16T00:00:00.000Z</published>
   </entry>
   <entry>
@@ -3911,7 +3892,6 @@
 <h3> 蘭茜 Nancy</h3>
 <h3> 麥克 Mac</h3>
 ]]></content>
-    <category term="熱帶氣旋"/>
     <published>2023-02-16T00:00:00.000Z</published>
   </entry>
   <entry>
@@ -4007,7 +3987,6 @@
 <h3> 安琪拉 Angela</h3>
 <h3> 丹尼 Dan</h3>
 ]]></content>
-    <category term="熱帶氣旋"/>
     <published>2023-02-16T00:00:00.000Z</published>
   </entry>
   <entry>
@@ -4055,7 +4034,6 @@
 <li>〈風球仍未除下　颱風「義德」移動緩慢　雖漸遠離風勢仍見加強〉，《華僑日報》，1990年9月17日，<a href="https://mmis.hkpl.gov.hk/coverpage/-/coverpage/view?_coverpage_WAR_mmisportalportlet_hsf=%E9%A2%B1%E9%A2%A8&amp;p_r_p_-1078056564_c=QF757YsWv59H%2FuxqfBwEJBdLHEDWNnbH&amp;_coverpage_WAR_mmisportalportlet_o=4093&amp;_coverpage_WAR_mmisportalportlet_actual_q=%28%20verbatim_dc.collection%3A%28%22Old%5C%20HK%5C%20Newspapers%22%29%20%29%20AND+%28%20%28%20allTermsMandatory%3A%28true%29%20OR+all_dc.title%3A%28%E9%A2%B1%E9%A2%A8%29%20OR+all_dc.creator%3A%28%E9%A2%B1%E9%A2%A8%29%20OR+all_dc.contributor%3A%28%E9%A2%B1%E9%A2%A8%29%20OR+all_dc.subject%3A%28%E9%A2%B1%E9%A2%A8%29%20OR+fulltext%3A%28%E9%A2%B1%E9%A2%A8%29%20OR+all_dc.description%3A%28%E9%A2%B1%E9%A2%A8%29%20%29%20%29&amp;_coverpage_WAR_mmisportalportlet_sort_order=asc&amp;_coverpage_WAR_mmisportalportlet_sort_field=dc.publicationdate_bsort" target="_blank" rel="noopener noreferrer">第3頁</a>。</li>
 </ol>
 ]]></content>
-    <category term="熱帶氣旋"/>
     <published>2023-02-16T00:00:00.000Z</published>
   </entry>
   <entry>
@@ -4102,7 +4080,6 @@
 <li>〈颱風襲港時工作安排　僱主員工宜預早安排〉，《華僑日報》，1990年9月20日，<a href="https://mmis.hkpl.gov.hk/coverpage/-/coverpage/view?_coverpage_WAR_mmisportalportlet_hsf=%E9%A2%B1%E9%A2%A8&amp;p_r_p_-1078056564_c=QF757YsWv59H%2FuxqfBwEJAklMTLA%2FQ4Y&amp;_coverpage_WAR_mmisportalportlet_o=4061&amp;_coverpage_WAR_mmisportalportlet_actual_q=%28%20verbatim_dc.collection%3A%28%22Old%5C%20HK%5C%20Newspapers%22%29%20%29%20AND+%28%20%28%20allTermsMandatory%3A%28true%29%20OR+all_dc.title%3A%28%E9%A2%B1%E9%A2%A8%29%20OR+all_dc.creator%3A%28%E9%A2%B1%E9%A2%A8%29%20OR+all_dc.contributor%3A%28%E9%A2%B1%E9%A2%A8%29%20OR+all_dc.subject%3A%28%E9%A2%B1%E9%A2%A8%29%20OR+fulltext%3A%28%E9%A2%B1%E9%A2%A8%29%20OR+all_dc.description%3A%28%E9%A2%B1%E9%A2%A8%29%20%29%20%29&amp;_coverpage_WAR_mmisportalportlet_sort_order=asc&amp;_coverpage_WAR_mmisportalportlet_sort_field=dc.publicationdate_bsort" target="_blank" rel="noopener noreferrer">第10頁</a>。</li>
 </ol>
 ]]></content>
-    <category term="自然"/>
     <published>2023-01-19T00:00:00.000Z</published>
   </entry>
   <entry>
@@ -4120,7 +4097,6 @@
 <li>〈香港仔黃竹坑加氣站選址考古調查報告〉（香港：古物古蹟辦事處檔案，編號：HKI3）。</li>
 </ol>
 ]]></content>
-    <category term="考古"/>
     <published>2023-01-26T00:00:00.000Z</published>
   </entry>
   <entry>
@@ -4173,7 +4149,6 @@
 <li>〈<a href="https://mmis.hkpl.gov.hk/coverpage/-/coverpage/view?_coverpage_WAR_mmisportalportlet_hsf=%E9%BE%8D%E9%BC%93%E4%B8%8A%E7%81%98&amp;_coverpage_WAR_mmisportalportlet_actual_q=%28%20verbatim_dc.collection%3A%28%22Old%5C%20HK%5C%20Newspapers%22%29%20%29%20AND+%28%20%28%20allTermsMandatory%3A%28true%29%20OR+all_dc.title%3A%28%E9%BE%8D%E9%BC%93%E4%B8%8A%E7%81%98%29%20OR+all_dc.creator%3A%28%E9%BE%8D%E9%BC%93%E4%B8%8A%E7%81%98%29%20OR+all_dc.contributor%3A%28%E9%BE%8D%E9%BC%93%E4%B8%8A%E7%81%98%29%20OR+all_dc.subject%3A%28%E9%BE%8D%E9%BC%93%E4%B8%8A%E7%81%98%29%20OR+fulltext%3A%28%E9%BE%8D%E9%BC%93%E4%B8%8A%E7%81%98%29%20OR+all_dc.description%3A%28%E9%BE%8D%E9%BC%93%E4%B8%8A%E7%81%98%29%20%29%20%29&amp;_coverpage_WAR_mmisportalportlet_sort_field=dc.publicationdate_bsort&amp;p_r_p_-1078056564_c=QF757YsWv59H%2FuxqfBwEJFUWF24ElTJG&amp;_coverpage_WAR_mmisportalportlet_o=5&amp;_coverpage_WAR_mmisportalportlet_sort_order=asc" target="_blank" rel="noopener noreferrer">全港五個最重要考古地點之一　考古學會發掘龍鼓上灘　出土大批北宋時代陶器　另發現若干銅器新石器時代晚期原料</a>〉，《大公報》，1990年3月13日，第9版。</li>
 </ol>
 ]]></content>
-    <category term="考古"/>
     <published>2023-01-25T00:00:00.000Z</published>
   </entry>
   <entry>
@@ -4204,7 +4179,6 @@
 <li>蕭國健：《寨城印痕：九龍城歷史與古蹟》（香港：中華書局，2015年）。</li>
 </ol>
 ]]></content>
-    <category term="考古"/>
     <published>2023-01-20T00:00:00.000Z</published>
   </entry>
   <entry>
@@ -4241,7 +4215,6 @@
 <li>建築署、康樂及文化事務署：〈啟德龍津石橋保育長廊〉（香港：海濱事務委員會會議簡報，2017年11月1日）。</li>
 </ol>
 ]]></content>
-    <category term="考古"/>
     <published>2023-01-20T00:00:00.000Z</published>
   </entry>
   <entry>
@@ -4259,7 +4232,6 @@
 <li>〈大灣（蒲台島）具考古研究價值的地點〉（香港：古物古蹟辦事處檔案，編號：AM90-0445）。</li>
 </ol>
 ]]></content>
-    <category term="考古"/>
     <published>2023-01-20T00:00:00.000Z</published>
   </entry>
   <entry>
@@ -4310,7 +4282,6 @@
 <li><a href="https://voyant-tools.org/" target="_blank" rel="noopener noreferrer">Voyany Tools</a></li>
 </ul>
 ]]></content>
-    <category term="資料庫"/>
     <published>2023-01-19T00:00:00.000Z</published>
   </entry>
   <entry>
@@ -4361,7 +4332,6 @@
 <li>〈龍鼓洲遺址搶救發掘工作報告〉（香港：古物古蹟辦事處檔案，編號：TM51）。</li>
 </ol>
 ]]></content>
-    <category term="考古"/>
     <published>2023-01-19T00:00:00.000Z</published>
   </entry>
   <entry>
@@ -4442,7 +4412,6 @@
 <li>淨因：《《六祖壇經》的創新思維》（香港：中華書局，2022年）。</li>
 </ol>
 ]]></content>
-    <category term="宗教"/>
     <published>2023-01-19T00:00:00.000Z</published>
   </entry>
   <entry>
@@ -4460,7 +4429,6 @@
 <li>阮志偉主編，余嘉浩、許家朗、敖子亮著述：《先賢之路：西貢天主教傳教史》（香港：中華書局，2021年）。</li>
 </ol>
 ]]></content>
-    <category term="宗教"/>
     <published>2023-01-19T00:00:00.000Z</published>
   </entry>
   <entry>
@@ -4489,7 +4457,6 @@
 <li>何明章：〈宣道運動在香港—香港宣道會的發展歷史（1949年-1999年）〉（華中師範大學博士論文，2017年）。</li>
 </ol>
 ]]></content>
-    <category term="宗教"/>
     <published>2023-01-19T00:00:00.000Z</published>
   </entry>
   <entry>
@@ -4514,7 +4481,6 @@
 <li>伊斯蘭教</li>
 </ul>
 ]]></content>
-    <category term="宗教"/>
     <published>2023-01-19T00:00:00.000Z</published>
   </entry>
   <entry>
@@ -4542,7 +4508,6 @@
 <li><a href="https://zh.daoinfo.org/" target="_blank" rel="noopener noreferrer">道教文化中心資料庫</a> FYSK Daoist Culture Centre Database</li>
 </ul>
 ]]></content>
-    <category term="宗教"/>
     <published>2023-01-19T00:00:00.000Z</published>
   </entry>
   <entry>
@@ -4550,7 +4515,6 @@
     <id>https://www.pasthk.com/geology/</id>
     <link href="https://www.pasthk.com/geology/"/>
     <updated>2023-04-05T05:14:21.000Z</updated>
-    <category term="自然"/>
     <published>2023-01-19T00:00:00.000Z</published>
   </entry>
   <entry>
@@ -4585,7 +4549,6 @@
 <li>岑智明主編、香港氣象學會統籌：《颱風解密——你也可以做天氣達人！》（香港：萬里機構，2022年）。</li>
 </ol>
 ]]></content>
-    <category term="自然"/>
     <published>2023-01-19T00:00:00.000Z</published>
   </entry>
   <entry>
@@ -4635,7 +4598,6 @@
 <li>〈香港沙下遺址環境變遷研究 （包括：摘要及剖面分析數據）〉（香港：古物古蹟辦事處檔案，編號：SK47）。</li>
 </ol>
 ]]></content>
-    <category term="考古"/>
     <published>2023-01-18T00:00:00.000Z</published>
   </entry>
   <entry>
@@ -4689,7 +4651,6 @@
 <li>〈<a href="https://www.amo.gov.hk/filemanager/amo/common/download-area/pamphlet/pamphlet8_2007_11.pdf" target="_blank" rel="noopener noreferrer">屯門近年考古發現</a>〉（香港：古物古蹟辦事處，2007年）。</li>
 </ol>
 ]]></content>
-    <category term="考古"/>
     <published>2023-01-18T00:00:00.000Z</published>
   </entry>
   <entry>
@@ -4707,7 +4668,6 @@
 <li>〈舂坎灣具考古研究價值的地點〉（香港：古物古蹟辦事處檔案，編號：AM77-0054）。</li>
 </ol>
 ]]></content>
-    <category term="考古"/>
     <published>2023-01-18T00:00:00.000Z</published>
   </entry>
   <entry>
@@ -4760,7 +4720,6 @@
 <li><a href="https://www.grs.gov.hk/tc/index.html" target="_blank" rel="noopener noreferrer">香港政府檔案處</a> Government Records Service</li>
 </ol>
 ]]></content>
-    <category term="資料庫"/>
     <published>2023-01-18T00:00:00.000Z</published>
   </entry>
   <entry>
@@ -4791,7 +4750,6 @@
 </li>
 </ul>
 ]]></content>
-    <category term="資料庫"/>
     <published>2023-01-18T00:00:00.000Z</published>
   </entry>
   <entry>
@@ -4828,7 +4786,6 @@
 <li>Tracey L-D Lu, "<a href="https://www.amo.gov.hk/filemanager/amo/common/form/Report-on-the-Date-of-the-Wong-Tei-Tung-Archaeological-Assemblage.pdf" target="_blank" rel="noopener noreferrer">Report on the Date of the Wong Tei Tung Archaeological Assemblage</a>"</li>
 </ol>
 ]]></content>
-    <category term="考古"/>
     <published>2023-01-18T00:00:00.000Z</published>
   </entry>
   <entry>
@@ -4846,7 +4803,6 @@
 <li>香港古物古蹟辦事處：〈香港佛頭洲遺址2004年考古調查簡報〉，《華夏考古》，2007年第4期，頁35-41，55。</li>
 </ol>
 ]]></content>
-    <category term="考古"/>
     <published>2023-01-16T00:00:00.000Z</published>
   </entry>
   <entry>
@@ -5028,7 +4984,6 @@
 <li>香港特別行政區康樂及文化事務署文物修復組：〈李鄭屋漢墓的長久保護及監測技術初探〉，《文物修復與研究》，2003年，頁366-372。</li>
 </ol>
 ]]></content>
-    <category term="考古"/>
     <published>2023-01-16T00:00:00.000Z</published>
   </entry>
   <entry>
@@ -5098,7 +5053,6 @@
 <li>潘惠強：〈<a href="https://www.ln.edu.hk/mcsln/archive/42nd_issue/pdf/feature_01.pdf" target="_blank" rel="noopener noreferrer">在殘坦斷壁中建構歷史索引──探索土瓜灣「聖山遺址」的歷史啟示 </a>〉</li>
 </ol>
 ]]></content>
-    <category term="考古"/>
     <published>2023-01-16T00:00:00.000Z</published>
   </entry>
   <entry>
@@ -5143,7 +5097,6 @@
 <li>楊建軍：〈香港南丫島大灣遺址相關問題探討〉，《黃河．黃土．黃種人》2017年第22期，頁22-30。</li>
 </ol>
 ]]></content>
-    <category term="考古"/>
     <published>2023-01-16T00:00:00.000Z</published>
   </entry>
   <entry>
@@ -5168,7 +5121,6 @@
 <li>〈西貢區沙下新石器時代至明清時期遺址〉，載《中國考古學年鑒》，北京：文物出版社，2003年，第387-388頁。</li>
 </ol>
 ]]></content>
-    <category term="考古"/>
     <published>2023-01-16T00:00:00.000Z</published>
   </entry>
   <entry>
@@ -5201,7 +5153,6 @@
 <li>蕭國健：《華南民俗文化研究》（香港：中華書局，2022年）。</li>
 </ol>
 ]]></content>
-    <category term="文化"/>
     <published>2023-01-16T00:00:00.000Z</published>
   </entry>
   <entry>
@@ -5272,7 +5223,6 @@
 <li>〈<a href="https://mmis.hkpl.gov.hk/coverpage/-/coverpage/view?_coverpage_WAR_mmisportalportlet_hsf=%E6%97%A5%E8%80%83%E5%8F%A4%E5%AD%B8%E5%AE%B6&amp;_coverpage_WAR_mmisportalportlet_actual_q=%28%20verbatim_dc.collection%3A%28%22Old%5C%20HK%5C%20Newspapers%22%29%20%29%20AND+%28%20%28%20allTermsMandatory%3A%28true%29%20OR+all_dc.title%3A%28%E6%97%A5%E8%80%83%E5%8F%A4%E5%AD%B8%E5%AE%B6%29%20OR+all_dc.creator%3A%28%E6%97%A5%E8%80%83%E5%8F%A4%E5%AD%B8%E5%AE%B6%29%20OR+all_dc.contributor%3A%28%E6%97%A5%E8%80%83%E5%8F%A4%E5%AD%B8%E5%AE%B6%29%20OR+all_dc.subject%3A%28%E6%97%A5%E8%80%83%E5%8F%A4%E5%AD%B8%E5%AE%B6%29%20OR+fulltext%3A%28%E6%97%A5%E8%80%83%E5%8F%A4%E5%AD%B8%E5%AE%B6%29%20OR+all_dc.description%3A%28%E6%97%A5%E8%80%83%E5%8F%A4%E5%AD%B8%E5%AE%B6%29%20%29%20%29&amp;_coverpage_WAR_mmisportalportlet_sort_field=score&amp;p_r_p_-1078056564_c=QF757YsWv5%2FH7zGe%2FKF%2BFIOHMWs4GZbT&amp;_coverpage_WAR_mmisportalportlet_o=10&amp;_coverpage_WAR_mmisportalportlet_sort_order=desc" target="_blank" rel="noopener noreferrer">日考古學家由大陸來港</a>〉，《華僑日報》，1957年6月2日，第2張第2頁。</li>
 </ol>
 ]]></content>
-    <category term="文化"/>
     <published>2023-01-16T00:00:00.000Z</published>
   </entry>
   <entry>
@@ -5297,7 +5247,6 @@
 <li><a href="https://www.aab.gov.hk/tc/historic-buildings/search-for-information-on-individual-buildings/index.html" target="_blank" rel="noopener noreferrer">1,444幢及新項目歷史建築</a> 1,444 Historic Buildings and New Items</li>
 </ul>
 ]]></content>
-    <category term="考古"/>
     <published>2023-01-15T00:00:00.000Z</published>
   </entry>
   <entry>
@@ -5368,7 +5317,6 @@
 <li>陳偉駒：〈嶺南地區新石器時代文化的時空框架與生計方式研究〉（吉林大學博士論文，2016年）。</li>
 </ol>
 ]]></content>
-    <category term="考古"/>
     <published>2023-01-16T00:00:00.000Z</published>
   </entry>
   <entry>
@@ -5387,39 +5335,6 @@
 <li>〈文物保護與南中國史前考古國際研討會在香港召開〉，《中國文物報》，2008年1月2日，第002版。</li>
 </ol>
 ]]></content>
-    <category term="文化"/>
     <published>2023-01-15T00:00:00.000Z</published>
-  </entry>
-  <entry>
-    <title type="text">關於</title>
-    <id>https://www.pasthk.com/about.html</id>
-    <link href="https://www.pasthk.com/about.html"/>
-    <updated>2023-04-09T15:18:57.000Z</updated>
-    <summary type="html"><![CDATA[<p>這是一個興趣使然的課餘項目，意在搜集和整理香港自然史、文化史、藝術史等各類研究文獻，並製作成資料索引集，供大家使用。歡迎大家轉載、分享。</p>
-<p>中文文獻格式參考《<a href="https://www.hkujcs.hku.hk/style-sheet-chinese" target="_blank" rel="noopener noreferrer">香港大學中文學報</a>》。英文文獻統一使用APA格式。</p>
-<p>資料主要來源（排名不分先後）：</p>
-<ul>
-<li>香港公共圖書館多媒體資訊系統：<a href="https://mmis.hkpl.gov.hk/zh/old-hk-collection" target="_blank" rel="noopener noreferrer">香港舊報紙</a></li>
-<li>香港古物古蹟辦事處參考圖書館：<a href="https://lms.amo.gov.hk/hk" target="_blank" rel="noopener noreferrer">網上圖書館目錄</a></li>
-</ul>]]></summary>
-    <content type="html"><![CDATA[<p>這是一個興趣使然的課餘項目，意在搜集和整理香港自然史、文化史、藝術史等各類研究文獻，並製作成資料索引集，供大家使用。歡迎大家轉載、分享。</p>
-<p>中文文獻格式參考《<a href="https://www.hkujcs.hku.hk/style-sheet-chinese" target="_blank" rel="noopener noreferrer">香港大學中文學報</a>》。英文文獻統一使用APA格式。</p>
-<p>資料主要來源（排名不分先後）：</p>
-<ul>
-<li>香港公共圖書館多媒體資訊系統：<a href="https://mmis.hkpl.gov.hk/zh/old-hk-collection" target="_blank" rel="noopener noreferrer">香港舊報紙</a></li>
-<li>香港古物古蹟辦事處參考圖書館：<a href="https://lms.amo.gov.hk/hk" target="_blank" rel="noopener noreferrer">網上圖書館目錄</a></li>
-</ul>
-<p>項目成員：</p>
-<ul>
-<li>北京大學考古文博學院考古系在讀博士生吳某</li>
-<li>香港中文大學文學院歷史系在讀本科生鄺某</li>
-</ul>
-<p>特別鳴謝：</p>
-<ul>
-<li>南方科技大學人文社科學院社會科學中心研究助理王某</li>
-</ul>
-<p>如有任何想法，歡迎電郵至<a href="mailto:pasthk@outlook.com">pasthk@outlook.com</a>。</p>
-]]></content>
-    <published>2023-01-20T00:00:00.000Z</published>
   </entry>
 </feed>

@@ -1,6 +1,5 @@
 ---
 title: 荃灣馬灣島東灣仔北遺址
-category: 考古
 date: 2023-02-23
 ---
 <adsense></adsense>

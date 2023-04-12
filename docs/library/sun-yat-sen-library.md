@@ -1,6 +1,5 @@
 ---
 title: 中山圖書館
-category: 文化
 date: 2023-03-28
 ---
 <adsense></adsense>

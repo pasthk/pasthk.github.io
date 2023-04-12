@@ -1,6 +1,5 @@
 ---
 title: 蒲台島大灣遺址
-category: 考古
 date: 2023-01-20
 ---
 <adsense></adsense>

@@ -6,30 +6,56 @@
     <link>https://www.pasthk.com/</link>
     <description>香港專題研究索引集</description>
     <language>zh-TW</language>
-    <pubDate>Wed, 12 Apr 2023 11:19:36 GMT</pubDate>
-    <lastBuildDate>Wed, 12 Apr 2023 11:19:36 GMT</lastBuildDate>
+    <pubDate>Wed, 12 Apr 2023 17:09:14 GMT</pubDate>
+    <lastBuildDate>Wed, 12 Apr 2023 17:09:14 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
-    <category>公共衛生</category>
-    <category>社會</category>
-    <category>考古</category>
-    <category>自然</category>
-    <category>民俗</category>
-    <category>醫療</category>
-    <category>廣告</category>
-    <category>文化</category>
-    <category>熱帶氣旋</category>
     <category>其他</category>
-    <category>資料庫</category>
+    <category>社會</category>
     <category>地圖</category>
-    <category>宗教</category>
+    <item>
+      <title>香港大學馮平山圖書館</title>
+      <link>https://www.pasthk.com/library/fung-ping-shan-library-university-of-hong-kong.html</link>
+      <guid>https://www.pasthk.com/library/fung-ping-shan-library-university-of-hong-kong.html</guid>
+      <source url="https://www.pasthk.com/rss.xml">香港大學馮平山圖書館</source>
+      <description>新聞報道 1. 〈港督將為馮平山圖書館開幕〉，《香港工商日報》，1932年11月22日，第3張第1版 (https://mmis.hkpl.gov.hk/coverpage/-/coverpage/view?prp-1078056564c=QF757YsWv5%2BgO%2FPMVI16yVh9%2FyWncBMS&amp;coverpageWARmmispo...</description>
+      <pubDate>Thu, 13 Apr 2023 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<h2> 新聞報道</h2>
+<ol>
+<li>〈港督將為馮平山圖書館開幕〉，《香港工商日報》，1932年11月22日，<a href="https://mmis.hkpl.gov.hk/coverpage/-/coverpage/view?p_r_p_-1078056564_c=QF757YsWv5%2BgO%2FPMVI16yVh9%2FyWncBMS&amp;_coverpage_WAR_mmisportalportlet_o=0&amp;_coverpage_WAR_mmisportalportlet_actual_q=%28%20verbatim_dc.collection%3A%28%22Old%5C%20HK%5C%20Newspapers%22%29%20%29%20AND+%28%20%28%20allTermsMandatory%3A%28true%29%20OR+all_dc.title%3A%28%E9%A6%AE%E5%B9%B3%E5%B1%B1%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+all_dc.creator%3A%28%E9%A6%AE%E5%B9%B3%E5%B1%B1%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+all_dc.contributor%3A%28%E9%A6%AE%E5%B9%B3%E5%B1%B1%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+all_dc.subject%3A%28%E9%A6%AE%E5%B9%B3%E5%B1%B1%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+fulltext%3A%28%E9%A6%AE%E5%B9%B3%E5%B1%B1%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+all_dc.description%3A%28%E9%A6%AE%E5%B9%B3%E5%B1%B1%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20%29%20%29&amp;_coverpage_WAR_mmisportalportlet_sort_order=asc&amp;_coverpage_WAR_mmisportalportlet_sort_field=dc.publicationdate_bsort&amp;_coverpage_WAR_mmisportalportlet_log=Y" target="_blank" rel="noopener noreferrer">第3張第1版</a>。</li>
+<li>〈馮平山圖書館〉，《香港華字日報》，1932年12月13日，<a href="https://mmis.hkpl.gov.hk/coverpage/-/coverpage/view?p_r_p_-1078056564_c=QF757YsWv5%2FH7zGe%2FKF%2BFA8Kyt4eLZfb&amp;_coverpage_WAR_mmisportalportlet_o=1&amp;_coverpage_WAR_mmisportalportlet_actual_q=%28%20verbatim_dc.collection%3A%28%22Old%5C%20HK%5C%20Newspapers%22%29%20%29%20AND+%28%20%28%20allTermsMandatory%3A%28true%29%20OR+all_dc.title%3A%28%E9%A6%AE%E5%B9%B3%E5%B1%B1%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+all_dc.creator%3A%28%E9%A6%AE%E5%B9%B3%E5%B1%B1%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+all_dc.contributor%3A%28%E9%A6%AE%E5%B9%B3%E5%B1%B1%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+all_dc.subject%3A%28%E9%A6%AE%E5%B9%B3%E5%B1%B1%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+fulltext%3A%28%E9%A6%AE%E5%B9%B3%E5%B1%B1%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+all_dc.description%3A%28%E9%A6%AE%E5%B9%B3%E5%B1%B1%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20%29%20%29&amp;_coverpage_WAR_mmisportalportlet_sort_order=asc&amp;_coverpage_WAR_mmisportalportlet_sort_field=dc.publicationdate_bsort&amp;_coverpage_WAR_mmisportalportlet_log=Y" target="_blank" rel="noopener noreferrer">第2張第4頁</a>。
+<ul>
+<li>…決定明日開幕…</li>
+</ul>
+</li>
+<li>〈馮平山圖書館已由港督行開幕禮〉，《工商晚報》，1932年12月15日，<a href="https://mmis.hkpl.gov.hk/coverpage/-/coverpage/view?_coverpage_WAR_mmisportalportlet_hsf=%E9%A6%AE%E5%B9%B3%E5%B1%B1%E5%9C%96%E6%9B%B8%E9%A4%A8&amp;p_r_p_-1078056564_c=QF757YsWv5%2FH7zGe%2FKF%2BFDsKeKCPqv09&amp;_coverpage_WAR_mmisportalportlet_o=2&amp;_coverpage_WAR_mmisportalportlet_actual_q=%28%20verbatim_dc.collection%3A%28%22Old%5C%20HK%5C%20Newspapers%22%29%20%29%20AND+%28%20%28%20allTermsMandatory%3A%28true%29%20OR+all_dc.title%3A%28%E9%A6%AE%E5%B9%B3%E5%B1%B1%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+all_dc.creator%3A%28%E9%A6%AE%E5%B9%B3%E5%B1%B1%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+all_dc.contributor%3A%28%E9%A6%AE%E5%B9%B3%E5%B1%B1%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+all_dc.subject%3A%28%E9%A6%AE%E5%B9%B3%E5%B1%B1%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+fulltext%3A%28%E9%A6%AE%E5%B9%B3%E5%B1%B1%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+all_dc.description%3A%28%E9%A6%AE%E5%B9%B3%E5%B1%B1%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20%29%20%29&amp;_coverpage_WAR_mmisportalportlet_sort_order=asc&amp;_coverpage_WAR_mmisportalportlet_sort_field=dc.publicationdate_bsort&amp;_coverpage_WAR_mmisportalportlet_formDate=1681319073968" target="_blank" rel="noopener noreferrer">第4版</a>。</li>
+<li>t.b.c</li>
+</ol>
+<h2> 資料庫</h2>
+<ul>
+<li><a href="https://digitalrepository.lib.hku.hk/fpslrbo" target="_blank" rel="noopener noreferrer">馮平山圖書館善本書影像庫</a> Fung Ping Shan Library Rare Books Online</li>
+<li><a href="https://fpslidx.lib.hku.hk/exhibits/show/fpslidx/home" target="_blank" rel="noopener noreferrer">馮平山圖書館藏善本書錄</a> Fung Ping Shan Library Rare Books Online</li>
+<li><a href="https://digitalrepository.lib.hku.hk/collection/dn403k06t" target="_blank" rel="noopener noreferrer">馮平山圖書館藏木魚書</a> HKU Fung Ping Shan Library Wooden-Fish Books</li>
+</ul>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>捐贈</title>
+      <link>https://www.pasthk.com/donation.html</link>
+      <guid>https://www.pasthk.com/donation.html</guid>
+      <source url="https://www.pasthk.com/rss.xml">捐贈</source>
+      <description>捐贈方式</description>
+      <category>其他</category>
+      <pubDate>Sat, 01 Apr 2023 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<h2> 捐贈方式</h2>
+]]></content:encoded>
+    </item>
     <item>
       <title>霍亂</title>
       <link>https://www.pasthk.com/public-health/cholera.html</link>
       <guid>https://www.pasthk.com/public-health/cholera.html</guid>
       <source url="https://www.pasthk.com/rss.xml">霍亂</source>
       <description>新聞報道 1. 〈暴病身亡〉，《循環日報》，1883年7月7日 (https://mmis.hkpl.gov.hk/coverpage/-/coverpage/view?coverpageWARmmisportalportlethsf=%E9%9C%8D%E4%BA%82&amp;prp-1078056564c=QF757YsWv58JCjtBMMIqohlo...</description>
-      <category>公共衛生</category>
       <pubDate>Wed, 12 Apr 2023 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<h2> 新聞報道</h2>
 <ol>
@@ -59,7 +85,6 @@
       <guid>https://www.pasthk.com/public-health/plague.html</guid>
       <source url="https://www.pasthk.com/rss.xml">鼠疫</source>
       <description>新聞報道 1. 〈預防鼠疫法〉，《香港華字日報》，1901年6月1日 (https://mmis.hkpl.gov.hk/coverpage/-/coverpage/view?coverpageWARmmisportalportlethsf=%E9%BC%A0%E7%96%AB&amp;prp-1078056564c=QF757YsWv5%2BakvA8rFW...</description>
-      <category>公共衛生</category>
       <pubDate>Wed, 12 Apr 2023 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<h2> 新聞報道</h2>
 <ol>
@@ -98,7 +123,6 @@
       <guid>https://www.pasthk.com/archaeology/archive.html</guid>
       <source url="https://www.pasthk.com/rss.xml">檔案</source>
       <description>香港大學檔案 University of Hong Kong Archaeology Team PapersPhotographs and Slides; Notes - Team administration; List of Archaeological Team Members; Implements of Archeological T...</description>
-      <category>考古</category>
       <pubDate>Thu, 06 Apr 2023 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<h2> 香港大學檔案</h2>
 <h3> University of Hong Kong Archaeology Team Papers</h3>
@@ -170,7 +194,6 @@
       <guid>https://www.pasthk.com/geology/earthquake.html</guid>
       <source url="https://www.pasthk.com/rss.xml">地震</source>
       <description>參考資料： - 1979年以來的本地有感地震 (https://www.hko.gov.hk/tc/gts/equake/79felt.htm) - 1979年以來本地有感地震的烈度分佈 (https://www.hko.gov.hk/tc/gts/equake/felt_distribution.htm) 新聞報道 1. 〈初十日港中地震……〉，...</description>
-      <category>自然</category>
       <pubDate>Thu, 06 Apr 2023 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<blockquote>
 <p>參考資料：</p>
@@ -197,7 +220,6 @@
       <guid>https://www.pasthk.com/geology/research.html</guid>
       <source url="https://www.pasthk.com/rss.xml">專題研究</source>
       <description>專著 1. 李作明、陳金華、何國雄主編：《香港古生物和地層（上冊）》（北京：科學出版社，1997年）。 2. 李作明、陳金華、何國雄主編：《香港古生物和地層（下冊）》（北京：科學出版社，1998年）。【試閱 (https://book.sciencereading.cn/shop/book/Booksimple/onlineRead.do?id=B06...</description>
-      <category>自然</category>
       <pubDate>Wed, 05 Apr 2023 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<h2> 專著</h2>
 <ol>
@@ -224,7 +246,6 @@
       <link>https://www.pasthk.com/folkloristics/ching-ming-festival/</link>
       <guid>https://www.pasthk.com/folkloristics/ching-ming-festival/</guid>
       <source url="https://www.pasthk.com/rss.xml">清明節</source>
-      <category>民俗</category>
       <pubDate>Wed, 05 Apr 2023 00:00:00 GMT</pubDate>
     </item>
     <item>
@@ -233,7 +254,6 @@
       <guid>https://www.pasthk.com/folkloristics/tin-hau/</guid>
       <source url="https://www.pasthk.com/rss.xml">天后信仰</source>
       <description>天后誕 (tin-hau-festival.md);</description>
-      <category>民俗</category>
       <pubDate>Thu, 19 Jan 2023 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<ul>
 <li><a href="/folkloristics/tin-hau/tin-hau-festival.html" target="blank">天后誕</a></li>
@@ -246,7 +266,6 @@
       <guid>https://www.pasthk.com/folkloristics/tin-hau/tin-hau-festival.html</guid>
       <source url="https://www.pasthk.com/rss.xml">天后誕</source>
       <description>新聞報道 1. 〈天后誕期內之鱗爪〉，《香港華字日報》，1931年5月12日，第2張第2頁 (https://mmis.hkpl.gov.hk/coverpage/-/coverpage/view?coverpageWARmmisportalportlethsf=%E5%A4%A9%E5%90%8E%E8%AA%95&amp;prp-1078056564c=Q...</description>
-      <category>民俗</category>
       <pubDate>Wed, 05 Apr 2023 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<h2> 新聞報道</h2>
 <ol>
@@ -269,7 +288,6 @@
       <guid>https://www.pasthk.com/folkloristics/wong-tai-sin/</guid>
       <source url="https://www.pasthk.com/rss.xml">黃大仙信俗</source>
       <description>專著 1. 吳麗珍：《香港黃大仙》（香港：三聯書店，2012年）。 2. 《善道同行—嗇色園黃大仙祠百載道情》編輯委員會：《善道同行—嗇色園黃大仙祠百載道情》（香港：中華書局，2022年）。</description>
-      <category>民俗</category>
       <pubDate>Fri, 20 Jan 2023 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<h2> 專著</h2>
 <ol>
@@ -284,7 +302,6 @@
       <guid>https://www.pasthk.com/hospital/hong-kong-sanatorium-and-hospital.html</guid>
       <source url="https://www.pasthk.com/rss.xml">養和醫院</source>
       <description>新聞報道 1. 〈養和院失火幸未成災〉，《香港工商日報》，1927年3月29日，第3張第3版 (https://mmis.hkpl.gov.hk/coverpage/-/coverpage/view?coverpageWARmmisportalportlethsf=%E9%A4%8A%E5%92%8C&amp;prp-1078056564c=QF757YsWv...</description>
-      <category>醫療</category>
       <pubDate>Tue, 04 Apr 2023 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<h2> 新聞報道</h2>
 <ol>
@@ -302,7 +319,6 @@
       <guid>https://www.pasthk.com/hospital/kwong-wah-hospital.html</guid>
       <source url="https://www.pasthk.com/rss.xml">廣華醫院</source>
       <description>新聞報道 1. 〈廣華醫院定期開幕〉，《香港華字日報》，1911年10月2日，第3頁 (https://mmis.hkpl.gov.hk/coverpage/-/coverpage/view?coverpageWARmmisportalportlethsf=%E5%BB%A3%E8%8F%AF&amp;coverpageWARmmisportalportlet...</description>
-      <category>醫療</category>
       <pubDate>Tue, 04 Apr 2023 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<h2> 新聞報道</h2>
 <ol>
@@ -328,7 +344,6 @@
       <guid>https://www.pasthk.com/hospital/tung-wah-hospital.html</guid>
       <source url="https://www.pasthk.com/rss.xml">東華醫院</source>
       <description>新聞報道 1. 〈東華醫院四月份月結開列如下用供眾覽〉，《循環日報》，1874年6月16日，第3頁 (https://mmis.hkpl.gov.hk/coverpage/-/coverpage/view?coverpageWARmmisportalportlethsf=%E6%9D%B1%E8%8F%AF&amp;coverpageWARmmisportal...</description>
-      <category>醫療</category>
       <pubDate>Tue, 04 Apr 2023 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<h2> 新聞報道</h2>
 <ol>
@@ -357,7 +372,6 @@
       <guid>https://www.pasthk.com/advertisement/camera-and-film.html</guid>
       <source url="https://www.pasthk.com/rss.xml">拍攝器材</source>
       <description>Agfa ISO-RAPID IF 1. 〈請用「立拍」相機將聖誕情趣拍成照片永留紀念〉，《工商日報》，1965年12月15日，第6頁。</description>
-      <category>廣告</category>
       <pubDate>Tue, 04 Apr 2023 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<h2> Agfa</h2>
 <h3> ISO-RAPID IF</h3>
@@ -372,7 +386,6 @@
       <guid>https://www.pasthk.com/advertisement/home-appliance.html</guid>
       <source url="https://www.pasthk.com/rss.xml">家電</source>
       <description>風扇 1. 〈上海華生電風扇〉，《工商晚報》，1931年8月1日，第3版。</description>
-      <category>廣告</category>
       <pubDate>Sun, 02 Apr 2023 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<h2> 風扇</h2>
 <ol>
@@ -386,7 +399,6 @@
       <guid>https://www.pasthk.com/museology/city-museum-and-art-gallery.html</guid>
       <source url="https://www.pasthk.com/rss.xml">大會堂美術博物館</source>
       <description>新聞報道 1. 〈二萬餘人參觀大會堂博物館〉，《工商日報》，1962年3月7日，第7頁 (https://mmis.hkpl.gov.hk/coverpage/-/coverpage/view?coverpageWARmmisportalportlethsf=%E5%A4%A7%E6%9C%83%E5%A0%82%E5%8D%9A%E7%89%A9%E...</description>
-      <category>文化</category>
       <pubDate>Sun, 02 Apr 2023 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<h2> 新聞報道</h2>
 <ol>
@@ -403,7 +415,6 @@
       <guid>https://www.pasthk.com/meteorology/tropical-cyclone/1900s.html</guid>
       <source url="https://www.pasthk.com/rss.xml">1900年代</source>
       <description>1900年 1901年 1902年 1. 〈風球放下〉，《香港華字日報》，1902年6月7日，第4頁 (https://mmis.hkpl.gov.hk/coverpage/-/coverpage/view?coverpageWARmmisportalportlethsf=%E9%A2%A8%E7%90%83&amp;prp-1078056564c=QF757...</description>
-      <category>熱帶氣旋</category>
       <pubDate>Sun, 02 Apr 2023 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<h2> 1900年</h2>
 <h2> 1901年</h2>
@@ -429,7 +440,6 @@
       <guid>https://www.pasthk.com/meteorology/tropical-cyclone/1910s.html</guid>
       <source url="https://www.pasthk.com/rss.xml">1910年代</source>
       <description>1910年 1911年 1912年 1913年 1914年 1915年 1916年 1917年 1918年 無名 Unnamed 1 1. 〈昨日之風雨談〉，《香港華字日報》，1918年7月2日，第1張第3頁 (https://mmis.hkpl.gov.hk/coverpage/-/coverpage/view?coverpageWARmmispor...</description>
-      <category>熱帶氣旋</category>
       <pubDate>Sun, 02 Apr 2023 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<h2> 1910年</h2>
 <h2> 1911年</h2>
@@ -457,7 +467,6 @@
       <guid>https://www.pasthk.com/meteorology/tropical-cyclone/1920s.html</guid>
       <source url="https://www.pasthk.com/rss.xml">1920年代</source>
       <description>1920年 1921年 1922年 1923年 1924年 1. 〈風球已下〉，《香港華字日報》，1924年7月18日，第3張；9頁 (https://mmis.hkpl.gov.hk/coverpage/-/coverpage/view?coverpageWARmmisportalportlethsf=%E9%A2%A8%E7%90%83&amp;prp-1...</description>
-      <category>熱帶氣旋</category>
       <pubDate>Sun, 02 Apr 2023 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<h2> 1920年</h2>
 <h2> 1921年</h2>
@@ -508,7 +517,6 @@
       <guid>https://www.pasthk.com/meteorology/tropical-cyclone/1930s.html</guid>
       <source url="https://www.pasthk.com/rss.xml">1930年代</source>
       <description>1930年 1. 〈昨日本港之狂風暴雨〉，《香港工商日報》，1930年8月22日，第3張第1版 (https://mmis.hkpl.gov.hk/coverpage/-/coverpage/view?coverpageWARmmisportalportlethsf=%E9%A2%A8%E7%90%83&amp;prp-1078056564c=QF757YsW...</description>
-      <category>熱帶氣旋</category>
       <pubDate>Sun, 02 Apr 2023 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<h2> 1930年</h2>
 <ol>
@@ -672,7 +680,6 @@
       <guid>https://www.pasthk.com/advertisement/cake-shop.html</guid>
       <source url="https://www.pasthk.com/rss.xml">餅家</source>
       <description>得雲餅家 1. 〈餅業權威得雲老餅家〉，《工商日報》，1953年9月18日，第5頁。 2. 〈餅業權威得雲老餅家〉，《工商晚報》，1953年9月19日，第4頁。 陳意齋餅家 1. 〈陳意齋餅家〉，《工商晚報》，1953年9月18日，第4頁。 2. 〈陳意齋餅家〉，《工商日報》，1953年9月19日，第5頁。 3. 〈陳意齋餅家〉，《工商晚報》，1953...</description>
-      <category>廣告</category>
       <pubDate>Sun, 02 Apr 2023 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<h2> 得雲餅家</h2>
 <ol>
@@ -693,7 +700,6 @@
       <guid>https://www.pasthk.com/advertisement/chinese-restaurant.html</guid>
       <source url="https://www.pasthk.com/rss.xml">茶樓</source>
       <description>龍鳳大茶樓 1. 〈龍鳳月餅〉，《大公報》，1953年9月18日，第1張；第4版。 雲天大茶樓 1. 〈雲天月餅〉，《華僑日報》，1953年9月18日，第2張第1頁。</description>
-      <category>廣告</category>
       <pubDate>Sun, 02 Apr 2023 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<h2> 龍鳳大茶樓</h2>
 <ol>
@@ -711,7 +717,6 @@
       <guid>https://www.pasthk.com/advertisement/music-company.html</guid>
       <source url="https://www.pasthk.com/rss.xml">琴行</source>
       <description>美華琴行 1. 〈美華琴行〉，《工商日報》，1953年9月18日，第5頁。 2. 〈美華琴行〉，《工商晚報》，1953年9月18日，第4頁。 3. 〈美華琴行〉，《工商日報》，1953年9月19日，第5頁。 4. 〈美華琴行〉，《工商晚報》，1953年9月19日，第4頁。</description>
-      <category>廣告</category>
       <pubDate>Sun, 02 Apr 2023 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<h2> 美華琴行</h2>
 <ol>
@@ -728,7 +733,6 @@
       <guid>https://www.pasthk.com/advertisement/stationery.html</guid>
       <source url="https://www.pasthk.com/rss.xml">文具</source>
       <description>派克 Parker 1. 〈派克枱筆〉，《工商日報》，1953年9月20日，第5頁。總經理：石利洛洋行;</description>
-      <category>廣告</category>
       <pubDate>Sun, 02 Apr 2023 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<h2> 派克 Parker</h2>
 <ol>
@@ -746,7 +750,6 @@
       <guid>https://www.pasthk.com/advertisement/tea-house.html</guid>
       <source url="https://www.pasthk.com/rss.xml">茶莊</source>
       <description>陳春蘭茶莊 1. 〈陳春蘭〉，《工商日報》，1953年9月18日，第5頁。</description>
-      <category>廣告</category>
       <pubDate>Sun, 02 Apr 2023 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<h2> 陳春蘭茶莊</h2>
 <ol>
@@ -760,7 +763,6 @@
       <guid>https://www.pasthk.com/advertisement/watch-and-clock.html</guid>
       <source url="https://www.pasthk.com/rss.xml">鐘錶</source>
       <description>尤里西斯・雅典 Ulysse Nardin 1. 〈雅典〉，《華僑日報》，1953年9月18日，第2張第1頁。特約經理：金輪鐘表行; 2. 〈雅典〉，《工商日報》，1953年9月20日，第5頁。特約經理：金輪鐘表行;</description>
-      <category>廣告</category>
       <pubDate>Sun, 02 Apr 2023 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<h2> 尤里西斯・雅典 Ulysse Nardin</h2>
 <ol>
@@ -778,23 +780,11 @@
 ]]></content:encoded>
     </item>
     <item>
-      <title>捐贈</title>
-      <link>https://www.pasthk.com/donation.html</link>
-      <guid>https://www.pasthk.com/donation.html</guid>
-      <source url="https://www.pasthk.com/rss.xml">捐贈</source>
-      <description>捐贈方式</description>
-      <category>其他</category>
-      <pubDate>Sat, 01 Apr 2023 00:00:00 GMT</pubDate>
-      <content:encoded><![CDATA[<h2> 捐贈方式</h2>
-]]></content:encoded>
-    </item>
-    <item>
       <title>醫院</title>
       <link>https://www.pasthk.com/hospital/</link>
       <guid>https://www.pasthk.com/hospital/</guid>
       <source url="https://www.pasthk.com/rss.xml">醫院</source>
       <description>東華醫院 (tung-wah-hospital.md); 養和醫院 (hong-kong-sanatorium-and-hospital.md); 聖保祿醫院 (st-pauls-hospital.md);</description>
-      <category>醫療</category>
       <pubDate>Fri, 31 Mar 2023 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<ul>
 <li><a href="/hospital/tung-wah-hospital.html" target="blank">東華醫院</a></li>
@@ -809,7 +799,6 @@
       <guid>https://www.pasthk.com/hospital/st-pauls-hospital.html</guid>
       <source url="https://www.pasthk.com/rss.xml">聖保祿醫院</source>
       <description>新聞報道 1. 〈聖保祿醫院舉行賣物會〉，《工商日報》，1936年9月22日，第3張第2版 (https://mmis.hkpl.gov.hk/coverpage/-/coverpage/view?coverpageWARmmisportalportlethsf=%E8%81%96%E4%BF%9D%E7%A5%BF%E9%86%AB%E9%99%A2...</description>
-      <category>醫療</category>
       <pubDate>Fri, 31 Mar 2023 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<h2> 新聞報道</h2>
 <ol>
@@ -829,7 +818,6 @@
       <guid>https://www.pasthk.com/library/city-hall-public-library.html</guid>
       <source url="https://www.pasthk.com/rss.xml">大會堂公共圖書館</source>
       <description>1. 〈大會堂圖書館遷址　莊士敦道舊水手館〉，《香港工商日報》，1933年6月27日，第3張第1版 (https://mmis.hkpl.gov.hk/coverpage/-/coverpage/view?coverpageWARmmisportalportlethsf=%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9...</description>
-      <category>文化</category>
       <pubDate>Fri, 31 Mar 2023 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<ol>
 <li>〈大會堂圖書館遷址　莊士敦道舊水手館〉，《香港工商日報》，1933年6月27日，<a href="https://mmis.hkpl.gov.hk/coverpage/-/coverpage/view?_coverpage_WAR_mmisportalportlet_hsf=%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8&amp;p_r_p_-1078056564_c=QF757YsWv5%2BZh7v7hMb5iQMk2n8KcIzx&amp;_coverpage_WAR_mmisportalportlet_o=0&amp;_coverpage_WAR_mmisportalportlet_actual_q=%28%20verbatim_dc.collection%3A%28%22Old%5C%20HK%5C%20Newspapers%22%29%20%29%20AND+%28%20%28%20allTermsMandatory%3A%28true%29%20OR+all_dc.title%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+all_dc.creator%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+all_dc.contributor%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+all_dc.subject%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+fulltext%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20OR+all_dc.description%3A%28%E5%A4%A7%E6%9C%83%E5%A0%82%E5%9C%96%E6%9B%B8%E9%A4%A8%29%20%29%20%29&amp;_coverpage_WAR_mmisportalportlet_sort_field=dc.publicationdate_bsort&amp;_coverpage_WAR_mmisportalportlet_sort_order=asc" target="_blank" rel="noopener noreferrer">第3張第1版</a>。</li>
@@ -861,7 +849,6 @@
       <guid>https://www.pasthk.com/library/man-chi-library.html</guid>
       <source url="https://www.pasthk.com/rss.xml">孟氏圖書館</source>
       <description>孟氏教育基金會在1953年創建孟氏圖書館，收藏中文圖書、線裝書籍眾多，深受學生歡迎。後來因運營經費不足，在1970年改為中山圖書館。</description>
-      <category>文化</category>
       <pubDate>Tue, 28 Mar 2023 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<h2> 新聞報道</h2>
 <ol>
@@ -1007,7 +994,6 @@
       <guid>https://www.pasthk.com/library/sun-yat-sen-library.html</guid>
       <source url="https://www.pasthk.com/rss.xml">中山圖書館</source>
       <description>新聞報道 1. 〈中山圖書館定明日開幕〉，《工商日報》，1969年12月31日，第4頁 (https://mmis.hkpl.gov.hk/coverpage/-/coverpage/view?coverpageWARmmisportalportlethsf=%E4%B8%AD%E5%B1%B1%E5%9C%96%E6%9B%B8%E9%A4%A8&amp;p...</description>
-      <category>文化</category>
       <pubDate>Tue, 28 Mar 2023 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<h2> 新聞報道</h2>
 <ol>
@@ -1049,7 +1035,6 @@
       <guid>https://www.pasthk.com/advertisement/</guid>
       <source url="https://www.pasthk.com/rss.xml">廣告</source>
       <description>琴行 (music-company.md); 餅家 (cake-shop.md); 茶莊 (tea-house.md); 茶樓 (chinese-restaurant.md); 攝影 (camera-and-film.md);</description>
-      <category>廣告</category>
       <pubDate>Sun, 02 Apr 2023 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<ul>
 <li><a href="/advertisement/music-company.html" target="blank">琴行</a></li>
@@ -1066,7 +1051,6 @@
       <guid>https://www.pasthk.com/library/hok-hoi-library.html</guid>
       <source url="https://www.pasthk.com/rss.xml">學海書樓</source>
       <description>新聞報道 1. 〈學海書樓停講〉，《香港華字日報》，1926年2月1日，第2張第3頁 (https://mmis.hkpl.gov.hk/coverpage/-/coverpage/view?coverpageWARmmisportalportlethsf=%E5%AD%B8%E6%B5%B7%E6%9B%B8%E6%A8%93&amp;prp-1078056...</description>
-      <category>文化</category>
       <pubDate>Tue, 28 Mar 2023 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<h2> 新聞報道</h2>
 <ol>
@@ -1089,7 +1073,6 @@
       <guid>https://www.pasthk.com/folkloristics/jiao-festival/high-land-jiao-festival.html</guid>
       <source url="https://www.pasthk.com/rss.xml">西貢糧船灣太平清醮</source>
       <description>新聞報道 1. 〈西貢糧船灣舉行　太平清醮酬神會〉，《工商晚報》，1978年5月7日，第2頁 (https://mmis.hkpl.gov.hk/coverpage/-/coverpage/view?coverpageWARmmisportalportlethsf=%E6%B8%85%E9%86%AE&amp;prp-1078056564c=QF757YsWv...</description>
-      <category>民俗</category>
       <pubDate>Sat, 25 Mar 2023 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<h2> 新聞報道</h2>
 <ol>
@@ -1103,7 +1086,6 @@
       <guid>https://www.pasthk.com/folkloristics/jiao-festival/sha-kong-wai-jiao-festival.html</guid>
       <source url="https://www.pasthk.com/rss.xml">屏山沙江圍太平清醮</source>
       <description>新聞報道 1. 〈沙江圍太平清醮連日上演神功戲〉，《華僑日報》，1988年12月25日，頁10 (https://mmis.hkpl.gov.hk/coverpage/-/coverpage/view?coverpageWARmmisportalportlethsf=%E6%B8%85%E9%86%AE&amp;prp-1078056564c=QF757YsW...</description>
-      <category>民俗</category>
       <pubDate>Sat, 25 Mar 2023 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<h2> 新聞報道</h2>
 <ol>
@@ -1117,7 +1099,6 @@
       <guid>https://www.pasthk.com/folkloristics/jiao-festival/tai-hang-heung-jiao-festival.html</guid>
       <source url="https://www.pasthk.com/rss.xml">大埔泰亨鄉太平清醮</source>
       <description>新聞報道 1. 〈大埔泰亨鄉五年一度　太平清醮極熱鬧　演劇助興昨逢正誕進香者眾　理民府官沙田警司頒發錦旗〉，《華僑日報》，1970年11月15日，第3張第2頁 (https://mmis.hkpl.gov.hk/coverpage/-/coverpage/view?coverpageWARmmisportalportlethsf=%E6%B8%85%E...</description>
-      <category>民俗</category>
       <pubDate>Sat, 25 Mar 2023 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<h2> 新聞報道</h2>
 <ol>
@@ -1130,10 +1111,18 @@
       <link>https://www.pasthk.com/library/</link>
       <guid>https://www.pasthk.com/library/</guid>
       <source url="https://www.pasthk.com/rss.xml">圖書館</source>
-      <description>學海書樓 (hok-hoi-library.md); 孟氏圖書館 (man-chi-library.md)（1970年改為中山圖書館 (sun-yat-sen-library.md)）;</description>
-      <category>文化</category>
+      <description>公共圖書館大會堂公共圖書館 (city-hall-public-library.md); 大學圖書館香港大學馮平山圖書館 (fung-ping-shan-library-university-of-hong-kong.md); 私人圖書館學海書樓 (hok-hoi-library.md); 孟氏圖書館 (man-chi-library.md)（...</description>
       <pubDate>Mon, 20 Mar 2023 00:00:00 GMT</pubDate>
-      <content:encoded><![CDATA[<ul>
+      <content:encoded><![CDATA[<h2> 公共圖書館</h2>
+<ul>
+<li><a href="/library/city-hall-public-library.html" target="blank">大會堂公共圖書館</a></li>
+</ul>
+<h2> 大學圖書館</h2>
+<ul>
+<li><a href="/library/fung-ping-shan-library-university-of-hong-kong.html" target="blank">香港大學馮平山圖書館</a></li>
+</ul>
+<h2> 私人圖書館</h2>
+<ul>
 <li><a href="/library/hok-hoi-library.html" target="blank">學海書樓</a></li>
 <li><a href="/library/man-chi-library.html" target="blank">孟氏圖書館</a>（1970年改為<a href="/library/sun-yat-sen-library.html" target="blank">中山圖書館</a>）</li>
 </ul>
@@ -1145,7 +1134,6 @@
       <guid>https://www.pasthk.com/database/newspaper/chinese-newspapers-collection.html</guid>
       <source url="https://www.pasthk.com/rss.xml">Chinese Newspapers Collection</source>
       <description>香港大學圖書館訂閱了ProQuest公司的歷史報章資料庫，可查閱近代中國新聞報章。 該資料庫內包含22份報章的報導，依創辦年份及英文標題首字母列舉如下：《中國叢報》（Chinese Repository, 1832-1851）; 《北華捷報》（The North-China Herald, 1850-1867）; 《北華捷報》（The North...</description>
-      <category>資料庫</category>
       <pubDate>Fri, 24 Mar 2023 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<p>香港大學圖書館訂閱了ProQuest公司的歷史報章資料庫，可查閱近代中國新聞報章。</p>
 <p>該資料庫內包含22份報章的報導，依創辦年份及英文標題首字母列舉如下：</p>
@@ -1189,7 +1177,6 @@
       <guid>https://www.pasthk.com/database/newspaper/old-hk-newspapers.html</guid>
       <source url="https://www.pasthk.com/rss.xml">香港舊報紙</source>
       <description>香港公共圖書館建立多媒體資訊系統（Multimedia Information System，簡稱MMIS），供讀者查閱數碼館藏、電子書、香港舊報紙、展覽、香港非物質文化遺產資料，以及廣東省立中山圖書館特藏文獻全文。 多媒體資訊系統已收集並電子化圖書館藏主要的舊報紙，共145,656項條目。 依創辦年份列舉如下：【按此查閱 (https://mmis....</description>
-      <category>資料庫</category>
       <pubDate>Fri, 24 Mar 2023 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<p>香港公共圖書館建立多媒體資訊系統（<strong>M</strong>ulti<strong>m</strong>edia <strong>I</strong>nformation <strong>S</strong>ystem，簡稱MMIS），供讀者查閱數碼館藏、電子書、香港舊報紙、展覽、香港非物質文化遺產資料，以及廣東省立中山圖書館特藏文獻全文。</p>
 <p>多媒體資訊系統已收集並電子化圖書館藏主要的舊報紙，共145,656項條目。 依創辦年份列舉如下：【<a href="https://mmis.hkpl.gov.hk/web/guest/old-hk-collection" target="_blank" rel="noopener noreferrer">按此查閱</a>】 </p>
@@ -1221,7 +1208,6 @@
       <link>https://www.pasthk.com/database/newspaper/</link>
       <guid>https://www.pasthk.com/database/newspaper/</guid>
       <source url="https://www.pasthk.com/rss.xml">報章</source>
-      <category>資料庫</category>
       <pubDate>Fri, 24 Mar 2023 00:00:00 GMT</pubDate>
     </item>
     <item>
@@ -1230,7 +1216,6 @@
       <guid>https://www.pasthk.com/database/newspaper/south-china-morning-post.html</guid>
       <source url="https://www.pasthk.com/rss.xml">South China Morning Post</source>
       <description>香港大學圖書館訂閱了ProQuest公司的歷史報章資料庫，可查閱南華早報（ South China Morning Post，簡稱SCMP）1903年至2001年之間的新聞報導，估算有500多萬項資料。 SCMP資料庫內包含8份南華早報相關報章，依創辦年份列舉如下：South China Morning Post（1903-1941）; South...</description>
-      <category>資料庫</category>
       <pubDate>Fri, 24 Mar 2023 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<p>香港大學圖書館訂閱了ProQuest公司的歷史報章資料庫，可查閱南華早報（ <strong>S</strong>outh <strong>C</strong>hina <strong>M</strong>orning <strong>P</strong>ost，簡稱SCMP）1903年至2001年之間的新聞報導，估算有500多萬項資料。</p>
 <p>SCMP資料庫內包含8份南華早報相關報章，依創辦年份列舉如下：</p>
@@ -1260,7 +1245,6 @@
       <guid>https://www.pasthk.com/archaeology/ham-tin-sai-kung.html</guid>
       <source url="https://www.pasthk.com/rss.xml">西貢鹹田</source>
       <description>調查報告 1. 〈鹹田（西貢）具考古研究價值的地點〉（香港：古物古蹟辦事處檔案，編號：AM98-0914）。 2. &amp;quot;Survey-Cum-Excavation at Ham Tin, Sai Kung, New Territories: Stage I Archaeological Survey&amp;quot;, Hong Kong: Antiquities an...</description>
-      <category>考古</category>
       <pubDate>Wed, 15 Mar 2023 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<h2> 調查報告</h2>
 <ol>
@@ -1284,7 +1268,6 @@
       <guid>https://www.pasthk.com/archaeology/ho-chung-sai-kung.html</guid>
       <source url="https://www.pasthk.com/rss.xml">西貢蠔涌</source>
       <description>調查報告 1. 〈蠔涌古徑〉（香港：古物古蹟辦事處檔案，編號：AM93-0542）。 2. 〈蠔涌具考古研究價值的地點〉（香港：古物古蹟辦事處檔案，編號：AM93-0543）。 3. 〈香港西貢公路蠔涌路段擴闊工程考古調查報告〉（香港：古物古蹟辦事處檔案，編號：SK9）。 4. 〈2005年西貢蠔涌丈量約份第244約第610SB、610SC及610SD...</description>
-      <category>考古</category>
       <pubDate>Wed, 15 Mar 2023 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<h2> 調查報告</h2>
 <ol>
@@ -1312,7 +1295,6 @@
       <guid>https://www.pasthk.com/archaeology/kau-sai-chau-sai-kung.html</guid>
       <source url="https://www.pasthk.com/rss.xml">西貢滘西洲</source>
       <description>調查報告 1. &amp;quot;Survey and Assessment for the Proposed Extension of Public Golf Course at Kau Sai Chau, Sai Kung&amp;quot;, Hong Kong: Antiquities and Monuments Office, SK13. 2. 〈西貢滘西洲公眾高爾夫球場擬擴...</description>
-      <category>考古</category>
       <pubDate>Wed, 15 Mar 2023 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<h2> 調查報告</h2>
 <ol>
@@ -1333,7 +1315,6 @@
       <guid>https://www.pasthk.com/archaeology/nam-wai-sai-kung.html</guid>
       <source url="https://www.pasthk.com/rss.xml">西貢蠔涌</source>
       <description>調查報告 1. &amp;quot;Nam Wai Archaeological Impact Assessment&amp;quot;, Hong Kong: Antiquities and Monuments Office, SK8. 2. 〈西貢南圍丈量約分量第214約第243地段小型屋宇地盤考古調查報告〉（香港：古物古蹟辦事處檔案，編號：SK12）。 3. 〈西貢南圍丈量約份第2...</description>
-      <category>考古</category>
       <pubDate>Wed, 15 Mar 2023 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<h2> 調查報告</h2>
 <ol>
@@ -1349,7 +1330,6 @@
       <guid>https://www.pasthk.com/archaeology/tung-lung-chau-sai-kung.html</guid>
       <source url="https://www.pasthk.com/rss.xml">西貢東龍洲</source>
       <description>調查報告 1. &amp;quot;Tung Lung Fort A Ch&amp;apos;ing Dynasty Fortification on Tung Lung Island, Hong Kong&amp;quot;, Hong Kong: Antiquities and Monuments Office, SK32. 2. 〈2016-2017東龍洲考古調查最終報告——東龍洲南堂考古調查報告（...</description>
-      <category>考古</category>
       <pubDate>Wed, 15 Mar 2023 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<h2> 調查報告</h2>
 <ol>
@@ -1369,7 +1349,6 @@
       <guid>https://www.pasthk.com/folkloristics/insects-waken/petty-person-beating.html</guid>
       <source url="https://www.pasthk.com/rss.xml">打小人</source>
       <description>新聞報道 1. 〈今日為驚蟄日　婦女膜拜道旁之怪狀〉，《工商晚報》，1937年3月6日，第4版 (https://mmis.hkpl.gov.hk/coverpage/-/coverpage/view?coverpageWARmmisportalportlethsf=%E9%A9%9A%E8%9F%84&amp;coverpageWARmmisportalpo...</description>
-      <category>民俗</category>
       <pubDate>Tue, 07 Mar 2023 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<h2> 新聞報道</h2>
 <ol>
@@ -1396,7 +1375,6 @@
       <guid>https://www.pasthk.com/folkloristics/insects-waken/</guid>
       <source url="https://www.pasthk.com/rss.xml">驚蟄</source>
       <description>祭白虎 (sacrifice-offering-to-the-white-tiger.md); 打小人 (petty-person-beating.md);</description>
-      <category>民俗</category>
       <pubDate>Tue, 07 Mar 2023 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<ul>
 <li><a href="/folkloristics/insects-waken/sacrifice-offering-to-the-white-tiger.html" target="blank">祭白虎</a></li>
@@ -1410,7 +1388,6 @@
       <guid>https://www.pasthk.com/folkloristics/insects-waken/sacrifice-offering-to-the-white-tiger.html</guid>
       <source url="https://www.pasthk.com/rss.xml">祭白虎</source>
       <description>新聞報道 1. 〈驚蟄虎口開　「虎倀大肆活動」〉，《工商晚報》，1948年3月6日，第4頁 (https://mmis.hkpl.gov.hk/coverpage/-/coverpage/view?coverpageWARmmisportalportlethsf=%E9%A9%9A%E8%9F%84&amp;prp-1078056564c=QF757YsWv5...</description>
-      <category>民俗</category>
       <pubDate>Tue, 07 Mar 2023 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<h2> 新聞報道</h2>
 <ol>
@@ -1425,7 +1402,6 @@
       <guid>https://www.pasthk.com/archaeology/lau-fau-shan-yuan-long.html</guid>
       <source url="https://www.pasthk.com/rss.xml">元朗流浮山</source>
       <description>調查報告 1. 〈流浮山具考古研究價值的地點〉（香港：古物古蹟辦事處檔案，編號：AM96-0647）。 2. 〈2001年流浮山坑口村擬修建水渠工地考古調查及評估報告〉（香港：古物古蹟辦事處檔案，編號：AM96-0647）。</description>
-      <category>考古</category>
       <pubDate>Sun, 26 Feb 2023 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<h2> 調查報告</h2>
 <ol>
@@ -1440,7 +1416,6 @@
       <guid>https://www.pasthk.com/folkloristics/dragon-boat-festival/</guid>
       <source url="https://www.pasthk.com/rss.xml">端午節</source>
       <description>1. 〈端午節本港之見聞〉，《工商晚報》，1933年5月29日，第4版 (https://mmis.hkpl.gov.hk/coverpage/-/coverpage/view?coverpageWARmmisportalportlethsf=%E7%AB%AF%E5%8D%88&amp;prp-1078056564c=QF757YsWv5%2FH7zGe%2...</description>
-      <category>民俗</category>
       <pubDate>Sun, 26 Feb 2023 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<ol>
 <li>〈端午節本港之見聞〉，《工商晚報》，1933年5月29日，<a href="https://mmis.hkpl.gov.hk/coverpage/-/coverpage/view?_coverpage_WAR_mmisportalportlet_hsf=%E7%AB%AF%E5%8D%88&amp;p_r_p_-1078056564_c=QF757YsWv5%2FH7zGe%2FKF%2BFHtuMhw1SK02&amp;_coverpage_WAR_mmisportalportlet_o=35&amp;_coverpage_WAR_mmisportalportlet_actual_q=%28%20verbatim_dc.collection%3A%28%22Old%5C%20HK%5C%20Newspapers%22%29%20%29%20AND+%28%20%28%20allTermsMandatory%3A%28true%29%20OR+all_dc.title%3A%28%E7%AB%AF%E5%8D%88%29%20OR+all_dc.creator%3A%28%E7%AB%AF%E5%8D%88%29%20OR+all_dc.contributor%3A%28%E7%AB%AF%E5%8D%88%29%20OR+all_dc.subject%3A%28%E7%AB%AF%E5%8D%88%29%20OR+fulltext%3A%28%E7%AB%AF%E5%8D%88%29%20OR+all_dc.description%3A%28%E7%AB%AF%E5%8D%88%29%20%29%20%29&amp;_coverpage_WAR_mmisportalportlet_sort_order=asc&amp;_coverpage_WAR_mmisportalportlet_sort_field=dc.publicationdate_bsort" target="_blank" rel="noopener noreferrer">第4版</a>。</li>
@@ -1466,7 +1441,6 @@
       <guid>https://www.pasthk.com/folkloristics/yu-lan-festival/</guid>
       <source url="https://www.pasthk.com/rss.xml">盂蘭勝會</source>
       <description>1. 〈籌備省港盂蘭大會紀聞〉，《工商日報》，1931年7月3日，第3張第3版 (https://mmis.hkpl.gov.hk/coverpage/-/coverpage/view?coverpageWARmmisportalportlethsf=%E7%9B%82%E8%98%AD&amp;prp-1078056564c=QF757YsWv5%2BgO%...</description>
-      <category>民俗</category>
       <pubDate>Sun, 26 Feb 2023 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<ol>
 <li>〈籌備省港盂蘭大會紀聞〉，《工商日報》，1931年7月3日，<a href="https://mmis.hkpl.gov.hk/coverpage/-/coverpage/view?_coverpage_WAR_mmisportalportlet_hsf=%E7%9B%82%E8%98%AD&amp;p_r_p_-1078056564_c=QF757YsWv5%2BgO%2FPMVI16yezIo1oc62wq&amp;_coverpage_WAR_mmisportalportlet_o=17&amp;_coverpage_WAR_mmisportalportlet_actual_q=%28%20verbatim_dc.collection%3A%28%22Old%5C%20HK%5C%20Newspapers%22%29%20%29%20AND+%28%20%28%20allTermsMandatory%3A%28true%29%20OR+all_dc.title%3A%28%E7%9B%82%E8%98%AD%29%20OR+all_dc.creator%3A%28%E7%9B%82%E8%98%AD%29%20OR+all_dc.contributor%3A%28%E7%9B%82%E8%98%AD%29%20OR+all_dc.subject%3A%28%E7%9B%82%E8%98%AD%29%20OR+fulltext%3A%28%E7%9B%82%E8%98%AD%29%20OR+all_dc.description%3A%28%E7%9B%82%E8%98%AD%29%20%29%20%29&amp;_coverpage_WAR_mmisportalportlet_sort_order=asc&amp;_coverpage_WAR_mmisportalportlet_sort_field=dc.publicationdate_bsort" target="_blank" rel="noopener noreferrer">第3張第3版</a>。</li>
@@ -1487,7 +1461,6 @@
       <guid>https://www.pasthk.com/folkloristics/fire-dragon-dance/pok-fu-lam-fire-dragon-dance.html</guid>
       <source url="https://www.pasthk.com/rss.xml">薄扶林舞火龍</source>
       <description>新聞報道 網上資料 1. 〈薄扶林村舞火龍 (https://www.hkichdb.gov.hk/zht/item.html?98d69ccd-7a5d-4a62-81ef-ebbf9b8e31f1)〉，香港非物質文化遺產資料庫。 2. 〈中秋節——薄扶林舞火龍 (https://www.lcsd.gov.hk/CE/Museum/ICHO/zhTW...</description>
-      <category>民俗</category>
       <pubDate>Sat, 25 Feb 2023 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<h2> 新聞報道</h2>
 <h2> 網上資料</h2>
@@ -1503,7 +1476,6 @@
       <guid>https://www.pasthk.com/folkloristics/fire-dragon-dance/</guid>
       <source url="https://www.pasthk.com/rss.xml">舞火龍</source>
       <description>大坑舞火龍 (tai-hang-fire-dragon-dance.md); 薄扶林舞火龍 (pok-fu-lam-fire-dragon-dance.md);</description>
-      <category>民俗</category>
       <pubDate>Sat, 25 Feb 2023 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<ul>
 <li><a href="/folkloristics/fire-dragon-dance/tai-hang-fire-dragon-dance.html" target="blank">大坑舞火龍</a></li>
@@ -1517,7 +1489,6 @@
       <guid>https://www.pasthk.com/folkloristics/fire-dragon-dance/tai-hang-fire-dragon-dance.html</guid>
       <source url="https://www.pasthk.com/rss.xml">大坑舞火龍</source>
       <description>新聞報道 1. 〈大坑村今晚大舞火龍〉，《工商晚報》，1932年9月14日，第4頁 (https://mmis.hkpl.gov.hk/coverpage/-/coverpage/view?coverpageWARmmisportalportlethsf=舞火龍&amp;prp-1078056564c=QF757YsWv5%2FH7zGe%2FKF%2BFHh...</description>
-      <category>民俗</category>
       <pubDate>Sat, 25 Feb 2023 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<h2> 新聞報道</h2>
 <ol>
@@ -1543,7 +1514,6 @@
       <guid>https://www.pasthk.com/archaeology/tung-wan-tsai-north-ma-wan-island-tsuen-wan.html</guid>
       <source url="https://www.pasthk.com/rss.xml">荃灣馬灣島東灣仔北遺址</source>
       <description>發掘報告 1. 中國社會科學院考古研究所、香港古物古蹟辦事處：〈香港馬灣島東灣仔北史前遺址發掘簡報〉，《考古》，1997年第6期，頁1-17。 新聞報道 1. 〈東灣仔北遺址發掘獲選九七年中國十大重要考古發現 (https://www.info.gov.hk/isd/news/dib/c0307.htm)〉（香港：政府新聞處，1998年3月7日）。 2...</description>
-      <category>考古</category>
       <pubDate>Thu, 23 Feb 2023 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<h2> 發掘報告</h2>
 <ol>
@@ -1570,7 +1540,6 @@
       <guid>https://www.pasthk.com/archaeology/yung-long-tun-mun.html</guid>
       <source url="https://www.pasthk.com/rss.xml">屯門湧浪遺址</source>
       <description>調查報告 1. &amp;quot;Report on the Archaeological Investigation of Yung Long South 1992-1993 (I)&amp;quot;, Hong Kong: Antiquities and Monuments Office, TM47. 2. &amp;quot;Report on the Archaeological Invest...</description>
-      <category>考古</category>
       <pubDate>Sun, 19 Feb 2023 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<h2> 調查報告</h2>
 <ol>
@@ -1599,7 +1568,6 @@
       <guid>https://www.pasthk.com/museology/</guid>
       <source url="https://www.pasthk.com/rss.xml">博物館</source>
       <description>資料庫康樂及文化事務署博物館藏品目錄檢索 (https://mcms.lcsd.gov.hk/Search/search/enquire?&amp;requestlocale=zhHK);</description>
-      <category>文化</category>
       <pubDate>Thu, 19 Jan 2023 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<h2> 資料庫</h2>
 <ul>
@@ -1613,7 +1581,6 @@
       <guid>https://www.pasthk.com/folkloristics/jiao-festival/cheung-chau-jiao-festival.html</guid>
       <source url="https://www.pasthk.com/rss.xml">長洲太平清醮</source>
       <description>新聞報道 1. 〈長洲踏上繁榮之途　一年一度的太平清醮異常熱鬧〉，《工商晚報》，1951年5月18日，第4頁 (https://mmis.hkpl.gov.hk/coverpage/-/coverpage/view?coverpageWARmmisportalportlethsf=清醮&amp;prp-1078056564c=QF757YsWv5%2FH7zG...</description>
-      <category>民俗</category>
       <pubDate>Fri, 17 Feb 2023 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<h2> 新聞報道</h2>
 <ol>
@@ -1739,7 +1706,6 @@
       <guid>https://www.pasthk.com/folkloristics/jiao-festival/</guid>
       <source url="https://www.pasthk.com/rss.xml">打醮</source>
       <description>大埔泰亨鄉太平清醮 (tai-hang-heung-jiao-festival.md); 屏山沙江圍太平清醮 (sha-kong-wai-jiao-festival.md); 西貢糧船灣太平清醮 (high-land-jiao-festival.md); 長洲太平清醮 (cheung-chau-jiao-festival.md);</description>
-      <category>民俗</category>
       <pubDate>Mon, 16 Jan 2023 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<ul>
 <li>大埔<a href="/folkloristics/jiao-festival/tai-hang-heung-jiao-festival.html" target="blank">泰亨鄉太平清醮</a></li>
@@ -1755,7 +1721,6 @@
       <guid>https://www.pasthk.com/meteorology/tropical-cyclone/1940s.html</guid>
       <source url="https://www.pasthk.com/rss.xml">1940年代</source>
       <description>1940年 1941年 1942年 1943年 1944年 1945年 1946年 無名 Unnamed 1 1. 〈今夜可能颶風襲港　居民注意風球變動　海傍小艇已紛紛駛入避風塘內〉，《工商晚報》，1946年7月17日，第4頁 (https://mmis.hkpl.gov.hk/coverpage/-/coverpage/view?coverpageW...</description>
-      <category>熱帶氣旋</category>
       <pubDate>Thu, 16 Feb 2023 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<h2> 1940年</h2>
 <h2> 1941年</h2>
@@ -2151,7 +2116,6 @@
       <guid>https://www.pasthk.com/meteorology/tropical-cyclone/1950s.html</guid>
       <source url="https://www.pasthk.com/rss.xml">1950年代</source>
       <description>1950年 無名 Unnamed 1待查; 無名 Unnamed 2 1. 〈今年首次出現風球　昨在南方海面發現一股颶風　已向西方吹去不會進襲香港〉，《大公報》，1950年7月27日，第1張；第4版 (https://mmis.hkpl.gov.hk/coverpage/-/coverpage/view?coverpageWARmmisportalp...</description>
-      <category>熱帶氣旋</category>
       <pubDate>Thu, 16 Feb 2023 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<h2> 1950年</h2>
 <h3> 無名 Unnamed 1</h3>
@@ -2762,7 +2726,6 @@
       <guid>https://www.pasthk.com/meteorology/tropical-cyclone/1960s.html</guid>
       <source url="https://www.pasthk.com/rss.xml">1960年代</source>
       <description>1960年 瑪麗 Mary 奧麗芙 Olive 無名 Unnamed 戴莉斯 Trix 愛娜斯 Agnes 伊蘭 Elaine 艾瑪 Irma 吉蒂 Kit 露娜 Lola 1961年 愛麗斯 Alice 桃麗斯 Doris 愛茜 Elsie 霍蘿茜 Flossie 奧嘉 Olga 莎莉 Sally 1962年 無名 Unnamed 姬蒂 Kate 溫...</description>
-      <category>熱帶氣旋</category>
       <pubDate>Thu, 16 Feb 2023 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<h2> 1960年</h2>
 <h3> 瑪麗 Mary</h3>
@@ -3066,7 +3029,6 @@
       <guid>https://www.pasthk.com/meteorology/tropical-cyclone/1970s.html</guid>
       <source url="https://www.pasthk.com/rss.xml">1970年代</source>
       <description>1970年 露比 Ruby 無名 Unnamed 維奧莉 Violet 喬治亞 Georgia 愛莉斯 Iris 鐘茵 Joan 1971年 戴娜 Dinah 法妮黛 Freda 潔黛 Gilda 夏麗 Harriet 露茜 Lucy 妮艼 Nadine 露絲 Rose 黛娜 Della 伊蘭 Elaine 1972年 無名 Unnamed 奧娜 Or...</description>
-      <category>熱帶氣旋</category>
       <pubDate>Thu, 16 Feb 2023 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<h2> 1970年</h2>
 <h3> 露比 Ruby</h3>
@@ -3176,7 +3138,6 @@
       <guid>https://www.pasthk.com/meteorology/tropical-cyclone/1980s.html</guid>
       <source url="https://www.pasthk.com/rss.xml">1980年代</source>
       <description>1980年 喬治亞 Georgia 赫伯特 Herbert 艾黛 Ida 無名 Unnamed 1 喬伊 Joe 甘茵 Kim 無名 Unnamed 2 露芙 Ruth 珀西 Percy 卡里 Cary 1981年 艾克 Ike 凱利 Kelly 林茵 Lynn 羅伊 Roy 嘉麗 Clara 1982年 戴絲 Tess 雲璐娜 Winona 安迪 A...</description>
-      <category>熱帶氣旋</category>
       <pubDate>Thu, 16 Feb 2023 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<h2> 1980年</h2>
 <h3> 喬治亞 Georgia</h3>
@@ -3256,7 +3217,6 @@
       <guid>https://www.pasthk.com/meteorology/tropical-cyclone/1990s.html</guid>
       <source url="https://www.pasthk.com/rss.xml">1990年代</source>
       <description>1990年 瑪麗安 Marian 1. 〈「瑪麗安」過門不入　三號強風訊號卸下〉，《華僑日報》，1990年5月19日，第1頁 (https://mmis.hkpl.gov.hk/coverpage/-/coverpage/view?coverpageWARmmisportalportlethsf=颱風&amp;prp-1078056564c=QF757YsWv...</description>
-      <category>熱帶氣旋</category>
       <pubDate>Thu, 16 Feb 2023 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<h2> 1990年</h2>
 <h3> 瑪麗安 Marian</h3>
@@ -3299,7 +3259,6 @@
       <guid>https://www.pasthk.com/meteorology/tropical-cyclone/</guid>
       <source url="https://www.pasthk.com/rss.xml">熱帶氣旋</source>
       <description>參考資料： 1. 1917-1941年香港熱帶氣旋警告信號歷史記錄 (https://www.hko.gov.hk/tc/informtc/tcsignaldb/index.html) 2. 熱帶氣旋警告信號 (https://www.hko.gov.hk/tc/wxinfo/climat/warndb/warndb1.shtml)（注：1946年...</description>
-      <category>自然</category>
       <pubDate>Thu, 19 Jan 2023 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<blockquote>
 <p>參考資料：</p>
@@ -3339,7 +3298,6 @@
       <guid>https://www.pasthk.com/archaeology/wong-chuk-hang-hong-kong-island.html</guid>
       <source url="https://www.pasthk.com/rss.xml">香港黃竹坑遺址</source>
       <description>調查報告 1. 〈香港仔黃竹坑加氣站選址考古調查報告〉（香港：古物古蹟辦事處檔案，編號：HKI3）。</description>
-      <category>考古</category>
       <pubDate>Thu, 26 Jan 2023 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<h2> 調查報告</h2>
 <ol>
@@ -3368,7 +3326,6 @@
       <guid>https://www.pasthk.com/archaeology/lung-kwu-sheung-tan-tuen-mun.html</guid>
       <source url="https://www.pasthk.com/rss.xml">屯門龍鼓上灘遺址</source>
       <description>調查報告 1. 〈龍鼓上灘具考古研究價值的地點〉（香港：古物古蹟辦事處檔案，編號：AM78-0209）。 發掘報告 1. &amp;quot;Report on Salvage Excavations at Lung Kwu Sheung Tan 1990&amp;quot;, Hong Kong: Antiquities and Monuments Office, TM46. 新聞報道...</description>
-      <category>考古</category>
       <pubDate>Wed, 25 Jan 2023 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<h2> 調查報告</h2>
 <ol>
@@ -3390,7 +3347,6 @@
       <guid>https://www.pasthk.com/archaeology/kowloon-walled-city-kowloon.html</guid>
       <source url="https://www.pasthk.com/rss.xml">九龍寨城遺址</source>
       <description>調查報告 1. &amp;quot;Report on Archaeological Investigation at Kowloon Walled City, Hong Kong&amp;quot;, Hong Kong: Antiquities and Monuments Office, KL1. 2. &amp;quot;Report on Archaeological Investigations...</description>
-      <category>考古</category>
       <pubDate>Fri, 20 Jan 2023 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<h2> 調查報告</h2>
 <ol>
@@ -3417,7 +3373,6 @@
       <guid>https://www.pasthk.com/archaeology/lung-tsun-stone-bridge-kowloon.html</guid>
       <source url="https://www.pasthk.com/rss.xml">九龍龍津石橋</source>
       <description>調查報告 1. 〈龍津石橋〉（香港：古物古蹟辦事處檔案，編號：AM99-1458）。 2. &amp;quot;Report on Archaeological Investigations at Kowloon Walled City, Hong Kong (Phase Ⅲ)&amp;quot;, Hong Kong: Antiquities and Monuments Office,...</description>
-      <category>考古</category>
       <pubDate>Fri, 20 Jan 2023 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<h2> 調查報告</h2>
 <ol>
@@ -3448,7 +3403,6 @@
       <guid>https://www.pasthk.com/archaeology/tai-wan-site-po-toi.html</guid>
       <source url="https://www.pasthk.com/rss.xml">蒲台島大灣遺址</source>
       <description>調查報告 1. 〈大灣（蒲台島）具考古研究價值的地點〉（香港：古物古蹟辦事處檔案，編號：AM90-0445）。</description>
-      <category>考古</category>
       <pubDate>Fri, 20 Jan 2023 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<h2> 調查報告</h2>
 <ol>
@@ -3462,7 +3416,6 @@
       <guid>https://www.pasthk.com/database/toolkit.html</guid>
       <source url="https://www.pasthk.com/rss.xml">工具集</source>
       <description>中國近代海關機構職銜名稱英漢對照 (http://archdtsu.mh.sinica.edu.tw/imhkmh/images/namelist1.htm); 中央研究院兩千年中西曆轉換 (https://sinocal.sinica.edu.tw/); 漢英法律詞彙 (https://www.glossary.doj.gov.hk/index....</description>
-      <category>資料庫</category>
       <pubDate>Thu, 19 Jan 2023 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<ul>
 <li><a href="http://archdtsu.mh.sinica.edu.tw/imhkmh/images/namelist1.htm" target="_blank" rel="noopener noreferrer">中國近代海關機構職銜名稱英漢對照</a></li>
@@ -3493,7 +3446,6 @@
       <guid>https://www.pasthk.com/archaeology/lung-kwu-tan-tuen-mun.html</guid>
       <source url="https://www.pasthk.com/rss.xml">屯門龍鼓灘遺址</source>
       <description>調查報告 1. 〈龍鼓灘具考古研究價值的地點〉（香港：古物古蹟辦事處檔案，編號：AM78-0208）。 2. &amp;quot;Auger survey of Lung Kwu Tan&amp;quot;, Hong Kong: Antiquities and Monuments Office, TM3. 3. 〈屯門龍鼓灘遺址一九九九年十一月敷設電話工程考古調查報告〉（香港：古物古蹟...</description>
-      <category>考古</category>
       <pubDate>Thu, 19 Jan 2023 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<h2> 調查報告</h2>
 <ol>
@@ -3530,7 +3482,6 @@
       <guid>https://www.pasthk.com/religious-studies/buddhism.html</guid>
       <source url="https://www.pasthk.com/rss.xml">佛教</source>
       <description>新聞報道 1. 〈佛教同人　超度焚斃者〉，《工商日報》，1947年2月13日，第3頁 (https://mmis.hkpl.gov.hk/coverpage/-/coverpage/view?coverpageWARmmisportalportlethsf=%E4%BD%9B%E6%95%99&amp;prp-1078056564c=QF757YsWv5%2B...</description>
-      <category>宗教</category>
       <pubDate>Thu, 19 Jan 2023 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<h2> 新聞報道</h2>
 <ol>
@@ -3579,7 +3530,6 @@
       <guid>https://www.pasthk.com/religious-studies/catholicism.html</guid>
       <source url="https://www.pasthk.com/rss.xml">天主教</source>
       <description>專著 1. 阮志偉主編，余嘉浩、許家朗、敖子亮著述：《先賢之路：西貢天主教傳教史》（香港：中華書局，2021年）。</description>
-      <category>宗教</category>
       <pubDate>Thu, 19 Jan 2023 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<h2> 專著</h2>
 <ol>
@@ -3593,7 +3543,6 @@
       <guid>https://www.pasthk.com/religious-studies/christianity.html</guid>
       <source url="https://www.pasthk.com/rss.xml">基督教</source>
       <description>專著 1. 劉粵聲：《香港基都教會史》（香港：香港浸信教會，1941年）。 2. 邢福增：《香港基督教史研究導論》（香港：建道神學院，2004年）。 3. 邢福增：《此世與他世之間——香港基督教墳場的歷史與文化》（香港：基督教文藝出版社，2012年）。 4. 劉紹麟：《解碼香港基督教與社會脈絡——香港教會與社會的宏觀互動》（香港：基督教文藝出版社，20...</description>
-      <category>宗教</category>
       <pubDate>Thu, 19 Jan 2023 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<h2> 專著</h2>
 <ol>
@@ -3615,7 +3564,6 @@
       <guid>https://www.pasthk.com/religious-studies/</guid>
       <source url="https://www.pasthk.com/rss.xml">宗教研究</source>
       <description>專題佛教 (buddhism.md); 道教 (taoism.md); 基督教 (christianity.md); 天主教 (catholicism.md); 伊斯蘭教;</description>
-      <category>宗教</category>
       <pubDate>Thu, 19 Jan 2023 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<h2> 專題</h2>
 <ul>
@@ -3633,7 +3581,6 @@
       <guid>https://www.pasthk.com/religious-studies/taoism.html</guid>
       <source url="https://www.pasthk.com/rss.xml">道教</source>
       <description>專著 1. 游子安：《道風百年——香港道教與道觀》（香港：利文出版社，2002年）。 2. 志賀市子著，宋軍譯：《香港道教與扶乩信仰——歷史與認同》（香港：香港中文大學出版社，2013年）。 資料庫道教文化中心資料庫 (https://zh.daoinfo.org/) FYSK Daoist Culture Centre Database;</description>
-      <category>宗教</category>
       <pubDate>Thu, 19 Jan 2023 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<h2> 專著</h2>
 <ol>
@@ -3651,7 +3598,6 @@
       <link>https://www.pasthk.com/geology/</link>
       <guid>https://www.pasthk.com/geology/</guid>
       <source url="https://www.pasthk.com/rss.xml">地質</source>
-      <category>自然</category>
       <pubDate>Thu, 19 Jan 2023 00:00:00 GMT</pubDate>
     </item>
     <item>
@@ -3660,7 +3606,6 @@
       <guid>https://www.pasthk.com/meteorology/</guid>
       <source url="https://www.pasthk.com/rss.xml">氣象</source>
       <description>專題熱帶氣旋 (/meteorology/tropical-cyclone/README.md); 專著 1. 香港天文台：《基礎氣象知識》（香港：香港特別行政區新聞處，2007年）。 2. 蔡思行、梁榮武：《香港颱風故事》（香港：中華書局，2014年）。 3. 方志剛：《天氣其實不難懂（增訂版）》（香港：花千樹出版有限公司，2020年）。 4. 香...</description>
-      <category>自然</category>
       <pubDate>Thu, 19 Jan 2023 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<h2> 專題</h2>
 <ul>
@@ -3683,7 +3628,6 @@
       <guid>https://www.pasthk.com/archaeology/sha-ha-sai-kung.html</guid>
       <source url="https://www.pasthk.com/rss.xml">西貢沙下遺址</source>
       <description>調查報告 1. 〈沙下具考古研究價值的地點〉（香港：古物古蹟辦事處檔案，編號：AM96-0767）。 2. 〈西貢沙下（Sha Ha）遺址考古調查中期報告〉（香港：古物古蹟辦事處檔案，編號：SK6）。 3. &amp;quot;Landscape Archaeological at Sha Ha, Sai Kung, East New Territories, Hong...</description>
-      <category>考古</category>
       <pubDate>Wed, 18 Jan 2023 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<h2> 調查報告</h2>
 <ol>
@@ -3723,7 +3667,6 @@
       <guid>https://www.pasthk.com/archaeology/so-kwun-wat-tuen-mun.html</guid>
       <source url="https://www.pasthk.com/rss.xml">屯門掃管笏遺址</source>
       <description>調查報告 1. 〈掃管笏具考古研究價值的地點〉（香港：古物古蹟辦事處檔案，編號：AM77-0045）。 2. 〈掃管笏寶龍軍營具考古研究價值的地點〉（香港：古物古蹟辦事處檔案，編號：AM98-0925）。 3. &amp;quot;Report of Archaeological Survey at So Kwun Wat, Tuen Mun 1997&amp;quot;, Hong K...</description>
-      <category>考古</category>
       <pubDate>Wed, 18 Jan 2023 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<h2> 調查報告</h2>
 <ol>
@@ -3768,7 +3711,6 @@
       <guid>https://www.pasthk.com/archaeology/chung-hom-wan-hong-kong-island.html</guid>
       <source url="https://www.pasthk.com/rss.xml">香港舂坎灣遺址</source>
       <description>調查報告 1. 〈舂坎灣具考古研究價值的地點〉（香港：古物古蹟辦事處檔案，編號：AM77-0054）。</description>
-      <category>考古</category>
       <pubDate>Wed, 18 Jan 2023 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<h2> 調查報告</h2>
 <ol>
@@ -3782,7 +3724,6 @@
       <guid>https://www.pasthk.com/database/archive.html</guid>
       <source url="https://www.pasthk.com/rss.xml">歷史檔案</source>
       <description>1.	Archive in Margaret Thatcher Foundation 2.	Frank Fischbeck珍藏集 3.	Hong Kong and the West until 1860 4.	Hong Kong Government Reports Online, 1842-1941 5.	Hong Kong, Britain and...</description>
-      <category>資料庫</category>
       <pubDate>Wed, 18 Jan 2023 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<ol>
 <li>Archive in Margaret Thatcher Foundation</li>
@@ -3814,7 +3755,6 @@
       <guid>https://www.pasthk.com/database/</guid>
       <source url="https://www.pasthk.com/rss.xml">資料庫</source>
       <description>工具集 (toolkit.md); 檔案 (archive.md); 報章; 香港舊報紙 (newspaper/old-hk-newspapers.md); South China Morning Post (newspaper/south-china-morning-post.md); Chinese Newspapers Collecti...</description>
-      <category>資料庫</category>
       <pubDate>Wed, 18 Jan 2023 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<ul>
 <li><a href="/database/toolkit.html" target="blank">工具集</a></li>
@@ -3835,7 +3775,6 @@
       <guid>https://www.pasthk.com/archaeology/wong-tei-tung-sai-kung.html</guid>
       <source url="https://www.pasthk.com/rss.xml">西貢黃地峒遺址</source>
       <description>調查報告 1. 〈黃地峒具考古研究價值的地點〉（香港：古物古蹟辦事處檔案，編號：AM06-0006/A）。 2. 〈西貢深涌黃地峒考古調查進度報告〉（香港：古物古蹟辦事處檔案，編號：SK33）。 3. 〈香港西貢深涌黃地峒遺址2004年度考古調查報告〉（香港：古物古蹟辦事處檔案，編號：SK34）。 4. 〈香港深涌黃地峒遺址2004年度考古調查光釋光測...</description>
-      <category>考古</category>
       <pubDate>Wed, 18 Jan 2023 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<h2> 調查報告</h2>
 <ol>
@@ -3861,7 +3800,6 @@
       <guid>https://www.pasthk.com/archaeology/junk-island-site-sai-kung.html</guid>
       <source url="https://www.pasthk.com/rss.xml">西貢佛頭洲遺址</source>
       <description>調查報告 1. 香港古物古蹟辦事處：〈香港佛頭洲遺址2004年考古調查簡報〉，《華夏考古》，2007年第4期，頁35-41，55。</description>
-      <category>考古</category>
       <pubDate>Mon, 16 Jan 2023 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<h2> 調查報告</h2>
 <ol>
@@ -3875,7 +3813,6 @@
       <guid>https://www.pasthk.com/archaeology/lei-cheng-uk-han-tomb-kowloon.html</guid>
       <source url="https://www.pasthk.com/rss.xml">九龍李鄭屋漢墓</source>
       <description>發掘報告 1. 屈志仁：《李鄭屋漢墓》（香港：香港市政局，1983年）。 2. 香港歷史博物館編：《李鄭屋漢墓》（香港：香港歷史博物館，2005年）。 3. 〈李鄭屋漢墓〉（香港：古物古蹟辦事處檔案，編號：AM77-0091）。 新聞報道 1. 〈李鄭屋村山坵發現古塚　塚内有陶器二十餘件　似是千五年前古物〉，《工商日報》，1955年8月10日，第5頁 ...</description>
-      <category>考古</category>
       <pubDate>Mon, 16 Jan 2023 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<h2> 發掘報告</h2>
 <ol>
@@ -3997,7 +3934,6 @@
       <guid>https://www.pasthk.com/archaeology/sacred-hill-site-kowloon.html</guid>
       <source url="https://www.pasthk.com/rss.xml">九龍聖山（宋皇臺）遺址</source>
       <description>資料來源： 1. 古物古蹟辦事處 2. 環境保護署 發掘報告 1. &amp;quot;Shatin to Central Link - Tai Wai and Hung Hom Section: Archaeological Action Plan for Sacred Hill (North) Works Contract 1109 - Stations and...</description>
-      <category>考古</category>
       <pubDate>Mon, 16 Jan 2023 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<blockquote>
 <p>資料來源：</p>
@@ -4047,7 +3983,6 @@
       <guid>https://www.pasthk.com/archaeology/tai-wan-site-lamma-island.html</guid>
       <source url="https://www.pasthk.com/rss.xml">南丫島大灣遺址</source>
       <description>調查報告 1. 〈香港考古發現5000年前居住遺跡〉，《中學地理教學參考》，1996年第6期，頁46）。 2. 〈大灣（南丫島）具考古研究價值的地點〉（香港：古物古蹟辦事處檔案，編號：AM77-0041）。 3. &amp;quot;Archaeological Survey for the Proposed &amp;quot;Sitting-out Area&amp;quot; at Tai Wan ...</description>
-      <category>考古</category>
       <pubDate>Mon, 16 Jan 2023 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<h2> 調查報告</h2>
 <ol>
@@ -4084,7 +4019,6 @@
       <guid>https://www.pasthk.com/archaeology/yearbook.html</guid>
       <source url="https://www.pasthk.com/rss.xml">考古學年鑒</source>
       <description>1. 〈考古發現 (https://www.yearbook.gov.hk/1998/cwww/23/2301/index.htm)〉，載《香港年報1998》。 2. 〈考古發現 (https://www.yearbook.gov.hk/1999/b5/23/23_01.htm)〉，載《香港年報1999》。 3. 〈西貢蠔湧新石器時代遺址〉，載《中國考...</description>
-      <category>考古</category>
       <pubDate>Mon, 16 Jan 2023 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<ol>
 <li>〈<a href="https://www.yearbook.gov.hk/1998/cwww/23/2301/index.htm" target="_blank" rel="noopener noreferrer">考古發現</a>〉，載《香港年報1998》。</li>
@@ -4102,7 +4036,6 @@
       <guid>https://www.pasthk.com/folkloristics/</guid>
       <source url="https://www.pasthk.com/rss.xml">民俗</source>
       <description>傳統習俗打醮 (jiao-festival/README.md); 舞火龍 (fire-dragon-dance/README.md); 傳統節慶端午節 (dragon-boat-festival/README.md); 盂蘭勝會 (yu-lan-festival/README.md); 專著 1. 蕭國健：《華南民俗文化研究》（香港：中華書局...</description>
-      <category>文化</category>
       <pubDate>Mon, 16 Jan 2023 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<h2> 傳統習俗</h2>
 <ul>
@@ -4126,7 +4059,6 @@
       <guid>https://www.pasthk.com/archaeology/news.html</guid>
       <source url="https://www.pasthk.com/rss.xml">新聞報道</source>
       <description>報道按日期舊至新排序。 東涌古城 1. 〈東涌有古城　建於嘉道間〉，《華僑日報》，1962年5月31日，第3張第2頁。東涌古城，高達逾丈，城牆雜草遍生，但富有歷史價值。; 東涌古城上置古炮六門，均為淸代嘉慶及道光期間所造，距今已有百餘年歷史。; 東龍堡 1. 〈東龍堡古跡修葺　局部已回復舊觀　考古學家兩年來展開全面工作 (https://mmis....</description>
-      <category>文化</category>
       <pubDate>Mon, 16 Jan 2023 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<blockquote>
 <p>報道按日期舊至新排序。</p>
@@ -4181,7 +4113,6 @@
       <guid>https://www.pasthk.com/archaeology/</guid>
       <source url="https://www.pasthk.com/rss.xml">考古學</source>
       <description>考古遺址 ::: tabs tab 綜合 1. 陳公哲：〈香港考古發掘〉，《考古學報》1957年第4期，第1-16頁。 2. 〈第二次全港考古調查工作述評〉（香港：古物古蹟辦事處檔案，編號：ID23）。 3. &amp;quot;Report of the Hong Kong Archaeological Survey Volume I An Introduction ...</description>
-      <category>考古</category>
       <pubDate>Sun, 15 Jan 2023 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<h2> 考古遺址</h2>
 
@@ -4199,7 +4130,6 @@
       <guid>https://www.pasthk.com/archaeology/research.html</guid>
       <source url="https://www.pasthk.com/rss.xml">專題研究</source>
       <description>通論 1. 楊式挺：〈香港與廣東大陸的歷史關係——赴港考古印象記〉，《嶺南文史》，1983年第2期，頁12-16。 2. 安志敏：〈對香港考古學的幾點認識〉，《文物》，1995年第7期，頁64-68。 3. 商志（香覃）、吳偉鴻：〈香港考古學發展史簡論（上）（1921-1996）〉，《考古與文物》，1997年第2期，頁39-55。 4. 商志（香覃）、...</description>
-      <category>考古</category>
       <pubDate>Mon, 16 Jan 2023 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<h2> 通論</h2>
 <ol>
@@ -4251,39 +4181,12 @@
       <guid>https://www.pasthk.com/archaeology/seminar.html</guid>
       <source url="https://www.pasthk.com/rss.xml">研討會</source>
       <description>1. 〈夏文化研討會昨在中大舉行　教授及講師作專題論述〉，《大公報》，1982年4月29日，第2張；第6版 (https://mmis.hkpl.gov.hk/coverpage/-/coverpage/view?coverpageWARmmisportalportlethsf=夏文化研討會&amp;coverpageWARmmisportalportleta...</description>
-      <category>文化</category>
       <pubDate>Sun, 15 Jan 2023 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<ol>
 <li>〈夏文化研討會昨在中大舉行　教授及講師作專題論述〉，《大公報》，1982年4月29日，<a href="https://mmis.hkpl.gov.hk/coverpage/-/coverpage/view?_coverpage_WAR_mmisportalportlet_hsf=%E5%A4%8F%E6%96%87%E5%8C%96%E7%A0%94%E8%A8%8E%E6%9C%83&amp;_coverpage_WAR_mmisportalportlet_actual_q=%28%20verbatim_dc.collection%3A%28%22Old%5C%20HK%5C%20Newspapers%22%29%20%29%20AND+%28%20%28%20allTermsMandatory%3A%28true%29%20OR+all_dc.title%3A%28%E5%A4%8F%E6%96%87%E5%8C%96%E7%A0%94%E8%A8%8E%E6%9C%83%29%20OR+all_dc.creator%3A%28%E5%A4%8F%E6%96%87%E5%8C%96%E7%A0%94%E8%A8%8E%E6%9C%83%29%20OR+all_dc.contributor%3A%28%E5%A4%8F%E6%96%87%E5%8C%96%E7%A0%94%E8%A8%8E%E6%9C%83%29%20OR+all_dc.subject%3A%28%E5%A4%8F%E6%96%87%E5%8C%96%E7%A0%94%E8%A8%8E%E6%9C%83%29%20OR+fulltext%3A%28%E5%A4%8F%E6%96%87%E5%8C%96%E7%A0%94%E8%A8%8E%E6%9C%83%29%20OR+all_dc.description%3A%28%E5%A4%8F%E6%96%87%E5%8C%96%E7%A0%94%E8%A8%8E%E6%9C%83%29%20%29%20%29&amp;_coverpage_WAR_mmisportalportlet_sort_field=score&amp;p_r_p_-1078056564_c=QF757YsWv59H%2FuxqfBwEJMQ8UribarfT&amp;_coverpage_WAR_mmisportalportlet_o=0&amp;_coverpage_WAR_mmisportalportlet_sort_order=desc" target="_blank" rel="noopener noreferrer">第2張；第6版</a>。</li>
 <li>〈中大召開夏文化研討會——鄭德坤、饒宗頤、嚴耕望等八學者作專題論述，林晉壽主持〉，《大公報》，1982年5月17日，第4張。</li>
 <li>〈文物保護與南中國史前考古國際研討會在香港召開〉，《中國文物報》，2008年1月2日，第002版。</li>
 </ol>
-]]></content:encoded>
-    </item>
-    <item>
-      <title>關於</title>
-      <link>https://www.pasthk.com/about.html</link>
-      <guid>https://www.pasthk.com/about.html</guid>
-      <source url="https://www.pasthk.com/rss.xml">關於</source>
-      <description>這是一個興趣使然的課餘項目，意在搜集和整理香港自然史、文化史、藝術史等各類研究文獻，並製作成資料索引集，供大家使用。歡迎大家轉載、分享。 中文文獻格式參考《香港大學中文學報 (https://www.hkujcs.hku.hk/style-sheet-chinese)》。英文文獻統一使用APA格式。 資料主要來源（排名不分先後）：香港公共圖書館多媒體...</description>
-      <pubDate>Fri, 20 Jan 2023 00:00:00 GMT</pubDate>
-      <content:encoded><![CDATA[<p>這是一個興趣使然的課餘項目，意在搜集和整理香港自然史、文化史、藝術史等各類研究文獻，並製作成資料索引集，供大家使用。歡迎大家轉載、分享。</p>
-<p>中文文獻格式參考《<a href="https://www.hkujcs.hku.hk/style-sheet-chinese" target="_blank" rel="noopener noreferrer">香港大學中文學報</a>》。英文文獻統一使用APA格式。</p>
-<p>資料主要來源（排名不分先後）：</p>
-<ul>
-<li>香港公共圖書館多媒體資訊系統：<a href="https://mmis.hkpl.gov.hk/zh/old-hk-collection" target="_blank" rel="noopener noreferrer">香港舊報紙</a></li>
-<li>香港古物古蹟辦事處參考圖書館：<a href="https://lms.amo.gov.hk/hk" target="_blank" rel="noopener noreferrer">網上圖書館目錄</a></li>
-</ul>
-<p>項目成員：</p>
-<ul>
-<li>北京大學考古文博學院考古系在讀博士生吳某</li>
-<li>香港中文大學文學院歷史系在讀本科生鄺某</li>
-</ul>
-<p>特別鳴謝：</p>
-<ul>
-<li>南方科技大學人文社科學院社會科學中心研究助理王某</li>
-</ul>
-<p>如有任何想法，歡迎電郵至<a href="mailto:pasthk@outlook.com">pasthk@outlook.com</a>。</p>
 ]]></content:encoded>
     </item>
   </channel>

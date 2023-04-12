@@ -1,6 +1,5 @@
 ---
 title: 驚蟄
-category: 民俗
 index: false
 date: 2023-03-07
 ---

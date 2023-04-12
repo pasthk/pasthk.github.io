@@ -1,6 +1,5 @@
 ---
 title: 研討會
-category: 文化
 order: -3
 date: 2023-01-15
 ---

@@ -1,6 +1,5 @@
 ---
 title: 大會堂美術博物館
-category: 文化
 date: 2023-04-02
 ---
 <adsense></adsense>

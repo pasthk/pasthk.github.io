@@ -1,6 +1,5 @@
 ---
 title: Chinese Newspapers Collection
-category: 資料庫
 date: 2023-03-24
 ---
 <adsense></adsense>

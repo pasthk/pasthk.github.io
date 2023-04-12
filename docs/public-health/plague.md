@@ -1,6 +1,5 @@
 ---
 title: 鼠疫
-category: 公共衛生
 date: 2023-04-12
 ---
 <adsense></adsense>

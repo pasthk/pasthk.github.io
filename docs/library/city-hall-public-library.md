@@ -1,6 +1,5 @@
 ---
 title: 大會堂公共圖書館
-category: 文化
 date: 2023-03-31
 ---
 <adsense></adsense>

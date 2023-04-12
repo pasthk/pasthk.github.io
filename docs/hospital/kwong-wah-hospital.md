@@ -1,6 +1,5 @@
 ---
 title: 廣華醫院
-category: 醫療
 date: 2023-04-04
 ---
 <adsense></adsense>

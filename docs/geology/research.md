@@ -1,6 +1,5 @@
 ---
 title: 專題研究
-category: 自然
 date: 2023-04-05
 ---
 <adsense></adsense>

@@ -1,6 +1,5 @@
 ---
 title: 大坑舞火龍
-category: 民俗
 date: 2023-02-25
 ---
 <adsense></adsense>

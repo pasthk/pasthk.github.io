@@ -1,6 +1,5 @@
 ---
 title: 舞火龍
-category: 民俗
 index: false
 date: 2023-02-25
 ---
