@@ -6,21 +6,92 @@
     <link>https://www.pasthk.com/</link>
     <description>香港專題研究索引集</description>
     <language>zh-TW</language>
-    <pubDate>Wed, 12 Apr 2023 05:56:20 GMT</pubDate>
-    <lastBuildDate>Wed, 12 Apr 2023 05:56:20 GMT</lastBuildDate>
+    <pubDate>Wed, 12 Apr 2023 11:19:36 GMT</pubDate>
+    <lastBuildDate>Wed, 12 Apr 2023 11:19:36 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+    <category>公共衛生</category>
+    <category>社會</category>
     <category>考古</category>
     <category>自然</category>
     <category>民俗</category>
     <category>醫療</category>
     <category>廣告</category>
     <category>文化</category>
-    <category>其他</category>
     <category>熱帶氣旋</category>
+    <category>其他</category>
     <category>資料庫</category>
     <category>地圖</category>
     <category>宗教</category>
+    <item>
+      <title>霍亂</title>
+      <link>https://www.pasthk.com/public-health/cholera.html</link>
+      <guid>https://www.pasthk.com/public-health/cholera.html</guid>
+      <source url="https://www.pasthk.com/rss.xml">霍亂</source>
+      <description>新聞報道 1. 〈暴病身亡〉，《循環日報》，1883年7月7日 (https://mmis.hkpl.gov.hk/coverpage/-/coverpage/view?coverpageWARmmisportalportlethsf=%E9%9C%8D%E4%BA%82&amp;prp-1078056564c=QF757YsWv58JCjtBMMIqohlo...</description>
+      <category>公共衛生</category>
+      <pubDate>Wed, 12 Apr 2023 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<h2> 新聞報道</h2>
+<ol>
+<li>〈暴病身亡〉，《循環日報》，<a href="https://mmis.hkpl.gov.hk/coverpage/-/coverpage/view?_coverpage_WAR_mmisportalportlet_hsf=%E9%9C%8D%E4%BA%82&amp;p_r_p_-1078056564_c=QF757YsWv58JCjtBMMIqohlo8VZiTiK%2F&amp;_coverpage_WAR_mmisportalportlet_o=5&amp;_coverpage_WAR_mmisportalportlet_actual_q=%28%20verbatim_dc.collection%3A%28%22Old%5C%20HK%5C%20Newspapers%22%29%20%29%20AND+%28%20%28%20allTermsMandatory%3A%28true%29%20OR+all_dc.title%3A%28%E9%9C%8D%E4%BA%82%29%20OR+all_dc.creator%3A%28%E9%9C%8D%E4%BA%82%29%20OR+all_dc.contributor%3A%28%E9%9C%8D%E4%BA%82%29%20OR+all_dc.subject%3A%28%E9%9C%8D%E4%BA%82%29%20OR+fulltext%3A%28%E9%9C%8D%E4%BA%82%29%20OR+all_dc.description%3A%28%E9%9C%8D%E4%BA%82%29%20%29%20%29&amp;_coverpage_WAR_mmisportalportlet_sort_order=asc&amp;_coverpage_WAR_mmisportalportlet_sort_field=dc.publicationdate_bsort" target="_blank" rel="noopener noreferrer">1883年7月7日</a>。</li>
+<li>〈論霍亂〉，《循環日報》，<a href="https://mmis.hkpl.gov.hk/coverpage/-/coverpage/view?_coverpage_WAR_mmisportalportlet_hsf=%E9%9C%8D%E4%BA%82&amp;p_r_p_-1078056564_c=QF757YsWv58JCjtBMMIqov5K4Lo1weXt&amp;_coverpage_WAR_mmisportalportlet_o=10&amp;_coverpage_WAR_mmisportalportlet_actual_q=%28%20verbatim_dc.collection%3A%28%22Old%5C%20HK%5C%20Newspapers%22%29%20%29%20AND+%28%20%28%20allTermsMandatory%3A%28true%29%20OR+all_dc.title%3A%28%E9%9C%8D%E4%BA%82%29%20OR+all_dc.creator%3A%28%E9%9C%8D%E4%BA%82%29%20OR+all_dc.contributor%3A%28%E9%9C%8D%E4%BA%82%29%20OR+all_dc.subject%3A%28%E9%9C%8D%E4%BA%82%29%20OR+fulltext%3A%28%E9%9C%8D%E4%BA%82%29%20OR+all_dc.description%3A%28%E9%9C%8D%E4%BA%82%29%20%29%20%29&amp;_coverpage_WAR_mmisportalportlet_sort_order=asc&amp;_coverpage_WAR_mmisportalportlet_sort_field=dc.publicationdate_bsort" target="_blank" rel="noopener noreferrer">1885年7月30日</a>。</li>
+<li>〈船入禁海〉，《香港華字日報》，<a href="https://mmis.hkpl.gov.hk/coverpage/-/coverpage/view?_coverpage_WAR_mmisportalportlet_hsf=%E9%9C%8D%E4%BA%82&amp;p_r_p_-1078056564_c=QF757YsWv5%2BakvA8rFW5EhZf%2BxlTEBFJ&amp;_coverpage_WAR_mmisportalportlet_o=14&amp;_coverpage_WAR_mmisportalportlet_actual_q=%28%20verbatim_dc.collection%3A%28%22Old%5C%20HK%5C%20Newspapers%22%29%20%29%20AND+%28%20%28%20allTermsMandatory%3A%28true%29%20OR+all_dc.title%3A%28%E9%9C%8D%E4%BA%82%29%20OR+all_dc.creator%3A%28%E9%9C%8D%E4%BA%82%29%20OR+all_dc.contributor%3A%28%E9%9C%8D%E4%BA%82%29%20OR+all_dc.subject%3A%28%E9%9C%8D%E4%BA%82%29%20OR+fulltext%3A%28%E9%9C%8D%E4%BA%82%29%20OR+all_dc.description%3A%28%E9%9C%8D%E4%BA%82%29%20%29%20%29&amp;_coverpage_WAR_mmisportalportlet_sort_order=asc&amp;_coverpage_WAR_mmisportalportlet_sort_field=dc.publicationdate_bsort" target="_blank" rel="noopener noreferrer">1895年8月1日</a>。</li>
+<li>〈客患霍亂〉，《香港華字日報》，<a href="https://mmis.hkpl.gov.hk/coverpage/-/coverpage/view?_coverpage_WAR_mmisportalportlet_hsf=%E9%9C%8D%E4%BA%82&amp;p_r_p_-1078056564_c=QF757YsWv5%2BakvA8rFW5EqSXCaVPoB2R&amp;_coverpage_WAR_mmisportalportlet_o=23&amp;_coverpage_WAR_mmisportalportlet_actual_q=%28%20verbatim_dc.collection%3A%28%22Old%5C%20HK%5C%20Newspapers%22%29%20%29%20AND+%28%20%28%20allTermsMandatory%3A%28true%29%20OR+all_dc.title%3A%28%E9%9C%8D%E4%BA%82%29%20OR+all_dc.creator%3A%28%E9%9C%8D%E4%BA%82%29%20OR+all_dc.contributor%3A%28%E9%9C%8D%E4%BA%82%29%20OR+all_dc.subject%3A%28%E9%9C%8D%E4%BA%82%29%20OR+fulltext%3A%28%E9%9C%8D%E4%BA%82%29%20OR+all_dc.description%3A%28%E9%9C%8D%E4%BA%82%29%20%29%20%29&amp;_coverpage_WAR_mmisportalportlet_sort_order=asc&amp;_coverpage_WAR_mmisportalportlet_sort_field=dc.publicationdate_bsort" target="_blank" rel="noopener noreferrer">1902年3月5日</a>。</li>
+<li>〈霍亂紀數〉，《香港華字日報》，<a href="https://mmis.hkpl.gov.hk/coverpage/-/coverpage/view?_coverpage_WAR_mmisportalportlet_hsf=%E9%9C%8D%E4%BA%82&amp;p_r_p_-1078056564_c=QF757YsWv5%2BakvA8rFW5Epj6%2B97io6S5&amp;_coverpage_WAR_mmisportalportlet_o=27&amp;_coverpage_WAR_mmisportalportlet_actual_q=%28%20verbatim_dc.collection%3A%28%22Old%5C%20HK%5C%20Newspapers%22%29%20%29%20AND+%28%20%28%20allTermsMandatory%3A%28true%29%20OR+all_dc.title%3A%28%E9%9C%8D%E4%BA%82%29%20OR+all_dc.creator%3A%28%E9%9C%8D%E4%BA%82%29%20OR+all_dc.contributor%3A%28%E9%9C%8D%E4%BA%82%29%20OR+all_dc.subject%3A%28%E9%9C%8D%E4%BA%82%29%20OR+fulltext%3A%28%E9%9C%8D%E4%BA%82%29%20OR+all_dc.description%3A%28%E9%9C%8D%E4%BA%82%29%20%29%20%29&amp;_coverpage_WAR_mmisportalportlet_sort_order=asc&amp;_coverpage_WAR_mmisportalportlet_sort_field=dc.publicationdate_bsort" target="_blank" rel="noopener noreferrer">1902年3月14日</a>。</li>
+<li>〈霍亂紀數〉，《香港華字日報》，<a href="https://mmis.hkpl.gov.hk/coverpage/-/coverpage/view?_coverpage_WAR_mmisportalportlet_hsf=%E9%9C%8D%E4%BA%82&amp;p_r_p_-1078056564_c=QF757YsWv5%2BakvA8rFW5Ek5VtvLR7INU&amp;_coverpage_WAR_mmisportalportlet_o=28&amp;_coverpage_WAR_mmisportalportlet_actual_q=%28%20verbatim_dc.collection%3A%28%22Old%5C%20HK%5C%20Newspapers%22%29%20%29%20AND+%28%20%28%20allTermsMandatory%3A%28true%29%20OR+all_dc.title%3A%28%E9%9C%8D%E4%BA%82%29%20OR+all_dc.creator%3A%28%E9%9C%8D%E4%BA%82%29%20OR+all_dc.contributor%3A%28%E9%9C%8D%E4%BA%82%29%20OR+all_dc.subject%3A%28%E9%9C%8D%E4%BA%82%29%20OR+fulltext%3A%28%E9%9C%8D%E4%BA%82%29%20OR+all_dc.description%3A%28%E9%9C%8D%E4%BA%82%29%20%29%20%29&amp;_coverpage_WAR_mmisportalportlet_sort_order=asc&amp;_coverpage_WAR_mmisportalportlet_sort_field=dc.publicationdate_bsort" target="_blank" rel="noopener noreferrer">1902年3月19日</a>。</li>
+<li>〈霍亂二人〉，《香港華字日報》，<a href="https://mmis.hkpl.gov.hk/coverpage/-/coverpage/view?_coverpage_WAR_mmisportalportlet_hsf=%E9%9C%8D%E4%BA%82&amp;p_r_p_-1078056564_c=QF757YsWv5%2BakvA8rFW5Ej%2Fh08nqM3IW&amp;_coverpage_WAR_mmisportalportlet_o=31&amp;_coverpage_WAR_mmisportalportlet_actual_q=%28%20verbatim_dc.collection%3A%28%22Old%5C%20HK%5C%20Newspapers%22%29%20%29%20AND+%28%20%28%20allTermsMandatory%3A%28true%29%20OR+all_dc.title%3A%28%E9%9C%8D%E4%BA%82%29%20OR+all_dc.creator%3A%28%E9%9C%8D%E4%BA%82%29%20OR+all_dc.contributor%3A%28%E9%9C%8D%E4%BA%82%29%20OR+all_dc.subject%3A%28%E9%9C%8D%E4%BA%82%29%20OR+fulltext%3A%28%E9%9C%8D%E4%BA%82%29%20OR+all_dc.description%3A%28%E9%9C%8D%E4%BA%82%29%20%29%20%29&amp;_coverpage_WAR_mmisportalportlet_sort_order=asc&amp;_coverpage_WAR_mmisportalportlet_sort_field=dc.publicationdate_bsort" target="_blank" rel="noopener noreferrer">1902年3月25日</a>。</li>
+<li>〈疫症紀數〉，《香港華字日報》，<a href="https://mmis.hkpl.gov.hk/coverpage/-/coverpage/view?_coverpage_WAR_mmisportalportlet_hsf=%E9%9C%8D%E4%BA%82&amp;p_r_p_-1078056564_c=QF757YsWv5%2BakvA8rFW5Elkb6rrhqrYx&amp;_coverpage_WAR_mmisportalportlet_o=32&amp;_coverpage_WAR_mmisportalportlet_actual_q=%28%20verbatim_dc.collection%3A%28%22Old%5C%20HK%5C%20Newspapers%22%29%20%29%20AND+%28%20%28%20allTermsMandatory%3A%28true%29%20OR+all_dc.title%3A%28%E9%9C%8D%E4%BA%82%29%20OR+all_dc.creator%3A%28%E9%9C%8D%E4%BA%82%29%20OR+all_dc.contributor%3A%28%E9%9C%8D%E4%BA%82%29%20OR+all_dc.subject%3A%28%E9%9C%8D%E4%BA%82%29%20OR+fulltext%3A%28%E9%9C%8D%E4%BA%82%29%20OR+all_dc.description%3A%28%E9%9C%8D%E4%BA%82%29%20%29%20%29&amp;_coverpage_WAR_mmisportalportlet_sort_order=asc&amp;_coverpage_WAR_mmisportalportlet_sort_field=dc.publicationdate_bsort" target="_blank" rel="noopener noreferrer">1902年3月26日</a>。</li>
+<li>〈本港病症〉，《香港華字日報》，<a href="https://mmis.hkpl.gov.hk/coverpage/-/coverpage/view?_coverpage_WAR_mmisportalportlet_hsf=%E9%9C%8D%E4%BA%82&amp;p_r_p_-1078056564_c=QF757YsWv5%2BakvA8rFW5EtyeQjt7gZcr&amp;_coverpage_WAR_mmisportalportlet_o=34&amp;_coverpage_WAR_mmisportalportlet_actual_q=%28%20verbatim_dc.collection%3A%28%22Old%5C%20HK%5C%20Newspapers%22%29%20%29%20AND+%28%20%28%20allTermsMandatory%3A%28true%29%20OR+all_dc.title%3A%28%E9%9C%8D%E4%BA%82%29%20OR+all_dc.creator%3A%28%E9%9C%8D%E4%BA%82%29%20OR+all_dc.contributor%3A%28%E9%9C%8D%E4%BA%82%29%20OR+all_dc.subject%3A%28%E9%9C%8D%E4%BA%82%29%20OR+fulltext%3A%28%E9%9C%8D%E4%BA%82%29%20OR+all_dc.description%3A%28%E9%9C%8D%E4%BA%82%29%20%29%20%29&amp;_coverpage_WAR_mmisportalportlet_sort_order=asc&amp;_coverpage_WAR_mmisportalportlet_sort_field=dc.publicationdate_bsort" target="_blank" rel="noopener noreferrer">1902年4月23日</a>。</li>
+<li>t.b.c</li>
+<li>〈霍亂症之報告〉，《香港華字日報》，1932年7月22日，第2張第3頁。</li>
+</ol>
+<ul>
+<li>前日本港發生三宗</li>
+</ul>
+<ol start="14">
+<li>〈〉，《》，年月日，第頁。</li>
+</ol>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>鼠疫</title>
+      <link>https://www.pasthk.com/public-health/plague.html</link>
+      <guid>https://www.pasthk.com/public-health/plague.html</guid>
+      <source url="https://www.pasthk.com/rss.xml">鼠疫</source>
+      <description>新聞報道 1. 〈預防鼠疫法〉，《香港華字日報》，1901年6月1日 (https://mmis.hkpl.gov.hk/coverpage/-/coverpage/view?coverpageWARmmisportalportlethsf=%E9%BC%A0%E7%96%AB&amp;prp-1078056564c=QF757YsWv5%2BakvA8rFW...</description>
+      <category>公共衛生</category>
+      <pubDate>Wed, 12 Apr 2023 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<h2> 新聞報道</h2>
+<ol>
+<li>〈預防鼠疫法〉，《香港華字日報》，<a href="https://mmis.hkpl.gov.hk/coverpage/-/coverpage/view?_coverpage_WAR_mmisportalportlet_hsf=%E9%BC%A0%E7%96%AB&amp;p_r_p_-1078056564_c=QF757YsWv5%2BakvA8rFW5EvIMwx%2FVL9Yl&amp;_coverpage_WAR_mmisportalportlet_o=0&amp;_coverpage_WAR_mmisportalportlet_actual_q=%28%20verbatim_dc.collection%3A%28%22Old%5C%20HK%5C%20Newspapers%22%29%20%29%20AND+%28%20%28%20allTermsMandatory%3A%28true%29%20OR+all_dc.title%3A%28%E9%BC%A0%E7%96%AB%29%20OR+all_dc.creator%3A%28%E9%BC%A0%E7%96%AB%29%20OR+all_dc.contributor%3A%28%E9%BC%A0%E7%96%AB%29%20OR+all_dc.subject%3A%28%E9%BC%A0%E7%96%AB%29%20OR+fulltext%3A%28%E9%BC%A0%E7%96%AB%29%20OR+all_dc.description%3A%28%E9%BC%A0%E7%96%AB%29%20%29%20%29&amp;_coverpage_WAR_mmisportalportlet_sort_field=dc.publicationdate_bsort&amp;_coverpage_WAR_mmisportalportlet_sort_order=asc" target="_blank" rel="noopener noreferrer">1901年6月1日</a>。</li>
+</ol>
+<h2> 專著</h2>
+<p><em>The Hong Kong Plague 1894</em></p>
+<h2> 文章</h2>
+<ol>
+<li>黃雁鴻：〈<a href="https://www.safp.gov.mo/safptc/download/WCM_044901" target="_blank" rel="noopener noreferrer">港澳的鼠疫應對與社會發展（1894-1895）</a>〉，《行政》，2015年第28卷總第107期，頁117-134。</li>
+<li>姜鍾赫：〈鼠疫與香港殖民醫學下的華人女性病患（1841-1900）〉，《近代中國婦女史研究》，2015年第26期，頁67-132。</li>
+<li>黃雁鴻：〈19世紀末檔案文獻對香港鼠疫的記載〉，《歷史檔案》，2018年第1期，頁109-114。</li>
+</ol>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>公共衛生</title>
+      <link>https://www.pasthk.com/public-health/</link>
+      <guid>https://www.pasthk.com/public-health/</guid>
+      <source url="https://www.pasthk.com/rss.xml">公共衛生</source>
+      <description>疾病霍亂 (cholera.md); 鼠疫 (plague.md); 禽流感; 專著</description>
+      <category>社會</category>
+      <pubDate>Wed, 12 Apr 2023 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<h2> 疾病</h2>
+<ul>
+<li><a href="/public-health/cholera.html" target="blank">霍亂</a></li>
+<li><a href="/public-health/plague.html" target="blank">鼠疫</a></li>
+<li>禽流感</li>
+</ul>
+<h2> 專著</h2>
+]]></content:encoded>
+    </item>
     <item>
       <title>檔案</title>
       <link>https://www.pasthk.com/archaeology/archive.html</link>
@@ -327,14 +398,6 @@
 ]]></content:encoded>
     </item>
     <item>
-      <title>贊助</title>
-      <link>https://www.pasthk.com/sponsor.html</link>
-      <guid>https://www.pasthk.com/sponsor.html</guid>
-      <source url="https://www.pasthk.com/rss.xml">贊助</source>
-      <category>其他</category>
-      <pubDate>Sat, 01 Apr 2023 00:00:00 GMT</pubDate>
-    </item>
-    <item>
       <title>1900年代</title>
       <link>https://www.pasthk.com/meteorology/tropical-cyclone/1900s.html</link>
       <guid>https://www.pasthk.com/meteorology/tropical-cyclone/1900s.html</guid>
@@ -550,6 +613,50 @@
 <li>〈今後大風過港　內河輪船均懸風球〉，《工商晚報》，1931年12月10日，<a href="https://mmis.hkpl.gov.hk/coverpage/-/coverpage/view?_coverpage_WAR_mmisportalportlet_hsf=%E9%A2%A8%E7%90%83&amp;p_r_p_-1078056564_c=QF757YsWv5%2FH7zGe%2FKF%2BFMOj97z4TtyL&amp;_coverpage_WAR_mmisportalportlet_o=21&amp;_coverpage_WAR_mmisportalportlet_actual_q=%28%20verbatim_dc.collection%3A%28%22Old%5C%20HK%5C%20Newspapers%22%29%20%29%20AND+%28%20%28%20allTermsMandatory%3A%28true%29%20OR+all_dc.title%3A%28%E9%A2%A8%E7%90%83%29%20OR+all_dc.creator%3A%28%E9%A2%A8%E7%90%83%29%20OR+all_dc.contributor%3A%28%E9%A2%A8%E7%90%83%29%20OR+all_dc.subject%3A%28%E9%A2%A8%E7%90%83%29%20OR+fulltext%3A%28%E9%A2%A8%E7%90%83%29%20OR+all_dc.description%3A%28%E9%A2%A8%E7%90%83%29%20%29%20%29&amp;_coverpage_WAR_mmisportalportlet_sort_order=asc&amp;_coverpage_WAR_mmisportalportlet_sort_field=dc.publicationdate_bsort" target="_blank" rel="noopener noreferrer">第3版</a>。</li>
 </ol>
 <h2> 1932年</h2>
+<ol>
+<li>〈內河輪懸掛風球方式經已議決〉，《工商晚報》，1932年1月6日，<a href="https://mmis.hkpl.gov.hk/coverpage/-/coverpage/view?_coverpage_WAR_mmisportalportlet_hsf=%E9%A2%A8%E7%90%83&amp;p_r_p_-1078056564_c=QF757YsWv5%2FH7zGe%2FKF%2BFCE88x4LiD6g&amp;_coverpage_WAR_mmisportalportlet_o=22&amp;_coverpage_WAR_mmisportalportlet_actual_q=%28%20verbatim_dc.collection%3A%28%22Old%5C%20HK%5C%20Newspapers%22%29%20%29%20AND+%28%20%28%20allTermsMandatory%3A%28true%29%20OR+all_dc.title%3A%28%E9%A2%A8%E7%90%83%29%20OR+all_dc.creator%3A%28%E9%A2%A8%E7%90%83%29%20OR+all_dc.contributor%3A%28%E9%A2%A8%E7%90%83%29%20OR+all_dc.subject%3A%28%E9%A2%A8%E7%90%83%29%20OR+fulltext%3A%28%E9%A2%A8%E7%90%83%29%20OR+all_dc.description%3A%28%E9%A2%A8%E7%90%83%29%20%29%20%29&amp;_coverpage_WAR_mmisportalportlet_sort_order=asc&amp;_coverpage_WAR_mmisportalportlet_sort_field=dc.publicationdate_bsort" target="_blank" rel="noopener noreferrer">第3版</a>。
+<ul>
+<li>昨日函送華商總會</li>
+</ul>
+</li>
+<li>〈內河輪船懸掛風球之方式〉，《工商晚報》，1932年1月8日，<a href="https://mmis.hkpl.gov.hk/coverpage/-/coverpage/view?_coverpage_WAR_mmisportalportlet_hsf=%E9%A2%A8%E7%90%83&amp;p_r_p_-1078056564_c=QF757YsWv5%2FH7zGe%2FKF%2BFA6KikLTkZ1m&amp;_coverpage_WAR_mmisportalportlet_o=23&amp;_coverpage_WAR_mmisportalportlet_actual_q=%28%20verbatim_dc.collection%3A%28%22Old%5C%20HK%5C%20Newspapers%22%29%20%29%20AND+%28%20%28%20allTermsMandatory%3A%28true%29%20OR+all_dc.title%3A%28%E9%A2%A8%E7%90%83%29%20OR+all_dc.creator%3A%28%E9%A2%A8%E7%90%83%29%20OR+all_dc.contributor%3A%28%E9%A2%A8%E7%90%83%29%20OR+all_dc.subject%3A%28%E9%A2%A8%E7%90%83%29%20OR+fulltext%3A%28%E9%A2%A8%E7%90%83%29%20OR+all_dc.description%3A%28%E9%A2%A8%E7%90%83%29%20%29%20%29&amp;_coverpage_WAR_mmisportalportlet_sort_order=asc&amp;_coverpage_WAR_mmisportalportlet_sort_field=dc.publicationdate_bsort" target="_blank" rel="noopener noreferrer">第3版</a>。</li>
+<li>〈一號風球已除下〉，《工商晚報》，1932年5月18日，<a href="https://mmis.hkpl.gov.hk/coverpage/-/coverpage/view?_coverpage_WAR_mmisportalportlet_hsf=%E9%A2%A8%E7%90%83&amp;p_r_p_-1078056564_c=QF757YsWv5%2FH7zGe%2FKF%2BFOX6ylbe5lk6&amp;_coverpage_WAR_mmisportalportlet_o=24&amp;_coverpage_WAR_mmisportalportlet_actual_q=%28%20verbatim_dc.collection%3A%28%22Old%5C%20HK%5C%20Newspapers%22%29%20%29%20AND+%28%20%28%20allTermsMandatory%3A%28true%29%20OR+all_dc.title%3A%28%E9%A2%A8%E7%90%83%29%20OR+all_dc.creator%3A%28%E9%A2%A8%E7%90%83%29%20OR+all_dc.contributor%3A%28%E9%A2%A8%E7%90%83%29%20OR+all_dc.subject%3A%28%E9%A2%A8%E7%90%83%29%20OR+fulltext%3A%28%E9%A2%A8%E7%90%83%29%20OR+all_dc.description%3A%28%E9%A2%A8%E7%90%83%29%20%29%20%29&amp;_coverpage_WAR_mmisportalportlet_sort_order=asc&amp;_coverpage_WAR_mmisportalportlet_sort_field=dc.publicationdate_bsort" target="_blank" rel="noopener noreferrer">第3版</a>。</li>
+<li>〈一號風球已除下〉，《工商日報》，1932年5月19日，<a href="https://mmis.hkpl.gov.hk/coverpage/-/coverpage/view?_coverpage_WAR_mmisportalportlet_hsf=%E9%A2%A8%E7%90%83&amp;p_r_p_-1078056564_c=QF757YsWv5%2BgO%2FPMVI16yQXYeZUZO64f&amp;_coverpage_WAR_mmisportalportlet_o=25&amp;_coverpage_WAR_mmisportalportlet_actual_q=%28%20verbatim_dc.collection%3A%28%22Old%5C%20HK%5C%20Newspapers%22%29%20%29%20AND+%28%20%28%20allTermsMandatory%3A%28true%29%20OR+all_dc.title%3A%28%E9%A2%A8%E7%90%83%29%20OR+all_dc.creator%3A%28%E9%A2%A8%E7%90%83%29%20OR+all_dc.contributor%3A%28%E9%A2%A8%E7%90%83%29%20OR+all_dc.subject%3A%28%E9%A2%A8%E7%90%83%29%20OR+fulltext%3A%28%E9%A2%A8%E7%90%83%29%20OR+all_dc.description%3A%28%E9%A2%A8%E7%90%83%29%20%29%20%29&amp;_coverpage_WAR_mmisportalportlet_sort_order=asc&amp;_coverpage_WAR_mmisportalportlet_sort_field=dc.publicationdate_bsort" target="_blank" rel="noopener noreferrer">第3張第3版</a>。</li>
+<li>〈今午天文台懸掛第三號風球〉，《工商晚報》，1932年6月2日，<a href="https://mmis.hkpl.gov.hk/coverpage/-/coverpage/view?_coverpage_WAR_mmisportalportlet_hsf=%E9%A2%A8%E7%90%83&amp;p_r_p_-1078056564_c=QF757YsWv5%2FH7zGe%2FKF%2BFG1krJwOrF1f&amp;_coverpage_WAR_mmisportalportlet_o=26&amp;_coverpage_WAR_mmisportalportlet_actual_q=%28%20verbatim_dc.collection%3A%28%22Old%5C%20HK%5C%20Newspapers%22%29%20%29%20AND+%28%20%28%20allTermsMandatory%3A%28true%29%20OR+all_dc.title%3A%28%E9%A2%A8%E7%90%83%29%20OR+all_dc.creator%3A%28%E9%A2%A8%E7%90%83%29%20OR+all_dc.contributor%3A%28%E9%A2%A8%E7%90%83%29%20OR+all_dc.subject%3A%28%E9%A2%A8%E7%90%83%29%20OR+fulltext%3A%28%E9%A2%A8%E7%90%83%29%20OR+all_dc.description%3A%28%E9%A2%A8%E7%90%83%29%20%29%20%29&amp;_coverpage_WAR_mmisportalportlet_sort_order=asc&amp;_coverpage_WAR_mmisportalportlet_sort_field=dc.publicationdate_bsort" target="_blank" rel="noopener noreferrer">第3版</a>。
+<ul>
+<li>颶風或可吹至本港</li>
+</ul>
+</li>
+<li>〈天文台今晨縣掛第七號風球〉，《工商晚報》，1932年7月21日，<a href="https://mmis.hkpl.gov.hk/coverpage/-/coverpage/view?_coverpage_WAR_mmisportalportlet_hsf=%E9%A2%A8%E7%90%83&amp;p_r_p_-1078056564_c=QF757YsWv5%2FH7zGe%2FKF%2BFHin8PXx6rer&amp;_coverpage_WAR_mmisportalportlet_o=27&amp;_coverpage_WAR_mmisportalportlet_actual_q=%28%20verbatim_dc.collection%3A%28%22Old%5C%20HK%5C%20Newspapers%22%29%20%29%20AND+%28%20%28%20allTermsMandatory%3A%28true%29%20OR+all_dc.title%3A%28%E9%A2%A8%E7%90%83%29%20OR+all_dc.creator%3A%28%E9%A2%A8%E7%90%83%29%20OR+all_dc.contributor%3A%28%E9%A2%A8%E7%90%83%29%20OR+all_dc.subject%3A%28%E9%A2%A8%E7%90%83%29%20OR+fulltext%3A%28%E9%A2%A8%E7%90%83%29%20OR+all_dc.description%3A%28%E9%A2%A8%E7%90%83%29%20%29%20%29&amp;_coverpage_WAR_mmisportalportlet_sort_order=asc&amp;_coverpage_WAR_mmisportalportlet_sort_field=dc.publicationdate_bsort" target="_blank" rel="noopener noreferrer">第3版</a>。
+<ul>
+<li>颶風由東北方吹來</li>
+<li>海旁舖戶紛紛關門</li>
+</ul>
+</li>
+<li>〈狂風暴雨中今晨九龍城發生塌屋案〉，《工商晚報》，1932年7月22日，<a href="https://mmis.hkpl.gov.hk/coverpage/-/coverpage/view?_coverpage_WAR_mmisportalportlet_hsf=%E9%A2%A8%E7%90%83&amp;p_r_p_-1078056564_c=QF757YsWv5%2FH7zGe%2FKF%2BFAgl5R5qYv1W&amp;_coverpage_WAR_mmisportalportlet_o=28&amp;_coverpage_WAR_mmisportalportlet_actual_q=%28%20verbatim_dc.collection%3A%28%22Old%5C%20HK%5C%20Newspapers%22%29%20%29%20AND+%28%20%28%20allTermsMandatory%3A%28true%29%20OR+all_dc.title%3A%28%E9%A2%A8%E7%90%83%29%20OR+all_dc.creator%3A%28%E9%A2%A8%E7%90%83%29%20OR+all_dc.contributor%3A%28%E9%A2%A8%E7%90%83%29%20OR+all_dc.subject%3A%28%E9%A2%A8%E7%90%83%29%20OR+fulltext%3A%28%E9%A2%A8%E7%90%83%29%20OR+all_dc.description%3A%28%E9%A2%A8%E7%90%83%29%20%29%20%29&amp;_coverpage_WAR_mmisportalportlet_sort_order=asc&amp;_coverpage_WAR_mmisportalportlet_sort_field=dc.publicationdate_bsort" target="_blank" rel="noopener noreferrer">第3版</a>。
+<ul>
+<li>幸無傷斃人命
+<ul>
+<li>肇事地點</li>
+<li>倒塌情形</li>
+<li>損失調查</li>
+<li>警察查究</li>
+<li>又塌一屋</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>〈颶風已向海南島吹去〉，《工商晚報》，1932年7月22日，<a href="https://mmis.hkpl.gov.hk/coverpage/-/coverpage/view?_coverpage_WAR_mmisportalportlet_hsf=%E9%A2%A8%E7%90%83&amp;p_r_p_-1078056564_c=QF757YsWv5%2FH7zGe%2FKF%2BFAgl5R5qYv1W&amp;_coverpage_WAR_mmisportalportlet_o=28&amp;_coverpage_WAR_mmisportalportlet_actual_q=%28%20verbatim_dc.collection%3A%28%22Old%5C%20HK%5C%20Newspapers%22%29%20%29%20AND+%28%20%28%20allTermsMandatory%3A%28true%29%20OR+all_dc.title%3A%28%E9%A2%A8%E7%90%83%29%20OR+all_dc.creator%3A%28%E9%A2%A8%E7%90%83%29%20OR+all_dc.contributor%3A%28%E9%A2%A8%E7%90%83%29%20OR+all_dc.subject%3A%28%E9%A2%A8%E7%90%83%29%20OR+fulltext%3A%28%E9%A2%A8%E7%90%83%29%20OR+all_dc.description%3A%28%E9%A2%A8%E7%90%83%29%20%29%20%29&amp;_coverpage_WAR_mmisportalportlet_sort_order=asc&amp;_coverpage_WAR_mmisportalportlet_sort_field=dc.publicationdate_bsort" target="_blank" rel="noopener noreferrer">第3版</a>。
+<ul>
+<li>第八號風球經已除下</li>
+<li>海面交通已盡行恢復</li>
+</ul>
+</li>
+<li>〈〉，《》，年月日，第頁。</li>
+<li>〈〉，《》，年月日，第頁。</li>
+<li>〈〉，《》，年月日，第頁。</li>
+<li>〈〉，《》，年月日，第頁。</li>
+</ol>
 <h2> 1933年</h2>
 <h2> 1934年</h2>
 <h2> 1935年</h2>
@@ -668,6 +775,17 @@
 </ul>
 </li>
 </ol>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>捐贈</title>
+      <link>https://www.pasthk.com/donation.html</link>
+      <guid>https://www.pasthk.com/donation.html</guid>
+      <source url="https://www.pasthk.com/rss.xml">捐贈</source>
+      <description>捐贈方式</description>
+      <category>其他</category>
+      <pubDate>Sat, 01 Apr 2023 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<h2> 捐贈方式</h2>
 ]]></content:encoded>
     </item>
     <item>
