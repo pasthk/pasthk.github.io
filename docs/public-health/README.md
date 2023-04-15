@@ -1,6 +1,5 @@
 ---
 title: 公共衛生
-category: 社會
 index: false
 date: 2023-04-12
 ---

@@ -9,15 +9,15 @@ date: 2023-01-15
 ::: tabs
 @tab 綜合
 1. 陳公哲：〈香港考古發掘〉，《考古學報》1957年第4期，第1-16頁。
-2. 〈第二次全港考古調查工作述評〉（香港：古物古蹟辦事處檔案，編號：ID23）。
-3. "Report of the Hong Kong Archaeological Survey Volume I An Introduction to the Survey", Hong Kong: Antiquities and Monuments Office, ID19.
-4. "Report of the Hong Kong Archaeological Survey Volume II Recommendations on Antiquities and Monuments Policy and Legislation", Hong Kong: Antiquities and Monuments Office, ID20.
-5. "Report of the Hong Kong Archaeological Survey Volume III Part I", Hong Kong: Antiquities and Monuments Office, ID5.
-6. "Report of the Hong Kong Archaeological Survey Volume III Part II", Hong Kong: Antiquities and Monuments Office, ID6.
-7. "Report of the Hong Kong Archaeological Survey Volume III Part III", Hong Kong: Antiquities and Monuments Office, ID7.
-8. "Report of the Hong Kong Archaeological Survey Volume IV Part I", Hong Kong: Antiquities and Monuments Office, ID8.
-9. "Report of the Hong Kong Archaeological Survey Volume IV Part II", Hong Kong: Antiquities and Monuments Office, ID9.
-10. "Report of the Hong Kong Archaeological Survey Volume IV Part III", Hong Kong: Antiquities and Monuments Office, ID10.
+2. "Report of the Hong Kong Archaeological Survey Volume III Part I", Hong Kong: Antiquities and Monuments Office, ID5.
+3. "Report of the Hong Kong Archaeological Survey Volume III Part II", Hong Kong: Antiquities and Monuments Office, ID6.
+4. "Report of the Hong Kong Archaeological Survey Volume III Part III", Hong Kong: Antiquities and Monuments Office, ID7.
+5. "Report of the Hong Kong Archaeological Survey Volume IV Part I", Hong Kong: Antiquities and Monuments Office, ID8.
+6. "Report of the Hong Kong Archaeological Survey Volume IV Part II", Hong Kong: Antiquities and Monuments Office, ID9.
+7.  "Report of the Hong Kong Archaeological Survey Volume IV Part III", Hong Kong: Antiquities and Monuments Office, ID10.
+8.  "Report of the Hong Kong Archaeological Survey Volume I An Introduction to the Survey", Hong Kong: Antiquities and Monuments Office, ID19.
+9.  "Report of the Hong Kong Archaeological Survey Volume II Recommendations on Antiquities and Monuments Policy and Legislation", Hong Kong: Antiquities and Monuments Office, ID20.
+10. 〈第二次全港考古調查工作述評〉（香港：古物古蹟辦事處檔案，編號：ID23）。
 @tab 香港島
 - [黃竹坑](wong-chuk-hang-hong-kong-island.md)
 @tab 九龍
