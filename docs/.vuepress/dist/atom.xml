@@ -4,7 +4,7 @@
   <title>追跡香江</title>
   <subtitle>香港專題研究索引集</subtitle>
   <icon>https://www.pasthk.com/favicon.ico</icon>
-  <updated>2023-04-15T13:31:44.148Z</updated>
+  <updated>2023-04-16T14:28:21.566Z</updated>
   <generator>vuepress-plugin-feed2</generator>
   <link rel="self" href="https://www.pasthk.com/atom.xml"/>
   <link rel="alternate" href="https://www.pasthk.com/"/>
@@ -31,48 +31,63 @@
   </entry>
   <entry>
     <title type="text">香港中文大學</title>
-    <id>https://www.pasthk.com/education/university/chinese-university-of-hong-kong.html</id>
-    <link href="https://www.pasthk.com/education/university/chinese-university-of-hong-kong.html"/>
-    <updated>2023-04-13T13:45:05.000Z</updated>
+    <id>https://www.pasthk.com/education/higher-education/chinese-university-of-hong-kong.html</id>
+    <link href="https://www.pasthk.com/education/higher-education/chinese-university-of-hong-kong.html"/>
+    <updated>2023-04-16T14:28:21.621Z</updated>
     <summary type="html"><![CDATA[<h2> 新聞報道</h2>
 <ol>
 <li>〈中文大學的成立，不獨為專上教育帶來蓬勃前途，更使整個中文教育體系得到鼓勵協助！〉，《華僑日報》，1963年1月1日，<a href="https://mmis.hkpl.gov.hk/coverpage/-/coverpage/view?_coverpage_WAR_mmisportalportlet_hsf=%E4%B8%AD%E6%96%87%E5%A4%A7%E5%AD%B8&amp;_coverpage_WAR_mmisportalportlet_actual_q=%28%20verbatim_dc.collection%3A%28%22Old%5C%20HK%5C%20Newspapers%22%29%20%29%20AND+%28%20%28%20allTermsMandatory%3A%28true%29%20OR+all_dc.title%3A%28%E4%B8%AD%E6%96%87%E5%A4%A7%E5%AD%B8%29%20OR+all_dc.creator%3A%28%E4%B8%AD%E6%96%87%E5%A4%A7%E5%AD%B8%29%20OR+all_dc.contributor%3A%28%E4%B8%AD%E6%96%87%E5%A4%A7%E5%AD%B8%29%20OR+all_dc.subject%3A%28%E4%B8%AD%E6%96%87%E5%A4%A7%E5%AD%B8%29%20OR+fulltext%3A%28%E4%B8%AD%E6%96%87%E5%A4%A7%E5%AD%B8%29%20OR+all_dc.description%3A%28%E4%B8%AD%E6%96%87%E5%A4%A7%E5%AD%B8%29%20%29%20%29&amp;_coverpage_WAR_mmisportalportlet_sort_field=dc.publicationdate_bsort&amp;p_r_p_-1078056564_c=QF757YsWv5%2FH7zGe%2FKF%2BFM0H%2Fg57cIhL&amp;_coverpage_WAR_mmisportalportlet_o=248&amp;_coverpage_WAR_mmisportalportlet_sort_order=asc" target="_blank" rel="noopener noreferrer">第5張第1頁</a>。</li>
+<li>〈聯合書院校長鄭棟材舉辦全港高中生論文賽　題為「香港中文大學之使命」〉，《大公報》，1963年1月11日，<a href="https://mmis.hkpl.gov.hk/coverpage/-/coverpage/view?_coverpage_WAR_mmisportalportlet_hsf=%E4%B8%AD%E6%96%87%E5%A4%A7%E5%AD%B8&amp;p_r_p_-1078056564_c=QF757YsWv59H%2FuxqfBwEJMP1M8O0Q45h&amp;_coverpage_WAR_mmisportalportlet_o=250&amp;_coverpage_WAR_mmisportalportlet_actual_q=%28%20verbatim_dc.collection%3A%28%22Old%5C%20HK%5C%20Newspapers%22%29%20%29%20AND+%28%20%28%20allTermsMandatory%3A%28true%29%20OR+all_dc.title%3A%28%E4%B8%AD%E6%96%87%E5%A4%A7%E5%AD%B8%29%20OR+all_dc.creator%3A%28%E4%B8%AD%E6%96%87%E5%A4%A7%E5%AD%B8%29%20OR+all_dc.contributor%3A%28%E4%B8%AD%E6%96%87%E5%A4%A7%E5%AD%B8%29%20OR+all_dc.subject%3A%28%E4%B8%AD%E6%96%87%E5%A4%A7%E5%AD%B8%29%20OR+fulltext%3A%28%E4%B8%AD%E6%96%87%E5%A4%A7%E5%AD%B8%29%20OR+all_dc.description%3A%28%E4%B8%AD%E6%96%87%E5%A4%A7%E5%AD%B8%29%20%29%20%29&amp;_coverpage_WAR_mmisportalportlet_sort_order=asc&amp;_coverpage_WAR_mmisportalportlet_sort_field=dc.publicationdate_bsort" target="_blank" rel="noopener noreferrer">第1張；第3版</a>。</li>
+<li>〈聯合書院提倡中文寫作　辦中學生論文賽〉，《華僑日報》，1963年1月11日，<a href="https://mmis.hkpl.gov.hk/coverpage/-/coverpage/view?_coverpage_WAR_mmisportalportlet_hsf=%E4%B8%AD%E6%96%87%E5%A4%A7%E5%AD%B8&amp;p_r_p_-1078056564_c=QF757YsWv5%2FH7zGe%2FKF%2BFIKKFQdxu4RS&amp;_coverpage_WAR_mmisportalportlet_o=251&amp;_coverpage_WAR_mmisportalportlet_actual_q=%28%20verbatim_dc.collection%3A%28%22Old%5C%20HK%5C%20Newspapers%22%29%20%29%20AND+%28%20%28%20allTermsMandatory%3A%28true%29%20OR+all_dc.title%3A%28%E4%B8%AD%E6%96%87%E5%A4%A7%E5%AD%B8%29%20OR+all_dc.creator%3A%28%E4%B8%AD%E6%96%87%E5%A4%A7%E5%AD%B8%29%20OR+all_dc.contributor%3A%28%E4%B8%AD%E6%96%87%E5%A4%A7%E5%AD%B8%29%20OR+all_dc.subject%3A%28%E4%B8%AD%E6%96%87%E5%A4%A7%E5%AD%B8%29%20OR+fulltext%3A%28%E4%B8%AD%E6%96%87%E5%A4%A7%E5%AD%B8%29%20OR+all_dc.description%3A%28%E4%B8%AD%E6%96%87%E5%A4%A7%E5%AD%B8%29%20%29%20%29&amp;_coverpage_WAR_mmisportalportlet_sort_order=asc&amp;_coverpage_WAR_mmisportalportlet_sort_field=dc.publicationdate_bsort" target="_blank" rel="noopener noreferrer">第4張第2頁</a>。
+<ul>
+<li>題為：「香港中文大學之使命」即起收件聘岑才生、唐碧川、潘仁昌三氏主評</li>
+</ul>
+</li>
 <li>t.b.c</li>
 </ol>]]></summary>
     <content type="html"><![CDATA[<h2> 新聞報道</h2>
 <ol>
 <li>〈中文大學的成立，不獨為專上教育帶來蓬勃前途，更使整個中文教育體系得到鼓勵協助！〉，《華僑日報》，1963年1月1日，<a href="https://mmis.hkpl.gov.hk/coverpage/-/coverpage/view?_coverpage_WAR_mmisportalportlet_hsf=%E4%B8%AD%E6%96%87%E5%A4%A7%E5%AD%B8&amp;_coverpage_WAR_mmisportalportlet_actual_q=%28%20verbatim_dc.collection%3A%28%22Old%5C%20HK%5C%20Newspapers%22%29%20%29%20AND+%28%20%28%20allTermsMandatory%3A%28true%29%20OR+all_dc.title%3A%28%E4%B8%AD%E6%96%87%E5%A4%A7%E5%AD%B8%29%20OR+all_dc.creator%3A%28%E4%B8%AD%E6%96%87%E5%A4%A7%E5%AD%B8%29%20OR+all_dc.contributor%3A%28%E4%B8%AD%E6%96%87%E5%A4%A7%E5%AD%B8%29%20OR+all_dc.subject%3A%28%E4%B8%AD%E6%96%87%E5%A4%A7%E5%AD%B8%29%20OR+fulltext%3A%28%E4%B8%AD%E6%96%87%E5%A4%A7%E5%AD%B8%29%20OR+all_dc.description%3A%28%E4%B8%AD%E6%96%87%E5%A4%A7%E5%AD%B8%29%20%29%20%29&amp;_coverpage_WAR_mmisportalportlet_sort_field=dc.publicationdate_bsort&amp;p_r_p_-1078056564_c=QF757YsWv5%2FH7zGe%2FKF%2BFM0H%2Fg57cIhL&amp;_coverpage_WAR_mmisportalportlet_o=248&amp;_coverpage_WAR_mmisportalportlet_sort_order=asc" target="_blank" rel="noopener noreferrer">第5張第1頁</a>。</li>
+<li>〈聯合書院校長鄭棟材舉辦全港高中生論文賽　題為「香港中文大學之使命」〉，《大公報》，1963年1月11日，<a href="https://mmis.hkpl.gov.hk/coverpage/-/coverpage/view?_coverpage_WAR_mmisportalportlet_hsf=%E4%B8%AD%E6%96%87%E5%A4%A7%E5%AD%B8&amp;p_r_p_-1078056564_c=QF757YsWv59H%2FuxqfBwEJMP1M8O0Q45h&amp;_coverpage_WAR_mmisportalportlet_o=250&amp;_coverpage_WAR_mmisportalportlet_actual_q=%28%20verbatim_dc.collection%3A%28%22Old%5C%20HK%5C%20Newspapers%22%29%20%29%20AND+%28%20%28%20allTermsMandatory%3A%28true%29%20OR+all_dc.title%3A%28%E4%B8%AD%E6%96%87%E5%A4%A7%E5%AD%B8%29%20OR+all_dc.creator%3A%28%E4%B8%AD%E6%96%87%E5%A4%A7%E5%AD%B8%29%20OR+all_dc.contributor%3A%28%E4%B8%AD%E6%96%87%E5%A4%A7%E5%AD%B8%29%20OR+all_dc.subject%3A%28%E4%B8%AD%E6%96%87%E5%A4%A7%E5%AD%B8%29%20OR+fulltext%3A%28%E4%B8%AD%E6%96%87%E5%A4%A7%E5%AD%B8%29%20OR+all_dc.description%3A%28%E4%B8%AD%E6%96%87%E5%A4%A7%E5%AD%B8%29%20%29%20%29&amp;_coverpage_WAR_mmisportalportlet_sort_order=asc&amp;_coverpage_WAR_mmisportalportlet_sort_field=dc.publicationdate_bsort" target="_blank" rel="noopener noreferrer">第1張；第3版</a>。</li>
+<li>〈聯合書院提倡中文寫作　辦中學生論文賽〉，《華僑日報》，1963年1月11日，<a href="https://mmis.hkpl.gov.hk/coverpage/-/coverpage/view?_coverpage_WAR_mmisportalportlet_hsf=%E4%B8%AD%E6%96%87%E5%A4%A7%E5%AD%B8&amp;p_r_p_-1078056564_c=QF757YsWv5%2FH7zGe%2FKF%2BFIKKFQdxu4RS&amp;_coverpage_WAR_mmisportalportlet_o=251&amp;_coverpage_WAR_mmisportalportlet_actual_q=%28%20verbatim_dc.collection%3A%28%22Old%5C%20HK%5C%20Newspapers%22%29%20%29%20AND+%28%20%28%20allTermsMandatory%3A%28true%29%20OR+all_dc.title%3A%28%E4%B8%AD%E6%96%87%E5%A4%A7%E5%AD%B8%29%20OR+all_dc.creator%3A%28%E4%B8%AD%E6%96%87%E5%A4%A7%E5%AD%B8%29%20OR+all_dc.contributor%3A%28%E4%B8%AD%E6%96%87%E5%A4%A7%E5%AD%B8%29%20OR+all_dc.subject%3A%28%E4%B8%AD%E6%96%87%E5%A4%A7%E5%AD%B8%29%20OR+fulltext%3A%28%E4%B8%AD%E6%96%87%E5%A4%A7%E5%AD%B8%29%20OR+all_dc.description%3A%28%E4%B8%AD%E6%96%87%E5%A4%A7%E5%AD%B8%29%20%29%20%29&amp;_coverpage_WAR_mmisportalportlet_sort_order=asc&amp;_coverpage_WAR_mmisportalportlet_sort_field=dc.publicationdate_bsort" target="_blank" rel="noopener noreferrer">第4張第2頁</a>。
+<ul>
+<li>題為：「香港中文大學之使命」即起收件聘岑才生、唐碧川、潘仁昌三氏主評</li>
+</ul>
+</li>
 <li>t.b.c</li>
 </ol>
 <h2> 文章</h2>
 <ol>
 <li>黎嘉潮：〈香港中文大學之使命　為慶祝一九六三年元旦而作〉，《華僑日報》，1963年1月1日，<a href="https://mmis.hkpl.gov.hk/coverpage/-/coverpage/view?_coverpage_WAR_mmisportalportlet_hsf=%E4%B8%AD%E6%96%87%E5%A4%A7%E5%AD%B8&amp;_coverpage_WAR_mmisportalportlet_actual_q=%28%20verbatim_dc.collection%3A%28%22Old%5C%20HK%5C%20Newspapers%22%29%20%29%20AND+%28%20%28%20allTermsMandatory%3A%28true%29%20OR+all_dc.title%3A%28%E4%B8%AD%E6%96%87%E5%A4%A7%E5%AD%B8%29%20OR+all_dc.creator%3A%28%E4%B8%AD%E6%96%87%E5%A4%A7%E5%AD%B8%29%20OR+all_dc.contributor%3A%28%E4%B8%AD%E6%96%87%E5%A4%A7%E5%AD%B8%29%20OR+all_dc.subject%3A%28%E4%B8%AD%E6%96%87%E5%A4%A7%E5%AD%B8%29%20OR+fulltext%3A%28%E4%B8%AD%E6%96%87%E5%A4%A7%E5%AD%B8%29%20OR+all_dc.description%3A%28%E4%B8%AD%E6%96%87%E5%A4%A7%E5%AD%B8%29%20%29%20%29&amp;_coverpage_WAR_mmisportalportlet_sort_field=dc.publicationdate_bsort&amp;p_r_p_-1078056564_c=QF757YsWv5%2FH7zGe%2FKF%2BFM0H%2Fg57cIhL&amp;_coverpage_WAR_mmisportalportlet_o=248&amp;_coverpage_WAR_mmisportalportlet_sort_order=asc" target="_blank" rel="noopener noreferrer">第5張第1頁</a>。</li>
+<li>〈中文大學需要更多社會意見〉，《華僑日報》，1963年1月7日，<a href="https://mmis.hkpl.gov.hk/coverpage/-/coverpage/view?_coverpage_WAR_mmisportalportlet_hsf=%E4%B8%AD%E6%96%87%E5%A4%A7%E5%AD%B8&amp;p_r_p_-1078056564_c=QF757YsWv5%2FH7zGe%2FKF%2BFPFLCoNSPeKt&amp;_coverpage_WAR_mmisportalportlet_o=249&amp;_coverpage_WAR_mmisportalportlet_actual_q=%28%20verbatim_dc.collection%3A%28%22Old%5C%20HK%5C%20Newspapers%22%29%20%29%20AND+%28%20%28%20allTermsMandatory%3A%28true%29%20OR+all_dc.title%3A%28%E4%B8%AD%E6%96%87%E5%A4%A7%E5%AD%B8%29%20OR+all_dc.creator%3A%28%E4%B8%AD%E6%96%87%E5%A4%A7%E5%AD%B8%29%20OR+all_dc.contributor%3A%28%E4%B8%AD%E6%96%87%E5%A4%A7%E5%AD%B8%29%20OR+all_dc.subject%3A%28%E4%B8%AD%E6%96%87%E5%A4%A7%E5%AD%B8%29%20OR+fulltext%3A%28%E4%B8%AD%E6%96%87%E5%A4%A7%E5%AD%B8%29%20OR+all_dc.description%3A%28%E4%B8%AD%E6%96%87%E5%A4%A7%E5%AD%B8%29%20%29%20%29&amp;_coverpage_WAR_mmisportalportlet_sort_order=asc&amp;_coverpage_WAR_mmisportalportlet_sort_field=dc.publicationdate_bsort" target="_blank" rel="noopener noreferrer">第4張第2頁</a>。</li>
+<li>〈值得注意的一項意見　論黎嘉潮校長對中文大學的建議〉，《華僑日報》，1963年1月7日，<a href="https://mmis.hkpl.gov.hk/coverpage/-/coverpage/view?_coverpage_WAR_mmisportalportlet_hsf=%E4%B8%AD%E6%96%87%E5%A4%A7%E5%AD%B8&amp;p_r_p_-1078056564_c=QF757YsWv5%2FH7zGe%2FKF%2BFPFLCoNSPeKt&amp;_coverpage_WAR_mmisportalportlet_o=249&amp;_coverpage_WAR_mmisportalportlet_actual_q=%28%20verbatim_dc.collection%3A%28%22Old%5C%20HK%5C%20Newspapers%22%29%20%29%20AND+%28%20%28%20allTermsMandatory%3A%28true%29%20OR+all_dc.title%3A%28%E4%B8%AD%E6%96%87%E5%A4%A7%E5%AD%B8%29%20OR+all_dc.creator%3A%28%E4%B8%AD%E6%96%87%E5%A4%A7%E5%AD%B8%29%20OR+all_dc.contributor%3A%28%E4%B8%AD%E6%96%87%E5%A4%A7%E5%AD%B8%29%20OR+all_dc.subject%3A%28%E4%B8%AD%E6%96%87%E5%A4%A7%E5%AD%B8%29%20OR+fulltext%3A%28%E4%B8%AD%E6%96%87%E5%A4%A7%E5%AD%B8%29%20OR+all_dc.description%3A%28%E4%B8%AD%E6%96%87%E5%A4%A7%E5%AD%B8%29%20%29%20%29&amp;_coverpage_WAR_mmisportalportlet_sort_order=asc&amp;_coverpage_WAR_mmisportalportlet_sort_field=dc.publicationdate_bsort" target="_blank" rel="noopener noreferrer">第4張第2頁</a>。</li>
+<li>盧幹之：〈寫在中文大學成立之前〉，《華僑日報》，1963年1月13日，<a href="https://mmis.hkpl.gov.hk/coverpage/-/coverpage/view?_coverpage_WAR_mmisportalportlet_hsf=%E4%B8%AD%E6%96%87%E5%A4%A7%E5%AD%B8&amp;p_r_p_-1078056564_c=QF757YsWv5%2FH7zGe%2FKF%2BFHsG0wUsSaps&amp;_coverpage_WAR_mmisportalportlet_o=252&amp;_coverpage_WAR_mmisportalportlet_actual_q=%28%20verbatim_dc.collection%3A%28%22Old%5C%20HK%5C%20Newspapers%22%29%20%29%20AND+%28%20%28%20allTermsMandatory%3A%28true%29%20OR+all_dc.title%3A%28%E4%B8%AD%E6%96%87%E5%A4%A7%E5%AD%B8%29%20OR+all_dc.creator%3A%28%E4%B8%AD%E6%96%87%E5%A4%A7%E5%AD%B8%29%20OR+all_dc.contributor%3A%28%E4%B8%AD%E6%96%87%E5%A4%A7%E5%AD%B8%29%20OR+all_dc.subject%3A%28%E4%B8%AD%E6%96%87%E5%A4%A7%E5%AD%B8%29%20OR+fulltext%3A%28%E4%B8%AD%E6%96%87%E5%A4%A7%E5%AD%B8%29%20OR+all_dc.description%3A%28%E4%B8%AD%E6%96%87%E5%A4%A7%E5%AD%B8%29%20%29%20%29&amp;_coverpage_WAR_mmisportalportlet_sort_order=asc&amp;_coverpage_WAR_mmisportalportlet_sort_field=dc.publicationdate_bsort" target="_blank" rel="noopener noreferrer">第4張第1頁</a>。</li>
 </ol>
 ]]></content>
     <published>2023-04-13T00:00:00.000Z</published>
   </entry>
   <entry>
     <title type="text">大學</title>
-    <id>https://www.pasthk.com/education/university/</id>
-    <link href="https://www.pasthk.com/education/university/"/>
-    <updated>2023-04-13T13:45:05.000Z</updated>
+    <id>https://www.pasthk.com/education/higher-education/</id>
+    <link href="https://www.pasthk.com/education/higher-education/"/>
+    <updated>2023-04-16T14:28:21.622Z</updated>
     <summary type="html"><![CDATA[<ul>
-<li><a href="/education/university/university-of-hong-kong.html" target="blank">香港大學</a></li>
-<li><a href="/education/university/chinese-university-of-hong-kong.html" target="blank">香港中文大學</a></li>
+<li><a href="/education/higher-education/university-of-hong-kong.html" target="blank">香港大學</a></li>
+<li><a href="/education/higher-education/chinese-university-of-hong-kong.html" target="blank">香港中文大學</a></li>
 </ul>
 ]]></summary>
     <content type="html"><![CDATA[<ul>
-<li><a href="/education/university/university-of-hong-kong.html" target="blank">香港大學</a></li>
-<li><a href="/education/university/chinese-university-of-hong-kong.html" target="blank">香港中文大學</a></li>
+<li><a href="/education/higher-education/university-of-hong-kong.html" target="blank">香港大學</a></li>
+<li><a href="/education/higher-education/chinese-university-of-hong-kong.html" target="blank">香港中文大學</a></li>
 </ul>
 ]]></content>
     <published>2023-04-13T00:00:00.000Z</published>
   </entry>
   <entry>
     <title type="text">香港大學</title>
-    <id>https://www.pasthk.com/education/university/university-of-hong-kong.html</id>
-    <link href="https://www.pasthk.com/education/university/university-of-hong-kong.html"/>
-    <updated>2023-04-13T13:45:05.000Z</updated>
+    <id>https://www.pasthk.com/education/higher-education/university-of-hong-kong.html</id>
+    <link href="https://www.pasthk.com/education/higher-education/university-of-hong-kong.html"/>
+    <updated>2023-04-16T14:28:21.629Z</updated>
     <summary type="html"><![CDATA[<h2> 新聞報道</h2>
 <ol>
 <li>〈擬創設香港大學堂〉，《香港華字日報》，<a href="https://mmis.hkpl.gov.hk/coverpage/-/coverpage/view?_coverpage_WAR_mmisportalportlet_hsf=%E6%B8%AF%E5%A4%A7&amp;p_r_p_-1078056564_c=QF757YsWv5%2BakvA8rFW5EuJSiukuHYZu&amp;_coverpage_WAR_mmisportalportlet_o=5&amp;_coverpage_WAR_mmisportalportlet_actual_q=%28%20verbatim_dc.collection%3A%28%22Old%5C%20HK%5C%20Newspapers%22%29%20%29%20AND+%28%20%28%20allTermsMandatory%3A%28true%29%20OR+all_dc.title%3A%28%E9%A6%99%E6%B8%AF%E5%A4%A7%E5%AD%B8%29%20OR+all_dc.creator%3A%28%E9%A6%99%E6%B8%AF%E5%A4%A7%E5%AD%B8%29%20OR+all_dc.contributor%3A%28%E9%A6%99%E6%B8%AF%E5%A4%A7%E5%AD%B8%29%20OR+all_dc.subject%3A%28%E9%A6%99%E6%B8%AF%E5%A4%A7%E5%AD%B8%29%20OR+fulltext%3A%28%E9%A6%99%E6%B8%AF%E5%A4%A7%E5%AD%B8%29%20OR+all_dc.description%3A%28%E9%A6%99%E6%B8%AF%E5%A4%A7%E5%AD%B8%29%20%29%20%29&amp;_coverpage_WAR_mmisportalportlet_sort_order=asc&amp;_coverpage_WAR_mmisportalportlet_sort_field=dc.publicationdate_bsort&amp;_coverpage_WAR_mmisportalportlet_formDate=1681380981449" target="_blank" rel="noopener noreferrer">1908年9月12日</a>。</li>
@@ -224,7 +239,7 @@
     <title type="text">霍亂</title>
     <id>https://www.pasthk.com/public-health/cholera.html</id>
     <link href="https://www.pasthk.com/public-health/cholera.html"/>
-    <updated>2023-04-12T17:09:31.000Z</updated>
+    <updated>2023-04-15T13:33:00.000Z</updated>
     <summary type="html"><![CDATA[<h2> 新聞報道</h2>
 <ol>
 <li>〈暴病身亡〉，《循環日報》，<a href="https://mmis.hkpl.gov.hk/coverpage/-/coverpage/view?_coverpage_WAR_mmisportalportlet_hsf=%E9%9C%8D%E4%BA%82&amp;p_r_p_-1078056564_c=QF757YsWv58JCjtBMMIqohlo8VZiTiK%2F&amp;_coverpage_WAR_mmisportalportlet_o=5&amp;_coverpage_WAR_mmisportalportlet_actual_q=%28%20verbatim_dc.collection%3A%28%22Old%5C%20HK%5C%20Newspapers%22%29%20%29%20AND+%28%20%28%20allTermsMandatory%3A%28true%29%20OR+all_dc.title%3A%28%E9%9C%8D%E4%BA%82%29%20OR+all_dc.creator%3A%28%E9%9C%8D%E4%BA%82%29%20OR+all_dc.contributor%3A%28%E9%9C%8D%E4%BA%82%29%20OR+all_dc.subject%3A%28%E9%9C%8D%E4%BA%82%29%20OR+fulltext%3A%28%E9%9C%8D%E4%BA%82%29%20OR+all_dc.description%3A%28%E9%9C%8D%E4%BA%82%29%20%29%20%29&amp;_coverpage_WAR_mmisportalportlet_sort_order=asc&amp;_coverpage_WAR_mmisportalportlet_sort_field=dc.publicationdate_bsort" target="_blank" rel="noopener noreferrer">1883年7月7日</a>。</li>
@@ -270,7 +285,7 @@
     <title type="text">鼠疫</title>
     <id>https://www.pasthk.com/public-health/plague.html</id>
     <link href="https://www.pasthk.com/public-health/plague.html"/>
-    <updated>2023-04-12T17:09:31.000Z</updated>
+    <updated>2023-04-15T13:33:00.000Z</updated>
     <summary type="html"><![CDATA[<h2> 新聞報道</h2>
 <ol>
 <li>〈預防鼠疫法〉，《香港華字日報》，<a href="https://mmis.hkpl.gov.hk/coverpage/-/coverpage/view?_coverpage_WAR_mmisportalportlet_hsf=%E9%BC%A0%E7%96%AB&amp;p_r_p_-1078056564_c=QF757YsWv5%2BakvA8rFW5EvIMwx%2FVL9Yl&amp;_coverpage_WAR_mmisportalportlet_o=0&amp;_coverpage_WAR_mmisportalportlet_actual_q=%28%20verbatim_dc.collection%3A%28%22Old%5C%20HK%5C%20Newspapers%22%29%20%29%20AND+%28%20%28%20allTermsMandatory%3A%28true%29%20OR+all_dc.title%3A%28%E9%BC%A0%E7%96%AB%29%20OR+all_dc.creator%3A%28%E9%BC%A0%E7%96%AB%29%20OR+all_dc.contributor%3A%28%E9%BC%A0%E7%96%AB%29%20OR+all_dc.subject%3A%28%E9%BC%A0%E7%96%AB%29%20OR+fulltext%3A%28%E9%BC%A0%E7%96%AB%29%20OR+all_dc.description%3A%28%E9%BC%A0%E7%96%AB%29%20%29%20%29&amp;_coverpage_WAR_mmisportalportlet_sort_field=dc.publicationdate_bsort&amp;_coverpage_WAR_mmisportalportlet_sort_order=asc" target="_blank" rel="noopener noreferrer">1901年6月1日</a>。</li>
@@ -297,7 +312,7 @@
     <title type="text">公共衛生</title>
     <id>https://www.pasthk.com/public-health/</id>
     <link href="https://www.pasthk.com/public-health/"/>
-    <updated>2023-04-12T11:19:46.000Z</updated>
+    <updated>2023-04-15T13:33:00.000Z</updated>
     <summary type="html"><![CDATA[<h2> 疾病</h2>
 <ul>
 <li><a href="/public-health/cholera.html" target="blank">霍亂</a></li>
@@ -856,7 +871,7 @@
     <title type="text">1930年代</title>
     <id>https://www.pasthk.com/meteorology/tropical-cyclone/1930s.html</id>
     <link href="https://www.pasthk.com/meteorology/tropical-cyclone/1930s.html"/>
-    <updated>2023-04-12T17:09:31.000Z</updated>
+    <updated>2023-04-15T13:33:00.000Z</updated>
     <summary type="html"><![CDATA[<h2> 1930年</h2>
 <ol>
 <li>〈昨日本港之狂風暴雨〉，《香港工商日報》，1930年8月22日，<a href="https://mmis.hkpl.gov.hk/coverpage/-/coverpage/view?_coverpage_WAR_mmisportalportlet_hsf=%E9%A2%A8%E7%90%83&amp;p_r_p_-1078056564_c=QF757YsWv5%2Bx%2BFRfM7YCs3Q73KMgEHbq&amp;_coverpage_WAR_mmisportalportlet_o=11&amp;_coverpage_WAR_mmisportalportlet_actual_q=%28%20verbatim_dc.collection%3A%28%22Old%5C%20HK%5C%20Newspapers%22%29%20%29%20AND+%28%20%28%20allTermsMandatory%3A%28true%29%20OR+all_dc.title%3A%28%E9%A2%A8%E7%90%83%29%20OR+all_dc.creator%3A%28%E9%A2%A8%E7%90%83%29%20OR+all_dc.contributor%3A%28%E9%A2%A8%E7%90%83%29%20OR+all_dc.subject%3A%28%E9%A2%A8%E7%90%83%29%20OR+fulltext%3A%28%E9%A2%A8%E7%90%83%29%20OR+all_dc.description%3A%28%E9%A2%A8%E7%90%83%29%20%29%20%29&amp;_coverpage_WAR_mmisportalportlet_sort_order=asc&amp;_coverpage_WAR_mmisportalportlet_sort_field=dc.publicationdate_bsort" target="_blank" rel="noopener noreferrer">第3張第1版</a>。
