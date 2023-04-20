@@ -6,8 +6,8 @@
     <link>https://www.pasthk.com/</link>
     <description>香港專題研究索引集</description>
     <language>zh-TW</language>
-    <pubDate>Wed, 19 Apr 2023 06:50:19 GMT</pubDate>
-    <lastBuildDate>Wed, 19 Apr 2023 06:50:19 GMT</lastBuildDate>
+    <pubDate>Thu, 20 Apr 2023 04:43:57 GMT</pubDate>
+    <lastBuildDate>Thu, 20 Apr 2023 04:43:57 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>其他</category>
@@ -388,6 +388,20 @@
       <pubDate>Wed, 05 Apr 2023 00:00:00 GMT</pubDate>
     </item>
     <item>
+      <title>黃大仙信俗</title>
+      <link>https://www.pasthk.com/folkloristics/wong-tai-sin/</link>
+      <guid>https://www.pasthk.com/folkloristics/wong-tai-sin/</guid>
+      <source url="https://www.pasthk.com/rss.xml">黃大仙信俗</source>
+      <description>專著 1. 吳麗珍：《香港黃大仙》（香港：三聯書店，2012年）。 2. 《善道同行—嗇色園黃大仙祠百載道情》編輯委員會：《善道同行—嗇色園黃大仙祠百載道情》（香港：中華書局，2022年）。</description>
+      <pubDate>Fri, 20 Jan 2023 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<h2> 專著</h2>
+<ol>
+<li>吳麗珍：《香港黃大仙》（香港：三聯書店，2012年）。</li>
+<li>《善道同行—嗇色園黃大仙祠百載道情》編輯委員會：《善道同行—嗇色園黃大仙祠百載道情》（香港：中華書局，2022年）。</li>
+</ol>
+]]></content:encoded>
+    </item>
+    <item>
       <title>天后信仰</title>
       <link>https://www.pasthk.com/folkloristics/tin-hau/</link>
       <guid>https://www.pasthk.com/folkloristics/tin-hau/</guid>
@@ -418,20 +432,6 @@
 <li>……因赤灣海途為敵騷擾……</li>
 </ul>
 </li>
-</ol>
-]]></content:encoded>
-    </item>
-    <item>
-      <title>黃大仙信俗</title>
-      <link>https://www.pasthk.com/folkloristics/wong-tai-sin/</link>
-      <guid>https://www.pasthk.com/folkloristics/wong-tai-sin/</guid>
-      <source url="https://www.pasthk.com/rss.xml">黃大仙信俗</source>
-      <description>專著 1. 吳麗珍：《香港黃大仙》（香港：三聯書店，2012年）。 2. 《善道同行—嗇色園黃大仙祠百載道情》編輯委員會：《善道同行—嗇色園黃大仙祠百載道情》（香港：中華書局，2022年）。</description>
-      <pubDate>Fri, 20 Jan 2023 00:00:00 GMT</pubDate>
-      <content:encoded><![CDATA[<h2> 專著</h2>
-<ol>
-<li>吳麗珍：《香港黃大仙》（香港：三聯書店，2012年）。</li>
-<li>《善道同行—嗇色園黃大仙祠百載道情》編輯委員會：《善道同行—嗇色園黃大仙祠百載道情》（香港：中華書局，2022年）。</li>
 </ol>
 ]]></content:encoded>
     </item>

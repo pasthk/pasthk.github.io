@@ -4,7 +4,7 @@
   <title>追跡香江</title>
   <subtitle>香港專題研究索引集</subtitle>
   <icon>https://www.pasthk.com/favicon.ico</icon>
-  <updated>2023-04-19T06:50:19.829Z</updated>
+  <updated>2023-04-20T04:43:57.057Z</updated>
   <generator>vuepress-plugin-feed2</generator>
   <link rel="self" href="https://www.pasthk.com/atom.xml"/>
   <link rel="alternate" href="https://www.pasthk.com/"/>
@@ -557,6 +557,25 @@
     <published>2023-04-05T00:00:00.000Z</published>
   </entry>
   <entry>
+    <title type="text">黃大仙信俗</title>
+    <id>https://www.pasthk.com/folkloristics/wong-tai-sin/</id>
+    <link href="https://www.pasthk.com/folkloristics/wong-tai-sin/"/>
+    <updated>2023-04-12T17:09:31.000Z</updated>
+    <summary type="html"><![CDATA[<h2> 專著</h2>
+<ol>
+<li>吳麗珍：《香港黃大仙》（香港：三聯書店，2012年）。</li>
+<li>《善道同行—嗇色園黃大仙祠百載道情》編輯委員會：《善道同行—嗇色園黃大仙祠百載道情》（香港：中華書局，2022年）。</li>
+</ol>
+]]></summary>
+    <content type="html"><![CDATA[<h2> 專著</h2>
+<ol>
+<li>吳麗珍：《香港黃大仙》（香港：三聯書店，2012年）。</li>
+<li>《善道同行—嗇色園黃大仙祠百載道情》編輯委員會：《善道同行—嗇色園黃大仙祠百載道情》（香港：中華書局，2022年）。</li>
+</ol>
+]]></content>
+    <published>2023-01-20T00:00:00.000Z</published>
+  </entry>
+  <entry>
     <title type="text">天后信仰</title>
     <id>https://www.pasthk.com/folkloristics/tin-hau/</id>
     <link href="https://www.pasthk.com/folkloristics/tin-hau/"/>
@@ -595,25 +614,6 @@
 </ol>
 ]]></content>
     <published>2023-04-05T00:00:00.000Z</published>
-  </entry>
-  <entry>
-    <title type="text">黃大仙信俗</title>
-    <id>https://www.pasthk.com/folkloristics/wong-tai-sin/</id>
-    <link href="https://www.pasthk.com/folkloristics/wong-tai-sin/"/>
-    <updated>2023-04-12T17:09:31.000Z</updated>
-    <summary type="html"><![CDATA[<h2> 專著</h2>
-<ol>
-<li>吳麗珍：《香港黃大仙》（香港：三聯書店，2012年）。</li>
-<li>《善道同行—嗇色園黃大仙祠百載道情》編輯委員會：《善道同行—嗇色園黃大仙祠百載道情》（香港：中華書局，2022年）。</li>
-</ol>
-]]></summary>
-    <content type="html"><![CDATA[<h2> 專著</h2>
-<ol>
-<li>吳麗珍：《香港黃大仙》（香港：三聯書店，2012年）。</li>
-<li>《善道同行—嗇色園黃大仙祠百載道情》編輯委員會：《善道同行—嗇色園黃大仙祠百載道情》（香港：中華書局，2022年）。</li>
-</ol>
-]]></content>
-    <published>2023-01-20T00:00:00.000Z</published>
   </entry>
   <entry>
     <title type="text">養和醫院</title>
@@ -2290,7 +2290,7 @@
     <title type="text">薄扶林舞火龍</title>
     <id>https://www.pasthk.com/folkloristics/fire-dragon-dance/pok-fu-lam-fire-dragon-dance.html</id>
     <link href="https://www.pasthk.com/folkloristics/fire-dragon-dance/pok-fu-lam-fire-dragon-dance.html"/>
-    <updated>2023-04-12T17:09:31.000Z</updated>
+    <updated>2023-04-19T06:51:08.000Z</updated>
     <summary type="html"><![CDATA[<h2> 新聞報道</h2>
 <ol>
 <li>t.b.c</li>
@@ -2333,7 +2333,7 @@
     <title type="text">大坑舞火龍</title>
     <id>https://www.pasthk.com/folkloristics/fire-dragon-dance/tai-hang-fire-dragon-dance.html</id>
     <link href="https://www.pasthk.com/folkloristics/fire-dragon-dance/tai-hang-fire-dragon-dance.html"/>
-    <updated>2023-04-12T17:09:31.000Z</updated>
+    <updated>2023-04-19T06:51:08.000Z</updated>
     <summary type="html"><![CDATA[<h2> 新聞報道</h2>
 <ol>
 <li>〈大坑村今晚大舞火龍〉，《工商晚報》，1932年9月14日，<a href="https://mmis.hkpl.gov.hk/coverpage/-/coverpage/view?_coverpage_WAR_mmisportalportlet_hsf=%E8%88%9E%E7%81%AB%E9%BE%8D&amp;p_r_p_-1078056564_c=QF757YsWv5%2FH7zGe%2FKF%2BFHhKf8iUVXaF&amp;_coverpage_WAR_mmisportalportlet_o=0&amp;_coverpage_WAR_mmisportalportlet_actual_q=%28%20verbatim_dc.collection%3A%28%22Old%5C%20HK%5C%20Newspapers%22%29%20%29%20AND+%28%20%28%20allTermsMandatory%3A%28true%29%20OR+all_dc.title%3A%28%E8%88%9E%E7%81%AB%E9%BE%8D%29%20OR+all_dc.creator%3A%28%E8%88%9E%E7%81%AB%E9%BE%8D%29%20OR+all_dc.contributor%3A%28%E8%88%9E%E7%81%AB%E9%BE%8D%29%20OR+all_dc.subject%3A%28%E8%88%9E%E7%81%AB%E9%BE%8D%29%20OR+fulltext%3A%28%E8%88%9E%E7%81%AB%E9%BE%8D%29%20OR+all_dc.description%3A%28%E8%88%9E%E7%81%AB%E9%BE%8D%29%20%29%20%29&amp;_coverpage_WAR_mmisportalportlet_sort_field=dc.publicationdate_bsort&amp;_coverpage_WAR_mmisportalportlet_sort_order=asc" target="_blank" rel="noopener noreferrer">第4頁</a>。</li>

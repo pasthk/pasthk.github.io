@@ -1,0 +1,1 @@
+import{_ as n,X as o,Y as s,a0 as t,C as c}from"./framework-677139ca.js";const a={};function _(r,l){const e=c("adsense");return o(),s("div",null,[t(e)])}const m=n(a,[["render",_],["__file","index.html.vue"]]);export{m as default};
