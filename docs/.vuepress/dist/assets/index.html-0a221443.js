@@ -1,1 +1,0 @@
-import{_ as l,X as s,Y as o,a0 as t,Z as e,E as a}from"./framework-3588fe51.js";const c={},_=e("ul",null,[e("li",null,"大學"),e("li",null,"中學"),e("li",null,"小學")],-1);function r(d,i){const n=a("adsense");return s(),o("div",null,[t(n),_])}const m=l(c,[["render",r],["__file","index.html.vue"]]);export{m as default};
