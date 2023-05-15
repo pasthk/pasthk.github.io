@@ -6,12 +6,29 @@
     <link>https://www.pasthk.com/</link>
     <description>香港專題研究索引集</description>
     <language>zh-TW</language>
-    <pubDate>Mon, 15 May 2023 00:28:43 GMT</pubDate>
-    <lastBuildDate>Mon, 15 May 2023 00:28:43 GMT</lastBuildDate>
+    <pubDate>Mon, 15 May 2023 07:24:08 GMT</pubDate>
+    <lastBuildDate>Mon, 15 May 2023 07:24:08 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>其他</category>
     <category>地圖</category>
+    <item>
+      <title>逸事</title>
+      <link>https://www.pasthk.com/story.html</link>
+      <guid>https://www.pasthk.com/story.html</guid>
+      <source url="https://www.pasthk.com/rss.xml">逸事</source>
+      <description>2023-05-08 5月上旬遇到Error Code: 525問題，搞得一頭霧水。 資料集使用GitHub+Godaddy Economy Plan+Cloudflare CDN/SSL方案，在Godaddy改好Cloudflare的DNS後，順利訪問資料集。後來遇到SSL Handshake Failure問題（代號525），即使參考網上常見的5個...</description>
+      <pubDate>Mon, 15 May 2023 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<h2> 2023-05-08</h2>
+<p>5月上旬遇到Error Code: 525問題，搞得一頭霧水。</p>
+<p>資料集使用GitHub+Godaddy Economy Plan+Cloudflare CDN/SSL方案，在Godaddy改好Cloudflare的DNS後，順利訪問資料集。後來遇到SSL Handshake Failure問題（代號525），即使參考網上常見的5個步驟也沒能解決問題，也把 SSL/TLS 加密模式改為Flexible或Full都無補於事，結果導致Search Console無法訪問Sitemap，一度減少了Search Engine收錄的頁面。</p>
+<p>無奈之下，只好查看Godaddy cPanel裡的設定，在網域（Domain）欄內看到一段提示文字：</p>
+<blockquote>
+<p>HTTPS Redirect is not available because your server is not configured to support it.</p>
+</blockquote>
+<p>Force HTTPS Redirect的選項也是灰色，無法開啟。突然想起來，Cloudflare SSL/TLS的邊緣憑證（Edge Certificates）中有一項已開啟的Automatic HTTPS Rewrites，本著嘗試的態度把該選項關閉，竟解決了525問題，至今不再出現SSL Handshake Failure。</p>
+]]></content:encoded>
+    </item>
     <item>
       <title>雅麗氏何妙齡那打素醫院</title>
       <link>https://www.pasthk.com/hospital/alice-ho-miu-ling-nethersole-hospital.html</link>
@@ -4362,23 +4379,6 @@
 <li>楊式挺：〈「大灣文化」初議——珠江三角洲考古文化命名探討〉，《南方文物》1997年第2期，頁7-27。</li>
 <li>鄧聰：〈環珠江三角洲大灣文化地貌試析〉，《熱帶地理》1997年第2期，頁179-183。</li>
 <li>楊建軍：〈香港南丫島大灣遺址相關問題探討〉，《黃河．黃土．黃種人》2017年第22期，頁22-30。</li>
-</ol>
-]]></content:encoded>
-    </item>
-    <item>
-      <title>考古學年鑒</title>
-      <link>https://www.pasthk.com/archaeology/yearbook.html</link>
-      <guid>https://www.pasthk.com/archaeology/yearbook.html</guid>
-      <source url="https://www.pasthk.com/rss.xml">考古學年鑒</source>
-      <description>1. 〈考古發現 (https://www.yearbook.gov.hk/1998/cwww/23/2301/index.htm)〉，載《香港年報1998》。 2. 〈考古發現 (https://www.yearbook.gov.hk/1999/b5/23/23_01.htm)〉，載《香港年報1999》。 3. 〈西貢蠔湧新石器時代遺址〉，載《中國考...</description>
-      <pubDate>Mon, 16 Jan 2023 00:00:00 GMT</pubDate>
-      <content:encoded><![CDATA[<ol>
-<li>〈<a href="https://www.yearbook.gov.hk/1998/cwww/23/2301/index.htm" target="_blank" rel="noopener noreferrer">考古發現</a>〉，載《香港年報1998》。</li>
-<li>〈<a href="https://www.yearbook.gov.hk/1999/b5/23/23_01.htm" target="_blank" rel="noopener noreferrer">考古發現</a>〉，載《香港年報1999》。</li>
-<li>〈西貢蠔湧新石器時代遺址〉，載《中國考古學年鑒》，北京：文物出版社，2002年，第422-423頁。</li>
-<li>〈<a href="https://www.yearbook.gov.hk/2002/chtml/c21-frame.htm" target="_blank" rel="noopener noreferrer">考古發現</a>〉，載《香港年報2002》。</li>
-<li>〈香港石器時代遺存〉，載《中國考古學年鑒》，北京：文物出版社，2003年，第387頁。</li>
-<li>〈西貢區沙下新石器時代至明清時期遺址〉，載《中國考古學年鑒》，北京：文物出版社，2003年，第387-388頁。</li>
 </ol>
 ]]></content:encoded>
     </item>

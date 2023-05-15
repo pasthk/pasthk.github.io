@@ -60,6 +60,10 @@ export default defineUserConfig({
         link: "/about.md",
       },
       {
+        text: "逸事",
+        link: "/story.md",
+      },
+      {
         text: "安陽・一九二八",
         link: "https://ay1928.github.io/",
       },
