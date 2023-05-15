@@ -1,1 +1,0 @@
-import{_ as n,X as o,Y as t,a0 as s,Z as e,$ as c,E as r}from"./framework-a915a7eb.js";const d={},_=e("h2",{id:"捐贈方式",tabindex:"-1"},[e("a",{class:"header-anchor",href:"#捐贈方式","aria-hidden":"true"},"#"),c(" 捐贈方式")],-1);function i(l,h){const a=r("adsense");return o(),t("div",null,[s(a),_])}const m=n(d,[["render",i],["__file","donation.html.vue"]]);export{m as default};
