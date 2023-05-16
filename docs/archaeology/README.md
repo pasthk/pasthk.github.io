@@ -6,8 +6,7 @@ date: 2023-01-15
 <adsense></adsense>
 
 ## 考古遺址
-::: tabs
-@tab 綜合
+### 綜合
 1. 陳公哲：〈香港考古發掘〉，《考古學報》1957年第4期，第1-16頁。
 2. "Report of the Hong Kong Archaeological Survey Volume III Part I", Hong Kong: Antiquities and Monuments Office, ID5.
 3. "Report of the Hong Kong Archaeological Survey Volume III Part II", Hong Kong: Antiquities and Monuments Office, ID6.
@@ -18,12 +17,12 @@ date: 2023-01-15
 8.  "Report of the Hong Kong Archaeological Survey Volume I An Introduction to the Survey", Hong Kong: Antiquities and Monuments Office, ID19.
 9.  "Report of the Hong Kong Archaeological Survey Volume II Recommendations on Antiquities and Monuments Policy and Legislation", Hong Kong: Antiquities and Monuments Office, ID20.
 10. 〈第二次全港考古調查工作述評〉（香港：古物古蹟辦事處檔案，編號：ID23）。
-@tab 香港島
+### 香港島
 - [黃竹坑](wong-chuk-hang-hong-kong-island.md)
-@tab 九龍
+### 九龍
 - [李鄭屋漢墓](lei-cheng-uk-han-tomb-kowloon.md)
 - [聖山（宋王臺）遺址](sacred-hill-site-kowloon.md)
-@tab 西貢
+### 西貢
 - [黃地峒遺址](wong-tei-tung-sai-kung.md)
 - [沙下遺址](sha-ha-sai-kung.md)
 - [佛頭洲遺址](junk-island-site-sai-kung.md)
@@ -31,7 +30,7 @@ date: 2023-01-15
 - [鹹田](ham-tin-sai-kung.md)
 - [東龍洲](tung-lung-chau-sai-kung.md)
 - [滘西洲](kau-sai-chau-sai-kung.md)
-@tab 屯門
+### 屯門
 - [掃管笏遺址](so-kwun-wat-tuen-mun.md)
 - 沙洲遺址
 - 小欖遺址
@@ -42,14 +41,13 @@ date: 2023-01-15
 - [湧浪遺址](yung-long-tun-mun.md)
 - 泥圍遺址
 - 青磚圍遺址
-@tab 荃灣
+### 荃灣
 - [馬灣東灣仔北遺址](tung-wan-tsai-north-ma-wan-island-tsuen-wan.md)
-@tab 南丫島
+### 南丫島
 - [大灣遺址](tai-wan-site-lamma-island.md)
-@tab 蒲台島
+### 蒲台島
 1. "Hong Kong and Po Toi Islands: The Archaeological Survey", Hong Kong: Antiquities and Monuments Office, ID14.
 - [大灣遺址](tai-wan-site-po-toi.md)
-:::
 ## 資料庫
 - [香港考古資料系統](https://hkaas.amo.gov.hk/hkaas/main.jsp?lang=2) Hong Kong Archaeological Archive System
 - [香港文物資料資訊系統](https://gish.amo.gov.hk/internet/index.html?lang=zh-hk) Geographical Information System on Hong Kong Heritage
