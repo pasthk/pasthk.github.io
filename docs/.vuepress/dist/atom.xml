@@ -4,7 +4,7 @@
   <title>追跡香江</title>
   <subtitle>香港專題研究索引集</subtitle>
   <icon>https://www.pasthk.com/favicon.ico</icon>
-  <updated>2023-05-15T07:24:08.415Z</updated>
+  <updated>2023-05-16T05:55:05.004Z</updated>
   <generator>vuepress-plugin-feed2</generator>
   <link rel="self" href="https://www.pasthk.com/atom.xml"/>
   <link rel="alternate" href="https://www.pasthk.com/"/>
@@ -14,7 +14,7 @@
     <title type="text">逸事</title>
     <id>https://www.pasthk.com/story.html</id>
     <link href="https://www.pasthk.com/story.html"/>
-    <updated>2023-05-15T07:24:08.457Z</updated>
+    <updated>2023-05-15T07:24:27.000Z</updated>
     <summary type="html"><![CDATA[<h2> 2023-05-08</h2>
 <p>5月上旬遇到Error Code: 525問題，搞得一頭霧水。</p>
 <p>資料集使用GitHub+Godaddy Economy Plan+Cloudflare CDN/SSL方案，在Godaddy改好Cloudflare的DNS後，順利訪問資料集。後來遇到SSL Handshake Failure問題（代號525），即使參考網上常見的5個步驟也沒能解決問題，也把 SSL/TLS 加密模式改為Flexible或Full都無補於事，結果導致Search Console無法訪問Sitemap，一度減少了Search Engine收錄的頁面。</p>]]></summary>
