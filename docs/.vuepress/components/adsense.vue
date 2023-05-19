@@ -9,7 +9,7 @@
   </div>
 </template>
 
-<script data-cfasync="false">
+<script>
 export default {
   name: "adsense-inline",
   mounted() {
