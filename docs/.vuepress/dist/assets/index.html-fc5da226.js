@@ -1,0 +1,1 @@
+import{_ as n}from"./plugin-vue_export-helper-c27b6911.js";import{r as o,o as t,c as s,d as c}from"./app-d7e01dcf.js";const r={};function _(a,d){const e=o("adsense");return t(),s("div",null,[c(e)])}const f=n(r,[["render",_],["__file","index.html.vue"]]);export{f as default};
