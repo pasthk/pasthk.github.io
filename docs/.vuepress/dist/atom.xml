@@ -4,7 +4,7 @@
   <title>追跡香江</title>
   <subtitle>香港專題研究索引集</subtitle>
   <icon>https://www.pasthk.com/favicon.ico</icon>
-  <updated>2023-05-31T08:21:27.952Z</updated>
+  <updated>2023-06-01T07:23:46.006Z</updated>
   <generator>vuepress-plugin-feed2</generator>
   <link rel="self" href="https://www.pasthk.com/atom.xml"/>
   <link rel="alternate" href="https://www.pasthk.com/"/>
@@ -5142,6 +5142,23 @@
     <published>2023-01-18T00:00:00.000Z</published>
   </entry>
   <entry>
+    <title type="text">香港舂坎灣遺址</title>
+    <id>https://www.pasthk.com/archaeology/chung-hom-wan-hong-kong-island.html</id>
+    <link href="https://www.pasthk.com/archaeology/chung-hom-wan-hong-kong-island.html"/>
+    <updated>2023-04-12T17:09:31.000Z</updated>
+    <summary type="html"><![CDATA[<h2> 調查報告</h2>
+<ol>
+<li>〈舂坎灣具考古研究價值的地點〉（香港：古物古蹟辦事處檔案，編號：AM77-0054）。</li>
+</ol>
+]]></summary>
+    <content type="html"><![CDATA[<h2> 調查報告</h2>
+<ol>
+<li>〈舂坎灣具考古研究價值的地點〉（香港：古物古蹟辦事處檔案，編號：AM77-0054）。</li>
+</ol>
+]]></content>
+    <published>2023-01-18T00:00:00.000Z</published>
+  </entry>
+  <entry>
     <title type="text">歷史檔案</title>
     <id>https://www.pasthk.com/database/archive.html</id>
     <link href="https://www.pasthk.com/database/archive.html"/>
@@ -5220,23 +5237,6 @@
 </ul>
 </li>
 </ul>
-]]></content>
-    <published>2023-01-18T00:00:00.000Z</published>
-  </entry>
-  <entry>
-    <title type="text">香港舂坎灣遺址</title>
-    <id>https://www.pasthk.com/archaeology/chung-hom-wan-hong-kong-island.html</id>
-    <link href="https://www.pasthk.com/archaeology/chung-hom-wan-hong-kong-island.html"/>
-    <updated>2023-04-12T17:09:31.000Z</updated>
-    <summary type="html"><![CDATA[<h2> 調查報告</h2>
-<ol>
-<li>〈舂坎灣具考古研究價值的地點〉（香港：古物古蹟辦事處檔案，編號：AM77-0054）。</li>
-</ol>
-]]></summary>
-    <content type="html"><![CDATA[<h2> 調查報告</h2>
-<ol>
-<li>〈舂坎灣具考古研究價值的地點〉（香港：古物古蹟辦事處檔案，編號：AM77-0054）。</li>
-</ol>
 ]]></content>
     <published>2023-01-18T00:00:00.000Z</published>
   </entry>
