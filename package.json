@@ -9,7 +9,7 @@
     "docs:build": "vuepress build docs"
   },
   "dependencies": {
-    "vuepress-plugin-search-pro": "2.0.0-beta.224",
-    "vuepress-theme-hope": "2.0.0-beta.224"
+    "vuepress-plugin-search-pro": "2.0.0-beta.228",
+    "vuepress-theme-hope": "2.0.0-beta.228"
   }
 }
