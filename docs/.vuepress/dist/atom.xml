@@ -4,7 +4,7 @@
   <title>追跡香江</title>
   <subtitle>香港專題研究索引集</subtitle>
   <icon>https://www.pasthk.com/favicon.ico</icon>
-  <updated>2023-08-06T00:28:26.770Z</updated>
+  <updated>2023-08-18T10:29:58.788Z</updated>
   <generator>vuepress-plugin-feed2</generator>
   <link rel="self" href="https://www.pasthk.com/atom.xml"/>
   <link rel="alternate" href="https://www.pasthk.com/"/>
@@ -117,7 +117,7 @@
     <title type="text">香港大學</title>
     <id>https://www.pasthk.com/education/higher-education/university-of-hong-kong.html</id>
     <link href="https://www.pasthk.com/education/higher-education/university-of-hong-kong.html"/>
-    <updated>2023-04-18T11:04:28.000Z</updated>
+    <updated>2023-08-18T06:10:44.000Z</updated>
     <summary type="html"><![CDATA[<h2> 新聞報道</h2>
 <ol>
 <li>〈擬創設香港大學堂〉，《香港華字日報》，<a href="https://mmis.hkpl.gov.hk/coverpage/-/coverpage/view?_coverpage_WAR_mmisportalportlet_hsf=%E6%B8%AF%E5%A4%A7&amp;p_r_p_-1078056564_c=QF757YsWv5%2BakvA8rFW5EuJSiukuHYZu&amp;_coverpage_WAR_mmisportalportlet_o=5&amp;_coverpage_WAR_mmisportalportlet_actual_q=%28%20verbatim_dc.collection%3A%28%22Old%5C%20HK%5C%20Newspapers%22%29%20%29%20AND+%28%20%28%20allTermsMandatory%3A%28true%29%20OR+all_dc.title%3A%28%E9%A6%99%E6%B8%AF%E5%A4%A7%E5%AD%B8%29%20OR+all_dc.creator%3A%28%E9%A6%99%E6%B8%AF%E5%A4%A7%E5%AD%B8%29%20OR+all_dc.contributor%3A%28%E9%A6%99%E6%B8%AF%E5%A4%A7%E5%AD%B8%29%20OR+all_dc.subject%3A%28%E9%A6%99%E6%B8%AF%E5%A4%A7%E5%AD%B8%29%20OR+fulltext%3A%28%E9%A6%99%E6%B8%AF%E5%A4%A7%E5%AD%B8%29%20OR+all_dc.description%3A%28%E9%A6%99%E6%B8%AF%E5%A4%A7%E5%AD%B8%29%20%29%20%29&amp;_coverpage_WAR_mmisportalportlet_sort_order=asc&amp;_coverpage_WAR_mmisportalportlet_sort_field=dc.publicationdate_bsort&amp;_coverpage_WAR_mmisportalportlet_formDate=1681380981449" target="_blank" rel="noopener noreferrer">1908年9月12日</a>。</li>
@@ -149,6 +149,62 @@
 <li>〈政界函請紳支富會議捐助香港大學堂〉，《香港華字日報》，<a href="https://mmis.hkpl.gov.hk/coverpage/-/coverpage/view?_coverpage_WAR_mmisportalportlet_hsf=%E6%B8%AF%E5%A4%A7&amp;p_r_p_-1078056564_c=QF757YsWv5%2BakvA8rFW5Eo7YUBonc2Tu&amp;_coverpage_WAR_mmisportalportlet_o=29&amp;_coverpage_WAR_mmisportalportlet_actual_q=%28%20verbatim_dc.collection%3A%28%22Old%5C%20HK%5C%20Newspapers%22%29%20%29%20AND+%28%20%28%20allTermsMandatory%3A%28true%29%20OR+all_dc.title%3A%28%E9%A6%99%E6%B8%AF%E5%A4%A7%E5%AD%B8%29%20OR+all_dc.creator%3A%28%E9%A6%99%E6%B8%AF%E5%A4%A7%E5%AD%B8%29%20OR+all_dc.contributor%3A%28%E9%A6%99%E6%B8%AF%E5%A4%A7%E5%AD%B8%29%20OR+all_dc.subject%3A%28%E9%A6%99%E6%B8%AF%E5%A4%A7%E5%AD%B8%29%20OR+fulltext%3A%28%E9%A6%99%E6%B8%AF%E5%A4%A7%E5%AD%B8%29%20OR+all_dc.description%3A%28%E9%A6%99%E6%B8%AF%E5%A4%A7%E5%AD%B8%29%20%29%20%29&amp;_coverpage_WAR_mmisportalportlet_sort_order=asc&amp;_coverpage_WAR_mmisportalportlet_sort_field=dc.publicationdate_bsort&amp;_coverpage_WAR_mmisportalportlet_formDate=1681380981449" target="_blank" rel="noopener noreferrer">1909年7月8日</a>。</li>
 <li>〈紳商因香港大學堂事會議捐款〉，《香港華字日報》，<a href="https://mmis.hkpl.gov.hk/coverpage/-/coverpage/view?_coverpage_WAR_mmisportalportlet_hsf=%E6%B8%AF%E5%A4%A7&amp;p_r_p_-1078056564_c=QF757YsWv5%2BakvA8rFW5EhQanqSVrox5&amp;_coverpage_WAR_mmisportalportlet_o=30&amp;_coverpage_WAR_mmisportalportlet_actual_q=%28%20verbatim_dc.collection%3A%28%22Old%5C%20HK%5C%20Newspapers%22%29%20%29%20AND+%28%20%28%20allTermsMandatory%3A%28true%29%20OR+all_dc.title%3A%28%E9%A6%99%E6%B8%AF%E5%A4%A7%E5%AD%B8%29%20OR+all_dc.creator%3A%28%E9%A6%99%E6%B8%AF%E5%A4%A7%E5%AD%B8%29%20OR+all_dc.contributor%3A%28%E9%A6%99%E6%B8%AF%E5%A4%A7%E5%AD%B8%29%20OR+all_dc.subject%3A%28%E9%A6%99%E6%B8%AF%E5%A4%A7%E5%AD%B8%29%20OR+fulltext%3A%28%E9%A6%99%E6%B8%AF%E5%A4%A7%E5%AD%B8%29%20OR+all_dc.description%3A%28%E9%A6%99%E6%B8%AF%E5%A4%A7%E5%AD%B8%29%20%29%20%29&amp;_coverpage_WAR_mmisportalportlet_sort_order=asc&amp;_coverpage_WAR_mmisportalportlet_sort_field=dc.publicationdate_bsort&amp;_coverpage_WAR_mmisportalportlet_formDate=1681380981449" target="_blank" rel="noopener noreferrer">1909年7月10日</a>。</li>
 <li>〈更正捐款〉，《香港華字日報》，<a href="https://mmis.hkpl.gov.hk/coverpage/-/coverpage/view?_coverpage_WAR_mmisportalportlet_hsf=%E6%B8%AF%E5%A4%A7&amp;p_r_p_-1078056564_c=QF757YsWv5%2BakvA8rFW5ElGZnXk5wdtM&amp;_coverpage_WAR_mmisportalportlet_o=31&amp;_coverpage_WAR_mmisportalportlet_actual_q=%28%20verbatim_dc.collection%3A%28%22Old%5C%20HK%5C%20Newspapers%22%29%20%29%20AND+%28%20%28%20allTermsMandatory%3A%28true%29%20OR+all_dc.title%3A%28%E9%A6%99%E6%B8%AF%E5%A4%A7%E5%AD%B8%29%20OR+all_dc.creator%3A%28%E9%A6%99%E6%B8%AF%E5%A4%A7%E5%AD%B8%29%20OR+all_dc.contributor%3A%28%E9%A6%99%E6%B8%AF%E5%A4%A7%E5%AD%B8%29%20OR+all_dc.subject%3A%28%E9%A6%99%E6%B8%AF%E5%A4%A7%E5%AD%B8%29%20OR+fulltext%3A%28%E9%A6%99%E6%B8%AF%E5%A4%A7%E5%AD%B8%29%20OR+all_dc.description%3A%28%E9%A6%99%E6%B8%AF%E5%A4%A7%E5%AD%B8%29%20%29%20%29&amp;_coverpage_WAR_mmisportalportlet_sort_order=asc&amp;_coverpage_WAR_mmisportalportlet_sort_field=dc.publicationdate_bsort&amp;_coverpage_WAR_mmisportalportlet_formDate=1681380981449" target="_blank" rel="noopener noreferrer">1909年7月12日</a>。</li>
+<li>〈香港大學校概況〉，《時事新報》，1914年5月14日，<a href="https://gpa.eastview.com/crl/lqrcn/?a=d&amp;d=ssxb19140514-01.1.12&amp;srpos=2&amp;e=-------en-25--1-byDA-img-txIN-%e9%a6%99%e6%b8%af%e5%a4%a7%e5%ad%b8---------" target="_blank" rel="noopener noreferrer">第3張第4版</a>。
+<ul>
+<li>建設始末</li>
+</ul>
+</li>
+<li>〈香港大學校概況（續）〉，《時事新報》，1914年5月15日，<a href="https://gpa.eastview.com/crl/lqrcn/?a=d&amp;d=ssxb19140515-01.1.12&amp;srpos=3&amp;e=-------en-25--1-byDA-img-txIN-%e9%a6%99%e6%b8%af%e5%a4%a7%e5%ad%b8---------" target="_blank" rel="noopener noreferrer">第3張第4版</a>。
+<ul>
+<li>設立宗旨</li>
+</ul>
+</li>
+<li>〈香港大學校概況（續）〉，《時事新報》，1914年5月16日，<a href="https://gpa.eastview.com/crl/lqrcn/?a=d&amp;d=ssxb19140516-01.1.12&amp;srpos=5&amp;e=-------en-25--1-byDA-img-txIN-%e9%a6%99%e6%b8%af%e5%a4%a7%e5%ad%b8---------" target="_blank" rel="noopener noreferrer">第3張第4版</a>。
+<ul>
+<li>現時地址</li>
+</ul>
+</li>
+<li>〈香港大學校概況（續）〉，《時事新報》，1914年5月18日，<a href="https://gpa.eastview.com/crl/lqrcn/?a=d&amp;d=ssxb19140518-01.1.12&amp;srpos=6&amp;e=-------en-25--1-byDA-img-txIN-%e9%a6%99%e6%b8%af%e5%a4%a7%e5%ad%b8---------" target="_blank" rel="noopener noreferrer">第3張第4版</a>。
+<ul>
+<li>組織機關</li>
+<li>普通節略
+<ul>
+<li>入學</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>〈香港大學校概況（續）〉，《時事新報》，1914年5月19日，<a href="https://gpa.eastview.com/crl/lqrcn/?a=d&amp;d=ssxb19140519-01.1.12&amp;srpos=7&amp;e=-------en-25--1-byDA-img-txIN-%e9%a6%99%e6%b8%af%e5%a4%a7%e5%ad%b8---------" target="_blank" rel="noopener noreferrer">第3張第4版</a>。
+<ul>
+<li>普通節略
+<ul>
+<li>住宿</li>
+<li>學期</li>
+<li>尋常試</li>
+<li>科學中途試</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>〈香港大學校概況（續）〉，《時事新報》，1914年5月20日，<a href="https://gpa.eastview.com/crl/lqrcn/?a=d&amp;d=ssxb19140520-01.1.12&amp;srpos=8&amp;e=-------en-25--1-byDA-img-txIN-%e9%a6%99%e6%b8%af%e5%a4%a7%e5%ad%b8---------" target="_blank" rel="noopener noreferrer">第3張第4版</a>。
+<ul>
+<li>普通節略
+<ul>
+<li>投考工程科醫學科文學課入場試章程</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>〈香港大學校概況（續）〉，《時事新報》，1914年5月24日，<a href="https://gpa.eastview.com/crl/lqrcn/?a=d&amp;d=ssxb19140524-01.1.12&amp;srpos=10&amp;e=-------en-25--1-byDA-img-txIN-%e9%a6%99%e6%b8%af%e5%a4%a7%e5%ad%b8---------" target="_blank" rel="noopener noreferrer">第3張第4版</a>。
+<ul>
+<li>文學科</li>
+<li>文學科教員人名表</li>
+<li>住宿舍章程</li>
+</ul>
+</li>
+<li>〈香港大學章程摘要〉，《時事新報》，1914年8月12日，<a href="https://gpa.eastview.com/crl/lqrcn/?a=d&amp;d=ssxb19140812-01.1.13&amp;srpos=12&amp;e=-------en-25--1-byDA-img-txIN-%e9%a6%99%e6%b8%af%e5%a4%a7%e5%ad%b8---------" target="_blank" rel="noopener noreferrer">第4張第4版</a>。</li>
+<li>〈梁士詒以一萬元助入香港大學〉，《民國日報》，1916年9月30日，<a href="https://gpa.eastview.com/crl/lqrcn/?a=d&amp;d=mgrg19160930-01.1.2&amp;srpos=14&amp;e=-------en-25--1-byDA-img-txIN-%e9%a6%99%e6%b8%af%e5%a4%a7%e5%ad%b8---------" target="_blank" rel="noopener noreferrer">第1張第2版</a>。</li>
+<li>〈招待赴港師範生〉，《民國日報》，1918年9月9日，<a href="https://gpa.eastview.com/crl/lqrcn/?a=d&amp;d=mgrg19180909-01.1.3&amp;srpos=17&amp;e=-------en-25--1-byDA-img-txIN-%e9%a6%99%e6%b8%af%e5%a4%a7%e5%ad%b8---------" target="_blank" rel="noopener noreferrer">第1張第3版</a>。</li>
 </ol>]]></summary>
     <content type="html"><![CDATA[<h2> 新聞報道</h2>
 <ol>
@@ -181,6 +237,62 @@
 <li>〈政界函請紳支富會議捐助香港大學堂〉，《香港華字日報》，<a href="https://mmis.hkpl.gov.hk/coverpage/-/coverpage/view?_coverpage_WAR_mmisportalportlet_hsf=%E6%B8%AF%E5%A4%A7&amp;p_r_p_-1078056564_c=QF757YsWv5%2BakvA8rFW5Eo7YUBonc2Tu&amp;_coverpage_WAR_mmisportalportlet_o=29&amp;_coverpage_WAR_mmisportalportlet_actual_q=%28%20verbatim_dc.collection%3A%28%22Old%5C%20HK%5C%20Newspapers%22%29%20%29%20AND+%28%20%28%20allTermsMandatory%3A%28true%29%20OR+all_dc.title%3A%28%E9%A6%99%E6%B8%AF%E5%A4%A7%E5%AD%B8%29%20OR+all_dc.creator%3A%28%E9%A6%99%E6%B8%AF%E5%A4%A7%E5%AD%B8%29%20OR+all_dc.contributor%3A%28%E9%A6%99%E6%B8%AF%E5%A4%A7%E5%AD%B8%29%20OR+all_dc.subject%3A%28%E9%A6%99%E6%B8%AF%E5%A4%A7%E5%AD%B8%29%20OR+fulltext%3A%28%E9%A6%99%E6%B8%AF%E5%A4%A7%E5%AD%B8%29%20OR+all_dc.description%3A%28%E9%A6%99%E6%B8%AF%E5%A4%A7%E5%AD%B8%29%20%29%20%29&amp;_coverpage_WAR_mmisportalportlet_sort_order=asc&amp;_coverpage_WAR_mmisportalportlet_sort_field=dc.publicationdate_bsort&amp;_coverpage_WAR_mmisportalportlet_formDate=1681380981449" target="_blank" rel="noopener noreferrer">1909年7月8日</a>。</li>
 <li>〈紳商因香港大學堂事會議捐款〉，《香港華字日報》，<a href="https://mmis.hkpl.gov.hk/coverpage/-/coverpage/view?_coverpage_WAR_mmisportalportlet_hsf=%E6%B8%AF%E5%A4%A7&amp;p_r_p_-1078056564_c=QF757YsWv5%2BakvA8rFW5EhQanqSVrox5&amp;_coverpage_WAR_mmisportalportlet_o=30&amp;_coverpage_WAR_mmisportalportlet_actual_q=%28%20verbatim_dc.collection%3A%28%22Old%5C%20HK%5C%20Newspapers%22%29%20%29%20AND+%28%20%28%20allTermsMandatory%3A%28true%29%20OR+all_dc.title%3A%28%E9%A6%99%E6%B8%AF%E5%A4%A7%E5%AD%B8%29%20OR+all_dc.creator%3A%28%E9%A6%99%E6%B8%AF%E5%A4%A7%E5%AD%B8%29%20OR+all_dc.contributor%3A%28%E9%A6%99%E6%B8%AF%E5%A4%A7%E5%AD%B8%29%20OR+all_dc.subject%3A%28%E9%A6%99%E6%B8%AF%E5%A4%A7%E5%AD%B8%29%20OR+fulltext%3A%28%E9%A6%99%E6%B8%AF%E5%A4%A7%E5%AD%B8%29%20OR+all_dc.description%3A%28%E9%A6%99%E6%B8%AF%E5%A4%A7%E5%AD%B8%29%20%29%20%29&amp;_coverpage_WAR_mmisportalportlet_sort_order=asc&amp;_coverpage_WAR_mmisportalportlet_sort_field=dc.publicationdate_bsort&amp;_coverpage_WAR_mmisportalportlet_formDate=1681380981449" target="_blank" rel="noopener noreferrer">1909年7月10日</a>。</li>
 <li>〈更正捐款〉，《香港華字日報》，<a href="https://mmis.hkpl.gov.hk/coverpage/-/coverpage/view?_coverpage_WAR_mmisportalportlet_hsf=%E6%B8%AF%E5%A4%A7&amp;p_r_p_-1078056564_c=QF757YsWv5%2BakvA8rFW5ElGZnXk5wdtM&amp;_coverpage_WAR_mmisportalportlet_o=31&amp;_coverpage_WAR_mmisportalportlet_actual_q=%28%20verbatim_dc.collection%3A%28%22Old%5C%20HK%5C%20Newspapers%22%29%20%29%20AND+%28%20%28%20allTermsMandatory%3A%28true%29%20OR+all_dc.title%3A%28%E9%A6%99%E6%B8%AF%E5%A4%A7%E5%AD%B8%29%20OR+all_dc.creator%3A%28%E9%A6%99%E6%B8%AF%E5%A4%A7%E5%AD%B8%29%20OR+all_dc.contributor%3A%28%E9%A6%99%E6%B8%AF%E5%A4%A7%E5%AD%B8%29%20OR+all_dc.subject%3A%28%E9%A6%99%E6%B8%AF%E5%A4%A7%E5%AD%B8%29%20OR+fulltext%3A%28%E9%A6%99%E6%B8%AF%E5%A4%A7%E5%AD%B8%29%20OR+all_dc.description%3A%28%E9%A6%99%E6%B8%AF%E5%A4%A7%E5%AD%B8%29%20%29%20%29&amp;_coverpage_WAR_mmisportalportlet_sort_order=asc&amp;_coverpage_WAR_mmisportalportlet_sort_field=dc.publicationdate_bsort&amp;_coverpage_WAR_mmisportalportlet_formDate=1681380981449" target="_blank" rel="noopener noreferrer">1909年7月12日</a>。</li>
+<li>〈香港大學校概況〉，《時事新報》，1914年5月14日，<a href="https://gpa.eastview.com/crl/lqrcn/?a=d&amp;d=ssxb19140514-01.1.12&amp;srpos=2&amp;e=-------en-25--1-byDA-img-txIN-%e9%a6%99%e6%b8%af%e5%a4%a7%e5%ad%b8---------" target="_blank" rel="noopener noreferrer">第3張第4版</a>。
+<ul>
+<li>建設始末</li>
+</ul>
+</li>
+<li>〈香港大學校概況（續）〉，《時事新報》，1914年5月15日，<a href="https://gpa.eastview.com/crl/lqrcn/?a=d&amp;d=ssxb19140515-01.1.12&amp;srpos=3&amp;e=-------en-25--1-byDA-img-txIN-%e9%a6%99%e6%b8%af%e5%a4%a7%e5%ad%b8---------" target="_blank" rel="noopener noreferrer">第3張第4版</a>。
+<ul>
+<li>設立宗旨</li>
+</ul>
+</li>
+<li>〈香港大學校概況（續）〉，《時事新報》，1914年5月16日，<a href="https://gpa.eastview.com/crl/lqrcn/?a=d&amp;d=ssxb19140516-01.1.12&amp;srpos=5&amp;e=-------en-25--1-byDA-img-txIN-%e9%a6%99%e6%b8%af%e5%a4%a7%e5%ad%b8---------" target="_blank" rel="noopener noreferrer">第3張第4版</a>。
+<ul>
+<li>現時地址</li>
+</ul>
+</li>
+<li>〈香港大學校概況（續）〉，《時事新報》，1914年5月18日，<a href="https://gpa.eastview.com/crl/lqrcn/?a=d&amp;d=ssxb19140518-01.1.12&amp;srpos=6&amp;e=-------en-25--1-byDA-img-txIN-%e9%a6%99%e6%b8%af%e5%a4%a7%e5%ad%b8---------" target="_blank" rel="noopener noreferrer">第3張第4版</a>。
+<ul>
+<li>組織機關</li>
+<li>普通節略
+<ul>
+<li>入學</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>〈香港大學校概況（續）〉，《時事新報》，1914年5月19日，<a href="https://gpa.eastview.com/crl/lqrcn/?a=d&amp;d=ssxb19140519-01.1.12&amp;srpos=7&amp;e=-------en-25--1-byDA-img-txIN-%e9%a6%99%e6%b8%af%e5%a4%a7%e5%ad%b8---------" target="_blank" rel="noopener noreferrer">第3張第4版</a>。
+<ul>
+<li>普通節略
+<ul>
+<li>住宿</li>
+<li>學期</li>
+<li>尋常試</li>
+<li>科學中途試</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>〈香港大學校概況（續）〉，《時事新報》，1914年5月20日，<a href="https://gpa.eastview.com/crl/lqrcn/?a=d&amp;d=ssxb19140520-01.1.12&amp;srpos=8&amp;e=-------en-25--1-byDA-img-txIN-%e9%a6%99%e6%b8%af%e5%a4%a7%e5%ad%b8---------" target="_blank" rel="noopener noreferrer">第3張第4版</a>。
+<ul>
+<li>普通節略
+<ul>
+<li>投考工程科醫學科文學課入場試章程</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>〈香港大學校概況（續）〉，《時事新報》，1914年5月24日，<a href="https://gpa.eastview.com/crl/lqrcn/?a=d&amp;d=ssxb19140524-01.1.12&amp;srpos=10&amp;e=-------en-25--1-byDA-img-txIN-%e9%a6%99%e6%b8%af%e5%a4%a7%e5%ad%b8---------" target="_blank" rel="noopener noreferrer">第3張第4版</a>。
+<ul>
+<li>文學科</li>
+<li>文學科教員人名表</li>
+<li>住宿舍章程</li>
+</ul>
+</li>
+<li>〈香港大學章程摘要〉，《時事新報》，1914年8月12日，<a href="https://gpa.eastview.com/crl/lqrcn/?a=d&amp;d=ssxb19140812-01.1.13&amp;srpos=12&amp;e=-------en-25--1-byDA-img-txIN-%e9%a6%99%e6%b8%af%e5%a4%a7%e5%ad%b8---------" target="_blank" rel="noopener noreferrer">第4張第4版</a>。</li>
+<li>〈梁士詒以一萬元助入香港大學〉，《民國日報》，1916年9月30日，<a href="https://gpa.eastview.com/crl/lqrcn/?a=d&amp;d=mgrg19160930-01.1.2&amp;srpos=14&amp;e=-------en-25--1-byDA-img-txIN-%e9%a6%99%e6%b8%af%e5%a4%a7%e5%ad%b8---------" target="_blank" rel="noopener noreferrer">第1張第2版</a>。</li>
+<li>〈招待赴港師範生〉，《民國日報》，1918年9月9日，<a href="https://gpa.eastview.com/crl/lqrcn/?a=d&amp;d=mgrg19180909-01.1.3&amp;srpos=17&amp;e=-------en-25--1-byDA-img-txIN-%e9%a6%99%e6%b8%af%e5%a4%a7%e5%ad%b8---------" target="_blank" rel="noopener noreferrer">第1張第3版</a>。</li>
 </ol>
 <h2> 檔案</h2>
 <ol>
@@ -195,6 +307,11 @@
 <ol>
 <li>晴嵐：〈論華人亟宜合力籌助香港大學堂〉，《香港華字日報》，<a href="https://mmis.hkpl.gov.hk/coverpage/-/coverpage/view?_coverpage_WAR_mmisportalportlet_hsf=%E6%B8%AF%E5%A4%A7&amp;p_r_p_-1078056564_c=QF757YsWv5%2BakvA8rFW5Eky3wX3dhYyM&amp;_coverpage_WAR_mmisportalportlet_o=8&amp;_coverpage_WAR_mmisportalportlet_actual_q=%28%20verbatim_dc.collection%3A%28%22Old%5C%20HK%5C%20Newspapers%22%29%20%29%20AND+%28%20%28%20allTermsMandatory%3A%28true%29%20OR+all_dc.title%3A%28%E9%A6%99%E6%B8%AF%E5%A4%A7%E5%AD%B8%29%20OR+all_dc.creator%3A%28%E9%A6%99%E6%B8%AF%E5%A4%A7%E5%AD%B8%29%20OR+all_dc.contributor%3A%28%E9%A6%99%E6%B8%AF%E5%A4%A7%E5%AD%B8%29%20OR+all_dc.subject%3A%28%E9%A6%99%E6%B8%AF%E5%A4%A7%E5%AD%B8%29%20OR+fulltext%3A%28%E9%A6%99%E6%B8%AF%E5%A4%A7%E5%AD%B8%29%20OR+all_dc.description%3A%28%E9%A6%99%E6%B8%AF%E5%A4%A7%E5%AD%B8%29%20%29%20%29&amp;_coverpage_WAR_mmisportalportlet_sort_order=asc&amp;_coverpage_WAR_mmisportalportlet_sort_field=dc.publicationdate_bsort&amp;_coverpage_WAR_mmisportalportlet_formDate=1681380981449" target="_blank" rel="noopener noreferrer">1909年2月18日</a>。</li>
 <li>何奉璋：〈論建立香港大學堂之完善實有裨於華人〉，《香港華字日報》，<a href="https://mmis.hkpl.gov.hk/coverpage/-/coverpage/view?_coverpage_WAR_mmisportalportlet_hsf=%E6%B8%AF%E5%A4%A7&amp;p_r_p_-1078056564_c=QF757YsWv5%2BakvA8rFW5ErkNx2tw38Pt&amp;_coverpage_WAR_mmisportalportlet_o=14&amp;_coverpage_WAR_mmisportalportlet_actual_q=%28%20verbatim_dc.collection%3A%28%22Old%5C%20HK%5C%20Newspapers%22%29%20%29%20AND+%28%20%28%20allTermsMandatory%3A%28true%29%20OR+all_dc.title%3A%28%E9%A6%99%E6%B8%AF%E5%A4%A7%E5%AD%B8%29%20OR+all_dc.creator%3A%28%E9%A6%99%E6%B8%AF%E5%A4%A7%E5%AD%B8%29%20OR+all_dc.contributor%3A%28%E9%A6%99%E6%B8%AF%E5%A4%A7%E5%AD%B8%29%20OR+all_dc.subject%3A%28%E9%A6%99%E6%B8%AF%E5%A4%A7%E5%AD%B8%29%20OR+fulltext%3A%28%E9%A6%99%E6%B8%AF%E5%A4%A7%E5%AD%B8%29%20OR+all_dc.description%3A%28%E9%A6%99%E6%B8%AF%E5%A4%A7%E5%AD%B8%29%20%29%20%29&amp;_coverpage_WAR_mmisportalportlet_sort_order=asc&amp;_coverpage_WAR_mmisportalportlet_sort_field=dc.publicationdate_bsort&amp;_coverpage_WAR_mmisportalportlet_formDate=1681380981449" target="_blank" rel="noopener noreferrer">1909年2月27日</a>。</li>
+</ol>
+<h2> 廣告</h2>
+<ol>
+<li>〈香港大學招生廣告〉，《時事新報》，1914年5月16日，<a href="https://gpa.eastview.com/crl/lqrcn/?a=d&amp;d=ssxb19140516-01.1.1&amp;srpos=4&amp;e=-------en-25--1-byDA-img-txIN-%e9%a6%99%e6%b8%af%e5%a4%a7%e5%ad%b8---------" target="_blank" rel="noopener noreferrer">封面</a>。</li>
+<li>〈香港大學招生廣告〉，《時事新報》，1914年5月21日，<a href="https://gpa.eastview.com/crl/lqrcn/?a=d&amp;d=ssxb19140521-01.1.1&amp;srpos=9&amp;e=-------en-25--1-byDA-img-txIN-%e9%a6%99%e6%b8%af%e5%a4%a7%e5%ad%b8---------" target="_blank" rel="noopener noreferrer">封面</a>。</li>
 </ol>
 ]]></content>
     <published>2023-04-13T00:00:00.000Z</published>
@@ -692,7 +809,7 @@
     <title type="text">廣華醫院</title>
     <id>https://www.pasthk.com/hospital/kwong-wah-hospital.html</id>
     <link href="https://www.pasthk.com/hospital/kwong-wah-hospital.html"/>
-    <updated>2023-04-12T17:09:31.000Z</updated>
+    <updated>2023-08-06T00:28:47.000Z</updated>
     <summary type="html"><![CDATA[<h2> 新聞報道</h2>
 <ol>
 <li>〈廣華醫院定期開幕〉，《香港華字日報》，1911年10月2日，<a href="https://mmis.hkpl.gov.hk/coverpage/-/coverpage/view?_coverpage_WAR_mmisportalportlet_hsf=%E5%BB%A3%E8%8F%AF&amp;_coverpage_WAR_mmisportalportlet_actual_q=%28%20verbatim_dc.collection%3A%28%22Old%5C%20HK%5C%20Newspapers%22%29%20%29%20AND+%28%20%28%20allTermsMandatory%3A%28true%29%20OR+all_dc.title%3A%28%E5%BB%A3%E8%8F%AF%29%20OR+all_dc.creator%3A%28%E5%BB%A3%E8%8F%AF%29%20OR+all_dc.contributor%3A%28%E5%BB%A3%E8%8F%AF%29%20OR+all_dc.subject%3A%28%E5%BB%A3%E8%8F%AF%29%20OR+fulltext%3A%28%E5%BB%A3%E8%8F%AF%29%20OR+all_dc.description%3A%28%E5%BB%A3%E8%8F%AF%29%20%29%20%29&amp;_coverpage_WAR_mmisportalportlet_sort_field=dc.publicationdate_bsort&amp;p_r_p_-1078056564_c=QF757YsWv5%2BakvA8rFW5Eud57dzauo7k&amp;_coverpage_WAR_mmisportalportlet_o=3&amp;_coverpage_WAR_mmisportalportlet_sort_order=asc" target="_blank" rel="noopener noreferrer">第3頁</a>。</li>
@@ -757,7 +874,7 @@
     <title type="text">東華醫院</title>
     <id>https://www.pasthk.com/hospital/tung-wah-hospital.html</id>
     <link href="https://www.pasthk.com/hospital/tung-wah-hospital.html"/>
-    <updated>2023-04-12T17:09:31.000Z</updated>
+    <updated>2023-08-18T06:10:44.000Z</updated>
     <summary type="html"><![CDATA[<h2> 新聞報道</h2>
 <ol>
 <li>〈東華醫院四月份月結開列如下用供眾覽〉，《循環日報》，1874年6月16日，<a href="https://mmis.hkpl.gov.hk/coverpage/-/coverpage/view?_coverpage_WAR_mmisportalportlet_hsf=%E6%9D%B1%E8%8F%AF&amp;_coverpage_WAR_mmisportalportlet_actual_q=%28%20verbatim_dc.collection%3A%28%22Old%5C%20HK%5C%20Newspapers%22%29%20%29%20AND+%28%20%28%20allTermsMandatory%3A%28true%29%20OR+all_dc.title%3A%28%E6%9D%B1%E8%8F%AF%29%20OR+all_dc.creator%3A%28%E6%9D%B1%E8%8F%AF%29%20OR+all_dc.contributor%3A%28%E6%9D%B1%E8%8F%AF%29%20OR+all_dc.subject%3A%28%E6%9D%B1%E8%8F%AF%29%20OR+fulltext%3A%28%E6%9D%B1%E8%8F%AF%29%20OR+all_dc.description%3A%28%E6%9D%B1%E8%8F%AF%29%20%29%20%29&amp;_coverpage_WAR_mmisportalportlet_sort_field=dc.publicationdate_bsort&amp;p_r_p_-1078056564_c=QF757YsWv58JCjtBMMIqolr5obwRxi5V&amp;_coverpage_WAR_mmisportalportlet_o=0&amp;_coverpage_WAR_mmisportalportlet_sort_order=asc" target="_blank" rel="noopener noreferrer">第3頁</a>。</li>
@@ -785,6 +902,10 @@
 </ol>
 <h2> 專著</h2>
 <h2> 文章</h2>
+<h2> 廣告</h2>
+<ol>
+<li>〈東華醫院〉，《華北日報》，1934年5月29日，<a href="https://gpa.eastview.com/crl/lqrcn/?a=d&amp;d=hbrb19340529-01.1.1&amp;srpos=17&amp;e=-------en-25--1--img-txIN-%e6%9d%b1%e8%8f%af%e9%86%ab%e9%99%a2---------" target="_blank" rel="noopener noreferrer">第1版</a>。</li>
+</ol>
 ]]></content>
     <published>2023-04-04T00:00:00.000Z</published>
   </entry>
