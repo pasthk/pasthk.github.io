@@ -58,8 +58,17 @@ date: 2023-04-13
     - 文學科教員人名表
     - 住宿舍章程
 37. 〈香港大學章程摘要〉，《時事新報》，1914年8月12日，[第4張第4版](https://gpa.eastview.com/crl/lqrcn/?a=d&d=ssxb19140812-01.1.13&srpos=12&e=-------en-25--1-byDA-img-txIN-%e9%a6%99%e6%b8%af%e5%a4%a7%e5%ad%b8---------)。
-38. 〈梁士詒以一萬元助入香港大學〉，《民國日報》，1916年9月30日，[第1張第2版](https://gpa.eastview.com/crl/lqrcn/?a=d&d=mgrg19160930-01.1.2&srpos=14&e=-------en-25--1-byDA-img-txIN-%e9%a6%99%e6%b8%af%e5%a4%a7%e5%ad%b8---------)。
-39. 〈招待赴港師範生〉，《民國日報》，1918年9月9日，[第1張第3版](https://gpa.eastview.com/crl/lqrcn/?a=d&d=mgrg19180909-01.1.3&srpos=17&e=-------en-25--1-byDA-img-txIN-%e9%a6%99%e6%b8%af%e5%a4%a7%e5%ad%b8---------)。
+38. 〈梁士詒以一萬元助入香港大學〉，《民國日報》，1916年9月30日，[第1張；第2版](https://gpa.eastview.com/crl/lqrcn/?a=d&d=mgrg19160930-01.1.2&srpos=14&e=-------en-25--1-byDA-img-txIN-%e9%a6%99%e6%b8%af%e5%a4%a7%e5%ad%b8---------)。
+39. 〈招待赴港師範生〉，《民國日報》，1918年9月9日，[第1張；第3版](https://gpa.eastview.com/crl/lqrcn/?a=d&d=mgrg19180909-01.1.3&srpos=17&e=-------en-25--1-byDA-img-txIN-%e9%a6%99%e6%b8%af%e5%a4%a7%e5%ad%b8---------)。
+40. 〈朱使在香港大學演說〉，《民國日報》，1920年3月9日，[第1張；第2版](https://gpa.eastview.com/crl/lqrcn/?a=d&d=mgrg19200309-01.1.2&srpos=13&e=-------en-25-mgrg-1-byDA-img-txIN-%e9%a6%99%e6%b8%af%e5%a4%a7%e5%ad%b8---------)。
+    - 脫離軍閥主義
+    - 施行普及教育
+41. 〈香港大學發生大風潮〉，《民國日報》，1920年6月3日，[第2張；第6版](https://gpa.eastview.com/crl/lqrcn/?a=d&d=mgrg19200603-01.1.6&srpos=14&e=-------en-25-mgrg-1-byDA-img-txIN-%e9%a6%99%e6%b8%af%e5%a4%a7%e5%ad%b8---------)。
+    - 由裁撤政治法律國際三科而起
+42. 〈香港大學增設商科〉，《民國日報》，1921年1月30日，[第1張；第3版](https://gpa.eastview.com/crl/lqrcn/?a=d&d=mgrg19210130-01.1.3&srpos=16&e=-------en-25-mgrg-1-byDA-img-txIN-%e9%a6%99%e6%b8%af%e5%a4%a7%e5%ad%b8---------)。
+43. 〈香港大學新得巨捐〉，《民國日報》，1921年2月3日，[第1張；第3版](https://gpa.eastview.com/crl/lqrcn/?a=d&d=mgrg19210203-01.1.3&srpos=18&e=-------en-25-mgrg-1-byDA-img-txIN-%e9%a6%99%e6%b8%af%e5%a4%a7%e5%ad%b8---------)。
+44. 〈太古公司資助香港大學〉，《民國日報》，1921年8月3日，[第1張；第3版](https://gpa.eastview.com/crl/lqrcn/?a=d&d=mgrg19210803-01.1.3&srpos=20&e=-------en-25-mgrg-1-byDA-img-txIN-%e9%a6%99%e6%b8%af%e5%a4%a7%e5%ad%b8---------)。
+45. 〈港大官費生學費有著〉，《民國日報》，1921年9月29日，[第3張；第12版](https://gpa.eastview.com/crl/lqrcn/?a=d&d=mgrg19210929-01.1.11&srpos=21&e=-------en-25-mgrg-1-byDA-img-txIN-%e9%a6%99%e6%b8%af%e5%a4%a7%e5%ad%b8---------)。
 
 ## 檔案
 1. 〈教育部關於擴大香港大學以容納中國學生致函SLOSS博士（英文）〉（香港：香港政府檔案處，1939年6月，檔案編號：HKMS175-1-206）。
