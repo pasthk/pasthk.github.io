@@ -6,8 +6,8 @@
     <link>https://www.pasthk.com/</link>
     <description>香港專題研究索引集</description>
     <language>zh-TW</language>
-    <pubDate>Fri, 08 Sep 2023 04:11:28 GMT</pubDate>
-    <lastBuildDate>Fri, 08 Sep 2023 04:11:28 GMT</lastBuildDate>
+    <pubDate>Sat, 23 Sep 2023 03:02:03 GMT</pubDate>
+    <lastBuildDate>Sat, 23 Sep 2023 03:02:03 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <category>其他</category>
@@ -52,21 +52,6 @@
 <ul>
 <li><a href="/accident/fire.html" target="blank">火災</a></li>
 </ul>
-]]></content:encoded>
-    </item>
-    <item>
-      <title>省港大罷工</title>
-      <link>https://www.pasthk.com/social-problem/strike/1925-canton-hong-kong-strike.html</link>
-      <guid>https://www.pasthk.com/social-problem/strike/1925-canton-hong-kong-strike.html</guid>
-      <source url="https://www.pasthk.com/rss.xml">省港大罷工</source>
-      <description>新聞報道 1. 文章 專著</description>
-      <pubDate>Sun, 20 Aug 2023 00:00:00 GMT</pubDate>
-      <content:encoded><![CDATA[<h2> 新聞報道</h2>
-<ol>
-<li></li>
-</ol>
-<h2> 文章</h2>
-<h2> 專著</h2>
 ]]></content:encoded>
     </item>
     <item>
@@ -368,6 +353,21 @@
 <ol>
 <li>梁寶龍：《爭尊嚴——香港海員大罷工史》（香港：香港社會保障學會、香港工運史研究小組，2018年）。</li>
 </ol>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>省港大罷工</title>
+      <link>https://www.pasthk.com/social-problem/strike/1925-canton-hong-kong-strike.html</link>
+      <guid>https://www.pasthk.com/social-problem/strike/1925-canton-hong-kong-strike.html</guid>
+      <source url="https://www.pasthk.com/rss.xml">省港大罷工</source>
+      <description>新聞報道 1. 文章 專著</description>
+      <pubDate>Sun, 20 Aug 2023 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<h2> 新聞報道</h2>
+<ol>
+<li></li>
+</ol>
+<h2> 文章</h2>
+<h2> 專著</h2>
 ]]></content:encoded>
     </item>
     <item>

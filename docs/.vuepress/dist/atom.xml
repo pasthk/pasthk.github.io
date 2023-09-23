@@ -4,7 +4,7 @@
   <title>追跡香江</title>
   <subtitle>香港專題研究索引集</subtitle>
   <icon>https://www.pasthk.com/favicon.ico</icon>
-  <updated>2023-09-08T04:11:28.666Z</updated>
+  <updated>2023-09-23T03:02:03.861Z</updated>
   <generator>vuepress-plugin-feed2</generator>
   <link rel="self" href="https://www.pasthk.com/atom.xml"/>
   <link rel="alternate" href="https://www.pasthk.com/"/>
@@ -14,7 +14,7 @@
     <title type="text">火災</title>
     <id>https://www.pasthk.com/accident/fire.html</id>
     <link href="https://www.pasthk.com/accident/fire.html"/>
-    <updated>2023-09-08T04:11:28.705Z</updated>
+    <updated>2023-09-08T04:12:00.000Z</updated>
     <summary type="html"><![CDATA[<h2> 新聞報道</h2>
 <ol>
 <li>〈白晝全座燒毀〉，《華僑日報》，1956年6月7日，第2張第1頁。
@@ -63,7 +63,7 @@
     <title type="text">意外事故</title>
     <id>https://www.pasthk.com/accident/</id>
     <link href="https://www.pasthk.com/accident/"/>
-    <updated>2023-09-08T04:11:28.708Z</updated>
+    <updated>2023-09-08T04:12:00.000Z</updated>
     <summary type="html"><![CDATA[<h2> 專題</h2>
 <ul>
 <li><a href="/accident/fire.html" target="blank">火災</a></li>
@@ -77,31 +77,10 @@
     <published>2023-09-01T00:00:00.000Z</published>
   </entry>
   <entry>
-    <title type="text">省港大罷工</title>
-    <id>https://www.pasthk.com/social-problem/strike/1925-canton-hong-kong-strike.html</id>
-    <link href="https://www.pasthk.com/social-problem/strike/1925-canton-hong-kong-strike.html"/>
-    <updated>2023-09-08T04:11:28.709Z</updated>
-    <summary type="html"><![CDATA[<h2> 新聞報道</h2>
-<ol>
-<li></li>
-</ol>
-<h2> 文章</h2>
-<h2> 專著</h2>
-]]></summary>
-    <content type="html"><![CDATA[<h2> 新聞報道</h2>
-<ol>
-<li></li>
-</ol>
-<h2> 文章</h2>
-<h2> 專著</h2>
-]]></content>
-    <published>2023-08-20T00:00:00.000Z</published>
-  </entry>
-  <entry>
     <title type="text">社會問題</title>
     <id>https://www.pasthk.com/social-problem/</id>
     <link href="https://www.pasthk.com/social-problem/"/>
-    <updated>2023-09-08T04:11:28.712Z</updated>
+    <updated>2023-09-08T04:12:00.000Z</updated>
     <summary type="html"><![CDATA[<h2> 專題</h2>
 <ul>
 <li><a href="/social-problem/strike/" target="blank">罷工行動</a></li>
@@ -118,7 +97,7 @@
     <title type="text">香港城市大學</title>
     <id>https://www.pasthk.com/education/higher-education/city-university-of-hong-kong.html</id>
     <link href="https://www.pasthk.com/education/higher-education/city-university-of-hong-kong.html"/>
-    <updated>2023-09-08T04:11:28.713Z</updated>
+    <updated>2023-09-08T04:12:00.000Z</updated>
     <summary type="html"><![CDATA[<h2> 新聞報道</h2>
 <h3> 香港城市理工學院</h3>
 <ol>
@@ -137,7 +116,7 @@
     <title type="text">香港都會大學</title>
     <id>https://www.pasthk.com/education/higher-education/hong-kong-metropolitan-university.html</id>
     <link href="https://www.pasthk.com/education/higher-education/hong-kong-metropolitan-university.html"/>
-    <updated>2023-09-08T04:11:28.715Z</updated>
+    <updated>2023-09-08T04:12:00.000Z</updated>
     <summary type="html"><![CDATA[<h2> 新聞報道</h2>
 <ol>
 <li></li>
@@ -154,7 +133,7 @@
     <title type="text">香港理工大學</title>
     <id>https://www.pasthk.com/education/higher-education/hong-kong-polytechnic-university.html</id>
     <link href="https://www.pasthk.com/education/higher-education/hong-kong-polytechnic-university.html"/>
-    <updated>2023-09-08T04:11:28.726Z</updated>
+    <updated>2023-09-08T04:12:00.000Z</updated>
     <summary type="html"><![CDATA[<h2> 新聞報道</h2>
 <h3> 香港官立高級工業學院</h3>
 <ol>
@@ -202,7 +181,7 @@
     <title type="text">嶺南大學</title>
     <id>https://www.pasthk.com/education/higher-education/lingnan-university.html</id>
     <link href="https://www.pasthk.com/education/higher-education/lingnan-university.html"/>
-    <updated>2023-09-08T04:11:28.727Z</updated>
+    <updated>2023-09-08T04:12:00.000Z</updated>
     <summary type="html"><![CDATA[<h2> 新聞報道</h2>
 ]]></summary>
     <content type="html"><![CDATA[<h2> 新聞報道</h2>
@@ -213,7 +192,7 @@
     <title type="text">海員大罷工</title>
     <id>https://www.pasthk.com/social-problem/strike/1922-the-seamen&amp;apos;s-strike.html</id>
     <link href="https://www.pasthk.com/social-problem/strike/1922-the-seamen&apos;s-strike.html"/>
-    <updated>2023-09-08T04:11:28.741Z</updated>
+    <updated>2023-09-08T04:12:00.000Z</updated>
     <summary type="html"><![CDATA[<h2> 新聞報道</h2>
 <ol>
 <li>〈海員已實行罷工〉，《香港華字日報》，1922年1月13日，<a href="https://mmis.hkpl.gov.hk/coverpage/-/coverpage/view?_coverpage_WAR_mmisportalportlet_hsf=%E7%BD%B7%E5%B7%A5&amp;p_r_p_-1078056564_c=QF757YsWv59H%2FuxqfBwEJGabsZqH3mxN&amp;_coverpage_WAR_mmisportalportlet_o=349&amp;_coverpage_WAR_mmisportalportlet_actual_q=%28%20verbatim_dc.collection%3A%28%22Old%5C%20HK%5C%20Newspapers%22%29%20%29%20AND+%28%20%28%20allTermsMandatory%3A%28true%29%20OR+all_dc.title%3A%28%E7%BD%B7%E5%B7%A5%29%20OR+all_dc.creator%3A%28%E7%BD%B7%E5%B7%A5%29%20OR+all_dc.contributor%3A%28%E7%BD%B7%E5%B7%A5%29%20OR+all_dc.subject%3A%28%E7%BD%B7%E5%B7%A5%29%20OR+fulltext%3A%28%E7%BD%B7%E5%B7%A5%29%20OR+all_dc.description%3A%28%E7%BD%B7%E5%B7%A5%29%20%29%20%29&amp;_coverpage_WAR_mmisportalportlet_sort_order=asc&amp;_coverpage_WAR_mmisportalportlet_sort_field=dc.publicationdate_bsort" target="_blank" rel="noopener noreferrer">第1張第3頁</a>。
@@ -612,10 +591,31 @@
     <published>2023-08-19T00:00:00.000Z</published>
   </entry>
   <entry>
+    <title type="text">省港大罷工</title>
+    <id>https://www.pasthk.com/social-problem/strike/1925-canton-hong-kong-strike.html</id>
+    <link href="https://www.pasthk.com/social-problem/strike/1925-canton-hong-kong-strike.html"/>
+    <updated>2023-09-08T04:12:00.000Z</updated>
+    <summary type="html"><![CDATA[<h2> 新聞報道</h2>
+<ol>
+<li></li>
+</ol>
+<h2> 文章</h2>
+<h2> 專著</h2>
+]]></summary>
+    <content type="html"><![CDATA[<h2> 新聞報道</h2>
+<ol>
+<li></li>
+</ol>
+<h2> 文章</h2>
+<h2> 專著</h2>
+]]></content>
+    <published>2023-08-20T00:00:00.000Z</published>
+  </entry>
+  <entry>
     <title type="text">罷工行動</title>
     <id>https://www.pasthk.com/social-problem/strike/</id>
     <link href="https://www.pasthk.com/social-problem/strike/"/>
-    <updated>2023-09-08T04:11:28.742Z</updated>
+    <updated>2023-09-08T04:12:00.000Z</updated>
     <summary type="html"><![CDATA[<h2> 專題</h2>
 <ul>
 <li><a href="/social-problem/strike/1922-the-seamen's-strike.html" target="blank">海員大罷工</a></li>
@@ -735,7 +735,7 @@
     <title type="text">香港大學</title>
     <id>https://www.pasthk.com/education/higher-education/university-of-hong-kong.html</id>
     <link href="https://www.pasthk.com/education/higher-education/university-of-hong-kong.html"/>
-    <updated>2023-08-18T06:10:44.000Z</updated>
+    <updated>2023-09-08T04:12:00.000Z</updated>
     <summary type="html"><![CDATA[<h2> 新聞報道</h2>
 <ol>
 <li>〈擬創設香港大學堂〉，《香港華字日報》，<a href="https://mmis.hkpl.gov.hk/coverpage/-/coverpage/view?_coverpage_WAR_mmisportalportlet_hsf=%E6%B8%AF%E5%A4%A7&amp;p_r_p_-1078056564_c=QF757YsWv5%2BakvA8rFW5EuJSiukuHYZu&amp;_coverpage_WAR_mmisportalportlet_o=5&amp;_coverpage_WAR_mmisportalportlet_actual_q=%28%20verbatim_dc.collection%3A%28%22Old%5C%20HK%5C%20Newspapers%22%29%20%29%20AND+%28%20%28%20allTermsMandatory%3A%28true%29%20OR+all_dc.title%3A%28%E9%A6%99%E6%B8%AF%E5%A4%A7%E5%AD%B8%29%20OR+all_dc.creator%3A%28%E9%A6%99%E6%B8%AF%E5%A4%A7%E5%AD%B8%29%20OR+all_dc.contributor%3A%28%E9%A6%99%E6%B8%AF%E5%A4%A7%E5%AD%B8%29%20OR+all_dc.subject%3A%28%E9%A6%99%E6%B8%AF%E5%A4%A7%E5%AD%B8%29%20OR+fulltext%3A%28%E9%A6%99%E6%B8%AF%E5%A4%A7%E5%AD%B8%29%20OR+all_dc.description%3A%28%E9%A6%99%E6%B8%AF%E5%A4%A7%E5%AD%B8%29%20%29%20%29&amp;_coverpage_WAR_mmisportalportlet_sort_order=asc&amp;_coverpage_WAR_mmisportalportlet_sort_field=dc.publicationdate_bsort&amp;_coverpage_WAR_mmisportalportlet_formDate=1681380981449" target="_blank" rel="noopener noreferrer">1908年9月12日</a>。</li>
@@ -4152,7 +4152,7 @@
     <title type="text">1950年代</title>
     <id>https://www.pasthk.com/meteorology/tropical-cyclone/1950s.html</id>
     <link href="https://www.pasthk.com/meteorology/tropical-cyclone/1950s.html"/>
-    <updated>2023-04-12T17:09:31.000Z</updated>
+    <updated>2023-09-08T04:12:00.000Z</updated>
     <summary type="html"><![CDATA[<h2> 1950年</h2>
 <h3> 無名 Unnamed 1</h3>
 <ul>
@@ -5681,7 +5681,7 @@
     <title type="text">熱帶氣旋</title>
     <id>https://www.pasthk.com/meteorology/tropical-cyclone/</id>
     <link href="https://www.pasthk.com/meteorology/tropical-cyclone/"/>
-    <updated>2023-04-12T17:09:31.000Z</updated>
+    <updated>2023-09-08T04:12:00.000Z</updated>
     <summary type="html"><![CDATA[<blockquote>
 <p>參考資料：</p>
 <ol>
