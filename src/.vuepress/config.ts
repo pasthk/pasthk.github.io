@@ -16,7 +16,6 @@ export default defineUserConfig({
     ],    
   ],
   base: "/",
-
   lang: "zh-HK",
   title: "香港考古春秋",
   description: "追跡香江　鑒古知今",
