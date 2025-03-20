@@ -8,12 +8,11 @@ export default hopeTheme({
   darkmode: "disable",
   author: {
     name: "康明",
-    url: "https://pasthk.github.io",
   },
   docsDir: "src",
   navbar,
   sidebar,
-  footer: "默认页脚",
+  footer: "Hello, Archaeology!",
   displayFooter: true,
   blog: {
     description: "一個挖土人。",
