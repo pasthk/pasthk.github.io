@@ -10,7 +10,7 @@ export default defineUserConfig({
     [
       "link",
       {
-        href: "https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@200..900&display=swap",
+        href: "https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@500..900&display=swap",
         rel: "stylesheet",
       },
     ],    
@@ -19,9 +19,5 @@ export default defineUserConfig({
   lang: "zh-TW",
   title: "香港考古春秋",
   description: "追跡香江　鑒古知今",
-
   theme,
-
-  // 和 PWA 一起启用
-  // shouldPrefetch: false,
 });
