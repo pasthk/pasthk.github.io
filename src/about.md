@@ -1,7 +1,6 @@
 ---
 title: 關於
 date: 2025-03-20
-sidebar: false
 author: false
 article: false
 ---
