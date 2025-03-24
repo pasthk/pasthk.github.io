@@ -1,5 +1,5 @@
 ---
 home: true
 title: 首頁
-tagline: 追跡香江　鑒古知今
+tagline: 從考古認識香港
 ---
