@@ -3,8 +3,8 @@ import { sidebar } from "vuepress-theme-hope";
 export default sidebar({
   "/": [
     {
-      text: "年表",
-      link: "/archaeological-chronicles",
+      text: "考古年表",
+      link: "/chronicles",
     },
   ],
 });

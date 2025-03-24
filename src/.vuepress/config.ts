@@ -2,7 +2,14 @@ import { defineUserConfig } from "vuepress";
 import theme from "./theme.js";
 export default defineUserConfig({
   head: [
-    ["link", { rel: "preconnect", href: "https://fonts.googleapis.com" }],
+    ["script",
+      {
+        "data-ad-client": "ca-pub-8975507583219124",
+        async: true,
+        src: "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+      }
+    ],
+    ["link", { rel: "preconnect", href: "https://fonts.proxy.ustclug.org" }],
     [
       "link",
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossorigin: "" },
@@ -10,10 +17,10 @@ export default defineUserConfig({
     [
       "link",
       {
-        href: "https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@500..900&display=swap",
+        href: "https://fonts.proxy.ustclug.org/css2?family=Noto+Serif+TC&display=swap",
         rel: "stylesheet",
       },
-    ],    
+    ],   
   ],
   base: "/",
   lang: "zh-TW",
