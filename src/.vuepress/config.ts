@@ -24,7 +24,7 @@ export default defineUserConfig({
   ],
   base: "/",
   lang: "zh-TW",
-  title: "香江源流考鏡",
-  description: "從考古認識香港",
+  title: "香江之源",
+  description: "考古識香港",
   theme, 
 });
