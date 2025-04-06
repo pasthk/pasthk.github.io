@@ -15,8 +15,8 @@ export default defineConfig({
 			customCss: [
 				'./src/styles/custom.css',
 			],
-			title: '香江之源',
-			description: '考鏡香江源流——香港考古學文獻索引及綜述。',
+			title: '考鏡香江源流',
+			description: '香港考古學文獻索引及綜述',
 			locales: {
 				root: {
 					label: '中文（香港）',

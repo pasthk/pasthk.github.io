@@ -1,18 +1,21 @@
 ---
-title: 首頁
+title: 香港考古學文獻索引及綜述
 template: splash
-hero:
-  tagline: 考鏡香江源流——香港考古學文獻索引及綜述。
 ---
 
-import { CardGrid } from '@astrojs/starlight/components';
 import { Card } from '@astrojs/starlight/components';
+import { LinkCard, CardGrid } from '@astrojs/starlight/components';
 
+## 序
 <CardGrid>
-  <Card title="试试这个" icon="open-book">
-    一些你想着重展示的有趣内容。
-  </Card>
-  <Card title="其他功能" icon="information">
-    更多你想分享的信息。
-  </Card>
+  <LinkCard title="序一" href="/foreword.html" />
+</CardGrid>
+## 第一章
+<CardGrid>
+  <LinkCard title="香港考古調查（1982-1985）" href="/chapter-one/hong-kong-archaeological-survey-1982-to-1985.html" />
+  <LinkCard title="香港考古調查（1995-1997）" href="/chapter-one/hong-kong-archaeological-survey-1995-to-1997.html" />
+  </CardGrid>
+## 跋
+  <CardGrid>
+  <LinkCard title="跋" href="/afterword.html" />
 </CardGrid>
