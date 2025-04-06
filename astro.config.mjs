@@ -34,14 +34,15 @@ export default defineConfig({
 					},
 					{
 						label: '第一章　香港考古調查',
-						link: '/chapter-one/hong-kong-archaeological-survey-1982-to-1985.html',
+						link: '/chapter-one/early-survey-1920s-to-1950s.html',
 						items: [
+							'chapter-one/early-survey-1920s-to-1950s', 
 							'chapter-one/hong-kong-archaeological-survey-1982-to-1985', 
 							'chapter-one/hong-kong-archaeological-survey-1995-to-1997', 
 						],
 					},
 					{
-						label: '跋',
+						label: '後記',
 						link: '/afterword.html',
 						items: [
 							'afterword',
