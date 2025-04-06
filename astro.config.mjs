@@ -43,9 +43,9 @@ export default defineConfig({
 					},
 					{
 						label: '第二章　香港考古發掘',
-						link: '/chapter-two/early-excavation-1920s-to-1950s.html',
+						link: '/chapter-two/tai-wan-site-lamma-island.html',
 						items: [
-							'chapter-two/early-excavation-1920s-to-1950s', 
+							'chapter-two/tai-wan-site-lamma-island', 
 						],
 					},
 					{
