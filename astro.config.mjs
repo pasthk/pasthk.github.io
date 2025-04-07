@@ -12,6 +12,15 @@ export default defineConfig({
 	compressHTML: true,
 	integrations: [
 		starlight({
+			head: [
+				{
+				  tag: 'script',
+				  attrs: {
+					src: 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8975507583219124',
+					'crossorigin': "anonymous",
+				  },
+				},
+			  ],
 			customCss: [
 				'./src/styles/custom.css',
 			],
@@ -70,8 +79,8 @@ export default defineConfig({
 				]),
 			],
 		}), 
-		partytown(
-
-		),
+		partytown({
+			config: { forward: ['dataLayer.push'] }
+		},),
 	],
 });
