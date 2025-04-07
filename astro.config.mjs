@@ -43,9 +43,21 @@ export default defineConfig({
 					},
 					{
 						label: '第二章　香港考古發掘',
-						link: '/chapter-two/tai-wan-site-lamma-island.html',
+						link: '/chapter-two/lamma-island/tai-wan-site.html',
 						items: [
-							'chapter-two/tai-wan-site-lamma-island', 
+							{
+								label: '南丫島',
+								items: [
+									'chapter-two/lamma-island/tai-wan-site',
+									'chapter-two/lamma-island/sham-wan-site',
+								],
+							},
+							{
+								label: '大嶼山',
+								items: [
+									'chapter-two/lantau-island/shek-pik-site',
+								],
+							},
 						],
 					},
 					{
