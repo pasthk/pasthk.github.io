@@ -39,10 +39,11 @@ export default defineConfig({
 						link: '/foreword.html',
 						items: [
 							'foreword',
+							'preface',
 						],
 					},
 					{
-						label: '第一章　香港考古調查',
+						label: '第一章　山海尋古',
 						link: '/chapter-one/early-survey-1920s-to-1950s.html',
 						items: [
 							'chapter-one/early-survey-1920s-to-1950s', 
@@ -51,7 +52,7 @@ export default defineConfig({
 						],
 					},
 					{
-						label: '第二章　香港考古發掘',
+						label: '第二章　黃沙之下',
 						link: '/chapter-two/lamma-island/tai-wan-site.html',
 						items: [
 							{
@@ -67,6 +68,12 @@ export default defineConfig({
 									'chapter-two/lantau-island/shek-pik-site',
 								],
 							},
+						],
+					},
+					{
+						label: '第三章　嶺南海隅',
+						link: '/',
+						items: [
 						],
 					},
 					{
