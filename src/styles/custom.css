@@ -1,8 +1,8 @@
 :root {
     --sl-font: 'Noto Serif HK', serif;
 	--sl-text-h1: var(--sl-text-2xl);
-	--sl-text-h2: var(--sl-text-2xl);
-	--sl-text-h3: var(--sl-text-2xl);
+	--sl-text-h2: var(--sl-text-xl);
+	--sl-text-h3: var(--sl-text-xl);
 	text-align: justify;
   }
 /* Dark mode colors. */
