@@ -6,13 +6,14 @@ import partytown from '@astrojs/partytown';
 export default defineConfig({
 	site: 'https://www.pasthk.com',
 	base: '/',
-	favicon: '/favicon.svg',	
+	favicon: '/favicon.svg',
 	build: {
 		format: 'file',
 	},
 	compressHTML: true,
 	integrations: [
 		starlight({
+			titleDelimiter: '・',
 			head: [
 				{ tag: 'meta', attrs: { name: 'author', content: '吳健聰', },},
 				{ tag: 'meta', attrs: { name: 'description', content: '香港考古學綜述及文獻索引', }, },
@@ -92,11 +93,13 @@ export default defineConfig({
 						],
 					},
 					{
-						label: '文獻目錄',
-						link: 'bibliography/tai-wan-site.html',
+						label: '文獻索引',
+						link: 'bibliography/full-list.html',
 						items: [
+							'bibliography/full-list', 
 							{
 								label: '南丫島',
+								collapsed: true,
 								items: [
 									'bibliography/tai-wan-site',
 									'bibliography/sham-wan-site',
@@ -104,12 +107,14 @@ export default defineConfig({
 							},
 							{
 								label: '大嶼山',
+								collapsed: true,
 								items: [
 									'bibliography/shek-pik-site',
 								],
 							},
 							{
 								label: '西貢',
+								collapsed: true,
 								items: [
 									'bibliography/sha-ha-site',
 									'bibliography/wong-tei-tung-site',
@@ -117,12 +122,14 @@ export default defineConfig({
 							},
 							{
 								label: '九龍',
+								collapsed: true,
 								items: [
 									'bibliography/lei-cheng-uk-han-tomb',
 								],
 							},
 							{
 								label: '屯門',
+								collapsed: true,
 								items: [
 									'bibliography/so-kwun-wat-site',
 								],

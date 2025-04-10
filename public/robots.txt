@@ -1,5 +1,6 @@
 User-agent: *
 Allow: /
 Disallow: /cdn-cgi/
+Disallow: /~partytown/
 
 Sitemap: https://www.pasthk.com/sitemap-index.xml
