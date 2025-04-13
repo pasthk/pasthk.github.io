@@ -4,6 +4,7 @@
     "search.ctrlKey": "Ctrl",
     "search.cancelLabel": "取消",
     "search.devWarning": "Search is only available in production builds. \nTry building and previewing the site to test it out locally.",
+    "search." : "",
     "themeSelect.accessibleLabel": "選擇主題",
     "themeSelect.dark": "深色",
     "themeSelect.light": "淺色",

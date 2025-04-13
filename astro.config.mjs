@@ -6,7 +6,7 @@ import partytown from '@astrojs/partytown';
 export default defineConfig({
 	site: 'https://www.pasthk.com',
 	base: '/',
-	favicon: '/favicon.svg',
+	favicon: '/favicon.ico',
 	build: {
 		format: 'file',
 	},
@@ -15,7 +15,7 @@ export default defineConfig({
 		starlight({
 			titleDelimiter: '・',
 			head: [
-				{ tag: 'meta', attrs: { name: 'author', content: '吳健聰', },},
+				{ tag: 'meta', attrs: { name: 'author', content: '吳健聰（北京大學考古文博學院博士研究生）', },},
 				{ tag: 'meta', attrs: { name: 'description', content: '香港考古學綜述及文獻索引', }, },
 				{
 					tag: 'script',
@@ -48,10 +48,12 @@ export default defineConfig({
 			],
 			title: '考鏡香江源流',
 			description: '香港考古學綜述及文獻索引',
+			components: {
+			},
 			locales: {
 				root: {
 					label: '中文（香港）',
-					lang: 'zh-HK',
+					lang: 'zh-Hant',
 				},
 			},
 			plugins: [
@@ -77,7 +79,7 @@ export default defineConfig({
 						items: [
 							'chapter-one/early-survey-1920s-to-1950s', 
 							'chapter-one/hong-kong-archaeological-survey-1982-to-1985', 
-							'chapter-one/hong-kong-archaeological-survey-1995-to-1997', 
+							'chapter-one/hong-kong-archaeological-survey-1997-to-1998', 
 						],
 					},
 					{
