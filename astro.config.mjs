@@ -6,13 +6,15 @@ import partytown from '@astrojs/partytown';
 export default defineConfig({
 	site: 'https://www.pasthk.com',
 	base: '/',
-	favicon: '/favicon.ico',
 	build: {
 		format: 'file',
 	},
 	compressHTML: true,
 	integrations: [
 		starlight({
+			favicon: '/favicon.png',
+			title: '考鏡香江源流',
+			description: '香港考古學綜述及文獻索引',
 			titleDelimiter: '・',
 			head: [
 				{ tag: 'meta', attrs: { name: 'author', content: '吳健聰（北京大學考古文博學院博士研究生）', },},
@@ -30,24 +32,21 @@ export default defineConfig({
 			window.dataLayer = window.dataLayer || [];
 			function gtag(){dataLayer.push(arguments);}
 			gtag('js', new Date());
-		  
 			gtag('config', '{G-DEPPXHZVCM}');
 			`
 				},
 				{
 					"tag": "script",
 					"attrs": {
-					  "async": true,
-					  "src": "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8975507583219124",
-					  "crossorigin": "anonymous"
+						"async": true,
+						"src": "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8975507583219124",
+						"crossorigin": "anonymous"
 					},
 				},
 			],
 			customCss: [
 				'/src/styles/custom.css',
 			],
-			title: '考鏡香江源流',
-			description: '香港考古學綜述及文獻索引',
 			components: {
 			},
 			locales: {
@@ -60,7 +59,7 @@ export default defineConfig({
 				starlightSidebarTopics([
 					{
 						label: '序',
-						link: '/foreword.html',
+						link: 'foreword.html',
 						items: [
 							'foreword',
 							'preface',
@@ -68,14 +67,14 @@ export default defineConfig({
 					},
 					{
 						label: '導論',
-						link: '/introduction.html',
+						link: 'introduction.html',
 						items: [
 							'introduction',
 						],
 					},					
 					{
 						label: '第一章　山海尋古',
-						link: '/chapter-one/early-survey-1920s-to-1950s.html',
+						link: 'chapter-one/early-survey-1920s-to-1950s.html',
 						items: [
 							'chapter-one/early-survey-1920s-to-1950s', 
 							'chapter-one/hong-kong-archaeological-survey-1982-to-1985', 
@@ -89,16 +88,32 @@ export default defineConfig({
 						],
 					},
 					{
-						label: '第三章　嶺南一隅',
+						label: '第三章　觀乎人文',
+						link: 'chapter-three/archaeological-documentaries-on-cinema.html',
+						items: [
+							'chapter-three/archaeological-documentaries-on-cinema',
+							'chapter-three/catalogues-and-books',
+						],
+					},
+					{
+						label: '第四章　嶺南一隅',
 						link: '/',
 						items: [
 						],
 					},
 					{
-						label: '文獻索引',
+						label: '考古文博文獻索引',
 						link: 'bibliography/full-list.html',
 						items: [
-							'bibliography/full-list', 
+							'bibliography/full-list',
+							{
+								label: '區域調查',
+								collapsed: true,
+								items: [
+									'bibliography/hong-kong-archaeological-survey-1st',
+									'bibliography/hong-kong-archaeological-survey-2nd',
+								],
+							},
 							{
 								label: '南丫島',
 								collapsed: true,
@@ -136,11 +151,12 @@ export default defineConfig({
 									'bibliography/so-kwun-wat-site',
 								],
 							},
+							'bibliography/antiquities-and-monuments-ordinance', 
 						],
 					},
 					{
 						label: '後記',
-						link: '/afterword.html',
+						link: 'afterword.html',
 						items: [
 							'afterword',
 						],
