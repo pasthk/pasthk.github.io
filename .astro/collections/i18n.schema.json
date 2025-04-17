@@ -139,6 +139,11 @@
           "description": "Label for the “Built with Starlight” badge optionally displayed in the site footer.",
           "markdownDescription": "Label for the “Built with Starlight” badge optionally displayed in the site footer."
         },
+        "heading.anchorLabel": {
+          "type": "string",
+          "description": "Label for anchor links in Markdown content.",
+          "markdownDescription": "Label for anchor links in Markdown content."
+        },
         "pagefind.clear_search": {
           "type": "string",
           "description": "Pagefind UI translation. English default value: `\"Clear\"`. See https://pagefind.app/docs/ui/#translations",

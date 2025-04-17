@@ -14,11 +14,11 @@ export default defineConfig({
 		starlight({
 			favicon: '/favicon.png',
 			title: '考鏡香江源流',
-			description: '香港考古學綜述及文獻索引',
+			description: '香港考古文博綜述及文獻索引',
 			titleDelimiter: '・',
 			head: [
 				{ tag: 'meta', attrs: { name: 'author', content: '吳健聰（北京大學考古文博學院博士研究生）', },},
-				{ tag: 'meta', attrs: { name: 'description', content: '香港考古學綜述及文獻索引', }, },
+				{ tag: 'meta', attrs: { name: 'description', content: '香港考古文博綜述及文獻索引', }, },
 				{
 					tag: 'script',
 					attrs: {

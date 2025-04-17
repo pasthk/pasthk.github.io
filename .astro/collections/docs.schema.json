@@ -54,12 +54,10 @@
                       "not": {}
                     }
                   ]
-                },
-                "default": {}
+                }
               },
               "content": {
-                "type": "string",
-                "default": ""
+                "type": "string"
               }
             },
             "required": [
