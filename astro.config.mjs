@@ -51,8 +51,8 @@ export default defineConfig({
 			},
 			locales: {
 				root: {
-					label: '中文（香港）',
-					lang: 'zh-Hant',
+					label: '中文（繁體）',
+					lang: 'zh-TW',
 				},
 			},
 			plugins: [
@@ -102,7 +102,7 @@ export default defineConfig({
 						],
 					},
 					{
-						label: '考古文博文獻索引',
+						label: '考古文博資料',
 						link: 'bibliography/full-list.html',
 						items: [
 							'bibliography/full-list',
