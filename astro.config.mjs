@@ -4,7 +4,7 @@ import starlightSidebarTopics from 'starlight-sidebar-topics'
 import partytown from '@astrojs/partytown';
 
 export default defineConfig({
-	site: 'https://www.pasthk.com',
+	site: 'https://pasthk.github.io',
 	base: '/',
 	build: {
 		format: 'file',
