@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;500;600;700&family=Noto+Serif+SC:wght@400;500;600;700&display=swap');
+
 :root {
-	--sl-font: Georgia, 'Simsun', serif;
+	--sl-font: 'Noto Serif TC', 'Noto Serif SC', 'Noto Serif Chinese', Georgia, serif;
 	--sl-color-accent-low: #dcebe2;
 	--sl-color-accent: #1f6b45;
 	--sl-color-accent-high: #0d3b26;
@@ -10,7 +12,7 @@
 }
 
 body {
-	font-family: Georgia, 'Simsun', serif;
+	font-family: 'Noto Serif TC', 'Noto Serif SC', 'Noto Serif Chinese', Georgia, serif;
 }
 
 .sl-markdown-content {
