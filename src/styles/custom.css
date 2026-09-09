@@ -1,0 +1,32 @@
+:root {
+	--sl-font: Georgia, 'Simsun', serif;
+	--sl-color-accent-low: #dcebe2;
+	--sl-color-accent: #1f6b45;
+	--sl-color-accent-high: #0d3b26;
+	--sl-text-h1: 18pt;
+	--sl-text-h2: 18pt;
+	--sl-text-h3: 18pt;
+	--sl-text-body: 16pt;
+}
+
+body {
+	font-family: Georgia, 'Simsun', serif;
+}
+
+.sl-markdown-content {
+	text-align: justify;
+	color: #000;
+}
+
+.sl-markdown-content p,
+.sl-markdown-content li,
+.sl-markdown-content td,
+.sl-markdown-content th,
+.sl-markdown-content blockquote {
+	color: #000000;
+}
+
+aside nav a,
+aside nav summary {
+	font-size: 12pt;
+}
