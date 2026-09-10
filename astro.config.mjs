@@ -37,8 +37,8 @@ export default defineConfig({
                     ]
                 },
                 {
-                    label: '考古',
-                    link: 'archaeology/lei-cheng-uk-han-tomb',
+                    label: '古物及古蹟',
+                    link: 'archaeology/hong-kong-archaeological-survey-1982-1985',
                     items: [
                         {label: '香港考古調查',
                             items: [
@@ -62,6 +62,12 @@ export default defineConfig({
                                 'archaeology/lung-tsun-stone-bridge',
                             ]
                         },
+                        {label: '法定古蹟',
+                            items: [
+                                'historic-building/hau-ku-shek-ancestal-hall',
+                                'historic-building/hau-mei-fung-ancestral-hall',
+                            ]
+                        }
                     ]
                 },
             ]),
