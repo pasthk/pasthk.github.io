@@ -27,7 +27,12 @@ export default defineConfig({
 								items: [
 									'festival/mid-autumn-festival',
 								]
-							}
+							},
+							{label: '打醮',
+								items: [
+									'custom/cheung-chau-jiao-festival',
+								]
+							},
 						]
 					},
 					{
