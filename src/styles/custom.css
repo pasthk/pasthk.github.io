@@ -27,8 +27,3 @@ body {
 .sl-markdown-content blockquote {
 	color: #000000;
 }
-
-aside nav a,
-aside nav summary {
-	font-size: 12pt;
-}
