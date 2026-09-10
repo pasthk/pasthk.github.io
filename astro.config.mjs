@@ -54,7 +54,13 @@ export default defineConfig({
 								items: [
 									'archaeology/lei-cheng-uk-han-tomb',
 								]
-							}
+							},
+							{label: '清代',
+								items: [
+									'archaeology/kowloon-walled-city',
+									'archaeology/lung-tsun-stone-bridge',
+								]
+							},
 						]
 					},
 				]),
