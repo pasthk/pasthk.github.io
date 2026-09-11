@@ -16,6 +16,8 @@ export default hopeTheme({
   sidebar,
   footer: "認識香港，從歷史開始。",
   displayFooter: true,
+  lastUpdated: false,
+  contributors: false,
   markdown: {
     align: true,
     attrs: true,
