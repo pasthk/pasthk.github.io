@@ -16,5 +16,17 @@
 }
 
 :root {
-    --sl-font: 'Noto Serif TC', serif;
+  --sl-font: 'Noto Serif TC', 'Noto Serif Chinese', serif;
+}
+
+html,
+body {
+  font-family: 'Noto Serif TC', 'Noto Serif Chinese', serif;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.sl-markdown-content {
+	text-align: justify;
 }
