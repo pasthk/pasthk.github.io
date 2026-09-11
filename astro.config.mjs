@@ -2,8 +2,6 @@ import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
 import starlightSidebarTopics from 'starlight-sidebar-topics';
 
-import partytown from '@astrojs/partytown';
-
 export default defineConfig({
     site: 'https://www.pasthk.com',
     build: {
@@ -72,5 +70,5 @@ export default defineConfig({
                 },
             ]),
         ],
-		}), partytown()],
+    }),],
 });
