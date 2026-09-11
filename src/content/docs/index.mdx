@@ -1,36 +1,29 @@
 ---
-title: 主頁
-template: splash
-lastUpdated: false
+title: Welcome to Starlight
+description: Get started building your docs site with Starlight.
+template: splash # Remove or comment out this line to display the site sidebar on this page.
+
 ---
 
-import { LinkCard, CardGrid } from '@astrojs/starlight/components';
+import { Card, CardGrid } from '@astrojs/starlight/components';
 
-## 風俗
-### 　節慶
-<CardGrid>
-<LinkCard title="中秋節" href="festival/mid-autumn-festival" />
-</CardGrid>
-### 　打醮
-<CardGrid>
-<LinkCard title="長洲太平清醮" href="custom/cheung-chau-jiao-festival" />
-</CardGrid>
+## Next steps
 
-## 古物及古蹟
-### 　考古調查
-<CardGrid>
-<LinkCard title="香港考古調查（1982-1985）" href="archaeology/hong-kong-archaeological-survey-1982-1985" />
-<LinkCard title="全港文物普查（1997-1998）" href="archaeology/hong-kong-archaeological-survey-1997-1998" />
-</CardGrid>
-### 　考古遺址
-<CardGrid>
-<LinkCard title="李鄭屋漢墓" href="archaeology/lei-cheng-uk-han-tomb" />
-<LinkCard title="沙下遺址" href="archaeology/sha-ha-site" />
-<LinkCard title="九龍寨城遺址" href="archaeology/kowloon-walled-city" />
-<LinkCard title="龍津石橋" href="archaeology/lung-tsun-stone-bridge" />
-</CardGrid>
-### 　歷史建築
-<CardGrid>
-<LinkCard title="居石侯公祠" href="historic-building/hau-ku-shek-ancestal-hall" />
-<LinkCard title="味峰侯公祠" href="historic-building/hau-mei-fung-ancestral-hall" />
+<CardGrid stagger>
+	<Card title="Update content" icon="pencil">
+		Edit `src/content/docs/index.mdx` to see this page change.
+	</Card>
+	<Card title="Change page layout" icon="document">
+		Delete `template: splash` in `src/content/docs/index.mdx` to display a
+		sidebar on this page.
+	</Card>
+	<Card title="Add new content" icon="add-document">
+		Add Markdown or MDX files to `src/content/docs` to create new pages.
+	</Card>
+	<Card title="Configure your site" icon="setting">
+		Edit your `sidebar` and other config in `astro.config.mjs`.
+	</Card>
+	<Card title="Read the docs" icon="open-book">
+		Learn more in [the Starlight Docs](https://starlight.astro.build/).
+	</Card>
 </CardGrid>
