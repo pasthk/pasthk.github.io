@@ -6,13 +6,10 @@ import tailwindcss from '@tailwindcss/vite';
 
 export default defineConfig({
   site: 'https://www.pasthk.com',
-
   build: {
       format: 'file',
   },
-
   integrations: [starlight({
-      prerender: true,
       title: '香港新聞類編',
       description: '認識香港，從歷史開始。',
       lastUpdated: true,
@@ -25,7 +22,6 @@ export default defineConfig({
     ],
       plugins: [
           starlightSidebarTopics([{
-              
                   label: '風俗',
                   link: 'festival/mid-autumn-festival',
                   items: [
