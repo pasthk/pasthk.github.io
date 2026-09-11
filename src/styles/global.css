@@ -16,12 +16,8 @@
 }
 
 :root {
-  --sl-font: serif;
+  --sl-font: 'Noto Serif TC', 'Noto Serif Chinese', serif;
   color-scheme: light;
-}
-
-starlight-theme-select {
-  display: none !important;
 }
 
 .sl-markdown-content {

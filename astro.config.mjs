@@ -19,6 +19,7 @@ export default defineConfig({
       },
       customCss: [
         './src/styles/global.css',
+        '@fontsource/noto-serif-tc/600.css',
     ],
         components: {
         ThemeProvider: './src/components/LightThemeProvider.astro',
