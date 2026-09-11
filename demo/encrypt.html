@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="zh-Hant" data-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="generator" content="VuePress 2.0.0-rc.31" />
+    <meta name="theme" content="VuePress Theme Hope 2.0.0-rc.109" />
+    <style>
+      :root {
+        --vp-c-bg: #fff;
+      }
+
+      [data-theme="dark"] {
+        --vp-c-bg: #1b1b1f;
+      }
+
+      html,
+      body {
+        background: var(--vp-c-bg);
+      }
+    </style>
+    <script>
+      const userMode = localStorage.getItem("vuepress-theme-hope-scheme");
+      const systemDarkMode =
+        window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+      if (userMode === "dark" || (userMode !== "light" && systemDarkMode)) {
+        document.documentElement.setAttribute("data-theme", "dark");
+      }
+    </script>
+    <title>Encryption Article | 香港新聞類編</title><meta name="description" content="認識香港，從歷史文化開始。">
+    <link rel="preload" href="/assets/style-Bm6N8-AZ.css" as="style"><link rel="stylesheet" href="/assets/style-Bm6N8-AZ.css">
+    <link rel="modulepreload" href="/assets/app-AXTXY86A.js"><link rel="modulepreload" href="/assets/encrypt-DPDgkUuq.js"><link rel="modulepreload" href="/assets/plugin-vue_export-helper-BDNMzG2s.js">
+    
+  </head>
+  <body>
+    <div id="app"><!--[--><!--[--><!--[--><span tabindex="-1"></span><a href="#main-content" class="vp-skip-link sr-only">跳至主要內容</a><!--]--><!--[--><div class="theme-container external-link-icon pure has-toc" vp-container><!--[--><header id="navbar" class="vp-navbar" vp-navbar><div class="vp-navbar-start"><button type="button" class="vp-toggle-sidebar-button" title="Toggle Sidebar"><span class="icon"></span></button><!--[--><a class="route-link vp-brand" href="/" aria-label="帶我回家"><img class="vp-nav-logo" src="https://theme-hope-assets.vuejs.press/logo.svg" alt><!----><span class="vp-site-name hide-in-pad">香港新聞類編</span></a><!--]--></div><div class="vp-navbar-center"><!--[--><!----><!--]--></div><div class="vp-navbar-end"><!--[--><!----><!----><!----><!----><!--]--><button type="button" class="vp-toggle-navbar-button" aria-label="Toggle Navbar" aria-expanded="false" aria-controls="nav-screen"><span><span class="vp-top"></span><span class="vp-middle"></span><span class="vp-bottom"></span></span></button></div></header><!----><!--]--><!----><div class="toggle-sidebar-wrapper"><span class="arrow start"></span></div><aside id="sidebar" class="vp-sidebar" vp-sidebar><!----><ul class="vp-sidebar-links"><li><a class="route-link auto-link vp-sidebar-link" href="/portfolio.html" aria-label="Portfolio Home"><!--[--><iconify-icon class="vp-icon" icon="fa6-solid:house" sizing="both" width="1em" height="1em"></iconify-icon><!--]-->Portfolio Home<!----></a></li><li><section class="vp-sidebar-group"><p class="vp-sidebar-header clickable active"><!----><a class="route-link route-link-active auto-link vp-sidebar-title no-external-link-icon" href="/demo/" aria-label="Demo"><!---->Demo<!----></a><!----></p><ul class="vp-sidebar-links"><li><a class="route-link auto-link vp-sidebar-link" href="/demo/layout.html" aria-label="Layout"><!--[--><iconify-icon class="vp-icon" icon="fa6-solid:object-group" sizing="both" width="1em" height="1em"></iconify-icon><!--]-->Layout<!----></a></li><li><a class="route-link auto-link vp-sidebar-link" href="/demo/markdown.html" aria-label="Markdown Enhance"><!--[--><iconify-icon class="vp-icon" icon="fa6-brands:markdown" sizing="both" width="1em" height="1em"></iconify-icon><!--]-->Markdown Enhance<!----></a></li><li><a class="route-link auto-link vp-sidebar-link" href="/demo/page.html" aria-label="Page Config"><!--[--><iconify-icon class="vp-icon" icon="fa6-solid:file" sizing="both" width="1em" height="1em"></iconify-icon><!--]-->Page Config<!----></a></li><li><a class="route-link auto-link vp-sidebar-link" href="/demo/disable.html" aria-label="Disabling layout and features"><!--[--><iconify-icon class="vp-icon" icon="fa6-solid:gears" sizing="both" width="1em" height="1em"></iconify-icon><!--]-->Disabling layout and features<!----></a></li><li><a class="route-link route-link-active auto-link vp-sidebar-link active" href="/demo/encrypt.html" aria-label="Encryption Article"><!--[--><iconify-icon class="vp-icon" icon="fa6-solid:lock" sizing="both" width="1em" height="1em"></iconify-icon><!--]-->Encryption Article<!----></a></li></ul></section></li><li><section class="vp-sidebar-group"><p class="vp-sidebar-header"><!----><span class="vp-sidebar-title">Docs</span><!----></p><ul class="vp-sidebar-links"><li><a class="route-link auto-link vp-sidebar-link" href="/guide/" aria-label="Guide"><!--[--><iconify-icon class="vp-icon" icon="fa6-solid:lightbulb" sizing="both" width="1em" height="1em"></iconify-icon><!--]-->Guide<!----></a></li><li><section class="vp-sidebar-group"><button class="vp-sidebar-header clickable" type="button"><iconify-icon class="vp-icon" icon="fa6-solid:lightbulb" sizing="both" width="1em" height="1em"></iconify-icon><span class="vp-sidebar-title">Bar feature</span><span class="vp-arrow end"></span></button><!----></section></li><li><section class="vp-sidebar-group"><button class="vp-sidebar-header clickable" type="button"><iconify-icon class="vp-icon" icon="fa6-solid:lightbulb" sizing="both" width="1em" height="1em"></iconify-icon><span class="vp-sidebar-title">Foo feature</span><span class="vp-arrow end"></span></button><!----></section></li></ul></section></li><li><a class="auto-link external-link vp-sidebar-link" href="https://ecosystem.vuejs.press/plugins/markdown/revealjs/demo.html" aria-label="Slides" rel="noopener noreferrer" target="_blank"><!---->Slides<!----></a></li></ul><!----></aside><!--[--><!--[--><main id="main-content" class="vp-page"><!----></main><!--]--><!--]--><footer class="vp-footer-wrapper" vp-footer><div class="vp-footer">Default footer</div><div class="vp-copyright">Copyright © 2026 NG KIN CHUNG </div></footer></div><!--]--><!--]--><!--[--><!----><!--[--><!--]--><!--]--><!--]--></div>
+    <script type="module" src="/assets/app-AXTXY86A.js" defer></script>
+  </body>
+</html>
