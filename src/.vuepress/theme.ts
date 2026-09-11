@@ -8,7 +8,7 @@ export default hopeTheme({
   darkmode: "disable",
   hostname: "https://www.pasthk.com",
   author: {
-    name: "NG KIN CHUNG",
+    name: "吳某",
     url: "https://www.pasthk.com",
   },
   logo: "https://theme-hope-assets.vuejs.press/logo.svg",
@@ -17,18 +17,6 @@ export default hopeTheme({
   sidebar,
   footer: "Default footer",
   displayFooter: true,
-  encrypt: {
-    config: {
-      "/demo/encrypt.html": {
-        hint: "Password: 1234",
-        password: "1234",
-      },
-    },
-  },
-  metaLocales: {
-    editLink: "Edit this page on GitHub",
-  },
-
   markdown: {
     align: true,
     attrs: true,
@@ -66,6 +54,8 @@ export default hopeTheme({
   },
 
   plugins: {
+    sitemap: true,
+    slimsearch: true,
     components: {
       components: ["Badge", "VPCard"],
     },
