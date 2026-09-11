@@ -1,3 +1,15 @@
+html,
+html[data-theme='light'],
+html[data-theme='dark'] {
+  color-scheme: light !important;
+}
+body {
+  font-family: 'Noto Serif TC', 'Noto Serif Chinese', serif;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 @layer base, starlight, theme, components, utilities;
 
 @import '@astrojs/starlight-tailwind';
@@ -20,22 +32,6 @@
   color-scheme: light;
 }
 
-html,
-body {
-  font-family: 'Noto Serif TC', 'Noto Serif Chinese', serif;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
 .sl-markdown-content {
 	text-align: justify;
-}
-
-html {
-  color-scheme: light !important;
-}
-
-html[data-theme='dark'] {
-  color-scheme: light !important;
 }
