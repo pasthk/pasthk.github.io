@@ -16,7 +16,7 @@
 }
 
 :root {
-  --sl-font: 'Noto Serif TC', 'Noto Serif Chinese', serif;
+  --sl-font: serif;
   color-scheme: light;
 }
 
