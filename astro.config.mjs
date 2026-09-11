@@ -21,9 +21,6 @@ export default defineConfig({
         './src/styles/global.css',
         '@fontsource/noto-serif-tc/600.css',
     ],
-        components: {
-        ThemeProvider: './src/components/LightThemeProvider.astro',
-    },
       plugins: [
           starlightSidebarTopics([{
                   label: '風俗',
