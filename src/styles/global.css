@@ -17,6 +17,25 @@
 
 :root {
   --sl-font: 'Noto Serif TC', 'Noto Serif Chinese', serif;
+  color-scheme: light;
+}
+
+html,
+body {
+  background-color: #ffffff !important;
+  color: #111111 !important;
+  font-family: 'Noto Serif TC', 'Noto Serif Chinese', serif;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  color-scheme: light !important;
+}
+
+html[data-theme='dark'] {
+  color-scheme: light !important;
 }
 
 .sl-markdown-content {
