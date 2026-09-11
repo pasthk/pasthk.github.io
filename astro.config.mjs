@@ -13,6 +13,7 @@ export default defineConfig({
       title: '香港新聞類編',
       description: '認識香港，從歷史開始。',
       lastUpdated: true,
+      pagefind: true,
       locales: {
           root: { label: '繁體中文', lang: 'zh-TW' },
       },
@@ -74,7 +75,6 @@ export default defineConfig({
           ]),
       ],
   }),],
-
   vite: {
     plugins: [tailwindcss()],
   },
