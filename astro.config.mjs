@@ -18,10 +18,6 @@ export default defineConfig({
             root: { label: '繁體中文', lang: 'zh-TW' },
         },
         customCss: ['./src/styles/custom.css'],
-        components: {
-            ThemeProvider: './src/components/ThemeProvider.astro',
-            ThemeSelect: './src/components/ThemeSelect.astro',
-        },
         plugins: [
             starlightSidebarTopics([
                 {

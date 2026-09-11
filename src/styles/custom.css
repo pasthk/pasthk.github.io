@@ -17,13 +17,4 @@ body {
 
 .sl-markdown-content {
 	text-align: justify;
-	color: #000;
-}
-
-.sl-markdown-content p,
-.sl-markdown-content li,
-.sl-markdown-content td,
-.sl-markdown-content th,
-.sl-markdown-content blockquote {
-	color: #000000;
 }
