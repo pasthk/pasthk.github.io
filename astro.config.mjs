@@ -4,6 +4,7 @@ import starlight from '@astrojs/starlight';
 
 // https://astro.build/config
 export default defineConfig({
+    site: 'https://www.pasthk.com',
 	integrations: [
 		starlight({
 			title: '香港新聞類編',
