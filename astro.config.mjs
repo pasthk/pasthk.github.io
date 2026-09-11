@@ -19,7 +19,10 @@ export default defineConfig({
       locales: {
           root: { label: '繁體中文', lang: 'zh-TW' },
       },
-      customCss: ['./src/styles/global.css'],
+      customCss: [
+        './src/styles/global.css',
+        '@fontsource/noto-serif-tc/600.css',
+    ],
       plugins: [
           starlightSidebarTopics([{
               

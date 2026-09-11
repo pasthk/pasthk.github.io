@@ -14,3 +14,7 @@
     --color-gray-100: #f4f7f3;
     --color-gray-200: #eaf0e8;
 }
+
+:root {
+    --sl-font: 'Noto Serif TC', serif;
+}
