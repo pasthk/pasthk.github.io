@@ -1,12 +1,6 @@
 :root {
-	--sl-font: 'Noto Serif TC', 'Noto Serif SC', 'Noto Serif Chinese', Georgia, serif;
-	--sl-color-accent-low: #dcebe2;
-	--sl-color-accent: #177b49;
-	--sl-color-accent-high: #177b49;
-	--sl-text-h1: 18pt;
-	--sl-text-h2: 18pt;
-	--sl-text-h3: 18pt;
-	--sl-text-body: 16pt;
+  --sl-content-width: 50rem;
+  --sl-text-5xl: 3.5rem;
 }
 
 body {

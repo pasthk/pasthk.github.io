@@ -1,0 +1,16 @@
+@layer base, starlight, theme, components, utilities;
+
+@import '@astrojs/starlight-tailwind';
+@import 'tailwindcss/theme.css' layer(theme);
+@import 'tailwindcss/utilities.css' layer(utilities);
+
+@theme {
+    /* Generated accent color palettes. */
+    --color-accent-200: #aad7a0;
+    --color-accent-600: #165800;
+    --color-accent-900: #0d3e00;
+    --color-accent-950: #072d00;
+    /* Generated gray color palettes. */
+    --color-gray-100: #f4f7f3;
+    --color-gray-200: #eaf0e8;
+}
