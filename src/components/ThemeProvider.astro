@@ -1,0 +1,16 @@
+<script is:inline>
+  (() => {
+    window.StarlightThemeProvider = (() => {
+      const theme = 'light';
+      document.documentElement.dataset.theme = theme;
+      return {
+        updatePickers() {
+          document.querySelectorAll('starlight-theme-select').forEach((picker) => {
+            const select = picker.querySelector('select');
+            if (select) select.value = 'light';
+          });
+        },
+      };
+    })();
+  })();
+</script>
