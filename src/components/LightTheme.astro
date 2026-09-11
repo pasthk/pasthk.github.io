@@ -1,0 +1,12 @@
+<script is:inline>
+  (() => {
+    const html = document.documentElement;
+
+    // 永久固定 Starlight 為 Light Theme
+    html.dataset.theme = 'light';
+
+    // 防止其他 CSS / theme script 使用 dark class
+    html.classList.remove('dark');
+    html.classList.add('light');
+  })();
+</script>
