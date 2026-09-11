@@ -11,10 +11,8 @@ heroText: Project name
 tagline: You can place the description of the project here.
 actions:
   - text: Docs
-    link: ./guide/
+    link: ./archaeology/
 
 copyright: false
 footer: Theme
 ---
-
-This is an example of a project homepage.

@@ -9,6 +9,16 @@ html,
 body,
 #app {
   font-family: "Noto Serif", serif;
+  text-align: justify;
+}
+
+p,
+li,
+blockquote,
+.vp-doc p,
+.vp-doc li,
+.vp-doc blockquote {
+  text-align: justify;
 }
 
 h1,
@@ -25,4 +35,5 @@ h6,
 .vp-doc h5,
 .vp-doc h6 {
   font-family: "Noto Serif", serif;
+  text-align: left;
 }

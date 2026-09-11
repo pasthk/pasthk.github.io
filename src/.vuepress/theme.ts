@@ -11,11 +11,10 @@ export default hopeTheme({
     name: "吳某",
     url: "https://www.pasthk.com",
   },
-  logo: "https://theme-hope-assets.vuejs.press/logo.svg",
   docsDir: "src",
   navbar,
   sidebar,
-  footer: "Default footer",
+  footer: "認識香港，從歷史開始。",
   displayFooter: true,
   markdown: {
     align: true,
