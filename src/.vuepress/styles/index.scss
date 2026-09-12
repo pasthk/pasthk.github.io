@@ -7,8 +7,18 @@
 
 html,
 body,
-#app {
+#app,
+.theme-container,
+.vp-page,
+.vp-doc,
+.vp-doc *,
+* {
   font-family: "Noto Serif", serif;
+}
+
+html,
+body,
+#app {
   text-align: justify;
 }
 
