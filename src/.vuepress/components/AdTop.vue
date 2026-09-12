@@ -18,7 +18,15 @@ import { computed, onMounted } from "vue";
 import { useRoute } from "vuepress/client";
 
 const route = useRoute();
-const shouldShow = computed(() => route.path !== "/" && !route.path.includes("404"));
+const shouldShow = computed(
+  () =>
+    route.path !== "/" &&
+    !route.path.endsWith("/") &&
+    !route.path.includes("404") &&
+    !route.path.startsWith("/tags") &&
+    !route.path.startsWith("/categories") &&
+    !route.path.startsWith("/archives"),
+);
 
 onMounted(() => {
   if (typeof window === "undefined") return;
