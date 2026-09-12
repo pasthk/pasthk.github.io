@@ -1,5 +1,5 @@
 <template>
-  <div v-if="shouldShow" class="ad-top-wrap">
+  <div class="ad-top-wrap">
     <div class="ad-top">
       <ins
         class="adsbygoogle"
@@ -14,19 +14,7 @@
 </template>
 
 <script setup>
-import { computed, onMounted } from "vue";
-import { useRoute } from "vuepress/client";
-
-const route = useRoute();
-const shouldShow = computed(
-  () =>
-    route.path !== "/" &&
-    !route.path.endsWith("/") &&
-    !route.path.includes("404") &&
-    !route.path.startsWith("/tags") &&
-    !route.path.startsWith("/categories") &&
-    !route.path.startsWith("/archives"),
-);
+import { onMounted } from "vue";
 
 onMounted(() => {
   if (typeof window === "undefined") return;
