@@ -1,50 +1,12 @@
-@import url("https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
 @import url("https://fonts.googleapis.com/css2?family=Source+Han+Serif+TC:wght@400;700&display=swap");
 
-$vp-font: '"Source Han Serif TC", "Noto Serif", "PingFang TC", "Microsoft JhengHei", "Source Han Sans TC", serif';
-$vp-font-heading: '"Source Han Serif TC", "Noto Serif", "PingFang TC", "Microsoft JhengHei", "Source Han Sans TC", serif';
-$vp-font-mono: '"Source Han Serif TC", "Noto Serif", "PingFang TC", "Microsoft JhengHei", "Source Han Sans TC", serif';
+$vp-font: '"Source Han Serif TC", "PingFang TC", "Microsoft JhengHei", serif';
+$vp-font-heading: '"Source Han Serif TC", "PingFang TC", "Microsoft JhengHei", serif';
 
 :root {
-  --vp-font: "Source Han Serif TC", "Noto Serif", "PingFang TC", "Microsoft JhengHei", "Source Han Sans TC", serif;
-  --vp-font-heading: "Source Han Serif TC", "Noto Serif", "PingFang TC", "Microsoft JhengHei", "Source Han Sans TC", serif;
-  --vp-font-mono: "Source Han Serif TC", "Noto Serif", "PingFang TC", "Microsoft JhengHei", "Source Han Sans TC", serif;
-}
-
-html,
-body,
-#app,
-.vp-doc,
-.vp-page,
-.main-wrapper,
-.theme-hope-content,
-.vp-content,
-.vp-doc .theme-default-content,
-.theme-default-content,
-p,
-li,
-blockquote,
-figcaption,
-table,
-th,
-td,
-span,
-a,
-button,
-input,
-textarea,
-select {
-  font-family: "Source Han Serif TC", "Noto Serif", "PingFang TC", "Microsoft JhengHei", "Source Han Sans TC", serif;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: "Source Han Serif TC", "Noto Serif", "PingFang TC", "Microsoft JhengHei", "Source Han Sans TC", serif;
-  font-weight: 700;
+  --vp-font: "Source Han Serif TC", "PingFang TC", "Microsoft JhengHei", serif;
+  --vp-font-heading: "Source Han Serif TC", "PingFang TC", "Microsoft JhengHei", serif;
 }
 
 .vp-doc,
@@ -55,4 +17,14 @@ h6 {
 .vp-doc .theme-default-content,
 .theme-default-content {
   text-align: justify;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Source Han Serif TC", "PingFang TC", "Microsoft JhengHei", serif;
+  font-weight: 700;
 }
