@@ -1,18 +1,24 @@
 <template>
-  <div class="ad-top">
-    <ins
-      class="adsbygoogle"
-      style="display:block; width:100%; max-width:100%;"
-      data-ad-client="ca-pub-5478065514436039"
-      data-ad-slot="1832821331"
-      data-ad-format="auto"
-      data-full-width-responsive="true"
-    ></ins>
+  <div v-if="shouldShow" class="ad-top-wrap">
+    <div class="ad-top">
+      <ins
+        class="adsbygoogle"
+        style="display:block; width:100%; max-width:100%;"
+        data-ad-client="ca-pub-5478065514436039"
+        data-ad-slot="1832821331"
+        data-ad-format="auto"
+        data-full-width-responsive="true"
+      ></ins>
+    </div>
   </div>
 </template>
 
 <script setup>
-import { onMounted } from "vue";
+import { computed, onMounted } from "vue";
+import { useRoute } from "vuepress/client";
+
+const route = useRoute();
+const shouldShow = computed(() => route.path !== "/" && !route.path.includes("404"));
 
 onMounted(() => {
   if (typeof window === "undefined") return;
@@ -31,10 +37,16 @@ onMounted(() => {
 </script>
 
 <style scoped>
-.ad-top {
-  margin: 1rem 0 1.5rem;
-  text-align: center;
+.ad-top-wrap {
   width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.ad-top {
+  width: min(100%, 980px);
+  margin: 0 auto 1.25rem;
+  text-align: center;
 }
 
 .adsbygoogle {
