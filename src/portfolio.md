@@ -2,9 +2,7 @@
 home: true
 portfolio: true
 title: Portfolio Home
-icon: house
 name: Conan Edogawa
-avatar: https://theme-hope-assets.vuejs.press/hero/conan.png
 
 titles:
   - Genius young detective

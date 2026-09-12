@@ -19,7 +19,7 @@ export default hopeTheme({
   lastUpdated: false,
   contributors: false,
   markdown: {
-    align: true,
+    footnote: true,
     attrs: true,
     codeTabs: true,
     component: true,
