@@ -2,9 +2,38 @@
 
 $vp-font: '"Noto Serif", ui-serif, Georgia, serif';
 $vp-font-heading: '"Noto Serif", ui-serif, Georgia, serif';
+$vp-font-mono: '"Noto Serif", ui-serif, Georgia, serif';
 
 :root {
+  --vp-font: "Noto Serif", ui-serif, Georgia, serif;
   --vp-font-heading: "Noto Serif", ui-serif, Georgia, serif;
+  --vp-font-mono: "Noto Serif", ui-serif, Georgia, serif;
+}
+
+html,
+body,
+#app,
+.vp-doc,
+.vp-page,
+.main-wrapper,
+.theme-hope-content,
+.vp-content,
+.vp-doc .theme-default-content,
+.theme-default-content,
+p,
+li,
+blockquote,
+figcaption,
+table,
+th,
+td,
+span,
+a,
+button,
+input,
+textarea,
+select {
+  font-family: "Noto Serif", ui-serif, Georgia, serif;
 }
 
 h1,
@@ -13,6 +42,7 @@ h3,
 h4,
 h5,
 h6 {
+  font-family: "Noto Serif", ui-serif, Georgia, serif;
   font-weight: 700;
 }
 
