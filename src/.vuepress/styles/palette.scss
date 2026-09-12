@@ -1,13 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Han+Serif+TC:wght@400;700&display=swap");
 
-$vp-font: '"Noto Serif", ui-serif, Georgia, serif';
-$vp-font-heading: '"Noto Serif", ui-serif, Georgia, serif';
-$vp-font-mono: '"Noto Serif", ui-serif, Georgia, serif';
+$vp-font: '"Source Han Serif TC", "Noto Serif", "PingFang TC", "Microsoft JhengHei", "Source Han Sans TC", serif';
+$vp-font-heading: '"Source Han Serif TC", "Noto Serif", "PingFang TC", "Microsoft JhengHei", "Source Han Sans TC", serif';
+$vp-font-mono: '"Source Han Serif TC", "Noto Serif", "PingFang TC", "Microsoft JhengHei", "Source Han Sans TC", serif';
 
 :root {
-  --vp-font: "Noto Serif", ui-serif, Georgia, serif;
-  --vp-font-heading: "Noto Serif", ui-serif, Georgia, serif;
-  --vp-font-mono: "Noto Serif", ui-serif, Georgia, serif;
+  --vp-font: "Source Han Serif TC", "Noto Serif", "PingFang TC", "Microsoft JhengHei", "Source Han Sans TC", serif;
+  --vp-font-heading: "Source Han Serif TC", "Noto Serif", "PingFang TC", "Microsoft JhengHei", "Source Han Sans TC", serif;
+  --vp-font-mono: "Source Han Serif TC", "Noto Serif", "PingFang TC", "Microsoft JhengHei", "Source Han Sans TC", serif;
 }
 
 html,
@@ -33,7 +34,7 @@ button,
 input,
 textarea,
 select {
-  font-family: "Noto Serif", ui-serif, Georgia, serif;
+  font-family: "Source Han Serif TC", "Noto Serif", "PingFang TC", "Microsoft JhengHei", "Source Han Sans TC", serif;
 }
 
 h1,
@@ -42,7 +43,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Noto Serif", ui-serif, Georgia, serif;
+  font-family: "Source Han Serif TC", "Noto Serif", "PingFang TC", "Microsoft JhengHei", "Source Han Sans TC", serif;
   font-weight: 700;
 }
 
