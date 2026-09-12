@@ -1,34 +1,10 @@
-// you can change colors here
 @import url("https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 
-$vp-c-text: #000000;
-$vp-font-heading: "Noto Serif", serif;
-$vp-font: "Noto Serif", serif;
+$vp-font: '"Noto Serif", ui-serif, Georgia, serif';
+$vp-font-heading: '"Noto Serif", ui-serif, Georgia, serif';
 
-html,
-body,
-#app,
-.theme-container,
-.vp-page,
-.vp-doc,
-.vp-doc *,
-* {
-  font-family: "Noto Serif", serif;
-}
-
-html,
-body,
-#app {
-  text-align: justify;
-}
-
-p,
-li,
-blockquote,
-.vp-doc p,
-.vp-doc li,
-.vp-doc blockquote {
-  text-align: justify;
+:root {
+  --vp-font-heading: "Noto Serif", ui-serif, Georgia, serif;
 }
 
 h1,
@@ -36,14 +12,16 @@ h2,
 h3,
 h4,
 h5,
-h6,
-.title,
-.vp-doc h1,
-.vp-doc h2,
-.vp-doc h3,
-.vp-doc h4,
-.vp-doc h5,
-.vp-doc h6 {
-  font-family: "Noto Serif", serif;
-  text-align: left;
+h6 {
+  font-weight: 700;
+}
+
+.vp-doc,
+.vp-page,
+.main-wrapper,
+.theme-hope-content,
+.vp-content,
+.vp-doc .theme-default-content,
+.theme-default-content {
+  text-align: justify;
 }
