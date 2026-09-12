@@ -14,10 +14,11 @@ export default hopeTheme({
   docsDir: "src",
   navbar,
   sidebar,
-  footer: "認識香港，從歷史開始。",
+  footer: "認識香港，從文獻開始。",
   displayFooter: true,
   lastUpdated: false,
   contributors: false,
+  breadcrumb: false,
   markdown: {
     footnote: true,
     attrs: true,
