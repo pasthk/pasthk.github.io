@@ -36,7 +36,6 @@ export default hopeTheme({
     stylize: [
       {
         matcher: "Recommended",
-        // oxlint-disable-next-line typescript/consistent-return
         replacer: ({ tag }) => {
           if (tag === "em") {
             return {
@@ -54,14 +53,12 @@ export default hopeTheme({
     tasklist: true,
     vPre: true,
   },
-
   plugins: {
     sitemap: true,
     slimsearch: true,
     components: {
       components: ["Badge", "VPCard"],
     },
-
     icon: {
       prefix: "fa6-solid:",
     },

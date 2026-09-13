@@ -13,6 +13,13 @@ export default sidebar({
             "/festival/mid-autumn-festival.md",
           ]
         },
+        {
+          text: "打醮",
+          collapsible: true,
+          children: [
+            "/custom/cheung-chau-jiao-festival.md",
+          ]
+        },
       ],
     },
     {
