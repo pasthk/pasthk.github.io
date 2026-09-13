@@ -7,6 +7,27 @@ export default sidebar({
       link: "/",
     },
     {
+      text: "法例",
+      collapsible: true,
+      children: [
+        {
+          text: "第53章",
+          collapsible: true,
+          children: [
+            "/legislation/cap-53-antiquities-and-monuments-ordinance.md",
+            "/legislation/cap-53a-antiquities-excavation-and-search-regulations.md",
+            "/legislation/cap-53b-antiquities-and-monuments-declaration-of-monuments-and-historical-buildings-consolidation-notice.md",
+            "/legislation/cap-53c-antiquities-and-monuments-declaration-of-archaeological-site-notice-1996.md",
+            "/legislation/cap-53d-antiquities-and-monuments-declaration-of-proposed-monument-notice-2003.md",
+            "/legislation/cap-53e-antiquities-and-monuments-declaration-of-proposed-monument-no-128-pok-fu-lam-road-notice.md",
+            "/legislation/cap-53f-antiquities-and-monuments-declaration-of-proposed-monument-no-45-stubbs-road-notice.md",
+            "/legislation/cap-53g-antiquities-and-monuments-declaration-of-proposed-monument-ho-tung-gardens-notice.md",
+            "/legislation/cap-53h-antiquities-and-monuments-declaration-of-proposed-monument-hung-lau-notice.md",
+          ]
+        },
+      ],
+    },
+    {
       text: "風俗",
       collapsible: true,
       children: [
