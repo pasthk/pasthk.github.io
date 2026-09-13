@@ -54,7 +54,6 @@ export default hopeTheme({
     vPre: true,
   },
   plugins: {
-    readingTime: false,
     sitemap: true,
     slimsearch: true,
     components: {
