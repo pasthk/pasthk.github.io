@@ -35,7 +35,7 @@ export default defineUserConfig({
       "meta",
       {
         name: "google-adsense-account",
-        content: "ca-pub-5478065514436039",
+        content: "ca-pub-8975507583219124",
       },
     ],
   ],

@@ -1,8 +1,8 @@
 import { defineClientConfig } from "vuepress/client";
-import AdTop from "./components/AdTop.vue";
+import Layout from "./layouts/Layout.vue";
 
 export default defineClientConfig({
-  enhance({ app }) {
-    app.component("AdTop", AdTop);
+  layouts: {
+    Layout,
   },
 });
