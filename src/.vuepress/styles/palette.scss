@@ -1,12 +1,13 @@
 
-@import url("https://fonts.googleapis.com/css2?family=Source+Han+Serif+TC:wght@400;700&display=swap");
-
 $vp-font: '"Source Han Serif TC", "PingFang TC", "Microsoft JhengHei", serif';
 $vp-font-heading: '"Source Han Serif TC", "PingFang TC", "Microsoft JhengHei", serif';
 
 :root {
   --vp-font: "Source Han Serif TC", "PingFang TC", "Microsoft JhengHei", serif;
   --vp-font-heading: "Source Han Serif TC", "PingFang TC", "Microsoft JhengHei", serif;
+  --vp-c-text: #000;
+  --vp-c-text-mute: #000;
+  --vp-c-text-subtle: #000;
 }
 
 .vp-doc,

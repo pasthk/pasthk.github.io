@@ -2,10 +2,11 @@
   <div class="ad-top-wrap">
     <div class="ad-top">
       <ins
+        ref="adElement"
         class="adsbygoogle"
         style="display:block; width:100%; max-width:100%;"
-        data-ad-client="ca-pub-5478065514436039"
-        data-ad-slot="1832821331"
+        data-ad-client="ca-pub-8975507583219124"
+        data-ad-slot="4112129657"
         data-ad-format="auto"
         data-full-width-responsive="true"
       ></ins>
@@ -14,18 +15,14 @@
 </template>
 
 <script setup>
-import { onMounted } from "vue";
+import { nextTick, onMounted, ref } from "vue";
 
-onMounted(() => {
-  if (typeof window === "undefined") return;
+const adElement = ref();
 
-  if (!document.querySelector('script[src*="googlesyndication.com/pagead/js/adsbygoogle.js"]')) {
-    const script = document.createElement("script");
-    script.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js";
-    script.async = true;
-    script.crossOrigin = "anonymous";
-    document.head.appendChild(script);
-  }
+onMounted(async () => {
+  await nextTick();
+
+  if (adElement.value?.dataset.adsbygoogleStatus) return;
 
   window.adsbygoogle = window.adsbygoogle || [];
   window.adsbygoogle.push({});
