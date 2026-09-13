@@ -25,6 +25,13 @@ export default sidebar({
             "/legislation/cap-53h-antiquities-and-monuments-declaration-of-proposed-monument-hung-lau-notice.md",
           ]
         },
+        {
+          text: "第499章",
+          collapsible: true,
+          children: [
+            "/legislation/cap-499-environmental-impact-assessment-ordinance.md",
+          ]
+        },        
       ],
     },
     {
