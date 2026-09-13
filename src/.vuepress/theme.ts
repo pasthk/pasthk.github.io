@@ -55,7 +55,9 @@ export default hopeTheme({
   },
   plugins: {
     sitemap: true,
-    slimsearch: true,
+    slimsearch: {
+      indexContent: true,
+    },
     components: {
       components: ["Badge", "VPCard"],
     },
