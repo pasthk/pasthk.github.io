@@ -14,7 +14,9 @@ export default sidebar({
           text: "節慶",
           collapsible: true,
           children: [
-            "/festival/mid-autumn-festival.md",
+            "/custom/dragon-boat-festival.md",
+            "/custom/mid-autumn-festival.md",
+            "/custom/yu-lan-festival.md",
           ]
         },
         {
@@ -22,6 +24,7 @@ export default sidebar({
           collapsible: true,
           children: [
             "/custom/cheung-chau-jiao-festival.md",
+            "/custom/high-land-jiao-festival.md",
           ]
         },
       ],
