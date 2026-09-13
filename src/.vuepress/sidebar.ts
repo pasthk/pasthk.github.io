@@ -3,6 +3,10 @@ import { sidebar } from "vuepress-theme-hope";
 export default sidebar({
   "/": [
     {
+      text: "前言",
+      link: "/",
+    },
+    {
       text: "風俗",
       collapsible: true,
       children: [
