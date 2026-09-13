@@ -30,6 +30,9 @@ export default sidebar({
           collapsible: true,
           children: [
             "/legislation/cap-499-environmental-impact-assessment-ordinance.md",
+            "/legislation/cap-499a-environmental-impact-assessment-appeal-board-regulation.md",
+            "/legislation/cap-499b-environmental-impact-assessment-fees-regulation.md",
+            "/legislation/cap-499c-environmental-impact-assessment-exemption-of-shenzhen-section-of-the-shenzhen-bay-bridge-order.md",
           ]
         },        
       ],
