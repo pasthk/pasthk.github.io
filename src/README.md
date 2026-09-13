@@ -1,7 +1,6 @@
 ---
 title: 前言
-author: 吳某
-date: 2026-09-09
+pageInfo: false
 next: false
 prev: false
 ---

@@ -6,6 +6,8 @@ import sidebar from "./sidebar.js";
 export default hopeTheme({
   pure: true,
   darkmode: "disable",
+  favicon: "/favicon.svg",
+  logo: "/favicon.svg",
   hostname: "https://www.pasthk.com",
   author: {
     name: "吳某",
@@ -21,6 +23,7 @@ export default hopeTheme({
   breadcrumb: false,
   markdown: {
     footnote: true,
+    hint: true,
     attrs: true,
     codeTabs: true,
     component: true,
@@ -61,8 +64,6 @@ export default hopeTheme({
     components: {
       components: ["Badge", "VPCard"],
     },
-    icon: {
-      prefix: "fa6-solid:",
-    },
+    icon: false,
   },
 });
