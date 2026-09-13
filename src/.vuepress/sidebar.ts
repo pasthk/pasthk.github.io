@@ -38,6 +38,19 @@ export default sidebar({
       ],
     },
     {
+      text: "教育",
+      collapsible: true,
+      children: [
+        {
+          text: "大學",
+          collapsible: true,
+          children: [
+            "/education/the-university-of-hong-kong.md",
+          ]
+        },
+      ],
+    },
+    {
       text: "風俗",
       collapsible: true,
       children: [
