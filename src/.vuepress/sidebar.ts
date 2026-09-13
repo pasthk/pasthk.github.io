@@ -74,7 +74,7 @@ export default sidebar({
       ],
     },
     {
-      text: "考古",
+      text: "古物及古蹟",
       collapsible: true,
       children: [
         {
