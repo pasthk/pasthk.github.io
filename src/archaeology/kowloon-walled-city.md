@@ -1,8 +1,9 @@
 ---
-title: 九龍寨城遺址
+title: 九龍寨城
 author: 吳某
 date: 2026-09-10
 ---
+
 ## 調查報告
 1. 〈Report on Archaeological Investigation at Kowloon Walled City, Hong Kong〉（香港：古物古蹟辦事處檔案，編號：KL1）。
 2. 〈Report on Archaeological Investigations at Kowloon Walled City, Hong Kong (Phase III)〉（香港：古物古蹟辦事處檔案，編號：KL10）。

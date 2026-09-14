@@ -95,6 +95,21 @@ export default sidebar({
       ],
     },
     {
+      text: "社會民生",
+      collapsible: true,
+      children: [
+        {
+          text: "公共衛生",
+          collapsible: true,
+          children: [
+            "/public-health/influenza.md",
+            "/public-health/cholera.md",
+            "/public-health/plague.md",
+          ]
+        },
+      ],
+    },    
+    {
       text: "教育",
       collapsible: true,
       children: [
@@ -115,6 +130,7 @@ export default sidebar({
           text: "節慶",
           collapsible: true,
           children: [
+            "/custom/lunar-new-year.md",
             "/custom/dragon-boat-festival.md",
             "/custom/mid-autumn-festival.md",
             "/custom/yu-lan-festival.md",
@@ -154,6 +170,14 @@ export default sidebar({
           collapsible: true,
           children: [
             "/archaeology/lei-cheng-uk-han-tomb.md",
+          ]
+        },
+        {
+          text: "清代",
+          collapsible: true,
+          children: [
+            "/archaeology/kowloon-walled-city.md",
+            "/archaeology/tung-chung-fort.md",
           ]
         },
         {
