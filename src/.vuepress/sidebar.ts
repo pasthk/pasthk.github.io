@@ -10,6 +10,7 @@ export default sidebar({
       text: "自然環境",
       collapsible: true,
       children: [
+        "/nature/flooding.md",
         {
           text: "熱帶氣旋",
           collapsible: true,
