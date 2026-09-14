@@ -6,8 +6,8 @@ import sidebar from "./sidebar.js";
 export default hopeTheme({
   pure: true,
   darkmode: "disable",
-  favicon: "/favicon.svg",
-  logo: "/favicon.svg",
+  favicon: "/favicon.png",
+  logo: "/favicon.png",
   hostname: "https://www.pasthk.com",
   author: {
     name: "吳某",
