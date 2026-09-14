@@ -4,23 +4,23 @@ import navbar from "./navbar.js";
 import sidebar from "./sidebar.js";
 
 export default hopeTheme({
+  docsDir: "src",
+  hostname: "https://www.pasthk.com",
+  navbar,
+  sidebar,
   pure: true,
   darkmode: "disable",
   favicon: "/favicon.png",
   logo: "/favicon.png",
-  hostname: "https://www.pasthk.com",
+  displayFooter: true,
+  footer: "認識香港，從文獻開始。",
+  lastUpdated: false,
+  contributors: false,
+  breadcrumb: false,
   author: {
     name: "吳某",
     url: "https://www.pasthk.com",
   },
-  docsDir: "src",
-  navbar,
-  sidebar,
-  footer: "認識香港，從文獻開始。",
-  displayFooter: true,
-  lastUpdated: false,
-  contributors: false,
-  breadcrumb: false,
   markdown: {
     footnote: true,
     hint: true,
@@ -58,12 +58,12 @@ export default hopeTheme({
   },
   plugins: {
     sitemap: true,
+    icon: false,
     slimsearch: {
       indexContent: true,
     },
     components: {
       components: ["Badge", "VPCard"],
     },
-    icon: false,
   },
 });
