@@ -67,33 +67,10 @@ export default sidebar({
       text: "香港法例",
       collapsible: true,
       children: [
-        {
-          text: "第53章",
-          collapsible: true,
-          children: [
             "/legislation/cap-53-antiquities-and-monuments-ordinance.md",
-            "/legislation/cap-53a-antiquities-excavation-and-search-regulations.md",
-            "/legislation/cap-53b-antiquities-and-monuments-declaration-of-monuments-and-historical-buildings-consolidation-notice.md",
-            "/legislation/cap-53c-antiquities-and-monuments-declaration-of-archaeological-site-notice-1996.md",
-            "/legislation/cap-53d-antiquities-and-monuments-declaration-of-proposed-monument-notice-2003.md",
-            "/legislation/cap-53e-antiquities-and-monuments-declaration-of-proposed-monument-no-128-pok-fu-lam-road-notice.md",
-            "/legislation/cap-53f-antiquities-and-monuments-declaration-of-proposed-monument-no-45-stubbs-road-notice.md",
-            "/legislation/cap-53g-antiquities-and-monuments-declaration-of-proposed-monument-ho-tung-gardens-notice.md",
-            "/legislation/cap-53h-antiquities-and-monuments-declaration-of-proposed-monument-hung-lau-notice.md",
-          ]
-        },
-        {
-          text: "第499章",
-          collapsible: true,
-          children: [
             "/legislation/cap-499-environmental-impact-assessment-ordinance.md",
-            "/legislation/cap-499a-environmental-impact-assessment-appeal-board-regulation.md",
-            "/legislation/cap-499b-environmental-impact-assessment-fees-regulation.md",
-            "/legislation/cap-499c-environmental-impact-assessment-exemption-of-shenzhen-section-of-the-shenzhen-bay-bridge-order.md",
-          ]
-        },        
-      ],
-    },
+            ]
+        },  
     {
       text: "社會民生",
       collapsible: true,
