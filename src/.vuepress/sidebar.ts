@@ -64,7 +64,7 @@ export default sidebar({
       ],
     },
     {
-      text: "法例",
+      text: "香港法例",
       collapsible: true,
       children: [
         {
@@ -114,7 +114,7 @@ export default sidebar({
       collapsible: true,
       children: [
         {
-          text: "大學",
+          text: "專上教育",
           collapsible: true,
           children: [
             "/education/the-university-of-hong-kong.md",
