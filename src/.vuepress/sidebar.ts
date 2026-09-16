@@ -3,7 +3,7 @@ import { sidebar } from "vuepress-theme-hope";
 export default sidebar({
   "/": [
     {
-      text: "前言",
+      text: "凡例",
       link: "/",
     },
     {
