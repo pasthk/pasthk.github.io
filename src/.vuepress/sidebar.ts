@@ -140,8 +140,9 @@ export default sidebar({
           collapsible: true,
           children: [
             "/archaeology/sha-ha-site.md",
-            "/archaeology/lung-kwu-tan.md",
-            "/archaeology/lung-kwu-sheung-tan.md",
+            "/archaeology/lung-kwu-chau-site.md",
+            "/archaeology/lung-kwu-tan-site.md",
+            "/archaeology/lung-kwu-sheung-tan-site.md",
           ]
         },
         {
