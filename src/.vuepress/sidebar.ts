@@ -141,6 +141,7 @@ export default sidebar({
           children: [
             "/archaeology/sha-ha-site.md",
             "/archaeology/lung-kwu-tan.md",
+            "/archaeology/lung-kwu-sheung-tan.md",
           ]
         },
         {
