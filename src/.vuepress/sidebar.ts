@@ -161,6 +161,15 @@ export default sidebar({
           ]
         },
         {
+          text: "碑刻",
+          collapsible: true,
+          children: [
+            "/stele-inscription/sik-sik-yuen-wang-tai-sin.md",
+            "/stele-inscription/sung-wong-toi-site-kowloon.md",
+            "/stele-inscription/hau-wong-temple-kowloon-city.md",
+          ]
+        },
+        {
           text: "歷史建築",
           collapsible: true,
           children: [
