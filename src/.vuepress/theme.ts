@@ -14,7 +14,7 @@ export default hopeTheme({
   logo: "/favicon.png",
   displayFooter: true,
   footer: "認識香港，從文獻開始。",
-  lastUpdated: true,
+  lastUpdated: false,
   contributors: false,
   breadcrumb: false,
   author: {
