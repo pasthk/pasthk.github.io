@@ -168,6 +168,10 @@ export default sidebar({
             "/historic-building/hau-mei-fung-ancestral-hall.md",
           ]
         },
+        {
+          text: "考古展覽",
+          link: "/archaeology/archaeological-exhibition.md",
+        },
       ],
     },
   ],
