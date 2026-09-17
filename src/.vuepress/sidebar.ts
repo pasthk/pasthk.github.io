@@ -95,6 +95,7 @@ export default sidebar({
           collapsible: true,
           children: [
             "/education/the-university-of-hong-kong.md",
+            "/education/the-chinese-university-of-hong-kong.md",
           ]
         },
       ],
