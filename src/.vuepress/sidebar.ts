@@ -177,6 +177,7 @@ export default sidebar({
           children: [
             "/historic-building/hau-ku-shek-ancestral-hall.md",
             "/historic-building/hau-mei-fung-ancestral-hall.md",
+            "/historic-building/tat-tak-communal-hall.md",
           ]
         },
         {
