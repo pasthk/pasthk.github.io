@@ -67,9 +67,10 @@ export default sidebar({
       text: "香港法例",
       collapsible: true,
       children: [
-            "/legislation/cap-53-antiquities-and-monuments-ordinance.md",
-            "/legislation/cap-499-environmental-impact-assessment-ordinance.md",
-            ]
+        "/legislation/legislative-council.md",
+        "/legislation/cap-53-antiquities-and-monuments-ordinance.md",
+        "/legislation/cap-499-environmental-impact-assessment-ordinance.md",
+      ]
         },  
     {
       text: "社會民生",
