@@ -3,7 +3,7 @@ import { sidebar } from "vuepress-theme-hope";
 export default sidebar({
   "/": [
     {
-      text: "凡例",
+      text: "前言",
       link: "/",
     },
     {
@@ -97,6 +97,7 @@ export default sidebar({
           children: [
             "/education/the-university-of-hong-kong.md",
             "/education/the-chinese-university-of-hong-kong.md",
+            "/education/the-hong-kong-polytechnic-university.md",
           ]
         },
       ],
