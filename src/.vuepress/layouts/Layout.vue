@@ -5,10 +5,7 @@ import AdTop from "../components/AdTop.vue";
 
 <template>
   <HopeLayout>
-    <template #contentBefore>
-      <AdTop />
-    </template>
-    <template #sidebarBottom>
+    <template #contentAfter>
       <AdTop />
     </template>
   </HopeLayout>
