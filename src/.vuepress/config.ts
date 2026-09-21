@@ -27,7 +27,7 @@ export default defineUserConfig({
       "script",
       {
         async: true,
-        src: "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5478065514436039",
+        src: "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8975507583219124",
         crossorigin: "anonymous",
       },
     ],
