@@ -156,6 +156,13 @@ export default sidebar({
           ]
         },
         {
+          text: "明代",
+          collapsible: true,
+          children: [
+            "/archaeology/wun-yiu.md",
+          ]
+        },
+        {
           text: "清代",
           collapsible: true,
           children: [
