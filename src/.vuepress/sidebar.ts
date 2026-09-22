@@ -98,6 +98,8 @@ export default sidebar({
             "/education/the-university-of-hong-kong.md",
             "/education/the-chinese-university-of-hong-kong.md",
             "/education/the-hong-kong-polytechnic-university.md",
+            "/education/the-hong-kong-academy-for-performing-arts.md",
+            "/education/northcote-college-of-education.md",
           ]
         },
       ],
