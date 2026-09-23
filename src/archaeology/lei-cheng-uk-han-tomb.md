@@ -2,6 +2,22 @@
 title: 李鄭屋漢墓
 author: 吳某
 date: 2026-09-09
+description: 整理李鄭屋漢墓於1955年發現、發掘、保存及博物館展覽的報道，並收錄相關政府公報、考古報告與研究論著，了解香港考古與漢代文物研究。
+keywords:
+  - 李鄭屋漢墓
+  - 李鄭屋古墓
+  - 香港考古
+  - 漢代墓葬
+  - 香港歷史博物館
+  - 古物古蹟
+head:
+  - - meta
+    - name: keywords
+      content: 李鄭屋漢墓, 李鄭屋古墓, 香港考古, 漢代墓葬, 香港歷史博物館, 古物古蹟
+  - - script
+    - type: application/ld+json
+    - >-
+      {"@context":"https://schema.org","@type":"AboutPage","name":"李鄭屋漢墓","description":"整理李鄭屋漢墓於1955年發現、發掘、保存及博物館展覽的報道，並收錄相關政府公報、考古報告與研究論著。","about":{"@type":"Place","name":"李鄭屋漢墓","alternateName":"Lei Cheng Uk Han Tomb","containedInPlace":{"@type":"Place","name":"香港"}},"keywords":["李鄭屋漢墓","李鄭屋古墓","香港考古","漢代墓葬","香港歷史博物館","古物古蹟"]}
 ---
 ## 新聞報道
 1. 〈李鄭屋村山坵發現古塚　塚内有陶器二十餘件　似是千五年前古物〉，《工商日報》，1955年8月10日，第5頁。
