@@ -55,7 +55,7 @@ onMounted(async () => {
   position: absolute;
   top: 0.375rem;
   right: 0.5rem;
-  z-index: 1;
+  z-index: 10;
   padding: 0.12rem 0.42rem;
   border: 1px solid #000;
   background: transparent;
