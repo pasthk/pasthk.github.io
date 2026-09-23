@@ -50,10 +50,10 @@ onMounted(async () => {
   right: 0.5rem;
   z-index: 1;
   padding: 0.12rem 0.42rem;
-  border: 1px solid rgba(68, 68, 68, 0.35);
-  background: rgba(245, 244, 239, 0.9);
-  color: #5a5a5a;
-  font-size: 0.68rem;
+  border: 1px solid #000;
+  background: transparent;
+  color: #000;
+  font-size: 5pt;
   line-height: 1.3;
   font-weight: 600;
   letter-spacing: 0.08em;
