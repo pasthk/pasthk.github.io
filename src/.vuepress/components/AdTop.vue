@@ -39,7 +39,13 @@ onMounted(async () => {
 .ad-top {
   position: relative;
   width: min(100%, 980px);
+  aspect-ratio: 1;
+  box-sizing: border-box;
+  border: 1px solid #000;
   margin: 0 auto 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
 }
 
