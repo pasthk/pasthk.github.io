@@ -31,34 +31,32 @@ onMounted(async () => {
 
 <style scoped>
 .ad-top-wrap {
-  width: 100%;
-  display: flex;
-  justify-content: center;
+  position: relative;
+  width: min(100%, 980px);
+  box-sizing: border-box;
+  padding-top: 1.1rem;
+  margin: 0 auto 1.25rem;
 }
 
 .ad-top {
   position: relative;
-  width: min(100%, 980px);
+  width: 100%;
   aspect-ratio: 4 / 1;
   box-sizing: border-box;
-  border: 1px solid #000;
   overflow: hidden;
-  margin: 0 auto 1.25rem;
+  margin: 0;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
 }
 
-.ad-top::before {
+.ad-top-wrap::before {
   content: "廣告";
   position: absolute;
-  top: 0.375rem;
-  right: 0.5rem;
+  top: 0;
+  right: 0;
   z-index: 10;
-  padding: 0.12rem 0.42rem;
-  border: 1px solid #000;
-  background: transparent;
   color: #000;
   font-size: 5pt;
   line-height: 1.3;
