@@ -18,7 +18,7 @@ prev: false
 - 《遐邇貫珍》（1853-1856）
 - *Hong Kong Daily Press*（1864-1941）
 - 《循環日報》（1874-1886）
-- China Mail（1886-1961）
+- *China Mail*（1886-1961）
 - 《華字日報》（1895-1940）
 - 《工商日報》（1926-1984）
 - *Hong Kong Sunday Herald*（1929-1950）
