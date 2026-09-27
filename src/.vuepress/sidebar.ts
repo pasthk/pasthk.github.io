@@ -158,6 +158,13 @@ export default sidebar({
           ]
         },
         {
+          text: "宋代",
+          collapsible: true,
+          children: [
+            "/archaeology/fat-tong-chau-site.md",
+          ]
+        },
+        {
           text: "明代",
           collapsible: true,
           children: [
