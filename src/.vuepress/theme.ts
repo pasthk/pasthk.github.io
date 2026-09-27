@@ -3,9 +3,11 @@ import { hopeTheme } from "vuepress-theme-hope";
 import navbar from "./navbar.js";
 import sidebar from "./sidebar.js";
 
+const hostname = "https://www.pasthk.com";
+
 export default hopeTheme({
   docsDir: "src",
-  hostname: "https://www.pasthk.com",
+  hostname,
   navbar,
   sidebar,
   pure: true,
@@ -57,6 +59,10 @@ export default hopeTheme({
     vPre: true,
   },
   plugins: {
+    seo: {
+      canonical: (page) => new URL(page.path, hostname).href,
+      fallBackImage: `${hostname}/favicon.png`,
+    },
     sitemap: true,
     icon: false,
     slimsearch: {

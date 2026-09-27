@@ -1,5 +1,7 @@
 ---
 title: 前言
+description: 香港歷史與文化文獻資料庫，整理香港舊報紙、政府文獻及研究資料，涵蓋考古、節慶、教育、古蹟、法例、公共衞生與熱帶氣旋。
+article: false
 pageInfo: false
 next: false
 prev: false
