@@ -56,9 +56,9 @@ onMounted(async () => {
   right: 0;
   z-index: 10;
   color: #000;
-  font-size: 5pt;
+  font-size: 12px;
   line-height: 1.3;
-  font-weight: 600;
+  font-weight: 400;
   letter-spacing: 0.08em;
   font-family: "Source Han Serif TC", "Noto Serif TC", "PingFang TC", "Microsoft JhengHei", serif;
   pointer-events: none;
