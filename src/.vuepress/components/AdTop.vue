@@ -4,7 +4,7 @@
       <ins
         ref="adElement"
         class="adsbygoogle"
-        style="display:block; width:100%; max-width:100%;"
+        style="display:block;"
         data-ad-client="ca-pub-8975507583219124"
         data-ad-slot="4112129657"
         data-ad-format="auto"
@@ -32,7 +32,7 @@ onMounted(async () => {
 <style scoped>
 .ad-top-wrap {
   position: relative;
-  width: min(100%, 980px);
+  width: 100%;
   box-sizing: border-box;
   padding-top: 1.1rem;
   margin: 0 auto 1.25rem;
@@ -41,9 +41,7 @@ onMounted(async () => {
 .ad-top {
   position: relative;
   width: 100%;
-  aspect-ratio: 4 / 1;
   box-sizing: border-box;
-  overflow: hidden;
   margin: 0;
   display: flex;
   align-items: center;
@@ -68,7 +66,5 @@ onMounted(async () => {
 
 .adsbygoogle {
   display: block;
-  width: 100%;
-  min-height: 90px;
 }
 </style>
