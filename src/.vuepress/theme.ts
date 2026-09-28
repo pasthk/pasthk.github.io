@@ -26,6 +26,7 @@ export default hopeTheme({
   markdown: {
     footnote: true,
     hint: true,
+    preview: true,
     attrs: true,
     codeTabs: true,
     component: true,
