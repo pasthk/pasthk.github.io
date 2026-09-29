@@ -11,6 +11,8 @@ keywords:
 ---
 
 ## 新聞報道
+1. 〈[考古資源調查發現廿個遺跡](/archaeology/hong-kong-archaeological-survey-1982-1985/19840629-wah-kiu-yat-po-p6.md)〉，《華僑日報》，1984年6月29日，第2張第2頁。
+   - 保護歷史文物漸受重視
 
 ## 調查報告
 1. Peacock, B. A. V., and Taryn J. P. Nixon. 1986. *Report of the Hong Kong Archaeological Survey Volume I: An Introduction to The Survey*.
