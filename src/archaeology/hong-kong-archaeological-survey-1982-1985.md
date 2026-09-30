@@ -11,7 +11,9 @@ keywords:
 ---
 
 ## 新聞報道
-1. 〈[考古資源調查發現廿個遺跡](/archaeology/hong-kong-archaeological-survey-1982-1985/19840629-wah-kiu-yat-po-p6.md)〉，《華僑日報》，1984年6月29日，第2張第2頁。
+1. [Search for relics to be launched](/archaeology/hong-kong-archaeological-survey-1982-1985/19810711-south-china-morning-post-p12.md). (1981, July 11). *South China Morning Post*, p. 12.
+2. [Vehicle will help preserve heritage](/archaeology/hong-kong-archaeological-survey-1982-1985/19830623-south-china-morning-post-p12.md). (1983, June 23). *South China Morning Post*, p. 12.
+3. 〈[考古資源調查發現廿個遺跡](/archaeology/hong-kong-archaeological-survey-1982-1985/19840629-wah-kiu-yat-po-p6.md)〉，《華僑日報》，1984年6月29日，第2張第2頁。
    - 保護歷史文物漸受重視
 
 ## 調查報告
