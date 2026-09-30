@@ -199,7 +199,7 @@ export default sidebar({
           ]
         },
         {
-          text: "考古展覽",
+          text: "考古文物展覽",
           link: "/archaeology/archaeological-exhibition.md",
         },
       ],
