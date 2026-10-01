@@ -17,6 +17,8 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    outputs:
+      baidu_urls: ${{ steps.collect-baidu-urls.outputs.urls }}
 
     steps:
       - name: Checkout repository
@@ -35,6 +37,42 @@ jobs:
 
       - name: Build VuePress site
         run: npm run docs:build
+
+      - name: Collect changed URLs for Baidu
+        id: collect-baidu-urls
+        env:
+          BEFORE_SHA: ${{ github.event.before }}
+          AFTER_SHA: ${{ github.sha }}
+        run: |
+          node --input-type=module <<'NODE'
+          import { appendFileSync, readFileSync } from "node:fs";
+          import { execFileSync } from "node:child_process";
+
+          const before = process.env.BEFORE_SHA;
+          const after = process.env.AFTER_SHA;
+          const urls = [];
+          const base = before || execFileSync("git", ["rev-parse", `${after}^`], { encoding: "utf8" }).trim();
+
+          if (base && !/^0+$/.test(base)) {
+            const changedFiles = execFileSync(
+              "git",
+              ["diff", "--name-only", "--diff-filter=ACMRT", "-z", base, after, "--", "src"],
+              { encoding: "utf8" },
+            )
+              .split("\0")
+              .filter((file) => file.endsWith(".md"));
+            const routesSource = readFileSync("src/.vuepress/.temp/internal/routes.js", "utf8");
+            const routes = [...routesSource.matchAll(/^\s*\["([^"]+)", \{ loader: \(\) => import\([^)]*?"([^"]+\.md)"\)/gm)];
+
+            for (const file of changedFiles) {
+              const route = routes.find(([, , source]) => source.endsWith(`/src/${file.slice("src/".length)}`))?.[1];
+              if (route) urls.push(`https://www.pasthk.com${route}`);
+            }
+          }
+
+          appendFileSync(process.env.GITHUB_OUTPUT, `urls=${JSON.stringify([...new Set(urls)])}\n`);
+          console.log(`Collected ${urls.length} changed page URL(s) for Baidu.`);
+          NODE
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
@@ -56,23 +94,17 @@ jobs:
       - name: Submit URLs to Baidu
         env:
           BAIDU_API_URL: ${{ secrets.BAIDU_API_URL }}
+          BAIDU_URLS_JSON: ${{ needs.build.outputs.baidu_urls }}
         run: |
           node --input-type=module <<'NODE'
-          const sitemapResponse = await fetch("https://www.pasthk.com/sitemap.xml");
-          if (!sitemapResponse.ok) {
-            throw new Error(`Cannot fetch sitemap: ${sitemapResponse.status}`);
+          const urls = JSON.parse(process.env.BAIDU_URLS_JSON || "[]");
+          if (urls.length === 0) {
+            console.log("No changed Markdown pages; skipping Baidu submission.");
+            process.exit(0);
           }
-
-          const sitemap = await sitemapResponse.text();
-          const urls = [...sitemap.matchAll(/<loc>([\s\S]*?)<\/loc>/g)]
-            .map(([, value]) => value.trim().replaceAll("&amp;", "&"))
-            .filter((url) => new URL(url).hostname === "www.pasthk.com");
 
           if (!process.env.BAIDU_API_URL) {
             throw new Error("Missing BAIDU_API_URL secret");
-          }
-          if (urls.length === 0) {
-            throw new Error("No site URLs found in sitemap");
           }
 
           const response = await fetch(process.env.BAIDU_API_URL, {
@@ -88,7 +120,9 @@ jobs:
             data = JSON.parse(result);
           } catch {}
 
-          if (!response.ok || data?.error) {
-            throw new Error(`Baidu URL submission failed: ${response.status}`);
+          if (data?.message === "over quota") {
+            console.warn("Baidu daily quota is exhausted; skipping submission without failing deployment.");
+          } else if (!response.ok || data?.error) {
+            throw new Error(`Baidu URL submission failed: ${data?.message ?? response.status}`);
           }
           NODE
