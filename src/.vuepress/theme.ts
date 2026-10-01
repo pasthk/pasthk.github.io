@@ -66,9 +66,6 @@ export default hopeTheme({
     },
     sitemap: true,
     icon: false,
-    orama: {
-      indexContent: true,
-    },
     components: {
       components: ["Badge", "VPCard"],
     },
