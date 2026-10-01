@@ -52,3 +52,43 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+
+      - name: Submit URLs to Baidu
+        env:
+          BAIDU_API_URL: ${{ secrets.BAIDU_API_URL }}
+        run: |
+          node --input-type=module <<'NODE'
+          const sitemapResponse = await fetch("https://www.pasthk.com/sitemap.xml");
+          if (!sitemapResponse.ok) {
+            throw new Error(`Cannot fetch sitemap: ${sitemapResponse.status}`);
+          }
+
+          const sitemap = await sitemapResponse.text();
+          const urls = [...sitemap.matchAll(/<loc>([\s\S]*?)<\/loc>/g)]
+            .map(([, value]) => value.trim().replaceAll("&amp;", "&"))
+            .filter((url) => new URL(url).hostname === "www.pasthk.com");
+
+          if (!process.env.BAIDU_API_URL) {
+            throw new Error("Missing BAIDU_API_URL secret");
+          }
+          if (urls.length === 0) {
+            throw new Error("No site URLs found in sitemap");
+          }
+
+          const response = await fetch(process.env.BAIDU_API_URL, {
+            method: "POST",
+            headers: { "Content-Type": "text/plain" },
+            body: urls.join("\n"),
+          });
+          const result = await response.text();
+          console.log(result);
+
+          let data;
+          try {
+            data = JSON.parse(result);
+          } catch {}
+
+          if (!response.ok || data?.error) {
+            throw new Error(`Baidu URL submission failed: ${response.status}`);
+          }
+          NODE
