@@ -66,7 +66,7 @@ export default hopeTheme({
     },
     sitemap: true,
     icon: false,
-    slimsearch: {
+    orama: {
       indexContent: true,
     },
     components: {
