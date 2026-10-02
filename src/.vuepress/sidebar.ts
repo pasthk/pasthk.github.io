@@ -132,7 +132,6 @@ export default sidebar({
           collapsible: true,
           children: [
             "/education/the-university-of-hong-kong.md",
-            "/education/chung-chi-college.md",
             "/education/the-chinese-university-of-hong-kong.md",
             "/education/the-hong-kong-polytechnic-university.md",
             "/education/the-hong-kong-academy-for-performing-arts.md",

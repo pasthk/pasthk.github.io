@@ -10,5 +10,3 @@ head:
 ---
 
 ## 新聞報道
-1. 〈[基督教聞人發起創辦崇基學院](/education/chung-chi-college/19510901-the-kung-sheung-evening-news-p4.md)〉，《工商晚報》，1951年9月1日，第4頁。
-   - 副題：李應林博士任院長
