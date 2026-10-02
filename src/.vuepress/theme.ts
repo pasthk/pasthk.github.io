@@ -19,6 +19,7 @@ export default hopeTheme({
   lastUpdated: false,
   contributors: false,
   breadcrumb: false,
+  copyright: false,
   author: {
     name: "吳某",
     url: "https://www.pasthk.com",

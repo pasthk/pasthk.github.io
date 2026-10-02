@@ -5,12 +5,10 @@ pageInfo: false
 next: false
 prev: false
 description: 前言：香港歷史與文化資料整理，收錄前言相關新聞、文獻與研究資料，快速了解香港社會發展與歷史脈絡。
-keywords:
-  - 前言
-  - 文化研究
-  - 歷史資料
-  - 社會發展
-  - 香港文化
+head:
+  - - meta
+    - name: keywords
+      content: "前言, 文化研究, 歷史資料, 社會發展, 香港文化"
 ---
 
 這是一個興趣使然的個人項目[^1]。內容不定期更新。
