@@ -9,9 +9,10 @@ head:
       content: "香港考古調查, 全港考古調查, 滘西洲刻石, 滘西洲天后廟, 南宋刻石, 香港古蹟保育, South China Morning Post"
 ---
 
+- [x] 摘錄
+- [x] 校對
+
 > Quoted from *South China Morning Post*, 1981, July 11, p. 12.
-> - [x] 摘錄
-> - [x] 校對
 
 　Hongkong may find it has more ancient relics of historical interest than has yet been suspected.
 

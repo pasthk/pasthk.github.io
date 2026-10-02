@@ -9,9 +9,10 @@ head:
       content: "香港考古調查, 全港考古調查, 美國運通基金, American Express Foundation, 考古調查越野車, 香港考古資源, 香港古蹟保育, South China Morning Post"
 ---
 
+- [x] 摘錄
+- [x] 校對
+
 > Quoted from *South China Morning Post*, 1983, June 23, p. 12.
-> - [x] 摘錄
-> - [x] 校對
 
 　The Director of Urban Services, Mr Graham Barnes, received a $75,000 Land-Rover from the chairman of the American Express Country Co-ordinating Committee, Mr Simpson Chua, at Kowloon Park yesterday.
 
