@@ -10,6 +10,8 @@ head:
 ---
 
 > Quoted from *South China Morning Post*, 1981, July 11, p. 12.
+> - [x] 摘錄
+> - [x] 校對
 
 　Hongkong may find it has more ancient relics of historical interest than has yet been suspected.
 

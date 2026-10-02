@@ -10,6 +10,8 @@ head:
 ---
 
 > Quoted from *South China Morning Post*, 1983, June 23, p. 12.
+> - [x] 摘錄
+> - [x] 校對
 
 　The Director of Urban Services, Mr Graham Barnes, received a $75,000 Land-Rover from the chairman of the American Express Country Co-ordinating Committee, Mr Simpson Chua, at Kowloon Park yesterday.
 

@@ -10,7 +10,7 @@ head:
 ---
 
 ## 新聞報道
-1. 〈[李鄭屋村山坵發現古塚](/archaeology/lei-cheng-uk-han-tomb/19550810-the-kung-sheung-daily-news-p5.md)〉，《工商日報》，1955年8月10日，第5頁。 
+1. 〈[李鄭屋村山坵發現古塚](/archaeology/lei-cheng-uk-han-tomb/19550810-the-kung-sheung-daily-news-p5.md)〉，《工商日報》，1955年8月10日，第5頁。
    - 副題：塚内有陶器二十餘件　似是千五年前古物
 2. 〈[李鄭屋村發現古塚](/archaeology/lei-cheng-uk-han-tomb/19550810-the-kung-sheung-evening-news-p4.md)〉，《工商晚報》，1955年8月10日，第4頁。
    - 副題：港大教授認爲可能建於漢唐之間　推測塚內埋葬者係一鄉紳
