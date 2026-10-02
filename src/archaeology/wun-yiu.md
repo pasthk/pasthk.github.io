@@ -6,7 +6,7 @@ description: 碗窰：香港考古與古蹟研究資料，整理碗窰相關新�
 head:
   - - meta
     - name: keywords
-      content: "碗窰, 香港考古, 古蹟發掘, 漢代墓葬, 考古研究"
+      content: 碗窰, 香港考古, 古蹟發掘, 漢代墓葬, 考古研究
 ---
 
 ## 調查報告
