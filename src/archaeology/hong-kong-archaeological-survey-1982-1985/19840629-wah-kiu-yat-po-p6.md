@@ -3,10 +3,6 @@ title: 考古資源調查發現廿個遺跡
 author: 吳某
 date: 2026-09-29
 description: 《華僑日報》1984年報道古物諮詢委員會一九八三年年報，記錄香港考古資源調查首年發現二十多個新遺址、建立電腦化遺址記錄，並提出考古資源保育建議。
-head:
-  - - meta
-    - name: keywords
-      content: 香港考古資源調查, 香港考古調查, 1983年考古調查, 香港考古遺址, 考古遺址記錄, 考古資源保育, 古物諮詢委員會, 華僑日報, Hong Kong archaeological survey, archaeological sites
 ---
 
 - [x] 摘錄

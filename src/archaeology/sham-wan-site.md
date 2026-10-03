@@ -2,8 +2,7 @@
 title: 深灣遺址
 author: 吳某
 date: 2026-09-29
-description: 
-keywords:
+description: 南丫島深灣考古報道索引，收錄1977年至1978年古代魚骨、宋代磚窰及約五千年前石器的發現與展出記錄。
 ---
 
 ## 新聞報道
