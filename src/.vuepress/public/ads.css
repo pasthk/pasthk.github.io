@@ -1,0 +1,33 @@
+.ad-top-wrap {
+  position: relative;
+  width: 100%;
+  box-sizing: border-box;
+  padding-top: 1.1rem;
+  margin: 0 auto 1.25rem;
+}
+
+.ad-top {
+  position: relative;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.ad-top-wrap::before {
+  content: "廣告";
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 10;
+  color: #000;
+  font-size: 12px;
+  line-height: 1.3;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  font-family: "Source Han Serif TC", "Noto Serif TC", "PingFang TC", "Microsoft JhengHei", serif;
+  pointer-events: none;
+}

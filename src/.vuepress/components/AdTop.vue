@@ -16,6 +16,26 @@
 
 <script>
 let adsenseScriptPromise;
+let adsenseStylesheetPromise;
+
+function loadAdsenseStylesheet() {
+  if (!adsenseStylesheetPromise) {
+    adsenseStylesheetPromise = new Promise((resolve, reject) => {
+      const stylesheet = document.createElement("link");
+      stylesheet.rel = "stylesheet";
+      stylesheet.href = "/ads.css";
+      stylesheet.onload = () => resolve();
+      stylesheet.onerror = () => {
+        stylesheet.remove();
+        adsenseStylesheetPromise = undefined;
+        reject(new Error("Failed to load the AdSense stylesheet."));
+      };
+      document.head.append(stylesheet);
+    });
+  }
+
+  return adsenseStylesheetPromise;
+}
 
 function loadAdsenseScript() {
   if (!adsenseScriptPromise) {
@@ -46,7 +66,7 @@ const adElement = ref();
 let observer;
 
 function requestAd() {
-  void loadAdsenseScript()
+  void Promise.all([loadAdsenseStylesheet(), loadAdsenseScript()])
     .then(() => {
       const element = adElement.value;
       if (!element || element.dataset.adsbygoogleStatus) return;
@@ -82,43 +102,3 @@ onMounted(() => {
 
 onBeforeUnmount(() => observer?.disconnect());
 </script>
-
-<style scoped>
-.ad-top-wrap {
-  position: relative;
-  width: 100%;
-  box-sizing: border-box;
-  padding-top: 1.1rem;
-  margin: 0 auto 1.25rem;
-}
-
-.ad-top {
-  position: relative;
-  width: 100%;
-  box-sizing: border-box;
-  margin: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
-
-.ad-top-wrap::before {
-  content: "廣告";
-  position: absolute;
-  top: 0;
-  right: 0;
-  z-index: 10;
-  color: #000;
-  font-size: 12px;
-  line-height: 1.3;
-  font-weight: 400;
-  letter-spacing: 0.08em;
-  font-family: "Source Han Serif TC", "Noto Serif TC", "PingFang TC", "Microsoft JhengHei", serif;
-  pointer-events: none;
-}
-
-.adsbygoogle {
-  display: block;
-}
-</style>
