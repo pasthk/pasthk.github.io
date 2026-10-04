@@ -100,7 +100,7 @@ export default sidebar({
       ],
     },
     {
-      text: "古物及古蹟",
+      text: "古物古蹟",
       collapsible: true,
       children: [
         {
