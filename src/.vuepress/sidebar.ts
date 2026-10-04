@@ -100,71 +100,6 @@ export default sidebar({
       ],
     },
     {
-      text: "香港法例",
-      collapsible: true,
-      children: [
-        "/legislation/legislative-council.md",
-        "/legislation/cap-53-antiquities-and-monuments-ordinance.md",
-        "/legislation/cap-499-environmental-impact-assessment-ordinance.md",
-      ]
-        },  
-    {
-      text: "社會民生",
-      collapsible: true,
-      children: [
-        {
-          text: "公共衛生",
-          collapsible: true,
-          children: [
-            "/public-health/influenza.md",
-            "/public-health/cholera.md",
-            "/public-health/plague.md",
-          ]
-        },
-      ],
-    },    
-    {
-      text: "教育",
-      collapsible: true,
-      children: [
-        {
-          text: "專上教育",
-          collapsible: true,
-          children: [
-            "/education/the-university-of-hong-kong.md",
-            "/education/the-chinese-university-of-hong-kong.md",
-            "/education/the-hong-kong-polytechnic-university.md",
-            "/education/the-hong-kong-academy-for-performing-arts.md",
-            "/education/northcote-college-of-education.md",
-          ]
-        },
-      ],
-    },
-    {
-      text: "風俗",
-      collapsible: true,
-      children: [
-        {
-          text: "節慶",
-          collapsible: true,
-          children: [
-            "/custom/lunar-new-year.md",
-            "/custom/dragon-boat-festival.md",
-            "/custom/mid-autumn-festival.md",
-            "/custom/yu-lan-festival.md",
-          ]
-        },
-        {
-          text: "打醮",
-          collapsible: true,
-          children: [
-            "/custom/cheung-chau-jiao-festival.md",
-            "/custom/high-land-jiao-festival.md",
-          ]
-        },
-      ],
-    },
-    {
       text: "古物及古蹟",
       collapsible: true,
       children: [
@@ -240,6 +175,70 @@ export default sidebar({
         },
       ],
     },
+    {
+      text: "香港法例",
+      collapsible: true,
+      children: [
+        "/legislation/legislative-council.md",
+        "/legislation/cap-53-antiquities-and-monuments-ordinance.md",
+        "/legislation/cap-499-environmental-impact-assessment-ordinance.md",
+      ]
+        },  
+    {
+      text: "社會民生",
+      collapsible: true,
+      children: [
+        {
+          text: "公共衛生",
+          collapsible: true,
+          children: [
+            "/public-health/influenza.md",
+            "/public-health/cholera.md",
+            "/public-health/plague.md",
+          ]
+        },
+        {
+          text: "教育",
+          collapsible: true,
+          children: [
+            {
+              text: "專上教育",
+              collapsible: true,
+              children: [
+                "/education/the-university-of-hong-kong.md",
+                "/education/the-chinese-university-of-hong-kong.md",
+                "/education/the-hong-kong-polytechnic-university.md",
+                "/education/the-hong-kong-academy-for-performing-arts.md",
+            "/education/northcote-college-of-education.md",
+          ]
+        },
+      ],
+    },
+      ],
+    },    
+    {
+      text: "傳統風俗",
+      collapsible: true,
+      children: [
+        {
+          text: "節慶",
+          collapsible: true,
+          children: [
+            "/custom/lunar-new-year.md",
+            "/custom/dragon-boat-festival.md",
+            "/custom/mid-autumn-festival.md",
+            "/custom/yu-lan-festival.md",
+          ]
+        },
+        {
+          text: "打醮",
+          collapsible: true,
+          children: [
+            "/custom/cheung-chau-jiao-festival.md",
+            "/custom/high-land-jiao-festival.md",
+          ]
+        },
+      ],
+    },
   ],
-  
 });
