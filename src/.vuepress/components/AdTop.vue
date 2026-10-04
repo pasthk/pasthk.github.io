@@ -14,19 +14,73 @@
   </div>
 </template>
 
+<script>
+let adsenseScriptPromise;
+
+function loadAdsenseScript() {
+  if (!adsenseScriptPromise) {
+    adsenseScriptPromise = new Promise((resolve, reject) => {
+      const script = document.createElement("script");
+      script.async = true;
+      script.crossOrigin = "anonymous";
+      script.src =
+        "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8975507583219124";
+      script.onload = () => resolve();
+      script.onerror = () => {
+        script.remove();
+        adsenseScriptPromise = undefined;
+        reject(new Error("Failed to load the Google AdSense script."));
+      };
+      document.head.append(script);
+    });
+  }
+
+  return adsenseScriptPromise;
+}
+</script>
+
 <script setup>
-import { nextTick, onMounted, ref } from "vue";
+import { onBeforeUnmount, onMounted, ref } from "vue";
 
 const adElement = ref();
+let observer;
 
-onMounted(async () => {
-  await nextTick();
+function requestAd() {
+  void loadAdsenseScript()
+    .then(() => {
+      const element = adElement.value;
+      if (!element || element.dataset.adsbygoogleStatus) return;
 
-  if (adElement.value?.dataset.adsbygoogleStatus) return;
+      window.adsbygoogle = window.adsbygoogle || [];
+      window.adsbygoogle.push({});
+    })
+    .catch((error) => {
+      console.error(error);
+    });
+}
 
-  window.adsbygoogle = window.adsbygoogle || [];
-  window.adsbygoogle.push({});
+onMounted(() => {
+  const element = adElement.value;
+  if (!element || element.dataset.adsbygoogleStatus) return;
+
+  if (!("IntersectionObserver" in window)) {
+    requestAd();
+    return;
+  }
+
+  observer = new IntersectionObserver(
+    (entries) => {
+      if (entries.some((entry) => entry.isIntersecting)) {
+        observer.disconnect();
+        requestAd();
+      }
+    },
+    { rootMargin: "400px 0px" },
+  );
+  observer.observe(element);
 });
+
+onBeforeUnmount(() => observer?.disconnect());
 </script>
 
 <style scoped>
