@@ -19,8 +19,10 @@ export default defineUserConfig({
     [
       "link",
       {
-        rel: "stylesheet",
-        href: "https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;700&display=swap",
+        rel: "preload",
+        as: "style",
+        href: "https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400&display=swap",
+        onload: "this.onload=null;this.rel='stylesheet'",
       },
     ],
     [
