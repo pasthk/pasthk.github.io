@@ -1,12 +1,12 @@
 
-$vp-font: '"Source Han Serif TC", "PingFang TC", "Microsoft JhengHei", serif';
-$vp-font-heading: '"Source Han Serif TC", "PingFang TC", "Microsoft JhengHei", serif';
-$vp-font-mono: '"Source Han Serif TC", "PingFang TC", "Microsoft JhengHei", serif';
+$vp-font: '"Noto Serif TC", "Source Han Serif TC", "PingFang TC", "Microsoft JhengHei", serif';
+$vp-font-heading: '"Noto Serif TC", "Source Han Serif TC", "PingFang TC", "Microsoft JhengHei", serif';
+$vp-font-mono: '"Noto Serif TC", "Source Han Serif TC", "PingFang TC", "Microsoft JhengHei", serif';
 
 :root {
-  --vp-font: "Source Han Serif TC", "PingFang TC", "Microsoft JhengHei", serif;
-  --vp-font-heading: "Source Han Serif TC", "PingFang TC", "Microsoft JhengHei", serif;
-  --vp-font-mono: "Source Han Serif TC", "PingFang TC", "Microsoft JhengHei", serif;
+  --vp-font: "Noto Serif TC", "Source Han Serif TC", "PingFang TC", "Microsoft JhengHei", serif;
+  --vp-font-heading: "Noto Serif TC", "Source Han Serif TC", "PingFang TC", "Microsoft JhengHei", serif;
+  --vp-font-mono: "Noto Serif TC", "Source Han Serif TC", "PingFang TC", "Microsoft JhengHei", serif;
   --vp-c-text: #000;
   --vp-c-text-mute: #000;
   --vp-c-text-subtle: #000;
@@ -28,5 +28,5 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Source Han Serif TC", "PingFang TC", "Microsoft JhengHei", serif;
+  font-family: "Noto Serif TC", "Source Han Serif TC", "PingFang TC", "Microsoft JhengHei", serif;
 }

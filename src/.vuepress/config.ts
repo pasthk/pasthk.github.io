@@ -20,7 +20,7 @@ export default defineUserConfig({
       "link",
       {
         rel: "stylesheet",
-        href: "https://fonts.googleapis.com/css2?family=Source+Han+Serif+TC:wght@400;700&display=swap",
+        href: "https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;700&display=swap",
       },
     ],
     [
