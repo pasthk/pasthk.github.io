@@ -1,0 +1,13 @@
+.page-info {
+  .page-author-info > .icon,
+  .page-date-info > .icon,
+  .page-reading-time-info > .icon {
+    display: none;
+  }
+
+  .page-author-info + .page-date-info,
+  .page-author-info + .page-reading-time-info,
+  .page-date-info + .page-reading-time-info {
+    margin-inline-start: 0.1em;
+  }
+}

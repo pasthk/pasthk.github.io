@@ -71,4 +71,4 @@ export default hopeTheme({
       components: ["Badge", "VPCard"],
     },
   },
-});
+}, { custom: true });
