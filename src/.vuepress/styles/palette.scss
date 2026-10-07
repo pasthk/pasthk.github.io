@@ -1,20 +1,12 @@
 
-$vp-font: '"Noto Serif TC"';
-$vp-font-heading: '"Noto Serif TC"';
-$vp-font-mono: '"Noto Serif TC"';
-
-@font-face {
-  font-family: "Noto Serif TC";
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url("/fonts/noto-serif-tc-subset.woff2") format("woff2");
-}
+$vp-font: serif;
+$vp-font-heading: serif;
+$vp-font-mono: serif;
 
 :root {
-  --vp-font: "Noto Serif TC";
-  --vp-font-heading: "Noto Serif TC";
-  --vp-font-mono: "Noto Serif TC";
+  --vp-font: serif;
+  --vp-font-heading: serif;
+  --vp-font-mono: serif;
   --vp-c-text: #000;
   --vp-c-text-mute: #000;
   --vp-c-text-subtle: #000;
@@ -40,5 +32,5 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Noto Serif TC";
+  font-family: serif;
 }

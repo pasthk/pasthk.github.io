@@ -32,16 +32,6 @@ export default defineUserConfig({
   description: "認識香港，從文獻開始。",
   head: [
     [
-      "link",
-      {
-        rel: "preload",
-        as: "font",
-        href: "/fonts/noto-serif-tc-subset.woff2",
-        type: "font/woff2",
-        crossorigin: "anonymous",
-      },
-    ],
-    [
       "meta",
       {
         name: "google-adsense-account",
