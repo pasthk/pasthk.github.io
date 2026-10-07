@@ -1,12 +1,5 @@
 
-$vp-font: serif;
-$vp-font-heading: serif;
-$vp-font-mono: serif;
-
 :root {
-  --vp-font: serif;
-  --vp-font-heading: serif;
-  --vp-font-mono: serif;
   --vp-c-text: #000;
   --vp-c-text-mute: #000;
   --vp-c-text-subtle: #000;
@@ -24,13 +17,4 @@ $vp-font-mono: serif;
 .vp-doc .theme-default-content,
 .theme-default-content {
   text-align: justify;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: serif;
 }
