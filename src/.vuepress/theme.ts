@@ -16,7 +16,7 @@ export default hopeTheme({
   logo: "/favicon.png",
   displayFooter: true,
   footer:
-    '認識香港，從文獻開始。<br><a href="/sponsor.html">支持本站</a> · <a href="/privacy-policy.html">隱私政策</a> · <a href="/about.html">關於本站</a> · <a href="/contact.html">聯絡方式</a> · <a href="/sources-copyright-corrections.html">資料來源、版權與勘誤</a>',
+    '認識香港，從文獻開始。<br><a href="/about.html">關於本站</a> · <a href="/sponsor.html">支持本站</a> · <a href="/contact.html">聯絡方式</a> · <a href="/privacy-policy.html">隱私政策</a> · <a href="/sources-copyright-corrections.html">資料來源、版權與勘誤</a>',
   lastUpdated: false,
   contributors: false,
   breadcrumb: false,
