@@ -22,42 +22,42 @@ description: 香港文獻類編的介紹、支持方式、聯絡資料、資料�
     <h3>支付寶（香港）</h3>
     <details>
       <summary>顯示 QR Code</summary>
-      <img src="/assets/alipayhk-qr-code.svg" alt="支付寶香港收款碼" />
+      <img src="/assets/alipayhk-qr-code.svg" alt="支付寶香港收款碼" loading="lazy" decoding="async" />
     </details>
   </section>
   <section class="sponsor-method">
     <h3>支付寶</h3>
     <details>
       <summary>顯示 QR Code</summary>
-      <img src="/assets/alipay-qr-code.svg" alt="Alipay 支付寶收款碼" />
+      <img src="/assets/alipay-qr-code.svg" alt="Alipay 支付寶收款碼" loading="lazy" decoding="async" />
     </details>
   </section>
   <section class="sponsor-method">
     <h3>微信支付（香港）</h3>
     <details>
       <summary>顯示 QR Code</summary>
-      <img src="/assets/wechatpayhk-qr-code.svg" alt="WeChat Pay HK 微信支付香港收款碼" />
+      <img src="/assets/wechatpayhk-qr-code.svg" alt="WeChat Pay HK 微信支付香港收款碼" loading="lazy" decoding="async" />
     </details>
   </section>
   <section class="sponsor-method">
     <h3>微信支付</h3>
     <details>
       <summary>顯示 QR Code</summary>
-      <img src="/assets/wechatpay-qr-code.svg" alt="微信支付 WeChat Pay 收款碼" />
+      <img src="/assets/wechatpay-qr-code.svg" alt="微信支付 WeChat Pay 收款碼" loading="lazy" decoding="async" />
     </details>
   </section>
   <section class="sponsor-method">
     <h3>PayMe</h3>
     <details>
       <summary>顯示 QR Code</summary>
-      <img src="/assets/payme-qr-code.svg" alt="PayMe（HSBC）收款碼" />
+      <img src="/assets/payme-qr-code.svg" alt="PayMe（HSBC）收款碼" loading="lazy" decoding="async" />
     </details>
   </section>
   <section class="sponsor-method">
     <h3>Buy Me a Coffee</h3>
     <details>
       <summary>顯示 QR Code</summary>
-      <img src="/assets/buymeacoffee-qr-code.svg" alt="Buy Me a Coffee 支持本站 QR code" />
+      <img src="/assets/buymeacoffee-qr-code.svg" alt="Buy Me a Coffee 支持本站 QR code" loading="lazy" decoding="async" />
     </details>
   </section>
 </div>
