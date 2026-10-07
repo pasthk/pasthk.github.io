@@ -1,6 +1,5 @@
 ---
 title: 前言
-article: false
 pageInfo: false
 next: false
 prev: false
