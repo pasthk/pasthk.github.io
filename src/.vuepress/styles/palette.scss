@@ -1,12 +1,20 @@
 
-$vp-font: '"Noto Serif TC", "PingFang TC", "Microsoft JhengHei", serif';
-$vp-font-heading: '"Noto Serif TC", "PingFang TC", "Microsoft JhengHei", serif';
-$vp-font-mono: '"Noto Serif TC", "PingFang TC", "Microsoft JhengHei", serif';
+$vp-font: '"Noto Serif TC"';
+$vp-font-heading: '"Noto Serif TC"';
+$vp-font-mono: '"Noto Serif TC"';
+
+@font-face {
+  font-family: "Noto Serif TC";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/noto-serif-tc-subset.woff2") format("woff2");
+}
 
 :root {
-  --vp-font: "Noto Serif TC", "PingFang TC", "Microsoft JhengHei", serif;
-  --vp-font-heading: "Noto Serif TC", "PingFang TC", "Microsoft JhengHei", serif;
-  --vp-font-mono: "Noto Serif TC", "PingFang TC", "Microsoft JhengHei", serif;
+  --vp-font: "Noto Serif TC";
+  --vp-font-heading: "Noto Serif TC";
+  --vp-font-mono: "Noto Serif TC";
   --vp-c-text: #000;
   --vp-c-text-mute: #000;
   --vp-c-text-subtle: #000;
@@ -32,5 +40,5 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Noto Serif TC", "PingFang TC", "Microsoft JhengHei", serif;
+  font-family: "Noto Serif TC";
 }
