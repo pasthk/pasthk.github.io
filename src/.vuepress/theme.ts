@@ -11,6 +11,7 @@ export default hopeTheme({
   navbar,
   sidebar,
   pure: true,
+  focus: false,
   darkmode: "disable",
   favicon: "/favicon.png",
   logo: "/favicon.png",

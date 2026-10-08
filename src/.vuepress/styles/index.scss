@@ -1,3 +1,21 @@
+.vp-doc,
+.vp-page,
+.main-wrapper,
+.theme-hope-content,
+.vp-content,
+.vp-doc .theme-default-content,
+.theme-default-content {
+  font-size: 1.125rem;
+  line-height: 1.8;
+}
+
+.vp-doc,
+.vp-page,
+.theme-default-content {
+  font-weight: 400;
+  letter-spacing: 0.02em;
+}
+
 .page-info {
   .page-author-info > .icon,
   .page-date-info > .icon,
@@ -49,4 +67,10 @@
 .sponsor-status {
   color: var(--vp-c-text-subtle);
   font-size: 0.9rem;
+}
+
+.footer {
+  font-size: 1rem;
+  line-height: 1.6;
+  font-weight: 500;
 }
