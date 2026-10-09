@@ -234,8 +234,33 @@ export default sidebar({
           text: "打醮",
           collapsible: true,
           children: [
-            "/custom/cheung-chau-jiao-festival.md",
-            "/custom/high-land-jiao-festival.md",
+            {
+              text: "一年一屆",
+              collapsible: true,
+              children: [
+                "/custom/cheung-chau-jiao-festival.md",
+              ]
+            },
+            {
+              text: "兩年一屆",
+              collapsible: true,
+              children: [
+                "/custom/high-land-jiao-festival.md",
+              ]
+            },
+            {
+              text: "十年一屆",
+              collapsible: true,
+              children: [
+                "/custom/yuen-long-jiao-festival.md",
+                "/custom/yuen-long-kam-tin-jiao-festival.md",
+                "/custom/yuen-long-shan-ha-village-jiao-festival.md",
+                "/custom/tai-po-lam-tsuen-jiao-festival.md",
+                "/custom/kat-o-jiao-festival.md",
+                "/custom/sha-tin-kau-yeuk-jiao-festival.md",
+                "/custom/sha-tin-tai-wai-village-jiao-festival.md",
+              ]
+            },            
           ]
         },
       ],
