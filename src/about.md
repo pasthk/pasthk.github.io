@@ -3,6 +3,7 @@ title: 本站資訊
 pageInfo: false
 next: false
 prev: false
+toc: false
 description: 香港文獻類編的介紹、支持方式、聯絡資料、資料來源、版權與勘誤原則及隱私政策。
 ---
 
