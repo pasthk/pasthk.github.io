@@ -3,7 +3,6 @@ title: 本站資訊
 pageInfo: false
 next: false
 prev: false
-toc: false
 description: 香港文獻類編的介紹、支持方式、聯絡資料、資料來源、版權與勘誤原則及隱私政策。
 ---
 
@@ -90,9 +89,6 @@ description: 香港文獻類編的介紹、支持方式、聯絡資料、資料�
 　　讀者可前往 [Google「我的廣告中心」](https://myadcenter.google.com/)管理可用的廣告個人化設定，並可在瀏覽器設定中檢視、刪除或封鎖 Cookie。封鎖 Cookie 或廣告程式可能影響廣告顯示及本站部分功能。更多資料請參閱 [Google 私隱權政策](https://policies.google.com/privacy?hl=zh-HK)及 [Google 如何使用 Cookie](https://policies.google.com/technologies/cookies?hl=zh-HK)。
 
 　　本站目前沒有自行開發的 Cookie 同意管理介面。Google 對特定地區的發布商及廣告投放可能設有額外的同意管理要求；本站會按實際投放地區及適用要求配置服務。
-
-### 外部字型
-　　本站使用裝置內建的襯線字體，不會為載入本站字體而下載外部字體檔或向字體服務發出請求。
 
 ### 分析及本站直接收集的資料
 　　截至本政策更新日期，本站程式沒有安裝 Google Analytics 或其他獨立的網站分析服務，也沒有本站自行設定的追蹤 Cookie、會員帳戶或提交資料的表格。提供網站服務的主機或網絡服務商仍可能按其服務方式處理一般伺服器連線資料；本站不會透過站內表格收集讀者的個人資料。

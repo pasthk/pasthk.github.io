@@ -25,6 +25,22 @@ body {
   font-size: 1.05rem;
 }
 
+.vp-toc-header,
+.vp-toc-link {
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  line-height: 1.7;
+}
+
+.vp-toc-item {
+  min-height: 2rem;
+}
+
+.vp-toc-item.active > .vp-toc-link {
+  font-weight: 600;
+}
+
 .vp-footer-wrapper,
 .vp-footer,
 .vp-copyright {
