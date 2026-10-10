@@ -1,7 +1,7 @@
 {
   "name": "pasthk",
   "description": "A Project to Document Hong Kong History and Culture",
-  "version": "1.0.35",
+  "version": "1.0.36",
   "license": "MIT",
   "type": "module",
   "scripts": {
