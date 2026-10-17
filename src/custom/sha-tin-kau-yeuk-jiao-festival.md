@@ -1,6 +1,6 @@
 ---
 title: 沙田九約太平清醮
-author: 吳某
+author: false
 date: 2026-10-09
 description: 沙田九約太平清醮相關香港節慶報道索引，按年代整理儀式、巡遊及地方社群記錄。
 ---

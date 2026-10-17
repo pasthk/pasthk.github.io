@@ -1,6 +1,6 @@
 ---
 title: 立法會
-author: 吳某
+author: false
 date: 2026-09-18
 description: 香港立法會歷史資料索引，整理議事記錄、政策討論與相關新聞報道。
 ---

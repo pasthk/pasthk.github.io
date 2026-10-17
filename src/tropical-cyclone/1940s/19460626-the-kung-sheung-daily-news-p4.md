@@ -1,6 +1,6 @@
 ---
 title: 新聞處發表颶風信號解釋
-author: 吳某
+author: false
 date: 2026-10-10
 description: 
 ---

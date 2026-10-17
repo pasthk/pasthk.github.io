@@ -1,6 +1,6 @@
 ---
 title: 達德公所
-author: 吳某
+author: false
 date: 2026-09-18
 description: 達德公所相關歷史建築資料，整理建築沿革、報刊記錄與保育文獻。
 ---

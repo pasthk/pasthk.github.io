@@ -1,6 +1,6 @@
 ---
 title: 盂蘭勝會
-author: 吳某
+author: false
 date: 2026-09-13
 description: 盂蘭勝會相關香港節慶報道索引，按年代整理儀式、巡遊及地方社群記錄。
 ---

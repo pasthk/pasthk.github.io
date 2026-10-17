@@ -1,6 +1,6 @@
 ---
 title: 九龍宋皇臺
-author: 吳某
+author: false
 date: 2026-09-17
 description: 九龍宋皇臺碑刻與地方歷史資料，整理碑文、廟宇及相關歷史文獻。
 ---

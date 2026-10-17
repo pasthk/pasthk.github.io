@@ -1,6 +1,6 @@
 ---
 title: 居石侯公祠
-author: 吳某
+author: false
 date: 2026-09-10
 description: 居石侯公祠相關歷史建築資料，整理建築沿革、報刊記錄與保育文獻。
 ---

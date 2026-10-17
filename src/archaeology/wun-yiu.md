@@ -1,6 +1,6 @@
 ---
 title: 碗窰
-author: 吳某
+author: false
 date: 2026-09-21
 description: 碗窰相關香港考古資料索引，整理報章報道、遺址發現與文物出土記錄。
 ---

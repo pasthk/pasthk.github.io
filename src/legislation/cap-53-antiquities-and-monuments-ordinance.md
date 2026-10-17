@@ -1,6 +1,6 @@
 ---
 title: 第53章　古物及古蹟條例
-author: 吳某
+author: false
 date: 2026-09-13
 description: 第53章　古物及古蹟條例立法與修訂史料索引，收錄香港法例文本及相關立法記錄。
 ---

@@ -1,6 +1,6 @@
 ---
 title: 閱讀及資料說明
-author: 吳某
+author: false
 description: 說明香港文獻類編的整理方式、資料著錄原則、原文摘錄與資料使用注意事項。
 pageInfo: false
 next: false

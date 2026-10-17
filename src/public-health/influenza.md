@@ -1,6 +1,6 @@
 ---
 title: 流行性感冒
-author: 吳某
+author: false
 date: 2026-09-14
 description: 流行性感冒香港疾病史資料索引，整理疫情新聞、防疫措施與公共衛生記錄。
 ---
