@@ -6,7 +6,7 @@ description: 香港政府新聞網2005年12月30日報道李鄭屋漢墓博物�
 ---
 
 - [x] 摘錄
-- [x] 校對
+- [x] 初校
 
 > 摘自香港政府新聞網，[2005年12月30日](https://www.news.gov.hk/isd/ebulletin/tc/category/healthandcommunity/051230/features/html/051230tc05002.htm)。
 

@@ -6,7 +6,7 @@ description: 《南華早報》1983年報道美國運通基金捐贈價值75,000
 ---
 
 - [x] 摘錄
-- [x] 校對
+- [x] 初校
 
 > Quoted from *South China Morning Post*, 1983, June 23, p. 12.
 

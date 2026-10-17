@@ -6,7 +6,7 @@ description: 《南華早報》1981年報道香港將於當年秋季展開全港
 ---
 
 - [x] 摘錄
-- [x] 校對
+- [x] 初校
 
 > Quoted from *South China Morning Post*, 1981, July 11, p. 12.
 
