@@ -5,8 +5,8 @@ date: 2026-09-13
 description: 香港大學校史與香港教育史資料索引，收錄相關新聞報道、創校籌備及教育發展記錄。
 ---
 
-## 新聞報道
-### 籌辦事宜
+## 籌辦事宜
+### 新聞報道
 1. 〈[擬創設香港大學堂](/education/the-university-of-hong-kong/19080912-the-chinese-mail-p3.md)〉，《香港華字日報》，1908年9月12日，第3頁。
 2. 〈[港督盧制軍香港大學勸捐啓](/education/the-university-of-hong-kong/19090216-the-chinese-mail-p3.md)〉，《香港華字日報》，1909年2月16日，第3頁。
 3. 〈[港督盧制軍香港大學勸捐啓（初續）](/education/the-university-of-hong-kong/19090217-the-chinese-mail-p4.md)〉，《香港華字日報》，1909年2月17日，第4頁。
@@ -41,11 +41,21 @@ description: 香港大學校史與香港教育史資料索引，收錄相關新�
 32. 〈政界函請紳支富會議捐助香港大學堂〉，《華字日報》，1909年7月8日。（注：館藏詳細資料第4頁。）
 33. 〈紳商因香港大學堂事會議捐款〉，《華字日報》，1909年7月10日。
 
-### 中文部
+### 專冊
+1. 《港督盧制軍香港大學堂勸捐啟譯文並序》（香港：中環和盛印字館，1909年2月）。
+   - [香港創設大學堂勸捐導言](/education/the-university-of-hong-kong/190902-introduction-for-donations-towards-the-establishment-of-a-university-in-hong-kong.md)
+   - 勸捐董事芳名
+   - [港督盧制軍香港大學堂勸捐啟](/education/the-university-of-hong-kong/190902-an-appeal-for-donations-towards-the-establishment-of-a-university-in-hong-kong-by-governor-sir-frederick-lugard.md)（譯文）
+2. 《盧制軍香港大學堂笫弍次勸捐啓》（1910年）。
+   - 香港創設大學堂第二次勸捐弁言
+   - 大學總理芳名
+   - 勸捐董事芳名
+   - 港督盧制軍香港大學第二次勸捐啟（譯文）
+
+## 中文部
 1. 〈官立中文大學　金秋可開課　名稱擬定香港大學中文部　學制將仿照國內著名大學〉，《工商日報》，1952年5月3日，第5頁。
 2. 〈官立中文大學　金秋開課　首期招生九百廿人〉，《工商晚報》，1952年5月3日，第5頁。
 3. 〈港大即將設中文部　專家來港研究另設漢文大學問題〉，《華僑日報》，1952年6月16日，第2張第1頁。
-4. 待續。
 
-### 其他
+## 其他
 1. 〈專上教育朝氣蓬勃　港大七年擴展計劃已告開始，本年可見的成績，將是校舍的擴建及收容額的增加。[中文大學](/education/the-chinese-university-of-hong-kong.md)方面，在經過大半年的籌劃後，相信今年會有一些實際成績表現了。〉，《華僑日報》，1960年1月1日，第4張第2頁。
