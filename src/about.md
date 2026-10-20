@@ -81,13 +81,6 @@ description: 香港文獻類編的介紹、支持方式、聯絡資料、資料�
       <img src="/assets/payme-qr-code.svg" alt="PayMe（HSBC）收款碼" loading="lazy" decoding="async" />
     </details>
   </section>
-  <section class="sponsor-method">
-    <h3>Buy Me a Coffee</h3>
-    <details>
-      <summary>顯示 QR Code</summary>
-      <img src="/assets/buymeacoffee-qr-code.svg" alt="Buy Me a Coffee 支持本站 QR code" loading="lazy" decoding="async" />
-    </details>
-  </section>
 </div>
 
 　　感謝你閱讀、分享本站內容，或指出資料中的錯漏。這些支持同樣有助於香港歷史文獻的整理與傳播。
