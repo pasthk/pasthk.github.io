@@ -45,12 +45,17 @@ description: 香港大學校史與香港教育史資料索引，收錄相關新�
 1. 《港督盧制軍香港大學堂勸捐啟譯文並序》（香港：中環和盛印字館，1909年2月）。
    - [香港創設大學堂勸捐導言](/education/the-university-of-hong-kong/190902-introduction-for-donations-towards-the-establishment-of-a-university-in-hong-kong.md)
    - 勸捐董事芳名
-   - [港督盧制軍香港大學堂勸捐啟](/education/the-university-of-hong-kong/190902-an-appeal-for-donations-towards-the-establishment-of-a-university-in-hong-kong-by-governor-sir-frederick-lugard.md)（譯文）
-2. 《盧制軍香港大學堂笫弍次勸捐啓》（1910年）。
+   - [港督盧制軍香港大學堂勸捐啟（譯文）](/education/the-university-of-hong-kong/190902-an-appeal-for-donations-towards-the-establishment-of-a-university-in-hong-kong-by-governor-sir-frederick-lugard.md)
+2. 《盧制軍香港大學堂笫弍次勸捐啓》（1910年3月20日）。
    - 香港創設大學堂第二次勸捐弁言
    - 大學總理芳名
    - 勸捐董事芳名
-   - 港督盧制軍香港大學第二次勸捐啟（譯文）
+   - [港督盧制軍香港大學第二次勸捐啟（譯文）](/education/the-university-of-hong-kong/19100320-an-second-appeal-for-donations-towards-the-establishment-of-a-university-in-hong-kong-by-governor-sir-frederick-lugard.md)
+   - 香港大學堂董事議定章程
+   - 大學堂來往函件擇錄
+   - 香港大學堂每年入款預算表
+   - 香港大學堂每年出款預算表
+   - 行奠基石禮之演說詞彙錄
 
 ## 中文部
 1. 〈官立中文大學　金秋可開課　名稱擬定香港大學中文部　學制將仿照國內著名大學〉，《工商日報》，1952年5月3日，第5頁。
