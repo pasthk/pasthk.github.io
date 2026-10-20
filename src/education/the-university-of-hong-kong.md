@@ -47,10 +47,10 @@ description: 香港大學校史與香港教育史資料索引，收錄相關新�
    - 勸捐董事芳名
    - [港督盧制軍香港大學堂勸捐啟（譯文）](/education/the-university-of-hong-kong/190902-an-appeal-for-donations-towards-the-establishment-of-a-university-in-hong-kong-by-governor-sir-frederick-lugard.md)
 2. 《盧制軍香港大學堂笫弍次勸捐啓》（1910年）。
-   - [香港創設大學堂第二次勸捐弁言](/education/the-university-of-hong-kong/191007-preface-to-the-second-appeal-for-donations-towards-the-establishment-of-a-university-in-hong-kong.md)
+   - [香港創設大學堂第二次勸捐弁言](/education/the-university-of-hong-kong/191007-preface-to-the-second-appeal-for-donations-towards-the-establishment-of-a-university-in-hong-kong.md)（1910年7月）
    - 大學總理芳名
    - 勸捐董事芳名
-   - [港督盧制軍香港大學第二次勸捐啟（譯文）](/education/the-university-of-hong-kong/19100320-an-second-appeal-for-donations-towards-the-establishment-of-a-university-in-hong-kong-by-governor-sir-frederick-lugard.md)
+   - [港督盧制軍香港大學第二次勸捐啟（譯文）](/education/the-university-of-hong-kong/19100320-an-second-appeal-for-donations-towards-the-establishment-of-a-university-in-hong-kong-by-governor-sir-frederick-lugard.md)（1910年3月20日）
    - 香港大學堂董事議定章程
    - 大學堂來往函件擇錄
    - 香港大學堂每年入款預算表
