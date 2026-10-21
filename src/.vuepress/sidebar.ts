@@ -21,6 +21,7 @@ export default sidebar({
                 "/tropical-cyclone/1904-signal.md",
                 "/tropical-cyclone/1905-signal.md",
                 "/tropical-cyclone/1906-signal.md",
+                "/tropical-cyclone/1907-signal.md",
               ]
             },
             {
