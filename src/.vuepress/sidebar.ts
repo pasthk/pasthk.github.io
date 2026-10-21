@@ -15,6 +15,15 @@ export default sidebar({
           collapsible: true,
           children: [
             {
+              text: "1900年代警告信號",
+              collapsible: true,
+              children: [
+                "/tropical-cyclone/1904-signal.md",
+                "/tropical-cyclone/1905-signal.md",
+                "/tropical-cyclone/1906-signal.md",
+              ]
+            },
+            {
               text: "1940年代警告信號",
               collapsible: true,
               children: [
