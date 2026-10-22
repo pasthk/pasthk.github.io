@@ -17,13 +17,13 @@ export default hopeTheme({
   logo: "/favicon.png",
   displayFooter: true,
   footer:
-    '認識香港，從文獻開始。<br><a href="/about.html">本站資訊</a>',
+    '認識香港，從文獻開始。<br><a href="/support.html">支持本站</a>',
   lastUpdated: false,
   contributors: false,
   breadcrumb: false,
   copyright: false,
   author: {
-    name: "吳某",
+    name: "吳從云",
     url: "https://www.pasthk.com",
   },
   markdown: {
