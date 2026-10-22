@@ -1,0 +1,14 @@
+---
+title: 1928年
+author: false
+date: 2026-10-22
+description: 
+---
+
+## 無名 No Name 1
+1. 〈[連日本港天氣之炎熱](/tropical-cyclone/1920s/19280714-the-chinese-mail-p7.md)〉，《香港華字日報》，1928年7月14日，第2張第3頁。
+   - 受署病者頗多
+   - 昨天文台懸掛風球
+2. 〈[兩日來本港颶風之經過](/tropical-cyclone/1920s/19280716-the-chinese-mail-p6-7.md)〉，《香港華字日報》，1928年7月16日，第2張第2-3頁。
+   - 各處輪船停開之調查
+   - 昨日天文台已下風球

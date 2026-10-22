@@ -38,8 +38,19 @@ export default sidebar({
               collapsible: true,
               children: [
                 "/tropical-cyclone/1918-signal.md",
+                "/tropical-cyclone/1919-signal.md",
               ]
             },
+            {
+              text: "1920年代警告信號",
+              collapsible: true,
+              children: [
+                "/tropical-cyclone/1924-signal.md",
+                "/tropical-cyclone/1926-signal.md",
+                "/tropical-cyclone/1927-signal.md",
+                "/tropical-cyclone/1928-signal.md",
+              ]
+            },            
             {
               text: "1940年代警告信號",
               collapsible: true,
