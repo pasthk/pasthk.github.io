@@ -318,6 +318,19 @@ export default sidebar({
       link: "/project/ay1928/",
     },
     {
+      text: "新聞報道",
+      link: "/project/ay1928/news.md",
+    },    
+    {
+      text: "甲骨",
+      collapsible: true,
+      children: [
+        "/project/ay1928/oracle/report.md",
+        "/project/ay1928/oracle/catalogue.md",
+        "/project/ay1928/oracle/article.md",
+      ]
+    },  
+    {
       text: "殷墟",
       collapsible: true,
       children: [
