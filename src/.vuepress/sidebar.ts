@@ -52,6 +52,14 @@ export default sidebar({
               ]
             },            
             {
+              text: "1930年代警告信號",
+              collapsible: true,
+              children: [
+                "/tropical-cyclone/1930-signal.md",
+                "/tropical-cyclone/1931-signal.md",
+              ]
+            },
+            {
               text: "1940年代警告信號",
               collapsible: true,
               children: [
