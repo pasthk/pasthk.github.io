@@ -6,4 +6,4 @@ description:
 ---
 
 ## 無名 No Name 1
-1. 〈[風雨損失之調查](/tropical-cyclone/1910s/19190823-the-chinese-mail-p3.md)〉，《香港華字日報》，1919年8月23日，第1張第3頁。
+1. 〈[風雨損失之調查](./1910s/19190823-the-chinese-mail-p3.md)〉，《香港華字日報》，1919年8月23日，第1張第3頁。

@@ -303,4 +303,35 @@ export default sidebar({
       ],
     },
   ],
+  "/project/ay1928": [
+    {
+      text: "前言",
+      link: "/project/ay1928/",
+    },
+    {
+      text: "殷墟",
+      collapsible: true,
+      children: [
+        "/project/ay1928/yinxu/report.md",
+        "/project/ay1928/yinxu/catalogue.md",
+        "/project/ay1928/yinxu/article.md",
+      ]
+    },  
+    {
+      text: "洹北商城",
+      collapsible: true,
+      children: [
+        "/project/ay1928/huanbei-shang-city/report.md",
+        "/project/ay1928/huanbei-shang-city/article.md",
+      ]
+    },
+    {
+      text: "曹操高陵",
+      collapsible: true,
+      children: [
+        "/project/ay1928/cao-cao-mausoleum/report.md",
+        "/project/ay1928/cao-cao-mausoleum/article.md",
+      ]
+    },
+  ],
 });

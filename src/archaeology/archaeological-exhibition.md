@@ -11,9 +11,9 @@ description: 以報刊資料整理1964年至1991年間香港考古及出土文�
 ## 大會堂考古展覽
 ::: note 展期
 :::
-1. 〈[本港考古展覽　大會堂將舉辦](/archaeology/archaeological-exhibition/19641007-ta-kung-pao-p4.md)〉，《大公報》，1964年10月7日，第1張第4版。
-2. 〈[香港春秋圖展今完結　續辦本港考古學展覽](/archaeology/archaeological-exhibition/19641007-wah-kiu-yat-po-p15.md)〉，《華僑日報》，1964年10月7日，第4張第3頁。
-3. 〈[我們祖先的遺物——介紹值得一看的「香港考古」展覽](/archaeology/archaeological-exhibition/19641226-ta-kung-pao-p3.md)〉，《大公報》，1964年12月26日，第1張第3版。
+1. 〈[本港考古展覽　大會堂將舉辦](./archaeological-exhibition/19641007-ta-kung-pao-p4.md)〉，《大公報》，1964年10月7日，第1張第4版。
+2. 〈[香港春秋圖展今完結　續辦本港考古學展覽](./archaeological-exhibition/19641007-wah-kiu-yat-po-p15.md)〉，《華僑日報》，1964年10月7日，第4張第3頁。
+3. 〈[我們祖先的遺物——介紹值得一看的「香港考古」展覽](./archaeological-exhibition/19641226-ta-kung-pao-p3.md)〉，《大公報》，1964年12月26日，第1張第3版。
 
 ## 考古展覽
 1. 〈大會堂美術館七日起英近代水彩素描畫展博物館考古展覽十日起暫停〉，《華僑日報》，1965年5月2日，第4張第1頁。
@@ -33,7 +33,7 @@ description: 以報刊資料整理1964年至1991年間香港考古及出土文�
 ::: note 展期：1966年5月10日—1966年5月15日
 :::
 1. 〈元朗文藝協會舉辦古物展覽〉，《華僑日報》，1966年3月13日，第3張第3頁。
-2. 〈[元朗文藝會主辦香港史前考古展覽](/archaeology/archaeological-exhibition/19660505-the-kung-sheung-daily-news-p6.md)〉，《工商日報》，1966年5月5日，第6頁。
+2. 〈[元朗文藝會主辦香港史前考古展覽](./archaeological-exhibition/19660505-the-kung-sheung-daily-news-p6.md)〉，《工商日報》，1966年5月5日，第6頁。
 3. 〈史前考古展覽　明在元朗開幕〉，《華僑日報》，1966年5月9日，第3張第4頁。
 4. 〈元朗文協會主辦史前考古展覽開幕屈志仁主持剪綵〉，《工商日報》，1966年5月11日，第5頁。
 5. 〈新界首次展出無價寶藏　元朗展覽史前古物〉，《華僑日報》，1966年5月11日，第4張第4頁。
@@ -63,10 +63,10 @@ description: 以報刊資料整理1964年至1991年間香港考古及出土文�
 3. 〈出土文物圖片吸引人　昨天首展觀眾近兩千〉，《大公報》，1972年4月12日，第1張；第4版。
    - 有鄒縣滿城大同等地出土文物圖片
    - 有些老觀眾用放大鏡幅觀賞
-4. 〈[展出受觀眾歡迎　出土文物圖片後日再展三天](/archaeology/archaeological-exhibition/19720415-ta-kung-pao-p5.md)〉，《大公報》，1972年4月15日，第2張；第5版。
+4. 〈[展出受觀眾歡迎　出土文物圖片後日再展三天](./archaeological-exhibition/19720415-ta-kung-pao-p5.md)〉，《大公報》，1972年4月15日，第2張；第5版。
    - 「考古」「文物」昨又運到一批
-5. 〈[出土文物圖片　今起續展三天](/archaeology/archaeological-exhibition/19720417-ta-kung-pao-p4.md)〉，《大公報》，1972年4月17日，第1張；第4版。
-6. 〈[出土文物圖展　今為最後一天](/archaeology/archaeological-exhibition/19720419-ta-kung-pao-p4.md)〉，《大公報》，1972年4月19日，第1張；第4版。
+5. 〈[出土文物圖片　今起續展三天](./archaeological-exhibition/19720417-ta-kung-pao-p4.md)〉，《大公報》，1972年4月17日，第1張；第4版。
+6. 〈[出土文物圖展　今為最後一天](./archaeological-exhibition/19720419-ta-kung-pao-p4.md)〉，《大公報》，1972年4月19日，第1張；第4版。
 
 ## 麥兆良神父藏華南考古遺物展覽
 ::: note 展期：1972-09-01至1972-09-30
