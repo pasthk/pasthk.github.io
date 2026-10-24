@@ -35,8 +35,9 @@ description:
 
 ## 無名 No Name 4
 1. 〈[一號風球仍未除下](./1930s/19320728-the-kung-sheung-evening-news-p3.md)〉，《工商晚報》，1932年7月28日，第3版。
+2. 〈[颶風向閩吹去](./1930s/19320729-the-chinese-mail-p8.md)〉，《香港華字日報》，1932年7月29日，第2張第4頁。
 
 ## 無名 No Name 5
-
+1. 〈[天文台今午懸一號風球](./1930s/19320915-the-kung-sheung-evening-news-p4.md)〉，《工商晚報》，1932年9月15日，第4版。
 
 ## 無名 No Name 6
