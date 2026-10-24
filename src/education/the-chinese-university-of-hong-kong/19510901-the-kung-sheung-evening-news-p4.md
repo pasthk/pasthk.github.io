@@ -5,8 +5,7 @@ date: 2026-10-02
 description: 《工商晚報》1951年9月1日報道崇基學院籌辦消息：基督教人士為港澳青年升學發起組織學院，聘李應林博士任院長，並公布擬設學系、授課地點及開學安排。
 ---
 
-- [x] 摘錄
-- [x] 初校
+<input type="checkbox" checked> 摘錄　<input type="checkbox" checked> 初校
 
 > 《工商晚報》，1951年9月1日，第4頁。
 

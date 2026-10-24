@@ -5,8 +5,7 @@ date: 2026-09-30
 description: 報道元朗文藝協進會於1966年5月在元朗商會小學舉辦香港史前考古展覽，展出約100件香港各地出土文物，年代由華南新石器時代晚期至戰國至西漢時期。
 ---
 
-- [x] 摘錄
-- [x] 初校
+<input type="checkbox" checked> 摘錄　<input type="checkbox" checked> 初校
 
 > 《工商日報》，1966年5月5日，第6頁。
 

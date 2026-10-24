@@ -34,7 +34,7 @@ description:
    - 連日大雨所得之水量
 
 ## 無名 No Name 4
-
+1. 〈[一號風球仍未除下](./1930s/19320728-the-kung-sheung-evening-news-p3.md)〉，《工商晚報》，1932年7月28日，第3版。
 
 ## 無名 No Name 5
 

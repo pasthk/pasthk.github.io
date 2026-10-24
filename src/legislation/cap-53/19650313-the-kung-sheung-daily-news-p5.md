@@ -5,8 +5,7 @@ date: 2026-09-29
 description: 《工商日報》1965年3月13日報道屈臣議員批評香港缺乏保護史前文物的法例，促請優先處理1962年古物法案，以防遺址遭發掘、文物流出境外。
 ---
 
-- [X] 摘錄
-- [X] 初校
+<input type="checkbox" checked> 摘錄　<input type="checkbox" checked> 初校
 
 > 《工商日報》，1965年3月13日，第5頁。
 >

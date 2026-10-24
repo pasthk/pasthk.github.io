@@ -5,8 +5,7 @@ date: 2026-10-23
 description: 
 ---
 
-- [x] 摘錄
-- [x] 初校
+<input type="checkbox" checked> 摘錄　<input type="checkbox" checked> 初校
 
 > 《工商晚報》，1932年5月18日，第3版。
 

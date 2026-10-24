@@ -5,8 +5,7 @@ date: 2026-09-29
 description: 大會堂博物院「香港春秋」圖片展展出三個月後閉幕，吸引逾三萬六千人參觀；館方計劃在展場接續舉辦香港考古學展覽。
 ---
 
-- [x] 摘錄
-- [x] 初校
+<input type="checkbox" checked> 摘錄　<input type="checkbox" checked> 初校
 
 > 《華僑日報》，1964年10月7日，第4張第3頁。
 

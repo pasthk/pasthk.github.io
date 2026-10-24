@@ -5,8 +5,7 @@ date: 2026-10-23
 description: 
 ---
 
-- [x] 摘錄
-- [ ] 初校
+<input type="checkbox" checked> 摘錄　<input type="checkbox"> 初校
 
 > 《工商晚報》，1931年8月17日，第3版。
 

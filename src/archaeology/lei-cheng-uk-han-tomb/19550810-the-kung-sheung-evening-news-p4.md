@@ -5,8 +5,7 @@ date: 2026-09-28
 description: 《工商晚報》1955年報道深水埗李鄭屋村古塚發現，記述二十多件陶器、拱門磚墓結構及香港大學教授對墓葬年代的初步推測，並介紹現場看守與後續發掘安排。
 ---
 
-- [x] 摘錄
-- [x] 初校
+<input type="checkbox" checked> 摘錄　<input type="checkbox" checked> 初校
 
 > 《工商晚報》，1955年8月10日，第4頁。
 

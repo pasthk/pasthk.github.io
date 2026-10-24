@@ -5,8 +5,7 @@ date: 2026-10-03
 description: 香港政府新聞網2005年12月30日報道李鄭屋漢墓博物館重修完成，介紹加建天幕防止雨水滲漏、更新華南漢文化展覽及多媒體設施，並記錄漢墓的法定古蹟身分與保育安排。
 ---
 
-- [x] 摘錄
-- [x] 初校
+<input type="checkbox" checked> 摘錄　<input type="checkbox" checked> 初校
 
 > 香港政府新聞網，[2005年12月30日](https://www.news.gov.hk/isd/ebulletin/tc/category/healthandcommunity/051230/features/html/051230tc05002.htm)。
 

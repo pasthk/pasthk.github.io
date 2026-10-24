@@ -5,8 +5,7 @@ date: 2026-10-03
 description: 《工商日報》1971年10月30日報道《一九七一年古物古蹟法案》的主要規定，包括古蹟指定、私人業主補償、出土古物通報，以及考古發掘許可。
 ---
 
-- [X] 摘錄
-- [X] 初校
+<input type="checkbox" checked> 摘錄　<input type="checkbox" checked> 初校
 
 > 《工商日報》，1971年10月30日，第10頁。
 

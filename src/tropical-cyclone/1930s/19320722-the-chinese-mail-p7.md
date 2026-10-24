@@ -5,8 +5,7 @@ date: 2026-10-23
 description: 
 ---
 
-- [x] 摘錄
-- [ ] 初校
+<input type="checkbox" checked> 摘錄　<input type="checkbox"> 初校
 
 > 《香港華字日報》，1932年7月22日，第2張第3頁。
 

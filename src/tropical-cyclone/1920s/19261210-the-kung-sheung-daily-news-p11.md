@@ -5,8 +5,7 @@ date: 2026-10-22
 description: 
 ---
 
-- [x] 摘錄
-- [ ] 初校
+<input type="checkbox" checked> 摘錄　<input type="checkbox"> 初校
 
 > 《工商日報》，1926年12月10日，第3張第1頁。
 
