@@ -39,5 +39,9 @@ description:
 
 ## 無名 No Name 5
 1. 〈[天文台今午懸一號風球](./1930s/19320915-the-kung-sheung-evening-news-p4.md)〉，《工商晚報》，1932年9月15日，第4版。
+2. 〈[一號風球尚未除下](./1930s/19320916-the-kung-sheung-evening-news-p4.md)〉，《工商晚報》，1932年9月16日，第4版。
+3. 〈[颶風離港約二百英里](./1930s/19320917-the-kung-sheung-daily-news-p9.md)〉，《工商日報》，1932年9月17日，第3張第1版。
+   - 天文台昨懸七號風球告警
 
 ## 無名 No Name 6
+
