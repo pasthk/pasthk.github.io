@@ -71,14 +71,59 @@ description: 本頁整理香港李鄭屋漢墓的發現、發掘、出土文物�
 47. 〈古墓公園　明春開放〉，《工商日報》，1956年10月27日，第6頁。
 48. 〈李鄭屋村古墓　公園與陳列室　明春即可完工〉，《華僑日報》，1956年10月27日，第4張第3頁。
 49. 〈古墓原址建公園　憲報昨招商承投〉，《大公報》，1956年10月27日，第2張，第5版。
-50. 〈古墓公園　明春開放〉，《工商晚報》，1956年10月30日，第4頁。
-51. 〈李鄭屋村古墓　月底開放　舉行隆重儀式　門券酌收二角〉，《華僑日報》，1957年6月2日，第2張第2頁。
-52. 〈李鄭屋邨古墓將改作博物館〉，《華僑日報》，1976年6月14日，第3張第1頁。
-53. 〈李鄭屋漢墓展　介紹出土文物　八月廿日至九月底舉行〉，《大公報》，1983年8月11日，第4張第3頁。
-54. 〈李鄭物漢墓展覽博物館下周舉行〉，《大公報》，1983年8月11日，第2張第6版。
-55. 〈李鄭屋漢墓展覽今起博物館舉行〉，《大公報》，1983年8月20日，第2張第6版。
-56. 〈四個墓室　十字入口　李鄭屋古漢墓列為法定古蹟〉，《華僑日報》，1988年12月19日，第18頁。
-57. 〈李鄭屋漢墓發掘70周年　兩地學者探討嶺南與中原文化交流〉，《大公報》，2025年9月20日。
+50. LI CHENG UK TOMB: HISTORICAL BACKGROUND TRACED BY PROF. F. S. DRAKE ANCIENT CHINESE RECORDS. (1955, Oct 28). *South China Morning Post*.
+51. 〈古墓公園　明春開放〉，《工商晚報》，1956年10月30日，第4頁。
+52. 〈李鄭屋村古墓　月底開放　舉行隆重儀式　門券酌收二角〉，《華僑日報》，1957年6月2日，第2張第2頁。
+53. 〈李鄭屋邨古墓將改作博物館〉，《華僑日報》，1976年6月14日，第3張第1頁。
+54. 〈李鄭屋漢墓展　介紹出土文物　八月廿日至九月底舉行〉，《大公報》，1983年8月11日，第4張第3頁。
+55. 〈李鄭物漢墓展覽博物館下周舉行〉，《大公報》，1983年8月11日，第2張第6版。
+56. 〈李鄭屋漢墓展覽今起博物館舉行〉，《大公報》，1983年8月20日，第2張第6版。
+57. 〈四個墓室　十字入口　李鄭屋古漢墓列為法定古蹟〉，《華僑日報》，1988年12月19日，第18頁。
+58. 〈李鄭屋漢墓發掘70周年　兩地學者探討嶺南與中原文化交流〉，《大公報》，2025年9月20日。
+
+A page from the past. (1955, Sep 17). South China Morning Post
+
+ANCESTOR WORSHIP: PROF. DRAKE'S TALK ON RELIGIOUS SIGNIFICANCE OF LI CHENG UK TOMB BELIEF IN LIFE AFTER DEATH. (1955, Oct 17). South China Morning Post
+
+Ancient tomb at li cheng uk: Future under re-examination. (1955, Sep 24). South China Morning Post
+
+ANCIENT TOMB IN LI CHENG UK: TO BE OPEN TO PUBLIC TEN-DAY PERIOD. (1955, Sep 08). South China Morning Post
+
+ANCIENT TOMB: REPRESENTATIONS TO GOVERNMENT SITE PRESERVATION. (1955, Sep 13). South China Morning Post
+
+Centuries old tomb discovered in kowloon: Workmen's find during digging operations. (1955, Aug 10). South China Morning Post
+
+Exhibition of relics of ancient tomb discovered in colony. (1955, Sep 25). South China Sunday Post
+
+FURTHER EXAMINATION OF ANCIENT TOMB: CHAMBERS INVESTIGATED BY H.K. UNIVERSITY OFFICIALS POTTERY TO BE EXHIBITED. (1955, Aug 11). South China Morning Post
+
+Li cheng uk tomb. (1955, Oct 04). South China Morning Post
+
+Li cheng uk tomb symposium. (1955, Sep 18). South China Sunday Post
+
+Li cheng UK tomb: Civic assn appeals for preservation. (1955, Sep 21). South China Morning Post
+
+LI CHENG UK TOMB: HISTORICAL BACKGROUND TRACED BY PROF. F. S. DRAKE ANCIENT CHINESE RECORDS. (1955, Oct 28). South China Morning Post
+
+LI CHENG UK TOMB: PRESERVATION URGED BY SPEAKERS AT PUBLIC SYMPOSIUM HISTORICAL VALUE STRESSED. (1955, Sep 22). South China Morning Post
+
+MORE POTS UNEARTHED: EXCAVATION WORK ON ANCIENT TOMB ENDS AFTER THREE DAYS PRESERVATION UNDECIDED. (1955, Aug 13). South China Morning Post
+
+Preservation of ancient chinese tomb. (1955, Aug 14). South China Sunday Post
+
+PUBLIC INTEREST IN TOMB: CROWD PUSHES DOWN ENTRANCE GATE MANY VISITORS. (1955, Sep 10). South China Morning Post
+
+RESETTLEMENT SCHEME: NO ALTERNATIVE SITES TO REPLACE ANCIENT TOMB AREA URBAN COUNCIL QUESTIONS. (1955, Nov 30). South China Morning Post
+
+TOMB EXCAVATIONS: MINIATURE HOUSES, BRONZE PIECES AND MORE POTS UNEARTHED MIRROR AN IMPORTANT FIND. (1955, Aug 12). South China Morning Post
+
+Tomb's new puzzle for authorities: Soft and fine earth in vault. (1955, Aug 15). South China Morning Post
+
+Drake, F. S. (1955, Sep 16). LI CHENG UK TOMB: BURIAL PLACE MAY BE MORE THAN TWO THOUSAND YEARS OLD PRESERVATION SUGGESTION. South China Morning Post
+
+L. (1955, Sep 13). The ancient tomb: (to the editor, S.C.M. post). South China Morning Post
+
+S.W.P. (1955, Sep 27). The ancient tomb: (to the editor, S.C.M. post). South China Morning Post
 
 ## 政府新聞公報
 1. 〈歷史博物館李鄭屋分館名稱更改〉（香港：政府新聞處，1998年6月22日）。

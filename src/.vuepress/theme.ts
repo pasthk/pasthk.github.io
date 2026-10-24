@@ -14,7 +14,6 @@ export default hopeTheme({
   focus: false,
   darkmode: "disable",
   favicon: "/favicon.png",
-  logo: "/favicon.png",
   displayFooter: true,
   footer:
     '認識香港，從文獻開始。<br><a href="/support.html">支持本站</a>',
