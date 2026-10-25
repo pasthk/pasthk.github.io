@@ -52,3 +52,5 @@ description:
 ## 無名 No Name 6
 1. 〈[颶風離港之南一百五十英里](./1930s/19320922-the-kung-sheung-evening-news-p4.md)〉，《工商晚報》，1932年9月22日，第4版。
    - 今午天文台懸出三號風球
+2. 〈[三號風球昨晚除下](./1930s/19320923-the-kung-sheung-evening-news-p4.md)〉，《工商晚報》，1932年9月23日，第4版。
+   - 兩艇突然相撞
