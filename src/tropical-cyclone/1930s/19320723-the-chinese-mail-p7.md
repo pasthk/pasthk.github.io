@@ -3,9 +3,10 @@ title: 颶風已向海南島吹去
 author: false
 date: 2026-10-23
 description: 
+excerpted: true
+proofread: false
 ---
 
-<input type="checkbox" checked> 摘錄　<input type="checkbox"> 初校
 
 > 《香港華字日報》，1932年7月23日，第2張第3頁。
 

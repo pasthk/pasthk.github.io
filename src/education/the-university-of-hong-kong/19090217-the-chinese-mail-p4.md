@@ -3,9 +3,10 @@ title: 港督盧制軍香港大學勸捐啓（初續）
 author: false
 date: 2026-10-17
 description: 香港大學創校籌議史料：1909年2月17日《香港華字日報》續載港督盧制軍勸辦大學堂，記述摩地要求先籌足裝置與常年經費、限期六個月，並介紹醫學堂及工藝學堂併入大學、以醫科和工科為先的規劃，呈現香港高等教育的早期發展。
+excerpted: true
+proofread: true
 ---
 
-<input type="checkbox" checked> 摘錄　<input type="checkbox" checked> 初校
 
 > 《香港華字日報》，1909年2月17日，第4頁。
 

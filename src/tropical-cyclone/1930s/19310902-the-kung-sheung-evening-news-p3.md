@@ -3,9 +3,10 @@ title: 颶風吹到本港
 author: false
 date: 2026-10-23
 description: 
+excerpted: true
+proofread: false
 ---
 
-<input type="checkbox" checked> 摘錄　<input type="checkbox"> 初校
 
 > 《工商晚報》，1931年9月2日，第3版。
 

@@ -3,9 +3,10 @@ title: 颶風不致吹到香港
 author: false
 date: 2026-10-23
 description: 
+excerpted: true
+proofread: false
 ---
 
-<input type="checkbox" checked> 摘錄　<input type="checkbox"> 初校
 
 > 《工商晚報》，1931年8月17日，第3版。
 

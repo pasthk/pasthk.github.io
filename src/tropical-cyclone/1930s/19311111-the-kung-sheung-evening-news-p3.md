@@ -3,9 +3,10 @@ title: 又有颶風迫近本港
 author: false
 date: 2026-10-23
 description: 
+excerpted: true
+proofread: false
 ---
 
-<input type="checkbox" checked> 摘錄　<input type="checkbox"> 初校
 
 > 《工商晚報》，1931年11月11日，第3版。
 

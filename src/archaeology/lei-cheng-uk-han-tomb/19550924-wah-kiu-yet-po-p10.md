@@ -3,9 +3,10 @@ title: 李鄭屋村古墓擬即南宋太後衣冠塚攷（三）
 author: false
 date: 2026-10-03
 description: 《華僑日報》1955年9月24日刊載李鄭屋村古墓考證第三篇。作者從墓址近海位置及南宋遷徙九龍的歷史，探討古墓為楊淑妃衣冠塚的可能性，並提出招魂與風水兩種選址解釋。
+excerpted: true
+proofread: false
 ---
 
-<input type="checkbox" checked> 摘錄　<input type="checkbox"> 初校
 
 > 《華僑日報》，1955年9月24日，第3張第2頁。
 

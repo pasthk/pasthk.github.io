@@ -3,9 +3,10 @@ title: 本港最近恐發生颶風
 author: false
 date: 2026-10-23
 description: 
+excerpted: true
+proofread: false
 ---
 
-<input type="checkbox" checked> 摘錄　<input type="checkbox"> 初校
 
 > 《工商晚報》，1931年10月19日，第3版。
 

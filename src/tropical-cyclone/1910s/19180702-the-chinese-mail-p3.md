@@ -3,9 +3,10 @@ title: 昨日之風雨談
 author: false
 date: 2026-10-22
 description: 
+excerpted: true
+proofread: true
 ---
 
-<input type="checkbox" checked> 摘錄　<input type="checkbox" checked> 初校
 
 > 《香港華字日報》，1918年7月2日，第3頁。
 

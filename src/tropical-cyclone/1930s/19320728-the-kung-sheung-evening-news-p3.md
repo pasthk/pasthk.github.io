@@ -3,9 +3,10 @@ title: 一號風球仍未除下
 author: false
 date: 2026-10-24
 description: 
+excerpted: true
+proofread: true
 ---
 
-<input type="checkbox" checked> 摘錄　<input type="checkbox" checked> 初校
 
 > 《工商晚報》，1932年7月28日，第3版。
 

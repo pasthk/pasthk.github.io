@@ -3,9 +3,10 @@ title: 我國第一流考古學家　董作賓應邀抵港
 author: false
 date: 2026-10-03
 description: 《華僑日報》1955年8月15日報道考古學家董作賓應邀來港研究李鄭屋村古墓出土文物，記述當時已掘出約50件古物、古墓暫時封閉，以及整理研究後擬公開展覽的計劃。
+excerpted: true
+proofread: false
 ---
 
-<input type="checkbox" checked> 摘錄　<input type="checkbox"> 初校
 
 > 《華僑日報》，1955年8月15日，第2張第1頁。
 

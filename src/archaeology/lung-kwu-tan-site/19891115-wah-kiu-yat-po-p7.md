@@ -3,9 +3,10 @@ title: 準備建新路考古人員致力挽救古蹟　新石器時代珍貴文�
 author: false
 date: 2026-10-04
 description: 1989年《華僑日報》報道屯門龍鼓灘新石器時代晚期考古發現，介紹石英環、陶器、石器等出土文物與疑似墓葬遺跡，以及古物古蹟辦事處和香港中文大學的聯合發掘工作。
+excerpted: true
+proofread: false
 ---
 
-<input type="checkbox" checked> 摘錄　<input type="checkbox"> 初校
 
 > 《華僑日報》，1989年11月15日，第7頁。
 

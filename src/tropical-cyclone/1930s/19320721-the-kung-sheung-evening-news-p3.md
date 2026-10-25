@@ -3,9 +3,10 @@ title: 天文台今晨縣掛第七號風球
 author: false
 date: 2026-10-23
 description: 
+excerpted: true
+proofread: false
 ---
 
-<input type="checkbox" checked> 摘錄　<input type="checkbox"> 初校
 
 > 《工商晚報》，1932年7月21日，第3版。
 

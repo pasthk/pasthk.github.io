@@ -3,9 +3,10 @@ title: 風雨損失之調查
 author: false
 date: 2026-10-22
 description: 
+excerpted: true
+proofread: false
 ---
 
-<input type="checkbox" checked> 摘錄　<input type="checkbox"> 初校
 
 > 《香港華字日報》，1919年8月23日，第3頁。
 

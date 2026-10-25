@@ -3,9 +3,10 @@ title: 李鄭屋村古墓　今晨續發掘出銅鏡檀香爐等
 author: false
 date: 2026-10-04
 description: 《工商晚報》1955年8月11日報道香港大學在深水埗李鄭屋村古墓續行發掘，出土銅鏡碎片、瓦盆及香爐；學者根據墓磚銘文與器物，推測墓葬可能屬東晉或六朝時期。
+excerpted: true
+proofread: false
 ---
 
-<input type="checkbox" checked> 摘錄　<input type="checkbox"> 初校
 
 > 《工商晚報》，1955年8月11日，第10頁。
 

@@ -3,9 +3,10 @@ title: 本港颶風
 author: false
 date: 2026-10-22
 description: 《香港華字日報》1907年9月16日報道颶風由香港東南方逼近，記錄天文台及船政署懸球示警、船隻避風、風雨表下降與狂風暴雨的經過。報道亦描述九龍屋牆受損、酒店支架倒塌、公園花木摧殘及滿洲輪船延航，並指出因預警及早準備，傷損有限，颶風其後經澳門一帶離去。
+excerpted: true
+proofread: false
 ---
 
-<input type="checkbox" checked> 摘錄　<input type="checkbox"> 初校
 
 > 《香港華字日報》，1907年9月16日，第3頁。
 

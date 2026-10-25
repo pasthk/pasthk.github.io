@@ -3,9 +3,10 @@ title: 香港颶風史
 author: false
 date: 2026-10-21
 description: 《工商晚報》1950年10月5日報道颶風迫近香港，回顧1904年9月及1937年9月兩次嚴重風災。文章記述1904年颶風吹斷港內船隻纜索、法國驅逐艦擱淺及英國潛艇沉沒，並提及1937年颶風損毀九龍小輪碼頭、郵船擱淺漆咸道，呈現香港早期風災記憶與颱風威脅。
+excerpted: true
+proofread: true
 ---
 
-<input type="checkbox" checked> 摘錄　<input type="checkbox" checked> 初校
 
 > 《工商晚報》，1950年10月5日，第4頁。
 

@@ -23,6 +23,12 @@ export default defineUserConfig({
             new URL("./components/DateInfo.vue", import.meta.url),
           ),
         },
+        {
+          find: /^@theme-hope\/components\/info\/ReadingTimeInfo$/,
+          replacement: fileURLToPath(
+            new URL("./components/ReadingTimeInfo.vue", import.meta.url),
+          ),
+        },
         ...existingAliases,
       ];
     },

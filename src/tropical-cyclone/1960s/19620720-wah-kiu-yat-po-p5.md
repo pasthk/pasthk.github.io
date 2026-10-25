@@ -3,9 +3,10 @@ title: 「熱極生風」姫蒂忽誕生
 author: false
 date: 2026-10-01
 description: 《華僑日報》1962年7月20日報道太平洋熱帶風暴「姬蒂」在呂宋海峽以東生成並向西北移近香港，天文台隨即採取航行警戒；同時記錄本港酷熱及華氏93.2度高溫。
+excerpted: true
+proofread: true
 ---
 
-<input type="checkbox" checked> 摘錄　<input type="checkbox" checked> 初校
 
 > 《華僑日報》，1962年7月20日，第2張第1頁。
 

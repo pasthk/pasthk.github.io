@@ -3,9 +3,10 @@ title: 一號風球已除下
 author: false
 date: 2026-10-23
 description: 
+excerpted: true
+proofread: true
 ---
 
-<input type="checkbox" checked> 摘錄　<input type="checkbox" checked> 初校
 
 > 《工商晚報》，1932年5月18日，第3版。
 

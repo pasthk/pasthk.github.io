@@ -3,9 +3,9 @@ title: 颶風離港約二百英里
 author: false
 date: 2026-10-24
 description: 
+excerpted: true
+proofread: false
 ---
-
-<input type="checkbox" checked>摘錄　<input type="checkbox">初校
 
 > 《工商日報》，1932年9月17日，第3張第1版。
 

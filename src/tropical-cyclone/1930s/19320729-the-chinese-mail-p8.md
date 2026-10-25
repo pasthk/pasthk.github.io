@@ -3,9 +3,10 @@ title: 颶風向閩吹去
 author: false
 date: 2026-10-24
 description: 
+excerpted: true
+proofread: false
 ---
 
-<input type="checkbox" checked> 摘錄　<input type="checkbox"> 初校
 
 > 《香港華字日報》，1932年7月29日，第2張第4頁。
 

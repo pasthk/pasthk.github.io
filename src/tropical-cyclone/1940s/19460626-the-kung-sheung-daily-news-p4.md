@@ -3,9 +3,10 @@ title: 新聞處發表颶風信號解釋
 author: false
 date: 2026-10-10
 description: 
+excerpted: true
+proofread: true
 ---
 
-<input type="checkbox" checked> 摘錄　<input type="checkbox" checked> 初校
 
 > 《工商日報》，1946年6月26日，第4頁。
 

@@ -3,9 +3,10 @@ title: 新訂古蹟古物法案　當局徵詢新界民意
 author: false
 date: 2026-10-12
 description: 《華僑日報》1971年7月19日報道當局就《1971年古物古蹟法案》徵詢新界鄉議局及鄉民意見，並摘要介紹法案的保存制度。內容包括宣告及管制古蹟、限制發掘或破壞、古物發現通報與發掘牌照、政府對新發現古物的權利，以及維護資助、業主賠償和向地方法院上訴等安排，呈現香港古蹟及考古文物法制形成期間的討論。
+excerpted: true
+proofread: true
 ---
 
-<input type="checkbox" checked> 摘錄　<input type="checkbox" checked> 初校
 
 > 《華僑日報》，1971年7月19日，第5張第1頁。
 

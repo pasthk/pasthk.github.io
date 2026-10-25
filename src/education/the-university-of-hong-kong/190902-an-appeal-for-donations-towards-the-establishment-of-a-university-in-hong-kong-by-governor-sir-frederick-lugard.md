@@ -3,9 +3,10 @@ title: 香港創設大學堂勸捐導言（譯文）
 author: false
 date: 2026-10-19
 description: 1909年《港督盧制軍香港大學堂勸捐啟譯文並序》收錄港督盧吉倡設香港大學堂的勸捐文，記述摩地捐建校舍、籌募常年經費及設置醫科與工科的規劃，並說明在港修讀西學可減輕留學成本、便利華人子弟，呈現香港大學創校背景。
+excerpted: true
+proofread: false
 ---
 
-<input type="checkbox" checked> 摘錄　<input type="checkbox"> 初校
 
 > 《港督盧制軍香港大學堂勸捐啟譯文並序》（香港：中環和盛印字館，1909年2月）。
 

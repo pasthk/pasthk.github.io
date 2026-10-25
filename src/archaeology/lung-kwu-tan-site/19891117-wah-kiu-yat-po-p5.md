@@ -3,9 +3,10 @@ title: 準備建新路考古人員致力挽救古蹟　新石器時代珍貴文�
 author: false
 date: 2026-10-04
 description: 1989年《華僑日報》報道屯門龍鼓灘新石器時代遺址的搶救發掘，記述道路工程前出土的陶器、石器，以及考古調查與古蹟保存工作。
+excerpted: true
+proofread: false
 ---
 
-<input type="checkbox" checked> 摘錄　<input type="checkbox"> 初校
 
 > 《華僑日報》，1989年11月17日，第5頁。
 

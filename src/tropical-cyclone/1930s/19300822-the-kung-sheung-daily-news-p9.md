@@ -3,9 +3,10 @@ title: 昨日本港之狂風暴雨
 author: false
 date: 2026-10-23
 description: 
+excerpted: true
+proofread: false
 ---
 
-<input type="checkbox" checked> 摘錄　<input type="checkbox"> 初校
 
 > 《工商日報》，1930年8月22日，第3張第1頁。
 

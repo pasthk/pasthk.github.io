@@ -3,9 +3,10 @@ title: 古墓發現「靈位」　考古團希望能發現文字
 author: false
 date: 2026-10-10
 description: 《華僑日報》1955年8月12日報道李鄭屋村古墓繼續發掘，再出土14件陶器及銅鏡、庭院模型等文物；並記錄林仰山、饒宗頤根據器物與墓磚討論墓葬年代，以及文物保存和日後公開展覽的安排。
+excerpted: true
+proofread: false
 ---
 
-<input type="checkbox" checked> 摘錄　<input type="checkbox"> 初校
 
 > 《華僑日報》，1955年8月13日，第2張第1頁。
 

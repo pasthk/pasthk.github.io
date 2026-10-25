@@ -3,9 +3,10 @@ title: 參觀古墓　疑被作祟
 author: false
 date: 2026-10-04
 description: 《工商晚報》1955年8月11日報道李鄭屋村古墓續次發掘出土十五件陶器，記述市民參觀、墓室通風不良引起不適，以及古物搬離後流傳的傳聞。
+excerpted: true
+proofread: false
 ---
 
-<input type="checkbox" checked> 摘錄　<input type="checkbox"> 初校
 
 > 《工商晚報》，1955年8月11日，第4頁。
 

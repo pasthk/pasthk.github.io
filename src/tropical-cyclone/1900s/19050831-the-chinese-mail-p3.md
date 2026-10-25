@@ -3,9 +3,10 @@ title: 天台報風
 author: false
 date: 2026-10-21
 description: 
+excerpted: true
+proofread: false
 ---
 
-<input type="checkbox" checked> 摘錄　<input type="checkbox"> 初校
 
 > 《香港華字日報》，1905年8月31日，第3頁。
 

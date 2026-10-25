@@ -3,9 +3,10 @@ title: 今午天文台懸掛第三號風球
 author: false
 date: 2026-10-23
 description: 
+excerpted: true
+proofread: false
 ---
 
-<input type="checkbox" checked> 摘錄　<input type="checkbox"> 初校
 
 > 《工商晚報》，1932年6月2日，第3版。
 

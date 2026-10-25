@@ -3,9 +3,10 @@ title: 連日本港天氣之炎熱　受署病者頗多　昨天文台懸掛風�
 author: false
 date: 2026-10-22
 description: 
+excerpted: true
+proofread: false
 ---
 
-<input type="checkbox" checked> 摘錄　<input type="checkbox"> 初校
 
 > 《香港華字日報》，1928年7月14日，第2張第3頁。
 

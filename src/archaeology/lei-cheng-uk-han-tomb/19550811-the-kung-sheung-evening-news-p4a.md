@@ -3,9 +3,10 @@ title: 李鄭屋村古墓　今晨續發掘
 author: false
 date: 2026-10-04
 description: 《工商晚報》1955年8月11日報道李鄭屋村古墓續行發掘，記述學者比較墓磚龍紋與廣州漢墓、探討墓葬年代及假塚等可能性，並記錄墓室尺寸和出土文物研究安排。
+excerpted: true
+proofread: false
 ---
 
-<input type="checkbox" checked> 摘錄　<input type="checkbox"> 初校
 
 > 《工商晚報》，1955年8月11日，第4頁。
 

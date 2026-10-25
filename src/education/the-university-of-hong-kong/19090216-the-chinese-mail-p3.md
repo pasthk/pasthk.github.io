@@ -3,9 +3,10 @@ title: 港督盧制軍香港大學勸捐啓
 author: false
 date: 2026-10-17
 description: 香港大學創校籌議史料：1909年2月16日《香港華字日報》刊載港督摩地勸募香港大學堂經費的啟事，記錄摩地捐款、校舍興建、常年經費籌募，以及醫學堂與工藝學堂併入大學堂的規劃，呈現香港高等教育的早期發展。
+excerpted: true
+proofread: true
 ---
 
-<input type="checkbox" checked> 摘錄　<input type="checkbox" checked> 初校
 
 > 《香港華字日報》，1909年2月16日，第3頁。
 

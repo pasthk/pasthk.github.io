@@ -3,9 +3,10 @@ title: 天文台今午懸一號風球
 author: false
 date: 2026-10-24
 description: 
+excerpted: true
+proofread: true
 ---
 
-<input type="checkbox" checked> 摘錄　<input type="checkbox" checked> 初校
 
 > 《工商晚報》，1932年9月16日，第4版。
 

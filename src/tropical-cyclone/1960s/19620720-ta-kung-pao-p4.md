@@ -3,9 +3,10 @@ title: 昨天悶熱近九十二度　風暴出現港外
 author: false
 date: 2026-10-01
 description: 《大公報》1962年7月20日報道熱帶風暴「姬蒂」位於香港東南偏東約450哩並向西北偏西移動，並記錄當日悶熱天氣與天文台預測。
+excerpted: true
+proofread: true
 ---
 
-<input type="checkbox" checked> 摘錄　<input type="checkbox" checked> 初校
 
 > 《大公報》，1962年7月20日，第1張；第4版。
 

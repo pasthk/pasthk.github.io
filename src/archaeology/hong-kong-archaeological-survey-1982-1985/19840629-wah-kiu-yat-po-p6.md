@@ -3,9 +3,10 @@ title: 考古資源調查發現廿個遺跡
 author: false
 date: 2026-09-29
 description: 《華僑日報》1984年報道古物諮詢委員會一九八三年年報，記錄香港考古資源調查首年發現二十多個新遺址、建立電腦化遺址記錄，並提出考古資源保育建議。
+excerpted: true
+proofread: true
 ---
 
-<input type="checkbox" checked> 摘錄　<input type="checkbox" checked> 初校
 
 > 《華僑日報》，1984年6月29日，第2張第2頁。
 

@@ -3,9 +3,10 @@ title: 天文台風球改懸別處
 author: false
 date: 2026-10-22
 description: 
+excerpted: true
+proofread: false
 ---
 
-<input type="checkbox" checked> 摘錄　<input type="checkbox"> 初校
 
 > 《工商日報》，1926年12月10日，第3張第1頁。
 

@@ -3,9 +3,10 @@ title: 颶風再至
 author: false
 date: 2026-10-21
 description: 
+excerpted: true
+proofread: false
 ---
 
-<input type="checkbox" checked> 摘錄　<input type="checkbox"> 初校
 
 > 《香港華字日報》，1906年10月1日，第4頁。
 
