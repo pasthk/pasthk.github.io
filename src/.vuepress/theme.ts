@@ -22,7 +22,7 @@ export default hopeTheme({
   breadcrumb: false,
   copyright: false,
   author: {
-    name: "吳從云",
+    name: "NG, KIN CHUNG",
     url: "https://www.pasthk.com",
   },
   markdown: {
@@ -67,6 +67,9 @@ export default hopeTheme({
       fallBackImage: `${hostname}/favicon.png`,
     },
     sitemap: true,
+    slimsearch: {
+      indexContent: true
+    },
     icon: false,
     components: {
       components: ["Badge", "VPCard"],

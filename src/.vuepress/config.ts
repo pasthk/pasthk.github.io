@@ -31,6 +31,36 @@ export default defineUserConfig({
         },
         ...existingAliases,
       ];
+
+      config.ssr ??= {};
+      const noExternal = config.ssr.noExternal;
+      config.ssr.noExternal =
+        noExternal === true
+          ? true
+          : [
+              ...(Array.isArray(noExternal)
+                ? noExternal
+                : noExternal
+                  ? [noExternal]
+                  : []),
+              "@vuepress/search-helper",
+            ];
+
+      config.plugins ??= [];
+      config.plugins.push({
+        name: "fix-slimsearch-dev-worker-url",
+        enforce: "pre",
+        transform(code, id) {
+          if (!id.includes("/@vuepress/plugin-slimsearch/dist/client/config.js")) {
+            return;
+          }
+
+          return code.replace(
+            /new URL\((["'`])worker\/dev\.js\1,\s*import\.meta\.url\)/g,
+            'new URL("../worker/dev.js",import.meta.url)',
+          );
+        },
+      });
     },
   }),
   lang: "zh-Hant",
