@@ -58,6 +58,7 @@ export default sidebar({
                 "/tropical-cyclone/1930-signal.md",
                 "/tropical-cyclone/1931-signal.md",
                 "/tropical-cyclone/1932-signal.md",
+                "/tropical-cyclone/1935-signal.md",
               ]
             },
             {
