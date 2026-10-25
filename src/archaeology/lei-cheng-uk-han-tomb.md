@@ -21,109 +21,87 @@ description: 本頁整理香港李鄭屋漢墓的發現、發掘、出土文物�
    - 結果只得回十件由港府搬走　港大教授說可能是漢唐遺物
 4. 〈[古塚出現](./lei-cheng-uk-han-tomb/19550810-wah-kiu-yat-po-p5.md)〉，《華僑日報》，1955年8月10日，第2張第1頁。
    - 已發掘得花瓶香爐二十餘件，倘屬漢代遺物，則為千年以上古物，現俟專家研究清楚，始予以鑑定。現由警察看守。
-5. 〈[李鄭屋村古墓　今晨續發掘](./lei-cheng-uk-han-tomb/19550811-the-kung-sheung-evening-news-p4a.md)〉，《工商晚報》，1955年8月11日，第4頁。
+5. Centuries old tomb discovered in Kowloon: Workmen's find during digging operations. (1955, Aug 10). *South China Morning Post*
+6. 〈[李鄭屋村古墓　今晨續發掘](./lei-cheng-uk-han-tomb/19550811-the-kung-sheung-evening-news-p4a.md)〉，《工商晚報》，1955年8月11日，第4頁。
    - 古物陳列港大供鑑閱
-6. 〈[參觀古墓　疑被作祟](./lei-cheng-uk-han-tomb/19550811-the-kung-sheung-evening-news-p4b.md)〉，《工商晚報》，1955年8月11日，第4頁。
+7. 〈[參觀古墓　疑被作祟](./lei-cheng-uk-han-tomb/19550811-the-kung-sheung-evening-news-p4b.md)〉，《工商晚報》，1955年8月11日，第4頁。
    - 古物不完整　謠言滿天飛
-7. 〈[李鄭屋村古墓　今晨續發掘出銅鏡檀香爐等](./lei-cheng-uk-han-tomb/19550811-the-kung-sheung-evening-news-p10.md)〉，《工商晚報》，1955年8月11日，第10頁。
-8. 〈[發現銅器](./lei-cheng-uk-han-tomb/19550812-wah-kiu-yat-po-p5.md)〉，《華僑日報》，1955年8月12日，第2張第1頁。
+8. 〈[李鄭屋村古墓　今晨續發掘出銅鏡檀香爐等](./lei-cheng-uk-han-tomb/19550811-the-kung-sheung-evening-news-p10.md)〉，《工商晚報》，1955年8月11日，第10頁。
+9. 〈[發現銅器](./lei-cheng-uk-han-tomb/19550812-wah-kiu-yat-po-p5.md)〉，《華僑日報》，1955年8月12日，第2張第1頁。
    - 考古家認為在研究上十分重要　饒宗頤講師認為屬於晉墓構造
-9.  〈[古墓發現「靈位」　考古團希望能發現文字](./lei-cheng-uk-han-tomb/19550813-wah-kiu-yat-po-p5.md)〉，《華僑日報》，1955年8月13日，第2張第1頁。
+10. Further examination of ancient tomb: Chambers investigated by H.K. University officials pottery to be exhibited. (1955, Aug 11). *South China Morning Post*
+11. Tomb excavations: Miniature houses, bronze pieces and more pots unearthed mirror an important find. (1955, Aug 12). *South China Morning Post*
+12. 〈[古墓發現「靈位」　考古團希望能發現文字](./lei-cheng-uk-han-tomb/19550813-wah-kiu-yat-po-p5.md)〉，《華僑日報》，1955年8月13日，第2張第1頁。
     - 古墓拆毁抑保存由官方決定
-10. 〈研究考古隨街是　折扣成風金亦然〉，《工商晚報》，1955年8月14日，第3頁。
-11. 〈古墓是否保存助理輔政司說尚在考慮考古隊昨進行拓印花紋〉，《大公報》，1955年8月14日，第1張第4版。
-12. 〈[我國第一流考古學家　董作賓應邀抵港](./lei-cheng-uk-han-tomb/19550815-wah-kiu-yat-po-p5.md)〉，《華僑日報》，1955年8月15日，第2張第1頁。
+13. More pots unearthed: Excavation work on ancient tomb ends after three days preservation undecided. (1955, Aug 13). *South China Morning Post*
+14. 〈研究考古隨街是　折扣成風金亦然〉，《工商晚報》，1955年8月14日，第3頁。
+15. 〈古墓是否保存助理輔政司說尚在考慮考古隊昨進行拓印花紋〉，《大公報》，1955年8月14日，第1張第4版。
+16. 〈[我國第一流考古學家　董作賓應邀抵港](./lei-cheng-uk-han-tomb/19550815-wah-kiu-yat-po-p5.md)〉，《華僑日報》，1955年8月15日，第2張第1頁。
     - 參加研究李鄭屋村掘出古物
-13. 〈港九居民聯合會　請港府保留古塚　不日呈請主管機關付之實行〉，《華僑日報》，1955年8月17日，第2張第1頁。
-14. 〈林仰山教授講述　李鄭屋村發掘古墓經過〉，《華僑日報》，1955年8月17日，第2張第1頁。
-15. 〈從發現古墓引起考古談談董作賓與六朝〉，《華僑日報》，1955年8月18日，第2張第4頁。
-16. 〈李鄭屋村古墓前　徙置大樓趕建中〉，《工商晚報》，1955年8月21日，第3頁。
-17. 〈李鄭屋村古物引起　古玩老千靜極思動　贗鼎製品僞可亂真〉，《工商晚報》，1955年8月23日，第4頁。
-18. 〈李鄭屋村古墓决定拆卸　明日起開放十天　任市民入洞參觀〉，《工商日報》，1955年9月8日，第5頁。
-19. 〈李鄭屋村古墓　明起開放十天〉，《工商晚報》，1955年9月8日，第4頁。
-20. 〈行人不解冬青恨　剩有斜陽照舊墳　李鄭屋村古墓將毀　開放十日任人參觀〉，《工商晚報》，1955年9月9日，第4頁。
-21. 〈黃福鑾講述對古墓研究〉，《華僑日報》，1955年9月14日，第2張第2頁。
-22. 〈欲鑒古知今非抱殘守缺　對李鄭屋村古墓　林仰山主張保存　剩有海隅留漢跡　此間可有大王風〉，《工商晚報》，1955年9月16日，第4頁。
-23. 〈李鄭屋村古墓　係屬漢遺物　力請政府建築小園保留古蹟〉，《華僑日報》，1955年9月17日，第2張第1頁。
-24. 〈古墓掘出古物　週未舉行預展〉，《工商日報》，1955年9月19日，第5頁。
-25. 〈古墓掘出古物定期公開展覽〉，《工商日報》，1955年9月22日，第5頁。
-26. 〈港九居聯會向當局請求　改善學車紙收費　李鄭屋村古墓有保存價值〉，《華僑日報》，1955年9月26日，第2張第2頁。
-27. 〈港府正式宣布古墓決定保存〉，《工商日報》，1955年10月01日，第6頁。
-28. 〈古墓為漢武帝時物〉，《工商日報》，1955年10月01日，第6頁。
-29. 〈港府正式宣布保存古墓設公園〉，《華僑日報》，1955年10月01日，第2張第1頁。
-30. 〈李鄭屋村古墓　吳桴提供考據（一）〉，《華僑日報》，1955年10月8日，第3張第2頁。
-31. 〈李鄭屋村古墓　吳桴提供考據（二）〉（按：1955年10月8日，《華僑日報》刊登第一篇考據，次日即刊登考據（三），1955年10月10日刊登考據（四）。連續3天的報導中均不見有考據（二））。
-32. 〈李鄭屋村古墓　吳桴提供考據（三）〉，《華僑日報》，1955年10月9日，第3張第2頁。
-33. 藍青蔚：〈從半島的開發説到　古墓應為宋代產物（一）〉，《華僑日報》，1955年10月10日，第4張第1頁。
-34. 〈李鄭屋村古墓　吳桴提供考據（四）〉，《華僑日報》，1955年10月10日，第4張第2頁。
-35. 藍青蔚：〈從半島的開發説到　古墓應為宋代產物（二）〉，《華僑日報》，1955年10月11日，第3張第2頁。
-36. 〈市政局設立小組會　管空氣調節設備　今日會議民選議員質詢八項〉，《華僑日報》，1955年11月29日，第2張第1頁。（按：市政議員胡百全在會上問保留李鄭屋墓事。）
-37. 〈李鄭屋區決保留古墓　政府撥地建徙置大廈　新興建地點徙置處長今日將發表〉，《華僑日報》，1955年11月29日，第2張第2頁。
-38. 〈市局新主席何禮文　首次主持會議　新徙長華璐同亦出席〉，《華僑日報》，1955年11月30日，第2張第1頁。
-39. 〈香港革新會大會通過年報　明年發展為政黨　貝納祺李有璇等獲連任委員〉，《華僑日報》，1955年12月3日，第2張第2頁。（按：報導提及連伯在會上表示反對保留李鄭屋古墓。）
-40. 〈開闢花園工程開始　千年古墓將換新裝　墓頂之上加上鋼筋混凝土　完成後再鋪上坭土及草皮〉，《工商日報》，1955年12月4日，第5頁。
-41. 〈保留古墓　闢設公園　初期工程完成〉，《工商晚報》，1955年12月4日，第5頁。
-42. 〈口口古墓首期工程完成　口放之期尚遙遠〉，《華僑日報》，1956年1月13日，第2張第1頁。
-43. 〈古墓公園　下月完成　墓後徙置大樓矗立〉，《工商晚報》，1956年4月24日，第4頁。
-44. 〈李鄭屋村建大廈　孤零兀立是古墓〉，《大公報》，1956年6月4日，第2張，第5版。
-45. 〈七月份市政局　各小組工作報告　李鄭屋村建小型古墓博物院　成人門券收二角小童收一角〉，《華僑日報》，1956年6月8日，第4張第2頁。
-46. 〈古墓年底開放　售票供人參觀每位二毫〉，《大公報》，1956年8月8日，第1張，第4頁。
-47. 〈古墓公園　明春開放〉，《工商日報》，1956年10月27日，第6頁。
-48. 〈李鄭屋村古墓　公園與陳列室　明春即可完工〉，《華僑日報》，1956年10月27日，第4張第3頁。
-49. 〈古墓原址建公園　憲報昨招商承投〉，《大公報》，1956年10月27日，第2張，第5版。
-50. LI CHENG UK TOMB: HISTORICAL BACKGROUND TRACED BY PROF. F. S. DRAKE ANCIENT CHINESE RECORDS. (1955, Oct 28). *South China Morning Post*.
-51. 〈古墓公園　明春開放〉，《工商晚報》，1956年10月30日，第4頁。
-52. 〈李鄭屋村古墓　月底開放　舉行隆重儀式　門券酌收二角〉，《華僑日報》，1957年6月2日，第2張第2頁。
-53. 〈李鄭屋邨古墓將改作博物館〉，《華僑日報》，1976年6月14日，第3張第1頁。
-54. 〈李鄭屋漢墓展　介紹出土文物　八月廿日至九月底舉行〉，《大公報》，1983年8月11日，第4張第3頁。
-55. 〈李鄭物漢墓展覽博物館下周舉行〉，《大公報》，1983年8月11日，第2張第6版。
-56. 〈李鄭屋漢墓展覽今起博物館舉行〉，《大公報》，1983年8月20日，第2張第6版。
-57. 〈四個墓室　十字入口　李鄭屋古漢墓列為法定古蹟〉，《華僑日報》，1988年12月19日，第18頁。
-58. 〈李鄭屋漢墓發掘70周年　兩地學者探討嶺南與中原文化交流〉，《大公報》，2025年9月20日。
-
-A page from the past. (1955, Sep 17). South China Morning Post
-
-ANCESTOR WORSHIP: PROF. DRAKE'S TALK ON RELIGIOUS SIGNIFICANCE OF LI CHENG UK TOMB BELIEF IN LIFE AFTER DEATH. (1955, Oct 17). South China Morning Post
-
-Ancient tomb at li cheng uk: Future under re-examination. (1955, Sep 24). South China Morning Post
-
-ANCIENT TOMB IN LI CHENG UK: TO BE OPEN TO PUBLIC TEN-DAY PERIOD. (1955, Sep 08). South China Morning Post
-
-ANCIENT TOMB: REPRESENTATIONS TO GOVERNMENT SITE PRESERVATION. (1955, Sep 13). South China Morning Post
-
-Centuries old tomb discovered in kowloon: Workmen's find during digging operations. (1955, Aug 10). South China Morning Post
-
-Exhibition of relics of ancient tomb discovered in colony. (1955, Sep 25). South China Sunday Post
-
-FURTHER EXAMINATION OF ANCIENT TOMB: CHAMBERS INVESTIGATED BY H.K. UNIVERSITY OFFICIALS POTTERY TO BE EXHIBITED. (1955, Aug 11). South China Morning Post
-
-Li cheng uk tomb. (1955, Oct 04). South China Morning Post
-
-Li cheng uk tomb symposium. (1955, Sep 18). South China Sunday Post
-
-Li cheng UK tomb: Civic assn appeals for preservation. (1955, Sep 21). South China Morning Post
-
-LI CHENG UK TOMB: HISTORICAL BACKGROUND TRACED BY PROF. F. S. DRAKE ANCIENT CHINESE RECORDS. (1955, Oct 28). South China Morning Post
-
-LI CHENG UK TOMB: PRESERVATION URGED BY SPEAKERS AT PUBLIC SYMPOSIUM HISTORICAL VALUE STRESSED. (1955, Sep 22). South China Morning Post
-
-MORE POTS UNEARTHED: EXCAVATION WORK ON ANCIENT TOMB ENDS AFTER THREE DAYS PRESERVATION UNDECIDED. (1955, Aug 13). South China Morning Post
-
-Preservation of ancient chinese tomb. (1955, Aug 14). South China Sunday Post
-
-PUBLIC INTEREST IN TOMB: CROWD PUSHES DOWN ENTRANCE GATE MANY VISITORS. (1955, Sep 10). South China Morning Post
-
-RESETTLEMENT SCHEME: NO ALTERNATIVE SITES TO REPLACE ANCIENT TOMB AREA URBAN COUNCIL QUESTIONS. (1955, Nov 30). South China Morning Post
-
-TOMB EXCAVATIONS: MINIATURE HOUSES, BRONZE PIECES AND MORE POTS UNEARTHED MIRROR AN IMPORTANT FIND. (1955, Aug 12). South China Morning Post
-
-Tomb's new puzzle for authorities: Soft and fine earth in vault. (1955, Aug 15). South China Morning Post
-
-Drake, F. S. (1955, Sep 16). LI CHENG UK TOMB: BURIAL PLACE MAY BE MORE THAN TWO THOUSAND YEARS OLD PRESERVATION SUGGESTION. South China Morning Post
-
-L. (1955, Sep 13). The ancient tomb: (to the editor, S.C.M. post). South China Morning Post
-
-S.W.P. (1955, Sep 27). The ancient tomb: (to the editor, S.C.M. post). South China Morning Post
+17. Preservation of ancient Chinese tomb. (1955, Aug 14). *South China Sunday Post*
+18. Tomb's new puzzle for authorities: Soft and fine earth in vault. (1955, Aug 15). *South China Morning Post*
+19. 〈港九居民聯合會　請港府保留古塚　不日呈請主管機關付之實行〉，《華僑日報》，1955年8月17日，第2張第1頁。
+20. 〈林仰山教授講述　李鄭屋村發掘古墓經過〉，《華僑日報》，1955年8月17日，第2張第1頁。
+21. 〈從發現古墓引起考古談談董作賓與六朝〉，《華僑日報》，1955年8月18日，第2張第4頁。
+22. 〈李鄭屋村古墓前　徙置大樓趕建中〉，《工商晚報》，1955年8月21日，第3頁。
+23. 〈李鄭屋村古物引起　古玩老千靜極思動　贗鼎製品僞可亂真〉，《工商晚報》，1955年8月23日，第4頁。
+24. 〈李鄭屋村古墓决定拆卸　明日起開放十天　任市民入洞參觀〉，《工商日報》，1955年9月8日，第5頁。
+25. 〈李鄭屋村古墓　明起開放十天〉，《工商晚報》，1955年9月8日，第4頁。
+26. Ancient tomb in Li Cheng Uk: To be open to public ten-day period. (1955, Sep 08). *South China Morning Post*
+27. 〈行人不解冬青恨　剩有斜陽照舊墳　李鄭屋村古墓將毀　開放十日任人參觀〉，《工商晚報》，1955年9月9日，第4頁。
+28. Public interest in tomb: Crowd pushes down entrance gate many visitors. (1955, Sep 10). *South China Morning Post*
+29. Ancient tomb: Representations to government site preservation. (1955, Sep 13). *South China Morning Post*
+30. L. (1955, Sep 13). The ancient tomb: (To the editor, S.C.M. Post). *South China Morning Post*
+31. 〈黃福鑾講述對古墓研究〉，《華僑日報》，1955年9月14日，第2張第2頁。
+32. 〈欲鑒古知今非抱殘守缺　對李鄭屋村古墓　林仰山主張保存　剩有海隅留漢跡　此間可有大王風〉，《工商晚報》，1955年9月16日，第4頁。
+33. Drake, F. S. (1955, Sep 16). Li Cheng Uk tomb: Burial place may be more than two thousand years old preservation suggestion. *South China Morning Post*
+34. 〈李鄭屋村古墓　係屬漢遺物　力請政府建築小園保留古蹟〉，《華僑日報》，1955年9月17日，第2張第1頁。
+35. A page from the past. (1955, Sep 17). *South China Morning Post*
+36. Li Cheng Uk tomb symposium. (1955, Sep 18). *South China Sunday Post*
+37. 〈古墓掘出古物　週未舉行預展〉，《工商日報》，1955年9月19日，第5頁。
+38. Li Cheng Uk tomb: Civic assn appeals for preservation. (1955, Sep 21). *South China Morning Post*
+39. 〈古墓掘出古物定期公開展覽〉，《工商日報》，1955年9月22日，第5頁。
+40. Li Cheng Uk tomb: Preservation urged by speakers at public symposium historical value stressed. (1955, Sep 22). *South China Morning Post*
+41. Ancient tomb at Li Cheng Uk: Future under re-examination. (1955, Sep 24). *South China Morning Post*
+42. Exhibition of relics of ancient tomb discovered in colony. (1955, Sep 25). *South China Sunday Post*
+43. 〈港九居聯會向當局請求　改善學車紙收費　李鄭屋村古墓有保存價值〉，《華僑日報》，1955年9月26日，第2張第2頁。
+44. S.W.P. (1955, Sep 27). The ancient tomb: (To the editor, S.C.M. Post). *South China Morning Post*
+45. 〈港府正式宣布古墓決定保存〉，《工商日報》，1955年10月01日，第6頁。
+46. 〈古墓為漢武帝時物〉，《工商日報》，1955年10月01日，第6頁。
+47. 〈港府正式宣布保存古墓設公園〉，《華僑日報》，1955年10月01日，第2張第1頁。
+48. Li Cheng Uk tomb. (1955, Oct 04). *South China Morning Post*
+49. 〈李鄭屋村古墓　吳桴提供考據（一）〉，《華僑日報》，1955年10月8日，第3張第2頁。
+50. 〈李鄭屋村古墓　吳桴提供考據（二）〉（按：1955年10月8日，《華僑日報》刊登第一篇考據，次日即刊登考據（三），1955年10月10日刊登考據（四）。連續3天的報導中均不見有考據（二））。
+51. 〈李鄭屋村古墓　吳桴提供考據（三）〉，《華僑日報》，1955年10月9日，第3張第2頁。
+52. 藍青蔚：〈從半島的開發説到　古墓應為宋代產物（一）〉，《華僑日報》，1955年10月10日，第4張第1頁。
+53. 〈李鄭屋村古墓　吳桴提供考據（四）〉，《華僑日報》，1955年10月10日，第4張第2頁。
+54. 藍青蔚：〈從半島的開發説到　古墓應為宋代產物（二）〉，《華僑日報》，1955年10月11日，第3張第2頁。
+55. Ancestor worship: Prof. Drake's talk on religious significance of Li Cheng Uk tomb belief in life after death. (1955, Oct 17). *South China Morning Post*
+56. Li Cheng Uk tomb: Historical background traced by Prof. F. S. Drake ancient Chinese records. (1955, Oct 28). *South China Morning Post*
+57. 〈市政局設立小組會　管空氣調節設備　今日會議民選議員質詢八項〉，《華僑日報》，1955年11月29日，第2張第1頁。（按：市政議員胡百全在會上問保留李鄭屋墓事。）
+58. 〈李鄭屋區決保留古墓　政府撥地建徙置大廈　新興建地點徙置處長今日將發表〉，《華僑日報》，1955年11月29日，第2張第2頁。
+59. 〈市局新主席何禮文　首次主持會議　新徙長華璐同亦出席〉，《華僑日報》，1955年11月30日，第2張第1頁。
+60. Resettlement scheme: No alternative sites to replace ancient tomb area Urban Council questions. (1955, Nov 30). *South China Morning Post*
+61. 〈香港革新會大會通過年報　明年發展為政黨　貝納祺李有璇等獲連任委員〉，《華僑日報》，1955年12月3日，第2張第2頁。（按：報導提及連伯在會上表示反對保留李鄭屋古墓。）
+62. 〈開闢花園工程開始　千年古墓將換新裝　墓頂之上加上鋼筋混凝土　完成後再鋪上坭土及草皮〉，《工商日報》，1955年12月4日，第5頁。
+63. 〈保留古墓　闢設公園　初期工程完成〉，《工商晚報》，1955年12月4日，第5頁。
+64. 〈口口古墓首期工程完成　口放之期尚遙遠〉，《華僑日報》，1956年1月13日，第2張第1頁。
+65. 〈古墓公園　下月完成　墓後徙置大樓矗立〉，《工商晚報》，1956年4月24日，第4頁。
+66. 〈李鄭屋村建大廈　孤零兀立是古墓〉，《大公報》，1956年6月4日，第2張，第5版。
+67. 〈七月份市政局　各小組工作報告　李鄭屋村建小型古墓博物院　成人門券收二角小童收一角〉，《華僑日報》，1956年6月8日，第4張第2頁。
+68. 〈古墓年底開放　售票供人參觀每位二毫〉，《大公報》，1956年8月8日，第1張，第4頁。
+69. 〈古墓公園　明春開放〉，《工商日報》，1956年10月27日，第6頁。
+70. 〈李鄭屋村古墓　公園與陳列室　明春即可完工〉，《華僑日報》，1956年10月27日，第4張第3頁。
+71. 〈古墓原址建公園　憲報昨招商承投〉，《大公報》，1956年10月27日，第2張，第5版。
+72. LI CHENG UK TOMB: HISTORICAL BACKGROUND TRACED BY PROF. F. S. DRAKE ANCIENT CHINESE RECORDS. (1955, Oct 28). *South China Morning Post*.
+73. 〈古墓公園　明春開放〉，《工商晚報》，1956年10月30日，第4頁。
+74. 〈李鄭屋村古墓　月底開放　舉行隆重儀式　門券酌收二角〉，《華僑日報》，1957年6月2日，第2張第2頁。
+75. 〈李鄭屋邨古墓將改作博物館〉，《華僑日報》，1976年6月14日，第3張第1頁。
+76. 〈李鄭屋漢墓展　介紹出土文物　八月廿日至九月底舉行〉，《大公報》，1983年8月11日，第4張第3頁。
+77. 〈李鄭物漢墓展覽博物館下周舉行〉，《大公報》，1983年8月11日，第2張第6版。
+78. 〈李鄭屋漢墓展覽今起博物館舉行〉，《大公報》，1983年8月20日，第2張第6版。
+79. 〈四個墓室　十字入口　李鄭屋古漢墓列為法定古蹟〉，《華僑日報》，1988年12月19日，第18頁。
+80. 〈李鄭屋漢墓發掘70周年　兩地學者探討嶺南與中原文化交流〉，《大公報》，2025年9月20日。
 
 ## 政府新聞公報
 1. 〈歷史博物館李鄭屋分館名稱更改〉（香港：政府新聞處，1998年6月22日）。
