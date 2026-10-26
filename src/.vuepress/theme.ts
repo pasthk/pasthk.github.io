@@ -67,9 +67,6 @@ export default hopeTheme({
       fallBackImage: `${hostname}/favicon.png`,
     },
     sitemap: true,
-    slimsearch: {
-      indexContent: true
-    },
     icon: false,
     components: {
       components: ["Badge", "VPCard"],
