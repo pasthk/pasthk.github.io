@@ -136,4 +136,23 @@ body {
     -webkit-overflow-scrolling: touch;
     overscroll-behavior: contain;
   }
+
+  // Safari can fail to paint the nested flex content of an active result.
+  // Keep the link and its text in a simple block formatting context instead.
+  .vp-search-record-matches > a,
+  .vp-search-record-content,
+  .vp-search-record-content > * {
+    display: block;
+    min-width: 0;
+  }
+
+  .vp-search-record-matches > a {
+    color: inherit;
+    -webkit-text-fill-color: currentcolor;
+  }
+
+  .vp-search-record-matches.active .vp-search-record-content {
+    color: var(--vp-c-white);
+    -webkit-text-fill-color: var(--vp-c-white);
+  }
 }
