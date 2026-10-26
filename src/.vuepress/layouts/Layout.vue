@@ -4,6 +4,9 @@ import AdTop from "../components/AdTop.vue";
 </script>
 
 <template>
-  <AdTop />
-  <HopeLayout />
+  <HopeLayout>
+    <template #contentAfter>
+      <AdTop />
+    </template>
+  </HopeLayout>
 </template>
