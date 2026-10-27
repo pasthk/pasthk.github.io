@@ -2,6 +2,8 @@
 title: 昨日本港之狂風暴雨
 author: false
 date: 2026-10-23
+dateCreated: "2026-10-23"
+datePublished: "1930-08-22"
 description: 
 excerpted: true
 proofread: false

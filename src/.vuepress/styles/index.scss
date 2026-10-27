@@ -64,6 +64,17 @@ body {
   .page-transcription-status input {
     margin: 0;
   }
+
+  .page-source-dates {
+    display: inline-flex;
+    gap: 1em;
+    white-space: nowrap;
+  }
+
+  .page-source-date-label {
+    color: var(--vp-c-text-subtle);
+    margin-inline-end: 0.25em;
+  }
 }
 
 .sponsor-methods {

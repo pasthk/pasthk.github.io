@@ -2,6 +2,8 @@
 title: 今午天文台懸掛第三號風球
 author: false
 date: 2026-10-23
+dateCreated: "2026-10-23"
+datePublished: "1932-06-02"
 description: 
 excerpted: true
 proofread: false

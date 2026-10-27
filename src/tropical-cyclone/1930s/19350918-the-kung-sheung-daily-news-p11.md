@@ -2,6 +2,8 @@
 title: 天文台昨晨改懸七號風球後澳江梧輪船停航
 author: false
 date: 2026-10-26
+dateCreated: "2026-10-26"
+datePublished: "1935-09-18"
 description: 
 excerpted: true
 proofread: false

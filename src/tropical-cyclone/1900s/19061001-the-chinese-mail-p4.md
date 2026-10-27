@@ -2,6 +2,8 @@
 title: 颶風再至
 author: false
 date: 2026-10-21
+dateCreated: "2026-10-21"
+datePublished: "1906-10-01"
 description: 
 excerpted: true
 proofread: false

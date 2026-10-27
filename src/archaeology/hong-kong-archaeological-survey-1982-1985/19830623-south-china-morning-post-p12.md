@@ -2,7 +2,9 @@
 title: Vehicle will help preserve heritage
 author: false
 date: 2026-09-30
-description: 《南華早報》1983年報道美國運通基金捐贈價值75,000港元的越野車，支持香港全港考古調查。調查旨在評估考古資源，並為已知及新發現遺址訂定保育優先次序。
+dateCreated: "2026-09-30"
+datePublished: "1983-06-23"
+description: 《南華早報》1983年6月23日報道美國運通基金捐贈七萬五千港元越野車，支援全港考古調查，以評估考古資源及訂定遺址保育優先次序。
 excerpted: true
 proofread: true
 ---

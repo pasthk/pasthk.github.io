@@ -2,7 +2,9 @@
 title: 保存港古物古蹟　法案將提交立法局
 author: false
 date: 2026-10-03
-description: 《華僑日報》1971年6月19日報道《古物古蹟法案》刊憲及提交立法局前的諮詢安排，介紹法案對古蹟指定、出土古物所有權，以及古物發掘、管理與保存的規定。
+dateCreated: "2026-10-03"
+datePublished: "1971-06-19"
+description: 《華僑日報》1971年6月19日報道古物古蹟法案刊憲，規定古蹟管制、出土古物所有權及保存事宜，並將委出諮詢委員會。
 excerpted: true
 proofread: true
 ---

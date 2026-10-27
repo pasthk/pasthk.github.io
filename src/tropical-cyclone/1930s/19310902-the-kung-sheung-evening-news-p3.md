@@ -2,6 +2,8 @@
 title: 颶風吹到本港
 author: false
 date: 2026-10-23
+dateCreated: "2026-10-23"
+datePublished: "1931-09-02"
 description: 
 excerpted: true
 proofread: false

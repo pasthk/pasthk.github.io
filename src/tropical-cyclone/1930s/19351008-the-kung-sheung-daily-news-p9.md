@@ -2,6 +2,8 @@
 title: 颶風方向已轉　本港可避免襲擊
 author: false
 date: 2026-10-26
+dateCreated: "2026-10-26"
+datePublished: "1935-10-08"
 description: 
 excerpted: true
 proofread: false

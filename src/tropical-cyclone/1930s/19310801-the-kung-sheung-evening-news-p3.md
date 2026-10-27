@@ -2,6 +2,8 @@
 title: 狂風暴雨中之香海
 author: false
 date: 2026-10-23
+dateCreated: "2026-10-23"
+datePublished: "1931-08-01"
 description: 《工商晚報》1931年8月1日報道颶風吹襲香港的情況，記述天文台由一號、七號轉掛九號及十字風球，並施放風炮示警。強風巨浪造成德輔道中水浸、寶德碼頭受損，電車與渡輪停駛，沿岸商戶關閉；救傷隊及警員巡查救援，另有女子被墜落窗門擊傷。
 excerpted: true
 proofread: false

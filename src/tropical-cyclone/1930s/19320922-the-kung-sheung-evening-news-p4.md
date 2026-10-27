@@ -2,6 +2,8 @@
 title: 颶風離港之南一百五十英里
 author: false
 date: 2026-10-25
+dateCreated: "2026-10-25"
+datePublished: "1932-09-22"
 description: 
 excerpted: true
 proofread: false

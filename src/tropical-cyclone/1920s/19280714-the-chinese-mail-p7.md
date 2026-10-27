@@ -2,6 +2,8 @@
 title: 連日本港天氣之炎熱　受署病者頗多　昨天文台懸掛風球
 author: false
 date: 2026-10-22
+dateCreated: "2026-10-22"
+datePublished: "1928-07-14"
 description: 
 excerpted: true
 proofread: false

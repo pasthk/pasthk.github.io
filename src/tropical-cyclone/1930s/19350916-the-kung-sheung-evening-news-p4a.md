@@ -2,6 +2,8 @@
 title: 颶風掠過港外將襲海面
 author: false
 date: 2026-10-25
+dateCreated: "2026-10-25"
+datePublished: "1935-09-16"
 description: 
 excerpted: true
 proofread: false

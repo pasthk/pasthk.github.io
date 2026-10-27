@@ -2,6 +2,8 @@
 title: 天文台今晨縣掛第七號風球
 author: false
 date: 2026-10-23
+dateCreated: "2026-10-23"
+datePublished: "1932-07-21"
 description: 
 excerpted: true
 proofread: false

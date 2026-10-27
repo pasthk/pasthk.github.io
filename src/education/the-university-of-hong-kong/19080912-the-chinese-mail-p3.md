@@ -2,7 +2,9 @@
 title: 擬創設香港大學堂
 author: false
 date: 2026-09-29
-description: 1908年香港大學堂創辦籌議：香港華字日報報道大學堂的規劃方案，包括附設師範、醫學及工藝學堂、籌措經費與興建校舍，了解香港大學創校歷史與香港高等教育起源。
+dateCreated: "2026-09-29"
+datePublished: "1908-09-12"
+description: 《香港華字日報》1908年9月12日報道香港擬創設大學堂，討論附設師範、醫學及工藝學堂與籌措經費、興建校舍的計劃。
 excerpted: true
 proofread: true
 ---

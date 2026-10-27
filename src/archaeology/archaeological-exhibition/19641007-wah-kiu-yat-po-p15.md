@@ -2,7 +2,9 @@
 title: 香港春秋圖展今完結　續辦本港考古學展覽
 author: false
 date: 2026-09-29
-description: 大會堂博物院「香港春秋」圖片展展出三個月後閉幕，吸引逾三萬六千人參觀；館方計劃在展場接續舉辦香港考古學展覽。
+dateCreated: "2026-09-29"
+datePublished: "1964-10-07"
+description: 《華僑日報》1964年10月7日報道大會堂博物院「香港春秋」圖片展覽展出三個月後閉幕，參觀者共三萬六千餘人，展品拆除後將於原址籌辦本港考古學展覽會。
 excerpted: true
 proofread: true
 ---

@@ -2,6 +2,8 @@
 title: 政府立例保障古物古蹟
 author: false
 date: 2026-10-03
+dateCreated: "2026-10-03"
+datePublished: "1971-10-29"
 description: 《工商晚報》1971年10月29日報道《一九七一年古物古蹟法案》刊憲，說明香港新發現古物歸政府所有，發現者須通報並按需要協助鑑定及保護，當局亦可發給賞金。
 excerpted: true
 proofread: true

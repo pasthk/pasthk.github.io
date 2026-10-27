@@ -2,6 +2,8 @@
 title: 颶風續報
 author: false
 date: 2026-10-21
+dateCreated: "2026-10-21"
+datePublished: "1904-06-27"
 description: 《香港華字日報》1904年6月27日報道小呂宋附近出現颶風，以及香港天文台首次使用的新式風信記號。文章說明日間以三角、鼓形與圓球標示風暴方位及遠近，夜間以燈號提示風向變化，並記錄往來船期調整及本港小艇駛入避風處，呈現早期香港颱風預警與海上應變情況。
 excerpted: true
 proofread: false

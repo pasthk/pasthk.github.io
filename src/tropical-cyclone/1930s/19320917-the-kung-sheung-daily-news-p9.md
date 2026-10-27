@@ -2,6 +2,8 @@
 title: 颶風離港約二百英里
 author: false
 date: 2026-10-24
+dateCreated: "2026-10-24"
+datePublished: "1932-09-17"
 description: 
 excerpted: true
 proofread: false

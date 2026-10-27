@@ -2,6 +2,8 @@
 title: 連日廣州天氣之幻變
 author: false
 date: 2026-10-25
+dateCreated: "2026-10-25"
+datePublished: "1932-09-18"
 description: 
 excerpted: true
 proofread: false

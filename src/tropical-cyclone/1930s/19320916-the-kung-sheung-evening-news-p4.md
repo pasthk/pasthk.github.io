@@ -2,6 +2,8 @@
 title: 天文台今午懸一號風球
 author: false
 date: 2026-10-24
+dateCreated: "2026-10-24"
+datePublished: "1932-09-16"
 description: 
 excerpted: true
 proofread: true

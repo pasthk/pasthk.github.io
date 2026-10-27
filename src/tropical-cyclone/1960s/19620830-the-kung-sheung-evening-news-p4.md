@@ -2,11 +2,12 @@
 title: 溫黛行踪
 author: false
 date: 2026-10-01
+dateCreated: "2026-10-01"
+datePublished: "1962-08-30"
 description: 《工商晚報》1962年8月30日報道颶風溫黛位於香港以東偏東約640海里，正以每小時12海里向西北偏西移動；風暴能否為香港帶來豪雨，當時仍未能確定。
 excerpted: true
 proofread: true
 ---
-
 
 > 《工商晚報》，1962年8月30日，第4頁。
 

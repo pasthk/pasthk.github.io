@@ -2,6 +2,8 @@
 title: 颶風已遠離本港
 author: false
 date: 2026-10-26
+dateCreated: "2026-10-26"
+datePublished: "1935-10-08"
 description: 
 excerpted: true
 proofread: false

@@ -2,7 +2,9 @@
 title: 華民司麥道軻指出：三院各工作部門港府將計劃改進
 author: false
 date: 2026-09-29
-description: 《華僑日報》1965年3月27日報道屈臣議員關注缺乏法例保障史前資料，政府正重行檢討1962年名勝古物草案，並盼法案盡快提交立法局考慮。
+dateCreated: "2026-09-29"
+datePublished: "1965-03-27"
+description: 《華僑日報》1965年3月27日報道政府因應缺乏法例保障史前資料，重行檢討1962年名勝古物草案，並盼盡快提交立法局。
 excerpted: true
 proofread: true
 ---

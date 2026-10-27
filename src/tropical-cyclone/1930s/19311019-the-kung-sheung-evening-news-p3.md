@@ -2,6 +2,8 @@
 title: 本港最近恐發生颶風
 author: false
 date: 2026-10-23
+dateCreated: "2026-10-23"
+datePublished: "1931-10-19"
 description: 
 excerpted: true
 proofread: false

@@ -65,6 +65,28 @@ export default hopeTheme({
     seo: {
       canonical: (page) => new URL(page.path, hostname).href,
       fallBackImage: `${hostname}/favicon.png`,
+      ogp: (ogp, page) => {
+        const { datePublished } = page.frontmatter as {
+          datePublished?: string;
+        };
+
+        if (datePublished && "article:published_time" in ogp) {
+          ogp["article:published_time"] = datePublished;
+        }
+
+        return ogp;
+      },
+      jsonLd: (jsonLd, page) => {
+        const { datePublished, dateCreated } = page.frontmatter as {
+          datePublished?: string;
+          dateCreated?: string;
+        };
+
+        if (datePublished) jsonLd.datePublished = datePublished;
+        if (dateCreated) jsonLd.dateCreated = dateCreated;
+
+        return jsonLd;
+      },
     },
     sitemap: true,
     icon: false,

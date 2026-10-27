@@ -2,6 +2,8 @@
 title: 溫黛風姐又誕生　可能吹襲中國海
 author: false
 date: 2026-09-30
+dateCreated: "2026-09-30"
+datePublished: "1962-08-29"
 description: 《華僑日報》1962年8月29日報道熱帶風暴「溫黛」生成並向西北移動，當時預測或吹入中國海，香港則在酷熱與乾旱中盼望風暴帶來雨水。
 excerpted: true
 proofread: true

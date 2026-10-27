@@ -2,6 +2,8 @@
 title: 七號風球今午仍未除下
 author: false
 date: 2026-10-26
+dateCreated: "2026-10-26"
+datePublished: "1935-10-07"
 description: 
 excerpted: true
 proofread: false

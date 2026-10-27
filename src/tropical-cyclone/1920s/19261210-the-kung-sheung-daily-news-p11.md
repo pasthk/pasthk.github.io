@@ -2,6 +2,8 @@
 title: 天文台風球改懸別處
 author: false
 date: 2026-10-22
+dateCreated: "2026-10-22"
+datePublished: "1926-12-10"
 description: 
 excerpted: true
 proofread: false

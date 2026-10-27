@@ -2,12 +2,14 @@
 title: 天文台今晨改懸七號風球
 author: false
 date: 2026-10-25
+dateCreated: "2026-10-25"
+datePublished: "1935-09-18"
 description: 
 excerpted: true
 proofread: false
 ---
 
-> 《工商晚報》，1935年9月17日，第4版。 
+> 《工商晚報》，1935年9月18日，第4版。 
 
 七號風球今晨除下
 

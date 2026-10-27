@@ -2,6 +2,8 @@
 title: 保存古物古蹟　政府將訂立新法案
 author: false
 date: 2026-10-03
+dateCreated: "2026-10-03"
+datePublished: "1971-10-30"
 description: 《工商日報》1971年10月30日報道《一九七一年古物古蹟法案》的主要規定，包括古蹟指定、私人業主補償、出土古物通報，以及考古發掘許可。
 excerpted: true
 proofread: true
