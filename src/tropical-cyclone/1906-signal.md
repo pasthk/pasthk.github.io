@@ -2,7 +2,7 @@
 title: 1906年
 author: false
 date: 2026-10-21
-description: 
+description: 1906年香港熱帶氣旋與風球信號文獻索引，收錄《香港華字日報》關於颶風再至及前後颶風彙述的報道，記錄連續颱風吹襲與天文台風球懸掛情況。
 ---
 
 ## 無名 No Name 1

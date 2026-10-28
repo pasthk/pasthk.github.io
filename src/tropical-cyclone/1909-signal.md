@@ -2,7 +2,7 @@
 title: 1909年
 author: false
 date: 2026-10-22
-description: 
+description: 1909年香港熱帶氣旋文獻索引，收錄《香港華字日報》關於又有颶風的報道，記錄颱風逼近本港的天氣變化。
 ---
 
 ## 無名 No Name 1

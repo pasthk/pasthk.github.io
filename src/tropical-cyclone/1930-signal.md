@@ -2,7 +2,7 @@
 title: 1930年
 author: false
 date: 2026-10-22
-description: 
+description: 1930年香港熱帶氣旋與風球信號文獻索引，收錄《工商日報》關於昨日本港之狂風暴雨的報道，記錄天文台懸掛風球、報告海外颶風及本港降雨情況。
 ---
 
 ## 無名 No Name 1

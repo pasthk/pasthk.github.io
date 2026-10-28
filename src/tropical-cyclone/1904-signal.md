@@ -2,7 +2,7 @@
 title: 1904年
 author: false
 date: 2026-10-21
-description: 
+description: 1904年香港熱帶氣旋與風球信號文獻索引，收錄《香港華字日報》關於颶風續報的報道，記錄天文台風暴警告發布與颱風動向。
 ---
 
 ## 無名 No Name 1

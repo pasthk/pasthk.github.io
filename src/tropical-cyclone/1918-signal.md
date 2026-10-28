@@ -2,7 +2,7 @@
 title: 1918年
 author: false
 date: 2026-10-22
-description: 
+description: 1918年香港熱帶氣旋與風災文獻索引，收錄《香港華字日報》關於昨日之風雨談的報道，記錄颱風吹襲期間的天氣變化與市面影響。
 ---
 
 ## 無名 No Name 1

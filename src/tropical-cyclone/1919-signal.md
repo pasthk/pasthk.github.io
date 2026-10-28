@@ -2,7 +2,7 @@
 title: 1919年
 author: false
 date: 2026-10-22
-description: 
+description: 1919年香港熱帶氣旋與風災文獻索引，收錄《香港華字日報》關於風雨損失之調查的報道，記錄颱風吹襲後的災情評估與損失統計。
 ---
 
 ## 無名 No Name 1

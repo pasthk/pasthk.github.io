@@ -2,7 +2,7 @@
 title: 1902年
 author: false
 date: 2026-10-22
-description: 
+description: 1902年香港熱帶氣旋與風球信號文獻索引，收錄《香港華字日報》關於風球放下的報道，記錄天文台風暴警告的懸掛與除下。
 ---
 
 ## 無名 No Name 1
