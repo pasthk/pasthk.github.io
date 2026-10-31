@@ -29,6 +29,5 @@ proofread: false
 原文待補充
 
 <ReferenceBox>
-
 大公報，1964年12月26日，第1張第3版。
 </ReferenceBox>

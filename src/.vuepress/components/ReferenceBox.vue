@@ -235,7 +235,7 @@ onBeforeUnmount(() => {
   margin-top: 0.5rem;
   padding-top: 0.5rem;
   border-top: 1px dashed var(--vp-c-border);
-  font-size: 0.9rem;
+  font-size: 1rem;
   color: var(--vp-c-text-mute);
 }
 

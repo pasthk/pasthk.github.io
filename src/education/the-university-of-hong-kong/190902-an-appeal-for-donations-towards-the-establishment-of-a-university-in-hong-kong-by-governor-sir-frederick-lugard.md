@@ -136,7 +136,6 @@ proofread: false
 盧嘉謹撰
 
 <ReferenceBox>
-
 文獻出處：港督盧制軍香港大學堂勸捐啟譯文並序（香港：中環和盛印字館，1909年2月）。
 </ReferenceBox>
 

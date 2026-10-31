@@ -14,6 +14,5 @@ proofread: true
 　　博物院及美術館主任溫納透露：該處將舉行一次本港考古學展覽會，現正由博物院籌辦中。
 
 <ReferenceBox>
-
 大公報，1964年10月7日，第1張第4版。
 </ReferenceBox>
