@@ -308,6 +308,13 @@ export default sidebar({
                 "/custom/sha-tin-tai-wai-village-jiao-festival.md",
               ]
             },            
+            {
+              text: "九十年一屆",
+              collapsible: true,
+              children: [
+                "/custom/lam-tsuen-tai-hang-fanling-wai-jiao-festival.md",
+              ]
+            },
           ]
         },
       ],
