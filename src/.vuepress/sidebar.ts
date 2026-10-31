@@ -1,5 +1,10 @@
 import { sidebar } from "vuepress-theme-hope";
 
+// 2026-10-31：以 `//` 或 `/* */` 註解起來的條目，對應的是「空殼頁」
+// （只有標題、尚無正文）。這些頁面已設 sitemap: false 與 robots noindex，
+// 為免讀者點進空白頁，暫時亦不在側邊欄顯示。
+// 補上正文後，刪除對應註解即可恢復顯示。
+
 export default sidebar({
   "/": [
     {
@@ -79,30 +84,33 @@ export default sidebar({
                 "/tropical-cyclone/1951-signal.md",
                 "/tropical-cyclone/1952-signal.md",
                 "/tropical-cyclone/1953-signal.md",
-                "/tropical-cyclone/1954-signal.md",
-                "/tropical-cyclone/1955-signal.md",
-                "/tropical-cyclone/1956-signal.md",
+                // "/tropical-cyclone/1954-signal.md",
+                // "/tropical-cyclone/1955-signal.md",
+                // "/tropical-cyclone/1956-signal.md",
                 "/tropical-cyclone/1957-signal.md",
-                "/tropical-cyclone/1958-signal.md",
-                "/tropical-cyclone/1959-signal.md",
+                // "/tropical-cyclone/1958-signal.md",
+                // "/tropical-cyclone/1959-signal.md",
               ]
             },
             {
               text: "1960年代警告信號",
               collapsible: true,
               children: [
-                "/tropical-cyclone/1960-signal.md",
-                "/tropical-cyclone/1961-signal.md",
+                // "/tropical-cyclone/1960-signal.md",
+                // "/tropical-cyclone/1961-signal.md",
                 "/tropical-cyclone/1962-signal.md",
-                "/tropical-cyclone/1963-signal.md",
-                "/tropical-cyclone/1964-signal.md",
-                "/tropical-cyclone/1965-signal.md",
-                "/tropical-cyclone/1966-signal.md",
-                "/tropical-cyclone/1967-signal.md",
-                "/tropical-cyclone/1968-signal.md",
-                "/tropical-cyclone/1969-signal.md",
+                // "/tropical-cyclone/1963-signal.md",
+                // "/tropical-cyclone/1964-signal.md",
+                // "/tropical-cyclone/1965-signal.md",
+                // "/tropical-cyclone/1966-signal.md",
+                // "/tropical-cyclone/1967-signal.md",
+                // "/tropical-cyclone/1968-signal.md",
+                // "/tropical-cyclone/1969-signal.md",
               ]
             },
+            // 1970–1990 年代各年條目目前皆為空殼頁（僅有標題、無正文），整組暫時隱藏。
+            // 補上正文後，刪除下面 `/*` 與 `*/` 兩行即可恢復。
+            /*
             {
               text: "1970年代警告信號",
               collapsible: true,
@@ -142,6 +150,7 @@ export default sidebar({
                 "/tropical-cyclone/1990-signal.md",
               ]
             },
+            */
           ]
         },
       ],
@@ -273,7 +282,7 @@ export default sidebar({
           children: [
             "/custom/lunar-new-year.md",
             "/custom/dragon-boat-festival.md",
-            "/custom/mid-autumn-festival.md",
+            // "/custom/mid-autumn-festival.md",
             "/custom/yu-lan-festival.md",
           ]
         },

@@ -3,6 +3,12 @@ title: 崇基書院
 author: false
 date: 2026-10-02
 description: 崇基書院（崇基學院）早期校史資料：整理《工商晚報》1951年關於基督教人士發起創辦崇基學院，以及李應林博士任院長的新聞報道。
+index: false
+sitemap: false
+head:
+  - - meta
+    - name: robots
+      content: noindex
 ---
 
 ## 新聞報道

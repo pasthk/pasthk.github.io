@@ -45,20 +45,16 @@
       <div v-if="noteText" class="reference-box-note">
         <p>{{ noteText }}</p>
       </div>
-      <!-- Hidden slot container: renders slot for text extraction -->
-      <div ref="slotRef" class="reference-box-slot-hidden">
-        <slot />
-      </div>
     </div>
   </div>
 </template>
 
 <script setup>
-import { computed, onBeforeUnmount, onMounted, ref } from "vue";
+import { computed, onBeforeUnmount, onMounted, ref, useSlots } from "vue";
 import { usePageData, useRoute } from "vuepress/client";
 
+const slots = useSlots();
 const copied = ref(false);
-const slotRef = ref();
 let timer;
 
 const page = usePageData();
@@ -69,66 +65,69 @@ const pageUrl = ref("");
 const hostname = "https://www.pasthk.com";
 const ssrUrl = hostname + (route?.path || "");
 
-// Parsed slot data — populated onMounted
-const sourceText = ref("");
-const noteText = ref("");
-
 onMounted(() => {
   pageUrl.value = window.location.href.split("#")[0].split("?")[0];
-
-  // Extract slot text from the hidden container
-  if (slotRef.value) {
-    const raw = slotRef.value.textContent.trim();
-    parseSlotText(raw);
-  }
 });
 
-function parseSlotText(raw) {
-  if (!raw) return;
-
-  // Remove "文獻出處：" prefix
-  let text = raw.replace(/^文獻出處：/, "").trim();
-
-  // Split source and note ("按：" on a new line)
-  const noteIdx = text.indexOf("\n按：");
-  if (noteIdx !== -1) {
-    sourceText.value = text.substring(0, noteIdx).trim();
-    noteText.value = text.substring(noteIdx + 1).trim();
-  } else {
-    // Also handle inline "按：" (without newline)
-    const inlineMatch = text.match(/^(.*?)。按：(.*?)$/s);
-    if (inlineMatch) {
-      sourceText.value = inlineMatch[1].trim() + "。";
-      noteText.value = "按：" + inlineMatch[2].trim();
-    } else {
-      sourceText.value = text;
-    }
+// Recursively extract plain text from VNodes (works in both SSR and client)
+function extractText(node) {
+  if (node === null || node === undefined || node === false) return "";
+  if (typeof node === "string") return node;
+  if (typeof node === "number") return String(node);
+  if (Array.isArray(node)) return node.map(extractText).join("");
+  if (typeof node === "object") {
+    if (typeof node.children === "string") return node.children;
+    if (Array.isArray(node.children)) return node.children.map(extractText).join("");
   }
+  return "";
 }
+
+const rawSlotText = computed(() => {
+  if (!slots.default) return "";
+  return extractText(slots.default()).trim();
+});
+
+// Split slot text into source (without "文獻出處：" prefix) and optional "按：" note
+const parsedSlot = computed(() => {
+  let text = rawSlotText.value.replace(/^文獻出處：/, "").trim();
+
+  if (!text) return { source: "", note: "" };
+
+  // Note on its own line
+  let m = text.match(/^([\s\S]*?)\r?\n\s*按：([\s\S]*)$/);
+  if (m) {
+    return { source: m[1].trim(), note: "按：" + m[2].trim() };
+  }
+
+  // Inline note right after the source
+  m = text.match(/^([\s\S]*?[。）])\s*按：([\s\S]*)$/);
+  if (m) {
+    return { source: m[1].trim(), note: "按：" + m[2].trim() };
+  }
+
+  return { source: text, note: "" };
+});
+
+const noteText = computed(() => parsedSlot.value.note);
 
 const citation = computed(() => {
   const fm = page.value?.frontmatter || {};
   const title = fm.title || page.value?.title || "";
   const siteName = "香港文獻類編";
   const url = pageUrl.value || ssrUrl;
-  const source = sourceText.value;
 
-  // Format: 標題，文獻出處內容。網站名稱，網址
-  let parts = [];
-
-  if (title) {
-    parts.push(title + "，");
+  let source = parsedSlot.value.source.trim();
+  if (source && !/[。！？]$/.test(source)) {
+    source += "。";
   }
 
-  if (source) {
-    parts.push(source);
-  }
+  // Format: 新聞標題，報刊名稱，年月日，頁碼。網站名稱，網址。
+  const parts = [];
 
+  if (title) parts.push(title + "，");
+  if (source) parts.push(source);
   parts.push(siteName + "，");
-
-  if (url) {
-    parts.push(url);
-  }
+  if (url) parts.push(url);
 
   return parts.join("");
 });
@@ -169,7 +168,7 @@ onBeforeUnmount(() => {
   margin: 1.5rem 0;
   border: 1px solid var(--vp-c-border);
   border-radius: 0.5rem;
-  background: var(--vp-c-bg-alt);
+  background: #fff;
   overflow: hidden;
 }
 
@@ -179,7 +178,7 @@ onBeforeUnmount(() => {
   justify-content: space-between;
   padding: 0.5rem 1rem;
   border-bottom: 1px solid var(--vp-c-border);
-  background: var(--vp-c-bg);
+  background: #fff;
 }
 
 .reference-box-label {
@@ -241,9 +240,5 @@ onBeforeUnmount(() => {
 
 .reference-box-note p {
   margin: 0;
-}
-
-.reference-box-slot-hidden {
-  display: none;
 }
 </style>
