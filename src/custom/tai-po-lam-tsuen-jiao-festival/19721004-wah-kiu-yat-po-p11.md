@@ -23,6 +23,5 @@ proofread: false
 
 <ReferenceBox>
 
-文獻出處："華僑日報"，1972年10月4日，第3張第3頁。
-
+華僑日報，1972年10月4日，第3張第3頁。
 </ReferenceBox>

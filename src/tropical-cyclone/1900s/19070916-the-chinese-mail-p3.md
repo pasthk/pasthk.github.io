@@ -13,6 +13,5 @@ proofread: false
 
 <ReferenceBox>
 
-文獻出處："香港華字日報"，1907年9月16日，第3頁。
-
+香港華字日報，1907年9月16日，第3頁。
 </ReferenceBox>

@@ -17,6 +17,5 @@ proofread: true
 
 <ReferenceBox>
 
-文獻出處："工商晚報"，1971年10月29日，第1頁。
-
+工商晚報，1971年10月29日，第1頁。
 </ReferenceBox>

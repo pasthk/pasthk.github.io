@@ -15,6 +15,5 @@ proofread: true
 
 <ReferenceBox>
 
-文獻出處："工商晚報"，1950年10月5日，第4頁。
-
+工商晚報，1950年10月5日，第4頁。
 </ReferenceBox>

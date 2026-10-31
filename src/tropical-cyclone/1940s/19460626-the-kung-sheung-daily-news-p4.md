@@ -15,6 +15,5 @@ proofread: true
 
 <ReferenceBox>
 
-文獻出處："工商日報"，1946年6月26日，第4頁。
-
+工商日報，1946年6月26日，第4頁。
 </ReferenceBox>

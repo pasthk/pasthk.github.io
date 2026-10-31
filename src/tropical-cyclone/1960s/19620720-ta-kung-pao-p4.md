@@ -14,6 +14,5 @@ proofread: true
 
 <ReferenceBox>
 
-文獻出處："大公報"，1962年7月20日，第1張；第4版。
-
+大公報，1962年7月20日，第1張；第4版。
 </ReferenceBox>

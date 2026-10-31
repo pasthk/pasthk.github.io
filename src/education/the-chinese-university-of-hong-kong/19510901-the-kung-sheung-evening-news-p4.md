@@ -14,6 +14,5 @@ proofread: true
 
 <ReferenceBox>
 
-文獻出處："工商晚報"，1951年9月1日，第4頁。
-
+工商晚報，1951年9月1日，第4頁。
 </ReferenceBox>

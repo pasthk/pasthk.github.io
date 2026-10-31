@@ -13,6 +13,5 @@ proofread: true
 
 <ReferenceBox>
 
-文獻出處："香港華字日報"，1897年11月27日，第3頁。
-
+香港華字日報，1897年11月27日，第3頁。
 </ReferenceBox>

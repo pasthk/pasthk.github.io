@@ -13,6 +13,5 @@ proofread: true
 
 <ReferenceBox>
 
-文獻出處："工商晚報"，1962年8月30日，第4頁。
-
+工商晚報，1962年8月30日，第4頁。
 </ReferenceBox>

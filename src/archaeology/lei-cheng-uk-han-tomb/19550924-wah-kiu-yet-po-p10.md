@@ -26,6 +26,5 @@ proofread: false
 
 <ReferenceBox>
 
-文獻出處："華僑日報"，1955年9月24日，第3張第2頁。
-
+華僑日報，1955年9月24日，第3張第2頁。
 </ReferenceBox>

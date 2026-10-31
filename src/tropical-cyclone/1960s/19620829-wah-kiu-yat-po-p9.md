@@ -24,6 +24,5 @@ proofread: true
 
 <ReferenceBox>
 
-文獻出處："華僑日報"，1962年8月29日，第3張第1頁。
-
+華僑日報，1962年8月29日，第3張第1頁。
 </ReferenceBox>

@@ -17,6 +17,5 @@ proofread: true
 
 <ReferenceBox>
 
-文獻出處："華僑日報"，1971年6月19日，第2張第2頁。
-
+華僑日報，1971年6月19日，第2張第2頁。
 </ReferenceBox>

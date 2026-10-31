@@ -13,6 +13,5 @@ proofread: true
 
 <ReferenceBox>
 
-文獻出處："華僑日報"，1964年10月7日，第4張第3頁。
-
+華僑日報，1964年10月7日，第4張第3頁。
 </ReferenceBox>

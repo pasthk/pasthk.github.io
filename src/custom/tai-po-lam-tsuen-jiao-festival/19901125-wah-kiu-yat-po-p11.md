@@ -34,5 +34,4 @@ proofread: false
 <ReferenceBox>
 
 華僑日報，1990年11月25日，頁11。
-
 </ReferenceBox>

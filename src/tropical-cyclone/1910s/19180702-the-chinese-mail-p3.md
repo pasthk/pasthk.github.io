@@ -13,6 +13,5 @@ proofread: true
 
 <ReferenceBox>
 
-文獻出處："香港華字日報"，1918年7月2日，第3頁。
-
+香港華字日報，1918年7月2日，第3頁。
 </ReferenceBox>

@@ -19,6 +19,5 @@ proofread: false
 
 <ReferenceBox>
 
-文獻出處："工商日報"，1930年8月22日，第3張第1頁。
-
+工商日報，1930年8月22日，第3張第1頁。
 </ReferenceBox>

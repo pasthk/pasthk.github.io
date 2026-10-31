@@ -44,6 +44,5 @@ proofread: false
 
 <ReferenceBox>
 
-文獻出處："香港華字日報"，1904年6月27日，第3頁。
-
+香港華字日報，1904年6月27日，第3頁。
 </ReferenceBox>

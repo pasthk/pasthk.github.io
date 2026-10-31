@@ -13,6 +13,5 @@ proofread: true
 
 <ReferenceBox>
 
-文獻出處："香港華字日報"，1924年7月18日，第9頁。
-
+香港華字日報，1924年7月18日，第9頁。
 </ReferenceBox>

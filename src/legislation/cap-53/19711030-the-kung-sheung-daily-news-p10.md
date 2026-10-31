@@ -21,6 +21,5 @@ proofread: true
 
 <ReferenceBox>
 
-文獻出處："工商日報"，1971年10月30日，第10頁。
-
+工商日報，1971年10月30日，第10頁。
 </ReferenceBox>

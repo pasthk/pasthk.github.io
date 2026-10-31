@@ -13,6 +13,5 @@ proofread: true
 
 <ReferenceBox>
 
-文獻出處："工商晚報"，1932年9月16日，第4版。
-
+工商晚報，1932年9月16日，第4版。
 </ReferenceBox>

@@ -28,6 +28,5 @@ proofread: false
 
 <ReferenceBox>
 
-文獻出處："工商日報"，1935年10月8日，第3張第1版。
-
+工商日報，1935年10月8日，第3張第1版。
 </ReferenceBox>

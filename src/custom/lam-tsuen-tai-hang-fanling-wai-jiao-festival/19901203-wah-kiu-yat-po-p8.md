@@ -33,6 +33,5 @@ proofread: false
 
 <ReferenceBox>
 
-文獻出處："華僑日報"，1990年12月3日，頁8。
-
+華僑日報，1990年12月3日，頁8。
 </ReferenceBox>

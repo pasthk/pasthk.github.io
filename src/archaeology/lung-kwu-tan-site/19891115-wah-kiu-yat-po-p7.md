@@ -23,6 +23,5 @@ proofread: false
 
 <ReferenceBox>
 
-文獻出處："華僑日報"，1989年11月15日，第7頁。
-
+華僑日報，1989年11月15日，第7頁。
 </ReferenceBox>

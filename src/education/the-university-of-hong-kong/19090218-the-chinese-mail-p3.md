@@ -37,6 +37,5 @@ proofread: true
 
 <ReferenceBox>
 
-文獻出處："香港華字日報"，1909年2月18日，第3頁。
-
+香港華字日報，1909年2月18日，第3頁。
 </ReferenceBox>

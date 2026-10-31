@@ -31,6 +31,5 @@ proofread: true
 
 <ReferenceBox>
 
-文獻出處："工商日報"，1955年8月10日，第5頁。
-
+工商日報，1955年8月10日，第5頁。
 </ReferenceBox>

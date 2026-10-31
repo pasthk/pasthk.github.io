@@ -13,6 +13,5 @@ proofread: true
 
 <ReferenceBox>
 
-文獻出處："工商日報"，1932年5月19日，第3張第3版。
-
+工商日報，1932年5月19日，第3張第3版。
 </ReferenceBox>

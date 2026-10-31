@@ -13,6 +13,5 @@ proofread: false
 
 <ReferenceBox>
 
-文獻出處："香港華字日報"，1905年8月31日，第3頁。
-
+香港華字日報，1905年8月31日，第3頁。
 </ReferenceBox>

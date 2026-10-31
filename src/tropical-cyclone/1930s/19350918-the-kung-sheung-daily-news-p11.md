@@ -45,6 +45,5 @@ proofread: false
 
 <ReferenceBox>
 
-文獻出處："工商日報"，1935年9月18日，第3張第3版。
-
+工商日報，1935年9月18日，第3張第3版。
 </ReferenceBox>

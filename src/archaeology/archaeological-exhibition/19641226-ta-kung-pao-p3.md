@@ -30,6 +30,5 @@ proofread: false
 
 <ReferenceBox>
 
-文獻出處："大公報"，1964年12月26日，第1張第3版。
-
+大公報，1964年12月26日，第1張第3版。
 </ReferenceBox>

@@ -21,6 +21,5 @@ proofread: false
 
 <ReferenceBox>
 
-文獻出處："工商晚報"，1955年8月11日，第10頁。
-
+工商晚報，1955年8月11日，第10頁。
 </ReferenceBox>

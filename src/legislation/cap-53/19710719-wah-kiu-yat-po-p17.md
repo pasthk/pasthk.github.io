@@ -43,6 +43,5 @@ proofread: true
 
 <ReferenceBox>
 
-文獻出處："華僑日報"，1971年7月19日，第5張第1頁。
-
+華僑日報，1971年7月19日，第5張第1頁。
 </ReferenceBox>

@@ -19,6 +19,5 @@ proofread: true
 
 <ReferenceBox>
 
-文獻出處："香港華字日報"，1909年2月17日，第4頁。
-
+香港華字日報，1909年2月17日，第4頁。
 </ReferenceBox>

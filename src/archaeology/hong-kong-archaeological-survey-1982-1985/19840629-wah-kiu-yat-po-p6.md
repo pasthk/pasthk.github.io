@@ -47,6 +47,5 @@ proofread: true
 
 <ReferenceBox>
 
-文獻出處："華僑日報"，1984年6月29日，第2張第2頁。
-
+華僑日報，1984年6月29日，第2張第2頁。
 </ReferenceBox>

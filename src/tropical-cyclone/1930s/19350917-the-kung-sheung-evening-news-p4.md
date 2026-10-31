@@ -19,6 +19,5 @@ proofread: false
 
 <ReferenceBox>
 
-文獻出處："工商晚報"，1935年9月17日，第4版。
-
+工商晚報，1935年9月17日，第4版。
 </ReferenceBox>

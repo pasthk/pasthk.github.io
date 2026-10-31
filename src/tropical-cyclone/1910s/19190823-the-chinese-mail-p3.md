@@ -13,6 +13,5 @@ proofread: false
 
 <ReferenceBox>
 
-文獻出處："香港華字日報"，1919年8月23日，第3頁。
-
+香港華字日報，1919年8月23日，第3頁。
 </ReferenceBox>

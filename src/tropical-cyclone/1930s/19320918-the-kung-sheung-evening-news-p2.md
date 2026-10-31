@@ -16,5 +16,4 @@ proofread: false
 <ReferenceBox>
 
 文獻出處："工商晚報早刊"，1932年9月18日，第2版。
-
 </ReferenceBox>

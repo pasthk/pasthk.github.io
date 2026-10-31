@@ -138,9 +138,7 @@ proofread: false
 <ReferenceBox>
 
 文獻出處：港督盧制軍香港大學堂勸捐啟譯文並序（香港：中環和盛印字館，1909年2月）。
-
 </ReferenceBox>
-
 
 [^1]: 薄葫林道，即薄扶林道。
 [^2]: 列士（Leicester），即萊斯特大學之音譯。

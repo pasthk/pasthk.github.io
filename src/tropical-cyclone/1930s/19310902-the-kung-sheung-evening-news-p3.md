@@ -22,6 +22,5 @@ proofread: false
 
 <ReferenceBox>
 
-文獻出處："工商晚報"，1931年9月2日，第3版。
-
+工商晚報，1931年9月2日，第3版。
 </ReferenceBox>

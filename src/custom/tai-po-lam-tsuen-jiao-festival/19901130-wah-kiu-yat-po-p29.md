@@ -25,6 +25,5 @@ proofread: false
 
 <ReferenceBox>
 
-文獻出處："華僑日報"，1990年11月30日，頁29。
-
+華僑日報，1990年11月30日，頁29。
 </ReferenceBox>

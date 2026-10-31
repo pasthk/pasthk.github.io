@@ -15,6 +15,5 @@ proofread: true
 
 <ReferenceBox>
 
-文獻出處："大公報"，1963年12月7日，第1張；第3版。
-
+大公報，1963年12月7日，第1張；第3版。
 </ReferenceBox>

@@ -39,6 +39,5 @@ proofread: false
 
 <ReferenceBox>
 
-文獻出處："工商日報"，1932年9月17日，第3張第1版。
-
+工商日報，1932年9月17日，第3張第1版。
 </ReferenceBox>

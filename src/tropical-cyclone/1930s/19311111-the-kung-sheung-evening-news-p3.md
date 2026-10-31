@@ -19,6 +19,5 @@ proofread: false
 
 <ReferenceBox>
 
-文獻出處："工商晚報"，1931年11月11日，第3版。
-
+工商晚報，1931年11月11日，第3版。
 </ReferenceBox>

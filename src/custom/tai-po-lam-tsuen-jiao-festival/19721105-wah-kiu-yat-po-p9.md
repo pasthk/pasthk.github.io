@@ -19,6 +19,5 @@ proofread: false
 
 <ReferenceBox>
 
-文獻出處："華僑日報"，1972年11月5日，第3張第1頁。
-
+華僑日報，1972年11月5日，第3張第1頁。
 </ReferenceBox>

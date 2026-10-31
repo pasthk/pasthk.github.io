@@ -13,6 +13,5 @@ proofread: false
 
 <ReferenceBox>
 
-文獻出處："工商日報"，1927年2月28日，第3張第3版。
-
+工商日報，1927年2月28日，第3張第3版。
 </ReferenceBox>

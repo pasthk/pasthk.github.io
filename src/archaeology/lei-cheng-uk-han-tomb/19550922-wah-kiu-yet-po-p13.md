@@ -70,6 +70,5 @@ proofread: false
 
 <ReferenceBox>
 
-文獻出處："華僑日報"，1955年9月22日，第4張第1頁。
-
+華僑日報，1955年9月22日，第4張第1頁。
 </ReferenceBox>

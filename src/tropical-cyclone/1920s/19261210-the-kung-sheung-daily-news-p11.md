@@ -13,6 +13,5 @@ proofread: false
 
 <ReferenceBox>
 
-文獻出處："工商日報"，1926年12月10日，第3張第1頁。
-
+工商日報，1926年12月10日，第3張第1頁。
 </ReferenceBox>

@@ -13,6 +13,5 @@ proofread: true
 
 <ReferenceBox>
 
-文獻出處："大公報"，1963年10月5日，第2張；第5版。
-
+大公報，1963年10月5日，第2張；第5版。
 </ReferenceBox>

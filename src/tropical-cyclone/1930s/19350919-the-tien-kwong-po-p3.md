@@ -15,6 +15,5 @@ proofread: false
 
 <ReferenceBox>
 
-文獻出處："天光報"，1935年9月19日，第3版。
-
+天光報，1935年9月19日，第3版。
 </ReferenceBox>

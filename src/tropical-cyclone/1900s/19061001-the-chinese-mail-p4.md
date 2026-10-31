@@ -15,6 +15,5 @@ proofread: false
 
 <ReferenceBox>
 
-文獻出處："香港華字日報"，1906年10月1日，第4頁。
-
+香港華字日報，1906年10月1日，第4頁。
 </ReferenceBox>

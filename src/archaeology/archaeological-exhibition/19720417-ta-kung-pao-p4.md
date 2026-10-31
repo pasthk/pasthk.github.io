@@ -13,6 +13,5 @@ proofread: true
 
 <ReferenceBox>
 
-文獻出處："大公報"，1972年4月17日，第1張；第4版。
-
+大公報，1972年4月17日，第1張；第4版。
 </ReferenceBox>

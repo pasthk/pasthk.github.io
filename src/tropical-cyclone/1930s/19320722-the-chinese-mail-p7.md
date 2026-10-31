@@ -53,6 +53,5 @@ proofread: false
 
 <ReferenceBox>
 
-文獻出處："香港華字日報"，1932年7月22日，第2張第3頁。
-
+香港華字日報，1932年7月22日，第2張第3頁。
 </ReferenceBox>
