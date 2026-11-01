@@ -5,6 +5,10 @@
 User-agent: *
 Allow: /
 
+# 每頁另有一份 .md 純文字版（供 AI 檢索器取用，目錄見 llms.txt），內容與 .html 完全相同。
+# 不讓搜尋引擎收錄，避免與正式頁面重複而分散排名；下方各 AI 爬蟲的 Allow: / 不受此限。
+Disallow: /*.md$
+
 # --- 生成式 AI 檢索與訓練爬蟲（明確允許，避免日後被主機或 CDN 規則誤封）---
 
 User-agent: GPTBot

@@ -2,8 +2,10 @@ import { fileURLToPath } from "node:url";
 import { viteBundler } from "@vuepress/bundler-vite";
 import { defineUserConfig } from "vuepress";
 import { ogImagePlugin } from "./og/plugin.js";
+import { llms } from "./llms.js";
 import { robotsPlugin } from "./robots.js";
 import theme from "./theme.js";
+import { llmsPlugin } from "@vuepress/plugin-llms";
 
 type AliasEntry = { find: string | RegExp; replacement: string };
 
@@ -48,5 +50,12 @@ export default defineUserConfig({
     ],
   ],
   theme,
-  plugins: [ogImagePlugin(), robotsPlugin()],
+  plugins: [
+    llmsPlugin(
+      {
+        llmsTxt: true,
+        llmsPageTxt: true,
+      },
+    ), 
+    ogImagePlugin(), robotsPlugin()],
 });
