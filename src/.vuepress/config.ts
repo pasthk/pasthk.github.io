@@ -1,6 +1,7 @@
 import { fileURLToPath } from "node:url";
 import { viteBundler } from "@vuepress/bundler-vite";
 import { defineUserConfig } from "vuepress";
+import { robotsPlugin } from "./robots.js";
 import theme from "./theme.js";
 
 type AliasEntry = { find: string | RegExp; replacement: string };
@@ -46,4 +47,5 @@ export default defineUserConfig({
     ],
   ],
   theme,
+  plugins: [robotsPlugin()],
 });

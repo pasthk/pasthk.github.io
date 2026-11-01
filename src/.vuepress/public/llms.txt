@@ -1,0 +1,149 @@
+# 香港文獻類編
+
+> 以歷史事件為核心的香港文獻索引。轉錄 1890–1990 年代香港舊報紙、政府公報、
+> 調查報告與研究論著原文，按事件集中編排，每篇保留報刊名稱、日期、版次與頁碼，
+> 可直接引用。
+
+An event-centred documentary index of Hong Kong history: full-text transcriptions of
+Hong Kong newspapers (1890s–1990s), government reports and scholarly works, grouped by
+event, with newspaper title, date, edition and page number preserved for citation.
+
+- 網址：https://www.pasthk.com
+- 語言：繁體中文（zh-Hant）
+- 編者：NG, KIN CHUNG
+- 規模：約 200 個頁面，全部為伺服器端渲染的靜態 HTML，無需 JavaScript 即可取得全文
+- 完整頁面清單：https://www.pasthk.com/sitemap.xml
+- 版權與使用：https://www.pasthk.com/about.html
+
+## 本站性質
+
+本站不是新聞網站，也不是百科全書，而是**史料的一級轉錄**。
+
+每一頁對應一份具體的原始文獻（多為 1950–1990 年代的香港中文報紙），內容包括：
+
+1. 該文獻的完整轉錄文字（部分經 OCR 校對）
+2. 文獻的報刊名稱、出版日期、版次、頁碼
+3. 該頁底部的標準引用字串
+
+本站**不加入個人評論**，不對史實作判斷。若同一事件有多篇報道，會並列呈現，
+讓讀者自行比對不同報刊的說法差異。這一點在引用時請注意：頁面內容代表的是
+**當時報刊的記述**，而非經考證的結論。
+
+## 章節
+
+### 香港熱帶氣旋與風球紀錄
+
+1897–1962 年香港的風球（熱帶氣旋警告信號）紀錄，按年份與事件編排，
+收錄《士蔑西報》《華僑日報》《工商日報》等報刊的颱風報道。
+
+- [1932 年風球紀錄](https://www.pasthk.com/tropical-cyclone/1932-signal.html)
+- [1946 年風球紀錄](https://www.pasthk.com/tropical-cyclone/1946-signal.html)
+- [1957 年風球紀錄](https://www.pasthk.com/tropical-cyclone/1957-signal.html)
+- [1962 年風球紀錄](https://www.pasthk.com/tropical-cyclone/1962-signal.html)
+
+### 香港考古
+
+戰後香港的考古調查、發掘與展覽紀錄，含李鄭屋漢墓、九龍寨城、龍津石橋、
+佛頭洲與深灣等遺址。
+
+- [李鄭屋漢墓](https://www.pasthk.com/archaeology/lei-cheng-uk-han-tomb.html)
+- [九龍寨城](https://www.pasthk.com/archaeology/kowloon-walled-city.html)
+- [香港考古及出土文物展覽](https://www.pasthk.com/archaeology/archaeological-exhibition.html)
+- [香港考古調查（1982–1985）](https://www.pasthk.com/archaeology/hong-kong-archaeological-survey-1982-1985.html)
+- [全港文物普查（1997–1998）](https://www.pasthk.com/archaeology/hong-kong-archaeological-survey-1997-1998.html)
+
+### 香港傳統節慶與打醮
+
+太平清醮、盂蘭勝會、天后誕等節慶的報刊紀錄，重點在十年一屆或五年一屆的
+鄉村建醮活動。
+
+- [長洲太平清醮](https://www.pasthk.com/custom/cheung-chau-jiao-festival.html)
+- [大埔林村鄉太平清醮](https://www.pasthk.com/custom/tai-po-lam-tsuen-jiao-festival.html)
+- [林村、泰亨、粉嶺圍三鄉太平清醮](https://www.pasthk.com/custom/lam-tsuen-tai-hang-fanling-wai-jiao-festival.html)
+- [元朗太平清醮](https://www.pasthk.com/custom/yuen-long-jiao-festival.html)
+- [盂蘭勝會](https://www.pasthk.com/custom/yu-lan-festival.html)
+
+### 香港教育史文獻
+
+香港大學、中文大學、崇基書院、羅富國教育學院、理工大學與演藝學院的
+創校與發展紀錄。
+
+- [香港大學](https://www.pasthk.com/education/the-university-of-hong-kong.html)
+- [香港中文大學](https://www.pasthk.com/education/the-chinese-university-of-hong-kong.html)
+- [崇基書院](https://www.pasthk.com/education/chung-chi-college.html)
+- [羅富國教育學院](https://www.pasthk.com/education/northcote-college-of-education.html)
+
+### 香港法例文獻
+
+條例草案與立法過程的報刊紀錄，以及條例本身的整理。
+
+- [第53章　古物及古蹟條例](https://www.pasthk.com/legislation/cap-53-antiquities-and-monuments-ordinance.html)
+- [第1053章　香港大學條例](https://www.pasthk.com/legislation/cap-1053-university-of-hong-kong-ordinance.html)
+- [第499章　環境影響評估條例](https://www.pasthk.com/legislation/cap-499-environmental-impact-assessment-ordinance.html)
+- [立法會](https://www.pasthk.com/legislation/legislative-council.html)
+
+### 香港公共衛生史
+
+霍亂、鼠疫、流行性感冒等疫症的報刊與官方紀錄。
+
+- [鼠疫](https://www.pasthk.com/public-health/plague.html)
+- [霍亂](https://www.pasthk.com/public-health/cholera.html)
+- [流行性感冒](https://www.pasthk.com/public-health/influenza.html)
+
+### 香港碑刻
+
+廟宇與建築碑記的釋文與背景。
+
+- [九龍城侯王廟](https://www.pasthk.com/stele-inscription/hau-wong-temple-kowloon-city.html)
+- [黃大仙嗇色園](https://www.pasthk.com/stele-inscription/sik-sik-yuen-wang-tai-sin.html)
+- [九龍宋皇臺](https://www.pasthk.com/stele-inscription/sung-wong-toi-site-kowloon.html)
+- [東華三院](https://www.pasthk.com/stele-inscription/tung-wah-group-of-hospitals.html)
+
+### 香港歷史建築
+
+- [居石侯公祠](https://www.pasthk.com/historic-building/hau-ku-shek-ancestral-hall.html)
+- [味峰侯公祠](https://www.pasthk.com/historic-building/hau-mei-fung-ancestral-hall.html)
+- [達德公所](https://www.pasthk.com/historic-building/tat-tak-communal-hall.html)
+
+### 專題：安陽・一九二八
+
+1928 年中央研究院歷史語言研究所安陽殷墟第一次發掘的論著、報告與新聞報道。
+此專題不屬香港主題，為編者的另一研究項目。
+
+- [安陽・一九二八](https://www.pasthk.com/project/ay1928/)
+
+## 引用格式
+
+本站每頁底部均提供可直接複製的引用字串，格式為：
+
+```
+篇名，報刊，YYYY年M月D日，第X張第X頁。
+香港文獻類編，https://www.pasthk.com/<路徑>
+```
+
+實例：
+
+```
+古塚出現，華僑日報，1955年8月10日，第2張第1頁。
+香港文獻類編，https://www.pasthk.com/archaeology/lei-cheng-uk-han-tomb/19550810-wah-kiu-yat-po-p5.html
+```
+
+以機器可讀格式引用時，建議使用：
+
+- 篇名 → 頁面的 `h1` 或 `og:title`
+- 報刊名稱、日期、版次 → 頁面的 `datePublished` 與引用字串
+- 原始文獻日期 → `datePublished`（史料出版日，非本站上線日）
+- 本站收錄日期 → `dateCreated`
+
+## 資料限制
+
+- 轉錄以報刊原文為準，保留當時的用字、標點與排版習慣，**未統一為現代標準用語**
+- 部分頁面為 OCR 結果，可能存在個別錯字，重要引用前建議核對原報
+- 同一事件的不同報道可能互相矛盾，本站並列而不裁決
+- 部分年份頁仍在整理中，內容尚未完整，未列入 sitemap
+
+## 聯絡
+
+- 關於本站：https://www.pasthk.com/about.html
+- 閱讀及資料說明：https://www.pasthk.com/reading-notes.html
+- 支持本站：https://www.pasthk.com/support.html
