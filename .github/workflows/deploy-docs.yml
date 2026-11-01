@@ -24,11 +24,18 @@ concurrency:
   group: pages
   cancel-in-progress: true
 
+env:
+  # 正式站台網址（apex 會 301 轉向 www，因此統一使用 www）。
+  SITE_URL: https://www.pasthk.com
+  # IndexNow 金鑰，同時是 src/.vuepress/public/ 下的檔名與內容；金鑰本質為公開資訊。
+  INDEXNOW_KEY: f9dca700fbd94297a45a2e9911791bd4
+
 jobs:
   build:
     runs-on: ubuntu-24.04
     outputs:
-      baidu_urls: ${{ steps.collect-baidu-urls.outputs.urls }}
+      new_urls: ${{ steps.collect-changed-urls.outputs.new_urls }}
+      changed_urls: ${{ steps.collect-changed-urls.outputs.changed_urls }}
 
     steps:
       - name: Checkout repository
@@ -92,8 +99,8 @@ jobs:
       - name: Build VuePress site
         run: npm run docs:build
 
-      - name: Collect new URLs for Baidu
-        id: collect-baidu-urls
+      - name: Collect changed URLs
+        id: collect-changed-urls
         env:
           BEFORE_SHA: ${{ github.event.before }}
           AFTER_SHA: ${{ github.sha }}
@@ -104,28 +111,43 @@ jobs:
 
           const before = process.env.BEFORE_SHA;
           const after = process.env.AFTER_SHA;
-          const urls = [];
           const base = before || execFileSync("git", ["rev-parse", `${after}^`], { encoding: "utf8" }).trim();
 
+          // 新頁面（A/R）給百度：百度有每日配額，只送新增頁以免浪費。
+          // 變更頁面（A/M/R）給 IndexNow：Bing 等引擎希望收到內容更新通知。
+          let newUrls = [];
+          let changedUrls = [];
+
           if (base && !/^0+$/.test(base)) {
-            const changedFiles = execFileSync(
-              "git",
-              ["diff", "--name-only", "--diff-filter=AR", "-z", base, after, "--", "src"],
-              { encoding: "utf8" },
-            )
-              .split("\0")
-              .filter((file) => file.endsWith(".md"));
             const routesSource = readFileSync("src/.vuepress/.temp/internal/routes.js", "utf8");
             const routes = [...routesSource.matchAll(/^\s*\["([^"]+)", \{ loader: \(\) => import\([^)]*?"([^"]+\.md)"\)/gm)];
 
-            for (const file of changedFiles) {
-              const route = routes.find(([, , source]) => source.endsWith(`/src/${file.slice("src/".length)}`))?.[1];
-              if (route) urls.push(`https://www.pasthk.com${route}`);
-            }
+            const toUrls = (filter) => {
+              const files = execFileSync(
+                "git",
+                ["diff", "--name-only", `--diff-filter=${filter}`, "-z", base, after, "--", "src"],
+                { encoding: "utf8" },
+              )
+                .split("\0")
+                .filter((file) => file.endsWith(".md"));
+
+              const urls = files
+                .map((file) => routes.find(([, , source]) => source.endsWith(`/src/${file.slice("src/".length)}`))?.[1])
+                .filter(Boolean)
+                .map((route) => `${process.env.SITE_URL}${route}`);
+
+              return [...new Set(urls)];
+            };
+
+            newUrls = toUrls("AR");
+            changedUrls = toUrls("AMR");
           }
 
-          appendFileSync(process.env.GITHUB_OUTPUT, `urls=${JSON.stringify([...new Set(urls)])}\n`);
-          console.log(`Collected ${urls.length} new page URL(s) for Baidu.`);
+          appendFileSync(
+            process.env.GITHUB_OUTPUT,
+            `new_urls=${JSON.stringify(newUrls)}\nchanged_urls=${JSON.stringify(changedUrls)}\n`,
+          );
+          console.log(`Collected ${newUrls.length} new and ${changedUrls.length} changed page URL(s).`);
           NODE
 
       - name: Upload Pages artifact
@@ -145,10 +167,49 @@ jobs:
         id: deployment
         uses: actions/deploy-pages@v5.0.1
 
+      # 先送 IndexNow 再送百度：百度步驟在超額以外的錯誤會拋錯中斷，不應連累 IndexNow。
+      - name: Submit URLs to IndexNow
+        env:
+          CHANGED_URLS_JSON: ${{ needs.build.outputs.changed_urls }}
+        run: |
+          node --input-type=module <<'NODE'
+          const host = new URL(process.env.SITE_URL).host;
+          const key = process.env.INDEXNOW_KEY;
+          const urls = JSON.parse(process.env.CHANGED_URLS_JSON || "[]");
+
+          if (urls.length === 0) {
+            console.log("No changed Markdown pages; skipping IndexNow submission.");
+            process.exit(0);
+          }
+
+          const response = await fetch("https://api.indexnow.org/indexnow", {
+            method: "POST",
+            headers: { "Content-Type": "application/json; charset=utf-8" },
+            body: JSON.stringify({
+              host,
+              key,
+              keyLocation: `${process.env.SITE_URL}/${key}.txt`,
+              urlList: urls,
+            }),
+          });
+
+          const detail = (await response.text()).trim();
+          console.log(`IndexNow responded ${response.status}${detail ? `: ${detail}` : ""}`);
+
+          // 200 = 已提交；202 = 已接受（金鑰仍在驗證中）。兩者都算成功。
+          if (response.ok) {
+            console.log(`Submitted ${urls.length} URL(s) to IndexNow.`);
+          } else if (response.status === 429) {
+            console.warn("IndexNow rate-limited this request; skipping without failing deployment.");
+          } else {
+            throw new Error(`IndexNow submission failed with HTTP ${response.status}`);
+          }
+          NODE
+
       - name: Submit URLs to Baidu
         env:
           BAIDU_API_URL: ${{ secrets.BAIDU_API_URL }}
-          BAIDU_URLS_JSON: ${{ needs.build.outputs.baidu_urls }}
+          BAIDU_URLS_JSON: ${{ needs.build.outputs.new_urls }}
         run: |
           node --input-type=module <<'NODE'
           const urls = JSON.parse(process.env.BAIDU_URLS_JSON || "[]");
