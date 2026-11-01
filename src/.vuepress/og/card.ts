@@ -1,6 +1,13 @@
 // OG 分享卡片的 SVG 產生器。
-// 只做純字串組裝，不依賴任何渲染器，也不嵌入字型檔——
-// 文字交給瀏覽器以本機襯線體繪製，輸出的 SVG 只有兩三 KB。
+//
+// 預設走「文字轉路徑」模式：傳入 GlyphRenderer 時，卡片上所有文字都會
+// 被換成 <path>，輸出檔不含任何 <text>，因此不需要字型也能在任何裝置、
+// 任何平台上正確顯示（詳見 glyphs.ts 的說明）。
+//
+// 未傳入 renderer 時退回 <text> 輸出，僅作為字型載入失敗時的降級方案——
+// 那種情況下圖形仍然正確，只是文字依賴觀看端有沒有安裝中文字型。
+
+import type { GlyphRenderer } from "./glyphs.js";
 
 export const CARD_WIDTH = 1200;
 export const CARD_HEIGHT = 630;
@@ -13,13 +20,9 @@ const COLOR = {
   rule: "#d8d2c4",
 };
 
-// 依序退回本機可用的襯線體：macOS 宋體 → 思源宋體 → Windows 新細明體 → 通用 serif。
+// 降級模式下依序退回本機可用的襯線體。
 const SERIF =
   "'Songti SC','Songti TC','Noto Serif TC','Noto Serif CJK TC','Source Han Serif TC',SimSun,serif";
-
-// 內嵌字型時使用的字型名。librsvg 只認 SVG 內 @font-face 宣告的名稱，
-// 不會去查系統已安裝的字型，因此兩套名稱分開處理。
-const EMBEDDED_FONT = "NotoSerifTC";
 
 const PAD_LEFT = 96;
 const PAD_RIGHT = 96;
@@ -43,30 +46,90 @@ function charWidth(char: string, size: number): number {
 // 行首不宜出現的標點，遇到時併回上一行，避免出現孤零零的逗號句號。
 const NO_LINE_START = "、。，．：；！？）」』》】…·%";
 
+/**
+ * 依可用寬度截斷單行文字，超出時以省略號收尾。
+ *
+ * meta 由 ReferenceBox 改寫而來，少數條目（法案摘錄、文獻出處）特別長，
+ * 不截斷會直接衝出畫布右緣。SVG 的 <text>／路徑都不會自動換行，
+ * 因此必須在這裡先算好寬度。
+ */
+function truncate(text: string, size: number, maxWidth: number): string {
+  const ellipsis = charWidth("…", size);
+  let width = 0;
+  let kept = "";
+
+  for (const char of text) {
+    const w = charWidth(char, size);
+
+    if (width + w > maxWidth - ellipsis) {
+      return `${kept}…`;
+    }
+
+    kept += char;
+    width += w;
+  }
+
+  return text;
+}
+
+/** 估算一段文字的寬度。 */
+function measure(text: string, size: number): number {
+  let width = 0;
+
+  for (const char of text) width += charWidth(char, size);
+
+  return width;
+}
+
 function wrap(text: string, size: number, maxWidth: number): string[] {
   const lines: string[] = [];
   let line = "";
   let width = 0;
 
+  // 最近一個半角空格的位置。拉丁文超寬時退回這裡斷行，
+  // 避免把單詞切成兩半（英文標題曾出現「preserv / e heritage」）。
+  // 中文沒有空格，這個值會維持 -1，仍照原本的逐字斷行。
+  let breakAt = -1;
+
   for (const char of text) {
     const w = charWidth(char, size);
 
     if (width + w > maxWidth && line) {
+      const latin = /[A-Za-z]/.test(char);
+
+      if (latin && breakAt > 0) {
+        const head = line.slice(0, breakAt).trimEnd();
+        const tail = line.slice(breakAt).trimStart();
+
+        if (head) lines.push(head);
+
+        line = tail + char;
+        width = measure(tail, size) + w;
+        breakAt = -1;
+        continue;
+      }
+
       if (NO_LINE_START.includes(char)) {
         lines.push(line + char);
         line = "";
         width = 0;
+        breakAt = -1;
         continue;
       }
 
       lines.push(line);
       line = char;
       width = w;
+      breakAt = -1;
       continue;
     }
 
     line += char;
     width += w;
+
+    if (char === " ") {
+      breakAt = line.length;
+    }
   }
 
   if (line) lines.push(line);
@@ -87,15 +150,6 @@ export interface CardContent {
   footer?: string;
 }
 
-/**
- * 內嵌字型的 base64 資料。
- * 兩種字重各一段 base64 字串，由建置腳本在啟動時讀入。
- */
-export interface EmbeddedFonts {
-  bold: string;
-  regular: string;
-}
-
 function escapeXml(text: string): string {
   return text
     .replace(/&/g, "&amp;")
@@ -105,12 +159,52 @@ function escapeXml(text: string): string {
     .replace(/'/g, "&apos;");
 }
 
+/** 一段文字，依是否提供 renderer 決定輸出 <path> 還是 <text>。 */
+function draw(
+  renderer: GlyphRenderer | undefined,
+  text: string,
+  {
+    x,
+    y,
+    size,
+    weight = 400,
+    fill,
+    letterSpacing = 0,
+    anchor,
+  }: {
+    x: number;
+    y: number;
+    size: number;
+    weight?: 400 | 700;
+    fill: string;
+    letterSpacing?: number;
+    anchor?: "start" | "end";
+  },
+): string {
+  if (renderer) {
+    return renderer.text({ text, x, y, size, weight, fill, letterSpacing, anchor });
+  }
+
+  const attrs = [
+    `x="${x}"`,
+    `y="${y}"`,
+    `font-family="${SERIF}"`,
+    `font-size="${size}"`,
+    weight === 700 ? `font-weight="700"` : "",
+    `fill="${fill}"`,
+    letterSpacing ? `letter-spacing="${letterSpacing}"` : "",
+    anchor === "end" ? `text-anchor="end"` : "",
+  ]
+    .filter(Boolean)
+    .join(" ");
+
+  return `<text ${attrs}>${escapeXml(text)}</text>`;
+}
+
 /**
- * 產生 SVG。
+ * 產生卡片 SVG。
  *
- * 傳入 `fonts` 時會把字型子集以 base64 內嵌進 <defs>，讓渲染器
- * （librvg／resvg）不依賴系統已安裝的字型——CI runner 預設沒有中文字型，
- * 不內嵌的話中文會渲染成方框。
+ * 傳入 renderer 時所有文字都會轉成路徑；未傳入則退回 <text>。
  */
 export function buildCardSvg(
   {
@@ -120,7 +214,7 @@ export function buildCardSvg(
     header = "香港文獻類編",
     footer = "www.pasthk.com",
   }: CardContent,
-  fonts?: EmbeddedFonts,
+  renderer?: GlyphRenderer,
 ): string {
   // 標題由大到小試，取第一個能在三行內排完的字級。
   const sizes = [78, 70, 62, 54, 46];
@@ -151,45 +245,86 @@ export function buildCardSvg(
   const titleTop =
     (zoneTop + zoneBottom) / 2 - blockHeight / 2 + lineHeight * 0.72;
 
-  const fontFamily = fonts ? `${EMBEDDED_FONT},serif` : SERIF;
+  // 先渲染所有文字，defs() 才能收集到完整字形。
+  const headerMarkup = draw(renderer, header, {
+    x: PAD_LEFT,
+    y: 98,
+    size: 30,
+    weight: 700,
+    fill: COLOR.accent,
+    letterSpacing: 5,
+  });
 
-  const titleSpans = lines
-    .map(
-      (line, index) =>
-        `<tspan x="${PAD_LEFT}" y="${Math.round(titleTop + index * lineHeight)}">${escapeXml(line)}</tspan>`,
+  const sectionMarkup = section
+    ? draw(renderer, section, {
+        x: CARD_WIDTH - PAD_RIGHT,
+        y: 98,
+        size: 26,
+        fill: COLOR.muted,
+        letterSpacing: 1,
+        anchor: "end",
+      })
+    : "";
+
+  const titleMarkup = lines
+    .map((line, index) =>
+      draw(renderer, line, {
+        x: PAD_LEFT,
+        y: Math.round(titleTop + index * lineHeight),
+        size: fontSize,
+        weight: 700,
+        fill: COLOR.ink,
+        letterSpacing: 1,
+      }),
     )
     .join("");
 
   const metaY = Math.round(titleTop + (lines.length - 1) * lineHeight + metaGap);
 
-  const metaBlock = meta
-    ? `<text x="${PAD_LEFT}" y="${metaY}" font-family="${fontFamily}" font-size="32" fill="${COLOR.muted}">${escapeXml(meta)}</text>`
+  const metaMarkup = meta
+    ? draw(renderer, truncate(meta, 32, CONTENT_WIDTH), {
+        x: PAD_LEFT,
+        y: metaY,
+        size: 32,
+        fill: COLOR.muted,
+      })
     : "";
 
-  const sectionBlock = section
-    ? `<text x="${CARD_WIDTH - PAD_RIGHT}" y="98" text-anchor="end" font-family="${fontFamily}" font-size="26" fill="${COLOR.muted}" letter-spacing="1">${escapeXml(section)}</text>`
-    : "";
+  const footerMarkup = draw(renderer, footer, {
+    x: PAD_LEFT,
+    y: 590,
+    size: 24,
+    fill: COLOR.muted,
+    letterSpacing: 2,
+  });
 
-  // <title> 與 <desc> 同時服務無障礙工具與讀取 SVG 原始碼的 AI 爬蟲。
+  const taglineMarkup = draw(renderer, "認識香港，從文獻開始", {
+    x: CARD_WIDTH - PAD_RIGHT,
+    y: 590,
+    size: 24,
+    fill: COLOR.muted,
+    letterSpacing: 2,
+    anchor: "end",
+  });
+
+  const defs = renderer?.defs() ?? "";
+
+  // <title> 與 aria-label 同時服務無障礙工具與讀取 SVG 原始碼的 AI 爬蟲。
+  // 這是唯一保留文字的地方——它不會被渲染成圖形，也不影響跨平台顯示。
   const accessibleTitle = escapeXml(meta ? `${title} — ${meta}` : title);
 
-  // 內嵌字型。librsvg 2.63 不支援 woff2 的 data URI（會讓整張圖只剩少數文字），
-  // 必須使用 TTF／OTF，所以字型子集以 .ttf 形式存放。
-  const defsBlock = fonts
-    ? `<defs><style>@font-face{font-family:${EMBEDDED_FONT};font-weight:700;font-style:normal;src:url(data:font/ttf;base64,${fonts.bold}) format("truetype")}@font-face{font-family:${EMBEDDED_FONT};font-weight:400;font-style:normal;src:url(data:font/ttf;base64,${fonts.regular}) format("truetype")}</style></defs>`
-    : "";
-
-  return `<svg xmlns="http://www.w3.org/2000/svg" width="${CARD_WIDTH}" height="${CARD_HEIGHT}" viewBox="0 0 ${CARD_WIDTH} ${CARD_HEIGHT}" role="img" aria-label="${accessibleTitle}">
+  return `<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="${CARD_WIDTH}" height="${CARD_HEIGHT}" viewBox="0 0 ${CARD_WIDTH} ${CARD_HEIGHT}" role="img" aria-label="${accessibleTitle}">
 <title>${accessibleTitle}</title>
-${defsBlock}<rect width="${CARD_WIDTH}" height="${CARD_HEIGHT}" fill="${COLOR.bg}"/>
+${defs}
+<rect width="${CARD_WIDTH}" height="${CARD_HEIGHT}" fill="${COLOR.bg}"/>
 <rect x="0" y="0" width="14" height="${CARD_HEIGHT}" fill="${COLOR.accent}"/>
-<text x="${PAD_LEFT}" y="98" font-family="${fontFamily}" font-size="30" font-weight="700" fill="${COLOR.accent}" letter-spacing="5">${escapeXml(header)}</text>
-${sectionBlock}
+${headerMarkup}
+${sectionMarkup}
 <line x1="${PAD_LEFT}" y1="132" x2="${CARD_WIDTH - PAD_RIGHT}" y2="132" stroke="${COLOR.rule}" stroke-width="1.5"/>
-<text font-family="${fontFamily}" font-size="${fontSize}" font-weight="700" fill="${COLOR.ink}" letter-spacing="1">${titleSpans}</text>
-${metaBlock}
+${titleMarkup}
+${metaMarkup}
 <line x1="${PAD_LEFT}" y1="540" x2="${CARD_WIDTH - PAD_RIGHT}" y2="540" stroke="${COLOR.rule}" stroke-width="1.5"/>
-<text x="${PAD_LEFT}" y="590" font-family="${fontFamily}" font-size="24" fill="${COLOR.muted}" letter-spacing="2">${escapeXml(footer)}</text>
-<text x="${CARD_WIDTH - PAD_RIGHT}" y="590" text-anchor="end" font-family="${fontFamily}" font-size="24" fill="${COLOR.muted}" letter-spacing="2">認識香港，從文獻開始</text>
+${footerMarkup}
+${taglineMarkup}
 </svg>`;
 }

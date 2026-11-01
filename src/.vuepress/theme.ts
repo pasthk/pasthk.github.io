@@ -3,8 +3,7 @@ import { hopeTheme } from "vuepress-theme-hope";
 
 import navbar from "./navbar.js";
 import sidebar from "./sidebar.js";
-import { ogImageMime, ogImageUrl, ogSocialImageUrl } from "./og/paths.js";
-import { isPngAvailable } from "./og/state.js";
+import { ogImageUrl } from "./og/paths.js";
 
 const hostname = "https://www.pasthk.com";
 
@@ -113,26 +112,28 @@ export default hopeTheme(
         canonical: (page) => new URL(page.path, hostname).href,
         fallBackImage: `${hostname}/favicon.png`,
         ogp: (ogp, page) => {
-          // 入口頁用 PNG（Facebook、X、LinkedIn 等社群平台不支援 SVG 的
-          // og:image，遇到 SVG 會退回純文字預覽，甚至把 XML 原始碼當文字顯示）；
-          // 其餘頁面維持 SVG（體積小，Google 的結構化資料與圖片搜尋都接受）。
-          // 若建置環境缺少 sharp 或字型子集，PNG 不會產出，此時自動改指 SVG。
-          const pngReady = isPngAvailable();
-          const image = ogSocialImageUrl(hostname, page.path, pngReady);
+          // 全站 og:image 一律指向 SVG。卡片在產生時已把文字轉成路徑，
+          // 檔案裡沒有 <text>，因此 Facebook、X、LinkedIn 等平台
+          // 不需要中文字型也能正確渲染，不會再出現亂碼或方框。
+          const image = ogImageUrl(hostname, page.path);
 
           // SeoContent 是 union 且沒有索引簽名，og:image:type／width／height／alt
           // 這些標準 OG 標籤不在型別裡，twitter:* 也只存在於其中一個成員上，
           // 直接寫成 ogp["…"] = … 會被 TypeScript 判為不存在（TS7053／TS2551）。
           // 外掛輸出時是逐項遍歷，任何鍵都會被寫成 meta，故改用 Object.assign 附加。
+          // 首頁的 page.title 是「前言」，但卡片上印的是站名，
+          // alt 要描述圖片的實際內容，因此首頁另行指定。
+          const alt = page.path === "/" ? "香港文獻類編" : page.title;
+
           Object.assign(ogp, {
             "og:image": image,
-            "og:image:type": ogImageMime(page.path, pngReady),
+            "og:image:type": "image/svg+xml",
             "og:image:width": "1200",
             "og:image:height": "630",
-            "og:image:alt": page.title,
+            "og:image:alt": alt,
             "twitter:card": "summary_large_image",
             "twitter:image:src": image,
-            "twitter:image:alt": page.title,
+            "twitter:image:alt": alt,
           });
 
           const { datePublished } = page.frontmatter as {
@@ -160,14 +161,9 @@ export default hopeTheme(
             isPartOf: { "@id": WEBSITE_ID },
             publisher: { "@id": ORGANIZATION_ID },
             author: { "@id": PERSON_ID },
-            // Google 的結構化資料接受 SVG，入口頁另有 PNG 版本，
-            // 兩者都列出讓搜尋引擎有更多選擇（沒有 PNG 時不會重複列出）。
-            image: [
-              ...new Set([
-                ogSocialImageUrl(hostname, page.path, isPngAvailable()),
-                ogImageUrl(hostname, page.path),
-              ]),
-            ],
+            // 卡片已將文字轉為路徑，SVG 本身就是完整圖形，
+            // Google 的結構化資料與圖片搜尋都接受這個格式。
+            image: [ogImageUrl(hostname, page.path)],
           } as Record<string, unknown>;
 
           delete main["@context"];
