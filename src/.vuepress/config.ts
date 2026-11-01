@@ -5,7 +5,6 @@ import { ogImagePlugin } from "./og/plugin.js";
 import { llms } from "./llms.js";
 import { robotsPlugin } from "./robots.js";
 import theme from "./theme.js";
-import { llmsPlugin } from "@vuepress/plugin-llms";
 
 type AliasEntry = { find: string | RegExp; replacement: string };
 
@@ -51,11 +50,8 @@ export default defineUserConfig({
   ],
   theme,
   plugins: [
-    llmsPlugin(
-      {
-        llmsTxt: true,
-        llmsPageTxt: true,
-      },
-    ), 
-    ogImagePlugin(), robotsPlugin()],
+    llms,
+    ogImagePlugin(),
+    robotsPlugin(),
+  ],
 });
