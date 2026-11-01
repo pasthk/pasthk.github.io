@@ -10,6 +10,68 @@
   border-bottom: none;
 }
 
+// 路徑導航。主題的 breadcrumb.scss 是由 BreadCrumb 元件自行 import 的，
+// 元件被覆寫後那批樣式不再進產物，故在此重建（數值與主題一致），
+// 並補上純文字層級（無對應頁面的側邊欄分組）所需的內距與顏色。
+.vp-breadcrumb {
+  position: relative;
+  z-index: 2;
+  max-width: var(--content-width);
+  margin-inline: auto;
+  padding-inline: 2.5rem;
+  padding-top: 1rem;
+  font-size: 15px;
+
+  @media (max-width: 959px) {
+    padding-inline: 1.5rem;
+    font-size: 14px;
+  }
+
+  @media (max-width: 419px) {
+    padding-top: 0.5rem;
+    font-size: 12.8px;
+  }
+
+  @media print {
+    display: none;
+  }
+
+  ol {
+    margin: 0;
+    padding-inline-start: 0;
+    list-style: none;
+  }
+
+  li {
+    display: inline-block;
+    line-height: 1.5;
+  }
+
+  a,
+  li > span {
+    display: inline-block;
+    padding: 0 0.5em;
+    color: var(--vp-c-text-mute, #3c3c43c7);
+  }
+
+  li:first-child > * {
+    padding-inline-start: 0;
+  }
+
+  li:last-child > * {
+    padding-inline-end: 0;
+  }
+
+  a:hover {
+    color: var(--vp-c-accent);
+  }
+
+  li + li::before {
+    content: "/";
+    color: var(--vp-c-text-mute);
+  }
+}
+
 body {
   font-weight: 400;
   letter-spacing: 0.02em;

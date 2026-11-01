@@ -15,7 +15,7 @@ const organization = {
   "@type": "Organization",
   "@id": ORGANIZATION_ID,
   name: "香港文獻類編",
-  alternateName: "Hong Kong Documentation Project",
+  alternateName: "Thematic Compilation of Hong Kong Archives",
   url: hostname,
   logo: {
     "@type": "ImageObject",
@@ -94,7 +94,7 @@ export default hopeTheme(
     lastUpdated: false,
     contributors: false,
     pageInfo: ["Date", "ReadingTime"],
-    breadcrumb: false,
+    breadcrumb: true,
     copyright: false,
     author: {
       name: "NG, KIN CHUNG",
@@ -112,17 +112,7 @@ export default hopeTheme(
         canonical: (page) => new URL(page.path, hostname).href,
         fallBackImage: `${hostname}/favicon.png`,
         ogp: (ogp, page) => {
-          // 全站 og:image 一律指向 SVG。卡片在產生時已把文字轉成路徑，
-          // 檔案裡沒有 <text>，因此 Facebook、X、LinkedIn 等平台
-          // 不需要中文字型也能正確渲染，不會再出現亂碼或方框。
           const image = ogImageUrl(hostname, page.path);
-
-          // SeoContent 是 union 且沒有索引簽名，og:image:type／width／height／alt
-          // 這些標準 OG 標籤不在型別裡，twitter:* 也只存在於其中一個成員上，
-          // 直接寫成 ogp["…"] = … 會被 TypeScript 判為不存在（TS7053／TS2551）。
-          // 外掛輸出時是逐項遍歷，任何鍵都會被寫成 meta，故改用 Object.assign 附加。
-          // 首頁的 page.title 是「前言」，但卡片上印的是站名，
-          // alt 要描述圖片的實際內容，因此首頁另行指定。
           const alt = page.path === "/" ? "香港文獻類編" : page.title;
 
           Object.assign(ogp, {
@@ -161,8 +151,6 @@ export default hopeTheme(
             isPartOf: { "@id": WEBSITE_ID },
             publisher: { "@id": ORGANIZATION_ID },
             author: { "@id": PERSON_ID },
-            // 卡片已將文字轉為路徑，SVG 本身就是完整圖形，
-            // Google 的結構化資料與圖片搜尋都接受這個格式。
             image: [ogImageUrl(hostname, page.path)],
           } as Record<string, unknown>;
 
