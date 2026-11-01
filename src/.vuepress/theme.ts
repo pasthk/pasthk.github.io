@@ -3,7 +3,8 @@ import { hopeTheme } from "vuepress-theme-hope";
 
 import navbar from "./navbar.js";
 import sidebar from "./sidebar.js";
-import { ogImageUrl } from "./og/paths.js";
+import { ogImageMime, ogImageUrl, ogSocialImageUrl } from "./og/paths.js";
+import { isPngAvailable } from "./og/state.js";
 
 const hostname = "https://www.pasthk.com";
 
@@ -112,7 +113,12 @@ export default hopeTheme(
         canonical: (page) => new URL(page.path, hostname).href,
         fallBackImage: `${hostname}/favicon.png`,
         ogp: (ogp, page) => {
-          const image = ogImageUrl(hostname, page.path);
+          // 入口頁用 PNG（Facebook、X、LinkedIn 等社群平台不支援 SVG 的
+          // og:image，遇到 SVG 會退回純文字預覽，甚至把 XML 原始碼當文字顯示）；
+          // 其餘頁面維持 SVG（體積小，Google 的結構化資料與圖片搜尋都接受）。
+          // 若建置環境缺少 sharp 或字型子集，PNG 不會產出，此時自動改指 SVG。
+          const pngReady = isPngAvailable();
+          const image = ogSocialImageUrl(hostname, page.path, pngReady);
 
           // SeoContent 是 union 且沒有索引簽名，og:image:type／width／height／alt
           // 這些標準 OG 標籤不在型別裡，twitter:* 也只存在於其中一個成員上，
@@ -120,7 +126,7 @@ export default hopeTheme(
           // 外掛輸出時是逐項遍歷，任何鍵都會被寫成 meta，故改用 Object.assign 附加。
           Object.assign(ogp, {
             "og:image": image,
-            "og:image:type": "image/svg+xml",
+            "og:image:type": ogImageMime(page.path, pngReady),
             "og:image:width": "1200",
             "og:image:height": "630",
             "og:image:alt": page.title,
@@ -154,7 +160,14 @@ export default hopeTheme(
             isPartOf: { "@id": WEBSITE_ID },
             publisher: { "@id": ORGANIZATION_ID },
             author: { "@id": PERSON_ID },
-            image: [ogImageUrl(hostname, page.path)],
+            // Google 的結構化資料接受 SVG，入口頁另有 PNG 版本，
+            // 兩者都列出讓搜尋引擎有更多選擇（沒有 PNG 時不會重複列出）。
+            image: [
+              ...new Set([
+                ogSocialImageUrl(hostname, page.path, isPngAvailable()),
+                ogImageUrl(hostname, page.path),
+              ]),
+            ],
           } as Record<string, unknown>;
 
           delete main["@context"];
