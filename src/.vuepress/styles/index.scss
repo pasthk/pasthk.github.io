@@ -51,6 +51,11 @@
   li > span {
     display: inline-block;
     padding: 0 0.5em;
+  }
+
+  // 可點擊層級不指定顏色，沿用主題的全域連結樣式（--vp-c-accent、字重 500）；
+  // 無對應頁面的分組層級則用次要文字色，等同主題原本 .is-active 的處理。
+  li > span {
     color: var(--vp-c-text-mute, #3c3c43c7);
   }
 
@@ -62,8 +67,9 @@
     padding-inline-end: 0;
   }
 
+  // 主題只在內容區給連結加底線（麵包屑位於內容區之外），這裡補上同樣的回饋。
   a:hover {
-    color: var(--vp-c-accent);
+    text-decoration: underline;
   }
 
   li + li::before {
