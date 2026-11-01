@@ -1,6 +1,5 @@
 ---
 title: 新聞處發表颶風信號解釋
-author: false
 date: 2026-10-10
 dateCreated: "2026-10-10"
 datePublished: "1946-06-26"

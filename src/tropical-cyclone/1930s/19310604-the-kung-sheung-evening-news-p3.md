@@ -1,6 +1,5 @@
 ---
 title: 颶風不吹來港
-author: false
 date: 2026-10-23
 dateCreated: "2026-10-23"
 datePublished: "1931-06-04"

@@ -1,6 +1,5 @@
 ---
 title: 颶風已向海南吹去
-author: false
 date: 2026-10-26
 dateCreated: "2026-10-26"
 datePublished: "1935-09-19"

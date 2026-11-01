@@ -1,6 +1,5 @@
 ---
 title: 閱讀及資料說明
-author: false
 description: 說明香港文獻類編的文字轉錄與異體字處理、缺字標記、資料著錄、校對及引用原始文獻時的注意事項。
 pageInfo: false
 next: false

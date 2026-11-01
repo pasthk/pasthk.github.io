@@ -1,6 +1,5 @@
 ---
 title: 香港春秋圖展今完結　續辦本港考古學展覽
-author: false
 date: 2026-09-29
 dateCreated: "2026-09-29"
 datePublished: "1964-10-07"

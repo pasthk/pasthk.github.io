@@ -1,6 +1,5 @@
 ---
 title: 華民司麥道軻指出：三院各工作部門港府將計劃改進
-author: false
 date: 2026-09-29
 dateCreated: "2026-09-29"
 datePublished: "1965-03-27"

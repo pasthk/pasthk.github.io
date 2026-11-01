@@ -1,6 +1,5 @@
 ---
 title: 大埔林村鄉十年建醮就緒　明日啟壇並演粵劇
-author: false
 date: 2026-10-31
 dateCreated: "2026-10-31"
 datePublished: "1990-11-25"

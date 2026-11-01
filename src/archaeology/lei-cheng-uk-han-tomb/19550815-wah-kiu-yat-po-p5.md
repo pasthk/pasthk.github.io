@@ -1,6 +1,5 @@
 ---
 title: 我國第一流考古學家　董作賓應邀抵港
-author: false
 date: 2026-10-03
 dateCreated: "2026-10-03"
 datePublished: "1955-08-15"

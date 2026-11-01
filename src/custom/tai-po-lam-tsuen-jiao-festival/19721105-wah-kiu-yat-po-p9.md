@@ -1,6 +1,5 @@
 ---
 title: 林村鄉觀醮團　首批由英返港
-author: false
 date: 2026-10-29
 dateCreated: "2026-10-29"
 datePublished: "1972-11-05"

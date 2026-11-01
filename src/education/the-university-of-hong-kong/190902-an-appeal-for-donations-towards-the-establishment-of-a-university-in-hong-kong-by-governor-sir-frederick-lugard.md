@@ -1,6 +1,5 @@
 ---
 title: 香港創設大學堂勸捐導言（譯文）
-author: false
 date: 2026-10-19
 dateCreated: "2026-10-19"
 datePublished: "1909-02"

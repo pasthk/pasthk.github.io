@@ -1,6 +1,5 @@
 ---
 title: 兩日來本港颶風之經過
-author: false
 date: 2026-10-22
 dateCreated: "2026-10-22"
 datePublished: "1928-07-16"

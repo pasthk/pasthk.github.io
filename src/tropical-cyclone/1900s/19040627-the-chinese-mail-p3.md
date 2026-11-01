@@ -1,6 +1,5 @@
 ---
 title: 颶風續報
-author: false
 date: 2026-10-21
 dateCreated: "2026-10-21"
 datePublished: "1904-06-27"

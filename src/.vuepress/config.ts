@@ -3,49 +3,34 @@ import { viteBundler } from "@vuepress/bundler-vite";
 import { defineUserConfig } from "vuepress";
 import theme from "./theme.js";
 
+type AliasEntry = { find: string | RegExp; replacement: string };
+
+// 以自訂元件覆寫主題的日期／閱讀時間資訊。
+// 這兩個條目必須排在 alias 陣列最前面，才能蓋過主題註冊的 `@theme-hope` 前綴 alias。
+const componentAlias: AliasEntry[] = [
+  {
+    find: /^@theme-hope\/components\/info\/DateInfo$/,
+    replacement: fileURLToPath(
+      new URL("./components/DateInfo.vue", import.meta.url),
+    ),
+  },
+  {
+    find: /^@theme-hope\/components\/info\/ReadingTimeInfo$/,
+    replacement: fileURLToPath(
+      new URL("./components/ReadingTimeInfo.vue", import.meta.url),
+    ),
+  },
+];
+
 export default defineUserConfig({
   base: "/",
   bundler: viteBundler({
     configureVite: (config) => {
-      const aliases = config.resolve?.alias;
-      const existingAliases = Array.isArray(aliases)
-        ? aliases
-        : Object.entries(aliases ?? {}).map(([find, replacement]) => ({
-            find,
-            replacement,
-          }));
+      // VuePress 的 resolveAlias() 一律回傳 { find, replacement }[]，故直接展開。
+      const existing = (config.resolve?.alias ?? []) as AliasEntry[];
 
       config.resolve ??= {};
-      config.resolve.alias = [
-        {
-          find: /^@theme-hope\/components\/info\/DateInfo$/,
-          replacement: fileURLToPath(
-            new URL("./components/DateInfo.vue", import.meta.url),
-          ),
-        },
-        {
-          find: /^@theme-hope\/components\/info\/ReadingTimeInfo$/,
-          replacement: fileURLToPath(
-            new URL("./components/ReadingTimeInfo.vue", import.meta.url),
-          ),
-        },
-        ...existingAliases,
-      ];
-
-      config.ssr ??= {};
-      const noExternal = config.ssr.noExternal;
-      config.ssr.noExternal =
-        noExternal === true
-          ? true
-          : [
-              ...(Array.isArray(noExternal)
-                ? noExternal
-                : noExternal
-                  ? [noExternal]
-                  : []),
-              "@vuepress/search-helper",
-            ];
-
+      config.resolve.alias = [...componentAlias, ...existing];
     },
   }),
   lang: "zh-Hant",

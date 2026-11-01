@@ -1,6 +1,5 @@
 ---
 title: 大埔林村鄉民籌辦盛大醮會
-author: false
 date: 2026-10-29
 dateCreated: "2026-10-29"
 datePublished: "1963-10-05"

@@ -1,6 +1,5 @@
 ---
 title: Search for relics to be launched
-author: false
 date: 2026-09-30
 dateCreated: "2026-09-30"
 datePublished: "1981-07-11"

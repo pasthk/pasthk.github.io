@@ -1,6 +1,5 @@
 ---
 title: 古塚出現
-author: false
 date: 2026-10-12
 dateCreated: "2026-10-12"
 datePublished: "1955-08-10"

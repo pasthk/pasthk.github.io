@@ -1,6 +1,5 @@
 ---
 title: 元朗文藝會主辦香港史前考古展覽
-author: false
 date: 2026-09-30
 dateCreated: "2026-09-30"
 datePublished: "1966-05-05"

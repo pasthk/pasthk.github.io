@@ -1,6 +1,5 @@
 ---
 title: 屈臣促請立法保護香港古物：1965年報道
-author: false
 date: 2026-09-29
 dateCreated: "2026-09-29"
 datePublished: "1965-03-13"

@@ -1,6 +1,5 @@
 ---
 title: 大埔林村鄉建十年大醮
-author: false
 date: 2026-10-29
 dateCreated: "2026-10-29"
 datePublished: "1972-07-15"

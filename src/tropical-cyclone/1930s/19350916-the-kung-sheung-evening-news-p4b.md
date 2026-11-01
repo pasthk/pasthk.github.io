@@ -1,6 +1,5 @@
 ---
 title: 避風塘口輪艇相撞
-author: false
 date: 2026-10-25
 dateCreated: "2026-10-25"
 datePublished: "1935-09-16"

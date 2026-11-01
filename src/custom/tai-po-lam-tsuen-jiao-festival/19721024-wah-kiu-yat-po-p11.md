@@ -1,6 +1,5 @@
 ---
 title: 林村鄉十年大醮演粵劇助興
-author: false
 date: 2026-10-29
 dateCreated: "2026-10-29"
 datePublished: "1972-10-24"

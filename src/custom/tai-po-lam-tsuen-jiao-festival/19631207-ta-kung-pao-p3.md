@@ -1,6 +1,5 @@
 ---
 title: 林村鄉太平清醮今晚將功德圓滿
-author: false
 date: 2026-10-29
 dateCreated: "2026-10-29"
 datePublished: "1963-12-07"

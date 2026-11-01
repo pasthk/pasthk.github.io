@@ -1,6 +1,5 @@
 ---
 title: 保全鄉各戶闔家平安　大埔林村鄉建醮期卜定
-author: false
 date: 2026-10-31
 dateCreated: "2026-10-31"
 datePublished: "1990-03-10"

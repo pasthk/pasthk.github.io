@@ -1,6 +1,5 @@
 ---
 title: 「熱極生風」姫蒂忽誕生
-author: false
 date: 2026-10-01
 dateCreated: "2026-10-01"
 datePublished: "1962-07-20"

@@ -1,6 +1,5 @@
 ---
 title: 本港颶風
-author: false
 date: 2026-10-22
 dateCreated: "2026-10-22"
 datePublished: "1907-09-16"

@@ -1,6 +1,5 @@
 ---
 title: 颶風向閩吹去
-author: false
 date: 2026-10-24
 dateCreated: "2026-10-24"
 datePublished: "1932-07-29"

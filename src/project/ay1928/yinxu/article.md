@@ -1,6 +1,5 @@
 ---
 title: 論著
-author: false
 date: 2026-10-22
 description: 
 ---

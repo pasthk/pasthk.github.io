@@ -1,6 +1,5 @@
 ---
 title: 狂風暴雨中之香海
-author: false
 date: 2026-10-23
 dateCreated: "2026-10-23"
 datePublished: "1931-08-01"

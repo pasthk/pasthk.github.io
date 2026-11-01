@@ -1,6 +1,5 @@
 ---
 title: 林村、泰亨、粉嶺圍三鄉太平清醮
-author: false
 date: 2026-10-31
 description: 
 ---

@@ -1,6 +1,5 @@
 ---
 title: 新訂古蹟古物法案　當局徵詢新界民意
-author: false
 date: 2026-10-12
 dateCreated: "2026-10-12"
 datePublished: "1971-07-19"

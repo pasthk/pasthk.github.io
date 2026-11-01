@@ -1,6 +1,5 @@
 ---
 title: 考古資源調查發現廿個遺跡
-author: false
 date: 2026-09-29
 dateCreated: "2026-09-29"
 datePublished: "1984-06-29"

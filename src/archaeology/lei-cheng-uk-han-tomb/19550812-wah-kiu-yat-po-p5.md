@@ -1,6 +1,5 @@
 ---
 title: 發現銅器
-author: false
 date: 2026-10-05
 dateCreated: "2026-10-05"
 datePublished: "1955-08-12"

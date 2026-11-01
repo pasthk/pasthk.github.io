@@ -1,6 +1,5 @@
 ---
 title: 颶風有襲擊本港勢
-author: false
 date: 2026-10-26
 dateCreated: "2026-10-26"
 datePublished: "1935-10-06"

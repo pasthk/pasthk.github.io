@@ -1,6 +1,5 @@
 ---
 title: 風球放下
-author: false
 date: 2026-10-22
 dateCreated: "2026-10-22"
 datePublished: "1902-06-07"

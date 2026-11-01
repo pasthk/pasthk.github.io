@@ -1,6 +1,5 @@
 ---
 title: Vehicle will help preserve heritage
-author: false
 date: 2026-09-30
 dateCreated: "2026-09-30"
 datePublished: "1983-06-23"

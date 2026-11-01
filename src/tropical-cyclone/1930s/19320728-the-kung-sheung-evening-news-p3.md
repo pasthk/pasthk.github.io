@@ -1,6 +1,5 @@
 ---
 title: 一號風球仍未除下
-author: false
 date: 2026-10-24
 dateCreated: "2026-10-24"
 datePublished: "1932-07-28"

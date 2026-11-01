@@ -1,6 +1,5 @@
 ---
 title: 颶風再至
-author: false
 date: 2026-10-22
 dateCreated: "2026-10-22"
 datePublished: "1906-10-04"

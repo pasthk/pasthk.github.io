@@ -1,6 +1,5 @@
 ---
 title: 擬改風球
-author: false
 date: 2026-10-22
 dateCreated: "2026-10-22"
 datePublished: "1897-11-27"

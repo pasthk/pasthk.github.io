@@ -1,6 +1,5 @@
 ---
 title: 報告
-author: false
 date: 2026-10-23
 description: 
 ---

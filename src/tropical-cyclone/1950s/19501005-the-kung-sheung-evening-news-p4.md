@@ -1,6 +1,5 @@
 ---
 title: 香港颶風史
-author: false
 date: 2026-10-21
 dateCreated: "2026-10-21"
 datePublished: "1950-10-05"

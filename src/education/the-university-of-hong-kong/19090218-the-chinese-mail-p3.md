@@ -1,6 +1,5 @@
 ---
 title: 港督盧制軍香港大學勸捐啓（再續）
-author: false
 date: 2026-10-18
 dateCreated: "2026-10-18"
 datePublished: "1909-02-18"

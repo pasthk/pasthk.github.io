@@ -1,6 +1,5 @@
 ---
 title: 溫黛風姐又誕生　可能吹襲中國海
-author: false
 date: 2026-09-30
 dateCreated: "2026-09-30"
 datePublished: "1962-08-29"

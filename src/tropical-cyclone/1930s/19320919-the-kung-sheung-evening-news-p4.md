@@ -1,6 +1,5 @@
 ---
 title: 澳門前日懸第九號風球
-author: false
 date: 2026-10-25
 dateCreated: "2026-10-25"
 datePublished: "1932-09-19"

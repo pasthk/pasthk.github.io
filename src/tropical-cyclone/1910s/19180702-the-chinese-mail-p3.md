@@ -1,6 +1,5 @@
 ---
 title: 昨日之風雨談
-author: false
 date: 2026-10-22
 dateCreated: "2026-10-22"
 datePublished: "1918-07-02"

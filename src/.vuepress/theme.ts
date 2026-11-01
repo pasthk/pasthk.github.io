@@ -19,6 +19,7 @@ export default hopeTheme({
     '認識香港，從文獻開始。<br><a href="/support.html">支持本站</a>',
   lastUpdated: false,
   contributors: false,
+  pageInfo: ["Date", "ReadingTime"],
   breadcrumb: false,
   copyright: false,
   author: {
@@ -27,39 +28,10 @@ export default hopeTheme({
   },
   markdown: {
     footnote: true,
-    hint: true,
-    preview: true,
     attrs: true,
-    codeTabs: true,
     component: true,
-    demo: true,
-    figure: true,
     gfm: true,
-    imgLazyload: true,
-    imgSize: true,
-    include: true,
     mark: true,
-    plantuml: true,
-    spoiler: true,
-    stylize: [
-      {
-        matcher: "Recommended",
-        replacer: ({ tag }) => {
-          if (tag === "em") {
-            return {
-              tag: "Badge",
-              attrs: { type: "tip" },
-              content: "Recommended",
-            };
-          }
-        },
-      },
-    ],
-    sub: true,
-    sup: true,
-    tabs: true,
-    tasklist: true,
-    vPre: true,
   },
   plugins: {
     seo: {
@@ -90,6 +62,11 @@ export default hopeTheme({
     },
     sitemap: true,
     icon: false,
+    // 外掛會為沒有 README 的目錄自動生成「目錄頁」，內容單薄、標題為英文目錄名，
+    // 且全站沒有連結指向它們，故關閉以免產生孤兒頁。
+    catalog: false,
+    // 全站沒有 Markdown 圖片，關閉圖片預覽以移除 photoswipe chunk（約 58 KB）
+    photoSwipe: false,
     components: {
       components: ["Badge", "VPCard"],
     },

@@ -1,6 +1,5 @@
 ---
 title: 保存古物古蹟　政府將訂立新法案
-author: false
 date: 2026-10-03
 dateCreated: "2026-10-03"
 datePublished: "1971-10-30"

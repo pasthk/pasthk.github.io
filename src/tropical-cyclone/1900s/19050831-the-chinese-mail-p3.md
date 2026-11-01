@@ -1,6 +1,5 @@
 ---
 title: 天台報風
-author: false
 date: 2026-10-21
 dateCreated: "2026-10-21"
 datePublished: "1905-08-31"

@@ -1,6 +1,5 @@
 ---
 title: 李鄭屋古墓設天幕防滲漏
-author: false
 date: 2026-10-03
 dateCreated: "2026-10-03"
 datePublished: "2005-12-30"

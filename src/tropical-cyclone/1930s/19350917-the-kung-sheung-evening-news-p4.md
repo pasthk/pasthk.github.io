@@ -1,6 +1,5 @@
 ---
 title: 天文台今晨改懸七號風球
-author: false
 date: 2026-10-25
 dateCreated: "2026-10-25"
 datePublished: "1935-09-17"

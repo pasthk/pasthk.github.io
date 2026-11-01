@@ -1,6 +1,5 @@
 ---
 title: 風球已下
-author: false
 date: 2026-10-22
 dateCreated: "2026-10-22"
 datePublished: "1924-07-18"

@@ -1,6 +1,5 @@
 ---
 title: 風雨損失之調查
-author: false
 date: 2026-10-22
 dateCreated: "2026-10-22"
 datePublished: "1919-08-23"

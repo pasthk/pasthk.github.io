@@ -1,6 +1,5 @@
 ---
 title: 政府立例保障古物古蹟
-author: false
 date: 2026-10-03
 dateCreated: "2026-10-03"
 datePublished: "1971-10-29"

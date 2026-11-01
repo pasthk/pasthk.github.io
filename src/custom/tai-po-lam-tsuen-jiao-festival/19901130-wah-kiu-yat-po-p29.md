@@ -1,6 +1,5 @@
 ---
 title: 林村鄉太平清醮官紳頒旗　具有穩定社會功能
-author: false
 date: 2026-10-31
 dateCreated: "2026-10-31"
 datePublished: "1990-11-30"

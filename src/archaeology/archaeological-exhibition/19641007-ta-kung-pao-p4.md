@@ -1,6 +1,5 @@
 ---
 title: 本港考古展覽　大會堂將舉辦
-author: false
 date: 2026-09-29
 dateCreated: "2026-09-29"
 datePublished: "1964-10-07"

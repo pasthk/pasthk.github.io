@@ -1,6 +1,5 @@
 ---
 title: 出土文物圖展　今為最後一天
-author: false
 date: 2026-10-11
 dateCreated: "2026-10-11"
 datePublished: "1972-04-19"

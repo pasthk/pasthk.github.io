@@ -1,6 +1,5 @@
 ---
 title: 懸掛時球及風球之地點
-author: false
 date: 2026-10-22
 dateCreated: "2026-10-22"
 datePublished: "1927-02-28"

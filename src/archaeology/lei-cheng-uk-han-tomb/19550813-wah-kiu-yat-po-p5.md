@@ -1,6 +1,5 @@
 ---
 title: 古墓發現「靈位」　考古團希望能發現文字
-author: false
 date: 2026-10-10
 dateCreated: "2026-10-10"
 datePublished: "1955-08-13"

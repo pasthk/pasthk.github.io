@@ -1,6 +1,5 @@
 ---
 title: 黃大仙嗇色園
-author: false
 date: 2026-09-17
 description: 黃大仙嗇色園碑刻與地方歷史資料，整理碑文、廟宇及相關歷史文獻。
 ---

@@ -1,6 +1,5 @@
 ---
 title: 基督教聞人發起創辦崇基學院
-author: false
 date: 2026-10-02
 dateCreated: "2026-10-02"
 datePublished: "1951-09-01"

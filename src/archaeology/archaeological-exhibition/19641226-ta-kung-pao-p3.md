@@ -1,6 +1,5 @@
 ---
 title: 我們祖先的遺物——介紹值得一看的「香港考古」展覽
-author: false
 date: 2026-09-30
 dateCreated: "2026-09-30"
 datePublished: "1964-12-26"

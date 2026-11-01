@@ -1,6 +1,5 @@
 ---
 title: 溫黛行踪
-author: false
 date: 2026-10-01
 dateCreated: "2026-10-01"
 datePublished: "1962-08-30"

@@ -1,6 +1,5 @@
 ---
 title: 展出受觀眾歡迎　出土文物圖片後日再展三天
-author: false
 date: 2026-10-11
 dateCreated: "2026-10-11"
 datePublished: "1972-04-15"

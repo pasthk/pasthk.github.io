@@ -1,6 +1,5 @@
 ---
 title: 新聞報道
-author: false
 next: false
 prev: false
 date: 2026-10-23

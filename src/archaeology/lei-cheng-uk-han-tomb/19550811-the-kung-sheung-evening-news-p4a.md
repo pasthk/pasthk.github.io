@@ -1,6 +1,5 @@
 ---
 title: 李鄭屋村古墓　今晨續發掘
-author: false
 date: 2026-10-04
 dateCreated: "2026-10-04"
 datePublished: "1955-08-11"

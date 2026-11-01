@@ -1,6 +1,5 @@
 ---
 title: 建太平清醮公演粵劇　林村鄉十年盛會
-author: false
 date: 2026-10-29
 dateCreated: "2026-10-29"
 datePublished: "1972-10-04"

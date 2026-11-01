@@ -1,12 +1,7 @@
-.vp-doc,
-.vp-page,
-.main-wrapper,
-.theme-hope-content,
-.vp-content,
-.vp-doc .theme-default-content,
-.theme-default-content {
+.vp-page {
   font-size: 1.125rem;
   line-height: 1.8;
+  text-align: justify;
 }
 
 body {
@@ -23,27 +18,17 @@ body {
 }
 
 .vp-footer-wrapper,
-.vp-footer,
-.vp-copyright {
+.vp-footer {
   font-size: 1.1rem;
   font-weight: 400;
   letter-spacing: 0.02em;
 }
 
-.vp-doc pre,
-.vp-doc code {
-  letter-spacing: normal;
-}
-
 .page-info {
-  .page-author-info > .icon,
-  .page-date-info > .icon,
   .page-reading-time-info > .icon {
     display: none;
   }
 
-  .page-author-info + .page-date-info,
-  .page-author-info + .page-reading-time-info,
   .page-date-info + .page-reading-time-info {
     margin-inline-start: 0.1em;
   }

@@ -1,6 +1,5 @@
 ---
 title: 保存港古物古蹟　法案將提交立法局
-author: false
 date: 2026-10-03
 dateCreated: "2026-10-03"
 datePublished: "1971-06-19"

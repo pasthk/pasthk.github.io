@@ -15,48 +15,48 @@
 </template>
 
 <script>
-let adsenseScriptPromise;
-let adsenseStylesheetPromise;
+const ADSENSE_CLIENT = "ca-pub-8975507583219124";
 
-function loadAdsenseStylesheet() {
-  if (!adsenseStylesheetPromise) {
-    adsenseStylesheetPromise = new Promise((resolve, reject) => {
-      const stylesheet = document.createElement("link");
-      stylesheet.rel = "stylesheet";
-      stylesheet.href = "/ads.css";
-      stylesheet.onload = () => resolve();
-      stylesheet.onerror = () => {
-        stylesheet.remove();
-        adsenseStylesheetPromise = undefined;
-        reject(new Error("Failed to load the AdSense stylesheet."));
-      };
-      document.head.append(stylesheet);
-    });
+// 跨頁共用：同一份資源只載入一次；失敗時清掉快取，讓下次掛載可以重試。
+const pending = new Map();
+
+function loadOnce(key, createElement) {
+  if (!pending.has(key)) {
+    pending.set(
+      key,
+      new Promise((resolve, reject) => {
+        const element = createElement();
+
+        element.addEventListener("load", () => resolve());
+        element.addEventListener("error", () => {
+          element.remove();
+          pending.delete(key);
+          reject(new Error(`Failed to load ${key}`));
+        });
+        document.head.append(element);
+      }),
+    );
   }
 
-  return adsenseStylesheetPromise;
+  return pending.get(key);
 }
 
-function loadAdsenseScript() {
-  if (!adsenseScriptPromise) {
-    adsenseScriptPromise = new Promise((resolve, reject) => {
-      const script = document.createElement("script");
-      script.async = true;
-      script.crossOrigin = "anonymous";
-      script.src =
-        "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8975507583219124";
-      script.onload = () => resolve();
-      script.onerror = () => {
-        script.remove();
-        adsenseScriptPromise = undefined;
-        reject(new Error("Failed to load the Google AdSense script."));
-      };
-      document.head.append(script);
-    });
-  }
-
-  return adsenseScriptPromise;
-}
+const loadAdsense = () =>
+  Promise.all([
+    loadOnce("/ads.css", () =>
+      Object.assign(document.createElement("link"), {
+        rel: "stylesheet",
+        href: "/ads.css",
+      }),
+    ),
+    loadOnce("adsbygoogle", () =>
+      Object.assign(document.createElement("script"), {
+        async: true,
+        crossOrigin: "anonymous",
+        src: `https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADSENSE_CLIENT}`,
+      }),
+    ),
+  ]);
 </script>
 
 <script setup>
@@ -65,18 +65,18 @@ import { onBeforeUnmount, onMounted, ref } from "vue";
 const adElement = ref();
 let observer;
 
-function requestAd() {
-  void Promise.all([loadAdsenseStylesheet(), loadAdsenseScript()])
-    .then(() => {
-      const element = adElement.value;
-      if (!element || element.dataset.adsbygoogleStatus) return;
+async function requestAd() {
+  try {
+    await loadAdsense();
 
-      window.adsbygoogle = window.adsbygoogle || [];
-      window.adsbygoogle.push({});
-    })
-    .catch((error) => {
-      console.error(error);
-    });
+    const element = adElement.value;
+    if (!element || element.dataset.adsbygoogleStatus) return;
+
+    window.adsbygoogle = window.adsbygoogle || [];
+    window.adsbygoogle.push({});
+  } catch (error) {
+    console.error(error);
+  }
 }
 
 onMounted(() => {

@@ -1,6 +1,5 @@
 ---
 title: 參觀古墓　疑被作祟
-author: false
 date: 2026-10-04
 dateCreated: "2026-10-04"
 datePublished: "1955-08-11"

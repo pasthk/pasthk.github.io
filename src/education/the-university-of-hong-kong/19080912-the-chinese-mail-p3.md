@@ -1,6 +1,5 @@
 ---
 title: 擬創設香港大學堂
-author: false
 date: 2026-09-29
 dateCreated: "2026-09-29"
 datePublished: "1908-09-12"

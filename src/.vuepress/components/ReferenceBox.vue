@@ -9,7 +9,6 @@
         :aria-label="copied ? '已複製' : '複製資料引用'"
       >
         <svg
-          v-if="!copied"
           xmlns="http://www.w3.org/2000/svg"
           width="16"
           height="16"
@@ -20,30 +19,21 @@
           stroke-linecap="round"
           stroke-linejoin="round"
         >
-          <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-          <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-        </svg>
-        <svg
-          v-else
-          xmlns="http://www.w3.org/2000/svg"
-          width="16"
-          height="16"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        >
-          <polyline points="20 6 9 17 4 12"></polyline>
+          <template v-if="copied">
+            <polyline points="20 6 9 17 4 12"></polyline>
+          </template>
+          <template v-else>
+            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+          </template>
         </svg>
         <span class="reference-box-copy-text">{{ copied ? '已複製' : '複製' }}</span>
       </button>
     </div>
     <div class="reference-box-content">
       <p class="reference-box-citation">{{ citation }}</p>
-      <div v-if="noteText" class="reference-box-note">
-        <p>{{ noteText }}</p>
+      <div v-if="parsedSlot.note" class="reference-box-note">
+        <p>{{ parsedSlot.note }}</p>
       </div>
     </div>
   </div>
@@ -107,8 +97,6 @@ const parsedSlot = computed(() => {
 
   return { source: text, note: "" };
 });
-
-const noteText = computed(() => parsedSlot.value.note);
 
 const citation = computed(() => {
   const fm = page.value?.frontmatter || {};
@@ -178,7 +166,6 @@ onBeforeUnmount(() => {
   justify-content: space-between;
   padding: 0.5rem 1rem;
   border-bottom: 1px solid var(--vp-c-border);
-  background: #fff;
 }
 
 .reference-box-label {
@@ -202,11 +189,7 @@ onBeforeUnmount(() => {
   transition: all 0.2s ease;
 }
 
-.reference-box-copy-btn:hover {
-  color: var(--vp-c-accent);
-  border-color: var(--vp-c-accent);
-}
-
+.reference-box-copy-btn:hover,
 .reference-box-copy-btn.copied {
   color: var(--vp-c-accent);
   border-color: var(--vp-c-accent);
@@ -236,9 +219,5 @@ onBeforeUnmount(() => {
   border-top: 1px dashed var(--vp-c-border);
   font-size: 1rem;
   color: var(--vp-c-text-mute);
-}
-
-.reference-box-note p {
-  margin: 0;
 }
 </style>

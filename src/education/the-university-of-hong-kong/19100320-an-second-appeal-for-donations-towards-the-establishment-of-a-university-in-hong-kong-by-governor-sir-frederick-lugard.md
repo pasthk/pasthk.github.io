@@ -1,6 +1,5 @@
 ---
 title: 港督盧制軍香港大學第二次勸捐啟（譯文）
-author: false
 date: 2026-10-19
 dateCreated: "2026-10-19"
 datePublished: "1910"

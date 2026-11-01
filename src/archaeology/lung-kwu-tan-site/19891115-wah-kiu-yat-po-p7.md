@@ -1,6 +1,5 @@
 ---
 title: 準備建新路考古人員致力挽救古蹟　新石器時代珍貴文物　龍鼓灘出土罕有發現
-author: false
 date: 2026-10-04
 dateCreated: "2026-10-04"
 datePublished: "1989-11-15"

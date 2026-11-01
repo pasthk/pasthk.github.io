@@ -1,12 +1,9 @@
-
 $vp-font: serif;
 $vp-font-heading: serif;
 $vp-font-mono: serif;
 
+// 字型變數由 sass-palette 依上方 $vp-font* 自動生成，此處只覆寫顏色。
 :root {
-  --vp-font: serif;
-  --vp-font-heading: serif;
-  --vp-font-mono: serif;
   --vp-c-text: #000;
   --vp-c-text-mute: #000;
   --vp-c-text-subtle: #000;
@@ -14,23 +11,4 @@ $vp-font-mono: serif;
   --vp-c-accent-bg: #0f5132;
   --vp-c-accent-hover: #0b3d26;
   --vp-c-accent-text: #fff;
-}
-
-.vp-doc,
-.vp-page,
-.main-wrapper,
-.theme-hope-content,
-.vp-content,
-.vp-doc .theme-default-content,
-.theme-default-content {
-  text-align: justify;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: serif;
 }

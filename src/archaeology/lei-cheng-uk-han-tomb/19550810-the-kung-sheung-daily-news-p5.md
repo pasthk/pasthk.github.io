@@ -1,6 +1,5 @@
 ---
 title: 李鄭屋村山坵發現古塚
-author: false
 date: 2026-09-28
 dateCreated: "2026-09-28"
 datePublished: "1955-08-10"
