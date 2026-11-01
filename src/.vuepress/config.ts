@@ -1,6 +1,7 @@
 import { fileURLToPath } from "node:url";
 import { viteBundler } from "@vuepress/bundler-vite";
 import { defineUserConfig } from "vuepress";
+import { ogImagePlugin } from "./og/plugin.js";
 import { robotsPlugin } from "./robots.js";
 import theme from "./theme.js";
 
@@ -47,5 +48,5 @@ export default defineUserConfig({
     ],
   ],
   theme,
-  plugins: [robotsPlugin()],
+  plugins: [ogImagePlugin(), robotsPlugin()],
 });
