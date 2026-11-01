@@ -4,6 +4,12 @@
   text-align: justify;
 }
 
+// 主題預設在 h2 下方畫一條 1px 分隔線；這裡只去掉線，
+// 保留 padding-bottom（0.3rem）作為標題與正文之間的間距。
+.vp-page h2 {
+  border-bottom: none;
+}
+
 body {
   font-weight: 400;
   letter-spacing: 0.02em;
