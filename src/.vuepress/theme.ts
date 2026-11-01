@@ -11,12 +11,11 @@ const ORGANIZATION_ID = `${hostname}/#organization`;
 const WEBSITE_ID = `${hostname}/#website`;
 const PERSON_ID = `${hostname}/#person`;
 
-// 三個全站共用的實體。每頁都輸出，讓任一頁被單獨抓取時仍是完整的實體圖譜。
 const organization = {
   "@type": "Organization",
   "@id": ORGANIZATION_ID,
   name: "香港文獻類編",
-  alternateName: "Hong Kong Documents",
+  alternateName: "Hong Kong Documentation Project",
   url: hostname,
   logo: {
     "@type": "ImageObject",
@@ -45,7 +44,6 @@ const website = {
   publisher: { "@id": ORGANIZATION_ID },
 };
 
-/** 由頁面路徑組出麵包屑；父層頁面不存在時略過該層，避免產生無效連結 */
 function buildBreadcrumb(page: Page, app: App) {
   const url = new URL(page.path, hostname).href;
   const items = [{ name: "首頁", item: `${hostname}/` }];
@@ -114,17 +112,22 @@ export default hopeTheme(
         canonical: (page) => new URL(page.path, hostname).href,
         fallBackImage: `${hostname}/favicon.png`,
         ogp: (ogp, page) => {
-          // 每頁都有對應的 1200×630 卡片，社群預覽與 Google 文章 rich result 共用同一張圖。
           const image = ogImageUrl(hostname, page.path);
 
-          ogp["og:image"] = image;
-          ogp["og:image:type"] = "image/svg+xml";
-          ogp["og:image:width"] = "1200";
-          ogp["og:image:height"] = "630";
-          ogp["og:image:alt"] = page.title;
-          ogp["twitter:card"] = "summary_large_image";
-          ogp["twitter:image:src"] = image;
-          ogp["twitter:image:alt"] = page.title;
+          // SeoContent 是 union 且沒有索引簽名，og:image:type／width／height／alt
+          // 這些標準 OG 標籤不在型別裡，twitter:* 也只存在於其中一個成員上，
+          // 直接寫成 ogp["…"] = … 會被 TypeScript 判為不存在（TS7053／TS2551）。
+          // 外掛輸出時是逐項遍歷，任何鍵都會被寫成 meta，故改用 Object.assign 附加。
+          Object.assign(ogp, {
+            "og:image": image,
+            "og:image:type": "image/svg+xml",
+            "og:image:width": "1200",
+            "og:image:height": "630",
+            "og:image:alt": page.title,
+            "twitter:card": "summary_large_image",
+            "twitter:image:src": image,
+            "twitter:image:alt": page.title,
+          });
 
           const { datePublished } = page.frontmatter as {
             datePublished?: string;
@@ -154,7 +157,6 @@ export default hopeTheme(
             image: [ogImageUrl(hostname, page.path)],
           } as Record<string, unknown>;
 
-          // @context 只保留在 @graph 根層，節點內不重複。
           delete main["@context"];
 
           if (datePublished) main.datePublished = datePublished;
@@ -174,10 +176,7 @@ export default hopeTheme(
       },
       sitemap: true,
       icon: false,
-      // 外掛會為沒有 README 的目錄自動生成「目錄頁」，內容單薄、標題為英文目錄名，
-      // 且全站沒有連結指向它們，故關閉以免產生孤兒頁。
       catalog: false,
-      // 全站沒有 Markdown 圖片，關閉圖片預覽以移除 photoswipe chunk（約 58 KB）
       photoSwipe: false,
       components: {
         components: ["Badge", "VPCard"],
