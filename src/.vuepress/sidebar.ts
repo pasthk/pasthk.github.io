@@ -44,7 +44,7 @@ const signalDecadeGroups = () => {
 export default sidebar({
   "/": [
     {
-      text: "前言",
+      text: "首頁",
       link: "/",
     },
     {
