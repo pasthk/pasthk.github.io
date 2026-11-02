@@ -6,6 +6,8 @@ import {
 } from "@vuepress/plugin-llms";
 import type { Page } from "vuepress/core";
 
+import { chapters } from "./chapters.js";
+
 const HOSTNAME = "https://www.pasthk.com";
 
 /**
@@ -78,55 +80,6 @@ const DETAILS = `- 網址：${HOSTNAME}
 - 閱讀及資料說明：${HOSTNAME}/reading-notes.html
 - 支持本站：${HOSTNAME}/support.html`;
 
-/** 章節順序與說明。未列於此的目錄會自動附在最後，不會靜默消失。 */
-const CHAPTERS = [
-  {
-    dir: "tropical-cyclone",
-    name: "香港熱帶氣旋與風球紀錄",
-    note: "1897–1962 年香港的風球（熱帶氣旋警告信號）紀錄，按年份與事件編排，收錄《士蔑西報》《華僑日報》《工商日報》等報刊的颱風報道。",
-  },
-  {
-    dir: "archaeology",
-    name: "香港考古",
-    note: "戰後香港的考古調查、發掘與展覽紀錄，含李鄭屋漢墓、九龍寨城、龍津石橋、佛頭洲與深灣等遺址。",
-  },
-  {
-    dir: "custom",
-    name: "香港傳統節慶與打醮",
-    note: "太平清醮、盂蘭勝會、天后誕等節慶的報刊紀錄，重點在十年一屆或五年一屆的鄉村建醮活動。",
-  },
-  {
-    dir: "education",
-    name: "香港教育史文獻",
-    note: "香港大學、中文大學、崇基書院、羅富國教育學院、理工大學與演藝學院的創校與發展紀錄。",
-  },
-  {
-    dir: "legislation",
-    name: "香港法例文獻",
-    note: "條例草案與立法過程的報刊紀錄，以及條例本身的整理。",
-  },
-  {
-    dir: "public-health",
-    name: "香港公共衛生史",
-    note: "霍亂、鼠疫、流行性感冒等疫症的報刊與官方紀錄。",
-  },
-  {
-    dir: "stele-inscription",
-    name: "香港碑刻",
-    note: "廟宇與建築碑記的釋文與背景。",
-  },
-  {
-    dir: "historic-building",
-    name: "香港歷史建築",
-    note: "祠堂、公所等歷史建築的調查與報道。",
-  },
-  {
-    dir: "project",
-    name: "專題研究",
-    note: "不屬香港主題的獨立研究項目，如 1928 年安陽殷墟第一次發掘。",
-  },
-] as const;
-
 /**
  * 目錄摘要取第一個短句並限長。description 在 YAML 中可能是多行摺疊值，
  * 不壓平會把清單項目撐成段落；不截短則目錄會被描述淹沒。
@@ -181,7 +134,7 @@ function buildToc(pages: LLMPage[], state: LLMState): string {
     );
   }
 
-  for (const chapter of CHAPTERS) {
+  for (const chapter of chapters) {
     const bucket = byChapter.get(chapter.dir);
 
     if (!bucket?.length) continue;

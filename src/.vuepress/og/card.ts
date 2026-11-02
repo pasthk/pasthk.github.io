@@ -1,16 +1,22 @@
 // OG 分享卡片的 SVG 產生器。
 //
-// 預設走「文字轉路徑」模式：傳入 GlyphRenderer 時，卡片上所有文字都會
-// 被換成 <path>，輸出檔不含任何 <text>，因此不需要字型也能在任何裝置、
-// 任何平台上正確顯示（詳見 glyphs.ts 的說明）。
+// 輸出用 <text> 直接寫字，不再把文字轉成 <path>：卡片最終是 PNG，
+// 由建置時的 resvg 用 og/fonts/ 內的子集字型光柵化，字型已經被「烤」進點陣圖，
+// 不需要再為「觀看端有沒有中文字型」做準備。轉路徑那套（glyphs.ts）因此移除。
 //
-// 未傳入 renderer 時退回 <text> 輸出，僅作為字型載入失敗時的降級方案——
-// 那種情況下圖形仍然正確，只是文字依賴觀看端有沒有安裝中文字型。
-
-import type { GlyphRenderer } from "./glyphs.js";
+// 前提是光柵化時必須載入同一份子集字型（見 plugin.ts 的 font 選項），
+// 否則 <text> 會退回系統字型，字重與字形都會走樣。
 
 export const CARD_WIDTH = 1200;
 export const CARD_HEIGHT = 630;
+
+/**
+ * 卡片使用的字型家族名，必須與 og/fonts/ 內子集字型的 name table 一致。
+ *
+ * 名稱帶 ExtraLight 是因為子集取自 Noto Serif TC 可變字型的預設實例，
+ * 實際字重由 font-weight（400／700）決定，兩份檔案分別是 Regular 與 Bold。
+ */
+export const CARD_FONT_FAMILY = "Noto Serif TC ExtraLight";
 
 const COLOR = {
   bg: "#ffffff",
@@ -20,15 +26,11 @@ const COLOR = {
   rule: "#d8d2c4",
 };
 
-// 降級模式下依序退回本機可用的襯線體。
-const SERIF =
-  "'Songti SC','Songti TC','Noto Serif TC','Noto Serif CJK TC','Source Han Serif TC',SimSun,serif";
-
 const PAD_LEFT = 96;
 const PAD_RIGHT = 96;
 const CONTENT_WIDTH = CARD_WIDTH - PAD_LEFT - PAD_RIGHT;
 
-// 各平台襯線體的字寬略有差異，換行時留一成餘裕，避免換到別的機器就溢出。
+// 換行時留一成餘裕，避免量測誤差讓最後一個字溢出到畫布外。
 const WRAP_WIDTH = CONTENT_WIDTH * 0.9;
 
 /** 中文與全形字約佔一個字身，拉丁字母較窄；只用於估算換行位置。 */
@@ -50,7 +52,7 @@ const NO_LINE_START = "、。，．：；！？）」』》】…·%";
  * 依可用寬度截斷單行文字，超出時以省略號收尾。
  *
  * meta 由 ReferenceBox 改寫而來，少數條目（法案摘錄、文獻出處）特別長，
- * 不截斷會直接衝出畫布右緣。SVG 的 <text>／路徑都不會自動換行，
+ * 不截斷會直接衝出畫布右緣。SVG 的 <text> 不會自動換行，
  * 因此必須在這裡先算好寬度。
  */
 function truncate(text: string, size: number, maxWidth: number): string {
@@ -159,9 +161,8 @@ function escapeXml(text: string): string {
     .replace(/'/g, "&apos;");
 }
 
-/** 一段文字，依是否提供 renderer 決定輸出 <path> 還是 <text>。 */
+/** 一段文字。字型由光柵化階段的 font 選項提供，這裡只寫家族名。 */
 function draw(
-  renderer: GlyphRenderer | undefined,
   text: string,
   {
     x,
@@ -181,14 +182,10 @@ function draw(
     anchor?: "start" | "end";
   },
 ): string {
-  if (renderer) {
-    return renderer.text({ text, x, y, size, weight, fill, letterSpacing, anchor });
-  }
-
   const attrs = [
     `x="${x}"`,
     `y="${y}"`,
-    `font-family="${SERIF}"`,
+    `font-family="${CARD_FONT_FAMILY}"`,
     `font-size="${size}"`,
     weight === 700 ? `font-weight="700"` : "",
     `fill="${fill}"`,
@@ -201,21 +198,14 @@ function draw(
   return `<text ${attrs}>${escapeXml(text)}</text>`;
 }
 
-/**
- * 產生卡片 SVG。
- *
- * 傳入 renderer 時所有文字都會轉成路徑；未傳入則退回 <text>。
- */
-export function buildCardSvg(
-  {
-    title,
-    meta,
-    section,
-    header = "香港文獻類編",
-    footer = "www.pasthk.com",
-  }: CardContent,
-  renderer?: GlyphRenderer,
-): string {
+/** 產生卡片 SVG。呼叫端負責光柵化（見 plugin.ts）。 */
+export function buildCardSvg({
+  title,
+  meta,
+  section,
+  header = "香港文獻類編",
+  footer = "www.pasthk.com",
+}: CardContent): string {
   // 標題由大到小試，取第一個能在三行內排完的字級。
   const sizes = [78, 70, 62, 54, 46];
   let fontSize = sizes[sizes.length - 1];
@@ -245,8 +235,7 @@ export function buildCardSvg(
   const titleTop =
     (zoneTop + zoneBottom) / 2 - blockHeight / 2 + lineHeight * 0.72;
 
-  // 先渲染所有文字，defs() 才能收集到完整字形。
-  const headerMarkup = draw(renderer, header, {
+  const headerMarkup = draw(header, {
     x: PAD_LEFT,
     y: 98,
     size: 30,
@@ -256,7 +245,7 @@ export function buildCardSvg(
   });
 
   const sectionMarkup = section
-    ? draw(renderer, section, {
+    ? draw(section, {
         x: CARD_WIDTH - PAD_RIGHT,
         y: 98,
         size: 26,
@@ -268,7 +257,7 @@ export function buildCardSvg(
 
   const titleMarkup = lines
     .map((line, index) =>
-      draw(renderer, line, {
+      draw(line, {
         x: PAD_LEFT,
         y: Math.round(titleTop + index * lineHeight),
         size: fontSize,
@@ -282,7 +271,7 @@ export function buildCardSvg(
   const metaY = Math.round(titleTop + (lines.length - 1) * lineHeight + metaGap);
 
   const metaMarkup = meta
-    ? draw(renderer, truncate(meta, 32, CONTENT_WIDTH), {
+    ? draw(truncate(meta, 32, CONTENT_WIDTH), {
         x: PAD_LEFT,
         y: metaY,
         size: 32,
@@ -290,7 +279,7 @@ export function buildCardSvg(
       })
     : "";
 
-  const footerMarkup = draw(renderer, footer, {
+  const footerMarkup = draw(footer, {
     x: PAD_LEFT,
     y: 590,
     size: 24,
@@ -298,7 +287,7 @@ export function buildCardSvg(
     letterSpacing: 2,
   });
 
-  const taglineMarkup = draw(renderer, "認識香港，從文獻開始", {
+  const taglineMarkup = draw("認識香港，從文獻開始", {
     x: CARD_WIDTH - PAD_RIGHT,
     y: 590,
     size: 24,
@@ -307,15 +296,12 @@ export function buildCardSvg(
     anchor: "end",
   });
 
-  const defs = renderer?.defs() ?? "";
-
   // <title> 與 aria-label 同時服務無障礙工具與讀取 SVG 原始碼的 AI 爬蟲。
-  // 這是唯一保留文字的地方——它不會被渲染成圖形，也不影響跨平台顯示。
+  // 這是唯一保留純文字的地方——它不會被渲染成圖形，也不影響版面。
   const accessibleTitle = escapeXml(meta ? `${title} — ${meta}` : title);
 
   return `<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="${CARD_WIDTH}" height="${CARD_HEIGHT}" viewBox="0 0 ${CARD_WIDTH} ${CARD_HEIGHT}" role="img" aria-label="${accessibleTitle}">
 <title>${accessibleTitle}</title>
-${defs}
 <rect width="${CARD_WIDTH}" height="${CARD_HEIGHT}" fill="${COLOR.bg}"/>
 <rect x="0" y="0" width="14" height="${CARD_HEIGHT}" fill="${COLOR.accent}"/>
 ${headerMarkup}

@@ -176,6 +176,69 @@ const buildTrail = (
   return [];
 };
 
+/** 每個 app 只算一次；routeMeta 與結構化資料共用同一份結果 */
+const trailCache = new WeakMap<App, Map<string, TrailItem[]>>();
+
+/**
+ * 全站導覽鏈：頁面路徑 → 祖先鏈（含首頁，不含當前頁）。
+ *
+ * 抽成獨立函式而非只寫在鉤子裡，是因為 `@vuepress/plugin-seo` 的
+ * `jsonLd` 在它自己的 `onInitialized` 中執行，而那比本外掛的同名鉤子更早，
+ * 屆時 `routeMeta` 還是空的。改由呼叫方按需計算，兩邊就都拿得到同一份資料。
+ */
+export const breadcrumbTrails = (app: App): Map<string, TrailItem[]> => {
+  const cached = trailCache.get(app);
+  if (cached) return cached;
+
+  const titles = new Map<string, string>();
+  const links = new Map<string, string[]>();
+
+  for (const page of app.pages) {
+    titles.set(page.path, page.title);
+    links.set(
+      page.path,
+      page.links
+        .map((link) => link.absolute?.split("#")[0])
+        .filter((link): link is string => Boolean(link))
+        .map(toPagePath),
+    );
+  }
+
+  const titleOf = (path: string) => titles.get(path);
+  const entries = flatten(titleOf);
+  const parents = buildParentIndex(entries, (path) => links.get(path) ?? []);
+
+  // 非 "/" 的側邊欄根（如 /project/ay1928）補上該專題首頁作為第一層
+  const rootTitles = new Map<string, TrailItem>();
+  for (const root of roots) {
+    if (root === "/") continue;
+    const indexPath = `${root}/`;
+    const title = titleOf(indexPath) ?? titleOf(`${root}.html`);
+    if (title) rootTitles.set(root, { text: title, link: indexPath });
+  }
+
+  const trails = new Map<string, TrailItem[]>();
+
+  for (const page of app.pages) {
+    const trail = buildTrail(page.path, entries, parents);
+    const root = rootOf(page.path);
+    const rootItem = rootTitles.get(root);
+    // 專題首頁自己不列入路徑，否則會出現指向本頁的自我連結
+    const isRootIndex = page.path === `${root}/`;
+    const full =
+      rootItem && !isRootIndex && trail.length
+        ? [HOME, rootItem, ...trail.slice(1)]
+        : trail;
+
+    // 只有首頁一層的路徑沒有資訊量，寧可不顯示
+    if (full.length > 1) trails.set(page.path, full);
+  }
+
+  trailCache.set(app, trails);
+
+  return trails;
+};
+
 /**
  * 把中文路徑寫進每頁的 routeMeta，供 PageBreadCrumb 讀取。
  * 必須在 onInitialized（全部頁面已建立、標題已解析）之後、
@@ -185,45 +248,12 @@ export const breadcrumbPlugin = (): Plugin => ({
   name: "breadcrumb-trail",
 
   onInitialized(app: App) {
-    const titles = new Map<string, string>();
-    const links = new Map<string, string[]>();
+    const trails = breadcrumbTrails(app);
 
     for (const page of app.pages) {
-      titles.set(page.path, page.title);
-      links.set(
-        page.path,
-        page.links
-          .map((link) => link.absolute?.split("#")[0])
-          .filter((link): link is string => Boolean(link))
-          .map(toPagePath),
-      );
-    }
+      const trail = trails.get(page.path);
 
-    const titleOf = (path: string) => titles.get(path);
-    const entries = flatten(titleOf);
-    const parents = buildParentIndex(entries, (path) => links.get(path) ?? []);
-
-    // 非 "/" 的側邊欄根（如 /project/ay1928）補上該專題首頁作為第一層
-    const rootTitles = new Map<string, TrailItem>();
-    for (const root of roots) {
-      if (root === "/") continue;
-      const indexPath = `${root}/`;
-      const title = titleOf(indexPath) ?? titleOf(`${root}.html`);
-      if (title) rootTitles.set(root, { text: title, link: indexPath });
-    }
-
-    for (const page of app.pages) {
-      const trail = buildTrail(page.path, entries, parents);
-      const root = rootOf(page.path);
-      const rootItem = rootTitles.get(root);
-      // 專題首頁自己不列入路徑，否則會出現指向本頁的自我連結
-      const isRootIndex = page.path === `${root}/`;
-      const full =
-        rootItem && !isRootIndex && trail.length
-          ? [HOME, rootItem, ...trail.slice(1)]
-          : trail;
-
-      if (full.length > 1) page.routeMeta.breadcrumbTrail = full;
+      if (trail) page.routeMeta.breadcrumbTrail = trail;
     }
   },
 });

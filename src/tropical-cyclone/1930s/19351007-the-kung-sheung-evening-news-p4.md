@@ -8,7 +8,7 @@ excerpted: true
 proofread: false
 ---
 
-海面波濤比昨晚更爲洶湧
+海面波濤比昨晚更為洶湧
 
 各江輪渡多停航避風
 

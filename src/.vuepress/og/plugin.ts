@@ -1,34 +1,33 @@
-import { mkdir, readFile, writeFile } from "node:fs/promises";
+import { access, mkdir, readFile, writeFile } from "node:fs/promises";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
+import { Resvg } from "@resvg/resvg-js";
 import type { App, Page, Plugin } from "vuepress/core";
 import { success, warn } from "vuepress/utils";
 
-import { buildCardSvg, type CardContent } from "./card.js";
-import { GlyphRenderer } from "./glyphs.js";
+import { chapterName } from "../chapters.js";
+import {
+  buildCardSvg,
+  CARD_FONT_FAMILY,
+  type CardContent,
+} from "./card.js";
 import { ogFileName } from "./paths.js";
-
-/** 章節名稱，顯示在卡片右上角 */
-const SECTION_NAMES: Record<string, string> = {
-  archaeology: "香港考古",
-  custom: "傳統節慶與打醮",
-  education: "香港教育史",
-  "historic-building": "歷史建築",
-  legislation: "香港法例",
-  project: "專題研究",
-  "public-health": "公共衛生史",
-  "stele-inscription": "碑刻",
-  "tropical-cyclone": "熱帶氣旋與風球",
-};
 
 const SITE_TAGLINE = "香港歷史文獻索引";
 
 const FONT_DIR = join(dirname(fileURLToPath(import.meta.url)), "fonts");
 
+/** 子集字型：Regular 與 Bold 兩份，家族名相同、字重不同 */
+const FONT_FILES = [
+  join(FONT_DIR, "noto-serif-tc-400.ttf"),
+  join(FONT_DIR, "noto-serif-tc-700.ttf"),
+];
+
+/** 卡片右上角的章節標籤；目錄名取自頁面路徑第一段 */
 function sectionOf(pagePath: string): string | undefined {
   const [first] = pagePath.split("/").filter(Boolean);
 
-  return first ? SECTION_NAMES[first] : undefined;
+  return first ? chapterName(first) : undefined;
 }
 
 /** 引用框內容為「報刊，日期，版次。」，改寫為卡片上的「報刊 · 日期 · 版次」 */
@@ -93,6 +92,41 @@ function buildContent(
   };
 }
 
+/**
+ * 光柵化參數。
+ *
+ * 卡片 SVG 用 <text> 寫字，字型必須在這裡指定，否則 resvg 會退回系統字型
+ * （建置機器若沒有中文襯線體，字重與字形都會走樣）。缺檔時退回系統字型並示警，
+ * 讓建置繼續完成而不是整批失敗。
+ */
+async function fontOptions() {
+  const present = await Promise.all(
+    FONT_FILES.map(async (file) => {
+      try {
+        await access(file);
+
+        return file;
+      } catch {
+        return null;
+      }
+    }),
+  );
+
+  if (present.every(Boolean)) {
+    return {
+      fontFiles: present as string[],
+      loadSystemFonts: false,
+      defaultFontFamily: CARD_FONT_FAMILY,
+    };
+  }
+
+  warn(
+    `OG 卡片：缺少子集字型（${FONT_DIR}），改用建置機器的系統字型，字重與字形可能與設計不符`,
+  );
+
+  return { loadSystemFonts: true };
+}
+
 export const ogImagePlugin = (): Plugin => (app: App) => ({
   name: "og-image-generator",
 
@@ -114,17 +148,15 @@ export const ogImagePlugin = (): Plugin => (app: App) => ({
       childCounts.set(parentPath, (childCounts.get(parentPath) ?? 0) + 1);
     }
 
-    const renderer = await GlyphRenderer.load(FONT_DIR);
+    const font = await fontOptions();
 
-    if (!renderer) {
-      warn(
-        "OG 卡片：找不到字型子集，文字將以 <text> 輸出（社群平台可能顯示異常）",
-      );
-    }
+    // 空殼頁（只有標題、無正文）已設 sitemap: false 與 noindex，不會出現在搜尋結果，
+    // 也就不會被分享，卡片永遠用不到。仍計入 childCounts，父頁的「收錄 N 篇」才不會少算。
+    const pages = app.pages.filter((page) => page.frontmatter.sitemap !== false);
 
     let total = 0;
 
-    for (const page of app.pages) {
+    for (const page of pages) {
       let raw = "";
 
       try {
@@ -134,21 +166,25 @@ export const ogImagePlugin = (): Plugin => (app: App) => ({
       }
 
       const content = buildContent(page, raw, childCounts.get(page.path) ?? 0);
+      const svg = buildCardSvg(content);
 
-      // 每張卡片重新收集字形，避免上一張的字形留在 defs 裡。
-      renderer?.reset();
+      // 社群平台一律不接受 SVG 作 og:image，必須光柵化。
+      // 卡片自帶白底 rect，這裡的 background 只是保險。
+      const png = new Resvg(svg, { background: "#ffffff", font })
+        .render()
+        .asPng();
 
-      const svg = buildCardSvg(content, renderer);
+      await writeFile(join(outDir, ogFileName(page.path)), png);
 
-      await writeFile(join(outDir, ogFileName(page.path)), svg, "utf8");
-
-      total += svg.length;
+      total += png.length;
     }
 
-    const mode = renderer ? "文字已轉為路徑" : "文字未轉路徑";
+    const mode = "fontFiles" in font ? "子集字型" : "系統字型";
+    const skipped = app.pages.length - pages.length;
+    const skipNote = skipped > 0 ? `，跳過 ${skipped} 個空殼頁` : "";
 
     success(
-      `生成 ${app.pages.length} 張 SVG（${mode}，共 ${Math.round(total / 1024)} KB）→ ${outDir}`,
+      `生成 ${pages.length} 張 PNG（${mode}，共 ${Math.round(total / 1024)} KB${skipNote}）→ ${outDir}`,
     );
   },
 });

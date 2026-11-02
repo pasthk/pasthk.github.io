@@ -10,6 +10,13 @@
   border-bottom: none;
 }
 
+// 主題的 table 只設 display:block / overflow-x:auto，未給寬度，
+// 多欄對照表（如閱讀說明頁的異體字表）會縮在左側、與正文不成比例。
+// 這裡讓表格撐滿內容寬度；窄螢幕仍由主題的 overflow-x:auto 橫向捲動。
+[vp-content] table {
+  width: 100%;
+}
+
 // 路徑導航。主題的 breadcrumb.scss 是由 BreadCrumb 元件自行 import 的，
 // 元件被覆寫後那批樣式不再進產物，故在此重建（數值與主題一致），
 // 並補上純文字層級（無對應頁面的側邊欄分組）所需的內距與顏色。

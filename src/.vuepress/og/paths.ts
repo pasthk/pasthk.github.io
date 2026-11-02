@@ -5,7 +5,9 @@
  * 由頁面路徑推導出圖片檔名。
  *
  * 例如 /archaeology/lei-cheng-uk-han-tomb.html
- * → archaeology--lei-cheng-uk-han-tomb.svg
+ * → archaeology--lei-cheng-uk-han-tomb.png
+ *
+ * 用 PNG 而非 SVG：Facebook、X、LinkedIn、Slack 等平台都不接受 SVG 作 og:image。
  */
 export function ogFileName(pagePath: string): string {
   const slug = pagePath
@@ -14,7 +16,7 @@ export function ogFileName(pagePath: string): string {
     .replace(/\/$/, "")
     .replace(/\//g, "--");
 
-  return `${slug || "index"}.svg`;
+  return `${slug || "index"}.png`;
 }
 
 /** 站內絕對路徑，供 meta 標籤使用 */
