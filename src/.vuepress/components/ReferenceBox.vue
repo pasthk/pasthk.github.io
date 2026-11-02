@@ -51,7 +51,6 @@ const page = usePageData();
 const route = useRoute();
 const pageUrl = ref("");
 
-// SSR fallback: construct URL from hostname and route path
 const hostname = "https://www.pasthk.com";
 const ssrUrl = hostname + (route?.path || "");
 
@@ -59,7 +58,6 @@ onMounted(() => {
   pageUrl.value = window.location.href.split("#")[0].split("?")[0];
 });
 
-// Recursively extract plain text from VNodes (works in both SSR and client)
 function extractText(node) {
   if (node === null || node === undefined || node === false) return "";
   if (typeof node === "string") return node;
