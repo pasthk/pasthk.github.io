@@ -1,25 +1,39 @@
 .vp-page {
   font-size: 1.125rem;
-  line-height: 1.8;
-  text-align: justify;
+}
+[vp-content] {
+  :is(p, ul, ol, li, blockquote) {
+    line-height: 1.8;
+    text-align: justify;
+    overflow-wrap: break-word;
+    hyphens: auto;
+  }
+  :is(th, td) {
+    line-height: 1.7;
+    text-align: start;
+  }
+
+  @media (max-width: 419px) {
+    :is(p, li, blockquote) {
+      text-align: start;
+    }
+  }
+
+  @media print {
+    :is(p, li, blockquote) {
+      text-align: start;
+    }
+  }
 }
 
-// 主題預設在 h2 下方畫一條 1px 分隔線；這裡只去掉線，
-// 保留 padding-bottom（0.3rem）作為標題與正文之間的間距。
 .vp-page h2 {
   border-bottom: none;
 }
 
-// 主題的 table 只設 display:block / overflow-x:auto，未給寬度，
-// 多欄對照表（如閱讀說明頁的異體字表）會縮在左側、與正文不成比例。
-// 這裡讓表格撐滿內容寬度；窄螢幕仍由主題的 overflow-x:auto 橫向捲動。
 [vp-content] table {
   width: 100%;
 }
 
-// 路徑導航。主題的 breadcrumb.scss 是由 BreadCrumb 元件自行 import 的，
-// 元件被覆寫後那批樣式不再進產物，故在此重建（數值與主題一致），
-// 並補上純文字層級（無對應頁面的側邊欄分組）所需的內距與顏色。
 .vp-breadcrumb {
   position: relative;
   z-index: 2;
@@ -90,10 +104,8 @@ body {
   letter-spacing: 0.02em;
 }
 
-.vp-toc-item {
-  min-height: 2rem;
-}
-
+// 主題已給 .vp-toc-item 固定 height: 2rem，此處原本再宣告 min-height 屬冗餘，已移除。
+// 作用中的目錄項主題用 bold（700），這裡降到 600，避免與正文標題搶視覺重量。
 .vp-toc-item.active > .vp-toc-link {
   font-weight: 600;
 }

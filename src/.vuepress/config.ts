@@ -6,6 +6,7 @@ import { ogImagePlugin } from "./og/plugin.js";
 import { llms } from "./llms.js";
 import { robotsPlugin } from "./robots.js";
 import { slimsearchDevWorkerPlugin } from "./slimsearch-dev-worker-plugin.js";
+import { stripUnusedFonts } from "./strip-unused-fonts.js";
 import theme from "./theme.js";
 
 type AliasEntry = { find: string | RegExp; replacement: string };
@@ -56,6 +57,12 @@ export default defineUserConfig({
       // 少了它搜尋框只會停在「搜尋中」，詳見 slimsearch-dev-worker-plugin.ts。
       config.plugins ??= [];
       config.plugins.push(slimsearchDevWorkerPlugin());
+
+      // 主題的 _normalize.scss 會 @use fonts/crimson.css，該檔自帶一段 4.3KB 的
+      // base64 @font-face；本站 --vp-font 為 serif，沒有任何元素使用 Crimson，
+      // 這段資料卻跟著每次載入的 CSS 一起下載。此處在產出階段移除未被引用的字面，
+      // 詳見 strip-unused-fonts.ts（有守衛：一旦有規則引用該字族就原樣保留）。
+      config.plugins.push(stripUnusedFonts());
     },
   }),
   lang: "zh-Hant",
@@ -69,6 +76,12 @@ export default defineUserConfig({
         content: "ca-pub-8975507583219124",
       },
     ],
+    // 主題的建置模板（vuepress-theme-hope/templates/index.build.html）會在 hydration
+    // 前無條件依 prefers-color-scheme 先設 data-theme="dark"，即使 darkmode: "disable"
+    // （rc.110 要等 onMounted 才改回 light）。本站 palette 把 --vp-c-text 固定為 #000，
+    // 深色偏好訪客在指令碼載入前會看到黑底黑字。此處在主題腳本之後、樣式表之前執行，
+    // 直接把主題鎖定為淺色，同時省掉一次全頁重繪。
+    ["script", {}, 'document.documentElement.dataset.theme="light";'],
   ],
   theme,
   plugins: [
