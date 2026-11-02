@@ -6,8 +6,12 @@ description: 林村鄉太平清醮相關香港節慶報道索引，按年代整�
 
 ## 新聞報道
 ### 1954年
-1. 〈[林村建醮放假六天](./tai-po-lam-tsuen-jiao-festival/19541207-wah-kiu-yat-po-p14.md)〉，《華僑日報》，1954年12月7日，第4張第2頁。
-2. 〈[林村十年一度建醮　廿四條村村民參加](./tai-po-lam-tsuen-jiao-festival/19541207-the-kung-sheung-daily-po-p6.md)〉，《工商日報》，1954年12月7日，第6頁。
+1. 〈[大埔林村籌備建醮](./tai-po-lam-tsuen-jiao-festival/19540826-wah-kiu-yat-po-p6.md)〉，《華僑日報》，1954年8月26日，第2張第2頁。
+2. 〈[新界英軍十晝夜大演習　林村建醮奉命改期](./tai-po-lam-tsuen-jiao-festival/19541101-wah-kiu-yat-po-p7.md)〉，《華僑日報》，1954年11月1日，第2張第3頁。
+3. 〈[青山道爆石每日三次　大埔林村建醮己擇吉](./tai-po-lam-tsuen-jiao-festival/19541124-wah-kiu-yat-po-p7.md)〉，《華僑日報》，1954年11月24日，第2張第3頁。
+4. 〈[西貢北約籌建墟市　林村建醮明日開壇](./tai-po-lam-tsuen-jiao-festival/19541204-wah-kiu-yat-po-p7.md)〉，《華僑日報》，1954年12月4日，第2張第3頁。
+5. 〈[林村建醮放假六天](./tai-po-lam-tsuen-jiao-festival/19541207-wah-kiu-yat-po-p14.md)〉，《華僑日報》，1954年12月7日，第4張第2頁。
+6. 〈[林村十年一度建醮　廿四條村村民參加](./tai-po-lam-tsuen-jiao-festival/19541207-the-kung-sheung-daily-po-p6.md)〉，《工商日報》，1954年12月7日，第6頁。
    - 學校放假六日巴士加班
 
 ### 1963年
