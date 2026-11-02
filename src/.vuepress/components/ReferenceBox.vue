@@ -1,7 +1,7 @@
 <template>
   <div class="reference-box">
     <div class="reference-box-header">
-      <span class="reference-box-label">網頁信息</span>
+      <span class="reference-box-label">參考信息</span>
       <button
         class="reference-box-copy-btn"
         :class="{ copied }"

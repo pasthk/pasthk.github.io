@@ -5,8 +5,8 @@ description: 香港考古調查（1982-1985）相關香港考古資料索引，�
 ---
 
 ## 新聞報道
-1. [Search for relics to be launched](./hong-kong-archaeological-survey-1982-1985/19810711-south-china-morning-post-p12.md). (1981, July 11). *South China Morning Post*, p. 12.
-2. [Vehicle will help preserve heritage](./hong-kong-archaeological-survey-1982-1985/19830623-south-china-morning-post-p12.md). (1983, June 23). *South China Morning Post*, p. 12.
+1. [Search for Relics to be Launched](./hong-kong-archaeological-survey-1982-1985/19810711-south-china-morning-post-p12.md). (1981, July 11). *South China Morning Post*, p. 12.
+2. [Vehicle Will Help Preserve Heritage](./hong-kong-archaeological-survey-1982-1985/19830623-south-china-morning-post-p12.md). (1983, June 23). *South China Morning Post*, p. 12.
 3. 〈[考古資源調查發現廿個遺跡](./hong-kong-archaeological-survey-1982-1985/19840629-wah-kiu-yat-po-p6.md)〉，《華僑日報》，1984年6月29日，第2張第2頁。
    - 保護歷史文物漸受重視
 

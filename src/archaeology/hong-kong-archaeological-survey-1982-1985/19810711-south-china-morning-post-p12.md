@@ -1,5 +1,5 @@
 ---
-title: Search for relics to be launched
+title: Search for Relics to be Launched
 date: 2026-09-30
 dateCreated: "2026-09-30"
 datePublished: "1981-07-11"
@@ -7,9 +7,6 @@ description: 《南華早報》1981年7月11日報道香港將於當年秋季展
 excerpted: true
 proofread: true
 ---
-
-
-> Quoted from *South China Morning Post*, 1981, July 11, p. 12.
 
 　Hongkong may find it has more ancient relics of historical interest than has yet been suspected.
 
@@ -30,3 +27,7 @@ proofread: true
 　The stone with its 108-character inscription rests on a hillside above the Tin Hau Temple in Joss House Bay and records some of the historyof the temples in the area.
 
 　The text was composed by the administrator of the salt field that existed at that time on what is now Kowloon peninsula.
+
+<ReferenceBox>
+South China Morning Post, 1981, July 11, p. 12.
+</ReferenceBox>
