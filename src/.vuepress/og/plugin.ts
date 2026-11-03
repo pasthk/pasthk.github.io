@@ -6,6 +6,7 @@ import type { App, Page, Plugin } from "vuepress/core";
 import { success, warn } from "vuepress/utils";
 
 import { chapterName } from "../chapters.js";
+import { SITE_NAME, SITE_NAME_EN } from "../site.js";
 import {
   buildCardSvg,
   CARD_FONT_FAMILY,
@@ -13,7 +14,8 @@ import {
 } from "./card.js";
 import { ogFileName } from "./paths.js";
 
-const SITE_TAGLINE = "香港歷史文獻索引";
+/** 首頁卡片標題下的說明；與 site.ts 的 SITE_TAGLINE（頁腳標語）不同 */
+const HOME_CARD_META = "香港歷史文獻索引";
 
 const FONT_DIR = join(dirname(fileURLToPath(import.meta.url)), "fonts");
 
@@ -67,9 +69,9 @@ function buildContent(
 ): CardContent {
   if (page.path === "/") {
     return {
-      title: "香港文獻類編",
-      meta: SITE_TAGLINE,
-      header: "Thematic Compilation of Hong Kong Archives",
+      title: SITE_NAME,
+      meta: HOME_CARD_META,
+      header: SITE_NAME_EN,
     };
   }
 
@@ -86,7 +88,7 @@ function buildContent(
     firstClause(page.frontmatter.description ?? "");
 
   return {
-    title: clean(page.title) || "香港文獻類編",
+    title: clean(page.title) || SITE_NAME,
     meta: meta ? clean(meta) : undefined,
     section: sectionOf(page.path),
   };

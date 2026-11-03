@@ -118,9 +118,8 @@ body {
 }
 
 .page-info {
-  .page-reading-time-info > .icon {
-    display: none;
-  }
+  // 閱讀時間圖示已從 ReadingTimeInfo.vue 移除（每頁 1KB 的 SVG，卻被這裡隱藏），
+  // 原本的 `.page-reading-time-info > .icon { display: none }` 一併刪去。
 
   .page-date-info + .page-reading-time-info {
     margin-inline-start: 0.1em;

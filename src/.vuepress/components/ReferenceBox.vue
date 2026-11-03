@@ -42,6 +42,7 @@
 <script setup>
 import { computed, onBeforeUnmount, onMounted, ref, useSlots } from "vue";
 import { usePageData, useRoute } from "vuepress/client";
+import { HOSTNAME, SITE_NAME } from "../site.js";
 
 const slots = useSlots();
 const copied = ref(false);
@@ -51,8 +52,7 @@ const page = usePageData();
 const route = useRoute();
 const pageUrl = ref("");
 
-const hostname = "https://www.pasthk.com";
-const ssrUrl = hostname + (route?.path || "");
+const ssrUrl = HOSTNAME + (route?.path || "");
 
 onMounted(() => {
   pageUrl.value = window.location.href.split("#")[0].split("?")[0];
@@ -99,7 +99,7 @@ const parsedSlot = computed(() => {
 const citation = computed(() => {
   const fm = page.value?.frontmatter || {};
   const title = fm.title || page.value?.title || "";
-  const siteName = "香港文獻類編";
+  const siteName = SITE_NAME;
   const url = pageUrl.value || ssrUrl;
 
   let source = parsedSlot.value.source.trim();

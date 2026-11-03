@@ -7,6 +7,8 @@
 // 前提是光柵化時必須載入同一份子集字型（見 plugin.ts 的 font 選項），
 // 否則 <text> 會退回系統字型，字重與字形都會走樣。
 
+import { HOST, SITE_NAME } from "../site.js";
+
 export const CARD_WIDTH = 1200;
 export const CARD_HEIGHT = 630;
 
@@ -203,8 +205,8 @@ export function buildCardSvg({
   title,
   meta,
   section,
-  header = "香港文獻類編",
-  footer = "www.pasthk.com",
+  header = SITE_NAME,
+  footer = HOST,
 }: CardContent): string {
   // 標題由大到小試，取第一個能在三行內排完的字級。
   const sizes = [78, 70, 62, 54, 46];

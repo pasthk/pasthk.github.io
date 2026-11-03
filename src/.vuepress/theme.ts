@@ -6,8 +6,15 @@ import sidebar from "./sidebar.js";
 import { breadcrumbTrails } from "./breadcrumb.js";
 import { ogImageUrl } from "./og/paths.js";
 import { tokenizeForIndex } from "./search-tokenize.js";
+import {
+  HOSTNAME,
+  SITE_NAME,
+  SITE_NAME_EN,
+  SITE_TAGLINE,
+} from "./site.js";
 
-const hostname = "https://www.pasthk.com";
+/** 站台網址，集中定義於 site.ts */
+const hostname = HOSTNAME;
 
 const ORGANIZATION_ID = `${hostname}/#organization`;
 const WEBSITE_ID = `${hostname}/#website`;
@@ -16,8 +23,8 @@ const PERSON_ID = `${hostname}/#person`;
 const organization = {
   "@type": "Organization",
   "@id": ORGANIZATION_ID,
-  name: "香港文獻類編",
-  alternateName: "Thematic Compilation of Hong Kong Archives",
+  name: SITE_NAME,
+  alternateName: SITE_NAME_EN,
   url: hostname,
   logo: {
     "@type": "ImageObject",
@@ -41,10 +48,22 @@ const website = {
   "@type": "WebSite",
   "@id": WEBSITE_ID,
   url: `${hostname}/`,
-  name: "香港文獻類編",
+  name: SITE_NAME,
   inLanguage: "zh-Hant",
   publisher: { "@id": ORGANIZATION_ID },
 };
+
+/**
+ * 頁面對應的分享卡網址。
+ *
+ * 空殼頁（`sitemap: false`）不生成專屬卡片（見 og/plugin.ts 的過濾），
+ * 若仍按路徑組出網址，og:image 與 JSON-LD 的 image 都會指向不存在的檔案，
+ * 社群平台抓到 404 就等於沒有預覽圖。這類頁面改指向首頁那張通用卡。
+ */
+const cardUrl = (page: Page): string =>
+  page.frontmatter.sitemap === false
+    ? ogImageUrl(hostname, "/")
+    : ogImageUrl(hostname, page.path);
 
 /**
  * 由 breadcrumb.ts 的導覽鏈產生結構化資料，與頁面上看到的麵包屑同源，
@@ -95,8 +114,10 @@ export default hopeTheme(
     darkmode: "disable",
     favicon: "/favicon.png",
     displayFooter: true,
+    // 側邊欄分組在 SSR 階段不輸出子項（見 page-index.ts 的說明），
+    // 頁尾的「全部文獻」是全站唯一能走到所有頁面的入口。
     footer:
-      '認識香港，從文獻開始。<br><a href="/support.html">支持本站</a>',
+      `${SITE_TAGLINE}。<br><a href="/browse.html">全部文獻</a> · <a href="/support.html">支持本站</a>`,
     lastUpdated: false,
     contributors: false,
     pageInfo: ["Date", "ReadingTime"],
@@ -158,8 +179,8 @@ export default hopeTheme(
         canonical: (page) => new URL(page.path, hostname).href,
         fallBackImage: `${hostname}/favicon.png`,
         ogp: (ogp, page) => {
-          const image = ogImageUrl(hostname, page.path);
-          const alt = page.path === "/" ? "香港文獻類編" : page.title;
+          const image = cardUrl(page);
+          const alt = page.path === "/" ? SITE_NAME : page.title;
 
           Object.assign(ogp, {
             "og:image": image,
@@ -197,7 +218,7 @@ export default hopeTheme(
             isPartOf: { "@id": WEBSITE_ID },
             publisher: { "@id": ORGANIZATION_ID },
             author: { "@id": PERSON_ID },
-            image: [ogImageUrl(hostname, page.path)],
+            image: [cardUrl(page)],
           } as Record<string, unknown>;
 
           delete main["@context"];

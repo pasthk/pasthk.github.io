@@ -4,7 +4,10 @@ import { defineUserConfig } from "vuepress";
 import { breadcrumbPlugin } from "./breadcrumb.js";
 import { ogImagePlugin } from "./og/plugin.js";
 import { llms } from "./llms.js";
+import { pageIndexPlugin } from "./page-index.js";
+import { referenceBoxPlugin } from "./reference-box.js";
 import { robotsPlugin } from "./robots.js";
+import { SITE_NAME, SITE_TAGLINE } from "./site.js";
 import { slimsearchDevWorkerPlugin } from "./slimsearch-dev-worker-plugin.js";
 import { stripUnusedFonts } from "./strip-unused-fonts.js";
 import theme from "./theme.js";
@@ -66,8 +69,8 @@ export default defineUserConfig({
     },
   }),
   lang: "zh-Hant",
-  title: "香港文獻類編",
-  description: "認識香港，從文獻開始。",
+  title: SITE_NAME,
+  description: `${SITE_TAGLINE}。`,
   head: [
     [
       "meta",
@@ -85,9 +88,13 @@ export default defineUserConfig({
   ],
   theme,
   plugins: [
+    // 必須排在 breadcrumbPlugin 之前：breadcrumbTrails() 會快取整份頁面清單，
+    // 索引頁晚於它建立就不會被算進導覽鏈。
+    pageIndexPlugin(),
     llms,
     ogImagePlugin(),
     robotsPlugin(),
     breadcrumbPlugin(),
+    referenceBoxPlugin(),
   ],
 });

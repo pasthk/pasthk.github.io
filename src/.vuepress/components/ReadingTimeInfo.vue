@@ -1,6 +1,5 @@
 <script setup>
 import { computed } from "vue";
-import { TimerIcon } from "@theme-hope/components/info/icons";
 import { useMetaLocale } from "@theme-hope/composables/info/useMetaLocale";
 import { usePure } from "@theme-hope/composables/usePure";
 import { useFrontmatter } from "vuepress/client";
@@ -46,7 +45,6 @@ const transcriptionStatus = computed(() => {
     :aria-label="`${metaLocale.readingTime}${isPure ? '' : '⌛'}`"
     v-bind="isPure ? {} : { 'data-balloon-pos': 'up' }"
   >
-    <TimerIcon />
     <span>{{ readingTimeLocale.time }}</span>
     <meta property="timeRequired" :content="readingTimeMeta || ''" />
     <span v-if="transcriptionStatus" class="page-transcription-status">

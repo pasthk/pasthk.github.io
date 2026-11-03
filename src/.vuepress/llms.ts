@@ -7,8 +7,7 @@ import {
 import type { Page } from "vuepress/core";
 
 import { chapters } from "./chapters.js";
-
-const HOSTNAME = "https://www.pasthk.com";
+import { HOSTNAME, SITE_NAME } from "./site.js";
 
 /**
  * 網站摘要。外掛預設只取 `siteData.description`（「認識香港，從文獻開始。」），
@@ -50,14 +49,14 @@ const DETAILS = `- 網址：${HOSTNAME}
 
 \`\`\`
 篇名，報刊，YYYY年M月D日，第X張第X頁。
-香港文獻類編，https://www.pasthk.com/<路徑>
+${SITE_NAME}，${HOSTNAME}/<路徑>
 \`\`\`
 
 實例：
 
 \`\`\`
 古塚出現，華僑日報，1955年8月10日，第2張第1頁。
-香港文獻類編，https://www.pasthk.com/archaeology/lei-cheng-uk-han-tomb/19550810-wah-kiu-yat-po-p5.html
+${SITE_NAME}，${HOSTNAME}/archaeology/lei-cheng-uk-han-tomb/19550810-wah-kiu-yat-po-p5.html
 \`\`\`
 
 以機器可讀格式引用時，建議使用：
@@ -196,7 +195,7 @@ export const llms = llmsPlugin({
 `,
 
   llmsTxtTemplateGetter: {
-    title: "香港文獻類編",
+    title: SITE_NAME,
     description: SUMMARY,
     details: DETAILS,
     toc: buildToc,
