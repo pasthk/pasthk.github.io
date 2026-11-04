@@ -1,9 +1,6 @@
 ---
 title: 支持本站
 pageInfo: false
-next: false
-prev: false
-toc: false
 description: 支持香港文獻類編整理香港歷史文獻與維護網站，可透過支付寶、微信支付、PayMe 等方式自願捐助。
 ---
 
