@@ -1,5 +1,6 @@
 ---
 title: 吉澳醮會宴謝各界
+toc: false
 date: 2026-11-03
 dateCreated: "2026-11-03"
 datePublished: "1976-11-20"
