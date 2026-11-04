@@ -3,7 +3,7 @@ title: 新界山廈村有盛會　麒麟起舞氣氛洋溢
 date: 2026-11-02
 dateCreated: "2026-11-02"
 datePublished: "1960-12-29"
-description: 
+description: 《大公報》1960年12月29日報道屏山山廈村於清晨6時舉行祥麟開光典禮，村民齊集，鄰近各村麒麟舞隊到賀，錦旗綵金遍佈全村；午間在祠堂筵開數十席。報道並指10年一度建醮定於下月3日晚上開壇，屆時由錦添花劇團演出粵劇7套助興。
 excerpted: true
 proofread: false
 ---

@@ -3,7 +3,7 @@ title: 山廈村建醮祥麟今開光
 date: 2026-11-03
 dateCreated: "2026-11-03"
 datePublished: "1960-12-28"
-description: 
+description: 《華僑日報》1960年12月28日報道元朗屏山鄉山廈村舉行10年一度大醮，於當日在村中宗祠舉行祥麟開光儀式，張華封堂同人柬邀各界嘉賓參與。條目記錄新界村落建醮前「祥麟開光」的序幕儀式，以及宗族組織在醮會中的角色。
 excerpted: true
 proofread: true
 ---

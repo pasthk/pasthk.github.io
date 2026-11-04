@@ -3,7 +3,7 @@ title: 風球已下
 date: 2026-10-22
 dateCreated: "2026-10-22"
 datePublished: "1924-07-18"
-description: 
+description: 《香港華字日報》1924年7月18日短訊報道香港天文台於上午10時20分除下1號風球，結束連日懸掛的風警。條目雖僅數十字，卻保留1920年代香港颱風警告信號的實際操作記錄，可與同期風災報道並讀，追蹤1次風暴由戒備到解除的時間序列。
 excerpted: true
 proofread: true
 ---

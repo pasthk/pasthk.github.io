@@ -3,7 +3,7 @@ title: 青山道爆石每日三次　大埔林村建醮己擇吉
 date: 2026-11-02
 dateCreated: "2026-11-02"
 datePublished: "1954-11-24"
-description: 
+description: 《華僑日報》1954年11月24日報道大埔林村10年一屆建醮因英軍演習改期後，已卜定於12月5日（農曆11月11日）下午開始，設大小醮棚6個及可容數千觀眾的戲棚，開演粵劇助興，醮期內全鄉素食、不准殺牲。
 excerpted: true
 proofread: false
 ---

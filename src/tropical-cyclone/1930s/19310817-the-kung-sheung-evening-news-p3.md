@@ -3,7 +3,7 @@ title: 颶風不致吹到香港
 date: 2026-10-23
 dateCreated: "2026-10-23"
 datePublished: "1931-08-17"
-description: 
+description: 《工商晚報》1931年8月17日報道颱風逼近香港，天文台一度懸掛5號風球，港梧、港澳等航線暫停，油蔴地避風塘內有船艇因錨鍊斷裂相撞、3人墮海。天文台報稱颱風在香港東南偏東約100里處停頓不動，其後於下午2時除下風球，風暴未正面襲港。
 excerpted: true
 proofread: false
 ---

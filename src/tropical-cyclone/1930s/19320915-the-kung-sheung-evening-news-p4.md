@@ -3,7 +3,7 @@ title: 天文台今午懸一號風球
 date: 2026-10-24
 dateCreated: "2026-10-24"
 datePublished: "1932-09-15"
-description: 
+description: 《工商晚報》1932年9月15日報道香港天文台於上午9時40分發出風暴報告，指北緯18度、東經122度附近有颱風形成並向西北偏北移動，至中午12時20分懸掛1號風球，表示風暴距港300里外，是否吹抵本港仍未確定。
 excerpted: true
 proofread: true
 ---

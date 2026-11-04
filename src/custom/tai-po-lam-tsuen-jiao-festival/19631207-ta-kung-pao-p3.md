@@ -3,7 +3,7 @@ title: 林村鄉太平清醮今晚將功德圓滿
 date: 2026-10-29
 dateCreated: "2026-10-29"
 datePublished: "1963-12-07"
-description: 
+description: 《大公報》1963年12月7日報道大埔林村鄉太平清醮於當晚功德圓滿閉會，主會聘請的鴻天劇團演出《火網梵宮十四年》及《旗開得勝凱旋還》。報道並記醮金俗例：24村鄉民不論男女老幼按人丁每位捐3元，捐款者可免費觀看一連5日6夜的粵劇。
 excerpted: true
 proofread: true
 ---

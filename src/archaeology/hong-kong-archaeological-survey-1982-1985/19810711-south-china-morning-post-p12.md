@@ -3,7 +3,7 @@ title: Search for Relics to be Launched
 date: 2026-09-30
 dateCreated: "2026-09-30"
 datePublished: "1981-07-11"
-description: 《南華早報》1981年7月11日報道香港將於當年秋季展開全港考古調查，預計歷時兩至三年，並指滘西洲天后廟附近的南宋刻石將獲捐款保護。
+description: 《南華早報》1981年7月11日報道香港將於當年秋季展開全港考古調查，預計歷時2至3年，並指滘西洲天后廟附近的南宋刻石將獲捐款保護。
 excerpted: true
 proofread: true
 ---

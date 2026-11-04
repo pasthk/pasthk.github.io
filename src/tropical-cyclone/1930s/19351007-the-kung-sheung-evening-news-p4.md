@@ -3,7 +3,7 @@ title: 七號風球今午仍未除下
 date: 2026-10-26
 dateCreated: "2026-10-26"
 datePublished: "1935-10-07"
-description: 
+description: 《工商晚報》1935年10月7日報道入秋後天氣由涼轉熱，天文台於上午7時再懸1號風球，至晚上10時50分因颱風迫近改懸7號風燈，海面波濤較前晚更為洶湧，各江輪渡多停航避風，小艇及貨艇紛僱小輪拖往避風塘。
 excerpted: true
 proofread: false
 ---

@@ -3,7 +3,7 @@ title: 颶風離港之南一百五十英里
 date: 2026-10-25
 dateCreated: "2026-10-25"
 datePublished: "1932-09-22"
-description: 
+description: 《工商晚報》1932年9月22日報道本港再受颱風威脅，天文台於上午8時25分接報後懸掛1號風球，10時25分指風暴位於香港以南150英里、北緯18度東經118度，向西北偏西移動，其後改懸3號風球。海面小艇駛往避風塘，救星小輪升火待發。
 excerpted: true
 proofread: false
 ---

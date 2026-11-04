@@ -3,7 +3,7 @@ title: 三號風球昨晚除下
 date: 2026-10-25
 dateCreated: "2026-10-25"
 datePublished: "1932-09-23"
-description: 
+description: 《工商晚報》1932年9月23日報道3號風球於前一晚7時許除下，並記述風浪中2艘貨艇（686號與3762號）在九龍倉對開海面相撞、艇身撞爛，艇家向船政署交涉後獲解決，反映颱風期間避風塘及近岸水域的碰撞事故與後續處理。
 excerpted: true
 proofread: false
 ---

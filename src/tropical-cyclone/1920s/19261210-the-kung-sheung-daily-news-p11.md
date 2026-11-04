@@ -3,7 +3,7 @@ title: 天文台風球改懸別處
 date: 2026-10-22
 dateCreated: "2026-10-22"
 datePublished: "1926-12-10"
-description: 
+description: 《工商日報》1926年12月10日報道香港天文台因半島酒店建成後遮擋港口西面船隻視線，改在九龍倉屋頂東端豎立旗杆懸掛風球及時間球，讓維港兩岸船隻均可看見警號。條目記錄城市建築如何影響颱風預警的可見範圍，是研究天文台選址與信號系統演變的材料。
 excerpted: true
 proofread: false
 ---

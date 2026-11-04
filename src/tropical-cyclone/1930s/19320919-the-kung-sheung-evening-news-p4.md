@@ -3,7 +3,7 @@ title: 澳門前日懸第九號風球
 date: 2026-10-25
 dateCreated: "2026-10-25"
 datePublished: "1932-09-19"
-description: 
+description: 《工商晚報》1932年9月19日報道澳門在颱風迫近期間由7號改懸9號風球，來往船隻一律停航。16日下午，澳門老人園第1間溫姓住宅塌下，壓斃11歲女童甄亞妹、壓傷幼孩2名，塌屋原因為隔鄰泰源磚瓦舖棧房磚瓦過重壓倒牆壁。
 excerpted: true
 proofread: false
 ---

@@ -3,7 +3,7 @@ title: 颶風有襲擊本港勢
 date: 2026-10-26
 dateCreated: "2026-10-26"
 datePublished: "1935-10-06"
-description: 
+description: 《工商晚報》1935年10月6日報道天文台於上午7時懸掛1號風球並發出颱風報告，指風暴位於東經117度、北緯18度之間，向西北偏西移動，時速60里，有襲擊本港之勢，海面船艇接獲警號後陸續避風。
 excerpted: true
 proofread: false
 ---

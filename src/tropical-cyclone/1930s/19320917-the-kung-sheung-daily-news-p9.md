@@ -3,7 +3,7 @@ title: 颶風離港約二百英里
 date: 2026-10-24
 dateCreated: "2026-10-24"
 datePublished: "1932-09-17"
-description: 
+description: 《工商日報》1932年9月17日報道颱風逼近，天文台於凌晨由1號改懸7號風球，指風暴位於東經117度、北緯20度之間，即東沙島西南，距港東南偏南約200英里，向西北偏西移動；若風向不轉，預料1至2日內可抵港附近，來勢極猛。
 excerpted: true
 proofread: false
 ---

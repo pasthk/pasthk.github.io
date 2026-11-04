@@ -3,7 +3,7 @@ title: 天文台昨晨改懸七號風球後澳江梧輪船停航
 date: 2026-10-26
 dateCreated: "2026-10-26"
 datePublished: "1935-09-18"
-description: 
+description: 《工商日報》1935年9月18日報道天文台於上午9時35分改懸7號風球後，港江、港澳、港梧等內河航線全部停航，救星號出動巡邏，陸上店戶準備禦風。天文台指氣壓較前日為低、時晴時雨，但預料颱風不會襲港，將轉向廣州灣一帶。
 excerpted: true
 proofread: false
 ---

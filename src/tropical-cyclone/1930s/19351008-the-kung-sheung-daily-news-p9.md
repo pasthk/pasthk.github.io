@@ -3,7 +3,7 @@ title: 颶風方向已轉　本港可避免襲擊
 date: 2026-10-26
 dateCreated: "2026-10-26"
 datePublished: "1935-10-08"
-description: 
+description: 《工商日報》1935年10月8日報道颱風主力在香港以南120英里掠過，本港可免襲擊，7號風球已於前一晚降下。前晚10時起狂風怒號、天雨不息，昨晨1時海水漲至2、3呎，其後轉吹東南風、風力漸減，細小船艇早已避風一空。
 excerpted: true
 proofread: false
 ---

@@ -3,7 +3,7 @@ title: 颶風再至
 date: 2026-10-21
 dateCreated: "2026-10-21"
 datePublished: "1906-10-01"
-description: 
+description: 《香港華字日報》1906年10月1日報道颶風再度襲港，天文台與船政署先後懸掛紅球、紅鼓及黑球並燃放風炮示警。狂風大雨令潮水上漲，海旁道路與店戶受浸，德輔道、皇后道低窪處積水；渡海小輪、山頂纜車及電車停開，海旁商戶停止營業，漁船在風浪中損毀。
 excerpted: true
 proofread: false
 ---

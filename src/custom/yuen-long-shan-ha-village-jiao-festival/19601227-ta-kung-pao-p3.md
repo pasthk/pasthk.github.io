@@ -3,7 +3,7 @@ title: 屏山山廈村建醮演大戲
 date: 2026-11-03
 dateCreated: "2026-11-03"
 datePublished: "1960-12-27"
-description: 
+description: 《大公報》1960年12月27日報道新界屏山山廈村10年一度建醮定於農曆11月18日（翌年1月3日）晚開壇，一連3日4夜，全村素食、不准殺牲；聘陳錦棠、李寶瑩等領導的錦上花劇團演出7套名劇，搭醮棚5座及可容2000餘觀眾的戲棚。
 excerpted: true
 proofread: false
 ---

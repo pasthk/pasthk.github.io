@@ -3,7 +3,7 @@ title: 颶風吹到本港
 date: 2026-10-23
 dateCreated: "2026-10-23"
 datePublished: "1931-09-02"
-description: 
+description: 《工商晚報》1931年9月2日報道颱風正面吹襲香港，天文台1日內由1號、5號改懸9號風球，海傍風勢劇烈、浪花拍岸。干諾道貨艇不及避風，1艘載糞船與輪船相撞後沉沒，3名艇伴泅水脫險；日輪鳳山丸駛往昂船洲避風，海傍商店閉門停業。
 excerpted: true
 proofread: false
 ---

@@ -6,11 +6,11 @@ export default navbar([
     link: "/reading-notes.html",
   },
   {
-    text: "本站資訊",
-    link: "/about.html",
+    text: "其他項目",
+    children: ["/project/ay1928/"],
   },
   {
-    text: "項目",
-    children: ["/project/ay1928/"],
+    text: "文獻綜覽",
+    link: "/browse.html",
   },
 ]);

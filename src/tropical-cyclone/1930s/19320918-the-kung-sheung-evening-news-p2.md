@@ -3,7 +3,7 @@ title: 連日廣州天氣之幻變
 date: 2026-10-25
 dateCreated: "2026-10-25"
 datePublished: "1932-09-18"
-description: 
+description: 《工商晚報》1932年9月18日廣州特訊報道香港天文台通電廣州各報風台後，粵方先後懸掛1號紅筍形及4號黑鼓形風球，惟2日間未見烈風，僅有陣雨。省河船艇紛駛入東濠、大沙頭、荔枝灣等內涌避風，市面轉趨冷淡，呈現省港兩地風警通報與聯動戒備的運作。
 excerpted: true
 proofread: false
 ---

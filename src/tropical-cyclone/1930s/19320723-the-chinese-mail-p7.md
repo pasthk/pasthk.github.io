@@ -3,7 +3,7 @@ title: 颶風已向海南島吹去
 date: 2026-10-23
 dateCreated: "2026-10-23"
 datePublished: "1932-07-23"
-description: 
+description: 《香港華字日報》1932年7月23日報道颱風由港外掠過、轉向海南島並預料吹至海防，本港海陸均無重大損失。報道回顧天文台連日3度改懸風球的經過，並記錄連日大雨的降水量，說明風暴雖未正面襲港，仍帶來持續降雨，可與同日《工商晚報》報道互相參證。
 excerpted: true
 proofread: false
 ---

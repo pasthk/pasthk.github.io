@@ -3,7 +3,7 @@ title: 避風塘口輪艇相撞
 date: 2026-10-25
 dateCreated: "2026-10-25"
 datePublished: "1935-09-16"
-description: 
+description: 《工商晚報》1935年9月16日報道天文台懸掛1號風球後，海面船艇趕往避風，當晚9時一小輪拖貨艇駛至油蔴地避風塘西邊塘口時與小艇相撞，艇上小販陳勝（40歲，東莞人）被壓斃。其弟陳林尋回兄屍並向旺角警署報案，記錄戒備期間的航行意外。
 excerpted: true
 proofread: false
 ---

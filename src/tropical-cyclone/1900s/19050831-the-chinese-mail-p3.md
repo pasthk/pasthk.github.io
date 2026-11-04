@@ -3,7 +3,7 @@ title: 天台報風
 date: 2026-10-21
 dateCreated: "2026-10-21"
 datePublished: "1905-08-31"
-description: 
+description: 《香港華字日報》1905年8月31日報道颱風掠過香港，記述天文台前一晚懸球、鳴風炮示警，風雨表由29度4降至29度3，颱風位於香港東南100至150里。海面波濤洶湧、海水高漲，渡海小輪全線停航，兩岸交通中斷，至下午風勢稍減後再懸風球。
 excerpted: true
 proofread: false
 ---

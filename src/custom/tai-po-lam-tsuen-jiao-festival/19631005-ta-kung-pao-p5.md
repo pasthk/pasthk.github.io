@@ -3,7 +3,7 @@ title: 大埔林村鄉民籌辦盛大醮會
 date: 2026-10-29
 dateCreated: "2026-10-29"
 datePublished: "1963-10-05"
-description: 
+description: 《大公報》1963年10月5日簡訊報道大埔林村鄉將於農曆年底前舉行盛大醮會並上演粵劇助興，鄉民已展開籌備工作，醮會日期將以卜杯決定。條目雖短，卻記錄林村10年一屆太平清醮以杯卜擇日的傳統做法。
 excerpted: true
 proofread: true
 ---

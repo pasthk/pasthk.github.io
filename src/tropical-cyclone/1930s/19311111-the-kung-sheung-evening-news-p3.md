@@ -3,7 +3,7 @@ title: 又有颶風迫近本港
 date: 2026-10-23
 dateCreated: "2026-10-23"
 datePublished: "1931-11-11"
-description: 
+description: 《工商晚報》1931年11月11日報道颱風再度迫近香港，天文台於上午10時40分由1號改懸5號風球，指風暴位於北緯21度、東經110度，距港300英里內，預料由西北方吹至。沿海漁艇貨艇鑑於上次風災損失逾百艘，聞訊即逃避一空，干諾道商戶加緊禦風。
 excerpted: true
 proofread: false
 ---

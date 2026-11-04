@@ -3,7 +3,7 @@ title: 西貢北約籌建墟市　林村建醮明日開壇
 date: 2026-11-02
 dateCreated: "2026-11-02"
 datePublished: "1954-12-04"
-description: 
+description: 《華僑日報》1954年12月4日報道大埔林村太平清醮因英軍在林錦公路演習而改期後，定於12月5日起一連4日5夜在村前廣場舉行，設大戲棚聘新界著名粵劇團及木偶戲演出，各村舞獅、舞麒麟、舞龍助慶，村內搭牌樓張燈結綵。
 excerpted: true
 proofread: false
 ---

@@ -3,7 +3,7 @@ title: 林村鄉十年大醮演粵劇助興
 date: 2026-10-29
 dateCreated: "2026-10-29"
 datePublished: "1972-10-24"
-description: 
+description: 《華僑日報》1972年10月24日報道林村鄉10年一屆太平清醮將於11月29日起一連5日6夜舉行，由麥炳榮、任冰兒等擔綱演出粵劇，經費逾15萬元；醮會續收到旅英、旅歐鄉親匯款捐助，報道逐一列出捐款人與金額，可見海外鄉親的財政支持。
 excerpted: true
 proofread: false
 ---

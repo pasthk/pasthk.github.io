@@ -3,7 +3,7 @@ title: 屛山山厦村舉行祥麟開光大歡騰
 date: 2026-11-02
 dateCreated: "2026-11-02"
 datePublished: "1960-12-29"
-description: 
+description: 《華僑日報》1960年12月29日報道屏山山廈村為慶祝農作豐收與村民平安，舉行10年一度太平清醮，先於28日在公菴禪師寺舉行祥麟開光：清晨長輩領隊登山，丑時點睛、寅時採菁，下山拜祖後全村舞麒麟，鄉議局及元朗理民府等數百嘉賓到賀。
 excerpted: true
 proofread: false
 ---

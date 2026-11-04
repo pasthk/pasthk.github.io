@@ -3,7 +3,7 @@ title: 颶風再至
 date: 2026-10-22
 dateCreated: "2026-10-22"
 datePublished: "1906-10-04"
-description: 
+description: 《香港華字日報》1906年10月4日短訊記述香港天文台連日頻頻懸球報風，15日再掛紅球，惟本港天色澄明、海面船艇未見異常，僅晚間略有狂風。條目保留20世紀初報刊逐日記錄風球升降的體例，可觀察天文台預警與實際風勢之間的落差。
 excerpted: true
 proofread: false
 ---

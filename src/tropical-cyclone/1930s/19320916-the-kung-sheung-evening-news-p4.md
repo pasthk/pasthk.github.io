@@ -3,7 +3,7 @@ title: 天文台今午懸一號風球
 date: 2026-10-24
 dateCreated: "2026-10-24"
 datePublished: "1932-09-16"
-description: 
+description: 《工商晚報》1932年9月16日短訊接續前一日報道，指天文台前午懸掛的1號風球至當日凌晨0時仍未除下，並以3支白燈高懸示警，提示海面船隻持續戒備。條目保留1930年代香港以日間風球、夜間燈號並用的警告方式，以及報刊逐日追蹤風暴的體例。
 excerpted: true
 proofread: true
 ---

@@ -3,7 +3,7 @@ title: 颶風已向廣州灣吹去
 date: 2026-10-25
 dateCreated: "2026-10-25"
 datePublished: "1932-09-18"
-description: 
+description: 《工商晚報》1932年9月18日報道颱風由港外掠過後轉向廣州灣，本港雖受狂風暴雨，海陸均無損失。省港夜船龍山、西安、廣西因風受阻延遲到港，一度駛往昂船洲避風，乘客未能登岸；天文台於下午4時55分除下7號風球，各船恢復泊岸。
 excerpted: true
 proofread: false
 ---

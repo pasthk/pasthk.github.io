@@ -3,7 +3,7 @@ title: 懸掛時球及風球之地點
 date: 2026-10-22
 dateCreated: "2026-10-22"
 datePublished: "1927-06-01"
-description: 
+description: 《工商日報》1927年6月1日報道香港天文台除下連日懸掛的風球，並公布該次颶風在汕頭西南岸約30英里處發生、風勢不猛，同時指出米沙鄢群島（威沙也士群島）以東或再有颱風形成。條目反映1920年代天文台以報刊發布風暴位置與後續觀察的做法。
 excerpted: true
 proofread: true
 ---

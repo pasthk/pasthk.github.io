@@ -3,7 +3,7 @@ title: 基督教聞人發起創辦崇基學院
 date: 2026-10-02
 dateCreated: "2026-10-02"
 datePublished: "1951-09-01"
-description: 《工商晚報》1951年9月1日報道基督教人士為解決港澳青年升學問題發起創辦崇基學院，聘李應林任院長並擬設五學系。
+description: 《工商晚報》1951年9月1日報道基督教人士為解決港澳青年升學問題發起創辦崇基學院，聘李應林任院長並擬設5學系。
 excerpted: true
 proofread: true
 ---

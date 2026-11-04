@@ -3,7 +3,7 @@ title: 昨日之風雨談
 date: 2026-10-22
 dateCreated: "2026-10-22"
 datePublished: "1918-07-02"
-description: 
+description: 《香港華字日報》1918年7月2日報道本港風勢轉劇，天文台預先懸掛風球，並引述天文司指颶風將吹向汕頭以南海岸。風雨表一度降至29度30分，船戶預早避風，輪船泊於九龍及昂船灣，小艇避入望角咀、銅鑼灣，未聞船艇沉沒；大北電報局往廈門電線中斷。
 excerpted: true
 proofread: true
 ---

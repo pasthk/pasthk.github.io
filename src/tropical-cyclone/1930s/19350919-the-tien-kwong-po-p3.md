@@ -3,7 +3,7 @@ title: 颶風已向海南吹去
 date: 2026-10-26
 dateCreated: "2026-10-26"
 datePublished: "1935-09-19"
-description: 
+description: 《天光報》1935年9月19日報道颱風已由香港以南吹過、轉向海南島，天文台於前一日上午6時07分除下7號風球。避風塘內客貨艇離塘照常營業，水陸均無重大損失。條目與同期《工商晚報》報道可相互校勘，補充1935年9月颱風在不同報刊的記載差異。
 excerpted: true
 proofread: false
 ---

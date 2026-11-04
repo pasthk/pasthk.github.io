@@ -3,7 +3,7 @@ title: 颶風已由港南吹過
 date: 2026-10-26
 dateCreated: "2026-10-26"
 datePublished: "1935-10-08"
-description: 
+description: 《天光報》1935年10月8日報道颱風由香港以南120里掠過，天文台7號風球於前一晚除下，水陸兩方均無損失。報道記述昨晨7時風勢轉劇、海水漲高尺餘，干諾道一帶海水滾上岸邊，船艇紛往避風塘，並引述天文台指風暴將吹向澳門以西100里海岸。
 excerpted: true
 proofread: false
 ---

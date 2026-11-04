@@ -3,7 +3,7 @@ title: 颶風已向海南島吹去
 date: 2026-10-23
 dateCreated: "2026-10-23"
 datePublished: "1932-07-22"
-description: 
+description: 《工商晚報》1932年7月22日報道颱風轉向海南島，天文台於前一晚9時35分因風向轉為東南而改懸8號風球，至上午10時確認風暴位於北緯20度、東經110度並向西移動，遂於10時15分除下風球，海面交通全面恢復，泰山輪等船隻返回碼頭。
 excerpted: true
 proofread: false
 ---

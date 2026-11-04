@@ -3,7 +3,7 @@ title: 狂風暴雨中之海陸交通
 date: 2026-10-23
 dateCreated: "2026-10-23"
 datePublished: "1932-07-22"
-description: 
+description: 《香港華字日報》1932年7月22日報道颱風襲港期間的海陸交通，記述天文台1日內3度改懸風球，由1號、7號至8號，最高陣風每小時68里。香港仔貨艇在臨馬島附近被狂風擊沉，2名蛋婦溺斃、生豬10餘頭沉沒；陸上交通未受重大影響，沿岸商戶設閘防浸。
 excerpted: true
 proofread: false
 ---

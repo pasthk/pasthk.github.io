@@ -3,7 +3,7 @@ title: 颶風掠過港外將襲海面
 date: 2026-10-25
 dateCreated: "2026-10-25"
 datePublished: "1935-09-16"
-description: 
+description: 《工商晚報》1935年9月16日報道天文台於前日下午4時24分懸掛1號風球，指小呂宋方面形成的颱風由香港東南約4、500英里處逼近，翌晨6時移至港之東南偏南約300英里、北緯17度東經116度，向西移動，預料不會侵襲本港，或吹往海南島。
 excerpted: true
 proofread: false
 ---

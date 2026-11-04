@@ -3,7 +3,7 @@ title: 今午天文台懸掛第三號風球
 date: 2026-10-23
 dateCreated: "2026-10-23"
 datePublished: "1932-06-02"
-description: 
+description: 《工商晚報》1932年6月2日報道颱風經西沙島以西150里向香港推進，天文台先懸1號風燈，至上午11時半改懸3號風球，表示暴風可能由東南吹來。海面客貨艇紛僱小輪拖往油蔴地避風塘，救星小輪升火待命，省港、港江航線視風勢決定是否開行。
 excerpted: true
 proofread: false
 ---

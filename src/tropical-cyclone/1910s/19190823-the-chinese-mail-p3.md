@@ -3,7 +3,7 @@ title: 風雨損失之調查
 date: 2026-10-22
 dateCreated: "2026-10-22"
 datePublished: "1919-08-23"
-description: 
+description: 《香港華字日報》1919年8月23日報道颱風突襲香港的損失，記述天文台由紅球改懸黑球後狂風驟至，灣仔海面大批船艇不及走避，估計沉沒數十艘，艇家因小輪索價90元拖帶而無法離險；美國水手以纜繩串連船艇救人，多名蛋婦帶同子女登岸。
 excerpted: true
 proofread: false
 ---

@@ -3,7 +3,7 @@ title: 林村鄉十年大醮　廉價機位有待鄉橋
 date: 2026-11-02
 dateCreated: "2026-11-02"
 datePublished: "1972-10-17"
-description: 
+description: 《華僑日報》1972年10月17日報道林村鄉10年一屆太平清醮定於11月29日起舉行，因旅英鄉親為數眾多，倫敦香港旅行社特撥廉價機位優待回港觀醮者，並刊出登記地址與電話，反映1970年代新界鄉村與海外僑胞藉醮會維持的聯繫網絡。
 excerpted: true
 proofread: false
 ---

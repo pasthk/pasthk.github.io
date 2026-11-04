@@ -3,7 +3,7 @@ title: 大埔林村鄉建十年大醮
 date: 2026-10-29
 dateCreated: "2026-10-29"
 datePublished: "1972-07-15"
-description: 
+description: 《華僑日報》1972年7月15日報道大埔林村鄉10年一屆太平清醮的籌備，已擇定農曆3月14日上頭通表、7月5日上二通表，10月24日（公曆11月29日）啟壇，全鄉齋戒慶祝並演粵劇一連5日6夜，建醮委員會由張惠霖、張枝繁召集會議商定經費。
 excerpted: true
 proofread: true
 ---

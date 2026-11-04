@@ -3,7 +3,7 @@ title: 一號風球仍未除下
 date: 2026-10-24
 dateCreated: "2026-10-24"
 datePublished: "1932-07-28"
-description: 
+description: 《工商晚報》1932年7月28日報道同一颱風因吹勢不定，再度有吹向香港之勢，天文台於前一晚再懸1號風燈，至翌日中午仍未除下。天文台台長表示經連夜審查後，風暴可望不會吹向本港。條目記錄台方以報刊向公眾說明風暴路徑判斷的做法。
 excerpted: true
 proofread: true
 ---

@@ -3,7 +3,7 @@ title: 林村鄉觀醮團　首批由英返港
 date: 2026-10-29
 dateCreated: "2026-10-29"
 datePublished: "1972-11-05"
-description: 
+description: 《華僑日報》1972年11月5日報道林村鄉10年一屆太平清醮定於11月29日啟壇，聘大龍鳳劇團公演神功戲；旅英歐鄉親除捐款外踴躍回港觀醮，倫敦香港旅行社辦特價包機，首批於11月6日抵港、第2批12日啟程，並安排旅遊巴士接機。
 excerpted: true
 proofread: false
 ---

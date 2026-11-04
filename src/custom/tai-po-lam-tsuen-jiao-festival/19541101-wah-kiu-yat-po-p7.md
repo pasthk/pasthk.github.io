@@ -3,7 +3,7 @@ title: 新界英軍十晝夜大演習　林村建醮奉命改期
 date: 2026-11-02
 dateCreated: "2026-11-02"
 datePublished: "1954-11-01"
-description: 
+description: 《華僑日報》1954年11月1日報道駐新界英軍將於11月17日起舉行10天大規模演習，林錦公路及附近山嶺列入演習範圍，大埔理民府要求原定11月19日開壇的林村10年一屆建醮改期，醮會遂改於農曆11月11日（12月5日）舉行。
 excerpted: true
 proofread: false
 ---

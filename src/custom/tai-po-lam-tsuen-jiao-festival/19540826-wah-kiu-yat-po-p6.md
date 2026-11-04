@@ -3,7 +3,7 @@ title: 大埔林村籌備建醮
 date: 2026-11-02
 dateCreated: "2026-11-02"
 datePublished: "1954-08-26"
-description: 
+description: 《華僑日報》1954年8月26日報道大埔林村鄉10年一屆太平清醮的籌備，該鄉26村代表多次開會，定於農曆10月底舉行、一連5日6夜，搭建大小醮棚7座及大戲棚一所，醮期內全鄉素食，經費約2萬餘元，須繼續向會員募捐。
 excerpted: true
 proofread: false
 ---

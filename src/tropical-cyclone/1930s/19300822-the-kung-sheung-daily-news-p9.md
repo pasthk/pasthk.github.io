@@ -3,7 +3,7 @@ title: 昨日本港之狂風暴雨
 date: 2026-10-23
 dateCreated: "2026-10-23"
 datePublished: "1930-08-22"
-description: 
+description: 《工商日報》1930年8月22日報道香港突受狂風暴雨侵襲，天文台懸掛風球，海面船艇因風雨驟至互有碰撞，1日錄得雨量3寸餘。天文台指狂風由安南（越南）方面吹來，僅屬颱風尾部，風球於下午5時07分除下，記錄早期以雨量與風向判斷颱風影響的方式。
 excerpted: true
 proofread: false
 ---

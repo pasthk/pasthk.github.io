@@ -3,7 +3,7 @@ title: 天文台今晨改懸七號風球
 date: 2026-10-25
 dateCreated: "2026-10-25"
 datePublished: "1935-09-17"
-description: 
+description: 《工商晚報》1935年9月17日報道颱風逼近至離港僅60里，天文台於上午9時半由1號改懸7號風球，風暴位於東經113度、北緯19度，向西北移動，時速60里，澳門所受風力更強。干諾道商戶關門加設水閘，瑞泰輪等內河船駛往昂船洲避風。
 excerpted: true
 proofread: false
 ---

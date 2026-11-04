@@ -3,7 +3,7 @@ title: 天文台今晨改懸七號風球
 date: 2026-10-25
 dateCreated: "2026-10-25"
 datePublished: "1935-09-18"
-description: 
+description: 《工商晚報》1935年9月18日報道7號風球於上午6時07分除下，颱風由香港以南掠過後向海南島方向移動，風暴位於北緯19度、東經110度。避風塘內客貨艇陸續駛出恢復營業，前一日停航的九龍小輪及內河、港澳航線亦全部復航。
 excerpted: true
 proofread: false
 ---

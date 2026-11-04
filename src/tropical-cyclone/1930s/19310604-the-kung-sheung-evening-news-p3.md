@@ -3,7 +3,7 @@ title: 颶風不吹來港
 date: 2026-10-23
 dateCreated: "2026-10-23"
 datePublished: "1931-06-04"
-description: 
+description: 《工商晚報》1931年6月4日報道東沙島及香港以南200里海域先後出現颱風，天文台於上午11時半懸掛1號風球，通電船政署、警署及各衙署戒備，並公布風暴位於北緯19度、東經113度，其後修訂為東沙島東南偏東、勢甚猛烈。
 excerpted: true
 proofread: false
 ---

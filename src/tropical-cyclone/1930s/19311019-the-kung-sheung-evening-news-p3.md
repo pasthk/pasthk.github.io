@@ -3,7 +3,7 @@ title: 本港最近恐發生颶風
 date: 2026-10-23
 dateCreated: "2026-10-23"
 datePublished: "1931-10-19"
-description: 
+description: 《工商晚報》1931年10月19日報道香港天文台於上午10時13分發出風暴報告，指小呂宋（菲律賓）以北、北緯20度東經121度附近有颱風形成，向西北偏西移動，可能波及香港或汕頭，遂懸掛1號風球警告各線輪船及早防避。
 excerpted: true
 proofread: false
 ---

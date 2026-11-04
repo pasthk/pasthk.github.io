@@ -3,7 +3,7 @@ title: 颶風已遠離本港
 date: 2026-10-26
 dateCreated: "2026-10-26"
 datePublished: "1935-10-08"
-description: 
+description: 《工商晚報》1935年10月8日報道7號風球於前一晚11時20分除下，表示颱風已吹離本港，大小船艇翌晨駛回碼頭。天文台報告指風暴位於北緯20度、東經110度，向西移動。此次颱風並不激烈，本港無甚損失，惟各江輪船交通一度受阻。
 excerpted: true
 proofread: false
 ---

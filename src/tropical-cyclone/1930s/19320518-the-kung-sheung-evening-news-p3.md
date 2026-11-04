@@ -3,7 +3,7 @@ title: 一號風球已除下
 date: 2026-10-23
 dateCreated: "2026-10-23"
 datePublished: "1932-05-18"
-description: 
+description: 《工商晚報》1932年5月18日短訊報道香港天文台於前一晚11時一刻懸掛1號風球，報告港外有颱風形成，至翌日上午10時03分除下，颱風已遠離本港。條目記錄1次未正面襲港的風暴過程，可作為1932年香港颱風季風球升降時序的對照資料。
 excerpted: true
 proofread: true
 ---

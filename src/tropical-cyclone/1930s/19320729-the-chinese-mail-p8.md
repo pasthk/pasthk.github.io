@@ -3,7 +3,7 @@ title: 颶風向閩吹去
 date: 2026-10-24
 dateCreated: "2026-10-24"
 datePublished: "1932-07-29"
-description: 
+description: 《香港華字日報》1932年7月29日報道小呂宋天文台發現北緯19度、東經121度（巴林塘海峽）有颱風形成，其後橫過台灣海峽，天文台於晚上7時15分懸掛1號風球。至翌日上午，風暴移至汕頭以東約100里、即汕頭與廈門之間，本港預測不受影響，遂將風球除下。
 excerpted: true
 proofread: false
 ---
