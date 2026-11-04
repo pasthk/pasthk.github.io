@@ -96,6 +96,20 @@ const parsedSlot = computed(() => {
   return { source: text, note: "" };
 });
 
+// 作者取自 frontmatter 的 author 欄位；可為字串、字串陣列或 { name } 物件。
+// 多作者以「、」串接，未填則回傳空字串，引用格式維持原樣。
+const author = computed(() => {
+  const raw = page.value?.frontmatter?.author;
+
+  if (!raw) return "";
+
+  return (Array.isArray(raw) ? raw : [raw])
+    .map((item) => (typeof item === "string" ? item : item?.name))
+    .filter((name) => typeof name === "string" && name.trim())
+    .map((name) => name.trim())
+    .join("、");
+});
+
 const citation = computed(() => {
   const fm = page.value?.frontmatter || {};
   const title = fm.title || page.value?.title || "";
@@ -107,9 +121,11 @@ const citation = computed(() => {
     source += "。";
   }
 
-  // Format: 新聞標題，報刊名稱，年月日，頁碼。網站名稱，網址。
+  // Format: 作者：新聞標題，報刊名稱，年月日，頁碼。網站名稱，網址。
+  // 作者為選填，未填時從缺，其餘格式不變。
   const parts = [];
 
+  if (author.value) parts.push(author.value + "：");
   if (title) parts.push(title + "，");
   if (source) parts.push(source);
   parts.push(siteName + "，");

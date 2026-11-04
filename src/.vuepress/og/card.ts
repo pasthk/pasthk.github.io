@@ -10,7 +10,7 @@
 import { HOST, SITE_NAME } from "../site.js";
 
 export const CARD_WIDTH = 1200;
-export const CARD_HEIGHT = 630;
+export const CARD_HEIGHT = 1200;
 
 /**
  * 卡片使用的字型家族名，必須與 og/fonts/ 內子集字型的 name table 一致。
@@ -232,7 +232,7 @@ export function buildCardSvg({
   const metaBlockHeight = meta ? metaGap : 0;
   // 標題與次要資訊作為一個整體，在 header 底線與 footer 頂線之間垂直居中。
   const zoneTop = 132;
-  const zoneBottom = 540;
+  const zoneBottom = 1080;
   const blockHeight = titleBlockHeight + metaBlockHeight;
   const titleTop =
     (zoneTop + zoneBottom) / 2 - blockHeight / 2 + lineHeight * 0.72;
@@ -283,7 +283,7 @@ export function buildCardSvg({
 
   const footerMarkup = draw(footer, {
     x: PAD_LEFT,
-    y: 590,
+    y: 1130,
     size: 24,
     fill: COLOR.muted,
     letterSpacing: 2,
@@ -291,7 +291,7 @@ export function buildCardSvg({
 
   const taglineMarkup = draw("認識香港，從文獻開始", {
     x: CARD_WIDTH - PAD_RIGHT,
-    y: 590,
+    y: 1130,
     size: 24,
     fill: COLOR.muted,
     letterSpacing: 2,
@@ -311,7 +311,7 @@ ${sectionMarkup}
 <line x1="${PAD_LEFT}" y1="132" x2="${CARD_WIDTH - PAD_RIGHT}" y2="132" stroke="${COLOR.rule}" stroke-width="1.5"/>
 ${titleMarkup}
 ${metaMarkup}
-<line x1="${PAD_LEFT}" y1="540" x2="${CARD_WIDTH - PAD_RIGHT}" y2="540" stroke="${COLOR.rule}" stroke-width="1.5"/>
+<line x1="${PAD_LEFT}" y1="1080" x2="${CARD_WIDTH - PAD_RIGHT}" y2="1080" stroke="${COLOR.rule}" stroke-width="1.5"/>
 ${footerMarkup}
 ${taglineMarkup}
 </svg>`;

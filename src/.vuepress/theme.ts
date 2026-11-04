@@ -186,9 +186,9 @@ export default hopeTheme(
             "og:image": image,
             "og:image:type": "image/png",
             "og:image:width": "1200",
-            "og:image:height": "630",
+            "og:image:height": "1200",
             "og:image:alt": alt,
-            "twitter:card": "summary_large_image",
+            "twitter:card": "summary",
             "twitter:image:src": image,
             "twitter:image:alt": alt,
           });
