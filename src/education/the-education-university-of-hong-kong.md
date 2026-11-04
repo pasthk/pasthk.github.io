@@ -28,8 +28,13 @@ description: 香港教育大學校史與香港教育史資料索引，收錄相�
      - 改在下月十一至十三日
 11. 〈[羅富國師範學院初試揭曉](./the-education-university-of-hong-kong/19410731-the-kung-sheung-daily-news-p6.md)〉，《工商日報》，1941年7月31日，頁6。
      - 筆試改期舉行
+12. 〈[羅富國師範附屬學校　家長教師春節聯歡](./the-education-university-of-hong-kong/19510218-wah-kiu-yat-po-p5.md)〉，《華僑日報》，1951年2月18日，第3張第1頁。
+13. 〈[羅富國師範學院　附校家長教師春節聯歡誌盛](./the-education-university-of-hong-kong/19510219-wah-kiu-yat-po-p12.md)〉，《華僑日報》，1951年2月19日，第3張第4頁。
+14. 〈[羅富國師範附屬學校　下月八日舉行校運](./the-education-university-of-hong-kong/19510227-wah-kiu-yat-po-p8.md)〉，《華僑日報》，1951年2月27日，第2張第4頁。
 
 ## 葛量洪師範學院
+1. 〈[當局擬在九龍設立師範學校](./the-education-university-of-hong-kong/19510216-the-kung-sheung-evening-news-p4.md)〉，《工商晚報》，1951年2月16日，第4頁。
+   - 盼私校能增加教師待遇
 
 ## 柏立基師範學院
 1. 〈[三間師範學校改稱師範學院](./the-education-university-of-hong-kong/19671018-the-kung-sheung-daily-news-p7.md)〉，《工商日報》，1967年10月18日，第7頁。
