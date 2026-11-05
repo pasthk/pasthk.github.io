@@ -17,6 +17,13 @@
   text-align: center;
 }
 
+/* flex 子項的 width 預設為 auto，空內容的 <ins> 會塌縮成 0 寬；
+   AdSense 依容器寬度計算響應式尺寸，0 寬即無法填充。
+   必須顯式撐滿父層，否則廣告位只會留下一片空白。 */
+.ad-top > ins.adsbygoogle {
+  width: 100%;
+}
+
 .ad-top-wrap::before {
   content: "廣告";
   position: absolute;
