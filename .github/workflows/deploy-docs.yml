@@ -111,14 +111,24 @@ jobs:
 
           const before = process.env.BEFORE_SHA;
           const after = process.env.AFTER_SHA;
-          const base = before || execFileSync("git", ["rev-parse", `${after}^`], { encoding: "utf8" }).trim();
+
+          // 新建分支或首次推送時 before 為空字串或全 0，改用 after^ 作基準；
+          // 若 after 本身是根提交（無父節點）則無可比對範圍，base 留空並跳過。
+          let base = before;
+          if (!base || /^0+$/.test(base)) {
+            try {
+              base = execFileSync("git", ["rev-parse", `${after}^`], { encoding: "utf8" }).trim();
+            } catch {
+              base = "";
+            }
+          }
 
           // 新頁面（A/R）給百度：百度有每日配額，只送新增頁以免浪費。
           // 變更頁面（A/M/R）給 IndexNow：Bing 等引擎希望收到內容更新通知。
           let newUrls = [];
           let changedUrls = [];
 
-          if (base && !/^0+$/.test(base)) {
+          if (base) {
             const routesSource = readFileSync("src/.vuepress/.temp/internal/routes.js", "utf8");
             const routes = [...routesSource.matchAll(/^\s*\["([^"]+)", \{ loader: \(\) => import\([^)]*?"([^"]+\.md)"\)/gm)];
 
@@ -167,77 +177,229 @@ jobs:
         id: deployment
         uses: actions/deploy-pages@v5.0.1
 
-      # 先送 IndexNow 再送百度：百度步驟在超額以外的錯誤會拋錯中斷，不應連累 IndexNow。
+      # 兩個提交步驟皆為 continue-on-error：站台此時已部署完成，
+      # 個別引擎的推送失敗不應讓整條部署顯示為失敗，也不應互相阻斷。
+      # 各步把結果寫入同一份狀態檔，最後由彙總步驟統一輸出。
       - name: Submit URLs to IndexNow
+        continue-on-error: true
         env:
           CHANGED_URLS_JSON: ${{ needs.build.outputs.changed_urls }}
+          SUBMISSION_STATUS_FILE: ${{ runner.temp }}/url-submission-status.jsonl
         run: |
           node --input-type=module <<'NODE'
-          const host = new URL(process.env.SITE_URL).host;
-          const key = process.env.INDEXNOW_KEY;
-          const urls = JSON.parse(process.env.CHANGED_URLS_JSON || "[]");
+          import { appendFileSync } from "node:fs";
 
-          if (urls.length === 0) {
-            console.log("No changed Markdown pages; skipping IndexNow submission.");
-            process.exit(0);
-          }
+          const statusFile = process.env.SUBMISSION_STATUS_FILE;
+          const report = (payload) => {
+            if (statusFile) appendFileSync(statusFile, `${JSON.stringify(payload)}\n`);
+          };
 
-          const response = await fetch("https://api.indexnow.org/indexnow", {
-            method: "POST",
-            headers: { "Content-Type": "application/json; charset=utf-8" },
-            body: JSON.stringify({
-              host,
-              key,
-              keyLocation: `${process.env.SITE_URL}/${key}.txt`,
-              urlList: urls,
-            }),
-          });
+          let status = "ok";
+          let detail = "";
+          let count = 0;
 
-          const detail = (await response.text()).trim();
-          console.log(`IndexNow responded ${response.status}${detail ? `: ${detail}` : ""}`);
+          try {
+            const host = new URL(process.env.SITE_URL).host;
+            const key = process.env.INDEXNOW_KEY;
+            const urls = JSON.parse(process.env.CHANGED_URLS_JSON || "[]");
+            count = urls.length;
 
-          // 200 = 已提交；202 = 已接受（金鑰仍在驗證中）。兩者都算成功。
-          if (response.ok) {
-            console.log(`Submitted ${urls.length} URL(s) to IndexNow.`);
-          } else if (response.status === 429) {
-            console.warn("IndexNow rate-limited this request; skipping without failing deployment.");
-          } else {
-            throw new Error(`IndexNow submission failed with HTTP ${response.status}`);
+            if (urls.length === 0) {
+              status = "skipped";
+              detail = "無變更頁面";
+              console.log("No changed Markdown pages; skipping IndexNow submission.");
+            } else {
+              const response = await fetch("https://api.indexnow.org/indexnow", {
+                method: "POST",
+                headers: { "Content-Type": "application/json; charset=utf-8" },
+                body: JSON.stringify({
+                  host,
+                  key,
+                  keyLocation: `${process.env.SITE_URL}/${key}.txt`,
+                  urlList: urls,
+                }),
+              });
+
+              const body = (await response.text()).trim();
+              console.log(`IndexNow responded ${response.status}${body ? `: ${body}` : ""}`);
+
+              // 200 = 已提交；202 = 已接受（金鑰仍在驗證中）。兩者都算成功。
+              if (response.ok) {
+                console.log(`Submitted ${urls.length} URL(s) to IndexNow.`);
+              } else if (response.status === 429) {
+                status = "skipped";
+                detail = "被限流（429），未提交";
+                console.warn("IndexNow rate-limited this request; skipping without failing deployment.");
+              } else {
+                throw new Error(`HTTP ${response.status}${body ? `: ${body}` : ""}`);
+              }
+            }
+          } catch (error) {
+            status = "failed";
+            detail = error instanceof Error ? error.message : String(error);
+            console.error(`IndexNow submission failed: ${detail}`);
+            process.exitCode = 1;
+          } finally {
+            report({ engine: "IndexNow", status, count, detail });
           }
           NODE
 
       - name: Submit URLs to Baidu
+        continue-on-error: true
         env:
           BAIDU_API_URL: ${{ secrets.BAIDU_API_URL }}
           BAIDU_URLS_JSON: ${{ needs.build.outputs.new_urls }}
+          SUBMISSION_STATUS_FILE: ${{ runner.temp }}/url-submission-status.jsonl
         run: |
           node --input-type=module <<'NODE'
-          const urls = JSON.parse(process.env.BAIDU_URLS_JSON || "[]");
-          if (urls.length === 0) {
-            console.log("No new Markdown pages; skipping Baidu submission.");
-            process.exit(0);
-          }
+          import { appendFileSync } from "node:fs";
 
-          if (!process.env.BAIDU_API_URL) {
-            throw new Error("Missing BAIDU_API_URL secret");
-          }
+          const statusFile = process.env.SUBMISSION_STATUS_FILE;
+          const report = (payload) => {
+            if (statusFile) appendFileSync(statusFile, `${JSON.stringify(payload)}\n`);
+          };
 
-          const response = await fetch(process.env.BAIDU_API_URL, {
-            method: "POST",
-            headers: { "Content-Type": "text/plain" },
-            body: urls.join("\n"),
-          });
-          const result = await response.text();
-          console.log(result);
+          // 百度單次請求超過當日剩餘配額會整批拒絕，因此分批送出，
+          // 並依回應的 remain 動態收窄下一批，避免一次超額導致全數落空。
+          const BATCH_SIZE = 10;
 
-          let data;
+          let status = "ok";
+          let detail = "";
+          let count = 0;
+
           try {
-            data = JSON.parse(result);
-          } catch {}
+            const urls = JSON.parse(process.env.BAIDU_URLS_JSON || "[]");
+            count = urls.length;
 
-          if (data?.message === "over quota") {
-            console.warn("Baidu daily quota is exhausted; skipping submission without failing deployment.");
-          } else if (!response.ok || data?.error) {
-            throw new Error(`Baidu URL submission failed: ${data?.message ?? response.status}`);
+            if (urls.length === 0) {
+              status = "skipped";
+              detail = "無新增頁面";
+              console.log("No new Markdown pages; skipping Baidu submission.");
+            } else if (!process.env.BAIDU_API_URL) {
+              throw new Error("缺少 BAIDU_API_URL secret");
+            } else {
+              const invalid = new Set();
+              const foreign = new Set();
+              let accepted = 0;
+              let remain = null;
+              let quotaExhausted = false;
+              let offset = 0;
+
+              while (offset < urls.length) {
+                const size = remain === null ? BATCH_SIZE : Math.min(BATCH_SIZE, Math.max(remain, 0));
+                if (size === 0) {
+                  quotaExhausted = true;
+                  break;
+                }
+
+                const batch = urls.slice(offset, offset + size);
+                const response = await fetch(process.env.BAIDU_API_URL, {
+                  method: "POST",
+                  headers: { "Content-Type": "text/plain" },
+                  body: batch.join("\n"),
+                });
+                const body = (await response.text()).trim();
+                console.log(`Baidu batch ${offset + 1}-${offset + batch.length}: ${body}`);
+
+                let data;
+                try {
+                  data = JSON.parse(body);
+                } catch {}
+                if (!data) console.warn("Baidu returned a non-JSON body; counting this batch as accepted.");
+
+                if (!response.ok || data?.error) {
+                  const message = data?.message ?? `HTTP ${response.status}`;
+                  // 配額用盡不算錯誤，其餘（token 失效、site 不符等）屬設定問題，需浮出。
+                  if (message === "over quota") {
+                    quotaExhausted = true;
+                    break;
+                  }
+                  throw new Error(message);
+                }
+
+                // 200 不代表全部入庫：success 為實際收錄數，
+                // not_valid / not_same_site 為被拒的 URL，須一併計入結果。
+                // success 理論上不會超過本批長度，仍取 min 以防重複計數。
+                accepted += typeof data?.success === "number" ? Math.min(data.success, batch.length) : batch.length;
+                if (typeof data?.remain === "number") remain = data.remain;
+                for (const url of data?.not_valid ?? []) invalid.add(url);
+                for (const url of data?.not_same_site ?? []) foreign.add(url);
+                offset += batch.length;
+              }
+
+              detail = `成功 ${accepted}/${count}`;
+              if (invalid.size > 0) detail += `，無效 ${invalid.size}`;
+              if (foreign.size > 0) detail += `，非本站 ${foreign.size}`;
+              if (quotaExhausted) {
+                detail += `，配額用盡，剩餘 ${count - offset} 條未送`;
+                console.warn("Baidu daily quota is exhausted; remaining URLs were skipped.");
+              }
+              if (invalid.size > 0) console.warn(`Baidu rejected as invalid: ${[...invalid].join(", ")}`);
+              if (foreign.size > 0) console.warn(`Baidu rejected as not same site: ${[...foreign].join(", ")}`);
+
+              if (accepted === 0) {
+                if (quotaExhausted) {
+                  status = "skipped";
+                } else {
+                  status = "failed";
+                  console.error(`Baidu accepted 0 of ${count} URL(s): ${detail}`);
+                  process.exitCode = 1;
+                }
+              }
+            }
+          } catch (error) {
+            status = "failed";
+            detail = error instanceof Error ? error.message : String(error);
+            console.error(`Baidu URL submission failed: ${detail}`);
+            process.exitCode = 1;
+          } finally {
+            report({ engine: "百度", status, count, detail });
           }
+          NODE
+
+      - name: Summarize URL submissions
+        if: always()
+        env:
+          SUBMISSION_STATUS_FILE: ${{ runner.temp }}/url-submission-status.jsonl
+        run: |
+          node --input-type=module <<'NODE'
+          import { appendFileSync, existsSync, readFileSync } from "node:fs";
+
+          const summaryPath = process.env.GITHUB_STEP_SUMMARY;
+          if (!summaryPath) process.exit(0);
+
+          const statusFile = process.env.SUBMISSION_STATUS_FILE;
+          const rows = existsSync(statusFile)
+            ? readFileSync(statusFile, "utf8")
+                .split("\n")
+                .filter(Boolean)
+                .map((line) => {
+                  try {
+                    return JSON.parse(line);
+                  } catch {
+                    return null;
+                  }
+                })
+                .filter(Boolean)
+            : [];
+
+          const lines = ["### 搜索引擎 URL 提交結果", ""];
+
+          if (rows.length === 0) {
+            lines.push("無提交記錄（部署未完成或步驟未執行）。");
+          } else {
+            const label = { ok: "✅ 成功", skipped: "⏭️ 跳過", failed: "❌ 失敗" };
+            lines.push("| 引擎 | 結果 | URL 數 | 備註 |", "| --- | --- | --- | --- |");
+            for (const row of rows) {
+              const note = (row.detail || "-").replace(/\|/g, "\\|");
+              lines.push(`| ${row.engine} | ${label[row.status] ?? row.status} | ${row.count ?? 0} | ${note} |`);
+            }
+            lines.push(
+              "",
+              "> Google 未接入推送：Google 對一般內容頁不提供單一 URL 推送 API（Indexing API 僅支援 JobPosting / BroadcastEvent），現行依賴 sitemap.xml 的 lastmod 由 Google 自行重抓。",
+            );
+          }
+
+          appendFileSync(summaryPath, `${lines.join("\n")}\n`);
+          console.log(lines.join("\n"));
           NODE
