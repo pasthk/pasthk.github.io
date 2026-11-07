@@ -8,3 +8,4 @@ src/.vuepress/dist/
 
 # 本機工作記錄（記憶、報告），只留本地，不進版控
 .workbuddy-ai/
+scripts/

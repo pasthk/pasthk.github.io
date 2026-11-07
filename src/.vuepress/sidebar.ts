@@ -142,15 +142,6 @@ export default sidebar({
       collapsible: true,
       children: [
         {
-          text: "公共衛生",
-          collapsible: true,
-          children: [
-            "/public-health/influenza.md",
-            "/public-health/cholera.md",
-            "/public-health/plague.md",
-          ],
-        },
-        {
           text: "教育",
           collapsible: true,
           children: [
@@ -167,6 +158,28 @@ export default sidebar({
             },
           ],
         },
+        {
+          text: "醫療",
+          collapsible: true,
+          children: [
+            {
+              text: "醫院",
+              collapsible: true,
+              children: [
+                "/hospital/tung-wah-group-of-hospitals.md",
+              ],
+            },
+            {
+              text: "公共衛生",
+              collapsible: true,
+              children: [
+                "/public-health/influenza.md",
+                "/public-health/cholera.md",
+                "/public-health/plague.md",
+              ],
+            },
+          ],
+        },
       ],
     },
     {
@@ -179,7 +192,6 @@ export default sidebar({
           children: [
             "/custom/lunar-new-year.md",
             "/custom/dragon-boat-festival.md",
-            // "/custom/mid-autumn-festival.md",
             "/custom/yu-lan-festival.md",
           ],
         },
