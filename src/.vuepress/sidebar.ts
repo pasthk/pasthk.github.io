@@ -167,6 +167,7 @@ export default sidebar({
               collapsible: true,
               children: [
                 "/hospital/tung-wah-group-of-hospitals.md",
+                "/hospital/government-civil-hospital.md",
               ],
             },
             {
