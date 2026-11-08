@@ -1,41 +1,34 @@
 # 香港文獻類編 https://www.pasthk.com
 # 本站為史料轉錄，歡迎搜尋引擎與 AI 檢索索引、引用。
-# 結構化摘要：https://www.pasthk.com/llms.txt
+# 機器可讀索引：https://www.pasthk.com/llms.txt（各頁另有 .md 純文字鏡像）
 
 User-agent: *
 Allow: /
 
-# 每頁另有一份 .md 純文字版（供 AI 檢索器取用，目錄見 llms.txt），內容與 .html 完全相同。
-# 不讓搜尋引擎收錄，避免與正式頁面重複而分散排名；下方各 AI 爬蟲的 Allow: / 不受此限。
+# .md 是對應 .html 的純文字鏡像，內容相同。不讓通用爬蟲收錄，
+# 避免重複內容分散排名；下列列名的 AI 爬蟲各自成組，不受此限制。
 Disallow: /*.md$
 
-# --- 生成式 AI 檢索與訓練爬蟲（明確允許，避免日後被主機或 CDN 規則誤封）---
-
-User-agent: GPTBot
-Allow: /
+# --- AI 搜尋索引爬蟲（決定是否出現在生成式搜尋結果）---
 
 User-agent: OAI-SearchBot
 Allow: /
 
-User-agent: ChatGPT-User
-Allow: /
-
-User-agent: ClaudeBot
-Allow: /
-
-User-agent: Claude-Web
-Allow: /
-
-User-agent: anthropic-ai
+User-agent: Claude-SearchBot
 Allow: /
 
 User-agent: PerplexityBot
 Allow: /
 
-User-agent: Google-Extended
+User-agent: Applebot
 Allow: /
 
-User-agent: Applebot-Extended
+# --- AI 訓練／資料採集爬蟲 ---
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
 Allow: /
 
 User-agent: CCBot
@@ -46,5 +39,27 @@ Allow: /
 
 User-agent: meta-externalagent
 Allow: /
+
+# --- 使用者觸發的按需取回（非自動爬取）---
+# OpenAI、Perplexity 官方說明指出 robots.txt 對此類請求可能不適用；
+# 明確列出只是避免日後被 WAF／CDN 規則誤封。
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+# 刻意不列為 User-agent 的名稱：
+# - Google-Extended、Applebot-Extended 是訓練偏好／退出信號，不是會發出
+#   請求的 HTTP User-Agent；Apple 官方明言 Applebot-Extended 不會抓取網頁。
+#   Google 搜尋收錄一律由 Googlebot 處理，已受 User-agent: * 允許。
+# - anthropic-ai、Claude-Web 為舊稱；Anthropic 現行名稱是
+#   ClaudeBot／Claude-User／Claude-SearchBot。
+# - ChatGPT-User、Claude-User、Perplexity-User 由使用者提問觸發，
+#   不是搜尋索引訊號；能否出現在搜尋結果取決於上面各 SearchBot。
 
 Sitemap: https://www.pasthk.com/sitemap.xml

@@ -1,148 +1,118 @@
 import { createPage } from "vuepress/core";
-import type { App, HeadConfig, Page, Plugin } from "vuepress/core";
+import type { App, Page, Plugin } from "vuepress/core";
 
 import { chapters } from "./chapters.js";
+import { collectionHead } from "./collection-head.js";
 import { ogImageUrl } from "./og/paths.js";
+import { describeSite, siteStats, type StatsInput } from "./site-stats.js";
 import { HOSTNAME, SITE_NAME } from "./site.js";
 
 /**
- * 「文獻綜覽」索引頁。
+ * 「文獻綜覽」索引頁（/browse.html）。
  *
- * 緣起：主題的側邊欄分組都是 `collapsible: true`，而 `SidebarLinks` 以
- * `watchImmediate(routePath, …, { flush: "post" })` 計算展開組，這個回呼在
- * 服務端渲染階段不會執行，`openGroupIndex` 保持 -1；`SidebarGroup` 的判斷
- * 又是 `shouldOpen || !collapsible ? h(SidebarLinks) : null`，於是每個分組在
- * HTML 中都只留下一個標題按鈕，子項完全不輸出。
- *
- * 結果是整站 255 個頁面只有 13 個能從首頁沿連結走到（5%），其餘全靠
- * sitemap.xml 被動發現，no-JS 訪客也無法瀏覽。本頁把可收錄頁面整理成
- * 一份帶連結的清單並掛上頁尾（theme.ts 的 footer），讓每個頁面都能在
- * 兩次點擊內到達，
- * 不必改動主題元件、也不會讓每一頁的 HTML 為了側邊欄膨脹。
- *
- * 頁面內容在 `onInitialized` 期間由 `app.pages` 生成，因此目錄會隨內容
- * 增減自動更新，不需要人工維護。
+ * 主題的側邊欄分組在 SSR 階段不輸出子項（SidebarLinks 的 watchImmediate
+ * 回呼不會在服務端執行），全站因此只有少數頁面能從首頁沿連結走到。本頁在
+ * onInitialized 由 app.pages 產生一份完整清單並掛上頁尾，讓每個頁面兩次點擊
+ * 內可達；不更動主題元件，也不讓每頁 HTML 為了側邊欄膨脹。目錄隨內容自動增減。
  */
 
 const PAGE_PATH = "/browse.html";
+const PAGE_TITLE = "文獻綜覽";
 
-/** 不列入索引的頁面：noindex 的空殼頁、404、以及本頁自身 */
+/** 不列入索引：noindex 的空殼頁、404，以及本頁自身 */
 const isListable = (page: Page): boolean =>
   page.path !== PAGE_PATH &&
   page.path !== "/404.html" &&
   page.frontmatter.sitemap !== false &&
   Boolean(page.title);
 
-/** `1890s` → `1890年代`、`cap-53` → `CAP-53`，其餘目錄名原樣返回 */
-const prettyDir = (dir: string): string => {
-  const decade = /^(\d{4})s$/.exec(dir);
+/** `1890s` → `1890年代`、`cap-53` → `CAP-53`，其餘原樣返回 */
+const prettyDir = (dir: string): string =>
+  dir
+    .replace(/^(\d{4})s$/, "$1年代")
+    // 目錄名取自條例編號（src/legislation/cap-53/），沿用官方全大寫寫法
+    .replace(/^cap-(\d+)$/, "CAP-$1");
 
-  if (decade) return `${decade[1]}年代`;
+/**
+ * 次級分組標題取路徑第二段；若該分組本身有頁面，改用它的標題。
+ * 對照表須由 app.pages 建立：VuePress 的 app.pagesMap 以 filePath 為鍵，
+ * 用 page.path 查會找不到。
+ */
+const groupLabel = (
+  titles: Map<string, string>,
+  dir: string,
+  sub: string,
+): string =>
+  titles.get(`/${dir}/${sub}.html`) ??
+  titles.get(`/${dir}/${sub}/`) ??
+  prettyDir(sub);
 
-  // 目錄名取自條例編號（src/legislation/cap-53/），沿用官方的全大寫寫法
-  const cap = /^cap-(\d+)$/.exec(dir);
+const line = (page: Page): string => {
+  const date = page.frontmatter.datePublished;
+  const suffix = typeof date === "string" ? `（${date}）` : "";
 
-  return cap ? `CAP-${cap[1]}` : dir;
+  return `- [${page.title}](${page.path})${suffix}`;
 };
 
-interface Bucket {
-  /** 分組標題；空字串代表直接位於章節目錄下的頁面 */
-  label: string;
-  entries: { title: string; path: string; date?: string }[];
-}
-
 function buildContent(app: App): string {
-  const titles = new Map<string, string>();
-
-  for (const page of app.pages) titles.set(page.path, page.title);
-
+  const stats = siteStats(app.pages as StatsInput[]);
+  const titles = new Map<string, string>(
+    app.pages.map((page): [string, string] => [page.path, page.title]),
+  );
   const overview: Page[] = [];
-  const byChapter = new Map<string, Page[]>();
+  // 章節目錄 → 分組標題 → 頁面；空標題代表直接位於章節目錄下
+  const index = new Map<string, Map<string, Page[]>>();
 
   for (const page of app.pages) {
     if (!isListable(page)) continue;
 
-    const segments = page.path.split("/").filter(Boolean);
+    const [dir, sub, ...rest] = page.path.split("/").filter(Boolean);
 
     // 根目錄頁面（首頁、關於本站、閱讀說明、支持本站）沒有章節歸屬
-    if (segments.length < 2) {
+    if (!sub) {
       overview.push(page);
       continue;
     }
 
-    const bucket = byChapter.get(segments[0]) ?? [];
+    // 路徑超過兩段才有次級分組，否則歸入「本章」
+    const label = rest.length ? groupLabel(titles, dir, sub) : "";
+    const groups = index.get(dir) ?? new Map<string, Page[]>();
 
-    bucket.push(page);
-    byChapter.set(segments[0], bucket);
+    groups.set(label, [...(groups.get(label) ?? []), page]);
+    index.set(dir, groups);
   }
 
-  /** 章節內的次級分組：取路徑第二段，沒有則歸入「本章」 */
-  const groupOf = (page: Page): Bucket => {
-    const segments = page.path.split("/").filter(Boolean);
-    const sub = segments.length >= 3 ? segments[1] : "";
-    // 分組若本身有頁面（如 /archaeology/lei-cheng-uk-han-tomb.html），用它的標題
-    const parent = sub
-      ? (titles.get(`/${segments[0]}/${sub}.html`) ??
-        titles.get(`/${segments[0]}/${sub}/`))
-      : undefined;
-
-    return {
-      label: sub ? (parent ?? prettyDir(sub)) : "",
-      entries: [
-        {
-          title: page.title,
-          path: page.path,
-          date:
-            typeof page.frontmatter.datePublished === "string"
-              ? page.frontmatter.datePublished
-              : undefined,
-        },
-      ],
-    };
-  };
-
-  const line = ({ title, path, date }: Bucket["entries"][number]): string =>
-    `- [${title}](${path})${date ? `（${date}）` : ""}`;
-
-  const blocks: string[] = [];
+  const blocks: string[] = [
+    // 可由 frontmatter 查核的具體數字，比「收錄大量文獻」更易被引用
+    `${describeSite(stats)}以下依章節列出全部頁面，原始文獻轉錄頁另附原始出版日。`,
+  ];
 
   if (overview.length) {
     blocks.push(
-      ["## 總覽", "", ...overview.map((page) => `- [${page.title}](${page.path})`)].join("\n"),
+      ["", "## 總覽", "", ...overview.map((p) => `- [${p.title}](${p.path})`)].join(
+        "\n",
+      ),
     );
   }
 
-  const emit = (dir: string, pages: Page[]): void => {
-    const groups = new Map<string, Bucket>();
+  const emit = (dir: string, groups: Map<string, Page[]>): void => {
+    const chapter = chapters.find((item) => item.dir === dir);
+    const body = [`## ${chapter?.name ?? dir}`, ""];
 
-    for (const page of pages) {
-      const group = groupOf(page);
-      const existing = groups.get(group.label);
-
-      if (existing) existing.entries.push(...group.entries);
-      else groups.set(group.label, group);
+    if (chapter) {
+      body.push(chapter.note, "");
     }
 
     // 「本章」排最前，其餘依分組名排序（年代、專題名皆然）
-    const ordered = [...groups.values()].sort((a, b) => {
-      if (!a.label) return -1;
-      if (!b.label) return 1;
+    const ordered = [...groups.entries()].sort(([a], [b]) =>
+      a && b ? a.localeCompare(b, "zh-Hant") : a ? 1 : -1,
+    );
 
-      return a.label.localeCompare(b.label, "zh-Hant");
-    });
-
-    const chapter = chapters.find((item) => item.dir === dir);
-    const body: string[] = [`## ${chapter?.name ?? dir}`, ""];
-
-    if (chapter) body.push(chapter.note, "");
-
-    for (const group of ordered) {
-      if (group.label) body.push(`### ${group.label}`, "");
+    for (const [label, pages] of ordered) {
+      if (label) body.push(`### ${label}`, "");
 
       body.push(
-        ...group.entries
-          .sort((a, b) => a.path.localeCompare(b.path))
-          .map(line),
+        ...[...pages].sort((a, b) => a.path.localeCompare(b.path)).map(line),
         "",
       );
     }
@@ -150,17 +120,17 @@ function buildContent(app: App): string {
     blocks.push(body.join("\n").trimEnd());
   };
 
-  for (const chapter of chapters) {
-    const pages = byChapter.get(chapter.dir);
+  // 先按 chapters.ts 的順序輸出；未列出的目錄補在最後，日後新增不會靜默消失
+  for (const { dir } of chapters) {
+    const groups = index.get(dir);
 
-    if (pages?.length) {
-      emit(chapter.dir, pages);
-      byChapter.delete(chapter.dir);
+    if (groups) {
+      emit(dir, groups);
+      index.delete(dir);
     }
   }
 
-  // chapters.ts 未列出的目錄（日後新增）仍會出現，不會靜默消失
-  for (const [dir, pages] of byChapter) emit(dir, pages);
+  for (const [dir, groups] of index) emit(dir, groups);
 
   return blocks.join("\n\n");
 }
@@ -172,38 +142,27 @@ export const pageIndexPlugin = (): Plugin => (app: App) => ({
     if (app.pagesMap[PAGE_PATH]) return;
 
     const content = buildContent(app);
-    const count = app.pages.filter(isListable).length;
+    const stats = siteStats(app.pages as StatsInput[]);
     const url = `${HOSTNAME}${PAGE_PATH}`;
     const image = ogImageUrl(HOSTNAME, PAGE_PATH);
-    const description = `${SITE_NAME}全部 ${count} 個頁面的索引，按章節與分組排列。`;
+    const description =
+      `${SITE_NAME}全部 ${stats.total} 個可供檢索頁面的完整索引，按 ${chapters.length} 個章節與分組排列；` +
+      `其中 ${stats.sources} 篇為 ${stats.firstYear}–${stats.lastYear} 年的原始文獻轉錄。`;
 
     /**
-     * 這頁是執行期才建立的，比 `@vuepress/plugin-seo` 的 `onInitialized`
-     * （它會走訪當時的 `app.pages`，把 canonical、og:* 寫進各頁 frontmatter）
-     * 更晚，因此拿不到它產生的標籤。這裡自行補上同樣的一組，避免這頁成為
-     * 全站唯一沒有 canonical 與分享資訊的頁面。
+     * 主題的 seo 插件在 onInitialized 走訪 app.pages 寫入 canonical／og:*，
+     * 而主題插件一律先於使用者插件註冊，本頁建立時已錯過那一輪，須自行補上。
+     * 與各章節落地頁共用 collection-head.ts，social meta 與 JSON-LD 不會各自漂移。
      */
-    const head: HeadConfig[] = [
-      ["link", { rel: "canonical", href: url }],
-      ["meta", { property: "og:type", content: "website" }],
-      ["meta", { property: "og:url", content: url }],
-      ["meta", { property: "og:site_name", content: SITE_NAME }],
-      ["meta", { property: "og:title", content: "文獻綜覽" }],
-      ["meta", { property: "og:description", content: description }],
-      ["meta", { property: "og:image", content: image }],
-      ["meta", { property: "og:image:type", content: "image/png" }],
-      ["meta", { property: "og:image:width", content: "1200" }],
-      ["meta", { property: "og:image:height", content: "630" }],
-      ["meta", { property: "og:image:alt", content: "文獻綜覽" }],
-      ["meta", { name: "twitter:card", content: "summary_large_image" }],
-      ["meta", { name: "twitter:image:src", content: image }],
-    ];
+    const head = collectionHead({ url, title: PAGE_TITLE, description, image });
 
     const page = await createPage(app, {
       path: PAGE_PATH,
-      content: `# 文獻綜覽\n\n${content}\n`,
+      // 主題會由 frontmatter.title 自己輸出一個 h1；若這裡再寫一個，
+      // 頁面會出現兩個 h1（先前 browse.html 全站唯一的重複標題）。
+      content: `${content}\n`,
       frontmatter: {
-        title: "文獻綜覽",
+        title: PAGE_TITLE,
         description,
         head,
         // 這頁本身就是目錄，不需要頁內目錄、頁碼資訊與前後頁導覽

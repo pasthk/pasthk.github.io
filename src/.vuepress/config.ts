@@ -2,11 +2,14 @@ import { fileURLToPath } from "node:url";
 import { viteBundler } from "@vuepress/bundler-vite";
 import { defineUserConfig } from "vuepress";
 import { breadcrumbPlugin } from "./breadcrumb.js";
+import { chaptersGuardPlugin } from "./chapters.js";
 import { ogImagePlugin } from "./og/plugin.js";
 import { llms } from "./llms.js";
+import { llmsCanonicalPlugin } from "./llms-canonical.js";
 import { pageIndexPlugin } from "./page-index.js";
 import { referenceBoxPlugin } from "./reference-box.js";
 import { robotsPlugin } from "./robots.js";
+import { sitemapCleanPlugin } from "./sitemap.js";
 import { SITE_NAME, SITE_TAGLINE } from "./site.js";
 import { slimsearchDevWorkerPlugin } from "./slimsearch-dev-worker-plugin.js";
 import { stripUnusedFonts } from "./strip-unused-fonts.js";
@@ -79,6 +82,13 @@ export default defineUserConfig({
         content: "ca-pub-8975507583219124",
       },
     ],
+    // llmstxt.org v2 建議的雙向可發現性：HTML 用 describedby 指向全站索引，
+    // 索引裡的各頁再用 alternate type="text/markdown" 指回純文字鏡像（見 llms-canonical.ts）。
+    // Google 不使用 llms.txt，這裡只是給其他 LLM 服務的探索入口，不影響 SEO。
+    [
+      "link",
+      { rel: "describedby", type: "text/markdown", href: "/llms.txt" },
+    ],
     // 主題的建置模板（vuepress-theme-hope/templates/index.build.html）會在 hydration
     // 前無條件依 prefers-color-scheme 先設 data-theme="dark"，即使 darkmode: "disable"
     // （rc.110 要等 onMounted 才改回 light）。本站 palette 把 --vp-c-text 固定為 #000，
@@ -88,12 +98,19 @@ export default defineUserConfig({
   ],
   theme,
   plugins: [
+    // 只讀校驗：章節定義與 src 頂層目錄不一致時在建置日誌點名，
+    // 免得漏登記的目錄靜默降級成英文目錄名。
+    chaptersGuardPlugin(),
     // 必須排在 breadcrumbPlugin 之前：breadcrumbTrails() 會快取整份頁面清單，
     // 索引頁晚於它建立就不會被算進導覽鏈。
     pageIndexPlugin(),
     llms,
+    // 必須排在 llms 之後：等它寫完 .md 與 llms-full.txt 才改寫 frontmatter 的 url
+    llmsCanonicalPlugin(),
     ogImagePlugin(),
     robotsPlugin(),
+    // 主題的 sitemap 外掛已寫完 XML，這裡移除 Google 忽略的 changefreq/priority
+    sitemapCleanPlugin(),
     breadcrumbPlugin(),
     referenceBoxPlugin(),
   ],

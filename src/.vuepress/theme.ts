@@ -4,8 +4,17 @@ import { hopeTheme } from "vuepress-theme-hope";
 import navbar from "./navbar.js";
 import sidebar from "./sidebar.js";
 import { breadcrumbTrails } from "./breadcrumb.js";
+import { socialTags } from "./og/meta.js";
 import { ogImageUrl } from "./og/paths.js";
+import {
+  canonicalUrl,
+  citationOf,
+  createdDate,
+  isSourceDocument,
+  publishedDate,
+} from "./page-meta.js";
 import { tokenizeForIndex } from "./search-tokenize.js";
+import { sitemapModifiedTime } from "./sitemap.js";
 import {
   HOSTNAME,
   SITE_NAME,
@@ -178,41 +187,46 @@ export default hopeTheme(
       seo: {
         canonical: (page) => new URL(page.path, hostname).href,
         fallBackImage: `${hostname}/favicon.png`,
+
+        /**
+         * 外掛預設把「有來源檔且非 home」的頁面全當 Article，並以
+         * frontmatter.date（本站整理日）填 datePublished。這裡改成只有
+         * 真正轉錄原始文獻的頁面才是 Article；索引／說明頁改為 WebPage，
+         * 外掛就不會再產生任何 article:* 出版日標籤。
+         */
+        isArticle: isSourceDocument,
+
         ogp: (ogp, page) => {
           const image = cardUrl(page);
           const alt = page.path === "/" ? SITE_NAME : page.title;
 
-          Object.assign(ogp, {
-            "og:image": image,
-            "og:image:type": "image/png",
-            "og:image:width": "1200",
-            "og:image:height": "1200",
-            "og:image:alt": alt,
-            "twitter:card": "summary",
-            "twitter:image:src": image,
-            "twitter:image:alt": alt,
-          });
+          Object.assign(ogp, socialTags(image, alt));
 
-          const { datePublished } = page.frontmatter as {
-            datePublished?: string;
-          };
+          const published = publishedDate(page);
 
-          if (datePublished && "article:published_time" in ogp) {
-            ogp["article:published_time"] = datePublished;
+          if (published) {
+            ogp["article:published_time"] = published;
+          } else {
+            // 外掛無條件輸出 article:author／article:tag／article:modified_time，
+            // 但 og:type 已是 website；留著只會讓分享解析器讀到矛盾資訊。
+            for (const key of Object.keys(ogp)) {
+              if (key.startsWith("article:")) delete ogp[key];
+            }
           }
 
           return ogp;
         },
         jsonLd: (jsonLd, page, app) => {
-          const { datePublished, dateCreated } = page.frontmatter as {
-            datePublished?: string;
-            dateCreated?: string;
-          };
-          const url = new URL(page.path, hostname).href;
+          const article = isSourceDocument(page);
+          const url = canonicalUrl(page);
+          const published = publishedDate(page);
+          const created = createdDate(page);
+          const citation = article ? citationOf(page.content) : undefined;
 
           const main = {
             ...jsonLd,
-            "@id": `${url}#article`,
+            "@type": article ? "Article" : "WebPage",
+            "@id": `${url}#${article ? "article" : "webpage"}`,
             url,
             inLanguage: "zh-Hant",
             isPartOf: { "@id": WEBSITE_ID },
@@ -222,9 +236,15 @@ export default hopeTheme(
           } as Record<string, unknown>;
 
           delete main["@context"];
+          // 外掛以 date（本站整理日）填的 datePublished 一律丟棄，
+          // 只回填真正的原始出版日與本站建檔日。
+          delete main.datePublished;
+          delete main.dateCreated;
 
-          if (datePublished) main.datePublished = datePublished;
-          if (dateCreated) main.dateCreated = dateCreated;
+          if (published) main.datePublished = published;
+          if (created) main.dateCreated = created;
+          // 史料頁把可直接複製的引用字串也放進結構化資料，供檢索器驗證出處。
+          if (citation) main.citation = citation;
 
           const breadcrumb = buildBreadcrumb(page, url, app);
 
@@ -240,7 +260,10 @@ export default hopeTheme(
           } as unknown as typeof jsonLd;
         },
       },
-      sitemap: true,
+      sitemap: {
+        // 只輸出可驗證的重大內容更新日；無值時讓外掛省略 lastmod。
+        modifyTimeGetter: sitemapModifiedTime,
+      },
       icon: false,
       catalog: false,
       photoSwipe: false,

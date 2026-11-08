@@ -11,6 +11,8 @@ Noto Serif TC／SC 以 SIL Open Font License 1.1 釋出，可自由使用與散�
 
 缺字時的表現：子集沒有的字元會畫成 .notdef 空心方框，
 與過去轉路徑時的行為一致，問題看得見而不是靜默消失。
+建置時 og/plugin.ts 也會讀取這裡輸出的 coverage.json 逐字比對，
+一旦卡片用字超出子集就在日誌中點名頁面與缺字，不必等看到成品才發現。
 
 為什麼要合併多個來源檔：@fontsource 把字型依 unicode-range 切成近百個子集。
 繁體主檔（chinese-traditional）只有常用漢字，缺全角標點；
@@ -53,8 +55,9 @@ FIXED_TEXT = (
     "Hong Kong Documents"
     "Thematic Compilation of Hong Kong Archives"
     "1890–1990 年代香港舊報紙與歷史文獻索引"
+    "香港歷史文獻索引"
     "找不到頁面404 Not Found收錄篇"
-    "香港考古傳統節慶與打醮教育史歷史建築法例專題研究公共衛生碑刻熱帶氣旋與風球"
+    "香港考古傳統節慶與打醮教育史歷史建築法例專題研究公共衛生碑刻熱帶氣旋與風球醫院"
 )
 
 PUNCTUATION = (
@@ -212,13 +215,23 @@ def main() -> None:
 
     os.makedirs(FONT_OUT, exist_ok=True)
 
+    coverage: list[int] = []
+
     for weight in WEIGHTS:
         font = build_weight(weight, chars)
         font.flavor = None
         dst = os.path.join(FONT_OUT, f"noto-serif-tc-{weight}.ttf")
         font.save(dst)
+        # 以實際產出的 cmap 為準：來源字型本身也缺的字不會被列進去
+        coverage = sorted(font.getBestCmap())
         print(f"    {os.path.getsize(dst) // 1024} KB → {dst}")
 
+    # 供建置時逐字比對卡片用字（見 og/plugin.ts），避免缺字靜默變成方框
+    with open(os.path.join(FONT_OUT, "coverage.json"), "w", encoding="utf-8") as handle:
+        json.dump(coverage, handle, ensure_ascii=False, separators=(",", ":"))
+        handle.write("\n")
+
+    print(f"    覆蓋 {len(coverage)} 個碼位 → coverage.json")
     print("完成")
 
 

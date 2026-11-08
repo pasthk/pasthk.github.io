@@ -87,10 +87,14 @@ function buildContent(
       : undefined) ??
     firstClause(page.frontmatter.description ?? "");
 
+  const section = sectionOf(page.path);
+  const title = clean(page.title) || SITE_NAME;
+
   return {
-    title: clean(page.title) || SITE_NAME,
+    title,
     meta: meta ? clean(meta) : undefined,
-    section: sectionOf(page.path),
+    // 章節落地頁的標題就是章節名，右上角再標一次只會重複
+    section: section === title ? undefined : section,
   };
 }
 
@@ -129,6 +133,25 @@ async function fontOptions() {
   return { loadSystemFonts: true };
 }
 
+/**
+ * 子集字型涵蓋的碼位，由 scripts/build-og-fonts.py 產生。
+ *
+ * 子集是「產生當下」全站用字的快照。之後新增的史料若帶來沒見過的字
+ * （例如標題裡的「尸」「屛」），resvg 會把它畫成 .notdef 方框，
+ * 而建置本身不會失敗——卡片照樣產出，只是分享出去才看得出壞掉。
+ * 這裡逐字比對，把缺字寫進建置日誌，讓問題在本地就看得見。
+ * 檔案不存在（尚未重建過字型）時跳過檢查。
+ */
+async function loadCoverage(): Promise<Set<number> | undefined> {
+  try {
+    const raw = await readFile(join(FONT_DIR, "coverage.json"), "utf8");
+
+    return new Set(JSON.parse(raw) as number[]);
+  } catch {
+    return undefined;
+  }
+}
+
 export const ogImagePlugin = (): Plugin => (app: App) => ({
   name: "og-image-generator",
 
@@ -136,6 +159,9 @@ export const ogImagePlugin = (): Plugin => (app: App) => ({
     const outDir = app.dir.dest("og");
 
     await mkdir(outDir, { recursive: true });
+
+    const coverage = await loadCoverage();
+    const uncovered: string[] = [];
 
     // 子頁數量：路徑為 /a/b.html 的頁面，其子頁是 /a/b/ 底下的所有頁面。
     const childCounts = new Map<string, number>();
@@ -168,6 +194,18 @@ export const ogImagePlugin = (): Plugin => (app: App) => ({
       }
 
       const content = buildContent(page, raw, childCounts.get(page.path) ?? 0);
+
+      if (coverage) {
+        const text = [content.title, content.meta, content.section, content.header]
+          .filter(Boolean)
+          .join("");
+        const gaps = [...new Set(text)].filter(
+          (char) => !coverage.has(char.codePointAt(0) as number),
+        );
+
+        if (gaps.length) uncovered.push(`${page.path} → ${gaps.join("")}`);
+      }
+
       const svg = buildCardSvg(content);
 
       // 社群平台一律不接受 SVG 作 og:image，必須光柵化。
@@ -188,5 +226,12 @@ export const ogImagePlugin = (): Plugin => (app: App) => ({
     success(
       `生成 ${pages.length} 張 PNG（${mode}，共 ${Math.round(total / 1024)} KB${skipNote}）→ ${outDir}`,
     );
+
+    if (uncovered.length) {
+      warn(
+        `OG 卡片有 ${uncovered.length} 頁用到子集字型以外的字元，會顯示為方框。` +
+          `請執行 npm run docs:og-fonts 重建子集後再建置：\n  ${uncovered.join("\n  ")}`,
+      );
+    }
   },
 });

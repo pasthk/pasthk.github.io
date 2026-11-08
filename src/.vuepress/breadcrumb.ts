@@ -14,13 +14,6 @@ type SidebarNode = {
   children?: (SidebarNode | string)[];
 };
 
-/** 側邊欄中每個可達頁面的祖先鏈 */
-interface SidebarEntry {
-  path: string;
-  text: string;
-  chain: TrailItem[];
-}
-
 const HOME: TrailItem = { text: "首頁", link: "/" };
 
 /** 側邊欄的 link 是 .md 路徑，頁面的 path 是 .html 路徑，兩者要先對齊 */
@@ -36,55 +29,42 @@ const toPagePath = (link: string): string => {
 /** 依 sidebar.ts 的鍵長排序，讓最長的（最具體的）根優先命中 */
 const roots = Object.keys(sidebar).sort((a, b) => b.length - a.length);
 
-const rootOf = (path: string): string =>
-  roots.find(
-    (root) => root !== "/" && (path === root || path.startsWith(`${root}/`)),
-  ) ?? "/";
-
-/** 攤平側邊欄，記下每個頁面的祖先鏈 */
-const flatten = (
+/**
+ * 側邊欄中每個頁面的完整導覽鏈，最後一項是頁面自身。
+ *
+ * 分組層（如「自然環境」「宋代」）沒有對應頁面，只寫進文字鏈；
+ * 同一頁面若出現多處，取側邊欄順序中的第一次。
+ */
+const sidebarTrails = (
   titleOf: (path: string) => string | undefined,
-): SidebarEntry[] => {
-  const entries: SidebarEntry[] = [];
+): Map<string, TrailItem[]> => {
+  const trails = new Map<string, TrailItem[]>();
 
-  const visit = (nodes: (SidebarNode | string)[], chain: TrailItem[]) => {
+  const visit = (nodes: (SidebarNode | string)[], chain: TrailItem[]): void => {
     for (const node of nodes) {
       const item: SidebarNode = typeof node === "string" ? { link: node } : node;
-      const path = item.link ? toPagePath(item.link) : null;
+      const path = item.link ? toPagePath(item.link) : undefined;
       const text = item.text ?? (path ? titleOf(path) : undefined);
+      const next = text ? [...chain, { text, link: path }] : chain;
 
-      if (path && text) entries.push({ path, text, chain });
-
-      if (item.children) {
-        visit(
-          item.children,
-          text ? [...chain, { text, link: path ?? undefined }] : chain,
-        );
-      }
+      if (path && text && !trails.has(path)) trails.set(path, next);
+      if (item.children) visit(item.children, next);
     }
   };
 
   for (const root of roots) {
-    visit((sidebar as Record<string, SidebarNode[]>)[root] ?? [], []);
+    // 非 "/" 的側邊欄根（如 /project/ay1928）補上該專題首頁作為第一層
+    const index = `${root}/`;
+    const title =
+      root === "/" ? undefined : (titleOf(index) ?? titleOf(`${root}.html`));
+
+    visit(
+      (sidebar as Record<string, SidebarNode[]>)[root] ?? [],
+      title ? [{ text: title, link: index }] : [],
+    );
   }
 
-  return entries;
-};
-
-/** 兩條祖先鏈的共同前綴，用於「頁面不在側邊欄時」退到所屬章節 */
-const commonPrefix = (chains: TrailItem[][]): TrailItem[] => {
-  if (!chains.length) return [];
-
-  const [first, ...rest] = chains;
-  let size = first.length;
-
-  for (const chain of rest) {
-    let i = 0;
-    while (i < size && i < chain.length && chain[i].text === first[i].text) i += 1;
-    size = i;
-  }
-
-  return first.slice(0, size);
+  return trails;
 };
 
 /** 上一層目錄，如 /a/b/c.html → /a/b/ → /a/ → / */
@@ -104,73 +84,60 @@ const sharedDepth = (a: string, b: string): number => {
   return depth;
 };
 
-/**
- * 頁面 → 連到它的側邊欄頁面。
- * 報道類頁面放在年代目錄（如 /tropical-cyclone/1960s/），與所屬年份頁面
- * 沒有 URL 上的上下層關係，只能靠「哪一頁連到它」判斷上一級。
- */
-const buildParentIndex = (
-  entries: SidebarEntry[],
-  linksOf: (path: string) => string[],
-): Map<string, SidebarEntry[]> => {
-  const index = new Map<string, SidebarEntry[]>();
+/** 兩條祖先鏈的共同前綴，用於「頁面不在側邊欄時」退到所屬章節 */
+const commonPrefix = (chains: TrailItem[][]): TrailItem[] => {
+  if (!chains.length) return [];
 
-  for (const entry of entries) {
-    for (const link of linksOf(entry.path)) {
-      if (link === entry.path) continue;
+  const [first, ...rest] = chains;
+  let size = first.length;
 
-      const list = index.get(link) ?? [];
-      if (!list.some((item) => item.path === entry.path)) list.push(entry);
-      index.set(link, list);
-    }
+  for (const chain of rest) {
+    let i = 0;
+    while (i < size && i < chain.length && chain[i].text === first[i].text) i += 1;
+    size = i;
   }
 
-  return index;
+  return first.slice(0, size);
 };
 
+/**
+ * 頁面的祖先鏈（不含自身與首頁）。依次嘗試：
+ * 1. 頁面本身在側邊欄中：取其鏈（去掉自身）
+ * 2. 頁面是某個側邊欄頁面的下層（如專題內的單篇報道）：接到該頁之後
+ * 3. 沒有 URL 上的上下層關係：取連到本頁的側邊欄頁面作上一級，
+ *    多個候選時取目錄最接近者，同分則依側邊欄順序
+ * 4. 仍找不到：退到所在目錄所屬的章節
+ */
 const buildTrail = (
   path: string,
-  entries: SidebarEntry[],
-  parents: Map<string, SidebarEntry[]>,
+  trails: Map<string, TrailItem[]>,
+  parents: Map<string, string[]>,
 ): TrailItem[] => {
-  if (path === "/") return [];
+  const own = trails.get(path);
+  if (own) return own.slice(0, -1);
 
-  const root = rootOf(path);
-  const scoped = entries.filter((entry) => rootOf(entry.path) === root);
+  const ancestor = [...trails.keys()]
+    .filter((key) => path.startsWith(`${key.replace(/\.html$/, "")}/`))
+    .sort((a, b) => b.length - a.length)[0];
+  if (ancestor) return trails.get(ancestor) ?? [];
 
-  // 1. 頁面本身在側邊欄中：取其祖先鏈（不含當前頁）
-  const exact = scoped.find((entry) => entry.path === path);
-  if (exact) return [HOME, ...exact.chain];
-
-  // 2. 頁面是某個側邊欄頁面的下層（如專題內的單篇報道）：接到該專題頁之後
-  const nested = scoped
-    .filter((entry) => path.startsWith(`${entry.path.replace(/\.html$/, "")}/`))
-    .sort((a, b) => b.path.length - a.path.length);
-  if (nested.length) {
-    const [parent] = nested;
-    return [HOME, ...parent.chain, { text: parent.text, link: parent.path }];
-  }
-
-  // 3. 沒有 URL 上的上下層關係：取連到本頁的側邊欄頁面作上一級，
-  //    多個候選時取目錄最接近者，同分則依側邊欄順序
   const candidates = parents.get(path) ?? [];
   if (candidates.length) {
     const parent = candidates.reduce((best, item) =>
-      sharedDepth(item.path, path) > sharedDepth(best.path, path) ? item : best,
+      sharedDepth(item, path) > sharedDepth(best, path) ? item : best,
     );
-    return [HOME, ...parent.chain, { text: parent.text, link: parent.path }];
+
+    return trails.get(parent) ?? [];
   }
 
-  // 4. 仍找不到：退到所在目錄所屬的章節
-  let dir = parentDir(path);
-  while (dir && dir !== "/") {
+  for (let dir = parentDir(path); dir && dir !== "/"; dir = parentDir(dir)) {
     const chain = commonPrefix(
-      scoped
-        .filter((entry) => entry.path.startsWith(dir))
-        .map((entry) => entry.chain),
+      [...trails]
+        .filter(([key]) => key.startsWith(dir))
+        .map(([, trail]) => trail.slice(0, -1)),
     );
-    if (chain.length) return [HOME, ...chain];
-    dir = parentDir(dir);
+
+    if (chain.length) return chain;
   }
 
   return [];
@@ -190,53 +157,42 @@ export const breadcrumbTrails = (app: App): Map<string, TrailItem[]> => {
   const cached = trailCache.get(app);
   if (cached) return cached;
 
-  const titles = new Map<string, string>();
-  const links = new Map<string, string[]>();
+  const pages = new Map(app.pages.map((page) => [page.path, page]));
+  const trails = sidebarTrails((path) => pages.get(path)?.title);
+
+  // 報道類頁面放在年代目錄（如 /tropical-cyclone/1960s/），與所屬年份頁面
+  // 沒有 URL 上的上下層關係，只能靠「哪一頁連到它」判斷上一級。
+  const parents = new Map<string, string[]>();
+
+  for (const path of trails.keys()) {
+    for (const link of pages.get(path)?.links ?? []) {
+      const target = link.absolute?.split("#")[0];
+      if (!target) continue;
+
+      const parent = toPagePath(target);
+      if (parent === path) continue;
+
+      const list = parents.get(parent) ?? [];
+      if (!list.includes(path)) list.push(path);
+      parents.set(parent, list);
+    }
+  }
+
+  const result = new Map<string, TrailItem[]>();
 
   for (const page of app.pages) {
-    titles.set(page.path, page.title);
-    links.set(
-      page.path,
-      page.links
-        .map((link) => link.absolute?.split("#")[0])
-        .filter((link): link is string => Boolean(link))
-        .map(toPagePath),
+    // 專題首頁會以自己作為第一層，需去掉指向本頁的層級，否則出現自我連結
+    const trail = [HOME, ...buildTrail(page.path, trails, parents)].filter(
+      (item) => item.link !== page.path,
     );
-  }
-
-  const titleOf = (path: string) => titles.get(path);
-  const entries = flatten(titleOf);
-  const parents = buildParentIndex(entries, (path) => links.get(path) ?? []);
-
-  // 非 "/" 的側邊欄根（如 /project/ay1928）補上該專題首頁作為第一層
-  const rootTitles = new Map<string, TrailItem>();
-  for (const root of roots) {
-    if (root === "/") continue;
-    const indexPath = `${root}/`;
-    const title = titleOf(indexPath) ?? titleOf(`${root}.html`);
-    if (title) rootTitles.set(root, { text: title, link: indexPath });
-  }
-
-  const trails = new Map<string, TrailItem[]>();
-
-  for (const page of app.pages) {
-    const trail = buildTrail(page.path, entries, parents);
-    const root = rootOf(page.path);
-    const rootItem = rootTitles.get(root);
-    // 專題首頁自己不列入路徑，否則會出現指向本頁的自我連結
-    const isRootIndex = page.path === `${root}/`;
-    const full =
-      rootItem && !isRootIndex && trail.length
-        ? [HOME, rootItem, ...trail.slice(1)]
-        : trail;
 
     // 只有首頁一層的路徑沒有資訊量，寧可不顯示
-    if (full.length > 1) trails.set(page.path, full);
+    if (trail.length > 1) result.set(page.path, trail);
   }
 
-  trailCache.set(app, trails);
+  trailCache.set(app, result);
 
-  return trails;
+  return result;
 };
 
 /**
