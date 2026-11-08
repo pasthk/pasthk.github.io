@@ -1,7 +1,7 @@
 ---
 title: 東華三院
 date: 2026-11-07
-description: 
+description: 東華三院歷史文獻索引，按東華醫院、廣華醫院、東華東院與三院聯合院務分編，收錄1874至1935年《循環日報》《工商日報》《香港華字日報》報道，涵蓋醫院月結、習醫規條、1880年廣東水災賑濟、東華東院1929年籌款與開幕、1935年院務報告書等條目。
 pageInfo: false
 ---
 
@@ -29,6 +29,26 @@ pageInfo: false
 1. 〈[廣華醫院擬增建傳染院](./tung-wah-group-of-hospitals/19310528-the-kung-sheung-daily-news-p9.md)〉，《工商日報》，1931年5月28日，第3張第1版。
 
 ## 東華東院
+### 籌辦東華東院
+1. 〈[東華東院為勸捐告各界書](./tung-wah-group-of-hospitals/19290610-the-kung-sheung-daily-news-p14.md)〉，《工商日報》，1929年6月10日，第4張第2版。
+2. 〈[東華東院將舉行勸捐](./tung-wah-group-of-hospitals/19290619-the-kung-sheung-daily-news-p15.md)〉，《工商日報》，1929年6月19日，第4張第3版。
+3. 〈[東華東院勸捐日記](./tung-wah-group-of-hospitals/19290625-the-kung-sheung-daily-news-p15.md)〉，《工商日報》，1929年6月25日，第4張第3版。
+4. 〈東華東院勸捐日記〉，《工商日報》，1929年6月27日，第4張第3版。
+5. 〈東華東院勸損記〉，《工商日報》，1929年6月29日，第4張第3版。
+6. 〈金督為東華東院勸捐〉，《工商日報》，1929年7月16日，第4張第2版。
+7. 〈東華東院之近況〉，《工商日報》，1929年8月1日，第4張第3版。
+8. 〈[東華東院定期開幕](./tung-wah-group-of-hospitals/19290809-the-kung-sheung-daily-news-p15.md)〉，《工商日報》，1929年8月9日，第4張第3版。
+9. 〈[東華東院之開幕期](./tung-wah-group-of-hospitals/19290814-the-kung-sheung-daily-news-p15.md)〉，《工商日報》，1929年8月14日，第4張第3版。
+   - 大約在九月左右
+10. 〈東華東院之開幕期〉，《香港華字日報》，1929年8月14日，第2張第3頁。
+11. 〈[南華為東華東院籌款](./tung-wah-group-of-hospitals/19290824-the-kung-sheung-daily-news-p15.md)〉，《工商日報》，1929年8月24日，第4張第3版。
+12. 〈[東華東院會議開幕日期](./tung-wah-group-of-hospitals/19290828-the-kung-sheung-daily-news-p15.md)〉，《工商日報》，1929年8月28日，第4張第3版。
+13. 〈堤岸華僑樂助東華東院〉，《香港華字日報》，1929年8月29日，第3張第2頁。
+14. 〈東華東院會議開幕期〉，《工商日報》，1929年8月30日，第3張第2版。
+15. 〈東華東院鳴謝告白〉，《工商日報》，1929年8月30日，第3張第2版。
+16. 〈今日磋商東華東院開幕問題〉，《香港華字日報》，1929年8月30日，第3張第2頁。
+17. 〈[東華東院定期聚會](./tung-wah-group-of-hospitals/19290914-the-chinese-mail-p7.md)〉，《香港華字日報》，1929年9月14日，第2張第3頁。
+18. 〈[東華東院開幕紀盛](./tung-wah-group-of-hospitals/19291128-the-kung-sheung-daily-news-p14.md)〉，《工商日報》，1929年11月28日，第4張第2版。
 
 ## 東華三院
 1. 〈[東華三院去屆院務報告書](./tung-wah-group-of-hospitals/19351030-the-kung-sheung-daily-news-p9.md)〉，《工商日報》，1935年10月30日，第3張第1版。

@@ -3,7 +3,7 @@ title: 捐助經費
 date: 2026-11-07
 dateCreated: "2026-11-07"
 datePublished: "1880-06-25"
-description:
+description: 《循環日報》1880年6月25日〈捐助經費〉報道陳荔秋星使途經香港時，嘉許東華醫院紳董辦事實心至公，特捐俸銀200圓由外洋寄交醫院充作經費；條目反映該院常年經費倚賴官紳與海外捐款，可與同期賑災文獻及醫院月結對讀。
 excerpted: true
 proofread: false
 ---

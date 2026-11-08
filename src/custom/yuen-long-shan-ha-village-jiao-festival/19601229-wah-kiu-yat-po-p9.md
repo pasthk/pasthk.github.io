@@ -1,5 +1,5 @@
 ---
-title: 屛山山厦村舉行祥麟開光大歡騰
+title: 屏山山厦村舉行祥麟開光大歡騰
 date: 2026-11-02
 dateCreated: "2026-11-02"
 datePublished: "1960-12-29"

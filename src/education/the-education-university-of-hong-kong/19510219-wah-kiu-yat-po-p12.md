@@ -4,7 +4,7 @@ toc: false
 date: 2026-11-04
 dateCreated: "2026-11-04"
 datePublished: "1951-02-19"
-description: 
+description: 《華僑日報》1951年2月19日報道羅富國師範學院附屬學校家長教師春節聯歡大會，出席1500餘人，黃熾普致開會詞，23旅童軍表演救傷，並有林佩瑤獨唱、劉敬口琴、郭岐鳳太極劍及李學勤單車絕技；開會詞另記潮州公會龍崗道第2義校增設捷和工人子弟班。
 excerpted: true
 proofread: false
 ---

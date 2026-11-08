@@ -3,7 +3,7 @@ title: 仗義可風
 date: 2026-11-07
 dateCreated: "2026-11-07"
 datePublished: "1880-06-26"
-description:
+description: 《循環日報》1880年6月26日〈仗義可風〉報道東華醫院接上海晉賑收解公所電報，由廣記行匯交賑款，得悉鄭陶齋翁已在上海捐銀2000圓助賑廣東水災；條目與同期〈集議救災〉及勸捐小引互證，呈現1880年粵港滬3地慈善網絡的跨埠募捐與匯款機制。
 excerpted: true
 proofread: false
 ---

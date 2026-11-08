@@ -3,7 +3,7 @@ title: 教習醫學
 date: 2026-11-07
 dateCreated: "2026-11-07"
 datePublished: "1880-05-17"
-description:
+description: 《循環日報》1880年5月17日〈教習醫學〉報道東華醫院董事聘請東莞陳蓮蓀到院教習醫學、纂修醫案，使有志習岐黃者臨證有所持循，並稱所擬章程極其妥善；此為該院由贈醫施藥延伸至中醫人才培訓的早期記錄，可與同年〈習醫規條〉互證。
 excerpted: true
 proofread: false
 ---

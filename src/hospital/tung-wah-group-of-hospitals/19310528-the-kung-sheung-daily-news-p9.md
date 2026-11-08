@@ -3,7 +3,7 @@ title: 廣華醫院擬增建傳染院
 date: 2026-11-07
 dateCreated: "2026-11-07"
 datePublished: "1931-05-28"
-description: 
+description: 《工商日報》1931年5月28日報道廣華醫院擬增建傳染病院：該院為對海九龍唯一民辦善院，年中受惠貧民甚多，惟現有傳染病院僅可容10餘人，不敷社會需求；董事局已繪就新院圖則、興工在即，反映1930年代九龍傳染病隔離設施的擴充需求。
 excerpted: true
 proofread: false
 ---

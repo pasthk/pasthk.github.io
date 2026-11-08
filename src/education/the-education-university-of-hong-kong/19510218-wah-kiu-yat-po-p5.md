@@ -3,7 +3,7 @@ title: 羅富國師範附屬學校　家長教師春節聯歡
 date: 2026-11-04
 dateCreated: "2026-11-04"
 datePublished: "1951-02-18"
-description: 
+description: 《華僑日報》1951年2月18日特訊預告羅富國師範學院附屬學校家長教師聯誼會於當日下午2時30分在該校露天球場舉行春節聯歡大會，由黃熾普、羅宗淦等主持，安排耿德海國術、李學勤單車絕技、郭岐鳳劍術、劉敬口琴及燈謎等餘興節目。
 excerpted: true
 proofread: false
 ---

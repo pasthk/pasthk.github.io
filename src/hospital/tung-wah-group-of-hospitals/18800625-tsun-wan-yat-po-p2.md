@@ -3,7 +3,7 @@ title: 集議救災
 date: 2026-11-07
 dateCreated: "2026-11-07"
 datePublished: "1880-06-25"
-description:
+description: 《循環日報》1880年6月25日〈集議救災〉報道東華醫院於6月16日接廣州愛育堂來函，指廣東南海、三水、從化等縣因連旬陰雨、圍基沖決而成水災，籲香港紳商集議勸捐；文中列兩廣總督捐銀4000兩、巡撫3000兩等倡捐數目，並附錄愛育堂勸捐小引全文。
 excerpted: true
 proofread: false
 ---

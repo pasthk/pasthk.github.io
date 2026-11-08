@@ -11,7 +11,7 @@ pageInfo: false
 2. 〈[山廈村建醮祥麟今開光](./yuen-long-shan-ha-village-jiao-festival/19601228-wah-kiu-yat-po-p9.md)〉，《華僑日報》，1960年12月28日，第3張第1頁。
 3. 〈[新界山廈村有盛會　麒麟起舞氣氛洋溢](./yuen-long-shan-ha-village-jiao-festival/19601229-ta-kung-pao-p3.md)〉，《大公報》，1960年12月29日，第1張；第3版。
    - 建醮下月開壇錦添花劇團助興
-4. 〈[屛山山厦村舉行祥麟開光大歡騰](./yuen-long-shan-ha-village-jiao-festival/19601229-wah-kiu-yat-po-p9.md)〉，《華僑日報》，1960年12月29日，第3張第1頁。
+4. 〈[屏山山厦村舉行祥麟開光大歡騰](./yuen-long-shan-ha-village-jiao-festival/19601229-wah-kiu-yat-po-p9.md)〉，《華僑日報》，1960年12月29日，第3張第1頁。
    - 各村嘉賓數百人到觀禮
    - 十年一度大醮三日開壇
 5. 〈[粉嶺園及山廈村昨日起建醮演戲](./yuen-long-shan-ha-village-jiao-festival/19610104-ta-kung-pao-p3.md)〉，《大公報》，1961年1月4日，第1張；第3版。

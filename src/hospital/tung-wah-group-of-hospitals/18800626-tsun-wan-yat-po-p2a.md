@@ -3,7 +3,7 @@ title: 勸捐賑濟南海三水從化水災小引
 date: 2026-11-07
 dateCreated: "2026-11-07"
 datePublished: "1880-06-26"
-description:
+description: 《循環日報》1880年6月26日刊東華醫院同人〈勸捐賑濟南海三水從化水災小引〉，以駢文記光緒6年入夏後廣東南海、三水、從化等縣江河暴漲、圍堤沖決、田廬淹沒，呼籲香港富紳商賈隨緣捐助，並聲明善款送交東華醫院帳房、發回收單以杜假冒。
 excerpted: true
 proofread: false
 ---

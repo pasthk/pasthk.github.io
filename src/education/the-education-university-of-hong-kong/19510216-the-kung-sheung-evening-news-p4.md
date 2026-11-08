@@ -3,7 +3,7 @@ title: 當局擬在九龍設立師範學校
 date: 2026-11-04
 dateCreated: "2026-11-04"
 datePublished: "1951-02-16"
-description: 
+description: 《工商晚報》1951年2月16日專訊報道教育當局擬於九龍增設1所師範學校，配合羅富國師資學院及鄉村師範培訓更多教師；並記當局與校長商議提高待遇受阻，小學教員月薪約120至150元、中學教員180至250元，校方要求增收學費的提議遭擱置。
 excerpted: true
 proofread: false
 ---

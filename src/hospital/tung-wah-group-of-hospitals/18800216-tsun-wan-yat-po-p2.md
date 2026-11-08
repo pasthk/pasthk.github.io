@@ -3,7 +3,7 @@ title: 培育人才
 date: 2026-11-07
 dateCreated: "2026-11-07"
 datePublished: "1880-02-16"
-description:
+description: 《循環日報》1880年2月16日〈培育人才〉報道東華醫院董事擬於本年在香港文武廟旁書院開設義塾，聘黎棣圃、岑藹卿教授經書文藝，招收12至15歲童子、定額60人，有志者須先到醫院報名註冊，反映東華醫院由醫療延伸至華人教育的事業範圍。
 excerpted: true
 proofread: false
 ---

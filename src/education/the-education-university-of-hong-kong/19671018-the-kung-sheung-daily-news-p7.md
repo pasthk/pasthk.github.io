@@ -3,7 +3,7 @@ title: 三間師範學校改稱師範學院
 date: 2026-11-04
 dateCreated: "2026-11-04"
 datePublished: "1967-10-18"
-description: 
+description: 《工商日報》1967年10月18日報道羅富國、葛量洪、柏立基3間官立師範專科學校即日起改稱師範學院；教育司署指因工作範圍擴展、學科水準提高，各院均設2年制，僅餘1班1年制於本學年結束後停辦，改制後畢業生無須試用階段即可獲畢業證書。
 excerpted: true
 proofread: true
 ---

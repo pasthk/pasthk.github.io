@@ -4,7 +4,7 @@ author: 漢輝
 date: 2026-11-04
 dateCreated: "2026-11-04"
 datePublished: "1941-04-12"
-description: 
+description: 《大公報》1941年4月12日漢輝〈師資學院新面目〉報道香港師資訓練學院般含道新校舍落成，建築費30餘萬元，學生已於3月18日遷入上課；院長羅維爾（T. R. Rowell）採2年制，去年300多人投考僅錄48人（中英文部各24人），全院現有85人，開幕後正式改稱羅富國師範學院。
 excerpted: true
 proofread: false
 ---
