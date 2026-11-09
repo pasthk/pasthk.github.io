@@ -164,13 +164,30 @@ export default hopeTheme(
         // 改用自訂的二元切分，查詢端見 client.js 的 defineSearchConfig。
         indexOptions: { tokenize: tokenizeForIndex },
         // 主題內建的 customFields 只收 frontmatter 的 category／tag，本站 307 頁
-        // 兩欄皆未使用，實測索引的 c 欄位是空的。改收章節名，補上主題詞的召回：
-        // 「熱帶氣旋」原本 0 頁 → 121 頁，索引 gzip 體積 694 → 701 KB（+1%）。
-        // 曾評估改收整份 description（+86 KB、+12%），雖多救回「颱風信號」一題，
-        // 但「香港」結果由 116 頁膨脹到 221 頁，雜訊代價不成比例，故不採用。
-        // 章節名很短，且 combineWith: "AND" 要求所有二元詞條都命中，
-        // 只有查詢本身是章節名（或其連續片段）時才會命中，不會引入部分比對的雜訊。
-        customFields: [{ getter: (page) => chapterOf(page.path) }],
+        // 兩欄皆未使用，實測索引的 c 欄位是空的。改收「章節名 + 頁面 description」，
+        // 兩者都是短文字，且 combineWith: "AND" 要求所有二元詞條都命中，不會引入
+        // 部分比對的雜訊。
+        //   - 章節名（chapters.ts）：「熱帶氣旋」原本 0 頁 → 125 頁，gzip +1%。
+        //   - description：本站 89 頁在 description 寫了「熱帶氣旋」等主題詞，但
+        //     frontmatter 不進正文索引，這些頁查該詞時只會顯示章節名、沒有任何摘要。
+        //     補上後同時救回「颱風信號」「警告信號」（42 個關鍵詞零結果 3 → 1，
+        //     剩下「義莊」語料中根本不存在）。
+        // 先前因「香港」頁數膨脹而否決過 description；加入 40 頁上限、標題優先
+        // 分區與 boost.c=1 後重測：234 條標題查詢 MRR 0.983、首位 96.6%、前 3
+        // 100% 全部不變，「香港」前 3 位也不變，寬查詢 build 只多 6 ms。
+        // 代價是索引 gzip 約 +86 KB（+12%）、「香港」150 → 246 頁，但這些雜訊皆
+        // 落在 40 頁之外，換來的是主題詞有實質摘要可顯示，故採用。
+        customFields: [
+          {
+            getter: (page) =>
+              [
+                chapterOf(page.path),
+                typeof page.frontmatter.description === "string"
+                  ? page.frontmatter.description
+                  : null,
+              ].filter((value): value is string => Boolean(value)),
+          },
+        ],
         // 自動補全會另外建立第二個 Worker，各自完整載入並解析約 1 MB 的索引。
         // 但二元切分下 autoSuggest 只會回傳查詢本身（實測「香港大學」→「香港 港大 大學」），
         // 沒有實質建議價值；關閉後可省掉一次索引解壓與一份常駐記憶體。

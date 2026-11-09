@@ -1,13 +1,17 @@
 /**
- * 以 CDP 驅動無頭 Edge，驗證搜尋結果的呈現、排序與上限。
- * 用法：node verify-results.mjs
+ * 以 CDP 驅動無頭 Edge，驗證搜尋結果的呈現、排序、上限與重複段落。
+ * 用法：node verify-results.mjs（可用 BASE_URL 指向其他站台）
  */
 import { setTimeout as sleep } from "node:timers/promises";
 
 // 可用 BASE_URL 指向生產預覽（靜態伺服器），未指定時走 dev server。
 const BASE = process.env.BASE_URL ?? "http://127.0.0.1:8794";
 const CDP = "http://127.0.0.1:9224";
-const QUERIES = ["李鄭屋", "古蹟", "香港大學", "熱帶氣旋", "風球", "香港", "丁屋", "碑"];
+const QUERIES = [
+  "李鄭屋", "古蹟", "香港大學", "熱帶氣旋", "風球", "香港", "丁屋", "碑",
+  // 本輪補進 description 後應從零結果救回；「義莊」語料中不存在，預期仍為 0。
+  "颱風信號", "警告信號", "義莊",
+];
 
 const res = await fetch(`${CDP}/json/new?${encodeURIComponent(`${BASE}/`)}`, { method: "PUT" });
 const target = await res.json();
@@ -72,7 +76,19 @@ const out = await evaluate(`(async () => {
     const blocks = records.map((r) => r.querySelectorAll(".vp-search-record-contents > li").length);
     const titles = records.slice(0, 3)
       .map((r) => r.querySelector(".vp-search-record-title").innerText.trim().slice(0, 22));
-    return { pages: records.length, blocks, titles };
+    const firstBlocks = records.slice(0, 3).map((r) => {
+      const li = r.querySelector(".vp-search-record-contents > li");
+      return li ? li.innerText.trim().replace(/\\s+/g, " ").slice(0, 30) : "";
+    });
+    // 外掛會為每個查詢詞條各產生一份 display（同一段文字複製 N 份），
+    // client.js 的 packDisplay 會合併；這裡檢查每個結果列內是否仍有重複文字。
+    const duplicateBlocks = [...document.querySelectorAll(".vp-search-record-contents > li")]
+      .filter((li) => {
+        const parts = [...li.querySelectorAll(".vp-search-record-content > div > div")]
+          .map((d) => d.innerText.trim());
+        return parts.length > 1 && new Set(parts).size < parts.length;
+      }).length;
+    return { pages: records.length, blocks, titles, firstBlocks, duplicateBlocks };
   };
 
   // 預熱：第一次搜尋會載入 worker 並解析約 1 MB 索引，先跑一題丟棄結果。
@@ -92,20 +108,24 @@ const out = await evaluate(`(async () => {
     while (Date.now() - start < 8000) {
       await sleep(250);
       const n = read().pages;
-      if (n === last && n > 0) stable += 1;
+      // 零結果也算穩定（畫面顯示「找不到相符內容」），不必等滿 8 秒。
+      const settled = n > 0 || document.body.textContent.includes("找不到相符內容");
+      if (n === last && settled) stable += 1;
       else stable = 0;
       last = n;
       if (stable >= 3) break;
     }
     await sleep(400);
-    const { pages, blocks, titles } = read();
+    const { pages, blocks, titles, firstBlocks, duplicateBlocks } = read();
     rows.push({
       q,
       value: input.value,
       pages,
       maxBlocks: blocks.length ? Math.max(...blocks) : 0,
       emptyBlocks: blocks.filter((n) => n === 0).length,
+      duplicateBlocks,
       titles,
+      firstBlocks,
       noResult: document.body.textContent.includes("找不到相符內容"),
       searching: document.body.textContent.includes("搜尋中"),
     });
@@ -118,13 +138,21 @@ if (typeof out === "string") {
 } else {
   for (const r of out) {
     console.log(
-      `${r.q.padEnd(6)} → ${String(r.pages).padStart(2)} 頁｜段落上限 ${r.maxBlocks}｜空結果列 ${r.emptyBlocks}` +
+      `${r.q.padEnd(6)} → ${String(r.pages).padStart(2)} 頁｜段落上限 ${r.maxBlocks}｜空結果列 ${r.emptyBlocks}｜重複段落 ${r.duplicateBlocks}` +
         `${r.noResult ? "｜找不到相符內容" : ""}${r.searching ? "｜仍在搜尋中" : ""}` +
-        `${r.value !== r.q ? `｜輸入框=${JSON.stringify(r.value)}` : ""}｜前三 ${JSON.stringify(r.titles)}`,
+        `${r.value !== r.q ? `｜輸入框=${JSON.stringify(r.value)}` : ""}｜前三 ${JSON.stringify(r.titles)}` +
+        `｜首段 ${JSON.stringify(r.firstBlocks)}`,
     );
   }
-  const bad = out.filter((r) => r.pages > 40 || r.maxBlocks > 5 || r.emptyBlocks > 0);
-  console.log("\n=== 上限檢查 ===", bad.length ? `異常 ${JSON.stringify(bad.map((r) => r.q))}` : "全部通過（≤40 頁、每頁 ≤5 段、無空白列）");
+  const bad = out.filter(
+    (r) => r.pages > 40 || r.maxBlocks > 5 || r.emptyBlocks > 0 || r.duplicateBlocks > 0,
+  );
+  console.log(
+    "\n=== 上限檢查 ===",
+    bad.length
+      ? `異常 ${JSON.stringify(bad.map((r) => r.q))}`
+      : "全部通過（≤40 頁、每頁 ≤5 段、無空白列、無重複段落）",
+  );
 }
 
 console.log("\n=== console（非 debug） ===");

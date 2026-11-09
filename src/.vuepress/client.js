@@ -14,20 +14,101 @@ const MAX_RESULTS = 40;
 const normalizeForCompare = (text) => text.toLowerCase().replace(/[^\p{L}\p{N}]+/gu, "");
 
 /**
+ * 合併扁平的 highlight 區間 `[start, end, start, end, ...]`。
+ * 外掛的 renderMatchedContent 逐成對讀取並以 text.slice 產生 <mark>，因此
+ * 重疊或相鄰的區間必須先合併，否則後段會被前段的 cursor 吃掉。
+ */
+const mergeHighlights = (ranges) => {
+  const pairs = [];
+
+  for (let i = 0; i + 1 < ranges.length; i += 2) {
+    pairs.push([ranges[i], ranges[i + 1]]);
+  }
+
+  pairs.sort((a, b) => a[0] - b[0] || a[1] - b[1]);
+
+  const merged = [];
+
+  for (const [start, end] of pairs) {
+    const last = merged[merged.length - 1];
+
+    if (last && start <= last[1]) last[1] = Math.max(last[1], end);
+    else merged.push([start, end]);
+  }
+
+  return merged.flatMap(([start, end]) => [start, end]);
+};
+
+/**
+ * 同一段文字被每個查詢詞條各產生一份 display，這裡按 text 合併，並把各詞條
+ * 命中的位置聯集起來。長文字會被外掛截成不同視窗（text 不同），此時保留各筆，
+ * 不強行合併，以免把不相干的兩個片段拼在一起。
+ */
+const packDisplay = (display) => {
+  const merged = new Map();
+
+  for (const part of display) {
+    const existing = merged.get(part.text);
+
+    if (existing) {
+      existing.highlights = mergeHighlights([
+        ...existing.highlights,
+        ...(part.highlights ?? []),
+      ]);
+    } else {
+      merged.set(part.text, { ...part, highlights: [...(part.highlights ?? [])] });
+    }
+  }
+
+  return [...merged.values()];
+};
+
+/** 整理單一結果頁要顯示的段落。 */
+const packContents = (contents) => {
+  const seen = new Set();
+  const packed = [];
+
+  // 先放標題／小節／正文命中，再補章節名與 description 的分類命中。後者往往是
+  // 「熱帶氣旋與風球」這類每頁都相同的固定字串，擺在最前面會擠掉真正有資訊量
+  // 的內文摘要；只有分類命中的頁面（例如查「熱帶氣旋」）仍會照常顯示分類片段。
+  const ordered = [
+    ...contents.filter((item) => item.type !== "customField"),
+    ...contents.filter((item) => item.type === "customField"),
+  ];
+
+  for (const item of ordered) {
+    if (!item.display?.length) continue;
+
+    const display = packDisplay(item.display);
+    const key = display.map(({ text }) => text).join("\u0000");
+
+    if (seen.has(key)) continue;
+
+    seen.add(key);
+    packed.push({ ...item, display });
+
+    if (packed.length >= MAX_CONTENTS_PER_RESULT) break;
+  }
+
+  return packed;
+};
+
+/**
  * 整理搜尋結果的呈現。
  *
  * 外掛已按頁面分組，但同一頁可能有數十段命中：實測「殷墟・報告」一頁達 92 段，
  * 「香港大學」平均每頁 9.2 段。整份貼出會讓單一結果佔滿整個彈窗，其餘頁面被推到
  * 摺疊線以下，使用者反而看不到其他候選。
  *
- * 這裡做四件事：
+ * 這裡做五件事：
  * 1. 丟掉沒有摘要可顯示的空段落。外掛對 customField 命中無條件建立結果項，
  *    若詞條在該欄位找不到連續原文，display 會是空陣列，畫面會多一列空白。
- * 2. 同一頁內文字完全相同的段落只留第一筆（取分數較高者），避免標題與章節標題
- *    重複顯示同一串字。
+ * 2. 壓掉重複文字（見 packDisplay）。
  * 3. 每頁最多保留 {@link MAX_CONTENTS_PER_RESULT} 段，最多 {@link MAX_RESULTS} 頁。
- *    外掛傳來的段落與頁面已按分數由高至低排列，故截頭即保留最相關者。
+ *    分區與截斷先做，只對最後留下的頁面整理段落，不浪費在註定不顯示的結果上。
  * 4. 標題命中查詢的頁面排到最前（見下方說明）。
+ * 5. 單頁內以標題／小節／正文命中優先，章節名與 description 的分類命中墊後，
+ *    避免每頁都相同的固定分類字串擠掉真正有資訊量的內文摘要。
  *
  * 為何需要第 4 項：二元切分下 BM25 以詞頻計分，一篇反覆提及「李鄭屋」的長篇
  * 報紙報導，分數會壓過標題就叫「李鄭屋漢墓」的主題頁——查「李鄭屋」時首位是
@@ -35,11 +116,10 @@ const normalizeForCompare = (text) => text.toLowerCase().replace(/[^\p{L}\p{N}]+
  * 但使用者輸入名詞時，多數想找的就是那個條目本身。這裡不改索引、不動分數，
  * 只在呈現層做一次穩定分區：標題涵蓋全部查詢詞條者置前，其餘維持原分數順序。
  *
- * 實測（304 頁語料、234 條「以頁面標題為查詢」）：
- * 標題 MRR 0.878 → 0.985、首位命中 96.9%、前 3 命中 100%。分區是穩定的
- * （Array.prototype.sort 自 ES2019 起保證穩定），同一區內仍是相關度排序。
- * 頁數上限取 40：實測沒有任何一題的目標頁落在第 40 名之後，但寬泛查詢
- * （「香港」116 頁、補上章節詞後「熱帶氣旋」121 頁）不必一次渲染上百張卡。
+ * 實測（234 條「以頁面標題為查詢」）：標題 MRR 0.878 → 0.983、首位命中 96.6%、
+ * 前 3 命中 100%。分區是穩定的（Array.prototype.sort 自 ES2019 起保證穩定），
+ * 同一區內仍是相關度排序。頁數上限取 40：實測沒有任何一題的目標頁落在第 40 名
+ * 之後，但寬泛查詢（「香港」246 頁、「熱帶氣旋」125 頁）不必一次渲染上百張卡。
  *
  * @param {import("@vuepress/plugin-slimsearch/client").SearchResult[]} results 搜尋結果
  * @param {string} query 切詞後以空白串接的查詢字串（外掛 useResults 傳入的格式）
@@ -58,31 +138,15 @@ const resultsFilter = (results, query) => {
     return terms.every((term) => text.includes(normalizeForCompare(term)));
   };
 
+  // 先分區、排序與截斷，最後才整理段落：寬泛查詢（「港」211 頁／957 段）原本會
+  // 替每一頁都做字串去重，但其中 171 頁最終根本不會顯示。改為只處理留下的 40 頁，
+  // 也省去為被丟棄的頁面建立新物件。
   return results
-    .map((result) => {
-      const seen = new Set();
-      const contents = [];
-
-      for (const item of result.contents) {
-        if (!item.display?.length) continue;
-
-        const key = item.display.map(({ text }) => text).join("\u0000");
-
-        if (seen.has(key)) continue;
-
-        seen.add(key);
-        contents.push(item);
-
-        if (contents.length >= MAX_CONTENTS_PER_RESULT) break;
-      }
-
-      return { ...result, contents };
-    })
-    .filter(({ contents }) => contents.length > 0)
+    .filter((result) => result.contents.some((item) => item.display?.length))
     .map((result, index) => ({ result, rank: isTitleHit(result.title) ? 0 : 1, index }))
     .sort((a, b) => a.rank - b.rank || a.index - b.index)
     .slice(0, MAX_RESULTS)
-    .map(({ result }) => result);
+    .map(({ result }) => ({ ...result, contents: packContents(result.contents) }));
 };
 
 // 查詢端必須與索引端（theme.ts 的 indexOptions.tokenize）用同一套斷詞，
