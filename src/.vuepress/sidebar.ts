@@ -218,9 +218,10 @@ export default sidebar({
                 "/custom/yuen-long-kam-tin-jiao-festival.md",
                 "/custom/yuen-long-shan-ha-village-jiao-festival.md",
                 "/custom/tai-po-lam-tsuen-jiao-festival.md",
-                "/custom/kat-o-jiao-festival.md",
                 "/custom/sha-tin-kau-yeuk-jiao-festival.md",
                 "/custom/sha-tin-tai-wai-village-jiao-festival.md",
+                "/custom/kat-o-jiao-festival.md",
+                "/custom/shek-o-jiao-festival.md",
               ],
             },
             {

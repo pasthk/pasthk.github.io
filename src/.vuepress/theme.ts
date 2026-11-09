@@ -4,6 +4,7 @@ import { hopeTheme } from "vuepress-theme-hope";
 import navbar from "./navbar.js";
 import sidebar from "./sidebar.js";
 import { breadcrumbTrails } from "./breadcrumb.js";
+import { chapters } from "./chapters.js";
 import { socialTags } from "./og/meta.js";
 import { ogImageUrl } from "./og/paths.js";
 import {
@@ -24,6 +25,16 @@ import {
 
 /** 站台網址，集中定義於 site.ts */
 const hostname = HOSTNAME;
+
+/**
+ * 頁面所屬章節的中文名，取自 chapters.ts（全站章節名的唯一來源）。
+ *
+ * 供搜尋索引當作「分類詞」使用：諸如「熱帶氣旋」這類主題詞只出現在側邊欄與
+ * frontmatter.description，兩者都不進索引，查詢會得到 0 筆結果。以章節名為每頁
+ * 補上一個極短的分類詞後，該詞可命中整個章節的頁面。
+ */
+const chapterOf = (pagePath: string): string | null =>
+  chapters.find(({ dir }) => pagePath.startsWith(`/${dir}/`))?.name ?? null;
 
 const ORGANIZATION_ID = `${hostname}/#organization`;
 const WEBSITE_ID = `${hostname}/#website`;
@@ -152,6 +163,18 @@ export default hopeTheme(
         // 精確度極差（實測「丁屋」命中 61 頁、「徙置區」36 頁，多數只含其中一字）。
         // 改用自訂的二元切分，查詢端見 client.js 的 defineSearchConfig。
         indexOptions: { tokenize: tokenizeForIndex },
+        // 主題內建的 customFields 只收 frontmatter 的 category／tag，本站 307 頁
+        // 兩欄皆未使用，實測索引的 c 欄位是空的。改收章節名，補上主題詞的召回：
+        // 「熱帶氣旋」原本 0 頁 → 121 頁，索引 gzip 體積 694 → 701 KB（+1%）。
+        // 曾評估改收整份 description（+86 KB、+12%），雖多救回「颱風信號」一題，
+        // 但「香港」結果由 116 頁膨脹到 221 頁，雜訊代價不成比例，故不採用。
+        // 章節名很短，且 combineWith: "AND" 要求所有二元詞條都命中，
+        // 只有查詢本身是章節名（或其連續片段）時才會命中，不會引入部分比對的雜訊。
+        customFields: [{ getter: (page) => chapterOf(page.path) }],
+        // 自動補全會另外建立第二個 Worker，各自完整載入並解析約 1 MB 的索引。
+        // 但二元切分下 autoSuggest 只會回傳查詢本身（實測「香港大學」→「香港 港大 大學」），
+        // 沒有實質建議價值；關閉後可省掉一次索引解壓與一份常駐記憶體。
+        suggestion: false,
         // 本站正文量大，索引於首次搜尋時才下載解析；延遲略高於預設值，
         // 讓使用者輸入完整詞組後才觸發，避免連續查詢互相打斷。
         searchDelay: 200,
