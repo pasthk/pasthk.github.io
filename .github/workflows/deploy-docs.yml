@@ -6,14 +6,15 @@ on:
   workflow_dispatch:
     inputs:
       release_type:
-        description: Version increment for this deployment
+        description: Version increment for this deployment (auto detects added/renamed files)
         required: true
         type: choice
         options:
+          - auto
           - patch
           - minor
           - major
-        default: patch
+        default: auto
 
 permissions:
   contents: write
@@ -43,13 +44,104 @@ jobs:
         with:
           fetch-depth: 0
 
+      - name: Determine version bump
+        id: detect_release
+        env:
+          REQUESTED_TYPE: ${{ github.event.inputs.release_type || 'auto' }}
+          BEFORE_SHA: ${{ github.event.before }}
+          AFTER_SHA: ${{ github.sha }}
+        run: |
+          node --input-type=module <<'NODE'
+          import { appendFileSync } from "node:fs";
+          import { execFileSync } from "node:child_process";
+
+          const requested = process.env.REQUESTED_TYPE || "auto";
+          const after = process.env.AFTER_SHA;
+          const outputPath = process.env.GITHUB_OUTPUT;
+          const summaryPath = process.env.GITHUB_STEP_SUMMARY;
+
+          if (!["auto", "patch", "minor", "major"].includes(requested)) {
+            throw new Error(`Unknown release type: ${requested}`);
+          }
+
+          // 比對範圍：push 用 event.before；新建分支或 workflow_dispatch 時該值為空／全 0，
+          // 改以 after^ 為基準；根提交無父節點時留下空值，下游會略過 URL 收集。
+          let base = process.env.BEFORE_SHA || "";
+          if (!base || /^0+$/.test(base)) {
+            try {
+              base = execFileSync("git", ["rev-parse", `${after}^`], { encoding: "utf8" }).trim();
+            } catch {
+              base = "";
+            }
+          }
+
+          let releaseType = requested;
+          let reason = `手動指定 ${requested}`;
+          const newFiles = [];
+
+          if (requested === "auto") {
+            if (!base || !after) {
+              releaseType = "patch";
+              reason = "無可比對範圍（根提交），保守使用 patch";
+            } else {
+              // -z 讓檔名以 NUL 分隔，避免空白或非 ASCII 檔名被切斷；
+              // --find-renames 顯式開啟更名偵測，不受 runner 的 diff.renames 設定影響。
+              const raw = execFileSync(
+                "git",
+                ["diff", "--name-status", "--find-renames", "-z", base, after, "--", "."],
+                { encoding: "utf8" },
+              );
+              const tokens = raw.split("\0").filter(Boolean);
+              const entries = [];
+              for (let i = 0; i < tokens.length; ) {
+                const status = tokens[i++]; // A / M / D / R100 / C75 ...
+                const from = tokens[i++];
+                let path = from;
+                if (/^[RC]/.test(status)) path = tokens[i++]; // rename / copy 取新路徑
+                entries.push({ status: status[0], path });
+              }
+
+              // 排除 release commit 自己維護的兩個版本檔：上一次部署的版號變更
+              // 不應被算成內容變更，相依性更新也不應被誤判為新增檔案。
+              const releaseFiles = new Set(["package.json", "package-lock.json"]);
+              const relevant = entries.filter((entry) => !releaseFiles.has(entry.path));
+              for (const entry of relevant) {
+                // 更名視同新增：R 代表新路徑／新 URL，與 URL 收集步驟的 AR 口徑一致。
+                // 若更名因相似度不足被拆成 D + A，仍會由 A 計入，結論不變。
+                if (entry.status === "A" || entry.status === "R") newFiles.push(entry.path);
+              }
+
+              releaseType = newFiles.length > 0 ? "minor" : "patch";
+              reason = newFiles.length > 0
+                ? `比對 ${base.slice(0, 7)}..${after.slice(0, 7)}：${relevant.length} 個檔案變動，其中 ${newFiles.length} 個為新增／更名 → 遞增中間版本號（minor），patch 歸零`
+                : `比對 ${base.slice(0, 7)}..${after.slice(0, 7)}：${relevant.length} 個既有檔案變動，無新增／更名檔案 → 遞增最小版本號（patch）`;
+            }
+          }
+
+          appendFileSync(outputPath, `release_type=${releaseType}\nbase_sha=${base}\n`);
+
+          const lines = [
+            "### 版本號判定",
+            "",
+            `- 結果：\`${releaseType}\`（請求：\`${requested}\`）`,
+            `- 依據：${reason}`,
+          ];
+          if (newFiles.length > 0) {
+            const shown = newFiles.slice(0, 8).map((file) => `\`${file}\``).join("、");
+            lines.push(`- 新增／更名檔案：${shown}${newFiles.length > 8 ? ` 等 ${newFiles.length} 個` : ""}`);
+          }
+          lines.push("", "> 規則：僅修改既有檔案 → patch；出現新增或更名檔案 → minor；major 僅能手動指定。");
+          if (summaryPath) appendFileSync(summaryPath, `${lines.join("\n")}\n\n`);
+          lines.forEach((line) => console.log(line));
+          NODE
+
       - name: Bump deployment version
         env:
-          RELEASE_TYPE: ${{ github.event.inputs.release_type || 'patch' }}
+          RELEASE_TYPE: ${{ steps.detect_release.outputs.release_type }}
           BRANCH_NAME: ${{ github.ref_name }}
         run: |
           node --input-type=module <<'NODE'
-          import { readFileSync, writeFileSync } from "node:fs";
+          import { appendFileSync, readFileSync, writeFileSync } from "node:fs";
 
           const releaseType = process.env.RELEASE_TYPE;
           const packageJson = JSON.parse(readFileSync("package.json", "utf8"));
@@ -58,6 +150,15 @@ jobs:
 
           if (!match || !["patch", "minor", "major"].includes(releaseType)) {
             throw new Error(`Cannot bump version ${packageJson.version} with release type ${releaseType}`);
+          }
+
+          // 版本號識別：三份版號理論上一致；若 lock 落後，以 package.json 為準並統一寫回。
+          const lockVersion = packageLock.version;
+          const lockRootVersion = packageLock.packages?.[""]?.version;
+          if (lockVersion !== packageJson.version || lockRootVersion !== packageJson.version) {
+            console.warn(
+              `Version mismatch: package.json=${packageJson.version}, lock=${lockVersion}, lock.packages[""]=${lockRootVersion}; resyncing.`,
+            );
           }
 
           let [major, minor, patch] = match.slice(1).map(Number);
@@ -73,13 +174,19 @@ jobs:
           }
 
           const version = `${major}.${minor}.${patch}`;
+          const previousVersion = packageJson.version;
           packageJson.version = version;
           packageLock.version = version;
+          packageLock.packages ??= {};
+          packageLock.packages[""] ??= {};
           packageLock.packages[""].version = version;
           writeFileSync("package.json", `${JSON.stringify(packageJson, null, 2)}\n`);
           writeFileSync("package-lock.json", `${JSON.stringify(packageLock, null, 2)}\n`);
 
-          console.log(`Bumped package version to ${version}`);
+          console.log(`Bumped package version ${previousVersion} -> ${version} (${releaseType})`);
+          if (process.env.GITHUB_STEP_SUMMARY) {
+            appendFileSync(process.env.GITHUB_STEP_SUMMARY, `- 版本號：\`${previousVersion}\` → \`${version}\`（${releaseType}）\n`);
+          }
           NODE
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -102,26 +209,17 @@ jobs:
       - name: Collect changed URLs
         id: collect-changed-urls
         env:
-          BEFORE_SHA: ${{ github.event.before }}
+          BASE_SHA: ${{ steps.detect_release.outputs.base_sha }}
           AFTER_SHA: ${{ github.sha }}
         run: |
           node --input-type=module <<'NODE'
           import { appendFileSync, readFileSync } from "node:fs";
           import { execFileSync } from "node:child_process";
 
-          const before = process.env.BEFORE_SHA;
+          // 基準由「Determine version bump」統一解析（新建分支／首次推送時為空並跳過），
+          // 兩步驟共用同一比對範圍，避免版號判定與 URL 收集口徑不一致。
+          const base = process.env.BASE_SHA;
           const after = process.env.AFTER_SHA;
-
-          // 新建分支或首次推送時 before 為空字串或全 0，改用 after^ 作基準；
-          // 若 after 本身是根提交（無父節點）則無可比對範圍，base 留空並跳過。
-          let base = before;
-          if (!base || /^0+$/.test(base)) {
-            try {
-              base = execFileSync("git", ["rev-parse", `${after}^`], { encoding: "utf8" }).trim();
-            } catch {
-              base = "";
-            }
-          }
 
           // 新頁面（A/R）給百度：百度有每日配額，只送新增頁以免浪費。
           // 變更頁面（A/M/R）給 IndexNow：Bing 等引擎希望收到內容更新通知。
