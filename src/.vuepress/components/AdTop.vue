@@ -14,91 +14,21 @@
   </div>
 </template>
 
-<script>
-const ADSENSE_CLIENT = "ca-pub-8975507583219124";
-
-// 跨頁共用：同一份資源只載入一次；失敗時清掉快取，讓下次掛載可以重試。
-const pending = new Map();
-
-function loadOnce(key, createElement) {
-  if (!pending.has(key)) {
-    pending.set(
-      key,
-      new Promise((resolve, reject) => {
-        const element = createElement();
-
-        element.addEventListener("load", () => resolve());
-        element.addEventListener("error", () => {
-          element.remove();
-          pending.delete(key);
-          reject(new Error(`Failed to load ${key}`));
-        });
-        document.head.append(element);
-      }),
-    );
-  }
-
-  return pending.get(key);
-}
-
-const loadAdsense = () =>
-  Promise.all([
-    loadOnce("/ads.css", () =>
-      Object.assign(document.createElement("link"), {
-        rel: "stylesheet",
-        href: "/ads.css",
-      }),
-    ),
-    loadOnce("adsbygoogle", () =>
-      Object.assign(document.createElement("script"), {
-        async: true,
-        crossOrigin: "anonymous",
-        src: `https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADSENSE_CLIENT}`,
-      }),
-    ),
-  ]);
-</script>
-
 <script setup>
-import { onBeforeUnmount, onMounted, ref } from "vue";
+import { onMounted, ref } from "vue";
 
+// adsbygoogle.js 與 ads.css 由 config.ts 的 head 靜態載入。
 const adElement = ref();
-let observer;
-
-async function requestAd() {
-  try {
-    await loadAdsense();
-
-    const element = adElement.value;
-    if (!element || element.dataset.adsbygoogleStatus) return;
-
-    window.adsbygoogle = window.adsbygoogle || [];
-    window.adsbygoogle.push({});
-  } catch (error) {
-    console.error(error);
-  }
-}
 
 onMounted(() => {
   const element = adElement.value;
   if (!element || element.dataset.adsbygoogleStatus) return;
 
-  if (!("IntersectionObserver" in window)) {
-    requestAd();
-    return;
-  }
-
-  observer = new IntersectionObserver(
-    (entries) => {
-      if (entries.some((entry) => entry.isIntersecting)) {
-        observer.disconnect();
-        requestAd();
-      }
-    },
-    { rootMargin: "400px 0px" },
-  );
-  observer.observe(element);
+  // 審核爬蟲以固定視窗載入頁面且不會捲動，而廣告位位於正文末尾。
+  // 若等 IntersectionObserver 觸發才送出請求，爬蟲只會看到一個從未請求
+  // 廣告的空 <ins>。故依官方程式碼片段在掛載時直接 push；腳本為 async，
+  // AdSense 載入後會接手處理既有陣列中的項目。
+  window.adsbygoogle = window.adsbygoogle || [];
+  window.adsbygoogle.push({});
 });
-
-onBeforeUnmount(() => observer?.disconnect());
 </script>

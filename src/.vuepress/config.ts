@@ -95,6 +95,19 @@ export default defineUserConfig({
     // 深色偏好訪客在指令碼載入前會看到黑底黑字。此處在主題腳本之後、樣式表之前執行，
     // 直接把主題鎖定為淺色，同時省掉一次全頁重繪。
     ["script", {}, 'document.documentElement.dataset.theme="light";'],
+    // AdSense 審核爬蟲不會捲動頁面，廣告程式碼必須出現在 HTML 原始碼中。
+    // 腳本採 async 且不在此處 push({})；實際請求由 AdTop.vue 於掛載時送出，
+    // 讓爬蟲在固定視窗下也能看到廣告單元已發出請求。
+    // 順序置於淺色鎖定指令碼之後，避免樣式表先套用造成深色偏好訪客的閃屏。
+    [
+      "script",
+      {
+        async: true,
+        crossorigin: "anonymous",
+        src: "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8975507583219124",
+      },
+    ],
+    ["link", { rel: "stylesheet", href: "/ads.css" }],
   ],
   theme,
   plugins: [
