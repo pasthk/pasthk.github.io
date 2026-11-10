@@ -141,7 +141,7 @@ export default hopeTheme(
     // 側邊欄分組在 SSR 階段不輸出子項（見 page-index.ts 的說明），
     // 頁尾的「全部文獻」是全站唯一能走到所有頁面的入口。
     footer:
-      `${SITE_TAGLINE}。<br><a href="/about.html">關於本站</a> ・ <a href="/support.html">支持本站</a> ・ <a href="/privacy.html">私隱政策</a>`,
+      `${SITE_TAGLINE}。<br><a href="/about.html">關於本站</a> ・ <a href="/privacy.html">私隱政策</a> ・ <a href="/support.html">支持本站</a>`,
     lastUpdated: false,
     contributors: false,
     pageInfo: ["Date", "ReadingTime"],

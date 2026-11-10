@@ -14,9 +14,6 @@ const items = computed(() => page.value.related?.items ?? []);
 <template>
   <nav v-if="items.length" class="related-docs" aria-labelledby="related-docs-title">
     <h2 id="related-docs-title">相關文獻</h2>
-    <p class="related-docs-note">
-      同一主題優先，並補入同章節年代相近者；以下為本站導覽連結，不屬原文內容。
-    </p>
     <ul>
       <li v-for="item in items" :key="item.path">
         <RouteLink :to="item.path">{{ item.title }}</RouteLink>

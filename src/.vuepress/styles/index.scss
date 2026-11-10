@@ -196,3 +196,15 @@ body {
 .vp-footer {
   line-height: 1.6;
 }
+
+// 「在 GitHub 上編輯此頁」預設位於頁尾 meta 列最左側。改推到最右側：
+// 讓日期／閱讀時間（git-info）靠左、編輯入口靠右，符合文獻站點常見的視覺動線。
+// 主題預設 .vp-meta-item 為 flex-grow:1，會把空 git-info 撐開而把編輯連結擠到左邊，
+// 這裡收掉編輯連結的 flex-grow 並以 margin-inline-start:auto 把它推到右端；
+// order:2 保證即使 git-info 有內容，編輯連結仍排在最後（最右）。
+.vp-page-meta .edit-link {
+  order: 2;
+  flex-grow: 0;
+  margin-inline-start: auto;
+  text-align: end;
+}
