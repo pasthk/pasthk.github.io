@@ -271,6 +271,14 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
 
     steps:
+      # deploy job 跑在獨立的 runner，不會沿用 build job 的工作目錄。
+      # 底下三個 URL 提交步驟都 import ./.github/url-submission.mjs，
+      # 少了這一步會讓三者全部 ERR_MODULE_NOT_FOUND；前兩步有
+      # continue-on-error 會被掩蓋成 success，只有彙總步驟亮紅燈，
+      # 但實際上 IndexNow／百度都沒送出任何 URL。
+      - name: Checkout repository
+        uses: actions/checkout@v5
+
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v5.0.1
