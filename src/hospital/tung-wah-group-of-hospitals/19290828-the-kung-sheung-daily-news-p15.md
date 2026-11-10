@@ -4,7 +4,7 @@ toc: false
 date: 2026-11-08
 dateCreated: "2026-11-08"
 datePublished: "1929-08-28"
-description: 
+description: 《工商日報》1929年8月28日第4張第3版報道，記述東華東院建築完竣、東華醫院總理沿門勸捐後定期召集會議商議開幕日期，並列出宣佈捐款進支、定期開幕、選舉開幕值理、聘用中西醫生與職員、應否購買火險五項議程。為東華東院創設過程的一手史料。
 excerpted: true
 proofread: false
 ---

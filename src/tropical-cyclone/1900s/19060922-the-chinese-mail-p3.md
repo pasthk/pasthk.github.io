@@ -4,7 +4,7 @@ toc: false
 date: 2026-11-09
 dateCreated: "2026-11-09"
 datePublished: "1906-09-22"
-description: 
+description: 《香港華字日報》風災系列第三篇續報，記述風息後港海浮屍與破船待清理、水師與工人沿岸打撈屍骸、西營盤報失船隻與九龍倉對岸物業損失估計，並載乘危搶奪者三十餘名各被判罰十至四十元。為1906年丙午風災善後情形的一手史料。
 excerpted: true
 proofread: false
 ---

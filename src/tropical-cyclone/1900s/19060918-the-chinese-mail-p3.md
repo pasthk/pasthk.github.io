@@ -1,9 +1,9 @@
 ---
-title: 本港風災
+title: 躲風船被罰
 date: 2026-11-09
 dateCreated: "2026-11-09"
 datePublished: "1906-09-18"
-description: 
+description: 《香港華字日報》1906年9月18日第3頁短訊，記述颶風過後銅鑼灣避風塘仍有三十五艘船艇停泊未離，船戶因而被控，經官提訊每艘判罰二元並飭繳保款二十元、兩個月內不得再犯。為1906年丙午風災後港內船隻管理與執法的一手史料。
 excerpted: true
 proofread: false
 ---

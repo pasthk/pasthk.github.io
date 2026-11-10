@@ -1,5 +1,5 @@
 ---
-title: 天文台今晨改懸七號風球
+title: 颶風遠離本港　七號風球今晨除下
 date: 2026-10-25
 dateCreated: "2026-10-25"
 datePublished: "1935-09-18"

@@ -1,5 +1,5 @@
 ---
-title: 師範學院同學會週年紀念
+title: 師資學院新校落成
 toc: false
 date: 2026-11-04
 dateCreated: "2026-11-04"

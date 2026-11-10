@@ -3,7 +3,7 @@ title: 本港風災續述
 date: 2026-11-09
 dateCreated: "2026-11-09"
 datePublished: "1906-09-20"
-description: 
+description: 《香港華字日報》1906年9月20日第3頁風災續報，記述渣甸糖房工人冒風雨救起約三百人、諾道西樓房失火撲滅、港督親至海旁巡視，以及災後港海四千餘艘船艇存者不及一半；並載西報對天文台遲報風警的批評，附沉傷船表列國旗、船名與噸位。
 excerpted: true
 proofread: false
 ---

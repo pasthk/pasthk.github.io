@@ -2,8 +2,8 @@
 title: 本港風災
 date: 2026-11-09
 dateCreated: "2026-11-09"
-datePublished: "1906-09-20"
-description: 
+datePublished: "1906-09-19"
+description: 《香港華字日報》1906年9月19日第3頁長篇報道，記述颶風突襲本港時天文台懸球燃炮過遲，港內小輪、貨船與漁船大量翻沉，溺斃者數以百計；詳列受損船名、岸上屋宇與碼頭毀壞情形，並記東華醫院僱船施救、施茶飯與打撈浮屍。為1906年丙午風災最具規模的一手記述。
 excerpted: true
 proofread: false
 ---

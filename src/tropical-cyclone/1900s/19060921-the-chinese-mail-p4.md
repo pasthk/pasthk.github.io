@@ -3,7 +3,7 @@ title: 風災餘聞
 date: 2026-11-09
 dateCreated: "2026-11-09"
 datePublished: "1906-09-21"
-description: 
+description: 《香港華字日報》1906年9月21日第4頁短訊，記述風災後初三早狂風再作，雖不及初一猛烈，卻阻礙受災船隻施救、令港內華人船艘倉皇走避，並傳出初二晚至初三早再有溺斃者。為1906年丙午風災善後期間的一手紀錄。
 excerpted: true
 proofread: false
 ---
