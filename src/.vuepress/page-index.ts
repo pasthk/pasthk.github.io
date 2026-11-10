@@ -139,7 +139,10 @@ export const pageIndexPlugin = (): Plugin => (app: App) => ({
   name: "page-index",
 
   async onInitialized(app: App) {
-    if (app.pagesMap[PAGE_PATH]) return;
+    // core 的 pagesMap 以 page.filePath（來源檔絕對路徑）為鍵，用 page.path
+    // 查永遠查不到。若有人手寫 src/browse.md，舊寫法會在同一路徑再建一頁，
+    // 造成兩個 h1 與兩個 canonical。改查 app.pages 才擋得住。
+    if (app.pages.some((item) => item.path === PAGE_PATH)) return;
 
     const content = buildContent(app);
     const stats = siteStats(app.pages as StatsInput[]);
@@ -152,9 +155,18 @@ export const pageIndexPlugin = (): Plugin => (app: App) => ({
     /**
      * 主題的 seo 插件在 onInitialized 走訪 app.pages 寫入 canonical／og:*，
      * 而主題插件一律先於使用者插件註冊，本頁建立時已錯過那一輪，須自行補上。
-     * 與各章節落地頁共用 collection-head.ts，social meta 與 JSON-LD 不會各自漂移。
+     * 交給 collection-head.ts 統一產生 social meta、JSON-LD 與全站 ItemList。
      */
-    const head = collectionHead({ url, title: PAGE_TITLE, description, image });
+    const items = app.pages
+      .filter(isListable)
+      .map((item) => ({ name: item.title, url: `${HOSTNAME}${item.path}` }));
+    const head = collectionHead({
+      url,
+      title: PAGE_TITLE,
+      description,
+      image,
+      items,
+    });
 
     const page = await createPage(app, {
       path: PAGE_PATH,
@@ -175,6 +187,6 @@ export const pageIndexPlugin = (): Plugin => (app: App) => ({
     });
 
     app.pages.push(page);
-    app.pagesMap[page.path] = page;
+    // 不寫 pagesMap：core 以 filePath 為鍵，而動態建立的頁面沒有來源檔。
   },
 });

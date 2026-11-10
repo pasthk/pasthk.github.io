@@ -3,11 +3,13 @@ import { viteBundler } from "@vuepress/bundler-vite";
 import { defineUserConfig } from "vuepress";
 import { breadcrumbPlugin } from "./breadcrumb.js";
 import { chaptersGuardPlugin } from "./chapters.js";
+import { contentGuardPlugin } from "./content-guard.js";
 import { ogImagePlugin } from "./og/plugin.js";
 import { llms } from "./llms.js";
 import { llmsCanonicalPlugin } from "./llms-canonical.js";
 import { pageIndexPlugin } from "./page-index.js";
 import { referenceBoxPlugin } from "./reference-box.js";
+import { relatedDocumentsPlugin } from "./related-documents.js";
 import { robotsPlugin } from "./robots.js";
 import { sitemapCleanPlugin } from "./sitemap.js";
 import { SITE_NAME, SITE_TAGLINE } from "./site.js";
@@ -111,12 +113,16 @@ export default defineUserConfig({
   ],
   theme,
   plugins: [
-    // 只讀校驗：章節定義與 src 頂層目錄不一致時在建置日誌點名，
-    // 免得漏登記的目錄靜默降級成英文目錄名。
+    // 兩項只讀校驗：章節定義與 src 頂層目錄不一致、以及可收錄頁面的
+    // 薄內容／自動摘要。都在 onInitialized 彙總點名，不改動任何頁面。
     chaptersGuardPlugin(),
+    contentGuardPlugin(),
     // 必須排在 breadcrumbPlugin 之前：breadcrumbTrails() 會快取整份頁面清單，
     // 索引頁晚於它建立就不會被算進導覽鏈。
     pageIndexPlugin(),
+    // 必須排在 llms 之前：relatedMarkdown() 在 onGenerated 讀取這份對照表，
+    // 讓 .md 純文字鏡像也有與 HTML 相同的相關文獻連結。
+    relatedDocumentsPlugin(),
     llms,
     // 必須排在 llms 之後：等它寫完 .md 與 llms-full.txt 才改寫 frontmatter 的 url
     llmsCanonicalPlugin(),

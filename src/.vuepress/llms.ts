@@ -13,6 +13,7 @@ import {
   citationOf,
   publishedDate,
 } from "./page-meta.js";
+import { relatedMarkdown } from "./related-documents.js";
 import { describeSite, siteStats, type StatsInput } from "./site-stats.js";
 import { HOSTNAME, SITE_NAME } from "./site.js";
 
@@ -35,6 +36,7 @@ function buildOptional(pages: LLMPage[]): string {
   return [
     "## Optional",
     "",
+    `- [文獻綜覽](${HOSTNAME}/browse.html): 依章節與主題分組的全站索引，附每篇史料的原始出版日；本頁由建置期產生，沒有 .md 純文字鏡像`,
     `- [全站全文（單一檔案）](${HOSTNAME}/llms-full.txt): 全站頁面全文合併，檔案較大，適合需要整批檢索時取用`,
     `- [完整頁面清單](${HOSTNAME}/sitemap.xml): 搜尋引擎用的完整 URL 清單`,
     "",
@@ -177,7 +179,11 @@ function provenance(markdown: string, page: Page): string {
         "> 引用史料請沿本頁所列連結取得原始文獻轉錄頁，並使用該頁的引用字串。",
       ];
 
-  return `${lines.join("\n")}\n\n${clean}`;
+  // HTML 頁尾的「相關文獻」也給模型一份：llms.txt 只有扁平目錄，
+  // 模型讀單頁 .md 時無法知道同一事件還有哪些報道可交叉比對。
+  const links = relatedMarkdown(page.path);
+
+  return `${lines.join("\n")}\n\n${clean}${links ? `\n${links}` : ""}`;
 }
 
 /** 單一目錄項。不使用外掛的 generateTOCLink，因為它不處理描述中的換行。 */

@@ -1,5 +1,5 @@
 ---
-title: 隱私權政策
+title: 私隱政策
 date: 2026-11-09
 description: 香港文獻類編的隱私權政策，說明 Google AdSense 與第三方廣告 Cookie 的運作、個人化廣告的停用方式，以及本站的資料處理範圍。
 pageInfo: false

@@ -70,3 +70,55 @@ export const citationOf = (markdown: string): string | undefined => {
 
   return text || undefined;
 };
+
+export interface SourceInfo {
+  /** 正規化後的完整引用字串，維持可直接複製的形式 */
+  citation: string;
+  /** 報刊／期刊名；書目式出處無法可靠切分時從缺 */
+  publication?: string;
+  /** 版次、張次、頁碼等其餘段落 */
+  pagination?: string;
+}
+
+/**
+ * 由引用字串拆出「報刊名／日期／版次」，供 JSON-LD 建立 isBasedOn 實體。
+ *
+ * 史料頁的引用有兩種格式：報刊式「華僑日報，1962年8月29日，第3張第1頁。」，
+ * 以及書目式「文獻出處：……（香港：……，1909年2月）。後者首段是書名而非
+ * 報刊，且可能內含逗號；用括號與長度判別後直接略過，不猜錯來源類型。
+ */
+export const sourceOf = (markdown: string): SourceInfo | undefined => {
+  const citation = citationOf(markdown);
+
+  if (!citation) return undefined;
+
+  const text = citation
+    .replace(/^文獻出處[：:]\s*/u, "")
+    .split(/按[：:]/u)[0]
+    .replace(/[。.\s]+$/u, "")
+    .trim();
+
+  const parts = text
+    .split(/[，,]/u)
+    .map((part) => part.trim())
+    .filter(Boolean);
+
+  const publication = parts[0]
+    ?.replace(/^[「『"《]|["」』》]$/gu, "")
+    .trim();
+
+  if (
+    !publication ||
+    !parts[1] ||
+    publication.length > 30 ||
+    /[（(：:]/u.test(publication)
+  ) {
+    return { citation };
+  }
+
+  return {
+    citation,
+    publication,
+    ...(parts.length > 2 ? { pagination: parts.slice(2).join("，") } : {}),
+  };
+};

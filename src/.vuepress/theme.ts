@@ -4,7 +4,8 @@ import { hopeTheme } from "vuepress-theme-hope";
 import navbar from "./navbar.js";
 import sidebar from "./sidebar.js";
 import { breadcrumbTrails } from "./breadcrumb.js";
-import { chapters } from "./chapters.js";
+import { chapterName, chapters } from "./chapters.js";
+import { collectionItems } from "./item-list.js";
 import { socialTags } from "./og/meta.js";
 import { ogImageUrl } from "./og/paths.js";
 import {
@@ -13,6 +14,7 @@ import {
   createdDate,
   isSourceDocument,
   publishedDate,
+  sourceOf,
 } from "./page-meta.js";
 import { tokenizeForIndex } from "./search-tokenize.js";
 import { sitemapModifiedTime } from "./sitemap.js";
@@ -133,11 +135,13 @@ export default hopeTheme(
     focus: false,
     darkmode: "disable",
     favicon: "/favicon.png",
+    repo: "pasthk/pasthk.github.io",
+    repoLabel: "GitHub",
     displayFooter: true,
     // 側邊欄分組在 SSR 階段不輸出子項（見 page-index.ts 的說明），
     // 頁尾的「全部文獻」是全站唯一能走到所有頁面的入口。
     footer:
-      `${SITE_TAGLINE}。<br><a href="/about.html">關於本站</a> ・ <a href="/support.html">支持本站</a> ・ <a href="/privacy.html">隱私權政策</a>`,
+      `${SITE_TAGLINE}。<br><a href="/about.html">關於本站</a> ・ <a href="/support.html">支持本站</a> ・ <a href="/privacy.html">私隱政策</a>`,
     lastUpdated: false,
     contributors: false,
     pageInfo: ["Date", "ReadingTime"],
@@ -262,10 +266,17 @@ export default hopeTheme(
           const published = publishedDate(page);
           const created = createdDate(page);
           const citation = article ? citationOf(page.content) : undefined;
+          // 索引頁若彙編了多篇站內史料，改用 CollectionPage 並附 ItemList；
+          // 說明頁（關於本站、私隱政策等）沒有彙編內容，維持 WebPage。
+          const collection = article ? undefined : collectionItems(page, app);
 
           const main = {
             ...jsonLd,
-            "@type": article ? "Article" : "WebPage",
+            "@type": article
+              ? "Article"
+              : collection
+                ? "CollectionPage"
+                : "WebPage",
             "@id": `${url}#${article ? "article" : "webpage"}`,
             url,
             inLanguage: "zh-Hant",
@@ -283,10 +294,72 @@ export default hopeTheme(
 
           if (published) main.datePublished = published;
           if (created) main.dateCreated = created;
+
+          // seo 外掛只替 WebPage 寫 description，Article 一律缺（見其 P()）。
+          // 但史料頁的 og:description／meta description 都有值，結構化資料卻沒有，
+          // 等於給機器讀的版本少了摘要。補同一個 frontmatter 值，不另外生成文字。
+          const description = page.frontmatter.description;
+
+          if (typeof description === "string" && description.trim()) {
+            main.description = description.trim();
+          }
+
           // 史料頁把可直接複製的引用字串也放進結構化資料，供檢索器驗證出處。
           if (citation) main.citation = citation;
 
+          /**
+           * 生成式搜尋引用史料時，最需要機器可讀的是「這篇是什麼、講哪裡、
+           * 講哪個年代、根據哪一份原件」。以下全部取自既有資料（章節表、
+           * 麵包屑、datePublished、ReferenceBox），不另行編寫內容：
+           *   - about／keywords：章節名與麵包屑的主題名
+           *   - temporalCoverage／spatialCoverage：原始出版日與地域
+           *   - isBasedOn：原始報刊文章所屬的 Periodical
+           * 專題研究章節收錄安陽殷墟等非香港題材，故不標 spatialCoverage。
+           */
+          const [dir] = page.path.split("/").filter(Boolean);
+          const chapter = dir ? chapterName(dir) : undefined;
+          const topic = breadcrumbTrails(app)
+            .get(page.path)
+            ?.filter((entry) => entry.link && entry.link !== "/")
+            .at(-1)?.text;
+          const about = [...new Set([chapter, topic].filter(Boolean))] as string[];
+
+          if (about.length) {
+            main.about = about.map((name) => ({ "@type": "Thing", name }));
+            main.keywords = about.join("、");
+          }
+
+          if (chapter && dir !== "project") {
+            main.spatialCoverage = { "@type": "Place", name: "香港" };
+          }
+
+          if (article) {
+            if (chapter) main.articleSection = chapter;
+            if (published) main.temporalCoverage = published;
+
+            const source = sourceOf(page.content);
+
+            if (source?.publication) {
+              main.isBasedOn = {
+                "@type": "CreativeWork",
+                name: page.title,
+                ...(published ? { datePublished: published } : {}),
+                ...(source.pagination ? { pagination: source.pagination } : {}),
+                isPartOf: {
+                  "@type": "Periodical",
+                  name: source.publication,
+                },
+              };
+            }
+          }
+
           const breadcrumb = buildBreadcrumb(page, url, app);
+
+          // 麵包屑原本只是 @graph 裡一個互不隸屬的節點；WebPage／Article
+          // 的 schema.org breadcrumb 屬性把它掛回主頁面，檢索器不必靠 @id
+          // 猜測兩者的關係，也避免同一頁有兩份看似獨立的導覽鏈。
+          if (breadcrumb) main.breadcrumb = { "@id": breadcrumb["@id"] };
+          if (collection) main.mainEntity = collection.itemList;
 
           return {
             "@context": "https://schema.org",
