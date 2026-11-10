@@ -208,3 +208,48 @@ body {
   margin-inline-start: auto;
   text-align: end;
 }
+
+// 頂部廣告位（原 public/ads.css）。
+// 原先以 /ads.css 獨立載入：那是 head 中第一個被發現的 render-blocking 樣式表，
+// 且早於主樣式表的 preload，等於多一次關鍵路徑請求。併入此檔後隨主 CSS 一起
+// 壓縮與長快取，全站少一張樣式表請求；選擇器皆為 .ad-*，與主題無碰撞，
+// 載入順序由「ads.css 在前」改成「主 CSS 在內」不影響結果。
+.ad-top-wrap {
+  position: relative;
+  width: 100%;
+  box-sizing: border-box;
+  padding-top: 1.1rem;
+  margin: 0 auto 1.25rem;
+}
+
+.ad-top {
+  position: relative;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+// flex 子項的 width 預設為 auto，空內容的 <ins> 會塌縮成 0 寬；
+// AdSense 依容器寬度計算響應式尺寸，0 寬即無法填充。
+.ad-top > ins.adsbygoogle {
+  width: 100%;
+}
+
+.ad-top-wrap::before {
+  content: "廣告";
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 10;
+  color: #000;
+  font-size: 12px;
+  line-height: 1.3;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  font-family: serif;
+  pointer-events: none;
+}

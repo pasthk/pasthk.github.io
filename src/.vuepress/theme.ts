@@ -374,9 +374,10 @@ export default hopeTheme(
       icon: false,
       catalog: false,
       photoSwipe: false,
-      components: {
-        components: ["Badge", "VPCard"],
-      },
+      // 全站 309 篇 Markdown 從未使用 <Badge>／<VPCard>；開啟這個外掛只會
+      // 讓它的元件樣式與用戶端程式進入共同 bundle。自訂元件（ReferenceBox、
+      // RelatedDocuments）分別由 client.js 與 Layout.vue 自行註冊，不依賴它。
+      components: false,
     },
   },
   { custom: true },

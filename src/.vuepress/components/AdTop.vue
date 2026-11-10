@@ -17,7 +17,7 @@
 <script setup>
 import { onMounted, ref } from "vue";
 
-// adsbygoogle.js 與 ads.css 由 config.ts 的 head 靜態載入。
+// adsbygoogle.js 由 config.ts 的 head 靜態載入；.ad-* 樣式已併入 styles/index.scss。
 const adElement = ref();
 
 onMounted(() => {

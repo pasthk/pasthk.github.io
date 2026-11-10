@@ -4,6 +4,10 @@ import { defineUserConfig } from "vuepress";
 import { breadcrumbPlugin } from "./breadcrumb.js";
 import { chaptersGuardPlugin } from "./chapters.js";
 import { contentGuardPlugin } from "./content-guard.js";
+import {
+  dropUnusedStyles,
+  verifyDroppedStyles,
+} from "./drop-unused-styles.js";
 import { ogImagePlugin } from "./og/plugin.js";
 import { outputCleanupPlugin } from "./output-cleanup.js";
 import { llms } from "./llms.js";
@@ -65,6 +69,10 @@ export default defineUserConfig({
       // 這段資料卻跟著每次載入的 CSS 一起下載。此處在產出階段移除未被引用的字面，
       // 詳見 strip-unused-fonts.ts（有守衛：一旦有規則引用該字族就原樣保留）。
       config.plugins.push(stripUnusedFonts());
+
+      // 主題會把 home／blog 版型等從未使用的樣式一併打進共同 CSS，
+      // 這裡在建置期從源頭移除；守衛與驗證見 drop-unused-styles.ts。
+      config.plugins.push(dropUnusedStyles());
     },
   }),
   lang: "zh-Hant",
@@ -95,6 +103,8 @@ export default defineUserConfig({
     // 腳本採 async 且不在此處 push({})；實際請求由 AdTop.vue 於掛載時送出，
     // 讓爬蟲在固定視窗下也能看到廣告單元已發出請求。
     // 順序置於淺色鎖定指令碼之後，避免樣式表先套用造成深色偏好訪客的閃屏。
+    // 廣告位的 .ad-* 樣式已併入 styles/index.scss（隨主樣式表一起快取），
+    // 此處不再掛第二張 render-blocking 樣式表，詳見該檔末尾說明。
     [
       "script",
       {
@@ -103,7 +113,6 @@ export default defineUserConfig({
         src: "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8975507583219124",
       },
     ],
-    ["link", { rel: "stylesheet", href: "/ads.css" }],
   ],
   theme,
   plugins: [
@@ -125,5 +134,7 @@ export default defineUserConfig({
     outputCleanupPlugin(),
     breadcrumbPlugin(),
     referenceBoxPlugin(),
+    // 最後檢查：確認被剝除的樣式沒有任何輸出頁面仍在使用。
+    verifyDroppedStyles(),
   ],
 });
