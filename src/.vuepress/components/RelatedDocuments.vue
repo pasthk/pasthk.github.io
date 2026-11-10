@@ -38,13 +38,6 @@ const items = computed(() => page.value.related?.items ?? []);
   font-weight: 600;
 }
 
-.related-docs-note {
-  margin: 0 0 0.75rem;
-  font-size: 0.875rem;
-  line-height: 1.6;
-  color: var(--vp-c-text-mute);
-}
-
 .related-docs ul {
   margin: 0;
   padding-left: 1.25rem;

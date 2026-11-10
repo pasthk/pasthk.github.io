@@ -1,11 +1,17 @@
 import { createPage } from "vuepress/core";
 import type { App, Page, Plugin } from "vuepress/core";
 
-import { chapters } from "./chapters.js";
+import { chapterMeta, chapters, pathSegments } from "./chapters.js";
 import { collectionHead } from "./collection-head.js";
+import { pushTo } from "./map-utils.js";
 import { ogImageUrl } from "./og/paths.js";
-import { describeSite, siteStats, type StatsInput } from "./site-stats.js";
-import { HOSTNAME, SITE_NAME } from "./site.js";
+import {
+  describeSite,
+  siteStats,
+  type SiteStats,
+  type StatsInput,
+} from "./site-stats.js";
+import { absoluteUrl, HOSTNAME, SITE_NAME } from "./site.js";
 
 /**
  * 「文獻綜覽」索引頁（/browse.html）。
@@ -54,8 +60,7 @@ const line = (page: Page): string => {
   return `- [${page.title}](${page.path})${suffix}`;
 };
 
-function buildContent(app: App): string {
-  const stats = siteStats(app.pages as StatsInput[]);
+function buildContent(app: App, stats: SiteStats): string {
   const titles = new Map<string, string>(
     app.pages.map((page): [string, string] => [page.path, page.title]),
   );
@@ -66,7 +71,7 @@ function buildContent(app: App): string {
   for (const page of app.pages) {
     if (!isListable(page)) continue;
 
-    const [dir, sub, ...rest] = page.path.split("/").filter(Boolean);
+    const [dir, sub, ...rest] = pathSegments(page.path);
 
     // 根目錄頁面（首頁、關於本站、閱讀說明、支持本站）沒有章節歸屬
     if (!sub) {
@@ -78,7 +83,7 @@ function buildContent(app: App): string {
     const label = rest.length ? groupLabel(titles, dir, sub) : "";
     const groups = index.get(dir) ?? new Map<string, Page[]>();
 
-    groups.set(label, [...(groups.get(label) ?? []), page]);
+    pushTo(groups, label, page);
     index.set(dir, groups);
   }
 
@@ -96,7 +101,7 @@ function buildContent(app: App): string {
   }
 
   const emit = (dir: string, groups: Map<string, Page[]>): void => {
-    const chapter = chapters.find((item) => item.dir === dir);
+    const chapter = chapterMeta(dir);
     const body = [`## ${chapter?.name ?? dir}`, ""];
 
     if (chapter) {
@@ -135,7 +140,7 @@ function buildContent(app: App): string {
   return blocks.join("\n\n");
 }
 
-export const pageIndexPlugin = (): Plugin => (app: App) => ({
+export const pageIndexPlugin = (): Plugin => ({
   name: "page-index",
 
   async onInitialized(app: App) {
@@ -144,9 +149,10 @@ export const pageIndexPlugin = (): Plugin => (app: App) => ({
     // 造成兩個 h1 與兩個 canonical。改查 app.pages 才擋得住。
     if (app.pages.some((item) => item.path === PAGE_PATH)) return;
 
-    const content = buildContent(app);
+    // 全站統計頁內文案與 description／ItemList 共用，只算一次。
     const stats = siteStats(app.pages as StatsInput[]);
-    const url = `${HOSTNAME}${PAGE_PATH}`;
+    const content = buildContent(app, stats);
+    const url = absoluteUrl(PAGE_PATH);
     const image = ogImageUrl(HOSTNAME, PAGE_PATH);
     const description =
       `${SITE_NAME}全部 ${stats.total} 個可供檢索頁面的完整索引，按 ${chapters.length} 個章節與分組排列；` +
@@ -159,7 +165,7 @@ export const pageIndexPlugin = (): Plugin => (app: App) => ({
      */
     const items = app.pages
       .filter(isListable)
-      .map((item) => ({ name: item.title, url: `${HOSTNAME}${item.path}` }));
+      .map((item) => ({ name: item.title, url: absoluteUrl(item.path) }));
     const head = collectionHead({
       url,
       title: PAGE_TITLE,

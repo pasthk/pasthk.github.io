@@ -1,4 +1,4 @@
-import { chapterName, chapters } from "./chapters.js";
+import { chapterName, chapters, pathSegments } from "./chapters.js";
 
 /**
  * llms-full.txt 分冊規則的單一來源。
@@ -28,7 +28,7 @@ export const volumeKey = (value: string): string => {
     }
   }
 
-  const [first] = path.replace(/^\//u, "").split("/");
+  const [first] = pathSegments(path);
 
   return first && !first.endsWith(".html") ? first : OVERVIEW_KEY;
 };

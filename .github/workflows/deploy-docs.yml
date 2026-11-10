@@ -285,12 +285,7 @@ jobs:
           SUBMISSION_STATUS_FILE: ${{ runner.temp }}/url-submission-status.jsonl
         run: |
           node --input-type=module <<'NODE'
-          import { appendFileSync } from "node:fs";
-
-          const statusFile = process.env.SUBMISSION_STATUS_FILE;
-          const report = (payload) => {
-            if (statusFile) appendFileSync(statusFile, `${JSON.stringify(payload)}\n`);
-          };
+          import { reportSubmission } from "./.github/url-submission.mjs";
 
           let status = "ok";
           let detail = "";
@@ -338,7 +333,7 @@ jobs:
             console.error(`IndexNow submission failed: ${detail}`);
             process.exitCode = 1;
           } finally {
-            report({ engine: "IndexNow", status, count, detail });
+            reportSubmission("IndexNow", { status, count, detail });
           }
           NODE
 
@@ -350,12 +345,7 @@ jobs:
           SUBMISSION_STATUS_FILE: ${{ runner.temp }}/url-submission-status.jsonl
         run: |
           node --input-type=module <<'NODE'
-          import { appendFileSync } from "node:fs";
-
-          const statusFile = process.env.SUBMISSION_STATUS_FILE;
-          const report = (payload) => {
-            if (statusFile) appendFileSync(statusFile, `${JSON.stringify(payload)}\n`);
-          };
+          import { reportSubmission } from "./.github/url-submission.mjs";
 
           // 百度單次請求超過當日剩餘配額會整批拒絕，因此分批送出，
           // 並依回應的 remain 動態收窄下一批，避免一次超額導致全數落空。
@@ -451,7 +441,7 @@ jobs:
             console.error(`Baidu URL submission failed: ${detail}`);
             process.exitCode = 1;
           } finally {
-            report({ engine: "百度", status, count, detail });
+            reportSubmission("百度", { status, count, detail });
           }
           NODE
 
@@ -462,11 +452,11 @@ jobs:
         run: |
           node --input-type=module <<'NODE'
           import { appendFileSync, existsSync, readFileSync } from "node:fs";
+          import { SUBMISSION_STATUS_FILE as statusFile } from "./.github/url-submission.mjs";
 
           const summaryPath = process.env.GITHUB_STEP_SUMMARY;
           if (!summaryPath) process.exit(0);
 
-          const statusFile = process.env.SUBMISSION_STATUS_FILE;
           const rows = existsSync(statusFile)
             ? readFileSync(statusFile, "utf8")
                 .split("\n")

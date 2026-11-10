@@ -1,6 +1,6 @@
 import type { Page } from "vuepress/core";
 
-import { HOSTNAME } from "./site.js";
+import { absoluteUrl } from "./site.js";
 
 /**
  * 頁面語義的單一來源。
@@ -16,7 +16,24 @@ import { HOSTNAME } from "./site.js";
  * 都取用這裡的判斷，避免標準再次分歧。
  */
 
-type Frontmatter = Record<string, unknown>;
+export type Frontmatter = Record<string, unknown>;
+
+/**
+ * 各外掛寫進 `page.data` 的自訂欄位。
+ * 先前每個讀取點各自寫 `as unknown as {...}`，欄位口徑容易漂移；
+ * 集中在此，並用 pageDataExtras() 統一取用。
+ */
+export interface PageDataExtras {
+  /** seo 外掛：description 是否由正文自動截取 */
+  autoDesc?: boolean;
+  /** git 外掛：最後修改時間（epoch 毫秒） */
+  git?: { updatedTime?: number };
+  /** related-documents 外掛：相關文獻導覽 */
+  related?: unknown;
+}
+
+export const pageDataExtras = (data: unknown): PageDataExtras =>
+  data as PageDataExtras;
 
 /**
  * 接受完整日期與 ISO 8601 的降精度寫法。本站有 4 頁只考證到月／年
@@ -57,19 +74,37 @@ export const createdDate = (page: Page): string | undefined =>
   asDate(frontmatterOf(page).dateCreated) ?? asDate(frontmatterOf(page).date);
 
 /** 頁面的正規網址，一律指向可供人閱讀與引用的 .html */
-export const canonicalUrl = (page: Page): string =>
-  new URL(page.path, HOSTNAME).href;
+export const canonicalUrl = (page: Page): string => absoluteUrl(page.path);
 
-/** 由 Markdown 中的 <ReferenceBox> 取出標準引用字串 */
-export const citationOf = (markdown: string): string | undefined => {
-  const match = /<ReferenceBox>([\s\S]*?)<\/ReferenceBox>/u.exec(markdown);
-  const text = match?.[1]
+/**
+ * <ReferenceBox> 配對的唯一正則來源。
+ * 史料引用會同時進 JSON-LD、OG 卡與 .md 純文字鏡像，三處共用避免規則漂移。
+ */
+const REFERENCE_BOX = /<ReferenceBox>([\s\S]*?)<\/ReferenceBox>/u;
+
+/** 逐塊改寫 <ReferenceBox>；llms.ts 用它把引用框轉成純文字引用行 */
+export const replaceReferenceBoxes = (
+  markdown: string,
+  format: (inner: string) => string,
+): string =>
+  markdown.replace(
+    new RegExp(REFERENCE_BOX.source, "gu"),
+    (_matched, inner: string) => format(inner),
+  );
+
+/** 取出第一塊 <ReferenceBox> 的純文字，壓平標記與空白 */
+export const referenceBoxText = (markdown: string): string | undefined => {
+  const text = REFERENCE_BOX.exec(markdown)?.[1]
     .replace(/<[^>]+>/g, " ")
     .replace(/\s+/g, " ")
     .trim();
 
   return text || undefined;
 };
+
+/** 由 Markdown 中的 <ReferenceBox> 取出標準引用字串 */
+export const citationOf = (markdown: string): string | undefined =>
+  referenceBoxText(markdown);
 
 export interface SourceInfo {
   /** 正規化後的完整引用字串，維持可直接複製的形式 */

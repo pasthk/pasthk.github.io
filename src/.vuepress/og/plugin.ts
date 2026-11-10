@@ -5,7 +5,8 @@ import { Resvg } from "@resvg/resvg-js";
 import type { App, Page, Plugin } from "vuepress/core";
 import { success, warn } from "vuepress/utils";
 
-import { chapterName } from "../chapters.js";
+import { chapterOfPath, pathSegments } from "../chapters.js";
+import { referenceBoxText } from "../page-meta.js";
 import { SITE_NAME, SITE_NAME_EN } from "../site.js";
 import {
   buildCardSvg,
@@ -25,21 +26,13 @@ const FONT_FILES = [
   join(FONT_DIR, "noto-serif-tc-700.ttf"),
 ];
 
-/** 卡片右上角的章節標籤；目錄名取自頁面路徑第一段 */
-function sectionOf(pagePath: string): string | undefined {
-  const [first] = pagePath.split("/").filter(Boolean);
-
-  return first ? chapterName(first) : undefined;
-}
-
 /** 引用框內容為「報刊，日期，版次。」，改寫為卡片上的「報刊 · 日期 · 版次」 */
 function metaFromReferenceBox(raw: string): string | undefined {
-  const matched = /<ReferenceBox>([\s\S]*?)<\/ReferenceBox>/.exec(raw);
+  const text = referenceBoxText(raw);
 
-  if (!matched) return undefined;
+  if (!text) return undefined;
 
-  const parts = matched[1]
-    .trim()
+  const parts = text
     .replace(/。\s*$/, "")
     .split(/[，,]/)
     .map((part) => part.trim())
@@ -87,7 +80,7 @@ function buildContent(
       : undefined) ??
     firstClause(page.frontmatter.description ?? "");
 
-  const section = sectionOf(page.path);
+  const section = chapterOfPath(page.path);
   const title = clean(page.title) || SITE_NAME;
 
   return {
@@ -152,7 +145,7 @@ async function loadCoverage(): Promise<Set<number> | undefined> {
   }
 }
 
-export const ogImagePlugin = (): Plugin => (app: App) => ({
+export const ogImagePlugin = (): Plugin => ({
   name: "og-image-generator",
 
   async onGenerated(app: App): Promise<void> {
@@ -167,7 +160,7 @@ export const ogImagePlugin = (): Plugin => (app: App) => ({
     const childCounts = new Map<string, number>();
 
     for (const page of app.pages) {
-      const segments = page.path.split("/").filter(Boolean);
+      const segments = pathSegments(page.path);
 
       if (segments.length < 2) continue;
 
@@ -182,18 +175,26 @@ export const ogImagePlugin = (): Plugin => (app: App) => ({
     // 也就不會被分享，卡片永遠用不到。仍計入 childCounts，父頁的「收錄 N 篇」才不會少算。
     const pages = app.pages.filter((page) => page.frontmatter.sitemap !== false);
 
+    // 先平行讀入所有原始 Markdown；光柵化本身是同步 CPU 工作，維持逐頁處理，
+    // 但不再讓每頁各自等一次磁碟 I/O。
+    const raws = await Promise.all(
+      pages.map(async (page): Promise<string> => {
+        try {
+          return page.filePath ? await readFile(page.filePath, "utf8") : "";
+        } catch {
+          return "";
+        }
+      }),
+    );
+
     let total = 0;
 
-    for (const page of pages) {
-      let raw = "";
-
-      try {
-        raw = page.filePath ? await readFile(page.filePath, "utf8") : "";
-      } catch {
-        raw = "";
-      }
-
-      const content = buildContent(page, raw, childCounts.get(page.path) ?? 0);
+    for (const [index, page] of pages.entries()) {
+      const content = buildContent(
+        page,
+        raws[index],
+        childCounts.get(page.path) ?? 0,
+      );
 
       if (coverage) {
         const text = [content.title, content.meta, content.section, content.header]

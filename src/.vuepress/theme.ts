@@ -4,7 +4,7 @@ import { hopeTheme } from "vuepress-theme-hope";
 import navbar from "./navbar.js";
 import sidebar from "./sidebar.js";
 import { breadcrumbTrails } from "./breadcrumb.js";
-import { chapterName, chapters } from "./chapters.js";
+import { chapterOfPath, pathSegments } from "./chapters.js";
 import { collectionItems } from "./item-list.js";
 import { socialTags } from "./og/meta.js";
 import { ogImageUrl } from "./og/paths.js";
@@ -18,25 +18,13 @@ import {
 } from "./page-meta.js";
 import { tokenizeForIndex } from "./search-tokenize.js";
 import { sitemapModifiedTime } from "./sitemap.js";
+// 站台網址集中定義於 site.ts；此處改名為 hostname，直接對應 hopeTheme 的同名選項。
 import {
-  HOSTNAME,
+  HOSTNAME as hostname,
   SITE_NAME,
   SITE_NAME_EN,
   SITE_TAGLINE,
 } from "./site.js";
-
-/** 站台網址，集中定義於 site.ts */
-const hostname = HOSTNAME;
-
-/**
- * 頁面所屬章節的中文名，取自 chapters.ts（全站章節名的唯一來源）。
- *
- * 供搜尋索引當作「分類詞」使用：諸如「熱帶氣旋」這類主題詞只出現在側邊欄與
- * frontmatter.description，兩者都不進索引，查詢會得到 0 筆結果。以章節名為每頁
- * 補上一個極短的分類詞後，該詞可命中整個章節的頁面。
- */
-const chapterOf = (pagePath: string): string | null =>
-  chapters.find(({ dir }) => pagePath.startsWith(`/${dir}/`))?.name ?? null;
 
 const ORGANIZATION_ID = `${hostname}/#organization`;
 const WEBSITE_ID = `${hostname}/#website`;
@@ -181,11 +169,17 @@ export default hopeTheme(
         // 100% 全部不變，「香港」前 3 位也不變，寬查詢 build 只多 6 ms。
         // 代價是索引 gzip 約 +86 KB（+12%）、「香港」150 → 246 頁，但這些雜訊皆
         // 落在 40 頁之外，換來的是主題詞有實質摘要可顯示，故採用。
+        /**
+         * 章節名取自 chapters.ts（全站章節名的唯一來源），作為「分類詞」使用：
+         * 諸如「熱帶氣旋」這類主題詞只出現在側邊欄與 frontmatter.description，
+         * 兩者都不進索引，查詢會得到 0 筆結果。補上這個極短的分類詞後，
+         * 該詞可命中整個章節的頁面。
+         */
         customFields: [
           {
             getter: (page) =>
               [
-                chapterOf(page.path),
+                chapterOfPath(page.path),
                 typeof page.frontmatter.description === "string"
                   ? page.frontmatter.description
                   : null,
@@ -316,8 +310,8 @@ export default hopeTheme(
            *   - isBasedOn：原始報刊文章所屬的 Periodical
            * 專題研究章節收錄安陽殷墟等非香港題材，故不標 spatialCoverage。
            */
-          const [dir] = page.path.split("/").filter(Boolean);
-          const chapter = dir ? chapterName(dir) : undefined;
+          const [dir] = pathSegments(page.path);
+          const chapter = chapterOfPath(page.path);
           const topic = breadcrumbTrails(app)
             .get(page.path)
             ?.filter((entry) => entry.link && entry.link !== "/")

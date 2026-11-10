@@ -6,12 +6,14 @@ import {
 } from "@vuepress/plugin-llms";
 import type { Page } from "vuepress/core";
 
-import { chapters } from "./chapters.js";
+import { chapters, pathSegments } from "./chapters.js";
 import { volumesFor } from "./llms-volumes.js";
+import { pushTo } from "./map-utils.js";
 import {
   canonicalUrl,
   citationOf,
   publishedDate,
+  replaceReferenceBoxes,
 } from "./page-meta.js";
 import { relatedMarkdown } from "./related-documents.js";
 import { describeSite, siteStats, type StatsInput } from "./site-stats.js";
@@ -158,13 +160,10 @@ function provenance(markdown: string, page: Page): string {
   const url = canonicalUrl(page);
   const published = publishedDate(page);
 
-  const clean = markdown
-    .replace(
-      /<ReferenceBox>([\s\S]*?)<\/ReferenceBox>/gu,
-      (_matched, inner: string) =>
-        `> 引用：${inner.replace(/\s+/g, " ").trim()}`,
-    )
-    .replace(/\\\*\\\*/gu, "**");
+  const clean = replaceReferenceBoxes(
+    markdown,
+    (inner) => `> 引用：${inner.replace(/\s+/g, " ").trim()}`,
+  ).replace(/\\\*\\\*/gu, "**");
 
   const lines = published
     ? [
@@ -205,7 +204,7 @@ function buildToc(pages: LLMPage[], state: LLMState): string {
   const byChapter = new Map<string, LLMPage[]>();
 
   for (const page of pages) {
-    const segments = page.path.split("/").filter(Boolean);
+    const segments = pathSegments(page.path);
 
     // 根目錄頁面（首頁、關於本站、閱讀說明、支持本站）沒有章節歸屬。
     if (segments.length < 2) {
@@ -213,11 +212,7 @@ function buildToc(pages: LLMPage[], state: LLMState): string {
       continue;
     }
 
-    const [dir] = segments;
-    const bucket = byChapter.get(dir) ?? [];
-
-    bucket.push(page);
-    byChapter.set(dir, bucket);
+    pushTo(byChapter, segments[0], page);
   }
 
   const blocks: string[] = [];

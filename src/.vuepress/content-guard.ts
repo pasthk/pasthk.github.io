@@ -1,8 +1,10 @@
 import type { App, Page, Plugin } from "vuepress/core";
 import { warn } from "vuepress/utils";
 
+import { pagePathOfLink } from "./breadcrumb.js";
 import { linkEntries } from "./item-list.js";
-import { isSourceDocument } from "./page-meta.js";
+import { isSourceDocument, pageDataExtras } from "./page-meta.js";
+import { sidebarLinks } from "./sidebar.js";
 
 /**
  * 建置期的收錄品質校驗（唯讀，不改動任何頁面）。
@@ -18,8 +20,11 @@ import { isSourceDocument } from "./page-meta.js";
  *    硬截 180 字當 meta description。史料頁是 OCR 轉錄，截斷處常在句中，
  *    甚至夾著標記；這種摘要會直接成為搜尋結果與分享卡的文案。此項對
  *    史料頁與整理頁都適用。
+ * 3. **側邊欄死鏈**：sidebar.ts 手寫了數十個 .md 路徑，改檔名或刪頁時
+ *    不會有任何編譯錯誤，只會在成品裡留下點不到的導覽。於建置期對照
+ *    app.pages 一次點名。
  *
- * 兩者都在建置日誌彙總點名一次，讓維護者按清單補齊，不製造逐頁雜訊。
+ * 三者都在建置日誌彙總點名一次，讓維護者按清單補齊，不製造逐頁雜訊。
  */
 
 /** 可收錄且需要人工維護內容的頁面 */
@@ -58,20 +63,22 @@ export const contentGuardPlugin = (): Plugin => ({
   onInitialized(app: App): void {
     const thin: string[] = [];
     const autoDesc: string[] = [];
+    // 先前每個連結都對 app.pages 做一次線性掃描；改成查表一次。
+    const knownPaths = new Set(app.pages.map((item) => item.path));
 
     for (const page of app.pages) {
       if (!isIndexable(page)) continue;
 
       // seo 外掛在 onInitialized 寫入 page.data.autoDesc；主題插件先於
       // 使用者插件執行，這裡讀得到。
-      if ((page.data as unknown as { autoDesc?: boolean }).autoDesc) {
+      if (pageDataExtras(page.data).autoDesc) {
         autoDesc.push(page.path);
       }
 
       if (isSourceDocument(page)) continue;
 
       const links = linkEntries(page).filter((entry) =>
-        app.pages.some((item) => item.path === entry.path),
+        knownPaths.has(entry.path),
       ).length;
 
       if (visibleLength(page.content) < 100 && links < 2) {
@@ -90,6 +97,17 @@ export const contentGuardPlugin = (): Plugin => ({
       warn(
         `有 ${autoDesc.length} 個可收錄頁面沒有人工 description，目前使用正文自動截取的摘要：${sample(autoDesc)}。` +
           `史料為 OCR 轉錄，建議補寫 frontmatter.description 以改善搜尋結果摘要。`,
+      );
+    }
+
+    const deadLinks = [
+      ...new Set(sidebarLinks().map(pagePathOfLink)),
+    ].filter((path) => !knownPaths.has(path));
+
+    if (deadLinks.length) {
+      warn(
+        `側邊欄有 ${deadLinks.length} 個連結找不到對應頁面：${sample(deadLinks)}。` +
+          `請更新 sidebar.ts 或補回來源檔，避免導覽與麵包屑出現死鏈。`,
       );
     }
   },

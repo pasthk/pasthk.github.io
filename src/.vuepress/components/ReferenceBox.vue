@@ -40,7 +40,7 @@
 </template>
 
 <script setup>
-import { computed, onBeforeUnmount, onMounted, ref, useSlots } from "vue";
+import { computed, onBeforeUnmount, ref, useSlots } from "vue";
 import { usePageData, useRoute } from "vuepress/client";
 import { HOSTNAME, SITE_NAME } from "../site.js";
 
@@ -50,13 +50,11 @@ let timer;
 
 const page = usePageData();
 const route = useRoute();
-const pageUrl = ref("");
 
-const ssrUrl = HOSTNAME + (route?.path || "");
-
-onMounted(() => {
-  pageUrl.value = window.location.href.split("#")[0].split("?")[0];
-});
+// 引用字串一律指向正式站台的規範網址。先前掛載後改取 window.location.href，
+// 在開發／預覽網域會把非正式網址複製進引用，也讓 SSR 與客戶端的值不一致；
+// 改用 computed 還能跟上 SPA 換頁後的 route.path。
+const pageUrl = computed(() => HOSTNAME + (route?.path || ""));
 
 function extractText(node) {
   if (node === null || node === undefined || node === false) return "";
@@ -114,7 +112,7 @@ const citation = computed(() => {
   const fm = page.value?.frontmatter || {};
   const title = fm.title || page.value?.title || "";
   const siteName = SITE_NAME;
-  const url = pageUrl.value || ssrUrl;
+  const url = pageUrl.value;
 
   let source = parsedSlot.value.source.trim();
   if (source && !/[。！？]$/.test(source)) {

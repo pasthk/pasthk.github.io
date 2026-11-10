@@ -3,6 +3,7 @@ import { dirname, join } from "node:path";
 import type { App, HeadConfig, Page, Plugin } from "vuepress/core";
 
 import { chapterName } from "./chapters.js";
+import { pushTo } from "./map-utils.js";
 import {
   OVERVIEW_KEY,
   VOLUME_DIR,
@@ -91,10 +92,7 @@ async function writeVolumes(dest: string, full: string): Promise<void> {
   const groups = new Map<string, string[]>();
 
   for (const section of splitSections(full)) {
-    const list = groups.get(section.key) ?? [];
-
-    list.push(section.body);
-    groups.set(section.key, list);
+    pushTo(groups, section.key, section.body);
   }
 
   const dir = join(dest, VOLUME_DIR);
@@ -121,7 +119,7 @@ async function writeVolumes(dest: string, full: string): Promise<void> {
   }
 }
 
-export const llmsCanonicalPlugin = (): Plugin => () => ({
+export const llmsCanonicalPlugin = (): Plugin => ({
   name: "llms-canonical",
 
   onInitialized(app: App): void {

@@ -1,4 +1,4 @@
-import { chapters } from "./chapters.js";
+import { chapters, pathSegments } from "./chapters.js";
 
 /**
  * 可被引用統計的單一來源。
@@ -40,7 +40,7 @@ const included = (page: StatsInput, dir?: string): boolean => {
   if (page.path === "/404.html") return false;
   if (!dir) return true;
 
-  return page.path?.split("/").filter(Boolean)[0] === dir;
+  return pathSegments(page.path ?? "")[0] === dir;
 };
 
 export const siteStats = (pages: StatsInput[], dir?: string): SiteStats => {

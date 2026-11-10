@@ -1,7 +1,9 @@
 import type { App, Page, Plugin } from "vuepress/core";
 
-import { chapterName } from "./chapters.js";
-import { HOSTNAME } from "./site.js";
+import { chapterName, pathSegments } from "./chapters.js";
+import { pushTo } from "./map-utils.js";
+import { pageDataExtras } from "./page-meta.js";
+import { absoluteUrl } from "./site.js";
 
 /**
  * 史料頁之間的上下文內部連結。
@@ -39,9 +41,6 @@ const relatedMap = new Map<string, RelatedInfo>();
 export const relatedFor = (path: string): RelatedInfo | undefined =>
   relatedMap.get(path);
 
-const segmentsOf = (path: string): string[] =>
-  path.split("/").filter(Boolean);
-
 /** 只有可收錄、有原始出版日的史料頁才參與連結，不把索引與空殼頁算進來 */
 const isSourcePage = (page: Page): boolean =>
   page.path !== "/browse.html" &&
@@ -73,7 +72,7 @@ function collect(app: App): void {
     .filter(isSourcePage)
     .map((page) => {
       const date = page.frontmatter.datePublished as string;
-      const segments = segmentsOf(page.path);
+      const segments = pathSegments(page.path);
 
       return {
         page,
@@ -88,14 +87,8 @@ function collect(app: App): void {
   const byChapter = new Map<string, Entry[]>();
 
   for (const entry of entries) {
-    byGroup.set(entry.group, [
-      ...(byGroup.get(entry.group) ?? []),
-      entry,
-    ]);
-    byChapter.set(entry.chapter, [
-      ...(byChapter.get(entry.chapter) ?? []),
-      entry,
-    ]);
+    pushTo(byGroup, entry.group, entry);
+    pushTo(byChapter, entry.chapter, entry);
   }
 
   for (const list of byGroup.values()) list.sort(byDateThenPath);
@@ -153,7 +146,7 @@ function collect(app: App): void {
 
     relatedMap.set(entry.page.path, info);
     // page.data 會被序列化進頁面 chunk，usePageData() 在 SSR 與客戶端都讀得到。
-    (entry.page.data as unknown as Record<string, unknown>).related = info;
+    pageDataExtras(entry.page.data).related = info;
   }
 }
 
@@ -179,7 +172,7 @@ export const relatedMarkdown = (path: string): string => {
     "",
     ...info.items.map(
       (item) =>
-        `- [${item.title}](${HOSTNAME}${item.path})${item.date ? `｜原始出版日：${item.date}` : ""}`,
+        `- [${item.title}](${absoluteUrl(item.path)})${item.date ? `｜原始出版日：${item.date}` : ""}`,
     ),
     "",
   ].join("\n");

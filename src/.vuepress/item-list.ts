@@ -2,7 +2,7 @@ import { posix } from "node:path";
 import type { App, Page } from "vuepress/core";
 
 import { isSourceDocument } from "./page-meta.js";
-import { HOSTNAME } from "./site.js";
+import { absoluteUrl } from "./site.js";
 
 /**
  * 主題索引頁的機器可讀收錄清單。
@@ -73,6 +73,56 @@ export const linkEntries = (page: Page): ListEntry[] => {
   return found;
 };
 
+export interface ListItem {
+  name: string;
+  url: string;
+}
+
+/**
+ * CollectionPage 的 mainEntity 節點：主題索引頁與動態建立的 browse.html
+ * 共用同一份格式，避免兩處各自維護 numberOfItems／position 而漂移。
+ */
+export const itemListNode = (
+  pageUrl: string,
+  items: ListItem[],
+): Record<string, unknown> => ({
+  "@type": "ItemList",
+  "@id": `${pageUrl}#itemlist`,
+  numberOfItems: items.length,
+  itemListElement: items.map((item, index) => ({
+    "@type": "ListItem",
+    position: index + 1,
+    name: item.name,
+    url: item.url,
+  })),
+});
+
+/**
+ * 頁面標題對照表：每個 app 只建立一次。
+ *
+ * collectionItems() 會被每一個非史料頁呼叫，先前每次都重新走一遍
+ * app.pages（三百多頁）建 Map。app.pages 在 onInitialized 還可能被
+ * pageIndexPlugin 追加動態頁，故以頁面數作為快取有效性依據。
+ */
+const titleCache = new WeakMap<
+  App,
+  { size: number; titles: Map<string, string> }
+>();
+
+const pageTitles = (app: App): Map<string, string> => {
+  const cached = titleCache.get(app);
+
+  if (cached && cached.size === app.pages.length) return cached.titles;
+
+  const titles = new Map(
+    app.pages.map((item): [string, string] => [item.path, item.title]),
+  );
+
+  titleCache.set(app, { size: app.pages.length, titles });
+
+  return titles;
+};
+
 export interface ItemListResult {
   /** 是否應把頁面標為 CollectionPage */
   isCollection: boolean;
@@ -98,25 +148,19 @@ export const collectionItems = (
     return undefined;
   }
 
-  const titles = new Map<string, string>(
-    app.pages.map((item) => [item.path, item.title]),
-  );
+  const titles = pageTitles(app);
   const entries = linkEntries(page).filter((entry) => titles.has(entry.path));
 
   if (entries.length < MIN_ITEMS) return undefined;
 
   return {
     isCollection: true,
-    itemList: {
-      "@type": "ItemList",
-      "@id": `${new URL(page.path, HOSTNAME).href}#itemlist`,
-      numberOfItems: entries.length,
-      itemListElement: entries.map(({ path, label }, index) => ({
-        "@type": "ListItem",
-        position: index + 1,
+    itemList: itemListNode(
+      absoluteUrl(page.path),
+      entries.map(({ path, label }) => ({
         name: titles.get(path) || label,
-        url: `${HOSTNAME}${path}`,
+        url: absoluteUrl(path),
       })),
-    },
+    ),
   };
 };

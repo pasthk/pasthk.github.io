@@ -5,13 +5,12 @@ import { breadcrumbPlugin } from "./breadcrumb.js";
 import { chaptersGuardPlugin } from "./chapters.js";
 import { contentGuardPlugin } from "./content-guard.js";
 import { ogImagePlugin } from "./og/plugin.js";
+import { outputCleanupPlugin } from "./output-cleanup.js";
 import { llms } from "./llms.js";
 import { llmsCanonicalPlugin } from "./llms-canonical.js";
 import { pageIndexPlugin } from "./page-index.js";
 import { referenceBoxPlugin } from "./reference-box.js";
 import { relatedDocumentsPlugin } from "./related-documents.js";
-import { robotsPlugin } from "./robots.js";
-import { sitemapCleanPlugin } from "./sitemap.js";
 import { SITE_NAME, SITE_TAGLINE } from "./site.js";
 import { slimsearchDevWorkerPlugin } from "./slimsearch-dev-worker-plugin.js";
 import { stripUnusedFonts } from "./strip-unused-fonts.js";
@@ -21,26 +20,21 @@ type AliasEntry = { find: string | RegExp; replacement: string };
 
 // 以自訂元件覆寫主題的日期／閱讀時間資訊與麵包屑。
 // 這些條目必須排在 alias 陣列最前面，才能蓋過主題註冊的 `@theme-hope` 前綴 alias。
-const componentAlias: AliasEntry[] = [
-  {
-    find: /^@theme-hope\/components\/info\/DateInfo$/,
-    replacement: fileURLToPath(
-      new URL("./components/DateInfo.vue", import.meta.url),
-    ),
-  },
-  {
-    find: /^@theme-hope\/components\/info\/ReadingTimeInfo$/,
-    replacement: fileURLToPath(
-      new URL("./components/ReadingTimeInfo.vue", import.meta.url),
-    ),
-  },
-  {
-    find: /^@theme-hope\/components\/base\/BreadCrumb$/,
-    replacement: fileURLToPath(
-      new URL("./components/PageBreadCrumb.vue", import.meta.url),
-    ),
-  },
+// 只需登記「主題模組路徑 → 本地檔名」，alias 與檔案 URL 由同一份對照表產生。
+const COMPONENT_OVERRIDES: [string, string][] = [
+  ["info/DateInfo", "DateInfo.vue"],
+  ["info/ReadingTimeInfo", "ReadingTimeInfo.vue"],
+  ["base/BreadCrumb", "PageBreadCrumb.vue"],
 ];
+
+const componentAlias: AliasEntry[] = COMPONENT_OVERRIDES.map(
+  ([module, file]) => ({
+    find: new RegExp(`^@theme-hope/components/${module}$`),
+    replacement: fileURLToPath(
+      new URL(`./components/${file}`, import.meta.url),
+    ),
+  }),
+);
 
 export default defineUserConfig({
   base: "/",
@@ -127,9 +121,8 @@ export default defineUserConfig({
     // 必須排在 llms 之後：等它寫完 .md 與 llms-full.txt 才改寫 frontmatter 的 url
     llmsCanonicalPlugin(),
     ogImagePlugin(),
-    robotsPlugin(),
-    // 主題的 sitemap 外掛已寫完 XML，這裡移除 Google 忽略的 changefreq/priority
-    sitemapCleanPlugin(),
+    // 主題的 sitemap／seo 外掛已寫完 XML 與 robots.txt，這裡統一清理輸出檔。
+    outputCleanupPlugin(),
     breadcrumbPlugin(),
     referenceBoxPlugin(),
   ],

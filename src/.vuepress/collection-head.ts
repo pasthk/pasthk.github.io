@@ -1,5 +1,6 @@
 import type { HeadConfig } from "vuepress/core";
 
+import { itemListNode, type ListItem } from "./item-list.js";
 import { socialTags } from "./og/meta.js";
 import { HOSTNAME, SITE_NAME } from "./site.js";
 
@@ -20,7 +21,7 @@ export interface CollectionMeta {
   description: string;
   image: string;
   /** 目錄收錄的頁面；有值時輸出完整的 ItemList，供機器直接讀取清單 */
-  items?: { name: string; url: string }[];
+  items?: ListItem[];
 }
 
 export const collectionHead = ({
@@ -59,22 +60,8 @@ export const collectionHead = ({
       url: `${HOSTNAME}/`,
     },
     // 模型讀 HTML 還得先從導覽列中辨認哪些才是史料連結；JSON-LD 直接給
-    // 一份可枚舉的清單，與 theme.ts 為主題索引頁產生的 mainEntity 同格式。
-    ...(items.length
-      ? {
-          mainEntity: {
-            "@type": "ItemList",
-            "@id": `${url}#itemlist`,
-            numberOfItems: items.length,
-            itemListElement: items.map((item, index) => ({
-              "@type": "ListItem",
-              position: index + 1,
-              name: item.name,
-              url: item.url,
-            })),
-          },
-        }
-      : {}),
+    // 一份可枚舉的清單，與 theme.ts 為主題索引頁產生的 mainEntity 共用構造器。
+    ...(items.length ? { mainEntity: itemListNode(url, items) } : {}),
   };
 
   return [

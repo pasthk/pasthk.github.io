@@ -1,5 +1,6 @@
 import type { App, Plugin } from "vuepress/core";
 
+import { pushTo } from "./map-utils.js";
 import sidebar from "./sidebar.js";
 
 /** 導覽中的一節；`link` 為空表示該層只是側邊欄分組，沒有對應頁面 */
@@ -16,8 +17,11 @@ type SidebarNode = {
 
 const HOME: TrailItem = { text: "首頁", link: "/" };
 
-/** 側邊欄的 link 是 .md 路徑，頁面的 path 是 .html 路徑，兩者要先對齊 */
-const toPagePath = (link: string): string => {
+/**
+ * 側邊欄的 link 是 .md 路徑，頁面的 path 是 .html 路徑，兩者要先對齊。
+ * 麵包屑與側邊欄死鏈校驗共用同一份轉換，不會出現兩套路徑口徑。
+ */
+export const pagePathOfLink = (link: string): string => {
   let path = link.replace(/\.md$/, ".html");
 
   if (path.endsWith("/README.html")) path = path.slice(0, -"README.html".length);
@@ -43,7 +47,7 @@ const sidebarTrails = (
   const visit = (nodes: (SidebarNode | string)[], chain: TrailItem[]): void => {
     for (const node of nodes) {
       const item: SidebarNode = typeof node === "string" ? { link: node } : node;
-      const path = item.link ? toPagePath(item.link) : undefined;
+      const path = item.link ? pagePathOfLink(item.link) : undefined;
       const text = item.text ?? (path ? titleOf(path) : undefined);
       const next = text ? [...chain, { text, link: path }] : chain;
 
@@ -108,34 +112,41 @@ const commonPrefix = (chains: TrailItem[][]): TrailItem[] => {
  *    多個候選時取目錄最接近者，同分則依側邊欄順序
  * 4. 仍找不到：退到所在目錄所屬的章節
  */
-const buildTrail = (
-  path: string,
-  trails: Map<string, TrailItem[]>,
-  parents: Map<string, string[]>,
-): TrailItem[] => {
-  const own = trails.get(path);
+/**
+ * 每個 app 只建立一次的尋徑索引。
+ *
+ * 先前每算一個頁面的麵包屑就重新 filter + sort 全部 trail 鍵，並逐層
+ * 掃描整份 trails 取共同前綴。改為預先排序祖先前綴、快取各目錄的共同
+ * 前綴後，單頁只需走一份已排序索引。
+ */
+interface TrailIndex {
+  trails: Map<string, TrailItem[]>;
+  parents: Map<string, string[]>;
+  /** 依鍵長遞減，find 第一個符合者即最長（最具體）的祖先 */
+  ancestors: { key: string; prefix: string }[];
+  chainForDir: (dir: string) => TrailItem[];
+}
+
+const buildTrail = (path: string, index: TrailIndex): TrailItem[] => {
+  const own = index.trails.get(path);
   if (own) return own.slice(0, -1);
 
-  const ancestor = [...trails.keys()]
-    .filter((key) => path.startsWith(`${key.replace(/\.html$/, "")}/`))
-    .sort((a, b) => b.length - a.length)[0];
-  if (ancestor) return trails.get(ancestor) ?? [];
+  const ancestor = index.ancestors.find(({ prefix }) =>
+    path.startsWith(prefix),
+  )?.key;
+  if (ancestor) return index.trails.get(ancestor) ?? [];
 
-  const candidates = parents.get(path) ?? [];
+  const candidates = index.parents.get(path) ?? [];
   if (candidates.length) {
     const parent = candidates.reduce((best, item) =>
       sharedDepth(item, path) > sharedDepth(best, path) ? item : best,
     );
 
-    return trails.get(parent) ?? [];
+    return index.trails.get(parent) ?? [];
   }
 
   for (let dir = parentDir(path); dir && dir !== "/"; dir = parentDir(dir)) {
-    const chain = commonPrefix(
-      [...trails]
-        .filter(([key]) => key.startsWith(dir))
-        .map(([, trail]) => trail.slice(0, -1)),
-    );
+    const chain = index.chainForDir(dir);
 
     if (chain.length) return chain;
   }
@@ -169,20 +180,39 @@ export const breadcrumbTrails = (app: App): Map<string, TrailItem[]> => {
       const target = link.absolute?.split("#")[0];
       if (!target) continue;
 
-      const parent = toPagePath(target);
+      const parent = pagePathOfLink(target);
       if (parent === path) continue;
 
-      const list = parents.get(parent) ?? [];
-      if (!list.includes(path)) list.push(path);
-      parents.set(parent, list);
+      if (!parents.get(parent)?.includes(path)) pushTo(parents, parent, path);
     }
   }
 
+  const ancestors = [...trails.keys()]
+    .map((key) => ({ key, prefix: `${key.replace(/\.html$/, "")}/` }))
+    .sort((a, b) => b.key.length - a.key.length);
+
+  const chainCache = new Map<string, TrailItem[]>();
+  const chainForDir = (dir: string): TrailItem[] => {
+    const cached = chainCache.get(dir);
+    if (cached !== undefined) return cached;
+
+    const chain = commonPrefix(
+      [...trails]
+        .filter(([key]) => key.startsWith(dir))
+        .map(([, trail]) => trail.slice(0, -1)),
+    );
+
+    chainCache.set(dir, chain);
+
+    return chain;
+  };
+
+  const index: TrailIndex = { trails, parents, ancestors, chainForDir };
   const result = new Map<string, TrailItem[]>();
 
   for (const page of app.pages) {
     // 專題首頁會以自己作為第一層，需去掉指向本頁的層級，否則出現自我連結
-    const trail = [HOME, ...buildTrail(page.path, trails, parents)].filter(
+    const trail = [HOME, ...buildTrail(page.path, index)].filter(
       (item) => item.link !== page.path,
     );
 

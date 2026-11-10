@@ -1,7 +1,10 @@
-import { readFile, writeFile } from "node:fs/promises";
-import type { App, Page, Plugin } from "vuepress/core";
+import type { App, Page } from "vuepress/core";
 
-import { createdDate } from "./page-meta.js";
+import {
+  createdDate,
+  pageDataExtras,
+  type Frontmatter,
+} from "./page-meta.js";
 
 /**
  * sitemap.xml 的修改時間與無效欄位治理。
@@ -20,9 +23,6 @@ import { createdDate } from "./page-meta.js";
  * `browse.html` 是執行期由其他頁面產生的索引，本身沒有來源檔；以全站
  * 其餘可索引頁面中最晚的修改時間代表其連結清單最後一次實質變動。
  */
-
-type Frontmatter = Record<string, unknown>;
-type GitData = { updatedTime?: number };
 
 const toIso = (value: unknown): string => {
   if (value instanceof Date) {
@@ -48,7 +48,7 @@ const sourceModifiedTime = (page: Page): string => {
 
   if (explicit) return explicit;
 
-  const git = (page.data as unknown as { git?: GitData }).git;
+  const git = pageDataExtras(page.data).git;
   const committed = toIso(git?.updatedTime);
 
   if (committed) return committed;
@@ -86,18 +86,5 @@ export const sitemapModifiedTime = (page: Page, app: App): string => {
   return latest;
 };
 
-/** 外掛仍會寫入 changefreq；在建置後移除 Google 忽略的欄位 */
-export const sitemapCleanPlugin = (): Plugin => () => ({
-  name: "sitemap-clean",
-
-  async onGenerated(app: App): Promise<void> {
-    const path = app.dir.dest("sitemap.xml");
-    const xml = await readFile(path, "utf8");
-    const next = xml.replace(
-      /[ \t]*<(?:changefreq|priority)>[^<]*<\/(?:changefreq|priority)>\s*/gu,
-      "",
-    );
-
-    if (next !== xml) await writeFile(path, next, "utf8");
-  },
-});
+// 輸出檔的 changefreq／priority 清理與 robots.txt 覆寫，統一由
+// output-cleanup.ts 在同一個 onGenerated 處理，這裡只負責修改時間。

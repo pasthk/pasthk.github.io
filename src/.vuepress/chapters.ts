@@ -86,6 +86,19 @@ const byDir = new Map(chapters.map((chapter) => [chapter.dir, chapter]));
 export const chapterName = (dir: string): string | undefined =>
   byDir.get(dir)?.name;
 
+/** 路徑分段：/archaeology/foo.html → ["archaeology", "foo.html"]；全站共用 */
+export const pathSegments = (path: string): string[] =>
+  path.split("/").filter(Boolean);
+
+/** 由頁面路徑取得章節中文名；根目錄與未知章節回傳 undefined */
+export const chapterOfPath = (path: string): string | undefined =>
+  chapterName(pathSegments(path)[0] ?? "");
+
+/** 由目錄名取得章節名稱與簡介，供動態索引頁取用 */
+export const chapterMeta = (
+  dir: string,
+): { name: string; note: string } | undefined => byDir.get(dir);
+
 /**
  * 建置期校驗：章節定義與 src 頂層目錄必須一對一。
  *
@@ -94,10 +107,10 @@ export const chapterName = (dir: string): string | undefined =>
  * 舊數字。反過來，登記了卻沒有對應目錄，則會讓對外文案虛報章節數。
  * 兩種情況都在這裡點名，不必等成品出來才發現。
  */
-export const chaptersGuardPlugin = (): Plugin => (app: App) => ({
+export const chaptersGuardPlugin = (): Plugin => ({
   name: "chapters-guard",
 
-  onInitialized(): void {
+  onInitialized(app: App): void {
     const actual = readdirSync(app.dir.source(), { withFileTypes: true })
       .filter((entry) => entry.isDirectory() && !entry.name.startsWith("."))
       .map((entry) => entry.name);

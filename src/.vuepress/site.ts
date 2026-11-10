@@ -12,6 +12,13 @@ export const HOSTNAME = "https://www.pasthk.com";
 /** 不含協定的主機名，用於卡片頁腳等處顯示 */
 export const HOST = HOSTNAME.replace(/^https?:\/\//, "");
 
+/**
+ * 頁面路徑（一律以 `/` 起首，與 `page.path` 同口徑）→ 絕對網址。
+ * canonical、og:url、ItemList 與純文字鏡像的連結都由這裡組，避免各處
+ * 自行拼接 `HOSTNAME + path` 而出現缺斜線或雙斜線的網址。
+ */
+export const absoluteUrl = (path: string): string => `${HOSTNAME}${path}`;
+
 export const SITE_NAME = "香港文獻類編";
 
 export const SITE_TAGLINE = "認識香港，從文獻開始";
