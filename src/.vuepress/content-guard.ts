@@ -7,6 +7,7 @@ import {
   isIndexablePage,
   isSourceDocument,
   pageDataExtras,
+  visibleContentLength,
 } from "./page-meta.js";
 import { sidebarLinks } from "./sidebar.js";
 
@@ -30,21 +31,6 @@ import { sidebarLinks } from "./sidebar.js";
  *
  * 三者都在建置日誌彙總點名一次，讓維護者按清單補齊，不製造逐頁雜訊。
  */
-
-/** 去掉 Markdown 標記後的可見文字長度，標題列不計入正文 */
-const visibleLength = (content: string): number => {
-  const text = content
-    .replace(/^---[\s\S]*?---/u, "")
-    .replace(/^\s{0,3}#{1,6}\s.*$/gmu, "")
-    .replace(/<[^>]+>/gu, " ")
-    .replace(/!\[[^\]]*\]\([^)]*\)/gu, "")
-    .replace(/\[([^\]]+)\]\([^)]*\)/gu, "$1")
-    .replace(/[*_>`|]/gu, "")
-    .replace(/\s+/gu, " ")
-    .trim();
-
-  return text.length;
-};
 
 /** 日誌最多列出幾個路徑，其餘以總數帶過 */
 const MAX_SAMPLES = 12;
@@ -78,7 +64,7 @@ export const contentGuardPlugin = (): Plugin => ({
         knownPaths.has(entry.path),
       ).length;
 
-      if (visibleLength(page.content) < 100 && links < 2) {
+      if (visibleContentLength(page.content) < 100 && links < 2) {
         thin.push(page.path);
       }
     }

@@ -239,8 +239,9 @@ body {
   width: 100%;
 }
 
-.ad-top-wrap::before {
-  content: "廣告";
+// 「廣告」標示由 AdTop.vue 以實體 <span> 輸出，不再用 ::before 的
+// content 生成：後者不存在於 HTML 原始碼，審核爬蟲與輔助技術都讀不到。
+.ad-top-wrap > .ad-label {
   position: absolute;
   top: 0;
   right: 0;

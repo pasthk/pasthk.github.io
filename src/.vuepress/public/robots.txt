@@ -9,6 +9,23 @@ Allow: /
 # 避免重複內容分散排名；下列列名的 AI 爬蟲各自成組，不受此限制。
 Disallow: /*.md$
 
+# --- Google 廣告審核／品質爬蟲 ---
+# Google「特殊情況檢索器」官方文件：AdsBot 與 Mediapartners-Google 會忽略
+# 全域 User-agent: * 的規則，必須逐一列名才生效。廣告程式碼只存在於 .html，
+# 這裡明確允許讀取，並與通用爬蟲一致排除 .md 純文字鏡像，避免廣告爬蟲把
+# 內容相同的副本誤判為重複內容。缺少本節時爬蟲不受任何規則約束（等同全允許）。
+User-agent: AdsBot-Google
+Allow: /
+Disallow: /*.md$
+
+User-agent: AdsBot-Google-Mobile
+Allow: /
+Disallow: /*.md$
+
+User-agent: Mediapartners-Google
+Allow: /
+Disallow: /*.md$
+
 # --- AI 搜尋索引爬蟲（決定是否出現在生成式搜尋結果）---
 
 User-agent: OAI-SearchBot

@@ -1,6 +1,7 @@
 import { fileURLToPath } from "node:url";
 import { viteBundler } from "@vuepress/bundler-vite";
 import { defineUserConfig } from "vuepress";
+import { adEligibilityPlugin } from "./ad-eligibility.js";
 import { breadcrumbPlugin } from "./breadcrumb.js";
 import { chaptersGuardPlugin } from "./chapters.js";
 import { contentGuardPlugin } from "./content-guard.js";
@@ -134,6 +135,9 @@ export default defineUserConfig({
     outputCleanupPlugin(),
     breadcrumbPlugin(),
     referenceBoxPlugin(),
+    // 必須排在 pageIndexPlugin 之後：onInitialized 要看到動態建立的頁面，
+    // 才能逐頁算出是否達投放廣告的內容門檻。
+    adEligibilityPlugin(),
     // 最後檢查：確認被剝除的樣式沒有任何輸出頁面仍在使用。
     verifyDroppedStyles(),
   ],

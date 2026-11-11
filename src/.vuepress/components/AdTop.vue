@@ -1,5 +1,6 @@
 <template>
   <div class="ad-top-wrap">
+    <span class="ad-label">廣告</span>
     <div class="ad-top">
       <ins
         ref="adElement"
@@ -18,6 +19,9 @@
 import { onMounted, ref } from "vue";
 
 // adsbygoogle.js 由 config.ts 的 head 靜態載入；.ad-* 樣式已併入 styles/index.scss。
+// 「廣告」標示刻意寫成範本中的實體 <span>，不用 CSS ::before 的 content：
+// 生成內容不存在於 HTML 原始碼，審核爬蟲與輔助技術都讀不到，無法判定
+// 廣告與內文有明確區隔。相關樣式見 styles/index.scss 的 .ad-label。
 const adElement = ref();
 
 onMounted(() => {

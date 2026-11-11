@@ -30,10 +30,32 @@ export interface PageDataExtras {
   git?: { updatedTime?: number };
   /** related-documents 外掛：相關文獻導覽 */
   related?: unknown;
+  /** ad-eligibility 外掛：本頁內容是否達投放廣告的門檻 */
+  adEligible?: boolean;
 }
 
 export const pageDataExtras = (data: unknown): PageDataExtras =>
   data as PageDataExtras;
+
+/**
+ * 去掉 Markdown 標記後的可見文字長度，標題列不計入正文。
+ *
+ * 「內容是否充足」在兩處會被判定：content-guard 的薄內容警告，以及
+ * ad-eligibility 的廣告投放門檻。共用同一口徑，避免標準各自漂移。
+ */
+export const visibleContentLength = (content: string): number => {
+  const text = content
+    .replace(/^---[\s\S]*?---/u, "")
+    .replace(/^\s{0,3}#{1,6}\s.*$/gmu, "")
+    .replace(/<[^>]+>/gu, " ")
+    .replace(/!\[[^\]]*\]\([^)]*\)/gu, "")
+    .replace(/\[([^\]]+)\]\([^)]*\)/gu, "$1")
+    .replace(/[*_>`|]/gu, "")
+    .replace(/\s+/gu, " ")
+    .trim();
+
+  return text.length;
+};
 
 /**
  * 接受完整日期與 ISO 8601 的降精度寫法。本站有 4 頁只考證到月／年
