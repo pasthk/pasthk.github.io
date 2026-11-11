@@ -30,19 +30,16 @@
         <span class="reference-box-copy-text">{{ copied ? '已複製' : '複製' }}</span>
       </button>
     </div>
-    <div class="reference-box-content">
-      <p class="reference-box-citation">{{ citation }}</p>
-      <div v-if="parsedSlot.note" class="reference-box-note">
-        <p>{{ parsedSlot.note }}</p>
-      </div>
-    </div>
+    <p class="reference-box-citation">{{ citation }}</p>
+    <p v-if="parsedSlot.note" class="reference-box-note">{{ parsedSlot.note }}</p>
   </div>
 </template>
 
 <script setup>
 import { computed, onBeforeUnmount, ref, useSlots } from "vue";
 import { usePageData, useRoute } from "vuepress/client";
-import { HOSTNAME, SITE_NAME } from "../site.js";
+import { splitCitation } from "../format.js";
+import { absoluteUrl, SITE_NAME } from "../site.js";
 
 const slots = useSlots();
 const copied = ref(false);
@@ -51,10 +48,7 @@ let timer;
 const page = usePageData();
 const route = useRoute();
 
-// 引用字串一律指向正式站台的規範網址。先前掛載後改取 window.location.href，
-// 在開發／預覽網域會把非正式網址複製進引用，也讓 SSR 與客戶端的值不一致；
-// 改用 computed 還能跟上 SPA 換頁後的 route.path。
-const pageUrl = computed(() => HOSTNAME + (route?.path || ""));
+const pageUrl = computed(() => absoluteUrl(route?.path || "/"));
 
 function extractText(node) {
   if (node === null || node === undefined || node === false) return "";
@@ -73,29 +67,8 @@ const rawSlotText = computed(() => {
   return extractText(slots.default()).trim();
 });
 
-// Split slot text into source (without "文獻出處：" prefix) and optional "按：" note
-const parsedSlot = computed(() => {
-  let text = rawSlotText.value.replace(/^文獻出處：/, "").trim();
+const parsedSlot = computed(() => splitCitation(rawSlotText.value));
 
-  if (!text) return { source: "", note: "" };
-
-  // Note on its own line
-  let m = text.match(/^([\s\S]*?)\r?\n\s*按：([\s\S]*)$/);
-  if (m) {
-    return { source: m[1].trim(), note: "按：" + m[2].trim() };
-  }
-
-  // Inline note right after the source
-  m = text.match(/^([\s\S]*?[。）])\s*按：([\s\S]*)$/);
-  if (m) {
-    return { source: m[1].trim(), note: "按：" + m[2].trim() };
-  }
-
-  return { source: text, note: "" };
-});
-
-// 作者取自 frontmatter 的 author 欄位；可為字串、字串陣列或 { name } 物件。
-// 多作者以「、」串接，未填則回傳空字串，引用格式維持原樣。
 const author = computed(() => {
   const raw = page.value?.frontmatter?.author;
 
@@ -119,8 +92,6 @@ const citation = computed(() => {
     source += "。";
   }
 
-  // Format: 作者：新聞標題，報刊名稱，年月日，頁碼。網站名稱，網址。
-  // 作者為選填，未填時從缺，其餘格式不變。
   const parts = [];
 
   if (author.value) parts.push(author.value + "：");
@@ -166,39 +137,41 @@ onBeforeUnmount(() => {
 <style>
 .reference-box {
   margin: 1.5rem 0;
+  padding: 0.85rem 1rem;
   border: 1px solid var(--vp-c-border);
   border-radius: 0.5rem;
   background: #fff;
-  overflow: hidden;
 }
 
 .reference-box-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0.5rem 1rem;
-  border-bottom: 1px solid var(--vp-c-border);
+  gap: 0.75rem;
+  margin-bottom: 0.35rem;
 }
 
 .reference-box-label {
-  font-size: 0.875rem;
+  font-size: 0.8125rem;
   font-weight: 600;
   color: var(--vp-c-text-mute);
   letter-spacing: 0.05em;
 }
 
 .reference-box-copy-btn {
+  flex: none;
   display: inline-flex;
   align-items: center;
   gap: 0.3em;
   padding: 0.2em 0.6em;
   font-size: 0.8rem;
+  line-height: 1.4;
   color: var(--vp-c-text-mute);
   background: transparent;
   border: 1px solid var(--vp-c-border);
   border-radius: 0.3rem;
   cursor: pointer;
-  transition: all 0.2s ease;
+  transition: color 0.2s ease, border-color 0.2s ease;
 }
 
 .reference-box-copy-btn:hover,
@@ -207,29 +180,28 @@ onBeforeUnmount(() => {
   border-color: var(--vp-c-accent);
 }
 
+.reference-box-copy-btn:focus-visible {
+  outline: 2px solid var(--vp-c-accent);
+  outline-offset: 2px;
+}
+
 .reference-box-copy-text {
   line-height: 1;
 }
 
-.reference-box-content {
-  padding: 0.75rem 1rem;
+.reference-box .reference-box-citation {
+  margin: 0;
   font-size: 1rem;
   line-height: 1.7;
+  text-align: start;
+  overflow-wrap: anywhere;
 }
 
-.reference-box-content p {
-  margin: 0;
-}
-
-.reference-box-citation {
-  word-break: break-all;
-}
-
-.reference-box-note {
-  margin-top: 0.5rem;
-  padding-top: 0.5rem;
-  border-top: 1px dashed var(--vp-c-border);
-  font-size: 1rem;
+.reference-box .reference-box-note {
+  margin: 0.5rem 0 0;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  text-align: start;
   color: var(--vp-c-text-mute);
 }
 </style>

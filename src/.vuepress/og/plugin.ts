@@ -6,7 +6,7 @@ import type { App, Page, Plugin } from "vuepress/core";
 import { success, warn } from "vuepress/utils";
 
 import { chapterOfPath, pathSegments } from "../chapters.js";
-import { referenceBoxText } from "../page-meta.js";
+import { citationOf } from "../page-meta.js";
 import { HOST, SITE_NAME, SITE_NAME_EN } from "../site.js";
 import {
   buildCardSvg,
@@ -15,20 +15,17 @@ import {
 } from "./card.js";
 import { ogFileName } from "./paths.js";
 
-/** 首頁卡片標題下的說明；與 site.ts 的 SITE_TAGLINE（頁腳標語）不同 */
 const HOME_CARD_META = "香港歷史文獻索引";
 
 const FONT_DIR = join(dirname(fileURLToPath(import.meta.url)), "fonts");
 
-/** 子集字型：Regular 與 Bold 兩份，家族名相同、字重不同 */
 const FONT_FILES = [
   join(FONT_DIR, "noto-serif-tc-400.ttf"),
   join(FONT_DIR, "noto-serif-tc-700.ttf"),
 ];
 
-/** 引用框內容為「報刊，日期，版次。」，改寫為卡片上的「報刊 · 日期 · 版次」 */
 function metaFromReferenceBox(raw: string): string | undefined {
-  const text = referenceBoxText(raw);
+  const text = citationOf(raw);
 
   if (!text) return undefined;
 
@@ -41,7 +38,6 @@ function metaFromReferenceBox(raw: string): string | undefined {
   return parts.length > 1 ? parts.join(" · ") : undefined;
 }
 
-/** 取描述的第一個短句，避免在卡片上出現被硬生生截斷的半句 */
 function firstClause(description: string): string | undefined {
   const clause = description.split(/[，。；：]/)[0]?.trim();
 
@@ -50,7 +46,6 @@ function firstClause(description: string): string | undefined {
   return clause.length > 46 ? `${clause.slice(0, 45)}…` : clause;
 }
 
-/** YAML 多行值（description、ReferenceBox）可能帶換行，先壓成單一空白 */
 function clean(text: string): string {
   return text.replace(/\s+/g, " ").trim();
 }
@@ -86,18 +81,10 @@ function buildContent(
   return {
     title,
     meta: meta ? clean(meta) : undefined,
-    // 章節落地頁的標題就是章節名，右上角再標一次只會重複
     section: section === title ? undefined : section,
   };
 }
 
-/**
- * 光柵化參數。
- *
- * 卡片 SVG 用 <text> 寫字，字型必須在這裡指定，否則 resvg 會退回系統字型
- * （建置機器若沒有中文襯線體，字重與字形都會走樣）。缺檔時退回系統字型並示警，
- * 讓建置繼續完成而不是整批失敗。
- */
 async function fontOptions() {
   const present = await Promise.all(
     FONT_FILES.map(async (file) => {
@@ -126,15 +113,6 @@ async function fontOptions() {
   return { loadSystemFonts: true };
 }
 
-/**
- * 子集字型涵蓋的碼位，由 scripts/build-og-fonts.py 產生。
- *
- * 子集是「產生當下」全站用字的快照。之後新增的史料若帶來沒見過的字
- * （例如標題裡的「尸」「屛」），resvg 會把它畫成 .notdef 方框，
- * 而建置本身不會失敗——卡片照樣產出，只是分享出去才看得出壞掉。
- * 這裡逐字比對，把缺字寫進建置日誌，讓問題在本地就看得見。
- * 檔案不存在（尚未重建過字型）時跳過檢查。
- */
 async function loadCoverage(): Promise<Set<number> | undefined> {
   try {
     const raw = await readFile(join(FONT_DIR, "coverage.json"), "utf8");
@@ -156,15 +134,6 @@ export const ogImagePlugin = (): Plugin => ({
     const coverage = await loadCoverage();
     const uncovered: string[] = [];
 
-    // 子頁數量：路徑為 /a/b.html 的頁面，其子頁是 /a/b/ 底下的所有頁面。
-    //
-    // 兩個容易出錯的地方：
-    // 1. 父頁有兩種寫法——`a/b.md` → `/a/b.html`，以及 `a/b/README.md`（或
-    //    index.md）→ `/a/b/`。先前一律推成 `/a/b.html`，於是 /project/ay1928/
-    //    這類以 README 建立的索引頁永遠算不到子頁。
-    // 2. 子頁可能不只一層（專題頁 → 分類頁 → 單篇）。先前只數直系子頁，
-    //    /project/ay1928/ 因此只得到 1，卡片上出現「收錄 1 篇文獻」這種
-    //    與事實不符的標籤。改為沿路徑逐層上溯，凡存在的祖先頁都計入。
     const knownPaths = new Set(app.pages.map((page) => page.path));
     const childCounts = new Map<string, number>();
 
@@ -184,12 +153,8 @@ export const ogImagePlugin = (): Plugin => ({
 
     const font = await fontOptions();
 
-    // 空殼頁（只有標題、無正文）已設 sitemap: false 與 noindex，不會出現在搜尋結果，
-    // 也就不會被分享，卡片永遠用不到。仍計入 childCounts，父頁的「收錄 N 篇」才不會少算。
     const pages = app.pages.filter((page) => page.frontmatter.sitemap !== false);
 
-    // 先平行讀入所有原始 Markdown；光柵化本身是同步 CPU 工作，維持逐頁處理，
-    // 但不再讓每頁各自等一次磁碟 I/O。
     const raws = await Promise.all(
       pages.map(async (page): Promise<string> => {
         try {
@@ -222,8 +187,6 @@ export const ogImagePlugin = (): Plugin => ({
 
       const svg = buildCardSvg({ header: SITE_NAME, footer: HOST, ...content });
 
-      // 社群平台一律不接受 SVG 作 og:image，必須光柵化。
-      // 卡片自帶白底 rect，這裡的 background 只是保險。
       const png = new Resvg(svg, { background: "#ffffff", font })
         .render()
         .asPng();

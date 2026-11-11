@@ -1,65 +1,43 @@
 import type { App, Page, Plugin } from "vuepress/core";
 
 import { chapterName, pathSegments } from "./chapters.js";
+import { parseDateValue } from "./format.js";
 import { pushTo } from "./map-utils.js";
-import { isIndexablePage, isSourceDocument, pageDataExtras } from "./page-meta.js";
+import {
+  isIndexablePage,
+  isSourceDocument,
+  pageDataExtras,
+  publishedDate,
+  type RelatedInfo,
+} from "./page-meta.js";
 import { absoluteUrl } from "./site.js";
 
-/**
- * 史料頁之間的上下文內部連結。
- *
- * 主題的側邊欄在 SSR 不輸出子項（見 page-index.ts），而文獻綜覽是全站唯一
- * 的完整入口；實測每篇史料頁只有 2 個入鏈（綜覽＋主題頁）、9 個出鏈全部是
- * 導覽列與麵包屑，175 篇史料彼此沒有任何橫向連結。對搜尋引擎是扁平的星狀
- * 連結圖，對生成式引擎則缺少「同一事件還有哪些報道」的可循線索。
- *
- * 這裡在建置期算出同主題、年代最接近的幾篇，交給 Layout.vue 的 contentAfter
- * 輸出 SSR 可見的 <a>，並由 llms.ts 補進 .md 純文字鏡像。刻意不寫入
- * page.content：那會讓 slimsearch 把重複出現的標題當成正文索引、也讓 OG 卡
- * 與「一級轉錄」的純文字版摻進導覽文字。
- */
+export type { RelatedInfo, RelatedItem } from "./page-meta.js";
 
-/** 單頁最多列出的相關文獻數。控制在個位數，避免整站變成自動生成的連結牆。 */
+
 const MAX_RELATED = 4;
 
-export interface RelatedItem {
-  title: string;
-  path: string;
-  /** 原始出版日，YYYY-MM-DD 或降精度的 YYYY-MM／YYYY */
-  date?: string;
-}
-
-export interface RelatedInfo {
-  items: RelatedItem[];
-  /** 章節中文名，供結構化資料與元件共用 */
-  chapter?: string;
-}
-
-/** 以頁面路徑為鍵。llms.ts 的 transformMarkdown 在 onGenerated 才執行，讀得到。 */
 const relatedMap = new Map<string, RelatedInfo>();
 
 export const relatedFor = (path: string): RelatedInfo | undefined =>
   relatedMap.get(path);
 
-/**
- * 只有可收錄、有原始出版日的史料頁才參與連結，不把索引與空殼頁算進來。
- * 出版日格式由 isSourceDocument 統一校驗（含 `1910`、`1909-02` 這類降精度
- * 寫法），不再自己用 `typeof` 判斷，避免相關文獻與 JSON-LD／OG 卡的史料
- * 清單口徑分歧。
- */
 const isSourcePage = (page: Page): boolean =>
   isIndexablePage(page) && isSourceDocument(page);
 
-/** ISO 日期轉成可比較的整數；降精度寫法（1910）補 0 後仍可排序 */
-const dateKey = (value: string): number =>
-  Number(value.replace(/-/g, "").padEnd(8, "0")) || 0;
+const dateKey = (value: string): number => {
+  const date = parseDateValue(value);
+
+  return date
+    ? Number(`${date.year}${date.month ?? "00"}${date.day ?? "00"}`)
+    : 0;
+};
 
 interface Entry {
   page: Page;
   date: string;
   key: number;
   chapter: string;
-  /** 去掉最後一段檔名的目錄，例如 hospital/government-civil-hospital */
   group: string;
 }
 
@@ -72,7 +50,7 @@ function collect(app: App): void {
   const entries: Entry[] = app.pages
     .filter(isSourcePage)
     .map((page) => {
-      const date = page.frontmatter.datePublished as string;
+      const date = publishedDate(page) ?? "";
       const segments = pathSegments(page.path);
 
       return {
@@ -103,8 +81,6 @@ function collect(app: App): void {
       (item) => item.page.path === entry.page.path,
     );
 
-    // 先取同主題、出版日最靠近的前後各兩篇。由近而遠交替取，
-    // 讓單篇文獻不會永遠只連到比它早（或比它晚）的報道。
     for (let offset = 1; offset < siblings.length && picked.length < MAX_RELATED; offset += 1) {
       for (const candidate of [siblings[index - offset], siblings[index + offset]]) {
         if (!candidate || seen.has(candidate.page.path)) continue;
@@ -115,8 +91,6 @@ function collect(app: App): void {
       }
     }
 
-    // 同主題篇數不足時，補同章節內年代最接近者；仍以出版日距離排序，
-    // 不讓「同章節」變成與內容無關的隨機連結。
     if (picked.length < MAX_RELATED) {
       const near = (byChapter.get(entry.chapter) ?? [])
         .filter((candidate) => !seen.has(candidate.page.path))
@@ -146,7 +120,6 @@ function collect(app: App): void {
     };
 
     relatedMap.set(entry.page.path, info);
-    // page.data 會被序列化進頁面 chunk，usePageData() 在 SSR 與客戶端都讀得到。
     pageDataExtras(entry.page.data).related = info;
   }
 }
@@ -159,7 +132,6 @@ export const relatedDocumentsPlugin = (): Plugin => ({
   },
 });
 
-/** 供 .md 純文字鏡像使用的連結區塊；明確標示為導覽，避免被誤當成轉錄原文 */
 export const relatedMarkdown = (path: string): string => {
   const info = relatedFor(path);
 

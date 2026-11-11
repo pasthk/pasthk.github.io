@@ -26,9 +26,7 @@ concurrency:
   cancel-in-progress: true
 
 env:
-  # 正式站台網址（apex 會 301 轉向 www，因此統一使用 www）。
   SITE_URL: https://www.pasthk.com
-  # IndexNow 金鑰，同時是 src/.vuepress/public/ 下的檔名與內容；金鑰本質為公開資訊。
   INDEXNOW_KEY: f9dca700fbd94297a45a2e9911791bd4
 
 jobs:
@@ -64,8 +62,6 @@ jobs:
             throw new Error(`Unknown release type: ${requested}`);
           }
 
-          // 比對範圍：push 用 event.before；新建分支或 workflow_dispatch 時該值為空／全 0，
-          // 改以 after^ 為基準；根提交無父節點時留下空值，下游會略過 URL 收集。
           let base = process.env.BEFORE_SHA || "";
           if (!base || /^0+$/.test(base)) {
             try {
@@ -84,8 +80,6 @@ jobs:
               releaseType = "patch";
               reason = "無可比對範圍（根提交），保守使用 patch";
             } else {
-              // -z 讓檔名以 NUL 分隔，避免空白或非 ASCII 檔名被切斷；
-              // --find-renames 顯式開啟更名偵測，不受 runner 的 diff.renames 設定影響。
               const raw = execFileSync(
                 "git",
                 ["diff", "--name-status", "--find-renames", "-z", base, after, "--", "."],
@@ -94,20 +88,16 @@ jobs:
               const tokens = raw.split("\0").filter(Boolean);
               const entries = [];
               for (let i = 0; i < tokens.length; ) {
-                const status = tokens[i++]; // A / M / D / R100 / C75 ...
+                const status = tokens[i++];
                 const from = tokens[i++];
                 let path = from;
-                if (/^[RC]/.test(status)) path = tokens[i++]; // rename / copy 取新路徑
+                if (/^[RC]/.test(status)) path = tokens[i++];
                 entries.push({ status: status[0], path });
               }
 
-              // 排除 release commit 自己維護的兩個版本檔：上一次部署的版號變更
-              // 不應被算成內容變更，相依性更新也不應被誤判為新增檔案。
               const releaseFiles = new Set(["package.json", "package-lock.json"]);
               const relevant = entries.filter((entry) => !releaseFiles.has(entry.path));
               for (const entry of relevant) {
-                // 更名視同新增：R 代表新路徑／新 URL，與 URL 收集步驟的 AR 口徑一致。
-                // 若更名因相似度不足被拆成 D + A，仍會由 A 計入，結論不變。
                 if (entry.status === "A" || entry.status === "R") newFiles.push(entry.path);
               }
 
@@ -152,7 +142,6 @@ jobs:
             throw new Error(`Cannot bump version ${packageJson.version} with release type ${releaseType}`);
           }
 
-          // 版本號識別：三份版號理論上一致；若 lock 落後，以 package.json 為準並統一寫回。
           const lockVersion = packageLock.version;
           const lockRootVersion = packageLock.packages?.[""]?.version;
           if (lockVersion !== packageJson.version || lockRootVersion !== packageJson.version) {
@@ -192,10 +181,6 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add package.json package-lock.json
           git commit -m "chore: release v$(node -p "require('./package.json').version") [skip ci]"
-          # checkout 發生在數分鐘前；期間若有另一個 push，直接推送會
-          # non-fast-forward 失敗，連帶讓整個 build job（與 Pages 部署）落空。
-          # 先變基到遠端最新；版號只是部署識別，萬一競爭或衝突仍無法推送，
-          # 記為警告即可，不值得為它賠掉一次部署。
           git fetch origin "$BRANCH_NAME"
           if git rebase "origin/$BRANCH_NAME"; then
             if ! git push origin "HEAD:$BRANCH_NAME"; then
@@ -215,9 +200,6 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      # 5,000 行 TypeScript 先前沒有任何型別把關；在建置前攔下型別錯誤。
-      # typescript 以鎖定版本即時執行，不進 devDependencies，避免 CI 的
-      # npm ci 與版本號 commit 都需要同步 package-lock.json。
       - name: Type check
         run: npm run docs:typecheck
 
@@ -234,13 +216,9 @@ jobs:
           import { appendFileSync, readFileSync } from "node:fs";
           import { execFileSync } from "node:child_process";
 
-          // 基準由「Determine version bump」統一解析（新建分支／首次推送時為空並跳過），
-          // 兩步驟共用同一比對範圍，避免版號判定與 URL 收集口徑不一致。
           const base = process.env.BASE_SHA;
           const after = process.env.AFTER_SHA;
 
-          // 新頁面（A/R）給百度：百度有每日配額，只送新增頁以免浪費。
-          // 變更頁面（A/M/R）給 IndexNow：Bing 等引擎希望收到內容更新通知。
           let newUrls = [];
           let changedUrls = [];
 
@@ -289,11 +267,6 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
 
     steps:
-      # deploy job 跑在獨立的 runner，不會沿用 build job 的工作目錄。
-      # 底下三個 URL 提交步驟都 import ./.github/url-submission.mjs，
-      # 少了這一步會讓三者全部 ERR_MODULE_NOT_FOUND；前兩步有
-      # continue-on-error 會被掩蓋成 success，只有彙總步驟亮紅燈，
-      # 但實際上 IndexNow／百度都沒送出任何 URL。
       - name: Checkout repository
         uses: actions/checkout@v5
 
@@ -301,9 +274,6 @@ jobs:
         id: deployment
         uses: actions/deploy-pages@v5.0.1
 
-      # 兩個提交步驟皆為 continue-on-error：站台此時已部署完成，
-      # 個別引擎的推送失敗不應讓整條部署顯示為失敗，也不應互相阻斷。
-      # 各步把結果寫入同一份狀態檔，最後由彙總步驟統一輸出。
       - name: Submit URLs to IndexNow
         continue-on-error: true
         env:
@@ -342,7 +312,6 @@ jobs:
               const body = (await response.text()).trim();
               console.log(`IndexNow responded ${response.status}${body ? `: ${body}` : ""}`);
 
-              // 200 = 已提交；202 = 已接受（金鑰仍在驗證中）。兩者都算成功。
               if (response.ok) {
                 console.log(`Submitted ${urls.length} URL(s) to IndexNow.`);
               } else if (response.status === 429) {
@@ -373,8 +342,6 @@ jobs:
           node --input-type=module <<'NODE'
           import { reportSubmission } from "./.github/url-submission.mjs";
 
-          // 百度單次請求超過當日剩餘配額會整批拒絕，因此分批送出，
-          // 並依回應的 remain 動態收窄下一批，避免一次超額導致全數落空。
           const BATCH_SIZE = 10;
 
           let status = "ok";
@@ -423,7 +390,6 @@ jobs:
 
                 if (!response.ok || data?.error) {
                   const message = data?.message ?? `HTTP ${response.status}`;
-                  // 配額用盡不算錯誤，其餘（token 失效、site 不符等）屬設定問題，需浮出。
                   if (message === "over quota") {
                     quotaExhausted = true;
                     break;
@@ -431,9 +397,6 @@ jobs:
                   throw new Error(message);
                 }
 
-                // 200 不代表全部入庫：success 為實際收錄數，
-                // not_valid / not_same_site 為被拒的 URL，須一併計入結果。
-                // success 理論上不會超過本批長度，仍取 min 以防重複計數。
                 accepted += typeof data?.success === "number" ? Math.min(data.success, batch.length) : batch.length;
                 if (typeof data?.remain === "number") remain = data.remain;
                 for (const url of data?.not_valid ?? []) invalid.add(url);

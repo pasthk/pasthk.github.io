@@ -30,11 +30,17 @@ const readingTimeMeta = computed(() => {
 
 const transcriptionStatus = computed(() => {
   const { excerpted, proofread } = frontmatter.value;
-  if (typeof excerpted !== "boolean" || typeof proofread !== "boolean") {
-    return null;
-  }
+  const hasExcerpted = typeof excerpted === "boolean";
+  const hasProofread = typeof proofread === "boolean";
 
-  return { excerpted, proofread };
+  if (!hasExcerpted && !hasProofread) return null;
+
+  return {
+    hasExcerpted,
+    hasProofread,
+    excerpted: excerpted === true,
+    proofread: proofread === true,
+  };
 });
 </script>
 
@@ -46,14 +52,29 @@ const transcriptionStatus = computed(() => {
     v-bind="isPure ? {} : { 'data-balloon-pos': 'up' }"
   >
     <span>{{ readingTimeLocale.time }}</span>
-    <meta property="timeRequired" :content="readingTimeMeta || ''" />
-    <span v-if="transcriptionStatus" class="page-transcription-status">
-      <label>
-        <input type="checkbox" :checked="transcriptionStatus.excerpted" disabled>
+    <meta v-if="readingTimeMeta" property="timeRequired" :content="readingTimeMeta" />
+    <span
+      v-if="transcriptionStatus"
+      class="page-transcription-status"
+      role="group"
+      aria-label="轉錄狀態"
+    >
+      <label v-if="transcriptionStatus.hasExcerpted">
+        <input
+          type="checkbox"
+          :checked="transcriptionStatus.excerpted"
+          :aria-label="`摘錄：${transcriptionStatus.excerpted ? '是' : '否'}`"
+          disabled
+        >
         摘錄
       </label>
-      <label>
-        <input type="checkbox" :checked="transcriptionStatus.proofread" disabled>
+      <label v-if="transcriptionStatus.hasProofread">
+        <input
+          type="checkbox"
+          :checked="transcriptionStatus.proofread"
+          :aria-label="`校對：${transcriptionStatus.proofread ? '已校對' : '未校對'}`"
+          disabled
+        >
         校對
       </label>
     </span>

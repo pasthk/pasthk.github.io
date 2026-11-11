@@ -6,11 +6,8 @@ import { RouteLink, useRoute } from "vuepress/client";
 defineOptions({ inheritAttrs: false });
 
 const route = useRoute();
-// 與主題一致的開關：頁面 frontmatter > 主題設定 > 預設開啟
 const { frontmatter, themeLocale } = useData();
 
-// 路徑由 breadcrumbPlugin 在建置時算好並寫入路由的 meta（見 breadcrumb.ts），
-// 這裡只負責呈現；換頁時 route.meta 會隨路由更新。
 const trail = computed(() => {
   const enabled =
     frontmatter.value.breadcrumb ?? themeLocale.value.breadcrumb ?? true;

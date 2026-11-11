@@ -2,28 +2,9 @@ import { readdirSync } from "node:fs";
 import type { App, Plugin } from "vuepress/core";
 import { warn } from "vuepress/utils";
 
-/**
- * 章節定義：src 下的頂層目錄 → 中文名稱與簡介。
- *
- * 這裡是唯一來源，四種輸出都從此取值，改一處全站同步：
- *
- * - `name`：OG 卡片右上角的章節標籤（og/plugin.ts）、llms.txt 的 H2 標題、
- *   browse.html 的章節標題、全文分冊的檔頭與 label。
- * - `note`：llms.txt 分組標題下的說明、browse.html 的章節簡介。
- * - 陣列順序：llms.txt、browse.html、分冊的排列順序，未列於此的目錄附在最後。
- *
- * 之所以要集中：先前兩處各自維護，`custom` 在一處叫「傳統節慶與打醮」、
- * 另一處叫「香港傳統節慶與打醮」，`tropical-cyclone` 同樣不一致。
- *
- * `name` 取短式，因為它要放進卡片右上角與左側刊頭共處的固定寬度位置；
- * 較長的說明放 `note`。兩者都不做長度檢查，改動時請自行留意版面。
- */
-interface Chapter {
-  /** src 下的頂層目錄名，也是頁面路徑的第一段 */
+export interface Chapter {
   dir: string;
-  /** 章節中文名 */
   name: string;
-  /** 章節簡介 */
   note: string;
 }
 
@@ -82,31 +63,18 @@ export const chapters: Chapter[] = [
 
 const byDir = new Map(chapters.map((chapter) => [chapter.dir, chapter]));
 
-/** 由頁面路徑的第一段取得章節名稱；未知目錄回傳 undefined */
-export const chapterName = (dir: string): string | undefined =>
-  byDir.get(dir)?.name;
+export const chapterMeta = (dir: string): Chapter | undefined =>
+  byDir.get(dir);
 
-/** 路徑分段：/archaeology/foo.html → ["archaeology", "foo.html"]；全站共用 */
+export const chapterName = (dir: string): string | undefined =>
+  chapterMeta(dir)?.name;
+
 export const pathSegments = (path: string): string[] =>
   path.split("/").filter(Boolean);
 
-/** 由頁面路徑取得章節中文名；根目錄與未知章節回傳 undefined */
 export const chapterOfPath = (path: string): string | undefined =>
   chapterName(pathSegments(path)[0] ?? "");
 
-/** 由目錄名取得章節名稱與簡介，供動態索引頁取用 */
-export const chapterMeta = (
-  dir: string,
-): { name: string; note: string } | undefined => byDir.get(dir);
-
-/**
- * 建置期校驗：章節定義與 src 頂層目錄必須一對一。
- *
- * 漏登記一個目錄不會讓建置失敗，只會靜默降級：llms.txt 出現英文目錄名的
- * H2、分冊檔頭變成目錄名、OG 卡沒有章節標籤，而「分屬 N 個主題章節」仍是
- * 舊數字。反過來，登記了卻沒有對應目錄，則會讓對外文案虛報章節數。
- * 兩種情況都在這裡點名，不必等成品出來才發現。
- */
 export const chaptersGuardPlugin = (): Plugin => ({
   name: "chapters-guard",
 

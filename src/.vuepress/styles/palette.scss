@@ -2,7 +2,6 @@ $vp-font: serif;
 $vp-font-heading: serif;
 $vp-font-mono: serif;
 
-// 字型變數由 sass-palette 依上方 $vp-font* 自動生成，此處只覆寫顏色。
 :root {
   --vp-c-text: #000;
   --vp-c-text-mute: #000;

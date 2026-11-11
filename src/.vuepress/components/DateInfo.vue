@@ -1,6 +1,7 @@
 <script setup>
 import { computed } from "vue";
-import { useFrontmatter, useLang } from "vuepress/client";
+import { useFrontmatter } from "vuepress/client";
+import { formatChineseDate, parseDateValue } from "../format.js";
 
 defineOptions({ inheritAttrs: false });
 
@@ -11,27 +12,18 @@ const props = defineProps({
   },
 });
 
-const lang = useLang();
 const frontmatter = useFrontmatter();
 
-const formatSourceDate = (value) => {
-  if (!value) return null;
-
-  const match = /^(\d{4})(?:-(\d{2}))?(?:-(\d{2}))?$/.exec(String(value));
-  if (!match) return String(value);
-
-  const [, year, month, day] = match;
-  if (day) return `${year}年${Number(month)}月${Number(day)}日`;
-  if (month) return `${year}年${Number(month)}月`;
-  return `${year}年`;
-};
-
-/** 同時產生顯示文字與原始值，避免兩者各自計算而不同步 */
 const sourceDate = (property, label) => {
-  const value = frontmatter.value[property];
-  if (typeof value !== "string" || !value) return null;
+  const date = parseDateValue(frontmatter.value[property]);
+  if (!date) return null;
 
-  return { property, label, raw: value, text: formatSourceDate(value) };
+  return {
+    property,
+    label,
+    raw: date.text,
+    text: formatChineseDate(date.text),
+  };
 };
 
 const datePublished = computed(() => sourceDate("datePublished", "報刊："));
@@ -40,20 +32,21 @@ const sourceDates = computed(() =>
   [datePublished.value, dateCreated.value].filter(Boolean),
 );
 
-const formattedDate = computed(() => {
-  if (!props.date) return null;
+const dateIso = computed(() => {
+  if (!props.date) return "";
 
-  const parts = new Intl.DateTimeFormat(lang.value, {
-    year: "numeric",
-    month: "2-digit",
-    day: "2-digit",
-    calendar: "gregory",
-    numberingSystem: "latn",
-  }).formatToParts(props.date);
-  const part = (type) => parts.find((item) => item.type === type)?.value;
+  const value = props.date instanceof Date ? props.date : new Date(props.date);
+  if (Number.isNaN(value.getTime())) return "";
 
-  return `${part("year")}年${part("month")}月${part("day")}日`;
+  const month = String(value.getMonth() + 1).padStart(2, "0");
+  const day = String(value.getDate()).padStart(2, "0");
+
+  return `${value.getFullYear()}-${month}-${day}`;
 });
+
+const formattedDate = computed(() =>
+  dateIso.value ? formatChineseDate(dateIso.value) : null,
+);
 </script>
 
 <template>
@@ -74,7 +67,7 @@ const formattedDate = computed(() => {
     <span v-else data-allow-mismatch="text">{{ formattedDate }}</span>
     <meta
       property="datePublished"
-      :content="datePublished?.raw || date?.toISOString() || ''"
+      :content="datePublished?.raw || dateIso || ''"
     />
     <meta v-if="dateCreated" property="dateCreated" :content="dateCreated.raw" />
   </span>

@@ -1,14 +1,14 @@
 <script setup>
 import { computed } from "vue";
 import { RouteLink, usePageData } from "vuepress/client";
+import { formatChineseDate } from "../format.js";
 
-/**
- * 由 related-documents.ts 在 onInitialized 寫入 page.data.related。
- * 放在 Layout 的 contentAfter，因此 SSR 產出的靜態 HTML 就含有這些 <a>：
- * 爬蟲不必執行 JavaScript 也能沿同一主題找到其他史料。
- */
 const page = usePageData();
-const items = computed(() => page.value.related?.items ?? []);
+const items = computed(() => {
+  const related = page.value.related;
+
+  return Array.isArray(related?.items) ? related.items : [];
+});
 </script>
 
 <template>
@@ -17,7 +17,7 @@ const items = computed(() => page.value.related?.items ?? []);
     <ul>
       <li v-for="item in items" :key="item.path">
         <RouteLink :to="item.path">{{ item.title }}</RouteLink>
-        <span v-if="item.date" class="related-docs-date">{{ item.date }}</span>
+        <span v-if="item.date" class="related-docs-date">{{ formatChineseDate(item.date) }}</span>
       </li>
     </ul>
   </nav>
@@ -26,8 +26,6 @@ const items = computed(() => page.value.related?.items ?? []);
 <style>
 .related-docs {
   margin: 2rem 0 1rem;
-  padding-top: 1.25rem;
-  border-top: 1px solid var(--vp-c-border);
 }
 
 .related-docs h2 {

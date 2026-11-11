@@ -1,10 +1,7 @@
-// 手動預覽 OG 卡片：node src/.vuepress/og/preview.mjs
-// 輸出樣本 SVG 到專案內臨時目錄，直接用瀏覽器打開即可檢視，不參與建置。
 import { mkdirSync, writeFileSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 import { dirname, join } from "node:path";
 import { buildCardSvg } from "./card.ts";
-// 這裡用 .ts 指定子而非 .js：本檔不經 Vite，Node 的型別剝除只認實際存在的檔名。
 import { HOST, SITE_NAME } from "../site.ts";
 
 const here = dirname(fileURLToPath(import.meta.url));

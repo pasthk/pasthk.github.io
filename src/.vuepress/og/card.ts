@@ -1,25 +1,7 @@
-// OG 分享卡片的 SVG 產生器。
-//
-// 輸出用 <text> 直接寫字，不再把文字轉成 <path>：卡片最終是 PNG，
-// 由建置時的 resvg 用 og/fonts/ 內的子集字型光柵化，字型已經被「烤」進點陣圖，
-// 不需要再為「觀看端有沒有中文字型」做準備。轉路徑那套（glyphs.ts）因此移除。
-//
-// 前提是光柵化時必須載入同一份子集字型（見 plugin.ts 的 font 選項），
-// 否則 <text> 會退回系統字型，字重與字形都會走樣。
-//
-// 本檔刻意不 import 任何專案模組：它是一個純渲染器，站名與網址由呼叫端傳入。
-// 這樣 `node src/.vuepress/og/preview.mjs` 才能直接載入（Node 的型別剝除
-// 不會把 `../site.js` 這種 .js 指定子改寫成 .ts，一旦有此 import，手動預覽即失效）。
 
 export const CARD_WIDTH = 1200;
 export const CARD_HEIGHT = 1200;
 
-/**
- * 卡片使用的字型家族名，必須與 og/fonts/ 內子集字型的 name table 一致。
- *
- * 名稱帶 ExtraLight 是因為子集取自 Noto Serif TC 可變字型的預設實例，
- * 實際字重由 font-weight（400／700）決定，兩份檔案分別是 Regular 與 Bold。
- */
 export const CARD_FONT_FAMILY = "Noto Serif TC ExtraLight";
 
 const COLOR = {
@@ -34,10 +16,8 @@ const PAD_LEFT = 96;
 const PAD_RIGHT = 96;
 const CONTENT_WIDTH = CARD_WIDTH - PAD_LEFT - PAD_RIGHT;
 
-// 換行時留一成餘裕，避免量測誤差讓最後一個字溢出到畫布外。
 const WRAP_WIDTH = CONTENT_WIDTH * 0.9;
 
-/** 中文與全形字約佔一個字身，拉丁字母較窄；只用於估算換行位置。 */
 function charWidth(char: string, size: number): number {
   const code = char.codePointAt(0) ?? 0;
 
@@ -49,16 +29,8 @@ function charWidth(char: string, size: number): number {
   return size * 0.54;
 }
 
-// 行首不宜出現的標點，遇到時併回上一行，避免出現孤零零的逗號句號。
 const NO_LINE_START = "、。，．：；！？）」』》】…·%";
 
-/**
- * 依可用寬度截斷單行文字，超出時以省略號收尾。
- *
- * meta 由 ReferenceBox 改寫而來，少數條目（法案摘錄、文獻出處）特別長，
- * 不截斷會直接衝出畫布右緣。SVG 的 <text> 不會自動換行，
- * 因此必須在這裡先算好寬度。
- */
 function truncate(text: string, size: number, maxWidth: number): string {
   const ellipsis = charWidth("…", size);
   let width = 0;
@@ -78,7 +50,6 @@ function truncate(text: string, size: number, maxWidth: number): string {
   return text;
 }
 
-/** 估算一段文字的寬度。 */
 function measure(text: string, size: number): number {
   let width = 0;
 
@@ -92,9 +63,6 @@ function wrap(text: string, size: number, maxWidth: number): string[] {
   let line = "";
   let width = 0;
 
-  // 最近一個半角空格的位置。拉丁文超寬時退回這裡斷行，
-  // 避免把單詞切成兩半（英文標題曾出現「preserv / e heritage」）。
-  // 中文沒有空格，這個值會維持 -1，仍照原本的逐字斷行。
   let breakAt = -1;
 
   for (const char of text) {
@@ -144,15 +112,10 @@ function wrap(text: string, size: number, maxWidth: number): string[] {
 }
 
 export interface CardContent {
-  /** 卡片主標題，通常是頁面 title */
   title: string;
-  /** 標題下的次要資訊，例如「華僑日報 · 1955年8月10日 · 第2張第1頁」 */
   meta?: string;
-  /** 右上角的章節名稱 */
   section?: string;
-  /** 左上角刊頭；未給則留空，由呼叫端決定（見 plugin.ts 的 SITE_NAME） */
   header?: string;
-  /** 左下角網址；未給則留空，由呼叫端決定（見 plugin.ts 的 HOST） */
   footer?: string;
 }
 
@@ -165,7 +128,6 @@ function escapeXml(text: string): string {
     .replace(/'/g, "&apos;");
 }
 
-/** 一段文字。字型由光柵化階段的 font 選項提供，這裡只寫家族名。 */
 function draw(
   text: string,
   {
@@ -202,7 +164,6 @@ function draw(
   return `<text ${attrs}>${escapeXml(text)}</text>`;
 }
 
-/** 產生卡片 SVG。呼叫端負責光柵化（見 plugin.ts）。 */
 export function buildCardSvg({
   title,
   meta,
@@ -210,7 +171,6 @@ export function buildCardSvg({
   header = "",
   footer = "",
 }: CardContent): string {
-  // 標題由大到小試，取第一個能在三行內排完的字級。
   const sizes = [78, 70, 62, 54, 46];
   let fontSize = sizes[sizes.length - 1];
   let lines: string[] = [];
@@ -232,7 +192,6 @@ export function buildCardSvg({
   const titleBlockHeight = lines.length * lineHeight;
   const metaGap = 62;
   const metaBlockHeight = meta ? metaGap : 0;
-  // 標題與次要資訊作為一個整體，在 header 底線與 footer 頂線之間垂直居中。
   const zoneTop = 132;
   const zoneBottom = 1080;
   const blockHeight = titleBlockHeight + metaBlockHeight;
@@ -300,8 +259,6 @@ export function buildCardSvg({
     anchor: "end",
   });
 
-  // <title> 與 aria-label 同時服務無障礙工具與讀取 SVG 原始碼的 AI 爬蟲。
-  // 這是唯一保留純文字的地方——它不會被渲染成圖形，也不影響版面。
   const accessibleTitle = escapeXml(meta ? `${title} — ${meta}` : title);
 
   return `<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="${CARD_WIDTH}" height="${CARD_HEIGHT}" viewBox="0 0 ${CARD_WIDTH} ${CARD_HEIGHT}" role="img" aria-label="${accessibleTitle}">

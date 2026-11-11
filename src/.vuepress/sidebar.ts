@@ -2,15 +2,6 @@ import { sidebar } from "vuepress-theme-hope";
 
 import { pushTo } from "./map-utils.js";
 
-/**
- * 熱帶氣旋警告信號條目（依年份，只列已有正文者）。
- * 側邊欄按年代分組，故只需維護這份年份清單，不必逐組手寫。
- *
- * 尚未收錄（補上正文後把年份加進下面的陣列即可）：
- *   1954、1955、1956、1958、1959
- *   1960、1961、1963–1969
- *   1970–1989、1990
- */
 const signalYears = [
   1897,
   1902, 1904, 1905, 1906, 1907, 1909,
@@ -22,13 +13,11 @@ const signalYears = [
   1962,
 ];
 
-/** 側邊欄節點：字串捷徑、具名連結，或可摺疊分組 */
 type SidebarNode =
   | string
   | { text: string; link: string }
   | { text: string; collapsible: true; children: SidebarNode[] };
 
-/** 全站唯一的可摺疊分組樣板，省去每層重複 `collapsible: true` */
 const group = (text: string, children: SidebarNode[]) => ({
   text,
   collapsible: true as const,
@@ -37,7 +26,6 @@ const group = (text: string, children: SidebarNode[]) => ({
 
 const link = (text: string, href: string) => ({ text, link: href });
 
-/** 依年代分組，產生「1890年代警告信號」等側邊欄群組 */
 const signalDecadeGroups = () => {
   const decades = new Map<number, string[]>();
 
@@ -163,7 +151,6 @@ const sidebarConfig: Record<string, SidebarNode[]> = {
   ],
 };
 
-/** 側邊欄所有手寫與自動產生的連結，供建置期死鏈校驗取用 */
 export const sidebarLinks = (): string[] => {
   const found: string[] = [];
 

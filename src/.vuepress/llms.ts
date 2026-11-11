@@ -12,6 +12,7 @@ import { pushTo } from "./map-utils.js";
 import {
   canonicalUrl,
   citationOf,
+  isLlmsPage,
   publishedDate,
   replaceReferenceBoxes,
 } from "./page-meta.js";
@@ -19,19 +20,10 @@ import { relatedMarkdown } from "./related-documents.js";
 import { describeSite, siteStats, type StatsInput } from "./site-stats.js";
 import { HOSTNAME, SITE_NAME } from "./site.js";
 
-/**
- * 網站摘要。外掛預設只取 `siteData.description`（「認識香港，從文獻開始。」），
- * 資訊量不足以讓模型判斷本站性質，故改為中英並列的兩段。
- */
 const SUMMARY = `> 以歷史事件為核心的香港文獻索引。轉錄十九世紀後期至二十世紀的香港舊報紙、政府公報、調查報告與研究論著原文，按事件集中編排，每篇保留報刊名稱、日期、版次與頁碼，可直接引用。
 >
 > An event-centred documentary index of Hong Kong history: full-text transcriptions of Hong Kong newspapers (late 19th to 20th century), government reports and scholarly works, grouped by event, with newspaper title, date, edition and page number preserved for citation.`;
 
-/**
- * llms.txt v2 的 `## Optional`：次要、可在短脈絡下略過的檔案。
- * 目錄本身仍指向各頁的 `.md` 純文字鏡像，這是提案建議的 LLM-friendly 連結。
- * 分冊清單由 llms-volumes.ts 與切檔邏輯共用，檔名不會對不起來。
- */
 function buildOptional(pages: LLMPage[]): string {
   const volumes = volumesFor(pages.map((page) => page.path));
 
@@ -50,16 +42,6 @@ function buildOptional(pages: LLMPage[]): string {
   ].join("\n");
 }
 
-/**
- * 目錄以外的固定說明。這部分原本是手寫的 `public/llms.txt`，
- * 改由模板注入後，目錄可隨頁面增減自動更新，說明文字仍由人工維護。
- *
- * 頁面數由 pages.length 帶入，不再寫死「約 200 個頁面」——那是網站只有
- * 兩百頁時留下的數字，現在目錄已有 260 餘頁，且仍會持續增加。
- *
- * 小節一律用粗體段落而非 `##`：依 llmstxt.org v2，第一個 H2 之後的內容
- * 會被當成「檔案清單」解析，說明文字若佔用 H2 會產生沒有連結的空清單。
- */
 function buildDetails(pages: LLMPage[]): string {
   const stats = siteStats(pages as StatsInput[]);
 
@@ -133,10 +115,6 @@ ${SITE_NAME}，${HOSTNAME}/archaeology/lei-cheng-uk-han-tomb/19550810-wah-kiu-ya
 - 支持本站：${HOSTNAME}/support.html`;
 }
 
-/**
- * 目錄摘要取第一個短句並限長。description 在 YAML 中可能是多行摺疊值，
- * 不壓平會把清單項目撐成段落；不截短則目錄會被描述淹沒。
- */
 function brief(description: unknown): string {
   if (typeof description !== "string") return "";
 
@@ -146,15 +124,6 @@ function brief(description: unknown): string {
   return text.length > 48 ? `${text.slice(0, 47)}…` : text;
 }
 
-/**
- * 純文字版的來源區塊。
- *
- * 外掛只為每份 .md 寫入 `url`（指向 .md 自身）與 `description`，
- * 模型讀完 llms.txt 後拿不到原始報刊、出版日與可引用的正式網址；
- * 而 GEO 實證中最能提升被引用率的正是「可驗證的出處」。
- * 這裡把出處放到全文最前面，並區分史料頁與本站整理的索引頁，
- * 避免替索引頁編造不存在的原始文獻日期。
- */
 function provenance(markdown: string, page: Page): string {
   const citation = citationOf(markdown);
   const url = canonicalUrl(page);
@@ -178,27 +147,19 @@ function provenance(markdown: string, page: Page): string {
         "> 引用史料請沿本頁所列連結取得原始文獻轉錄頁，並使用該頁的引用字串。",
       ];
 
-  // HTML 頁尾的「相關文獻」也給模型一份：llms.txt 只有扁平目錄，
-  // 模型讀單頁 .md 時無法知道同一事件還有哪些報道可交叉比對。
   const links = relatedMarkdown(page.path);
 
   return `${lines.join("\n")}\n\n${clean}${links ? `\n${links}` : ""}`;
 }
 
-/** 單一目錄項。不使用外掛的 generateTOCLink，因為它不處理描述中的換行。 */
 function tocLine(page: LLMPage, state: LLMState): string {
   const url = generateLink(page.htmlFilePathRelative, state);
   const description = brief(page.frontmatter.description);
-  // 首頁的 frontmatter 標題是「前言」，放進目錄看不出是首頁。
   const label = page.path === "/" ? "首頁" : page.title;
 
   return `- [${label}](${url})${description ? `: ${description}` : ""}`;
 }
 
-/**
- * 按章節分組的目錄。外掛預設只做單層字母序清單，120 頁的颱風章節會把其餘章節打散。
- * 每個章節用一個 H2：llmstxt.org v2 以 H2 作為「檔案清單」分節，H3 會被解析器略過。
- */
 function buildToc(pages: LLMPage[], state: LLMState): string {
   const overview: LLMPage[] = [];
   const byChapter = new Map<string, LLMPage[]>();
@@ -206,7 +167,6 @@ function buildToc(pages: LLMPage[], state: LLMState): string {
   for (const page of pages) {
     const segments = pathSegments(page.path);
 
-    // 根目錄頁面（首頁、關於本站、閱讀說明、支持本站）沒有章節歸屬。
     if (segments.length < 2) {
       overview.push(page);
       continue;
@@ -254,21 +214,14 @@ function buildToc(pages: LLMPage[], state: LLMState): string {
 }
 
 export const llms = llmsPlugin({
-  // 連結一律帶上網域，模型在沒有 base 上下文的情況下也能直接取用。
   domain: HOSTNAME,
 
-  // 空殼頁（只有標題、無正文）已設 sitemap: false 與 noindex，不應出現在給模型的索引裡。
-  filter: (page: Page) => page.frontmatter.sitemap !== false,
+  filter: isLlmsPage,
 
-  // 預設 true 會把 <ReferenceBox> 整個刪掉，而引用字串正是本站最需要被引用的內容。
   stripHTML: false,
 
-  // 保留引用框的文字、還原被 remark 轉義的 \*\*，並在最前面補上來源區塊。
-  // 第二個參數是頁面物件，用來判斷是否為史料頁並取得規範網址。
   transformMarkdown: provenance,
 
-  // v2：H1 → 摘要引言 → 無標題的說明 → H2 檔案清單 → ## Optional。
-  // 說明區不可用 H2，否則會被當成沒有連結的空清單。
   llmsTxtTemplate: `# {title}
 
 {description}

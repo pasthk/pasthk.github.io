@@ -74,8 +74,6 @@
     padding: 0 0.5em;
   }
 
-  // 可點擊層級不指定顏色，沿用主題的全域連結樣式（--vp-c-accent、字重 500）；
-  // 無對應頁面的分組層級則用次要文字色，等同主題原本 .is-active 的處理。
   li > span {
     color: var(--vp-c-text-mute, #3c3c43c7);
   }
@@ -88,7 +86,6 @@
     padding-inline-end: 0;
   }
 
-  // 主題只在內容區給連結加底線（麵包屑位於內容區之外），這裡補上同樣的回饋。
   a:hover {
     text-decoration: underline;
   }
@@ -104,8 +101,6 @@ body {
   letter-spacing: 0.02em;
 }
 
-// 主題已給 .vp-toc-item 固定 height: 2rem，此處原本再宣告 min-height 屬冗餘，已移除。
-// 作用中的目錄項主題用 bold（700），這裡降到 600，避免與正文標題搶視覺重量。
 .vp-toc-item.active > .vp-toc-link {
   font-weight: 600;
 }
@@ -118,8 +113,6 @@ body {
 }
 
 .page-info {
-  // 閱讀時間圖示已從 ReadingTimeInfo.vue 移除（每頁 1KB 的 SVG，卻被這裡隱藏），
-  // 原本的 `.page-reading-time-info > .icon { display: none }` 一併刪去。
 
   .page-date-info + .page-reading-time-info {
     margin-inline-start: 0.1em;
@@ -197,11 +190,6 @@ body {
   line-height: 1.6;
 }
 
-// 「在 GitHub 上編輯此頁」預設位於頁尾 meta 列最左側。改推到最右側：
-// 讓日期／閱讀時間（git-info）靠左、編輯入口靠右，符合文獻站點常見的視覺動線。
-// 主題預設 .vp-meta-item 為 flex-grow:1，會把空 git-info 撐開而把編輯連結擠到左邊，
-// 這裡收掉編輯連結的 flex-grow 並以 margin-inline-start:auto 把它推到右端；
-// order:2 保證即使 git-info 有內容，編輯連結仍排在最後（最右）。
 .vp-page-meta .edit-link {
   order: 2;
   flex-grow: 0;
@@ -209,11 +197,6 @@ body {
   text-align: end;
 }
 
-// 頂部廣告位（原 public/ads.css）。
-// 原先以 /ads.css 獨立載入：那是 head 中第一個被發現的 render-blocking 樣式表，
-// 且早於主樣式表的 preload，等於多一次關鍵路徑請求。併入此檔後隨主 CSS 一起
-// 壓縮與長快取，全站少一張樣式表請求；選擇器皆為 .ad-*，與主題無碰撞，
-// 載入順序由「ads.css 在前」改成「主 CSS 在內」不影響結果。
 .ad-top-wrap {
   position: relative;
   width: 100%;
@@ -233,14 +216,10 @@ body {
   text-align: center;
 }
 
-// flex 子項的 width 預設為 auto，空內容的 <ins> 會塌縮成 0 寬；
-// AdSense 依容器寬度計算響應式尺寸，0 寬即無法填充。
 .ad-top > ins.adsbygoogle {
   width: 100%;
 }
 
-// 「廣告」標示由 AdTop.vue 以實體 <span> 輸出，不再用 ::before 的
-// content 生成：後者不存在於 HTML 原始碼，審核爬蟲與輔助技術都讀不到。
 .ad-top-wrap > .ad-label {
   position: absolute;
   top: 0;

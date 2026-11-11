@@ -1,31 +1,3 @@
-#!/usr/bin/env python3
-"""產生 OG 卡片用的字型子集。
-
-Noto Serif TC／SC 以 SIL Open Font License 1.1 釋出，可自由使用與散布。
-這裡把字型裁成「本站實際用到的字元」，存成 TTF 供建置時使用。
-
-用途：建置時由 resvg 載入，用來光柵化卡片 SVG 裡的 <text>。
-字型直接「烤」進輸出的 PNG，所以只要子集覆蓋卡片上的字元，
-成品就不受觀看端有沒有中文字型影響，也不會出現亂碼或方框。
-（先前是把文字轉成 <path> 再輸出 SVG，改為 PNG 後已不需要那道手續。）
-
-缺字時的表現：子集沒有的字元會畫成 .notdef 空心方框，
-與過去轉路徑時的行為一致，問題看得見而不是靜默消失。
-建置時 og/plugin.ts 也會讀取這裡輸出的 coverage.json 逐字比對，
-一旦卡片用字超出子集就在日誌中點名頁面與缺字，不必等看到成品才發現。
-
-為什麼要合併多個來源檔：@fontsource 把字型依 unicode-range 切成近百個子集。
-繁體主檔（chinese-traditional）只有常用漢字，缺全角標點；
-簡體主檔（chinese-simplified）補齊簡體字與標點；
-少數異體字（考、窰、衞……）又散落在編號子集裡。
-因此流程是：先合併主檔 → 找出仍缺的字 → 從對應子集補齊 → 最後裁切。
-
-用法：
-    python3 scripts/build-og-fonts.py
-
-前置：
-    npm i -D @fontsource/noto-serif-tc @fontsource/noto-serif-sc
-"""
 
 import glob
 import json
@@ -43,13 +15,11 @@ TMP = os.path.join(ROOT, ".workbuddy-ai", "tmp")
 
 WEIGHTS = ("700", "400")
 
-# 主檔：繁體優先，簡體補齊。順序即優先順序。
 PRIMARY = (
     ("noto-serif-tc", "chinese-traditional"),
     ("noto-serif-sc", "chinese-simplified"),
 )
 
-# 卡片固定文案。即使全站 Markdown 掃描有遺漏也能涵蓋。
 FIXED_TEXT = (
     "香港文獻類編認識，從文獻開始www.pasthk.com"
     "Hong Kong Documents"
@@ -67,12 +37,6 @@ PUNCTUATION = (
 
 
 def collect_chars() -> set:
-    """收集所有可能出現在 OG 卡片上的字元。
-
-    卡片文字來源是 page.title 與 meta（ReferenceBox、description 首句），
-    兩者都可能包含任意漢字，因此掃描全站 Markdown 取聯集，
-    不能只依賴已建置的 SVG（那會漏掉換標題後才出現的字）。
-    """
     chars = set(FIXED_TEXT) | set(PUNCTUATION)
     chars |= {chr(code) for code in range(0x20, 0x7F)}
 
@@ -92,7 +56,6 @@ def collect_chars() -> set:
 
 
 def to_ttf(package: str, subset: str, weight: str) -> str | None:
-    """把 woff2 子集轉成暫存 TTF（Merger 只吃未壓縮的 TrueType）。"""
     src = os.path.join(
         FONT_ROOT, package, "files", f"{package}-{subset}-{weight}-normal.woff2"
     )
@@ -132,7 +95,6 @@ def unicode_ranges(spec: str) -> list[tuple[int, int]]:
 
 
 def subsets_covering(char: str, table: dict) -> list[str]:
-    """找出哪個編號子集包含這個字元。"""
     cp = ord(char)
     hits = []
 
@@ -144,7 +106,6 @@ def subsets_covering(char: str, table: dict) -> list[str]:
 
 
 def build_weight(weight: str, chars: set) -> TTFont:
-    """合併主檔，補齊缺字，最後裁切到 chars。"""
     paths = []
 
     for package, subset in PRIMARY:
@@ -164,7 +125,6 @@ def build_weight(weight: str, chars: set) -> TTFont:
 
     print(f"  {weight}: 主檔缺 {len(missing)} 字，從子集補齊")
 
-    # 依 unicode.json 找出需要的子集，一次補齊。
     table = json.load(
         open(os.path.join(FONT_ROOT, "noto-serif-tc", "unicode.json"), encoding="utf-8")
     )
@@ -189,7 +149,6 @@ def build_weight(weight: str, chars: set) -> TTFont:
         if still:
             print(f"    仍缺 {len(still)} 字：{''.join(still)}")
 
-    # 裁切到實際用到的字元
     options = Options()
     options.layout_features = []
     options.name_IDs = ["*"]
@@ -222,11 +181,9 @@ def main() -> None:
         font.flavor = None
         dst = os.path.join(FONT_OUT, f"noto-serif-tc-{weight}.ttf")
         font.save(dst)
-        # 以實際產出的 cmap 為準：來源字型本身也缺的字不會被列進去
         coverage = sorted(font.getBestCmap())
         print(f"    {os.path.getsize(dst) // 1024} KB → {dst}")
 
-    # 供建置時逐字比對卡片用字（見 og/plugin.ts），避免缺字靜默變成方框
     with open(os.path.join(FONT_OUT, "coverage.json"), "w", encoding="utf-8") as handle:
         json.dump(coverage, handle, ensure_ascii=False, separators=(",", ":"))
         handle.write("\n")
