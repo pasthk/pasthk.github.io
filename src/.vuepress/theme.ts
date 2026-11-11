@@ -238,17 +238,22 @@ export default hopeTheme(
           const image = cardUrl(page);
           const alt = page.path === "/" ? SITE_NAME : page.title;
 
-          Object.assign(ogp, socialTags(image, alt));
+          // SeoContent 是幾個固定形狀介面的聯集，沒有索引簽章，而 article:*
+          // 是外掛在執行期才產生的動態鍵。以記錄視角操作，語意不變，
+          // 但 `tsc --noEmit` 不會再報 TS7053。
+          const tags = ogp as unknown as Record<string, string>;
+
+          Object.assign(tags, socialTags(image, alt));
 
           const published = publishedDate(page);
 
           if (published) {
-            ogp["article:published_time"] = published;
+            tags["article:published_time"] = published;
           } else {
             // 外掛無條件輸出 article:author／article:tag／article:modified_time，
             // 但 og:type 已是 website；留著只會讓分享解析器讀到矛盾資訊。
-            for (const key of Object.keys(ogp)) {
-              if (key.startsWith("article:")) delete ogp[key];
+            for (const key of Object.keys(tags)) {
+              if (key.startsWith("article:")) delete tags[key];
             }
           }
 

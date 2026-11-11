@@ -41,18 +41,24 @@ export function stripUnusedFonts(): Plugin {
 const FONT_FACE = /@font-face\s*\{[^}]*\}/g;
 const FAMILY = /font-family\s*:\s*["']?([^;"'}]+)["']?\s*[;}]/;
 
-function removeUnusedFontFaces(css: string): string {
+/** 純字串處理，匯出以便單獨驗證守衛行為（不參與外掛註冊） */
+export function removeUnusedFontFaces(css: string): string {
   return css.replace(FONT_FACE, (rule) => {
     const family = FAMILY.exec(rule)?.[1]?.trim();
 
     if (!family) return rule;
 
+    // 守衛必須容許字族出現在清單中間（`font-family: Crimson Text, Georgia, serif`）。
+    // 先前只比對「整個宣告值就是該字族」，結尾限死 `;` 或 `}`，遇到逗號就判定
+    // 未被引用而把 @font-face 刪掉——一旦主題哪天真的用上該字族，守衛會失效
+    // 而不是保留。這裡放寬為「該字族出現在任何 font-family 的值之中」。
     const usage = new RegExp(
-      `font-family\\s*:\\s*["']?${escapeRegExp(family)}["']?\\s*[;}]`,
+      `font-family\\s*:\\s*[^;{}]*?["']?${escapeRegExp(family)}["']?\\s*[,;}]`,
     );
 
-    // 把自己排除後再找一次；仍有引用就保留。
-    return usage.test(css.replace(rule, "")) ? rule : "";
+    // 把自己排除後再找一次；仍有引用就保留。用 replaceAll 以免同名規則
+    // 只被排除第一份時，其餘副本仍被誤判為「有引用」。
+    return usage.test(css.replaceAll(rule, "")) ? rule : "";
   });
 }
 

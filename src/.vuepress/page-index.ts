@@ -108,10 +108,16 @@ function buildContent(app: App, stats: SiteStats): string {
       body.push(chapter.note, "");
     }
 
-    // 「本章」排最前，其餘依分組名排序（年代、專題名皆然）
-    const ordered = [...groups.entries()].sort(([a], [b]) =>
-      a && b ? a.localeCompare(b, "zh-Hant") : a ? 1 : -1,
-    );
+    // 「本章」排最前，其餘依分組名排序（年代、專題名皆然）。
+    // 先前寫成 `a && b ? ... : a ? 1 : -1`，兩個空標題相比時回傳 -1，
+    // 不符合比較器的對稱性；改為明確列出三種情況。
+    const ordered = [...groups.entries()].sort(([a], [b]) => {
+      if (a === b) return 0;
+      if (!a) return -1;
+      if (!b) return 1;
+
+      return a.localeCompare(b, "zh-Hant");
+    });
 
     for (const [label, pages] of ordered) {
       if (label) body.push(`### ${label}`, "");

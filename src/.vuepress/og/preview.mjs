@@ -4,6 +4,8 @@ import { mkdirSync, writeFileSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 import { dirname, join } from "node:path";
 import { buildCardSvg } from "./card.ts";
+// 這裡用 .ts 指定子而非 .js：本檔不經 Vite，Node 的型別剝除只認實際存在的檔名。
+import { HOST, SITE_NAME } from "../site.ts";
 
 const here = dirname(fileURLToPath(import.meta.url));
 const outDir = join(here, "../../../.workbuddy-ai/tmp/og-preview");
@@ -34,7 +36,7 @@ const samples = {
 mkdirSync(outDir, { recursive: true });
 
 for (const [name, content] of Object.entries(samples)) {
-  const svg = buildCardSvg(content);
+  const svg = buildCardSvg({ header: SITE_NAME, footer: HOST, ...content });
 
   writeFileSync(join(outDir, name), svg, "utf8");
   console.log(join(outDir, name), svg.length, "bytes");

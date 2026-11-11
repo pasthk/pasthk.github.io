@@ -6,8 +6,10 @@
 //
 // 前提是光柵化時必須載入同一份子集字型（見 plugin.ts 的 font 選項），
 // 否則 <text> 會退回系統字型，字重與字形都會走樣。
-
-import { HOST, SITE_NAME } from "../site.js";
+//
+// 本檔刻意不 import 任何專案模組：它是一個純渲染器，站名與網址由呼叫端傳入。
+// 這樣 `node src/.vuepress/og/preview.mjs` 才能直接載入（Node 的型別剝除
+// 不會把 `../site.js` 這種 .js 指定子改寫成 .ts，一旦有此 import，手動預覽即失效）。
 
 export const CARD_WIDTH = 1200;
 export const CARD_HEIGHT = 1200;
@@ -148,9 +150,9 @@ export interface CardContent {
   meta?: string;
   /** 右上角的章節名稱 */
   section?: string;
-  /** 左上角刊頭，預設為站名 */
+  /** 左上角刊頭；未給則留空，由呼叫端決定（見 plugin.ts 的 SITE_NAME） */
   header?: string;
-  /** 左下角網址 */
+  /** 左下角網址；未給則留空，由呼叫端決定（見 plugin.ts 的 HOST） */
   footer?: string;
 }
 
@@ -205,8 +207,8 @@ export function buildCardSvg({
   title,
   meta,
   section,
-  header = SITE_NAME,
-  footer = HOST,
+  header = "",
+  footer = "",
 }: CardContent): string {
   // 標題由大到小試，取第一個能在三行內排完的字級。
   const sizes = [78, 70, 62, 54, 46];

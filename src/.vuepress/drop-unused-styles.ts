@@ -1,4 +1,4 @@
-import { readFile, readdir } from "node:fs/promises";
+import { readFileSync, readdirSync } from "node:fs";
 import { extname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -75,8 +75,8 @@ const DROPPED_CLASS_TOKENS = [
   "vp-git-contributors",
 ];
 
-async function listMarkdown(dir: string): Promise<string[]> {
-  const entries = await readdir(dir, { withFileTypes: true });
+function listMarkdown(dir: string): string[] {
+  const entries = readdirSync(dir, { withFileTypes: true });
   const files: string[] = [];
 
   for (const entry of entries) {
@@ -85,34 +85,42 @@ async function listMarkdown(dir: string): Promise<string[]> {
 
     const path = join(dir, entry.name);
 
-    if (entry.isDirectory()) files.push(...(await listMarkdown(path)));
+    if (entry.isDirectory()) files.push(...listMarkdown(path));
     else if (extname(entry.name) === ".md") files.push(path);
   }
 
   return files;
 }
 
-async function shouldDrop(): Promise<boolean> {
-  const files = await listMarkdown(SRC_DIR);
+/**
+ * 掃描一次、全程序共用。
+ *
+ * 先前每次呼叫都同步讀完全部 300 餘篇 Markdown（約 10 MB），而一次建置會呼叫
+ * 三到四次（client／SSR 兩次 configureVite，加上 onGenerated 的驗證）。改為
+ * 快取後只掃一次；掃描結果本來就只取決於來源檔，兩次建置不會不同。
+ */
+let dropCache: boolean | undefined;
 
-  for (const file of files) {
-    const text = await readFile(file, "utf8");
+function shouldDrop(): boolean {
+  if (dropCache !== undefined) return dropCache;
 
-    if (USAGE_MARKERS.some((marker) => marker.test(text))) return false;
-  }
+  dropCache = listMarkdown(SRC_DIR).every((file) => {
+    const text = readFileSync(file, "utf8");
 
-  return true;
+    return !USAGE_MARKERS.some((marker) => marker.test(text));
+  });
+
+  return dropCache;
 }
 
 export function dropUnusedStyles(): Plugin {
-  // configureVite 會被 client／SSR 兩次建置呼叫，兩邊共用同一個判斷結果。
-  const enabled = shouldDrop();
-
   return {
     name: "pasthk:drop-unused-styles",
     enforce: "pre",
-    async transform(_code, id) {
-      if (!(await enabled)) return null;
+    // 同步回傳：這個鉤子會對每個模組各跑一次（實測 573 次），
+    // 先前的 async 版本讓每次呼叫都多一輪 microtask，純屬額外開銷。
+    transform(_code, id) {
+      if (!shouldDrop()) return null;
 
       const path = id.split("?", 1)[0].replaceAll("\\", "/");
 
@@ -131,19 +139,19 @@ export function verifyDroppedStyles(): VuePressPlugin {
   return {
     name: "pasthk:verify-dropped-styles",
 
-    async onGenerated(app: App): Promise<void> {
-      if (!(await shouldDrop())) return;
+    onGenerated(app: App): void {
+      if (!shouldDrop()) return;
 
       const offenders: string[] = [];
 
-      const walk = async (dir: string): Promise<void> => {
-        for (const entry of await readdir(dir, { withFileTypes: true })) {
+      const walk = (dir: string): void => {
+        for (const entry of readdirSync(dir, { withFileTypes: true })) {
           const path = join(dir, entry.name);
 
           if (entry.isDirectory()) {
-            await walk(path);
+            walk(path);
           } else if (entry.name.endsWith(".html")) {
-            const html = await readFile(path, "utf8");
+            const html = readFileSync(path, "utf8");
             const found = DROPPED_CLASS_TOKENS.filter((token) =>
               html.includes(token),
             );
@@ -153,7 +161,7 @@ export function verifyDroppedStyles(): VuePressPlugin {
         }
       };
 
-      await walk(app.dir.dest());
+      walk(app.dir.dest());
 
       if (offenders.length) {
         throw new Error(

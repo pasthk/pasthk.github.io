@@ -7,7 +7,7 @@ import { success, warn } from "vuepress/utils";
 
 import { chapterOfPath, pathSegments } from "../chapters.js";
 import { referenceBoxText } from "../page-meta.js";
-import { SITE_NAME, SITE_NAME_EN } from "../site.js";
+import { HOST, SITE_NAME, SITE_NAME_EN } from "../site.js";
 import {
   buildCardSvg,
   CARD_FONT_FAMILY,
@@ -157,16 +157,29 @@ export const ogImagePlugin = (): Plugin => ({
     const uncovered: string[] = [];
 
     // 子頁數量：路徑為 /a/b.html 的頁面，其子頁是 /a/b/ 底下的所有頁面。
+    //
+    // 兩個容易出錯的地方：
+    // 1. 父頁有兩種寫法——`a/b.md` → `/a/b.html`，以及 `a/b/README.md`（或
+    //    index.md）→ `/a/b/`。先前一律推成 `/a/b.html`，於是 /project/ay1928/
+    //    這類以 README 建立的索引頁永遠算不到子頁。
+    // 2. 子頁可能不只一層（專題頁 → 分類頁 → 單篇）。先前只數直系子頁，
+    //    /project/ay1928/ 因此只得到 1，卡片上出現「收錄 1 篇文獻」這種
+    //    與事實不符的標籤。改為沿路徑逐層上溯，凡存在的祖先頁都計入。
+    const knownPaths = new Set(app.pages.map((page) => page.path));
     const childCounts = new Map<string, number>();
 
     for (const page of app.pages) {
       const segments = pathSegments(page.path);
 
-      if (segments.length < 2) continue;
+      for (let depth = 1; depth < segments.length; depth += 1) {
+        const base = segments.slice(0, depth).join("/");
 
-      const parentPath = `/${segments.slice(0, -1).join("/")}.html`;
+        for (const candidate of [`/${base}/`, `/${base}.html`]) {
+          if (!knownPaths.has(candidate)) continue;
 
-      childCounts.set(parentPath, (childCounts.get(parentPath) ?? 0) + 1);
+          childCounts.set(candidate, (childCounts.get(candidate) ?? 0) + 1);
+        }
+      }
     }
 
     const font = await fontOptions();
@@ -207,7 +220,7 @@ export const ogImagePlugin = (): Plugin => ({
         if (gaps.length) uncovered.push(`${page.path} → ${gaps.join("")}`);
       }
 
-      const svg = buildCardSvg(content);
+      const svg = buildCardSvg({ header: SITE_NAME, footer: HOST, ...content });
 
       // 社群平台一律不接受 SVG 作 og:image，必須光柵化。
       // 卡片自帶白底 rect，這裡的 background 只是保險。
