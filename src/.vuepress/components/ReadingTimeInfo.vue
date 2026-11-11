@@ -54,7 +54,7 @@ const transcriptionStatus = computed(() => {
       </label>
       <label>
         <input type="checkbox" :checked="transcriptionStatus.proofread" disabled>
-        初校
+        校對
       </label>
     </span>
   </span>
