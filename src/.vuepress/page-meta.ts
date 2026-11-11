@@ -58,6 +58,21 @@ function asDate(value: unknown): string | undefined {
 const frontmatterOf = (page: Page): Frontmatter =>
   page.frontmatter as Frontmatter;
 
+/**
+ * 可收錄、且需要人工維護內容的頁面：排除 404、動態建立的 browse.html、
+ * `sitemap: false` 的空殼頁，以及沒有標題的頁面。
+ *
+ * page-index／content-guard／related-documents 先前各寫一份同義判斷，
+ * 條件一旦增減就會各自漂移，集中在此。site-stats 與 llms-canonical 的
+ * 用途不同（前者統計史料篇數、後者必須與 llms 外掛的 filter 完全一致），
+ * 刻意保留自己的條件，不套用這裡的規則。
+ */
+export const isIndexablePage = (page: Page): boolean =>
+  Boolean(page.title) &&
+  page.frontmatter.sitemap !== false &&
+  page.path !== "/404.html" &&
+  page.path !== "/browse.html";
+
 /** 是否為「原始文獻轉錄頁」；唯一判準是 frontmatter 寫了原始出版日 */
 export const isSourceDocument = (page: Page): boolean =>
   asDate(frontmatterOf(page).datePublished) !== undefined;

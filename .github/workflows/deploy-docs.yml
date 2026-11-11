@@ -192,7 +192,19 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add package.json package-lock.json
           git commit -m "chore: release v$(node -p "require('./package.json').version") [skip ci]"
-          git push origin "HEAD:${BRANCH_NAME}"
+          # checkout 發生在數分鐘前；期間若有另一個 push，直接推送會
+          # non-fast-forward 失敗，連帶讓整個 build job（與 Pages 部署）落空。
+          # 先變基到遠端最新；版號只是部署識別，萬一競爭或衝突仍無法推送，
+          # 記為警告即可，不值得為它賠掉一次部署。
+          git fetch origin "$BRANCH_NAME"
+          if git rebase "origin/$BRANCH_NAME"; then
+            if ! git push origin "HEAD:$BRANCH_NAME"; then
+              echo "::warning::版本號 commit 推送失敗（可能與另一個部署競爭）；部署繼續。"
+            fi
+          else
+            git rebase --abort
+            echo "::warning::版本號 commit 無法變基（package.json 衝突）；略過版號更新，部署繼續。"
+          fi
 
       - name: Setup Node.js
         uses: actions/setup-node@v5
@@ -202,6 +214,12 @@ jobs:
 
       - name: Install dependencies
         run: npm ci
+
+      # 5,000 行 TypeScript 先前沒有任何型別把關；在建置前攔下型別錯誤。
+      # typescript 以鎖定版本即時執行，不進 devDependencies，避免 CI 的
+      # npm ci 與版本號 commit 都需要同步 package-lock.json。
+      - name: Type check
+        run: npm run docs:typecheck
 
       - name: Build VuePress site
         run: npm run docs:build

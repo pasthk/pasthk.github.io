@@ -98,30 +98,16 @@ export const itemListNode = (
 });
 
 /**
- * 頁面標題對照表：每個 app 只建立一次。
+ * 頁面標題對照表，每次呼叫即時建立。
  *
- * collectionItems() 會被每一個非史料頁呼叫，先前每次都重新走一遍
- * app.pages（三百多頁）建 Map。app.pages 在 onInitialized 還可能被
- * pageIndexPlugin 追加動態頁，故以頁面數作為快取有效性依據。
+ * 先前用 WeakMap 快取，並以 `app.pages.length` 判斷快取是否有效；但
+ * onInitialized 期間會動態增頁，一旦有增有刪而總數不變（或同一陣列被
+ * 就地改動），快取就交出舊表，ItemList 會取到已失效的標題。
+ * collectionItems 只對非史料頁呼叫（約百來頁），重建三百餘筆 Map 的成本
+ * 遠小於這類難以重現的錯誤，直接取消快取。
  */
-const titleCache = new WeakMap<
-  App,
-  { size: number; titles: Map<string, string> }
->();
-
-const pageTitles = (app: App): Map<string, string> => {
-  const cached = titleCache.get(app);
-
-  if (cached && cached.size === app.pages.length) return cached.titles;
-
-  const titles = new Map(
-    app.pages.map((item): [string, string] => [item.path, item.title]),
-  );
-
-  titleCache.set(app, { size: app.pages.length, titles });
-
-  return titles;
-};
+const pageTitles = (app: App): Map<string, string> =>
+  new Map(app.pages.map((item): [string, string] => [item.path, item.title]));
 
 export interface ItemListResult {
   /** 是否應把頁面標為 CollectionPage */

@@ -1,9 +1,13 @@
-import type { App, Page, Plugin } from "vuepress/core";
+import type { App, Plugin } from "vuepress/core";
 import { warn } from "vuepress/utils";
 
 import { pagePathOfLink } from "./breadcrumb.js";
 import { linkEntries } from "./item-list.js";
-import { isSourceDocument, pageDataExtras } from "./page-meta.js";
+import {
+  isIndexablePage,
+  isSourceDocument,
+  pageDataExtras,
+} from "./page-meta.js";
 import { sidebarLinks } from "./sidebar.js";
 
 /**
@@ -26,13 +30,6 @@ import { sidebarLinks } from "./sidebar.js";
  *
  * 三者都在建置日誌彙總點名一次，讓維護者按清單補齊，不製造逐頁雜訊。
  */
-
-/** 可收錄且需要人工維護內容的頁面 */
-const isIndexable = (page: Page): boolean =>
-  Boolean(page.title) &&
-  page.frontmatter.sitemap !== false &&
-  page.path !== "/404.html" &&
-  page.path !== "/browse.html";
 
 /** 去掉 Markdown 標記後的可見文字長度，標題列不計入正文 */
 const visibleLength = (content: string): number => {
@@ -67,7 +64,7 @@ export const contentGuardPlugin = (): Plugin => ({
     const knownPaths = new Set(app.pages.map((item) => item.path));
 
     for (const page of app.pages) {
-      if (!isIndexable(page)) continue;
+      if (!isIndexablePage(page)) continue;
 
       // seo 外掛在 onInitialized 寫入 page.data.autoDesc；主題插件先於
       // 使用者插件執行，這裡讀得到。

@@ -2,7 +2,7 @@ import type { App, Page, Plugin } from "vuepress/core";
 
 import { chapterName, pathSegments } from "./chapters.js";
 import { pushTo } from "./map-utils.js";
-import { pageDataExtras } from "./page-meta.js";
+import { isIndexablePage, isSourceDocument, pageDataExtras } from "./page-meta.js";
 import { absoluteUrl } from "./site.js";
 
 /**
@@ -41,13 +41,14 @@ const relatedMap = new Map<string, RelatedInfo>();
 export const relatedFor = (path: string): RelatedInfo | undefined =>
   relatedMap.get(path);
 
-/** 只有可收錄、有原始出版日的史料頁才參與連結，不把索引與空殼頁算進來 */
+/**
+ * 只有可收錄、有原始出版日的史料頁才參與連結，不把索引與空殼頁算進來。
+ * 出版日格式由 isSourceDocument 統一校驗（含 `1910`、`1909-02` 這類降精度
+ * 寫法），不再自己用 `typeof` 判斷，避免相關文獻與 JSON-LD／OG 卡的史料
+ * 清單口徑分歧。
+ */
 const isSourcePage = (page: Page): boolean =>
-  page.path !== "/browse.html" &&
-  page.path !== "/404.html" &&
-  page.frontmatter.sitemap !== false &&
-  typeof page.frontmatter.datePublished === "string" &&
-  Boolean(page.title);
+  isIndexablePage(page) && isSourceDocument(page);
 
 /** ISO 日期轉成可比較的整數；降精度寫法（1910）補 0 後仍可排序 */
 const dateKey = (value: string): number =>

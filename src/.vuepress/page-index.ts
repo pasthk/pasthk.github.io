@@ -5,6 +5,7 @@ import { chapterMeta, chapters, pathSegments } from "./chapters.js";
 import { collectionHead } from "./collection-head.js";
 import { pushTo } from "./map-utils.js";
 import { ogImageUrl } from "./og/paths.js";
+import { isIndexablePage } from "./page-meta.js";
 import {
   describeSite,
   siteStats,
@@ -24,13 +25,6 @@ import { absoluteUrl, HOSTNAME, SITE_NAME } from "./site.js";
 
 const PAGE_PATH = "/browse.html";
 const PAGE_TITLE = "文獻綜覽";
-
-/** 不列入索引：noindex 的空殼頁、404，以及本頁自身 */
-const isListable = (page: Page): boolean =>
-  page.path !== PAGE_PATH &&
-  page.path !== "/404.html" &&
-  page.frontmatter.sitemap !== false &&
-  Boolean(page.title);
 
 /** `1890s` → `1890年代`、`cap-53` → `CAP-53`，其餘原樣返回 */
 const prettyDir = (dir: string): string =>
@@ -69,7 +63,7 @@ function buildContent(app: App, stats: SiteStats): string {
   const index = new Map<string, Map<string, Page[]>>();
 
   for (const page of app.pages) {
-    if (!isListable(page)) continue;
+    if (!isIndexablePage(page)) continue;
 
     const [dir, sub, ...rest] = pathSegments(page.path);
 
@@ -170,7 +164,7 @@ export const pageIndexPlugin = (): Plugin => ({
      * 交給 collection-head.ts 統一產生 social meta、JSON-LD 與全站 ItemList。
      */
     const items = app.pages
-      .filter(isListable)
+      .filter(isIndexablePage)
       .map((item) => ({ name: item.title, url: absoluteUrl(item.path) }));
     const head = collectionHead({
       url,
