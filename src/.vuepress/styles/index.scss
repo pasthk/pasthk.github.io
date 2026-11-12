@@ -233,3 +233,130 @@ body {
   font-family: serif;
   pointer-events: none;
 }
+
+/* 文獻綜覽：事件時間軸，與「相關文獻」時間軸共用同一視覺語言 */
+.browse-timeline {
+  --browse-date-offset: 10.5rem;
+
+  margin: 0.75rem 0 1.5rem var(--browse-date-offset);
+  padding: 0;
+  border-left: 1px solid var(--vp-c-border, #d8d8d8);
+
+  h3 {
+    position: relative;
+    margin: 1.3rem 0 0.35rem;
+    padding: 0 0 0 1.15rem;
+    border: 0;
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 1.7;
+  }
+
+  h3:first-of-type {
+    margin-top: 0.25rem;
+  }
+
+  /* 年份移至軸線左側，與日期欄右對齊；字號與條目標題一致 */
+  h3 .header-anchor {
+    display: block;
+    width: calc(var(--browse-date-offset) - 0.9rem);
+    margin-left: calc(-1 * var(--browse-date-offset) - 1.15rem);
+    text-align: right;
+    white-space: nowrap;
+  }
+
+  /* 年份節點：實心圓點，隨 H3 字號垂直置中 */
+  h3::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -6px;
+    width: 11px;
+    height: 11px;
+    box-sizing: border-box;
+    border: 1px solid var(--vp-c-text, #000);
+    border-radius: 50%;
+    background: var(--vp-c-text, #000);
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  li {
+    position: relative;
+    margin: 0;
+    padding: 0.28rem 0 0.28rem 1.15rem;
+    line-height: 1.7;
+    text-align: start;
+  }
+
+  /* 條目節點：空心圓點，相對第一行標題垂直置中 */
+  li::before {
+    content: "";
+    position: absolute;
+    top: calc(0.28rem + 0.85em);
+    transform: translateY(-50%);
+    left: -4px;
+    width: 7px;
+    height: 7px;
+    box-sizing: border-box;
+    border: 1px solid var(--vp-c-text-mute, #888);
+    border-radius: 50%;
+    background: var(--vp-c-bg, #fff);
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+}
+
+/* 日期欄置於軸線左側，右對齊貼近軸線；字號與條目標題一致，同一日期只出現一次 */
+.browse-timeline-date {
+  position: absolute;
+  top: 0.28rem;
+  left: calc(-1 * var(--browse-date-offset));
+  width: calc(var(--browse-date-offset) - 0.9rem);
+  margin: 0;
+  font-size: inherit;
+  line-height: 1.7;
+  color: var(--vp-c-text-mute);
+  text-align: right;
+  white-space: nowrap;
+}
+
+/* 資料來源（報刊／出版者名稱），置於條目標題右側 */
+.browse-timeline-source {
+  margin-left: 0.5rem;
+  font-size: 0.8rem;
+  color: var(--vp-c-text-mute);
+  opacity: 0.75;
+  white-space: nowrap;
+}
+
+@media (max-width: 719px) {
+  .browse-timeline {
+    margin-left: 0;
+  }
+
+  .browse-timeline-date {
+    position: static;
+    width: auto;
+    margin: 0 0.4rem 0 0;
+    text-align: start;
+  }
+
+  /* 窄屏無左側日期欄，年份回到軸線右側 */
+  .browse-timeline h3 .header-anchor {
+    width: auto;
+    margin-left: 0;
+    text-align: start;
+  }
+}

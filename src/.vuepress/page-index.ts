@@ -1,15 +1,13 @@
 import { createPage } from "vuepress/core";
 import type { App, Page, Plugin } from "vuepress/core";
 
-import { chapterMeta, chapters, pathSegments } from "./chapters.js";
 import { collectionHead } from "./collection-head.js";
-import { formatChineseDate } from "./format.js";
-import { pushTo } from "./map-utils.js";
+import { formatChineseDate, parseDateValue } from "./format.js";
 import { ogImageUrl } from "./og/paths.js";
 import {
   isIndexablePage,
-  pageTitleMap,
   publishedDate,
+  sourceOf,
 } from "./page-meta.js";
 import {
   describeSite,
@@ -22,102 +20,109 @@ import { absoluteUrl, HOSTNAME, SITE_NAME } from "./site.js";
 
 const PAGE_PATH = "/browse.html";
 const PAGE_TITLE = "文獻綜覽";
+const TIMELINE_TITLE = "事件時間軸";
 
-const prettyDir = (dir: string): string =>
-  dir
-    .replace(/^(\d{4})s$/, "$1年代")
-    .replace(/^cap-(\d+)$/, "CAP-$1");
+interface DatedPage {
+  page: Page;
+  date: string;
+  year: string;
+  /** 補齊月日後的可比較鍵，讓 1955、1955-08、1955-08-11 能正確排序 */
+  key: string;
+}
 
-const groupLabel = (
-  titles: Map<string, string>,
-  dir: string,
-  sub: string,
-): string =>
-  titles.get(`/${dir}/${sub}.html`) ??
-  titles.get(`/${dir}/${sub}/`) ??
-  prettyDir(sub);
+const dateSortKey = (date: string): string => {
+  const parsed = parseDateValue(date);
 
-const line = (page: Page): string => {
-  const date = publishedDate(page);
-  const suffix = date ? `（${formatChineseDate(date)}）` : "";
-
-  return `- [${page.title}](${page.path})${suffix}`;
+  return parsed
+    ? `${parsed.year}-${parsed.month ?? "00"}-${parsed.day ?? "00"}`
+    : date;
 };
 
-function buildContent(app: App, stats: SiteStats): string {
-  const titles = pageTitleMap(app.pages);
-  const overview: Page[] = [];
-  const index = new Map<string, Map<string, Page[]>>();
+/** 資料來源：由史料頁 ReferenceBox 的引用文字解析報刊／出版者名稱 */
+const sourceLabel = (page: Page): string | undefined =>
+  sourceOf(page.content)?.publication;
+
+/**
+ * 日期放在條目最前，由 CSS 定位到軸線左側。
+ * 同一日期只輸出一次；後續條目不帶日期，形成同一天的分組。
+ */
+const timelineLine = (page: Page, dateLabel?: string): string => {
+  const prefix = dateLabel
+    ? `<span class="browse-timeline-date">${dateLabel}</span> `
+    : "";
+  const source = sourceLabel(page);
+  const suffix = source
+    ? ` <span class="browse-timeline-source">${source}</span>`
+    : "";
+
+  return `- ${prefix}[${page.title}](${page.path})${suffix}`;
+};
+
+/** 整頁共用一條軸線；年份為實心節點，其下條目為空心圓點 */
+const timelineMarkdown = (dated: DatedPage[]): string => {
+  const lines = ['<div class="browse-timeline">', ""];
+  let year = "";
+  let lastDate = "";
+
+  for (const entry of dated) {
+    if (entry.year !== year) {
+      if (year) lines.push("");
+      year = entry.year;
+      lines.push(`### ${year}年`, "");
+    }
+
+    const dateLabel = formatChineseDate(entry.date);
+
+    lines.push(
+      timelineLine(entry.page, dateLabel === lastDate ? undefined : dateLabel),
+    );
+    lastDate = dateLabel;
+  }
+
+  lines.push("", "</div>");
+
+  return lines.join("\n");
+};
+
+interface BrowseContent {
+  content: string;
+  /** 實際列在時間軸上的頁面，供 JSON-LD ItemList 使用 */
+  pages: Page[];
+}
+
+function buildContent(app: App, stats: SiteStats): BrowseContent {
+  const dated: DatedPage[] = [];
 
   for (const page of app.pages) {
     if (!isIndexablePage(page)) continue;
 
-    const [dir, sub, ...rest] = pathSegments(page.path);
+    const date = publishedDate(page);
 
-    if (!sub) {
-      overview.push(page);
-      continue;
-    }
+    if (!date) continue;
 
-    const label = rest.length ? groupLabel(titles, dir, sub) : "";
-    const groups = index.get(dir) ?? new Map<string, Page[]>();
-
-    pushTo(groups, label, page);
-    index.set(dir, groups);
+    dated.push({
+      page,
+      date,
+      year: parseDateValue(date)?.year ?? "年份不詳",
+      key: dateSortKey(date),
+    });
   }
 
-  const blocks: string[] = [
-    `${describeSite(stats)}以下依章節列出全部頁面，原始文獻轉錄頁另附原始出版日。`,
+  dated.sort(
+    (a, b) =>
+      a.key.localeCompare(b.key) || a.page.path.localeCompare(b.page.path),
+  );
+
+  const blocks = [
+    `${describeSite(stats)}以下依資料日期由舊至新列出 ${dated.length} 篇文獻，同一日期的報導合併顯示。`,
+    `## ${TIMELINE_TITLE}`,
+    timelineMarkdown(dated),
   ];
 
-  if (overview.length) {
-    blocks.push(
-      ["", "## 總覽", "", ...overview.map((p) => `- [${p.title}](${p.path})`)].join(
-        "\n",
-      ),
-    );
-  }
-
-  const emit = (dir: string, groups: Map<string, Page[]>): void => {
-    const chapter = chapterMeta(dir);
-    const body = [`## ${chapter?.name ?? dir}`, ""];
-
-    if (chapter) {
-      body.push(chapter.note, "");
-    }
-
-    const ordered = [...groups.entries()].sort(([a], [b]) => {
-      if (a === b) return 0;
-      if (!a) return -1;
-      if (!b) return 1;
-
-      return a.localeCompare(b, "zh-Hant");
-    });
-
-    for (const [label, pages] of ordered) {
-      if (label) body.push(`### ${label}`, "");
-
-      body.push(
-        ...[...pages].sort((a, b) => a.path.localeCompare(b.path)).map(line),
-        "",
-      );
-    }
-
-    blocks.push(body.join("\n").trimEnd());
+  return {
+    content: blocks.join("\n\n"),
+    pages: dated.map((entry) => entry.page),
   };
-
-  for (const { dir } of chapters) {
-    const groups = index.get(dir);
-
-    if (groups) {
-      emit(dir, groups);
-      index.delete(dir);
-    }
-  }
-
-  for (const [dir, groups] of index) emit(dir, groups);
-
-  return blocks.join("\n\n");
 }
 
 export const pageIndexPlugin = (): Plugin => ({
@@ -127,16 +132,18 @@ export const pageIndexPlugin = (): Plugin => ({
     if (app.pages.some((item) => item.path === PAGE_PATH)) return;
 
     const stats = siteStats(app.pages as StatsInput[]);
-    const content = buildContent(app, stats);
+    const { content, pages: listed } = buildContent(app, stats);
     const url = absoluteUrl(PAGE_PATH);
     const image = ogImageUrl(HOSTNAME, PAGE_PATH);
     const description =
-      `${SITE_NAME}全部 ${stats.total} 個可供檢索頁面的完整索引，按 ${chapters.length} 個章節與分組排列；` +
-      `其中 ${stats.sources} 篇為 ${stats.firstYear}–${stats.lastYear} 年的原始文獻轉錄。`;
+      `${SITE_NAME}依原始出版日期由舊至新排列的${TIMELINE_TITLE}，` +
+      `收錄 ${stats.sources} 篇 ${stats.firstYear}–${stats.lastYear} 年的原始文獻轉錄，` +
+      `並標明資料來源。`;
 
-    const items = app.pages
-      .filter(isIndexablePage)
-      .map((item) => ({ name: item.title, url: absoluteUrl(item.path) }));
+    const items = listed.map((item) => ({
+      name: item.title,
+      url: absoluteUrl(item.path),
+    }));
     const head = collectionHead({
       url,
       title: PAGE_TITLE,
