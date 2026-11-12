@@ -106,8 +106,6 @@ export default hopeTheme(
     focus: false,
     darkmode: "disable",
     favicon: "/favicon.png",
-    repo: "pasthk/pasthk.github.io",
-    repoLabel: "GitHub",
     displayFooter: true,
     footer:
       `${SITE_TAGLINE}。<br><a href="/about.html">關於本站</a> ・ <a href="/privacy.html">私隱政策</a> ・ <a href="/support.html">支持本站</a>`,
