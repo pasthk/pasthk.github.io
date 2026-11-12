@@ -153,10 +153,10 @@ export const pageIndexPlugin = (): Plugin => ({
         description,
         head,
         toc: false,
-        pageInfo: false,
         next: false,
         prev: false,
         comment: false,
+        pageInfo: false,
       },
     });
 

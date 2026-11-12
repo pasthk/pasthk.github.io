@@ -2,6 +2,7 @@
 title: 沙下遺址
 date: 2026-09-09
 description: 沙下遺址相關香港考古資料索引，整理報章報道、遺址發現與文物出土記錄。
+pageInfo: false
 ---
 
 ## 新聞報道

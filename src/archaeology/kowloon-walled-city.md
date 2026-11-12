@@ -2,6 +2,7 @@
 title: 九龍寨城
 date: 2026-09-10
 description: 九龍寨城相關香港考古資料索引，整理報章報道、遺址發現與文物出土記錄。
+pageInfo: false
 ---
 
 ## 調查報告
