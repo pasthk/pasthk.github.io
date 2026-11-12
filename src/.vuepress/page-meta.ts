@@ -16,9 +16,22 @@ export interface RelatedItem {
   date?: string;
 }
 
+/** 以當前頁為中心的編年導覽：上方較早、中間當前、下方較晚 */
+export interface RelatedTimeline {
+  /** 較早的前兩頁，依日期由遠而近（顯示於當前頁上方） */
+  before: RelatedItem[];
+  /** 當前頁面 */
+  current: RelatedItem;
+  /** 較晚的後兩頁，依日期由近而遠（顯示於當前頁下方） */
+  after: RelatedItem[];
+}
+
 export interface RelatedInfo {
+  /** 相關度挑選結果，供 llms.txt 與 Markdown 匯出使用 */
   items: RelatedItem[];
   chapter?: string;
+  /** 供 RelatedDocuments.vue 呈現的編年軸；舊資料可能沒有 */
+  timeline?: RelatedTimeline;
 }
 
 export interface PageDataExtras {

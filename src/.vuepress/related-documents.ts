@@ -9,13 +9,22 @@ import {
   pageDataExtras,
   publishedDate,
   type RelatedInfo,
+  type RelatedItem,
+  type RelatedTimeline,
 } from "./page-meta.js";
 import { absoluteUrl } from "./site.js";
 
-export type { RelatedInfo, RelatedItem } from "./page-meta.js";
+export type {
+  RelatedInfo,
+  RelatedItem,
+  RelatedTimeline,
+} from "./page-meta.js";
 
 
 const MAX_RELATED = 4;
+
+/** 編年軸在當前頁前後各取幾篇 */
+const TIMELINE_NEIGHBORS = 2;
 
 const relatedMap = new Map<string, RelatedInfo>();
 
@@ -46,6 +55,12 @@ const byDateThenPath = (a: Entry, b: Entry): number =>
 
 function collect(app: App): void {
   relatedMap.clear();
+
+  const toItem = ({ page, date }: Entry): RelatedItem => ({
+    title: page.title,
+    path: page.path,
+    ...(date ? { date } : {}),
+  });
 
   const entries: Entry[] = app.pages
     .filter(isSourcePage)
@@ -110,13 +125,29 @@ function collect(app: App): void {
 
     if (!picked.length) continue;
 
+    // 編年時間軸：以章節內依出版日排序的完整序列為準，取當前頁前後各兩篇。
+    // 與 items 的「相關度」挑選分流：items 供 llms.txt 導覽，timeline 供頁面呈現。
+    const sequence = byChapter.get(entry.chapter) ?? [];
+    const position = sequence.findIndex(
+      (item) => item.page.path === entry.page.path,
+    );
+    const timeline: RelatedTimeline =
+      position < 0
+        ? { before: [], current: toItem(entry), after: [] }
+        : {
+            before: sequence
+              .slice(Math.max(0, position - TIMELINE_NEIGHBORS), position)
+              .map(toItem),
+            current: toItem(entry),
+            after: sequence
+              .slice(position + 1, position + TIMELINE_NEIGHBORS + 1)
+              .map(toItem),
+          };
+
     const info: RelatedInfo = {
       chapter: chapterName(entry.chapter),
-      items: picked.map(({ page, date }) => ({
-        title: page.title,
-        path: page.path,
-        ...(date ? { date } : {}),
-      })),
+      items: picked.map(toItem),
+      timeline,
     };
 
     relatedMap.set(entry.page.path, info);
