@@ -11,7 +11,6 @@ import { volumesFor } from "./llms-volumes.js";
 import { pushTo } from "./map-utils.js";
 import {
   canonicalUrl,
-  citationOf,
   isLlmsPage,
   publishedDate,
   replaceReferenceBoxes,
@@ -125,14 +124,22 @@ function brief(description: unknown): string {
 }
 
 function provenance(markdown: string, page: Page): string {
-  const citation = citationOf(markdown);
   const url = canonicalUrl(page);
   const published = publishedDate(page);
+  let citation: string | undefined;
+  let captured = false;
 
-  const clean = replaceReferenceBoxes(
-    markdown,
-    (inner) => `> 引用：${inner.replace(/\s+/g, " ").trim()}`,
-  ).replace(/\\\*\\\*/gu, "**");
+  // 同一次 replace 內順手取出第一個引用框，省掉另一趟全文正則
+  const clean = replaceReferenceBoxes(markdown, (inner) => {
+    if (!captured) {
+      captured = true;
+      citation =
+        inner.replace(/<[^>]+>/g, " ").replace(/\s+/g, " ").trim() ||
+        undefined;
+    }
+
+    return `> 引用：${inner.replace(/\s+/g, " ").trim()}`;
+  }).replace(/\\\*\\\*/gu, "**");
 
   const lines = published
     ? [

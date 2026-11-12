@@ -1,5 +1,6 @@
 import { chapters, pathSegments } from "./chapters.js";
 import { parseDateValue } from "./format.js";
+import { isListedPage, isMarkdownPage } from "./page-meta.js";
 
 export interface StatsInput {
   path?: string;
@@ -16,14 +17,10 @@ export interface SiteStats {
   decades: [string, number][];
 }
 
-const included = (page: StatsInput, dir?: string): boolean => {
-  if (page.frontmatter?.sitemap === false) return false;
-  if (!page.filePath?.endsWith(".md")) return false;
-  if (page.path === "/404.html") return false;
-  if (!dir) return true;
-
-  return pathSegments(page.path ?? "")[0] === dir;
-};
+const included = (page: StatsInput, dir?: string): boolean =>
+  isMarkdownPage(page) &&
+  isListedPage(page) &&
+  (!dir || pathSegments(page.path ?? "")[0] === dir);
 
 export const siteStats = (pages: StatsInput[], dir?: string): SiteStats => {
   const scope = pages.filter((page) => included(page, dir));

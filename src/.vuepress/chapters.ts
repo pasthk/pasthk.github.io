@@ -69,8 +69,20 @@ export const chapterMeta = (dir: string): Chapter | undefined =>
 export const chapterName = (dir: string): string | undefined =>
   chapterMeta(dir)?.name;
 
-export const pathSegments = (path: string): string[] =>
-  path.split("/").filter(Boolean);
+const segmentCache = new Map<string, string[]>();
+
+/** 回傳共享陣列，呼叫方只讀不改；頁面路徑重複使用時省去反覆 split */
+export const pathSegments = (path: string): string[] => {
+  const cached = segmentCache.get(path);
+
+  if (cached) return cached;
+
+  const segments = path.split("/").filter(Boolean);
+
+  segmentCache.set(path, segments);
+
+  return segments;
+};
 
 export const chapterOfPath = (path: string): string | undefined =>
   chapterName(pathSegments(path)[0] ?? "");

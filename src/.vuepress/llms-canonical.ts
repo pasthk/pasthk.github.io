@@ -9,7 +9,7 @@ import {
   VOLUME_DIR,
   volumeKey,
 } from "./llms-volumes.js";
-import { canonicalUrl, isLlmsPage } from "./page-meta.js";
+import { canonicalUrl, isListedPage, isLlmsPage } from "./page-meta.js";
 import { HOSTNAME, SITE_NAME } from "./site.js";
 
 
@@ -124,7 +124,7 @@ export const llmsCanonicalPlugin = (): Plugin => ({
     const canonicals = new Map<string, string>();
 
     for (const page of app.pages) {
-      if (page.frontmatter.sitemap === false) continue;
+      if (!isListedPage(page)) continue;
 
       const html = page.htmlFilePathRelative;
 

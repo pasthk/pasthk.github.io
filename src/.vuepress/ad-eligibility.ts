@@ -4,7 +4,7 @@ import type { App, Plugin } from "vuepress/core";
 import {
   isIndexablePage,
   pageDataExtras,
-  visibleContentLength,
+  visibleLengthOf,
 } from "./page-meta.js";
 
 
@@ -20,7 +20,7 @@ export const adEligibilityPlugin = (): Plugin => ({
       const allowed =
         isIndexablePage(page) &&
         page.frontmatter.index !== false &&
-        visibleContentLength(page.content) >= MIN_AD_CONTENT_CHARS;
+        visibleLengthOf(page) >= MIN_AD_CONTENT_CHARS;
 
       pageDataExtras(page.data).adEligible = allowed;
       if (allowed) eligible += 1;

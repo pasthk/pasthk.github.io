@@ -33,6 +33,17 @@ export const parseDateValue = (value: unknown): DateValue | undefined => {
   };
 };
 
+/** 以 YYYYMMDD 數值作排序鍵；缺月日補 0，同日再按路徑排序 */
+export const dateOrderOf = (date: DateValue): number =>
+  Number(`${date.year}${date.month ?? "00"}${date.day ?? "00"}`);
+
+/** 便捷包裝：字串或 Date 直接取排序鍵，無法解析時回 0 */
+export const dateOrder = (value: unknown): number => {
+  const date = parseDateValue(value);
+
+  return date ? dateOrderOf(date) : 0;
+};
+
 export const formatChineseDate = (value: string): string => {
   const date = parseDateValue(value);
 

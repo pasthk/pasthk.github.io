@@ -2,12 +2,16 @@ import { createPage } from "vuepress/core";
 import type { App, Page, Plugin } from "vuepress/core";
 
 import { collectionHead } from "./collection-head.js";
-import { formatChineseDate, parseDateValue } from "./format.js";
+import {
+  dateOrderOf,
+  formatChineseDate,
+  parseDateValue,
+} from "./format.js";
 import { ogImageUrl } from "./og/paths.js";
 import {
   isIndexablePage,
   publishedDate,
-  sourceOf,
+  sourceOfPage,
 } from "./page-meta.js";
 import {
   describeSite,
@@ -26,21 +30,13 @@ interface DatedPage {
   page: Page;
   date: string;
   year: string;
-  /** 補齊月日後的可比較鍵，讓 1955、1955-08、1955-08-11 能正確排序 */
-  key: string;
+  /** 補齊月日後的數值鍵，讓 1955、1955-08、1955-08-11 能正確排序 */
+  order: number;
 }
-
-const dateSortKey = (date: string): string => {
-  const parsed = parseDateValue(date);
-
-  return parsed
-    ? `${parsed.year}-${parsed.month ?? "00"}-${parsed.day ?? "00"}`
-    : date;
-};
 
 /** 資料來源：由史料頁 ReferenceBox 的引用文字解析報刊／出版者名稱 */
 const sourceLabel = (page: Page): string | undefined =>
-  sourceOf(page.content)?.publication;
+  sourceOfPage(page)?.publication;
 
 /**
  * 日期放在條目最前，由 CSS 定位到軸線左側。
@@ -100,17 +96,18 @@ function buildContent(app: App, stats: SiteStats): BrowseContent {
 
     if (!date) continue;
 
+    const parsed = parseDateValue(date);
+
     dated.push({
       page,
       date,
-      year: parseDateValue(date)?.year ?? "年份不詳",
-      key: dateSortKey(date),
+      year: parsed?.year ?? "年份不詳",
+      order: parsed ? dateOrderOf(parsed) : 0,
     });
   }
 
   dated.sort(
-    (a, b) =>
-      a.key.localeCompare(b.key) || a.page.path.localeCompare(b.page.path),
+    (a, b) => a.order - b.order || a.page.path.localeCompare(b.page.path),
   );
 
   const blocks = [

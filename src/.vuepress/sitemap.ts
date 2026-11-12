@@ -2,6 +2,7 @@ import type { App, Page } from "vuepress/core";
 
 import {
   createdDate,
+  isListedPage,
   pageDataExtras,
   type Frontmatter,
 } from "./page-meta.js";
@@ -51,12 +52,7 @@ export const sitemapModifiedTime = (page: Page, app: App): string => {
   if (cached !== undefined) return cached;
 
   const times = app.pages
-    .filter(
-      (item) =>
-        !INDEX_PATHS.has(item.path) &&
-        item.path !== "/404.html" &&
-        item.frontmatter.sitemap !== false,
-    )
+    .filter((item) => !INDEX_PATHS.has(item.path) && isListedPage(item))
     .map(sourceModifiedTime)
     .filter(Boolean)
     .sort();

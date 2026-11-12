@@ -1,7 +1,11 @@
 import { posix } from "node:path";
 import type { App, Page } from "vuepress/core";
 
-import { isSourceDocument, pageTitleMap } from "./page-meta.js";
+import {
+  isListedPage,
+  isSourceDocument,
+  pageTitleMap,
+} from "./page-meta.js";
 import { absoluteUrl } from "./site.js";
 
 
@@ -35,7 +39,13 @@ const toPagePath = (href: string, pagePath: string): string | undefined => {
     : posix.normalize(posix.resolve(posix.dirname(pagePath), normalized));
 };
 
+const linkCache = new WeakMap<Page, ListEntry[]>();
+
 export const linkEntries = (page: Page): ListEntry[] => {
+  const cached = linkCache.get(page);
+
+  if (cached) return cached;
+
   const found: ListEntry[] = [];
   const seen = new Set<string>([page.path]);
 
@@ -48,6 +58,8 @@ export const linkEntries = (page: Page): ListEntry[] => {
     seen.add(path);
     found.push({ path, label: label.replace(/\s+/gu, " ").trim() });
   }
+
+  linkCache.set(page, found);
 
   return found;
 };
@@ -77,21 +89,38 @@ export interface ItemListResult {
   itemList: Record<string, unknown>;
 }
 
+const titlesCache = new WeakMap<
+  App,
+  { size: number; titles: Map<string, string> }
+>();
+
+/** app.pages 會在建置期增長，以長度判斷快取是否過期 */
+const titlesFor = (app: App): Map<string, string> => {
+  const cached = titlesCache.get(app);
+
+  if (cached && cached.size === app.pages.length) return cached.titles;
+
+  const titles = pageTitleMap(app.pages);
+
+  titlesCache.set(app, { size: app.pages.length, titles });
+
+  return titles;
+};
+
 export const collectionItems = (
   page: Page,
   app: App,
 ): ItemListResult | undefined => {
   if (
     isSourceDocument(page) ||
-    page.frontmatter.sitemap === false ||
+    !isListedPage(page) ||
     page.path === "/" ||
-    page.path === "/404.html" ||
     page.path === "/browse.html"
   ) {
     return undefined;
   }
 
-  const titles = pageTitleMap(app.pages);
+  const titles = titlesFor(app);
   const entries = linkEntries(page).filter((entry) => titles.has(entry.path));
 
   if (entries.length < MIN_ITEMS) return undefined;

@@ -1,7 +1,7 @@
 import type { App, Page, Plugin } from "vuepress/core";
 
 import { chapterName, pathSegments } from "./chapters.js";
-import { parseDateValue } from "./format.js";
+import { dateOrder } from "./format.js";
 import { pushTo } from "./map-utils.js";
 import {
   isIndexablePage,
@@ -34,14 +34,6 @@ export const relatedFor = (path: string): RelatedInfo | undefined =>
 const isSourcePage = (page: Page): boolean =>
   isIndexablePage(page) && isSourceDocument(page);
 
-const dateKey = (value: string): number => {
-  const date = parseDateValue(value);
-
-  return date
-    ? Number(`${date.year}${date.month ?? "00"}${date.day ?? "00"}`)
-    : 0;
-};
-
 interface Entry {
   page: Page;
   date: string;
@@ -71,7 +63,7 @@ function collect(app: App): void {
       return {
         page,
         date,
-        key: dateKey(date),
+        key: dateOrder(date),
         chapter: segments[0] ?? "",
         group: segments.slice(0, -1).join("/"),
       };
@@ -85,18 +77,33 @@ function collect(app: App): void {
     pushTo(byChapter, entry.chapter, entry);
   }
 
-  for (const list of byGroup.values()) list.sort(byDateThenPath);
-  for (const list of byChapter.values()) list.sort(byDateThenPath);
+  const indexIn = (list: Entry[]): Map<string, number> =>
+    new Map(list.map((entry, index) => [entry.page.path, index]));
+
+  const groupIndex = new Map<string, Map<string, number>>();
+  const chapterIndex = new Map<string, Map<string, number>>();
+
+  for (const [key, list] of byGroup) {
+    list.sort(byDateThenPath);
+    groupIndex.set(key, indexIn(list));
+  }
+
+  for (const [key, list] of byChapter) {
+    list.sort(byDateThenPath);
+    chapterIndex.set(key, indexIn(list));
+  }
 
   for (const entry of entries) {
     const picked: Entry[] = [];
     const seen = new Set<string>([entry.page.path]);
     const siblings = byGroup.get(entry.group) ?? [];
-    const index = siblings.findIndex(
-      (item) => item.page.path === entry.page.path,
-    );
+    const index = groupIndex.get(entry.group)?.get(entry.page.path) ?? -1;
 
-    for (let offset = 1; offset < siblings.length && picked.length < MAX_RELATED; offset += 1) {
+    for (
+      let offset = 1;
+      index >= 0 && offset < siblings.length && picked.length < MAX_RELATED;
+      offset += 1
+    ) {
       for (const candidate of [siblings[index - offset], siblings[index + offset]]) {
         if (!candidate || seen.has(candidate.page.path)) continue;
         if (picked.length >= MAX_RELATED) break;
@@ -128,9 +135,7 @@ function collect(app: App): void {
     // 編年時間軸：以章節內依出版日排序的完整序列為準，取當前頁前後各兩篇。
     // 與 items 的「相關度」挑選分流：items 供 llms.txt 導覽，timeline 供頁面呈現。
     const sequence = byChapter.get(entry.chapter) ?? [];
-    const position = sequence.findIndex(
-      (item) => item.page.path === entry.page.path,
-    );
+    const position = chapterIndex.get(entry.chapter)?.get(entry.page.path) ?? -1;
     const timeline: RelatedTimeline =
       position < 0
         ? { before: [], current: toItem(entry), after: [] }

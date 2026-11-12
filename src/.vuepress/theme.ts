@@ -1,20 +1,19 @@
-import type { App, Page } from "vuepress/core";
+import type { Page } from "vuepress/core";
 import { hopeTheme } from "vuepress-theme-hope";
 
 import navbar from "./navbar.js";
 import sidebar from "./sidebar.js";
-import { breadcrumbTrails } from "./breadcrumb.js";
+import { breadcrumbTrails, type TrailItem } from "./breadcrumb.js";
 import { chapterOfPath, pathSegments } from "./chapters.js";
 import { collectionItems } from "./item-list.js";
 import { socialTags } from "./og/meta.js";
 import { ogImageUrl } from "./og/paths.js";
 import {
   canonicalUrl,
-  citationOf,
   createdDate,
   isSourceDocument,
   publishedDate,
-  sourceOf,
+  sourceOfPage,
 } from "./page-meta.js";
 import { tokenizeForIndex } from "./search-tokenize.js";
 import { sitemapModifiedTime } from "./sitemap.js";
@@ -68,10 +67,8 @@ const cardUrl = (page: Page): string =>
     ? ogImageUrl(hostname, "/")
     : ogImageUrl(hostname, page.path);
 
-function buildBreadcrumb(page: Page, url: string, app: App) {
+function buildBreadcrumb(page: Page, url: string, trail: TrailItem[]) {
   if (page.path === "/" || !page.title) return null;
-
-  const trail = breadcrumbTrails(app).get(page.path) ?? [];
 
   const items = [
     { name: "首頁", item: `${hostname}/` },
@@ -198,7 +195,8 @@ export default hopeTheme(
           const url = canonicalUrl(page);
           const published = publishedDate(page);
           const created = createdDate(page);
-          const citation = article ? citationOf(page.content) : undefined;
+          const source = article ? sourceOfPage(page) : undefined;
+          const citation = source?.citation;
           const collection = article ? undefined : collectionItems(page, app);
 
           const main = {
@@ -232,9 +230,10 @@ export default hopeTheme(
 
           if (citation) main.citation = citation;
 
+          const trails = breadcrumbTrails(app);
           const [dir] = pathSegments(page.path);
           const chapter = chapterOfPath(page.path);
-          const topic = breadcrumbTrails(app)
+          const topic = trails
             .get(page.path)
             ?.filter((entry) => entry.link && entry.link !== "/")
             .at(-1)?.text;
@@ -253,8 +252,6 @@ export default hopeTheme(
             if (chapter) main.articleSection = chapter;
             if (published) main.temporalCoverage = published;
 
-            const source = sourceOf(page.content);
-
             if (source?.publication) {
               main.isBasedOn = {
                 "@type": "CreativeWork",
@@ -269,7 +266,11 @@ export default hopeTheme(
             }
           }
 
-          const breadcrumb = buildBreadcrumb(page, url, app);
+          const breadcrumb = buildBreadcrumb(
+            page,
+            url,
+            trails.get(page.path) ?? [],
+          );
 
           if (breadcrumb) main.breadcrumb = { "@id": breadcrumb["@id"] };
           if (collection) main.mainEntity = collection.itemList;

@@ -7,7 +7,7 @@ import {
   isIndexablePage,
   isSourceDocument,
   pageDataExtras,
-  visibleContentLength,
+  visibleLengthOf,
 } from "./page-meta.js";
 import { sidebarLinks } from "./sidebar.js";
 
@@ -40,7 +40,7 @@ export const contentGuardPlugin = (): Plugin => ({
         knownPaths.has(entry.path),
       ).length;
 
-      if (visibleContentLength(page.content) < 100 && links < 2) {
+      if (visibleLengthOf(page) < 100 && links < 2) {
         thin.push(page.path);
       }
     }
