@@ -373,13 +373,23 @@ body {
 
 @media (max-width: 719px) {
   .browse-timeline {
+    --browse-mobile-date-width: 5rem;
+
     margin-left: 0;
   }
 
+  /* 窄屏沒有軸線左側的日期欄：改在軸線右側留固定寬度。
+     同一日期只輸出一次，後續條目沒有日期元素，標題左緣才會全部對齊。 */
+  .browse-timeline li {
+    padding-left: calc(1.65rem + var(--browse-mobile-date-width));
+  }
+
   .browse-timeline-date {
-    position: static;
-    width: auto;
-    margin: 0 0.4rem 0 0;
+    position: absolute;
+    top: 0.28rem;
+    left: 1.15rem;
+    width: var(--browse-mobile-date-width);
+    margin: 0;
     text-align: start;
   }
 
