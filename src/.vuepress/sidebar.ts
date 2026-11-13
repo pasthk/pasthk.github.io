@@ -82,6 +82,9 @@ const sidebarConfig: Record<string, SidebarNode[]> = {
     ]),
     group("社會民生", [
       group("教育", [
+        group("中學教育", [
+          "/education/heung-to-middle-school.md",
+        ]),
         group("專上教育", [
           "/education/the-university-of-hong-kong.md",
           "/education/the-chinese-university-of-hong-kong.md",
