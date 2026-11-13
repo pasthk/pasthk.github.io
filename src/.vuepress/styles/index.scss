@@ -1,3 +1,10 @@
+// 共用設計代幣：Sass 變數於編譯期展開，產出的 CSS 與原本逐字相同
+$navbar-surface: var(--navbar-c-bg, var(--vp-c-bg, #fff));
+$navbar-blur: saturate(150%) blur(12px);
+$browse-sticky-top: calc(var(--navbar-height, 3.6rem) + 0.5rem);
+$browse-date-neg: calc(-1 * var(--browse-date-offset));
+$browse-date-width: calc(var(--browse-date-offset) - 0.9rem);
+
 .vp-page {
   font-size: 1.125rem;
 }
@@ -13,13 +20,8 @@
     text-align: start;
   }
 
-  @media (max-width: 419px) {
-    :is(p, li, blockquote) {
-      text-align: start;
-    }
-  }
-
-  @media print {
+  @media (max-width: 419px), print {
+    // 窄螢幕與列印都不適合兩端對齊
     :is(p, li, blockquote) {
       text-align: start;
     }
@@ -112,8 +114,8 @@ body {
 
   margin-inline-start: calc(-1 * var(--toc-bleed));
   padding-inline-start: var(--toc-bleed);
-  background: var(--navbar-c-bg, var(--vp-c-bg, #fff));
-  backdrop-filter: saturate(150%) blur(12px);
+  background: $navbar-surface;
+  backdrop-filter: $navbar-blur;
 
   /* 窄屏內容左右留白只有 1.5rem，延伸量需收窄以免左緣超出視窗 */
   @media (max-width: 959px) {
@@ -121,15 +123,17 @@ body {
   }
 }
 
+// font-weight / letter-spacing 由 body 繼承，無需重複宣告
 .vp-footer-wrapper,
 .vp-footer {
   font-size: 1.1rem;
-  font-weight: 400;
-  letter-spacing: 0.02em;
+}
+
+.vp-footer {
+  line-height: 1.6;
 }
 
 .page-info {
-
   .page-date-info + .page-reading-time-info {
     margin-inline-start: 0.1em;
   }
@@ -197,15 +201,6 @@ body {
   margin: 1rem auto 0;
 }
 
-.sponsor-status {
-  color: var(--vp-c-text-subtle);
-  font-size: 0.9rem;
-}
-
-.vp-footer {
-  line-height: 1.6;
-}
-
 .vp-page-meta .edit-link {
   order: 2;
   flex-grow: 0;
@@ -213,18 +208,19 @@ body {
   text-align: end;
 }
 
-.ad-top-wrap {
+.ad-top-wrap,
+.ad-top {
   position: relative;
   width: 100%;
   box-sizing: border-box;
+}
+
+.ad-top-wrap {
   padding-top: 1.1rem;
   margin: 0 auto 1.25rem;
 }
 
 .ad-top {
-  position: relative;
-  width: 100%;
-  box-sizing: border-box;
   margin: 0;
   display: flex;
   align-items: center;
@@ -261,13 +257,13 @@ body {
   /* 年份標題貼頂：樣式仿 TOC「此頁內容」，捲動時由下一節推走並換成對應年份 */
   h3 {
     position: sticky;
-    top: calc(var(--navbar-height, 3.6rem) + 0.5rem);
+    top: $browse-sticky-top;
     z-index: 2;
     /* 以 #_1874年 這類深層連結跳轉時，標題不要被固定導覽列蓋住 */
-    scroll-margin-top: calc(var(--navbar-height, 3.6rem) + 0.5rem);
+    scroll-margin-top: $browse-sticky-top;
 
     /* 負 margin 抵銷 padding：底色左緣長到日期欄，文字位置不變 */
-    margin: 0 0 0 calc(-1 * var(--browse-date-offset));
+    margin: 0 0 0 $browse-date-neg;
     padding: 0 0 0 calc(var(--browse-date-offset) + 1.15rem);
 
     border: 0;
@@ -276,8 +272,8 @@ body {
     /* 收緊行高讓貼頂色塊上下更貼近文字（原 1.7 會多出約 8px 上下留白） */
     line-height: 1.4;
 
-    background: var(--navbar-c-bg, var(--vp-c-bg, #fff));
-    backdrop-filter: saturate(150%) blur(12px);
+    background: $navbar-surface;
+    backdrop-filter: $navbar-blur;
   }
 
   /* 年份之間的留白放在 section 內（ul 的 padding），貼頂切換才不會出現無標題的空檔 */
@@ -288,25 +284,30 @@ body {
   /* 年份為純文字（無錨點連結）：不可點、不可拖選，仍置於軸線左側並與日期欄右對齊 */
   h3 .browse-year-label {
     display: block;
-    width: calc(var(--browse-date-offset) - 0.9rem);
+    width: $browse-date-width;
     margin-left: calc(-1 * var(--browse-date-offset) - 1.15rem);
     text-align: right;
     white-space: nowrap;
     pointer-events: none;
   }
 
-  /* 年份節點：實心圓點，隨 H3 字號垂直置中（底色已左延，圓點需回到軸線上） */
-  h3::before {
+  // 年份實心點與條目空心點共用的圓點骨架
+  h3::before,
+  li::before {
     content: "";
     position: absolute;
-    top: 50%;
     transform: translateY(-50%);
+    box-sizing: border-box;
+    border-radius: 50%;
+  }
+
+  /* 年份節點：實心圓點，隨 H3 字號垂直置中（底色已左延，圓點需回到軸線上） */
+  h3::before {
+    top: 50%;
     left: calc(var(--browse-date-offset) - 6px);
     width: 11px;
     height: 11px;
-    box-sizing: border-box;
     border: 1px solid var(--vp-c-text, #000);
-    border-radius: 50%;
     background: var(--vp-c-text, #000);
   }
 
@@ -326,16 +327,11 @@ body {
 
   /* 條目節點：空心圓點，相對第一行標題垂直置中 */
   li::before {
-    content: "";
-    position: absolute;
     top: calc(0.28rem + 0.85em);
-    transform: translateY(-50%);
     left: -4px;
     width: 7px;
     height: 7px;
-    box-sizing: border-box;
     border: 1px solid var(--vp-c-text-mute, #888);
-    border-radius: 50%;
     background: var(--vp-c-bg, #fff);
   }
 
@@ -352,8 +348,8 @@ body {
 .browse-timeline-date {
   position: absolute;
   top: 0.28rem;
-  left: calc(-1 * var(--browse-date-offset));
-  width: calc(var(--browse-date-offset) - 0.9rem);
+  left: $browse-date-neg;
+  width: $browse-date-width;
   margin: 0;
   font-size: inherit;
   line-height: 1.7;
@@ -384,12 +380,10 @@ body {
     padding-left: calc(1.65rem + var(--browse-mobile-date-width));
   }
 
+  // position / top / margin 沿用上方基礎規則
   .browse-timeline-date {
-    position: absolute;
-    top: 0.28rem;
     left: 1.15rem;
     width: var(--browse-mobile-date-width);
-    margin: 0;
     text-align: start;
   }
 
