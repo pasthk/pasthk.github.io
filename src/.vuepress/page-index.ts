@@ -4,7 +4,7 @@ import type { App, Page, Plugin } from "vuepress/core";
 import { collectionHead } from "./collection-head.js";
 import {
   dateOrderOf,
-  formatChineseDate,
+  formatMonthDay,
   parseDateValue,
 } from "./format.js";
 import { ogImageUrl } from "./og/paths.js";
@@ -54,7 +54,10 @@ const timelineLine = (page: Page, dateLabel?: string): string => {
   return `- ${prefix}[${page.title}](${page.path})${suffix}`;
 };
 
-/** 整頁共用一條軸線；年份為實心節點，其下條目為空心圓點 */
+/**
+ * 整頁共用一條軸線；年份為實心節點，其下條目為空心圓點。
+ * 每個年份各自包在 section 內，貼頂的年份標題才會被下一節推走、隨捲動切換。
+ */
 const timelineMarkdown = (dated: DatedPage[]): string => {
   const lines = ['<div class="browse-timeline">', ""];
   let year = "";
@@ -62,18 +65,22 @@ const timelineMarkdown = (dated: DatedPage[]): string => {
 
   for (const entry of dated) {
     if (entry.year !== year) {
-      if (year) lines.push("");
+      if (year) lines.push("", "</section>", "");
       year = entry.year;
-      lines.push(`### ${year}年`, "");
+      /* 年份已由分組標題呈現，日期只留月日；換節後第一條必定顯示日期 */
+      lastDate = "";
+      lines.push('<section class="browse-year">', "", `### ${year}年`, "");
     }
 
-    const dateLabel = formatChineseDate(entry.date);
+    const dateLabel = formatMonthDay(entry.date);
 
     lines.push(
       timelineLine(entry.page, dateLabel === lastDate ? undefined : dateLabel),
     );
     lastDate = dateLabel;
   }
+
+  if (year) lines.push("", "</section>");
 
   lines.push("", "</div>");
 

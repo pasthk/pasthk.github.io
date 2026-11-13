@@ -56,6 +56,20 @@ export const formatChineseDate = (value: string): string => {
   return `${date.year}年`;
 };
 
+/**
+ * 供已按年份分組的時間軸使用：有月日只留月日、只有年月留月，
+ * 只有年份的文獻則保留年份（否則標籤會空白）。
+ */
+export const formatMonthDay = (value: string): string => {
+  const date = parseDateValue(value);
+
+  if (!date) return value;
+  if (date.day) return `${Number(date.month)}月${Number(date.day)}日`;
+  if (date.month) return `${Number(date.month)}月`;
+
+  return `${date.year}年`;
+};
+
 export interface CitationParts {
   source: string;
   note: string;
