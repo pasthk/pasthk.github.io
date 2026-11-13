@@ -263,6 +263,8 @@ body {
     position: sticky;
     top: calc(var(--navbar-height, 3.6rem) + 0.5rem);
     z-index: 2;
+    /* 以 #_1874年 這類深層連結跳轉時，標題不要被固定導覽列蓋住 */
+    scroll-margin-top: calc(var(--navbar-height, 3.6rem) + 0.5rem);
 
     /* 負 margin 抵銷 padding：底色左緣長到日期欄，文字位置不變 */
     margin: 0 0 0 calc(-1 * var(--browse-date-offset));
@@ -283,13 +285,14 @@ body {
     margin: 0;
   }
 
-  /* 年份移至軸線左側，與日期欄右對齊；字號與條目標題一致 */
-  h3 .header-anchor {
+  /* 年份為純文字（無錨點連結）：不可點、不可拖選，仍置於軸線左側並與日期欄右對齊 */
+  h3 .browse-year-label {
     display: block;
     width: calc(var(--browse-date-offset) - 0.9rem);
     margin-left: calc(-1 * var(--browse-date-offset) - 1.15rem);
     text-align: right;
     white-space: nowrap;
+    pointer-events: none;
   }
 
   /* 年份節點：實心圓點，隨 H3 字號垂直置中（底色已左延，圓點需回到軸線上） */
@@ -390,7 +393,7 @@ body {
     left: -6px;
   }
 
-  .browse-timeline h3 .header-anchor {
+  .browse-timeline h3 .browse-year-label {
     width: auto;
     margin-left: 0;
     text-align: start;
