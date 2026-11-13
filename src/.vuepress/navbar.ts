@@ -1,5 +1,7 @@
 import { navbar } from "vuepress-theme-hope";
 
+import { TIMELINE_PATH } from "./page-meta.js";
+
 export default navbar([
   {
     text: "閱讀說明",
@@ -11,6 +13,6 @@ export default navbar([
   },
   {
     text: "文獻綜覽",
-    link: "/browse.html",
+    link: TIMELINE_PATH,
   },
 ]);

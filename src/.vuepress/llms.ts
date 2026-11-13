@@ -14,6 +14,7 @@ import {
   isLlmsPage,
   publishedDate,
   replaceReferenceBoxes,
+  TIMELINE_PATH,
 } from "./page-meta.js";
 import { relatedMarkdown } from "./related-documents.js";
 import { describeSite, siteStats, type StatsInput } from "./site-stats.js";
@@ -29,7 +30,7 @@ function buildOptional(pages: LLMPage[]): string {
   return [
     "## Optional",
     "",
-    `- [文獻綜覽](${HOSTNAME}/browse.html): 依原始出版日期由舊至新排列的事件時間軸，附每篇史料的出版日與資料來源（報刊／出版者名稱），同一日期合併顯示；本頁由建置期產生，沒有 .md 純文字鏡像`,
+    `- [文獻綜覽](${HOSTNAME}${TIMELINE_PATH}): 依原始出版日期由舊至新排列的事件時間軸，附每篇史料的出版日與資料來源（報刊／出版者名稱），同一日期合併顯示；本頁由建置期產生，沒有 .md 純文字鏡像`,
     `- [全站全文（單一檔案）](${HOSTNAME}/llms-full.txt): 全站頁面全文合併，檔案較大，適合需要整批檢索時取用`,
     `- [完整頁面清單](${HOSTNAME}/sitemap.xml): 搜尋引擎用的完整 URL 清單`,
     "",

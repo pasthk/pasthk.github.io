@@ -10,8 +10,10 @@ import {
 import { ogImageUrl } from "./og/paths.js";
 import {
   isIndexablePage,
+  LEGACY_INDEX_PATH,
   publishedDate,
   sourceOfPage,
+  TIMELINE_PATH,
 } from "./page-meta.js";
 import {
   describeSite,
@@ -22,9 +24,11 @@ import {
 import { absoluteUrl, HOSTNAME, SITE_NAME } from "./site.js";
 
 
-const PAGE_PATH = "/browse.html";
 const PAGE_TITLE = "文獻綜覽";
 const TIMELINE_TITLE = "事件時間軸";
+
+/** 新網址為正式入口；舊網址照原樣繼續輸出，內容完全共用 */
+const INDEX_PATHS = [LEGACY_INDEX_PATH, TIMELINE_PATH];
 
 interface DatedPage {
   page: Page;
@@ -148,12 +152,14 @@ export const pageIndexPlugin = (): Plugin => ({
   name: "page-index",
 
   async onInitialized(app: App) {
-    if (app.pages.some((item) => item.path === PAGE_PATH)) return;
+    const paths = INDEX_PATHS.filter(
+      (path) => !app.pages.some((item) => item.path === path),
+    );
+
+    if (!paths.length) return;
 
     const stats = siteStats(app.pages as StatsInput[]);
     const { content, pages: listed } = buildContent(app, stats);
-    const url = absoluteUrl(PAGE_PATH);
-    const image = ogImageUrl(HOSTNAME, PAGE_PATH);
     const description =
       `${SITE_NAME}依原始出版日期由舊至新排列的${TIMELINE_TITLE}，` +
       `收錄 ${stats.sources} 篇 ${stats.firstYear}–${stats.lastYear} 年的原始文獻轉錄，` +
@@ -163,29 +169,33 @@ export const pageIndexPlugin = (): Plugin => ({
       name: item.title,
       url: absoluteUrl(item.path),
     }));
-    const head = collectionHead({
-      url,
-      title: PAGE_TITLE,
-      description,
-      image,
-      items,
-    });
 
-    const page = await createPage(app, {
-      path: PAGE_PATH,
-      content: `${content}\n`,
-      frontmatter: {
+    for (const path of paths) {
+      const url = absoluteUrl(path);
+      const head = collectionHead({
+        url,
         title: PAGE_TITLE,
         description,
-        head,
-        toc: false,
-        next: false,
-        prev: false,
-        comment: false,
-        pageInfo: false,
-      },
-    });
+        image: ogImageUrl(HOSTNAME, path),
+        items,
+      });
 
-    app.pages.push(page);
+      const page = await createPage(app, {
+        path,
+        content: `${content}\n`,
+        frontmatter: {
+          title: PAGE_TITLE,
+          description,
+          head,
+          toc: false,
+          next: false,
+          prev: false,
+          comment: false,
+          pageInfo: false,
+        },
+      });
+
+      app.pages.push(page);
+    }
   },
 });

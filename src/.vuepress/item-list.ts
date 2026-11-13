@@ -4,6 +4,7 @@ import type { App, Page } from "vuepress/core";
 import {
   isListedPage,
   isSourceDocument,
+  isTimelineIndex,
   pageTitleMap,
 } from "./page-meta.js";
 import { absoluteUrl } from "./site.js";
@@ -115,7 +116,7 @@ export const collectionItems = (
     isSourceDocument(page) ||
     !isListedPage(page) ||
     page.path === "/" ||
-    page.path === "/browse.html"
+    isTimelineIndex(page)
   ) {
     return undefined;
   }

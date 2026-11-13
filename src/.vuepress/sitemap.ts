@@ -3,6 +3,7 @@ import type { App, Page } from "vuepress/core";
 import {
   createdDate,
   isListedPage,
+  isTimelineIndex,
   pageDataExtras,
   type Frontmatter,
 } from "./page-meta.js";
@@ -40,25 +41,23 @@ const sourceModifiedTime = (page: Page): string => {
   return toIso(createdDate(page));
 };
 
-const INDEX_PATHS = new Set(["/browse.html"]);
-
-const browseTimes = new WeakMap<App, string>();
+const indexTimes = new WeakMap<App, string>();
 
 export const sitemapModifiedTime = (page: Page, app: App): string => {
-  if (!INDEX_PATHS.has(page.path)) return sourceModifiedTime(page);
+  if (!isTimelineIndex(page)) return sourceModifiedTime(page);
 
-  const cached = browseTimes.get(app);
+  const cached = indexTimes.get(app);
 
   if (cached !== undefined) return cached;
 
   const times = app.pages
-    .filter((item) => !INDEX_PATHS.has(item.path) && isListedPage(item))
+    .filter((item) => !isTimelineIndex(item) && isListedPage(item))
     .map(sourceModifiedTime)
     .filter(Boolean)
     .sort();
   const latest = times.at(-1) ?? "";
 
-  browseTimes.set(app, latest);
+  indexTimes.set(app, latest);
 
   return latest;
 };

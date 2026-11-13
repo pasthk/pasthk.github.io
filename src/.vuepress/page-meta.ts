@@ -66,7 +66,15 @@ export interface PageLike {
   content?: string;
 }
 
-/** 由 Markdown 原始檔產生的頁面；虛擬頁（如 /browse.html）沒有 filePath */
+/** 文獻綜覽虛擬頁：舊網址照常輸出，新網址為正式入口 */
+export const LEGACY_INDEX_PATH = "/browse.html";
+export const TIMELINE_PATH = "/timeline.html";
+
+/** 是否為文獻綜覽索引頁（新舊網址皆算） */
+export const isTimelineIndex = (page: PageLike): boolean =>
+  page.path === LEGACY_INDEX_PATH || page.path === TIMELINE_PATH;
+
+/** 由 Markdown 原始檔產生的頁面；虛擬頁（文獻綜覽）沒有 filePath */
 export const isMarkdownPage = (page: PageLike): boolean =>
   Boolean(page.filePath?.endsWith(".md"));
 
@@ -81,9 +89,7 @@ const asDate = (value: unknown): string | undefined =>
   parseDateValue(value)?.text;
 
 export const isIndexablePage = (page: PageLike): boolean =>
-  Boolean(page.title) &&
-  isListedPage(page) &&
-  page.path !== "/browse.html";
+  Boolean(page.title) && isListedPage(page) && !isTimelineIndex(page);
 
 export const isSourceDocument = (page: Page): boolean =>
   asDate(frontmatterOf(page).datePublished) !== undefined;
