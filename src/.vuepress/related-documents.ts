@@ -45,6 +45,45 @@ interface Entry {
 const byDateThenPath = (a: Entry, b: Entry): number =>
   a.key - b.key || a.page.path.localeCompare(b.page.path);
 
+/** 與舊的 filter().sort() 完全相同的比較器，供 top-K 選擇沿用 */
+const byDateDistance =
+  (key: number) =>
+  (a: Entry, b: Entry): number =>
+    Math.abs(a.key - key) - Math.abs(b.key - key) ||
+    a.page.path.localeCompare(b.page.path);
+
+/**
+ * 只取最接近的 limit 篇。章節清單動輒上百篇，舊寫法為每一頁都配置一份
+ * 過濾後陣列並完整排序，卻只用到前 4 筆；改為線性維護一個長度上限 limit
+ * 的有序陣列，結果逐字相同，成本由 O(C log C) 降為 O(C·limit)。
+ */
+const nearest = (
+  chapter: Entry[],
+  seen: Set<string>,
+  key: number,
+  limit: number,
+): Entry[] => {
+  const compare = byDateDistance(key);
+  const best: Entry[] = [];
+
+  for (const candidate of chapter) {
+    if (seen.has(candidate.page.path)) continue;
+
+    if (best.length === limit && compare(candidate, best[limit - 1]) >= 0)
+      continue;
+
+    let insertAt = best.length;
+
+    while (insertAt > 0 && compare(candidate, best[insertAt - 1]) < 0)
+      insertAt -= 1;
+
+    best.splice(insertAt, 0, candidate);
+    if (best.length > limit) best.pop();
+  }
+
+  return best;
+};
+
 function collect(app: App): void {
   relatedMap.clear();
 
@@ -114,17 +153,14 @@ function collect(app: App): void {
     }
 
     if (picked.length < MAX_RELATED) {
-      const near = (byChapter.get(entry.chapter) ?? [])
-        .filter((candidate) => !seen.has(candidate.page.path))
-        .sort(
-          (a, b) =>
-            Math.abs(a.key - entry.key) - Math.abs(b.key - entry.key) ||
-            a.page.path.localeCompare(b.page.path),
-        );
+      const near = nearest(
+        byChapter.get(entry.chapter) ?? [],
+        seen,
+        entry.key,
+        MAX_RELATED - picked.length,
+      );
 
       for (const candidate of near) {
-        if (picked.length >= MAX_RELATED) break;
-
         picked.push(candidate);
         seen.add(candidate.page.path);
       }

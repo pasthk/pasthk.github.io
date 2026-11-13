@@ -130,13 +130,15 @@ export const visibleLengthOf = (page: PageLike): number => {
 
 const REFERENCE_BOX = /<ReferenceBox>([\s\S]*?)<\/ReferenceBox>/u;
 
+/* 全域版預先編譯：每頁轉出 .md 鏡像時不必再 new RegExp */
+const REFERENCE_BOX_ALL = /<ReferenceBox>([\s\S]*?)<\/ReferenceBox>/gu;
+
 export const replaceReferenceBoxes = (
   markdown: string,
   format: (inner: string) => string,
 ): string =>
-  markdown.replace(
-    new RegExp(REFERENCE_BOX.source, "gu"),
-    (_matched, inner: string) => format(inner),
+  markdown.replace(REFERENCE_BOX_ALL, (_matched, inner: string) =>
+    format(inner),
   );
 
 export const citationOf = (markdown: string): string | undefined => {

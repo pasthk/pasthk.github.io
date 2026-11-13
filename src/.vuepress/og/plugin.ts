@@ -6,6 +6,7 @@ import type { App, Page, Plugin } from "vuepress/core";
 import { success, warn } from "vuepress/utils";
 
 import { chapterOfPath, pathSegments } from "../chapters.js";
+import { mapInBatches } from "../map-utils.js";
 import { citationOf } from "../page-meta.js";
 import { HOST, SITE_NAME, SITE_NAME_EN } from "../site.js";
 import {
@@ -167,34 +168,48 @@ export const ogImagePlugin = (): Plugin => ({
 
     let total = 0;
 
-    for (const [index, page] of pages.entries()) {
-      const content = buildContent(
-        page,
-        raws[index],
-        childCounts.get(page.path) ?? 0,
-      );
-
-      if (coverage) {
-        const text = [content.title, content.meta, content.section, content.header]
-          .filter(Boolean)
-          .join("");
-        const gaps = [...new Set(text)].filter(
-          (char) => !coverage.has(char.codePointAt(0) as number),
+    // 字型渲染是同步 CPU，寫檔才是可重疊的部分；分批併發避免逐張等待磁碟。
+    await mapInBatches(
+      pages,
+      async (page, index) => {
+        const content = buildContent(
+          page,
+          raws[index],
+          childCounts.get(page.path) ?? 0,
         );
 
-        if (gaps.length) uncovered.push(`${page.path} → ${gaps.join("")}`);
-      }
+        if (coverage) {
+          const text = [
+            content.title,
+            content.meta,
+            content.section,
+            content.header,
+          ]
+            .filter(Boolean)
+            .join("");
+          const gaps = [...new Set(text)].filter(
+            (char) => !coverage.has(char.codePointAt(0) as number),
+          );
 
-      const svg = buildCardSvg({ header: SITE_NAME, footer: HOST, ...content });
+          if (gaps.length) uncovered.push(`${page.path} → ${gaps.join("")}`);
+        }
 
-      const png = new Resvg(svg, { background: "#ffffff", font })
-        .render()
-        .asPng();
+        const svg = buildCardSvg({
+          header: SITE_NAME,
+          footer: HOST,
+          ...content,
+        });
 
-      await writeFile(join(outDir, ogFileName(page.path)), png);
+        const png = new Resvg(svg, { background: "#ffffff", font })
+          .render()
+          .asPng();
 
-      total += png.length;
-    }
+        await writeFile(join(outDir, ogFileName(page.path)), png);
+
+        total += png.length;
+      },
+      8,
+    );
 
     const mode = "fontFiles" in font ? "子集字型" : "系統字型";
     const skipped = app.pages.length - pages.length;

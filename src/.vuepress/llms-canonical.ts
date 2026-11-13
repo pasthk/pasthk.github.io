@@ -3,7 +3,7 @@ import { dirname, join } from "node:path";
 import type { App, HeadConfig, Plugin } from "vuepress/core";
 
 import { chapterName } from "./chapters.js";
-import { pushTo } from "./map-utils.js";
+import { mapInBatches, pushTo } from "./map-utils.js";
 import {
   OVERVIEW_KEY,
   VOLUME_DIR,
@@ -70,7 +70,7 @@ async function writeVolumes(dest: string, full: string): Promise<void> {
 
   await mkdir(dir, { recursive: true });
 
-  for (const [key, bodies] of groups) {
+  await mapInBatches([...groups], async ([key, bodies]) => {
     const label =
       key === OVERVIEW_KEY ? "總覽與說明" : (chapterName(key) ?? key);
     const header = [
@@ -87,7 +87,7 @@ async function writeVolumes(dest: string, full: string): Promise<void> {
       `${header}${bodies.join("\n---\n\n")}\n`,
       "utf8",
     );
-  }
+  });
 }
 
 export const llmsCanonicalPlugin = (): Plugin => ({
@@ -146,17 +146,17 @@ export const llmsCanonicalPlugin = (): Plugin => ({
 
     const dest = dirname(app.dir.dest("llms-full.txt"));
 
-    for (const file of await markdownFiles(dest)) {
+    await mapInBatches(await markdownFiles(dest), async (file) => {
       const content = await readFile(file, "utf8");
 
-      if (!content.startsWith("---\n")) continue;
+      if (!content.startsWith("---\n")) return;
 
       const next = content.replace(FRONTMATTER, (block) =>
         rewriteUrlLines(block, canonicalFor),
       );
 
       if (next !== content) await writeFile(file, next, "utf8");
-    }
+    });
 
     const fullPath = app.dir.dest("llms-full.txt");
     const full = await readFile(fullPath, "utf8");

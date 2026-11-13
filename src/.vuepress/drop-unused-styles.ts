@@ -29,6 +29,12 @@ const USAGE_MARKERS: RegExp[] = [
   /<GitChangelog\b/u,
 ];
 
+/* 合併為單一正則：原本每個檔案要跑 10 次全文掃描，現在只需 1 次 */
+const USAGE_PATTERN = new RegExp(
+  USAGE_MARKERS.map((marker) => `(?:${marker.source})`).join("|"),
+  "mu",
+);
+
 const DROPPED_CLASS_TOKENS = [
   "vp-hero",
   "vp-feature",
@@ -47,6 +53,9 @@ const DROPPED_CLASS_TOKENS = [
   "vp-changelog",
   "vp-git-contributors",
 ];
+
+/* 先以單一正則篩掉絕大多數乾淨頁面；命中時才逐項細查，結果與原本一致 */
+const DROPPED_CLASS_PATTERN = new RegExp(DROPPED_CLASS_TOKENS.join("|"), "u");
 
 function listMarkdown(dir: string): string[] {
   const entries = readdirSync(dir, { withFileTypes: true });
@@ -69,11 +78,9 @@ let dropCache: boolean | undefined;
 function shouldDrop(): boolean {
   if (dropCache !== undefined) return dropCache;
 
-  dropCache = listMarkdown(SRC_DIR).every((file) => {
-    const text = readFileSync(file, "utf8");
-
-    return !USAGE_MARKERS.some((marker) => marker.test(text));
-  });
+  dropCache = listMarkdown(SRC_DIR).every(
+    (file) => !USAGE_PATTERN.test(readFileSync(file, "utf8")),
+  );
 
   return dropCache;
 }
@@ -84,6 +91,10 @@ export function dropUnusedStyles(): Plugin {
     enforce: "pre",
     transform(_code, id) {
       if (!shouldDrop()) return null;
+
+      /* 目標檔全來自這兩個套件；其餘模組直接略過，省去路徑正規化與 5 次比對 */
+      if (!id.includes("vuepress-theme-hope") && !id.includes("@vuepress/"))
+        return null;
 
       const path = id.split("?", 1)[0].replaceAll("\\", "/");
 
@@ -111,6 +122,9 @@ export function verifyDroppedStyles(): VuePressPlugin {
             walk(path);
           } else if (entry.name.endsWith(".html")) {
             const html = readFileSync(path, "utf8");
+
+            if (!DROPPED_CLASS_PATTERN.test(html)) continue;
+
             const found = DROPPED_CLASS_TOKENS.filter((token) =>
               html.includes(token),
             );

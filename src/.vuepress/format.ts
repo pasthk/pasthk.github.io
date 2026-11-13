@@ -8,6 +8,13 @@ export interface DateValue {
 
 const DATE_VALUE = /^(\d{4})(?:-(\d{2})(?:-(\d{2}))?)?(?:[T\s].*)?$/u;
 
+/**
+ * 同一個日期會被 seo、sitemap、時間軸、統計等多個外掛反覆解析。
+ * 以正規化後的文字快取結果，省去重複的正則比對與物件配置。
+ * 回傳物件僅供讀取，呼叫方不應修改。
+ */
+const dateCache = new Map<string, DateValue | undefined>();
+
 export const parseDateValue = (value: unknown): DateValue | undefined => {
   let text: string;
 
@@ -21,16 +28,21 @@ export const parseDateValue = (value: unknown): DateValue | undefined => {
     return undefined;
   }
 
+  if (dateCache.has(text)) return dateCache.get(text);
+
   const match = DATE_VALUE.exec(text);
+  const result: DateValue | undefined = match
+    ? {
+        text,
+        year: match[1],
+        ...(match[2] ? { month: match[2] } : {}),
+        ...(match[3] ? { day: match[3] } : {}),
+      }
+    : undefined;
 
-  if (!match) return undefined;
+  dateCache.set(text, result);
 
-  return {
-    text,
-    year: match[1],
-    ...(match[2] ? { month: match[2] } : {}),
-    ...(match[3] ? { day: match[3] } : {}),
-  };
+  return result;
 };
 
 /** 以 YYYYMMDD 數值作排序鍵；缺月日補 0，同日再按路徑排序 */
@@ -97,5 +109,8 @@ export const splitCitation = (raw: string): CitationParts => {
   };
 };
 
+/* 模組層級共用：避免每次呼叫都建立新的 RegExp 物件 */
+const FRONTMATTER = /^---\r?\n[\s\S]*?\r?\n---\r?\n?/u;
+
 export const stripFrontmatter = (content: string): string =>
-  content.replace(/^---\r?\n[\s\S]*?\r?\n---\r?\n?/u, "");
+  content.replace(FRONTMATTER, "");
