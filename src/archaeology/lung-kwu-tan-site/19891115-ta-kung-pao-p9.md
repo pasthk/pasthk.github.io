@@ -3,7 +3,7 @@ title: 龍鼓灘發掘古蹟一批文物已出土
 date: 2026-10-04
 dateCreated: "2026-10-04"
 datePublished: "1989-11-15"
-description: 
+description: 《大公報》1989年11月15日報道屯門龍鼓灘保護文物發掘工作出土一批珍貴文物，估計可追溯至新石器時代晚期，為研究新界史前文化的重要發現。
 excerpted: true
 proofread: false
 ---

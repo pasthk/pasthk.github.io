@@ -64,6 +64,6 @@ description: 1957年香港熱帶氣旋與警告信號索引，按風暴整理天
 
 ## 無名 No Name 2
 ## 無名 No Name 3
-## 嘉曼 Carmen 
+## 嘉曼 Carmen
 ## 姬羅莉亞 Gloria
 ## 無名 No Name 4

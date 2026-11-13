@@ -3,7 +3,7 @@ title: 古墓發掘已完畢　共獲古物五十件
 date: 2026-11-13
 dateCreated: "2026-11-13"
 datePublished: "1955-08-13"
-description: 
+description: 《工商日報》1955年8月13日報道李鄭屋村古墓發掘完畢共獲古物五十件，墓塚拆卸與否由工務局決定，林仰山、饒宗頤等推測墓中所葬或為一家人。
 excerpted: true
 proofread: false
 ---

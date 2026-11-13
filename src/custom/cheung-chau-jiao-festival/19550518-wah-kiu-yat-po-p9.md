@@ -3,7 +3,7 @@ title: 鄉議局今日開會議　長洲籌備清醮大會
 date: 2026-11-11
 dateCreated: "2026-11-11"
 datePublished: "1955-05-18"
-description: 
+description: 《華僑日報》1955年5月18日報道長洲太平清醮籌備就緒，定夏曆四月初九起一連四夜三日舉行，記述醮壇戲棚搭建、全島齋戒停屠、經師主持法會及粵劇公演安排。
 excerpted: true
 proofread: true
 ---

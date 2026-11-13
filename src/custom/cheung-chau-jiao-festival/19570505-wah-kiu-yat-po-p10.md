@@ -4,7 +4,7 @@ toc: false
 date: 2026-11-11
 dateCreated: "2026-11-11"
 datePublished: "1957-05-05"
-description: 
+description: 《華僑日報》1957年5月5日報道長洲太平清醮定當晚丑時開壇，記述醮會起源、神壇與大士壇布置、闔島齋戒三天祈福及加開長洲直航輪安排。
 excerpted: true
 proofread: true
 ---

@@ -3,7 +3,7 @@ title: 古塚係六朝遺物千餘年歷史
 date: 2026-11-12
 dateCreated: "2026-11-12"
 datePublished: "1955-08-11"
-description: 
+description: 《華僑日報》1955年8月11日報道林仰山教授認定李鄭屋村古塚為六朝遺物、距今約千四百年，記述墓室圓頂結構、九龍首次發現同類古墓及首日掘得十三件陶器。
 excerpted: true
 proofread: false
 ---

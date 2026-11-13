@@ -3,7 +3,7 @@ title: 香島中學慶祝復校兩週年
 date: 2026-11-13
 dateCreated: "2026-11-13"
 datePublished: "1948-04-03"
-description: 
+description: 《華僑日報》1948年4月3日報道香島中學慶祝復校兩週年，出版「春島兩年」專刊總結兩年工作，並舉行員生聯歡晚會、家長懇親大會及話劇歌舞慶祝會。
 excerpted: true
 proofread: false
 ---

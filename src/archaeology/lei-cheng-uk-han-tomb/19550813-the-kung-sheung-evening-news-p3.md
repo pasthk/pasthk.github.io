@@ -3,7 +3,7 @@ title: 古墓昨發掘完畢未發現棺木
 date: 2026-11-13
 dateCreated: "2026-11-13"
 datePublished: "1955-08-13"
-description: 
+description: 《工商晚報》1955年8月13日報道李鄭屋村六朝古墓發掘完畢，未見棺木或骨殖，林仰山教授推測或為吉穴、衣冠塚，並談及古物整理與古墓保存安排。
 excerpted: true
 proofread: false
 ---

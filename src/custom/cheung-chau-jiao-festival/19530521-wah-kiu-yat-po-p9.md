@@ -3,7 +3,7 @@ title: 街坊建醮開始　全長洲熙攘往來
 date: 2026-11-10
 dateCreated: "2026-11-10"
 datePublished: "1953-05-21"
-description: 
+description: 《華僑日報》1953年5月21日報道長洲街坊建醮一連四天展開，全島居民齋戒素食，記述醮場竹棚、三座飽山、會景巡遊與船艇雲集的熱鬧情形。
 excerpted: true
 proofread: false
 ---

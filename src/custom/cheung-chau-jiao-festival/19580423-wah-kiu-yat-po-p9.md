@@ -4,7 +4,7 @@ toc: false
 date: 2026-11-11
 dateCreated: "2026-11-11"
 datePublished: "1958-04-23"
-description: 
+description: 《華僑日報》1958年4月23日報道長洲建醮定農曆四月初六開壇，全島停屠三天、水陸居民齋戒，並記述正總理選出、飄色會景巡遊及加增小輪班次等籌備。
 excerpted: true
 proofread: false
 ---

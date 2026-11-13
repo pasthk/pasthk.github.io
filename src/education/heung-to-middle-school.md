@@ -1,7 +1,7 @@
 ---
 title: 香島中學
 date: 2026-11-13
-description:
+description: 香島中學校史與香港教育史資料索引，收錄1948年《華僑日報》有關復校兩週年慶祝活動的新聞報道，按刊載日期與原始出處編排。
 pageInfo: false
 ---
 

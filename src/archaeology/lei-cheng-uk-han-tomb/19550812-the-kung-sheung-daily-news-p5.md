@@ -4,7 +4,7 @@ toc: false
 date: 2026-11-12
 dateCreated: "2026-11-12"
 datePublished: "1955-08-12"
-description: 
+description: 《工商日報》1955年8月12日報道李鄭屋村古墓發掘第三日再獲古物十四件，銅鏡碎片佐證六朝之說，林仰山教授預計尚需三數日完成全部發掘。
 excerpted: true
 proofread: false
 ---
