@@ -105,6 +105,12 @@ body {
   font-weight: 600;
 }
 
+/* 目錄（TOC）「此頁內容」面板：沿用 Navbar 的底色效果（半透明底 + 背景模糊） */
+#toc {
+  background: var(--navbar-c-bg, var(--vp-c-bg, #fff));
+  backdrop-filter: saturate(150%) blur(12px);
+}
+
 .vp-footer-wrapper,
 .vp-footer {
   font-size: 1.1rem;
