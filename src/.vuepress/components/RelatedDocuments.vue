@@ -109,10 +109,12 @@ const items = computed(() =>
   line-height: 1.7;
 }
 
+/* 圓點對齊標題第一行中線：上留白 + 行高一半，再以自身高度回拉 50% */
 .related-timeline-item::before {
   content: "";
   position: absolute;
-  top: 0.85rem;
+  top: calc(0.3rem + 0.85em);
+  transform: translateY(-50%);
   left: -4px;
   width: 7px;
   height: 7px;
@@ -128,8 +130,8 @@ const items = computed(() =>
   font-weight: 600;
 }
 
+/* 當前頁圓點較大，沿用同一中線；translateY(-50%) 會按自身尺寸自動置中 */
 .related-timeline-item--current::before {
-  top: 0.82rem;
   left: -6px;
   width: 11px;
   height: 11px;
