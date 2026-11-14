@@ -1,5 +1,6 @@
 ---
 title: 「永遠不離開盧校長」
+toc: false
 date: 2026-11-14
 dateCreated: "2026-11-14"
 datePublished: "1950-01-07"
@@ -7,6 +8,10 @@ description:
 excerpted: true
 proofread: false
 ---
+
+## 香島中學教職員書告各界
+## 表示決不因無理壓制而停止工作
+## 希望港府收回成命呼籲同胞支援
 
 　　【本港訊】香島中學全體教職員為校長盧動被迫離境事，七日發出告社會人士書，原文如下： 
 
