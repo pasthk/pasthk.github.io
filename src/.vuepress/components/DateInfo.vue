@@ -26,7 +26,7 @@ const sourceDate = (property, label) => {
   };
 };
 
-const datePublished = computed(() => sourceDate("datePublished", "報刊："));
+const datePublished = computed(() => sourceDate("datePublished", "刊登："));
 const dateCreated = computed(() => sourceDate("dateCreated", "收錄："));
 const sourceDates = computed(() =>
   [datePublished.value, dateCreated.value].filter(Boolean),
@@ -53,7 +53,7 @@ const formattedDate = computed(() =>
   <span
     v-if="sourceDates.length || date"
     class="page-date-info"
-    :aria-label="sourceDates.length ? '報刊日期及收錄日期' : '寫作日期'"
+    :aria-label="sourceDates.length ? '刊登日期及收錄日期' : '寫作日期'"
   >
     <span v-if="sourceDates.length" class="page-source-dates">
       <span

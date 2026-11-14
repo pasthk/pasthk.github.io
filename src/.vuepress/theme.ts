@@ -14,6 +14,8 @@ import {
   isSourceDocument,
   publishedDate,
   sourceOfPage,
+  LEGACY_INDEX_PATH,
+  TIMELINE_PATH,
 } from "./page-meta.js";
 import { tokenizeForIndex } from "./search-tokenize.js";
 import { sitemapModifiedTime } from "./sitemap.js";
@@ -289,6 +291,11 @@ export default hopeTheme(
       },
       sitemap: {
         modifyTimeGetter: sitemapModifiedTime,
+      },
+      redirect: {
+        // 沿用主題預設的地區切換行為，只補上舊網址的靜態導向
+        switchLocale: "modal",
+        config: { [LEGACY_INDEX_PATH]: TIMELINE_PATH },
       },
       icon: false,
       catalog: false,

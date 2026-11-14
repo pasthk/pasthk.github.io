@@ -63,10 +63,10 @@ const transcriptionStatus = computed(() => {
         <input
           type="checkbox"
           :checked="transcriptionStatus.excerpted"
-          :aria-label="`摘錄：${transcriptionStatus.excerpted ? '是' : '否'}`"
+          :aria-label="`轉錄：${transcriptionStatus.excerpted ? '是' : '否'}`"
           disabled
         >
-        摘錄
+        轉錄
       </label>
       <label v-if="transcriptionStatus.hasProofread">
         <input

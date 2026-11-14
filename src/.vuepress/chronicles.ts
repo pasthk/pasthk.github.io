@@ -1,0 +1,188 @@
+import type { Plugin } from "vuepress/core";
+import { warn } from "vuepress/utils";
+
+/** 編年頁時間軸容器：以純 Markdown 輸入，轉成與 page-index.ts 相同的 DOM */
+const OPEN = "::: timeline";
+const CLOSE = ":::";
+const YEAR_HEADING = /^#{2,4}\s+(.+?)\s*#*\s*$/u;
+const EVENT_ITEM = /^[-*]\s+(.+)$/u;
+const FENCE = /^(`{3,}|~{3,})/u;
+
+interface TimelineEvent {
+  date: string;
+  title: string;
+  source: string;
+}
+
+/** 與 page-index.ts 的 yearAnchorId 一致：數字開頭的 slug 需補底線 */
+const anchorId = (label: string): string => {
+  const slug = label.trim().replace(/\s+/gu, "-");
+
+  return /^\d/u.test(slug) ? `_${slug}` : slug;
+};
+
+const escapeText = (value: string): string =>
+  value
+    .replaceAll("&", "&amp;")
+    .replaceAll("<", "&lt;")
+    .replaceAll(">", "&gt;");
+
+/** 末尾括號註記（年份「1842年（道光二十二年）」、日期「8月29日（八月二十九日）」） */
+const NOTE_PATTERN = /^(.+?)\s*([（(][\s\S]*[）)])\s*$/u;
+
+/** 把括號段包成獨立元素，讓 CSS 能整組換行而不從中折斷 */
+const renderWithNote = (text: string): string => {
+  const matched = NOTE_PATTERN.exec(text);
+
+  return matched
+    ? `${escapeText(matched[1])}<span class="browse-note">${escapeText(matched[2])}</span>`
+    : escapeText(text);
+};
+
+/** 「日期 | 標題 | 來源」；只有一段時視為不帶日期的標題 */
+const parseEvent = (body: string): TimelineEvent => {
+  const parts = body.split("|").map((part) => part.trim());
+
+  if (parts.length === 1)
+    return { date: "", title: parts[0], source: "" };
+  if (parts.length === 2)
+    return { date: parts[0], title: parts[1], source: "" };
+
+  return { date: parts[0], title: parts[1], source: parts.slice(2).join(" | ") };
+};
+
+const renderTimeline = (lines: string[], filePath: string): string => {
+  const out = ['<div class="browse-timeline">', ""];
+  const ignored: string[] = [];
+  let inYear = false;
+  let lastDate = "";
+
+  const closeYear = (): void => {
+    if (!inYear) return;
+
+    out.push("", "</section>");
+  };
+
+  for (const raw of lines) {
+    const line = raw.trim();
+
+    if (!line) continue;
+
+    const heading = YEAR_HEADING.exec(line);
+
+    if (heading) {
+      closeYear();
+      const label = heading[1].trim();
+
+      lastDate = "";
+      inYear = true;
+      out.push(
+        '<section class="browse-year">',
+        "",
+        `<h2 id="${escapeText(anchorId(label))}" class="browse-year-title"><span class="browse-year-label">${renderWithNote(label)}</span></h2>`,
+        "",
+      );
+      continue;
+    }
+
+    const item = EVENT_ITEM.exec(line);
+
+    if (!item) {
+      /* 容器內只放年份標題與事件清單；其餘文字移到容器外才不會被吃掉 */
+      if (!line.startsWith("<!--") && !line.includes("-->"))
+        ignored.push(line);
+      continue;
+    }
+
+    if (!inYear) continue;
+
+    const { date, title, source } = parseEvent(item[1]);
+
+    if (!title) continue;
+
+    /* 同一日期只顯示一次；後續條目不帶日期，標題左緣才會對齊 */
+    const prefix =
+      date && date !== lastDate
+        ? `<span class="browse-timeline-date">${renderWithNote(date)}</span> `
+        : "";
+    const suffix = source
+      ? ` <span class="browse-timeline-source">${source}</span>`
+      : "";
+
+    out.push(`- ${prefix}${title}${suffix}`);
+    if (date) lastDate = date;
+  }
+
+  closeYear();
+  out.push("", "</div>");
+
+  if (ignored.length)
+    warn(
+      `chronicles：${filePath || "頁面"} 的 ::: timeline 內有 ${ignored.length} 行不是年份標題或事件清單，已忽略（例：${ignored[0]}）。請移到容器外。`,
+    );
+
+  return out.join("\n");
+};
+
+/** 把 ::: timeline 區塊換成既有版型的 Markdown；其餘內容原樣保留 */
+const transform = (src: string, filePath: string): string => {
+  const lines = src.split("\n");
+  const out: string[] = [];
+  let fence = "";
+
+  for (let index = 0; index < lines.length; index += 1) {
+    const line = lines[index];
+    const marker = FENCE.exec(line.trim());
+
+    /* 程式碼區塊內的 ::: timeline 只是範例文字，不轉換 */
+    if (marker) {
+      if (!fence) fence = marker[1][0];
+      else if (fence === marker[1][0]) fence = "";
+    }
+
+    if (fence || line.trim() !== OPEN) {
+      out.push(line);
+      continue;
+    }
+
+    const body: string[] = [];
+    let end = -1;
+
+    for (let cursor = index + 1; cursor < lines.length; cursor += 1) {
+      if (lines[cursor].trim() === CLOSE) {
+        end = cursor;
+        break;
+      }
+      body.push(lines[cursor]);
+    }
+
+    if (end < 0) {
+      warn(
+        `chronicles：${filePath || "頁面"} 的 ::: timeline 缺少結束標記，已略過轉換。`,
+      );
+      out.push(line, ...body);
+      break;
+    }
+
+    const start = out.length;
+
+    out.push(...renderTimeline(body, filePath).split("\n"));
+    /* 補回空行，讓後續 token 的行號盡量不偏移 */
+    while (out.length - start < end - index + 1) out.push("");
+    index = end;
+  }
+
+  return out.join("\n");
+};
+
+export const chroniclesPlugin = (): Plugin => ({
+  name: "chronicles",
+
+  extendsMarkdown(md) {
+    md.core.ruler.before("block", "chronicles", (state) => {
+      state.src = transform(state.src, String(state.env?.filePathRelative ?? ""));
+
+      return true;
+    });
+  },
+});

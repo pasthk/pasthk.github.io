@@ -65,13 +65,14 @@ interface PageLike {
   content?: string;
 }
 
-/** 文獻綜覽虛擬頁：舊網址照常輸出，新網址為正式入口 */
+/** 舊網址：不再產生內容頁，由 redirect 外掛靜態導向正式入口 */
 export const LEGACY_INDEX_PATH = "/browse.html";
+/** 文獻綜覽虛擬頁的正式網址 */
 export const TIMELINE_PATH = "/timeline.html";
 
-/** 是否為文獻綜覽索引頁（新舊網址皆算） */
+/** 是否為文獻綜覽索引頁 */
 export const isTimelineIndex = (page: PageLike): boolean =>
-  page.path === LEGACY_INDEX_PATH || page.path === TIMELINE_PATH;
+  page.path === TIMELINE_PATH;
 
 /** 由 Markdown 原始檔產生的頁面；虛擬頁（文獻綜覽）沒有 filePath */
 export const isMarkdownPage = (page: PageLike): boolean =>

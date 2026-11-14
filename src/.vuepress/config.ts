@@ -9,6 +9,7 @@ import {
   dropUnusedStyles,
   verifyDroppedStyles,
 } from "./drop-unused-styles.js";
+import { chroniclesPlugin } from "./chronicles.js";
 import { ogImagePlugin } from "./og/plugin.js";
 import { outputCleanupPlugin } from "./output-cleanup.js";
 import { llms } from "./llms.js";
@@ -89,6 +90,7 @@ export default defineUserConfig({
   plugins: [
     chaptersGuardPlugin(),
     contentGuardPlugin(),
+    chroniclesPlugin(),
     pageIndexPlugin(),
     relatedDocumentsPlugin(),
     llms,

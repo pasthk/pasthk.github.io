@@ -9,7 +9,6 @@ import {
 import { ogImageUrl } from "./og/paths.js";
 import {
   isIndexablePage,
-  LEGACY_INDEX_PATH,
   publishedDate,
   sourceOfPage,
   TIMELINE_PATH,
@@ -23,10 +22,10 @@ import {
 import { absoluteUrl, HOSTNAME, SITE_NAME } from "./site.js";
 
 const PAGE_TITLE = "文獻綜覽";
-const TIMELINE_TITLE = "事件時間軸";
+const TIMELINE_TITLE = "資料時間軸";
 
-/** 新網址為正式入口；舊網址照原樣繼續輸出，內容完全共用 */
-const INDEX_PATHS = [LEGACY_INDEX_PATH, TIMELINE_PATH];
+/** 新網址為唯一正式入口；舊網址由 redirect 外掛靜態導向此頁 */
+const INDEX_PATH = TIMELINE_PATH;
 
 interface DatedPage {
   page: Page;
@@ -84,7 +83,7 @@ const timelineMarkdown = (dated: DatedPage[]): string => {
       lines.push(
         '<section class="browse-year">',
         "",
-        `<h3 id="${yearAnchorId(label)}" class="browse-year-title"><span class="browse-year-label">${label}</span></h3>`,
+        `<h2 id="${yearAnchorId(label)}" class="browse-year-title"><span class="browse-year-label">${label}</span></h2>`,
         "",
       );
     }
@@ -136,7 +135,6 @@ function buildContent(app: App, stats: SiteStats): BrowseContent {
 
   const blocks = [
     `${describeSite(stats)}以下依資料日期由舊至新列出 ${dated.length} 篇文獻，同一日期的報導合併顯示。`,
-    `## ${TIMELINE_TITLE}`,
     timelineMarkdown(dated),
   ];
 
@@ -150,11 +148,7 @@ export const pageIndexPlugin = (): Plugin => ({
   name: "page-index",
 
   async onInitialized(app: App) {
-    const paths = INDEX_PATHS.filter(
-      (path) => !app.pages.some((item) => item.path === path),
-    );
-
-    if (!paths.length) return;
+    if (app.pages.some((item) => item.path === INDEX_PATH)) return;
 
     const stats = siteStats(app.pages as StatsInput[]);
     const { content, pages: listed } = buildContent(app, stats);
@@ -168,18 +162,18 @@ export const pageIndexPlugin = (): Plugin => ({
       url: absoluteUrl(item.path),
     }));
 
-    for (const path of paths) {
-      const url = absoluteUrl(path);
-      const head = collectionHead({
-        url,
-        title: PAGE_TITLE,
-        description,
-        image: ogImageUrl(HOSTNAME, path),
-        items,
-      });
+    const url = absoluteUrl(INDEX_PATH);
+    const head = collectionHead({
+      url,
+      title: PAGE_TITLE,
+      description,
+      image: ogImageUrl(HOSTNAME, INDEX_PATH),
+      items,
+    });
 
-      const page = await createPage(app, {
-        path,
+    app.pages.push(
+      await createPage(app, {
+        path: INDEX_PATH,
         content: `${content}\n`,
         frontmatter: {
           title: PAGE_TITLE,
@@ -191,9 +185,7 @@ export const pageIndexPlugin = (): Plugin => ({
           comment: false,
           pageInfo: false,
         },
-      });
-
-      app.pages.push(page);
-    }
+      }),
+    );
   },
 });

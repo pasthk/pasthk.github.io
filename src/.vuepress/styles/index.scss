@@ -4,6 +4,7 @@ $navbar-blur: saturate(150%) blur(12px);
 $browse-sticky-top: calc(var(--navbar-height, 3.6rem) + 0.5rem);
 $browse-date-neg: calc(-1 * var(--browse-date-offset));
 $browse-date-width: calc(var(--browse-date-offset) - 0.9rem);
+$browse-source-size: 0.8rem;
 
 .vp-page {
   font-size: 1.125rem;
@@ -246,7 +247,7 @@ body {
   pointer-events: none;
 }
 
-/* 文獻綜覽：事件時間軸，與「相關文獻」時間軸共用同一視覺語言 */
+/* 文獻綜覽：資料時間軸，與「相關文獻」時間軸共用同一視覺語言 */
 .browse-timeline {
   --browse-date-offset: 10.5rem;
 
@@ -255,7 +256,7 @@ body {
   border-left: 1px solid var(--vp-c-border, #d8d8d8);
 
   /* 年份標題貼頂：樣式仿 TOC「此頁內容」，捲動時由下一節推走並換成對應年份 */
-  h3 {
+  h2 {
     position: sticky;
     top: $browse-sticky-top;
     z-index: 2;
@@ -281,18 +282,34 @@ body {
     margin: 0;
   }
 
-  /* 年份為純文字（無錨點連結）：不可點、不可拖選，仍置於軸線左側並與日期欄右對齊 */
-  h3 .browse-year-label {
+  /* 年份為純文字（無錨點連結）：不可點、不可拖選，仍置於軸線左側並與日期欄右對齊。
+     長年份（如「1842年（道光二十二年）」）須在日期欄內換行；nowrap 會向右溢出
+     跨過軸線、實心圓點並壓到事件標題，故改用可斷行的 normal + anywhere。 */
+  h2 .browse-year-label {
     display: block;
     width: $browse-date-width;
     margin-left: calc(-1 * var(--browse-date-offset) - 1.15rem);
     text-align: right;
-    white-space: nowrap;
+    white-space: normal;
+    overflow-wrap: anywhere;
     pointer-events: none;
   }
 
+  /* 括號註記整組自動換行：年份標題與左側日期欄共用。
+     max-content 讓括號成為不可分割的原子盒，同行放不下就整組移到下一行；
+     max-width 保證再長也只在組內折行，不會溢出欄位或跨過軸線。
+     兩處括號字級皆與「資料來源」一致，共用 $browse-source-size。 */
+  .browse-note {
+    display: inline-block;
+    width: max-content;
+    max-width: 100%;
+    font-size: $browse-source-size;
+    white-space: normal;
+    overflow-wrap: anywhere;
+  }
+
   // 年份實心點與條目空心點共用的圓點骨架
-  h3::before,
+  h2::before,
   li::before {
     content: "";
     position: absolute;
@@ -301,8 +318,8 @@ body {
     border-radius: 50%;
   }
 
-  /* 年份節點：實心圓點，隨 H3 字號垂直置中（底色已左延，圓點需回到軸線上） */
-  h3::before {
+  /* 年份節點：實心圓點，隨 H2 字號垂直置中（底色已左延，圓點需回到軸線上） */
+  h2::before {
     top: 50%;
     left: calc(var(--browse-date-offset) - 6px);
     width: 11px;
@@ -319,6 +336,8 @@ body {
 
   li {
     position: relative;
+    /* 包住浮動日期：長日期換行時條目會長高，不會壓到下一則 */
+    display: flow-root;
     margin: 0;
     padding: 0.28rem 0 0.28rem 1.15rem;
     line-height: 1.7;
@@ -344,24 +363,26 @@ body {
   }
 }
 
-/* 日期欄置於軸線左側，右對齊貼近軸線；字號與條目標題一致，同一日期只出現一次 */
+/* 日期欄置於軸線左側，右對齊貼近軸線；字號與條目標題一致，同一日期只出現一次。
+   改用浮動而非絕對定位：長日期可在欄內換行，並由 li 的 flow-root 撐高條目，
+   不會向右溢出與標題疊字，也不會往下壓到下一則。 */
 .browse-timeline-date {
-  position: absolute;
-  top: 0.28rem;
-  left: $browse-date-neg;
+  float: left;
   width: $browse-date-width;
-  margin: 0;
+  /* 從內容起點（軸線 + 1.15rem）拉回軸線左側的日期欄 */
+  margin: 0 0 0 calc(-1 * var(--browse-date-offset) - 1.15rem);
   font-size: inherit;
   line-height: 1.7;
   color: var(--vp-c-text-mute);
   text-align: right;
-  white-space: nowrap;
+  white-space: normal;
+  overflow-wrap: anywhere;
 }
 
 /* 資料來源（報刊／出版者名稱），置於條目標題右側 */
 .browse-timeline-source {
   margin-left: 0.5rem;
-  font-size: 0.8rem;
+  font-size: $browse-source-size;
   color: var(--vp-c-text-mute);
   opacity: 0.75;
   white-space: nowrap;
@@ -370,6 +391,7 @@ body {
 @media (max-width: 719px) {
   .browse-timeline {
     --browse-mobile-date-width: 5rem;
+    --browse-mobile-indent: calc(1.65rem + var(--browse-mobile-date-width));
 
     margin-left: 0;
   }
@@ -377,27 +399,27 @@ body {
   /* 窄屏沒有軸線左側的日期欄：改在軸線右側留固定寬度。
      同一日期只輸出一次，後續條目沒有日期元素，標題左緣才會全部對齊。 */
   .browse-timeline li {
-    padding-left: calc(1.65rem + var(--browse-mobile-date-width));
+    padding-left: var(--browse-mobile-indent);
   }
 
-  // position / top / margin 沿用上方基礎規則
+  /* 浮動日期拉回軸線右側 1.15rem；其餘樣式沿用上方基礎規則 */
   .browse-timeline-date {
-    left: 1.15rem;
     width: var(--browse-mobile-date-width);
+    margin-left: calc(1.15rem - var(--browse-mobile-indent));
     text-align: start;
   }
 
   /* 窄屏無左側日期欄，年份回到軸線右側 */
-  .browse-timeline h3 {
+  .browse-timeline h2 {
     margin-left: 0;
     padding-left: 1.15rem;
   }
 
-  .browse-timeline h3::before {
+  .browse-timeline h2::before {
     left: -6px;
   }
 
-  .browse-timeline h3 .browse-year-label {
+  .browse-timeline h2 .browse-year-label {
     width: auto;
     margin-left: 0;
     text-align: start;
