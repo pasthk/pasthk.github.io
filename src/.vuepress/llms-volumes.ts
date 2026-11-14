@@ -3,8 +3,7 @@ import { chapterName, chapters, pathSegments } from "./chapters.js";
 export const VOLUME_DIR = "llms-full";
 export const OVERVIEW_KEY = "overview";
 
-export interface Volume {
-  key: string;
+interface Volume {
   label: string;
   file: string;
 }
@@ -24,7 +23,7 @@ export const volumeKey = (value: string): string => {
   return first && !first.endsWith(".html") ? first : OVERVIEW_KEY;
 };
 
-export const volumeFile = (key: string): string =>
+const volumeFile = (key: string): string =>
   `${VOLUME_DIR}/${key}.txt`;
 
 export const volumesFor = (paths: string[]): Volume[] => {
@@ -40,7 +39,6 @@ export const volumesFor = (paths: string[]): Volume[] => {
   ].filter((key) => keys.has(key));
 
   return ordered.map((key) => ({
-    key,
     label:
       key === OVERVIEW_KEY
         ? "總覽與說明"

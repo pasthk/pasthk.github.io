@@ -76,20 +76,23 @@ const packContents = (contents) => {
   return packed;
 };
 
+const isTitleHit = (title, terms) => {
+  if (!terms.length) return false;
+
+  const text = normalizeForCompare(title ?? "");
+
+  return terms.every((term) => text.includes(term));
+};
+
 const resultsFilter = (results, query) => {
-  const terms = query.split(/\s+/u).filter(Boolean);
-
-  const isTitleHit = (title) => {
-    if (!terms.length) return false;
-
-    const text = normalizeForCompare(title ?? "");
-
-    return terms.every((term) => text.includes(normalizeForCompare(term)));
-  };
+  const terms = query
+    .split(/\s+/u)
+    .filter(Boolean)
+    .map((term) => normalizeForCompare(term));
 
   return results
     .filter((result) => result.contents.some((item) => item.display?.length))
-    .map((result, index) => ({ result, rank: isTitleHit(result.title) ? 0 : 1, index }))
+    .map((result, index) => ({ result, rank: isTitleHit(result.title, terms) ? 0 : 1, index }))
     .sort((a, b) => a.rank - b.rank || a.index - b.index)
     .slice(0, MAX_RESULTS)
     .map(({ result }) => ({ ...result, contents: packContents(result.contents) }));

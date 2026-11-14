@@ -1,5 +1,4 @@
-import { createPage } from "vuepress/core";
-import type { App, Page, Plugin } from "vuepress/core";
+import { createPage, type App, type Page, type Plugin } from "vuepress/core";
 
 import { collectionHead } from "./collection-head.js";
 import {
@@ -22,7 +21,6 @@ import {
   type StatsInput,
 } from "./site-stats.js";
 import { absoluteUrl, HOSTNAME, SITE_NAME } from "./site.js";
-
 
 const PAGE_TITLE = "文獻綜覽";
 const TIMELINE_TITLE = "事件時間軸";

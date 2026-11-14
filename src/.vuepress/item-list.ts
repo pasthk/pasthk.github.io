@@ -85,8 +85,7 @@ export const itemListNode = (
   })),
 });
 
-export interface ItemListResult {
-  isCollection: boolean;
+interface ItemListResult {
   itemList: Record<string, unknown>;
 }
 
@@ -127,7 +126,6 @@ export const collectionItems = (
   if (entries.length < MIN_ITEMS) return undefined;
 
   return {
-    isCollection: true,
     itemList: itemListNode(
       absoluteUrl(page.path),
       entries.map(({ path, label }) => ({

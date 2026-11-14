@@ -10,7 +10,7 @@ function pushLatin(tokens: string[], segment: string): void {
   }
 }
 
-export function tokenizeForSearch(text: string): string[] {
+function tokenizeForSearch(text: string): string[] {
   const tokens: string[] = [];
   let cursor = 0;
 

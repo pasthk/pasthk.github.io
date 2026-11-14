@@ -2,7 +2,7 @@ import { readdirSync } from "node:fs";
 import type { App, Plugin } from "vuepress/core";
 import { warn } from "vuepress/utils";
 
-export interface Chapter {
+interface Chapter {
   dir: string;
   name: string;
   note: string;
@@ -63,7 +63,7 @@ export const chapters: Chapter[] = [
 
 const byDir = new Map(chapters.map((chapter) => [chapter.dir, chapter]));
 
-export const chapterMeta = (dir: string): Chapter | undefined =>
+const chapterMeta = (dir: string): Chapter | undefined =>
   byDir.get(dir);
 
 export const chapterName = (dir: string): string | undefined =>

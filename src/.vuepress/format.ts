@@ -1,5 +1,5 @@
 
-export interface DateValue {
+interface DateValue {
   text: string;
   year: string;
   month?: string;
@@ -82,7 +82,7 @@ export const formatMonthDay = (value: string): string => {
   return `${date.year}年`;
 };
 
-export interface CitationParts {
+interface CitationParts {
   source: string;
   note: string;
 }

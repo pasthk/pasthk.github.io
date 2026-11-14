@@ -27,7 +27,7 @@ export function stripUnusedFonts(): Plugin {
 const FONT_FACE = /@font-face\s*\{[^}]*\}/g;
 const FAMILY = /font-family\s*:\s*["']?([^;"'}]+)["']?\s*[;}]/;
 
-export function removeUnusedFontFaces(css: string): string {
+function removeUnusedFontFaces(css: string): string {
   return css.replace(FONT_FACE, (rule) => {
     const family = FAMILY.exec(rule)?.[1]?.trim();
 

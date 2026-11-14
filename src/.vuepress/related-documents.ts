@@ -14,13 +14,6 @@ import {
 } from "./page-meta.js";
 import { absoluteUrl } from "./site.js";
 
-export type {
-  RelatedInfo,
-  RelatedItem,
-  RelatedTimeline,
-} from "./page-meta.js";
-
-
 const MAX_RELATED = 4;
 
 /** 編年軸在當前頁前後各取幾篇 */
@@ -28,7 +21,7 @@ const TIMELINE_NEIGHBORS = 2;
 
 const relatedMap = new Map<string, RelatedInfo>();
 
-export const relatedFor = (path: string): RelatedInfo | undefined =>
+const relatedFor = (path: string): RelatedInfo | undefined =>
   relatedMap.get(path);
 
 const isSourcePage = (page: Page): boolean =>

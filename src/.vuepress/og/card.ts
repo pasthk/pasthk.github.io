@@ -18,13 +18,16 @@ const CONTENT_WIDTH = CARD_WIDTH - PAD_LEFT - PAD_RIGHT;
 
 const WRAP_WIDTH = CONTENT_WIDTH * 0.9;
 
+const NARROW_CHAR = /[iIl1.,'!:;|]/;
+const WIDE_CHAR = /[A-Z@#%&WM]/;
+
 function charWidth(char: string, size: number): number {
   const code = char.codePointAt(0) ?? 0;
 
   if (code >= 0x2e80) return size;
   if (char === " ") return size * 0.28;
-  if (/[iIl1.,'!:;|]/.test(char)) return size * 0.32;
-  if (/[A-Z@#%&WM]/.test(char)) return size * 0.68;
+  if (NARROW_CHAR.test(char)) return size * 0.32;
+  if (WIDE_CHAR.test(char)) return size * 0.68;
 
   return size * 0.54;
 }

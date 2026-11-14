@@ -84,7 +84,6 @@ const author = computed(() => {
 const citation = computed(() => {
   const fm = page.value?.frontmatter || {};
   const title = fm.title || page.value?.title || "";
-  const siteName = SITE_NAME;
   const url = pageUrl.value;
 
   let source = parsedSlot.value.source.trim();
@@ -97,7 +96,7 @@ const citation = computed(() => {
   if (author.value) parts.push(author.value + "：");
   if (title) parts.push(title + "，");
   if (source) parts.push(source);
-  parts.push(siteName + "，");
+  parts.push(SITE_NAME + "，");
   if (url) parts.push(url);
 
   return parts.join("");

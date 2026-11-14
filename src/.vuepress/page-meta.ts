@@ -7,7 +7,6 @@ import {
 } from "./format.js";
 import { absoluteUrl } from "./site.js";
 
-
 export type Frontmatter = Record<string, unknown>;
 
 export interface RelatedItem {
@@ -34,7 +33,7 @@ export interface RelatedInfo {
   timeline?: RelatedTimeline;
 }
 
-export interface PageDataExtras {
+interface PageDataExtras {
   autoDesc?: boolean;
   git?: { updatedTime?: number };
   related?: RelatedInfo;
@@ -44,7 +43,7 @@ export interface PageDataExtras {
 export const pageDataExtras = (data: unknown): PageDataExtras =>
   data as PageDataExtras;
 
-export const visibleContentLength = (content: string): number => {
+const visibleContentLength = (content: string): number => {
   const text = stripFrontmatter(content)
     .replace(/^\s{0,3}#{1,6}\s.*$/gmu, "")
     .replace(/<[^>]+>/gu, " ")
@@ -58,7 +57,7 @@ export const visibleContentLength = (content: string): number => {
 };
 
 /** 頁面分類只依賴這幾個欄位，讓 Page、LLMPage、StatsInput 共用同一套判斷 */
-export interface PageLike {
+interface PageLike {
   path?: string;
   filePath?: string | null;
   frontmatter?: Record<string, unknown>;
@@ -150,13 +149,13 @@ export const citationOf = (markdown: string): string | undefined => {
   return text || undefined;
 };
 
-export interface SourceInfo {
+interface SourceInfo {
   citation: string;
   publication?: string;
   pagination?: string;
 }
 
-export const sourceOf = (markdown: string): SourceInfo | undefined => {
+const sourceOf = (markdown: string): SourceInfo | undefined => {
   const citation = citationOf(markdown);
 
   if (!citation) return undefined;

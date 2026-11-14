@@ -4,7 +4,7 @@ import { itemListNode, type ListItem } from "./item-list.js";
 import { socialTags } from "./og/meta.js";
 import { HOSTNAME, SITE_NAME } from "./site.js";
 
-export interface CollectionMeta {
+interface CollectionMeta {
   url: string;
   title: string;
   description: string;

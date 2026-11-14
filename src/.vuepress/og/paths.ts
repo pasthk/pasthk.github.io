@@ -9,7 +9,7 @@ export function ogFileName(pagePath: string): string {
   return `${slug || "index"}.png`;
 }
 
-export function ogImagePath(pagePath: string): string {
+function ogImagePath(pagePath: string): string {
   return `/og/${ogFileName(pagePath)}`;
 }
 

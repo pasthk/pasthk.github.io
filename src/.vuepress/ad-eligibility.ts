@@ -7,8 +7,7 @@ import {
   visibleLengthOf,
 } from "./page-meta.js";
 
-
-export const MIN_AD_CONTENT_CHARS = 150;
+const MIN_AD_CONTENT_CHARS = 150;
 
 export const adEligibilityPlugin = (): Plugin => ({
   name: "ad-eligibility",
