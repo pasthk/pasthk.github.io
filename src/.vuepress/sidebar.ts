@@ -41,7 +41,7 @@ const signalDecadeGroups = () => {
 const sidebarConfig: Record<string, SidebarNode[]> = {
   "/": [
     link("首頁", "/"),
-    link("香江大小事", "/chronicles.html"),
+    link("香江大小事", "/chronicles.md"),
     group("自然環境", [
       group("熱帶氣旋", signalDecadeGroups()),
     ]),
