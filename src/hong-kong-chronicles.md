@@ -12,7 +12,7 @@ head:
       content: noindex
 ---
 
-<!-- 編輯說明（本段不會顯示在頁面上，資料填妥後可整段刪除）
+<!-- 編輯說明
 
 【輸入格式】時間軸寫在起始標記 `::: timeline` 與結束標記 `:::` 之間，
 其餘頁面內容照常寫 Markdown。容器內只需兩種語法：
@@ -32,12 +32,6 @@ head:
 4. 年份錨點 id 自動產生，可用 #_1948年 這類連結直接定位。
 5. 容器內只放 ## 年份標題與 - 事件清單；一般說明文字請寫在容器外。
 6. 版型與「文獻綜覽」完全相同，且由外掛在建置期轉換，不必改 CSS。
-
-【草稿設定】sitemap: false 與 llmstxt: false 使本頁不進入 sitemap 及
-llms.txt；index: false 與 head 的 robots noindex 明確阻止搜尋引擎索引。
-正式公開時須一併刪去這兩個欄位、index: false 及整個 head 區塊，補回
-description，再視需要在 navbar.ts 或 sidebar.ts 加上連結。
-切勿把檔名改成 timeline.md 或 browse.md，這兩個路徑由建置期的虛擬頁佔用。
 -->
 
 ::: timeline
@@ -54,10 +48,10 @@ description，再視需要在 navbar.ts 或 sidebar.ts 加上連結。
 - 8月9日 | 建築工人在李鄭屋村夷平山坡時發現一座古墓。 | [李鄭屋漢墓](./archaeology/lei-cheng-uk-han-tomb.md)
 - 8月14日 | 董作賓應邀到港，研討李鄭屋古墓。 | [我國第一流考古學家　董作賓應邀抵港](./archaeology/lei-cheng-uk-han-tomb/19550815-wah-kiu-yat-po-p5.md)
 
+## 1971年
+- 10月29日 | 《1971年古物古蹟法案》刊登憲報 | [Legal Supplement No. 3 to Hong Kong Government Gazette No. 43](https://www.elegislation.gov.hk/hk/1971/10/29/supp3/1)
+
 ## 1978年
 - 5月9日 | 長洲太平清醮期間，飽山倒塌造成多人受傷。 | [長洲太平清醮](./custom/cheung-chau-jiao-festival.md#_1978年-嚴重倒塌意外)
-
-## 1996年
-- 7月29日 | 香港滑浪風帆運動員李麗珊在美國亞特蘭大奧運會女子滑浪風帆項目中奪得金牌。
 
 :::
