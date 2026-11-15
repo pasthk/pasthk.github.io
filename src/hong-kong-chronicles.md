@@ -46,10 +46,10 @@ head:
 
 ## 1955年
 - 8月9日 | 建築工人在李鄭屋村夷平山坡時發現一座古墓。 | [李鄭屋漢墓](./archaeology/lei-cheng-uk-han-tomb.md)
-- 8月14日 | 董作賓應邀到港，研討李鄭屋古墓。 | [我國第一流考古學家　董作賓應邀抵港](./archaeology/lei-cheng-uk-han-tomb/19550815-wah-kiu-yat-po-p5.md)
+- 8月14日 | 董作賓應邀到港，研討李鄭屋古墓。 | [〈我國第一流考古學家　董作賓應邀抵港〉](./archaeology/lei-cheng-uk-han-tomb/19550815-wah-kiu-yat-po-p5.md)
 
 ## 1971年
-- 10月29日 | 《1971年古物古蹟法案》刊登憲報 | [Legal Supplement No. 3 to Hong Kong Government Gazette No. 43](https://www.elegislation.gov.hk/hk/1971/10/29/supp3/1)
+- 10月29日 | 《1971年古物古蹟法案》刊登憲報 | [*Legal Supplement No. 3 to Hong Kong Government Gazette No. 43*](https://www.elegislation.gov.hk/hk/1971/10/29/supp3/1)
 
 ## 1978年
 - 5月9日 | 長洲太平清醮期間，飽山倒塌造成多人受傷。 | [長洲太平清醮](./custom/cheung-chau-jiao-festival.md#_1978年-嚴重倒塌意外)
