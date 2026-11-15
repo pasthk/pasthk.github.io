@@ -33,6 +33,11 @@ $browse-source-size: 1rem;
   border-bottom: none;
 }
 
+// 上一頁／下一頁導覽列：移除主題預設的頂部分隔線，保留連結各自的外框
+.vp-page-nav {
+  border-top: none;
+}
+
 [vp-content] table {
   width: 100%;
 }
