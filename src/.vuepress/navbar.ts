@@ -8,11 +8,11 @@ export default navbar([
     link: "/reading-notes.html",
   },
   {
-    text: "其他項目",
-    children: ["/project/ay1928/"],
-  },
-  {
     text: "文獻綜覽",
     link: TIMELINE_PATH,
+  },
+  {
+    text: "其他項目",
+    children: ["/project/ay1928/"],
   },
 ]);
