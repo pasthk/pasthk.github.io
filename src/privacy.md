@@ -19,14 +19,14 @@ pageInfo: false
 
 　　**Google 及其合作夥伴會利用廣告 Cookie，根據使用者在本站和／或其他網站瀏覽的內容，向他們放送較為合適的廣告。**
 
-　　當訪客瀏覽顯示 Google 廣告或加入 Google 認證廣告聯播網的網頁時，系統可能會在其瀏覽器中放置 Cookie；相關 Cookie 可能經由 google.com、doubleclick.net、googlesyndication.com、googleadservices.com 或 Google 合作夥伴的網域設定。詳情見 [Google 廣告與隱私權說明](https://policies.google.com/technologies/ads) 及 [Google 隱私權政策](https://policies.google.com/privacy)。
+　　當訪客瀏覽顯示 Google 廣告或加入 Google 認證廣告聯播網的網頁時，系統可能會在其瀏覽器中放置 Cookie；相關 Cookie 可能經由 [google.com](https://google.com)、[doubleclick.net](https://doubleclick.net)、[googlesyndication.com](https://googlesyndication.com)、[googleadservices.com](https://googleadservices.com) 或 Google 合作夥伴的網域設定。詳情見 [Google 廣告與隱私權說明](https://policies.google.com/technologies/ads) 及 [Google 隱私權政策](https://policies.google.com/privacy)。
 
 　　本站目前使用的第三方廣告供應商為 Google（Google AdSense）。由於本站未停用第三方廣告放送功能，仍可能有**其他第三方供應商或廣告聯播網在本站放送廣告並使用其 Cookie**；訪客可透過下節所列的業界停用頁面，查閱並管理參與個人化廣告的供應商。
 
 ## 停用個人化廣告
 　　訪客可前往 [Google「廣告設定」](https://www.google.com/settings/ads) 停用個人化廣告。
 
-　　訪客亦可前往 [www.aboutads.info](http://www.aboutads.info/choices/) 或 [網路廣告聯盟](http://www.networkadvertising.org/)，選擇停用第三方供應商用於個人化廣告的 Cookie；若個別第三方供應商或廣告聯播網自行提供停用選項，亦可逕至該供應商的網站停用該項功能。
+　　訪客亦可前往 [www.aboutads.info](https://www.aboutads.info/choices/) 或 [網路廣告聯盟](https://www.networkadvertising.org/)，選擇停用第三方供應商用於個人化廣告的 Cookie；若個別第三方供應商或廣告聯播網自行提供停用選項，亦可逕至該供應商的網站停用該項功能。
 
 　　停用個人化廣告後，訪客仍可能看到廣告，但廣告不會再依據其瀏覽興趣投放。
 

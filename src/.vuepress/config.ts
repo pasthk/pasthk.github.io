@@ -79,6 +79,24 @@ export default defineUserConfig({
     ["script", {}, 'document.documentElement.dataset.theme="light";'],
     [
       "script",
+      {},
+      // 搜尋索引只在「即將搜尋」時預載：hover / focus / touch / 快捷鍵。
+      // worker 本身已是開啟搜尋才建立，這裡把下載再提前一點，
+      // 且不對 2G 或省流量模式的使用者消耗頻寬。
+      '(function(){var d=!1,w=function(){if(d)return;var c=navigator.connection;' +
+        'if(c&&(c.saveData||/^(slow-)?2g$/.test(c.effectiveType||"")))return;d=!0;' +
+        'var l=document.createElement("link");l.rel="prefetch";' +
+        'l.href="/slimsearch.worker.js";document.head.appendChild(l)},' +
+        'h=function(e){var t=e.target;t&&t.closest&&t.closest(".vp-search-button")&&w()};' +
+        'addEventListener("pointerover",h,{passive:!0,capture:!0});' +
+        'addEventListener("focusin",h,{passive:!0,capture:!0});' +
+        'addEventListener("touchstart",h,{passive:!0,capture:!0});' +
+        'addEventListener("keydown",function(e){' +
+        '(e.ctrlKey||e.metaKey)&&(e.key==="k"||e.key==="/")&&w()},' +
+        '{passive:!0,capture:!0})})();',
+    ],
+    [
+      "script",
       {
         async: true,
         crossorigin: "anonymous",

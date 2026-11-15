@@ -41,7 +41,7 @@ const signalDecadeGroups = () => {
 const sidebarConfig: Record<string, SidebarNode[]> = {
   "/": [
     link("首頁", "/"),
-    link("香江大小事", "/chronicles.md"),
+    link("香江大小事", "/hong-kong-chronicles.md"),
     group("自然環境", [
       group("熱帶氣旋", signalDecadeGroups()),
     ]),
@@ -133,7 +133,7 @@ const sidebarConfig: Record<string, SidebarNode[]> = {
   ],
   "/project/ay1928": [
     link("前言", "/project/ay1928/"),
-    link("安陽考古年表", "/project/ay1928/anyang-archaeology-chronicles.md"),
+    link("安陽史年表", "/project/ay1928/anyang-chronicles.md"),
     link("新聞報道", "/project/ay1928/news.md"),
     group("甲骨", [
       "/project/ay1928/oracle/report.md",

@@ -2,7 +2,7 @@ import type { HeadConfig } from "vuepress/core";
 
 import { itemListNode, type ListItem } from "./item-list.js";
 import { socialTags } from "./og/meta.js";
-import { HOSTNAME, SITE_NAME } from "./site.js";
+import { AUTHOR_NODE, HOSTNAME, SITE_NAME } from "./site.js";
 
 interface CollectionMeta {
   url: string;
@@ -10,6 +10,8 @@ interface CollectionMeta {
   description: string;
   image: string;
   items?: ListItem[];
+  /** 中文以「字」計的可見內文長度，供 JSON-LD wordCount 使用 */
+  wordCount?: number;
 }
 
 export const collectionHead = ({
@@ -18,6 +20,7 @@ export const collectionHead = ({
   description,
   image,
   items = [],
+  wordCount,
 }: CollectionMeta): HeadConfig[] => {
   const tags: Record<string, string> = {
     "og:type": "website",
@@ -47,6 +50,8 @@ export const collectionHead = ({
       name: SITE_NAME,
       url: `${HOSTNAME}/`,
     },
+    author: AUTHOR_NODE,
+    ...(wordCount === undefined ? {} : { wordCount }),
     ...(items.length ? { mainEntity: itemListNode(url, items) } : {}),
   };
 

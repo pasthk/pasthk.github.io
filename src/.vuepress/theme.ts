@@ -14,6 +14,7 @@ import {
   isSourceDocument,
   publishedDate,
   sourceOfPage,
+  visibleLengthOf,
   LEGACY_INDEX_PATH,
   TIMELINE_PATH,
 } from "./page-meta.js";
@@ -21,6 +22,9 @@ import { tokenizeForIndex } from "./search-tokenize.js";
 import { sitemapModifiedTime } from "./sitemap.js";
 import {
   absoluteUrl,
+  AUTHOR_NAME,
+  AUTHOR_NODE,
+  AUTHOR_URL,
   HOSTNAME as hostname,
   SITE_NAME,
   SITE_NAME_EN,
@@ -29,7 +33,6 @@ import {
 
 const ORGANIZATION_ID = `${hostname}/#organization`;
 const WEBSITE_ID = `${hostname}/#website`;
-const PERSON_ID = `${hostname}/#person`;
 
 const organization = {
   "@type": "Organization",
@@ -48,10 +51,7 @@ const organization = {
 };
 
 const person = {
-  "@type": "Person",
-  "@id": PERSON_ID,
-  name: "NG, KIN CHUNG",
-  url: `${hostname}/about.html`,
+  ...AUTHOR_NODE,
   email: "pasthk@outlook.com",
 };
 
@@ -114,8 +114,8 @@ export default hopeTheme(
     breadcrumb: true,
     copyright: false,
     author: {
-      name: "NG, KIN CHUNG",
-      url: `${hostname}/about.html`,
+      name: AUTHOR_NAME,
+      url: AUTHOR_URL,
     },
     markdown: {
       footnote: true,
@@ -126,6 +126,8 @@ export default hopeTheme(
     },
     plugins: {
       slimsearch: {
+        // 只排除 404；其餘頁面（含 noindex 年度索引頁）維持原本的搜尋結果
+        filter: (page) => page.path !== "/404.html",
         indexOptions: { tokenize: tokenizeForIndex },
         customFields: [
           {
@@ -213,7 +215,10 @@ export default hopeTheme(
             inLanguage: "zh-Hant",
             isPartOf: { "@id": WEBSITE_ID },
             publisher: { "@id": ORGANIZATION_ID },
-            author: { "@id": PERSON_ID },
+            // 自帶 url，不解析 @graph 也能取得作者個人頁
+            author: AUTHOR_NODE,
+            // 中文以「字」計：沿用全站統一的可見內文長度（已排除 frontmatter／標題／標記）
+            wordCount: visibleLengthOf(page),
             image: [cardUrl(page)],
           } as Record<string, unknown>;
 

@@ -11,6 +11,7 @@ import {
   isIndexablePage,
   publishedDate,
   sourceOfPage,
+  visibleLengthOf,
   TIMELINE_PATH,
 } from "./page-meta.js";
 import {
@@ -169,6 +170,7 @@ export const pageIndexPlugin = (): Plugin => ({
       description,
       image: ogImageUrl(HOSTNAME, INDEX_PATH),
       items,
+      wordCount: visibleLengthOf({ content }),
     });
 
     app.pages.push(
