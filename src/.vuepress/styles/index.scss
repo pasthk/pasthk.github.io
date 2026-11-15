@@ -6,6 +6,17 @@ $browse-date-neg: calc(-1 * var(--browse-date-offset));
 $browse-date-width: calc(var(--browse-date-offset) - 0.9rem);
 $browse-source-size: 1rem;
 
+/* 長標籤折行：括號註記與資料來源共用。
+   max-content 讓標籤成為不可分割的原子盒，同行放不下就整組移到下一行；
+   max-width 保證再長也只在組內折行，不會溢出欄位或跨過軸線。 */
+@mixin browse-atom-wrap {
+  display: inline-block;
+  width: max-content;
+  max-width: 100%;
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+
 .vp-page {
   font-size: 1.125rem;
 }
@@ -300,17 +311,11 @@ body {
     pointer-events: none;
   }
 
-  /* 括號註記整組自動換行：年份標題與左側日期欄共用。
-     max-content 讓括號成為不可分割的原子盒，同行放不下就整組移到下一行；
-     max-width 保證再長也只在組內折行，不會溢出欄位或跨過軸線。
-     兩處括號字級皆與「資料來源」一致，共用 $browse-source-size。 */
+  /* 括號註記整組自動換行：年份標題與左側日期欄共用，折行策略見 browse-atom-wrap。
+     括號字級與「資料來源」一致，共用 $browse-source-size。 */
   .browse-note {
-    display: inline-block;
-    width: max-content;
-    max-width: 100%;
+    @include browse-atom-wrap;
     font-size: $browse-source-size;
-    white-space: normal;
-    overflow-wrap: anywhere;
   }
 
   // 年份實心點與條目空心點共用的圓點骨架
@@ -384,13 +389,17 @@ body {
   overflow-wrap: anywhere;
 }
 
-/* 資料來源（報刊／出版者名稱），置於條目標題右側 */
+/* 資料來源（報刊／出版者名稱），置於條目標題右側。
+   改用與括號註記相同的原子盒折行：短來源維持同行，過長（如英文刊名）
+   先整組移到下一行、再於組內折行，不再以 nowrap 溢出欄位。 */
 .browse-timeline-source {
+  @include browse-atom-wrap;
   margin-left: 0.5rem;
+  /* max-width 需扣掉自身左邊界，否則換行獨佔一列時會水平溢出 0.5rem */
+  max-width: calc(100% - 0.5rem);
   font-size: $browse-source-size;
   color: var(--vp-c-text-mute);
   opacity: 0.75;
-  white-space: nowrap;
 }
 
 @media (max-width: 719px) {
