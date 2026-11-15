@@ -1,7 +1,6 @@
 <template>
   <div class="reference-box">
     <div class="reference-box-header">
-      <span class="reference-box-label">參考信息</span>
       <button
         class="reference-box-copy-btn"
         :class="{ copied }"
@@ -145,16 +144,8 @@ onBeforeUnmount(() => {
 .reference-box-header {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 0.75rem;
+  justify-content: flex-start;
   margin-bottom: 0.35rem;
-}
-
-.reference-box-label {
-  font-size: 0.8125rem;
-  font-weight: 600;
-  color: var(--vp-c-text-mute);
-  letter-spacing: 0.05em;
 }
 
 .reference-box-copy-btn {
