@@ -135,7 +135,7 @@ function buildContent(app: App, stats: SiteStats): BrowseContent {
   );
 
   const blocks = [
-    `${describeSite(stats)}以下依資料日期由舊至新列出 ${dated.length} 篇文獻，同一日期的報導合併顯示。`,
+    `${describeSite(stats)}以下依資料日期由遠至近列出所有文獻，同一日期的報導合併顯示：`,
     timelineMarkdown(dated),
   ];
 

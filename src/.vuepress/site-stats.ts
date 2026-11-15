@@ -47,9 +47,9 @@ export const siteStats = (pages: StatsInput[], dir?: string): SiteStats => {
 };
 
 export const describeSite = (stats: SiteStats): string =>
-  `本站現有 ${stats.sources} 篇原始文獻轉錄` +
+  `　　本站現有 ${stats.sources} 篇原始文獻轉錄` +
   (stats.firstYear && stats.lastYear
-    ? `（原始出版年分 ${stats.firstYear}–${stats.lastYear} 年）`
+    ? `（年份覆蓋 ${stats.firstYear}–${stats.lastYear} 年）`
     : "") +
   `，另有 ${stats.compiled} 個索引與說明頁面，合計 ${stats.total} 個可供檢索的頁面，` +
   `分屬 ${chapters.length} 個主題章節。`;
