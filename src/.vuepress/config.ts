@@ -41,6 +41,8 @@ const componentAlias: AliasEntry[] = COMPONENT_OVERRIDES.map(
 
 export default defineUserConfig({
   base: "/",
+  shouldPrefetch: false,
+  pagePatterns: ["**/*.md", "!.vuepress", "!.vuepress/dist/**"],
   bundler: viteBundler({
     configureVite: (config) => {
       const existing = (config.resolve?.alias ?? []) as AliasEntry[];
@@ -80,20 +82,31 @@ export default defineUserConfig({
     [
       "script",
       {},
-      // 搜尋索引只在「即將搜尋」時預載：hover / focus / touch / 快捷鍵。
-      // worker 本身已是開啟搜尋才建立，這裡把下載再提前一點，
-      // 且不對 2G 或省流量模式的使用者消耗頻寬。
-      '(function(){var d=!1,w=function(){if(d)return;var c=navigator.connection;' +
-        'if(c&&(c.saveData||/^(slow-)?2g$/.test(c.effectiveType||"")))return;d=!0;' +
+      // 全文索引較大，但 worker 只在「開啟搜尋」時才建立，不下載就不佔首屏。
+      // 預載分兩層：頁面空閒時低優先預載（讓首次搜尋幾乎零等待），
+      // 以及 hover / focus / touch / 快捷鍵等「即將搜尋」訊號立即補載。
+      // 2G 與省流量模式完全不預載，只在真正開啟搜尋時才下載。
+      '(function(){var d=!1,c=navigator.connection,' +
+        'eType=c&&c.effectiveType||"",' +
+        'slow=!!(c&&(c.saveData||/^(slow-)?2g$/.test(eType))),' +
+        'fast=!c||!/^(2g|3g)$/.test(eType),' +
+        'w=function(){if(d||slow)return;d=!0;' +
         'var l=document.createElement("link");l.rel="prefetch";' +
         'l.href="/slimsearch.worker.js";document.head.appendChild(l)},' +
-        'h=function(e){var t=e.target;t&&t.closest&&t.closest(".vp-search-button")&&w()};' +
+        'h=function(e){var t=e.target;t&&t.closest&&t.closest(".vp-search-button")&&w()},' +
+        'idle=function(){if(!fast)return;' +
+        'try{if(sessionStorage.getItem("pasthk-sw"))return;' +
+        'sessionStorage.setItem("pasthk-sw","1")}catch(e){}' +
+        'if("requestIdleCallback" in window)' +
+        'requestIdleCallback(w,{timeout:5000});else setTimeout(w,3000)};' +
         'addEventListener("pointerover",h,{passive:!0,capture:!0});' +
         'addEventListener("focusin",h,{passive:!0,capture:!0});' +
         'addEventListener("touchstart",h,{passive:!0,capture:!0});' +
         'addEventListener("keydown",function(e){' +
         '(e.ctrlKey||e.metaKey)&&(e.key==="k"||e.key==="/")&&w()},' +
-        '{passive:!0,capture:!0})})();',
+        '{passive:!0,capture:!0});' +
+        'if(document.readyState==="complete")idle();' +
+        'else addEventListener("load",idle,{once:!0})})();',
     ],
     [
       "script",

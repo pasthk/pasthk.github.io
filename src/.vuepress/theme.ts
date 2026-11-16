@@ -18,6 +18,7 @@ import {
   LEGACY_INDEX_PATH,
   TIMELINE_PATH,
 } from "./page-meta.js";
+import { searchKeywords } from "./search-keywords.js";
 import { tokenizeForIndex } from "./search-tokenize.js";
 import { sitemapModifiedTime } from "./sitemap.js";
 import {
@@ -128,18 +129,13 @@ export default hopeTheme(
       slimsearch: {
         // 只排除 404；其餘頁面（含 noindex 年度索引頁）維持原本的搜尋結果
         filter: (page) => page.path !== "/404.html",
+        // 全文檢索：標題、各級標題與整篇史料正文都進索引（主題預設）。
+        // 體積較大但 worker 只在「開啟搜尋」時才建立，且由 config.ts 在
+        // 頁面空閒時低優先預載，不佔首屏關鍵路徑。
         indexOptions: { tokenize: tokenizeForIndex },
-        customFields: [
-          {
-            getter: (page) =>
-              [
-                chapterOfPath(page.path),
-                typeof page.frontmatter.description === "string"
-                  ? page.frontmatter.description
-                  : null,
-              ].filter((value): value is string => Boolean(value)),
-          },
-        ],
+        // 章節／報刊／出版日／description 作為高權重關鍵詞；正文已全文索引，
+        // 不再重複塞入摘要，避免雙倍 postings。
+        customFields: [{ getter: searchKeywords }],
         suggestion: false,
         searchDelay: 200,
         hotKeys: [
