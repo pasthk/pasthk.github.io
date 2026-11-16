@@ -42,5 +42,5 @@ proofread: false
 此等記號夜懸九龍倉上日間懸船頭官與水師船
 
 <ReferenceBox>
-香港華字日報，1904年6月27日，第3頁。
+香港華字日報，1904年6月27日，頁3。
 </ReferenceBox>
