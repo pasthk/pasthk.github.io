@@ -3,7 +3,7 @@ title: 風灾竊物案
 date: 2026-11-15
 dateCreated: "2026-11-15"
 datePublished: "1906-09-25"
-description: 
+description: 《香港華字日報》1906年9月25日報道風災期間的搶劫竊物案件，九龍城兩人拾得來歷不明的化學物料值銀百餘元，各被判罰銀25元，其餘竊物者亦遭科罰。
 excerpted: true
 proofread: false
 ---

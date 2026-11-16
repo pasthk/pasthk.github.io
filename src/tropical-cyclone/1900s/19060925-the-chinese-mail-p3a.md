@@ -3,7 +3,7 @@ title: 風災餘聞
 date: 2026-11-15
 dateCreated: "2026-11-15"
 datePublished: "1906-09-25"
-description: 
+description: 《香港華字日報》1906年9月25日載丙午風災後的打撈善後，記德輪畢打刺治、新昌輪的浮起工程與東華醫院僱船往港外拾屍，並列中環、灣仔、西營盤等處的失人、拾屍及失船數目。
 excerpted: true
 proofread: false
 ---

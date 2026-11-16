@@ -3,7 +3,7 @@ title: 天文台報風
 date: 2026-11-16
 dateCreated: "2026-11-16"
 datePublished: "1909-09-16"
-description: 
+description: 《香港華字日報》1909年9月16日載天文台於初二日懸紅色北方筍形風號及風鼓，指該風已向西疾馳至台灣海峽，或逼近廈門一帶海岸。
 excerpted: true
 proofread: false
 ---

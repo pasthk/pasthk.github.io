@@ -3,7 +3,7 @@ title: 香海風聲
 date: 2026-11-16
 dateCreated: "2026-11-16"
 datePublished: "1909-09-17"
-description: 
+description: 《香港華字日報》1909年9月17日載本港風聲，風雨表一度急降十分至二十九度五十分，其後回升，顯示大風由港北掠過；報道並指颶風經廈門、汕頭而入台灣海峽，汕頭受災最重。
 excerpted: true
 proofread: false
 ---

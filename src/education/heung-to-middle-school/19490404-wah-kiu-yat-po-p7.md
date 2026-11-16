@@ -3,7 +3,7 @@ title: 香島中學紀念復校三年
 date: 2026-11-14
 dateCreated: "2026-11-14"
 datePublished: "1949-04-04"
-description: 
+description: 《華僑日報》1949年4月4日報道香島中學慶祝復校三週年，假旺角運動場道舉行慶祝晚會，演出多項游藝節目，至深夜始散。
 excerpted: true
 proofread: false
 ---

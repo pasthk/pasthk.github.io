@@ -3,7 +3,7 @@ title: 天文台風信
 date: 2026-10-15
 dateCreated: "2026-10-15"
 datePublished: "1901-10-16"
-description: 
+description: 《香港華字日報》1901年10月16日載天文台風信，接小呂宋電報指魯桑島颶風風勢由北而西，天文台已懸紅球告知航海者，風在三百里海外。
 excerpted: true
 proofread: false
 ---

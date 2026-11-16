@@ -3,7 +3,7 @@ title: 香島中學舉行畫展
 date: 2026-11-14
 dateCreated: "2026-11-14"
 datePublished: "1949-02-06"
-description: 
+description: 《華僑日報》1949年2月6日報道香島中學為提高學生繪畫興趣，定於4月5日及6日在中學部舉行美術展覽，展出水彩、粉彩、木炭、鉛筆、圖案及建築模型，部分為全港中學生美術展覽會得獎作品。
 excerpted: true
 proofread: false
 ---

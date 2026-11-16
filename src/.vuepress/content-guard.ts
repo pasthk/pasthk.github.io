@@ -54,7 +54,7 @@ export const contentGuardPlugin = (): Plugin => ({
     if (autoDesc.length) {
       warn(
         `有 ${autoDesc.length} 個可收錄頁面沒有人工 description，目前使用正文自動截取的摘要：${sample(autoDesc)}。` +
-          `史料為 OCR 轉錄，建議補寫 frontmatter.description 以改善搜尋結果摘要。`,
+          `建議補寫 frontmatter.description 以改善搜尋結果摘要（規格見 scripts/description-style.md，可用 npm run docs:desc 檢查）。`,
       );
     }
 

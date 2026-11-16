@@ -3,7 +3,7 @@ title: 風雨不測
 date: 2026-11-15
 dateCreated: "2026-11-15"
 datePublished: "1907-07-25"
-description: 
+description: 《香港華字日報》1907年7月25日報道十四日起東北風大作，天文台及船政司懸黑球示港南三百里內有颶風，港內小艇四散避風，午後風勢漸減而入夜風雨並作。
 excerpted: true
 proofread: false
 ---

@@ -3,7 +3,7 @@ title: 天文台報告
 date: 2026-11-16
 dateCreated: "2026-11-16"
 datePublished: "1908-12-09"
-description: 
+description: 《香港華字日報》1908年12月9日載天文台報告，指北呂宋以西的颶風已轉向東北吹去、報風號經已落下，並記本港24小時內得雨四分二厘。
 excerpted: true
 proofread: false
 ---

@@ -3,7 +3,7 @@ title: 風信彙報
 date: 2026-11-15
 dateCreated: "2026-11-15"
 datePublished: "1907-09-14"
-description: 
+description: 《香港華字日報》1907年9月14日載風信彙報，駐港美領事接小呂宋天文台電報指廿島以南有大風，本港自初五晚懸紅燈綠燈報風，初六早再懸黑球兩顆，各艇遷徙避風。
 excerpted: true
 proofread: false
 ---

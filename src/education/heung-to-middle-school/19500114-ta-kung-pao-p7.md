@@ -4,7 +4,7 @@ toc: false
 date: 2026-11-14
 dateCreated: "2026-11-14"
 datePublished: "1950-01-14"
-description: 
+description: 《大公報》1950年1月14日刊出香島中學全體同學〈為盧動校長被迫離境告港九同學書〉，質問愛國何罪，表示將更堅強壯大、繼續辦好學校。
 excerpted: true
 proofread: false
 ---

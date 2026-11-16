@@ -3,8 +3,8 @@ title: 「永遠不離開盧校長」
 toc: false
 date: 2026-11-14
 dateCreated: "2026-11-14"
-datePublished: "1950-01-07"
-description: 
+datePublished: "1950-01-08"
+description: 《大公報》1950年1月8日刊出香島中學全體教職員告社會人士書，表示決不因無理壓制而停止工作、希望港府收回成命，並呼籲同胞支援。
 excerpted: true
 proofread: false
 ---

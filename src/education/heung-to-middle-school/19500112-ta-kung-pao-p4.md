@@ -4,7 +4,7 @@ toc: false
 date: 2026-11-15
 dateCreated: "2026-11-15"
 datePublished: "1950-01-12"
-description: 
+description: 《大公報》1950年1月12日報道港九教師福利會會員數十人於1月11日到香島中學慰問盧動校長家屬，盧夫人批評港府無理遞解，呼籲港九同胞向港府抗議。
 excerpted: true
 proofread: false
 ---

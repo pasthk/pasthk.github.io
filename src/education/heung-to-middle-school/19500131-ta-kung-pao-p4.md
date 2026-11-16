@@ -4,7 +4,7 @@ toc: false
 date: 2026-11-14
 dateCreated: "2026-11-14"
 datePublished: "1950-01-31"
-description: 
+description: 《大公報》1950年1月31日刊出香島中學答謝各界慰問書，敘述向政治部、警察司交涉而不得要領的經過，並保證竭盡心力辦好學校、為國家培養人才。
 excerpted: true
 proofread: false
 ---

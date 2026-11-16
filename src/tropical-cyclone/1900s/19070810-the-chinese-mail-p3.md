@@ -3,7 +3,7 @@ title: 天文台風信之詳告
 date: 2026-11-15
 dateCreated: "2026-11-15"
 datePublished: "1907-08-10"
-description: 
+description: 《香港華字日報》1907年8月10日載天文台懸球報風詳情，廿九日懸球後船艇紛紛避風，至初一仍多未返港、貨物起落停頓，天文台謂颶風已向西南方吹去。
 excerpted: true
 proofread: false
 ---

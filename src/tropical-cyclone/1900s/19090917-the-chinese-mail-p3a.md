@@ -3,7 +3,7 @@ title: 天文台風號
 date: 2026-11-16
 dateCreated: "2026-11-16"
 datePublished: "1909-09-17"
-description: 
+description: 《香港華字日報》1909年9月17日報道天文台於初二日下午懸黑尖球及長圓球，示大風已入廈門港面，初三早除下風球，風警解除。
 excerpted: true
 proofread: false
 ---

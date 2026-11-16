@@ -3,7 +3,7 @@ title: 九龍香島中學擧行畢業典禮盛况
 date: 2026-11-14
 dateCreated: "2026-11-14"
 datePublished: "1948-07-28"
-description: 
+description: 《華僑日報》1948年7月28日報道九龍香島中學舉行畢業典禮，高中第二屆21人、初中第三屆87人及小學第三屆68人畢業，校長致詞頒發證件，會上演出話劇歌舞，並刊出畢業生名單。
 excerpted: true
 proofread: false
 ---

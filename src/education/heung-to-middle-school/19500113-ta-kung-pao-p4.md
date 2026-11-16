@@ -4,7 +4,7 @@ toc: false
 date: 2026-11-15
 dateCreated: "2026-11-15"
 datePublished: "1950-01-13"
-description: 
+description: 《大公報》1950年1月13日報道虹虹歌詠團發表書面聲明，抗議創團元勳、香島中學校長盧動被迫離境，表明將堅持反迫害鬥爭。
 excerpted: true
 proofread: false
 ---

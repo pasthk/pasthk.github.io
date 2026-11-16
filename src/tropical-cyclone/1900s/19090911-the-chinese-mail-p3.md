@@ -3,7 +3,7 @@ title: 颶風已去
 date: 2026-11-16
 dateCreated: "2026-11-16"
 datePublished: "1909-09-11"
-description: 
+description: 《香港華字日報》1909年9月11日報道颶風已離港而去，天文台於上午九時將報風號落低，其後得悉颶風移至海南海峽附近，本港天氣乍晴乍雨。
 excerpted: true
 proofread: false
 ---

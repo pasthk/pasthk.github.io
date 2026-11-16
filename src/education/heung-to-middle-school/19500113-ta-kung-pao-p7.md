@@ -3,7 +3,7 @@ title: 迫走盧動是無理的港府應該收回成命
 date: 2026-11-15
 dateCreated: "2026-11-15"
 datePublished: "1950-01-13"
-description: 
+description: 《大公報》1950年1月13日刊出香島中學畢業校友投書，斥港府迫走校長盧動無理，控訴連串迫害民主社團與人士的措施，要求收回成命。
 excerpted: true
 proofread: false
 ---

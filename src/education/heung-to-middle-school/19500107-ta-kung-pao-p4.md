@@ -3,7 +3,7 @@ title: 為盧動校長被迫離境香島中學書告各界
 date: 2026-11-14
 dateCreated: "2026-11-14"
 datePublished: "1950-01-07"
-description: 
+description: 《大公報》1950年1月7日刊出香島中學〈為盧校長被迫離境告社會人士書〉全文，敘述1月5日凌晨政治部人員搜查盧動寓所、押解至旺角警署並遞解羅湖的經過，以及代表質問不獲答覆的情形。
 excerpted: true
 proofread: false
 ---

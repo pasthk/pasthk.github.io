@@ -3,7 +3,7 @@ title: 風未成災
 date: 2026-11-16
 dateCreated: "2026-11-16"
 datePublished: "1908-10-07"
-description: 
+description: 《香港華字日報》1908年10月7日報道颶風掠港而未成災，11日晚各處懸號報風、船艇入灣躲避，風勢雖猛但無毀壞，至12日下午風息，颶風轉向東京灣。
 excerpted: true
 proofread: false
 ---

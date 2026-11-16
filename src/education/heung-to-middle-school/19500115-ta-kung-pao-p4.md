@@ -3,7 +3,7 @@ title: 香島中學留穗校友抗議盧動被迫離境
 date: 2026-11-14
 dateCreated: "2026-11-14"
 datePublished: "1950-01-15"
-description: 
+description: 《大公報》1950年1月15日報道香島中學留穗校友213人於1月14日發表聲明，抗議盧動被迫離境，指港府的高壓手段不能遏止港九同胞的愛國民主運動。
 excerpted: true
 proofread: false
 ---

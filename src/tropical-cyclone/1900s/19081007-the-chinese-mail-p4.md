@@ -3,7 +3,7 @@ title: 天文台風雨報
 date: 2026-11-16
 dateCreated: "2026-11-16"
 datePublished: "1908-10-07"
-description: 
+description: 《香港華字日報》1908年10月7日載天文台風雨報告，颶風在本港東南三百里內向西北偏西移動，天文台兩度加懸黑球，並記錄24小時內得雨八分七厘。
 excerpted: true
 proofread: false
 ---

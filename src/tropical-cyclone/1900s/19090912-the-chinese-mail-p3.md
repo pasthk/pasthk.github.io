@@ -3,7 +3,7 @@ title: 天文台風報
 date: 2026-11-16
 dateCreated: "2026-11-16"
 datePublished: "1909-09-12"
-description: 
+description: 《香港華字日報》1909年9月12日載天文台報告，指颶風已入東京灣近海防一帶，太平洋巨風位於琉球之東並向西北偏西移動，本港24小時得雨六分三厘。
 excerpted: true
 proofread: false
 ---

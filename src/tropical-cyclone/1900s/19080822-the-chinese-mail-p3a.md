@@ -3,7 +3,7 @@ title: 天文台風報
 date: 2026-11-16
 dateCreated: "2026-11-16"
 datePublished: "1908-08-22"
-description: 
+description: 《香港華字日報》1908年8月22日載天文台風報，指台灣及太平洋面現颶風之象，或落於琉球以南遠處，中國南部與呂宋一帶氣壓微升。
 excerpted: true
 proofread: false
 ---

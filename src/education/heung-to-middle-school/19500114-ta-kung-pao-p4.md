@@ -4,7 +4,7 @@ toc: false
 date: 2026-11-14
 dateCreated: "2026-11-14"
 datePublished: "1950-01-14"
-description: 
+description: 《大公報》1950年1月14日刊出香島中學工友〈告港九各界社會人士書〉，抗議校長盧動被遞解出境，表示將站穩崗位、加強團結，直至盧動歸來。
 excerpted: true
 proofread: false
 ---

@@ -3,7 +3,7 @@ title: 天文台風報
 date: 2026-11-16
 dateCreated: "2026-11-16"
 datePublished: "1908-11-23"
-description: 
+description: 《香港華字日報》1908年11月23日載天文台連續兩日風報，廿七日懸紅箏紅鼓示本港東南三百英里外有颶風，廿八日改懸黑箏黑鼓，預料台灣海峽有東北大風。
 excerpted: true
 proofread: false
 ---
