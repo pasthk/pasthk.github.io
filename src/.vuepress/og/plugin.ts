@@ -6,8 +6,9 @@ import type { App, Page, Plugin } from "vuepress/core";
 import { success, warn } from "vuepress/utils";
 
 import { chapterOfPath, pathSegments } from "../chapters.js";
+import { firstClause, normalizeSpace } from "../format.js";
 import { mapInBatches } from "../map-utils.js";
-import { citationOf } from "../page-meta.js";
+import { citationSummary } from "../page-meta.js";
 import { HOST, SITE_NAME, SITE_NAME_EN } from "../site.js";
 import {
   buildCardSvg,
@@ -18,38 +19,15 @@ import { ogFileName } from "./paths.js";
 
 const HOME_CARD_META = "香港歷史文獻索引";
 
+/** 卡片第二行：第一分句的最長字數（超過時截斷並加省略號） */
+const META_CLAUSE_LENGTH = 46;
+
 const FONT_DIR = join(dirname(fileURLToPath(import.meta.url)), "fonts");
 
 const FONT_FILES = [
   join(FONT_DIR, "noto-serif-tc-400.ttf"),
   join(FONT_DIR, "noto-serif-tc-700.ttf"),
 ];
-
-function metaFromReferenceBox(raw: string): string | undefined {
-  const text = citationOf(raw);
-
-  if (!text) return undefined;
-
-  const parts = text
-    .replace(/。\s*$/, "")
-    .split(/[，,]/)
-    .map((part) => part.trim())
-    .filter(Boolean);
-
-  return parts.length > 1 ? parts.join(" · ") : undefined;
-}
-
-function firstClause(description: string): string | undefined {
-  const clause = description.split(/[，。；：]/)[0]?.trim();
-
-  if (!clause) return undefined;
-
-  return clause.length > 46 ? `${clause.slice(0, 45)}…` : clause;
-}
-
-function clean(text: string): string {
-  return text.replace(/\s+/g, " ").trim();
-}
 
 function buildContent(
   page: Page,
@@ -68,20 +46,25 @@ function buildContent(
     return { title: "找不到頁面", meta: "404 Not Found" };
   }
 
+  const description =
+    typeof page.frontmatter.description === "string"
+      ? page.frontmatter.description
+      : "";
+
   const meta =
-    metaFromReferenceBox(raw) ??
-    (childCount > 0 ? `收錄 ${childCount} 篇文獻` : undefined) ??
+    citationSummary(raw) ||
+    (childCount > 0 ? `收錄 ${childCount} 篇文獻` : undefined) ||
     (typeof page.frontmatter.datePublished === "string"
       ? page.frontmatter.datePublished
-      : undefined) ??
-    firstClause(page.frontmatter.description ?? "");
+      : undefined) ||
+    firstClause(description, META_CLAUSE_LENGTH);
 
   const section = chapterOfPath(page.path);
-  const title = clean(page.title) || SITE_NAME;
+  const title = normalizeSpace(page.title) || SITE_NAME;
 
   return {
     title,
-    meta: meta ? clean(meta) : undefined,
+    meta: meta ? normalizeSpace(meta) : undefined,
     section: section === title ? undefined : section,
   };
 }

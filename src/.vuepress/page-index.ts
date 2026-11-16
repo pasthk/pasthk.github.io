@@ -4,6 +4,7 @@ import { collectionHead } from "./collection-head.js";
 import {
   dateOrderOf,
   formatMonthDay,
+  headingAnchorId,
   parseDateValue,
 } from "./format.js";
 import { ogImageUrl } from "./og/paths.js";
@@ -57,13 +58,6 @@ const timelineLine = (page: Page, dateLabel?: string): string => {
 };
 
 /**
- * 年份標題的 id：沿用 VuePress slugify 的規則（開頭為數字時補底線），
- * 讓既有的 #_1874年 這類深層連結仍然可用。
- */
-const yearAnchorId = (label: string): string =>
-  /^\d/u.test(label) ? `_${label}` : label;
-
-/**
  * 整頁共用一條軸線；年份為實心節點，其下條目為空心圓點。
  * 每個年份各自包在 section 內，貼頂的年份標題才會被下一節推走、隨捲動切換。
  */
@@ -84,7 +78,7 @@ const timelineMarkdown = (dated: DatedPage[]): string => {
       lines.push(
         '<section class="browse-year">',
         "",
-        `<h2 id="${yearAnchorId(label)}" class="browse-year-title"><span class="browse-year-label">${label}</span></h2>`,
+        `<h2 id="${headingAnchorId(label)}" class="browse-year-title"><span class="browse-year-label">${label}</span></h2>`,
         "",
       );
     }

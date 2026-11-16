@@ -39,12 +39,28 @@ const componentAlias: AliasEntry[] = COMPONENT_OVERRIDES.map(
   }),
 );
 
+/**
+ * Vue 執行期單獨成塊。
+ *
+ * app.js 內含全部頁面 chunk 的依賴表（routes 的 mapDeps），任何一頁新增或改動
+ * 都會讓它的檔名變更。若不拆包，回訪讀者每次遇到內容更新都要重新下載整個
+ * app.js（約 116 KB gzip）；拆出 Vue 後只有實際變動的那一塊需要重下。
+ *
+ * 只挑選「每個頁面都必然載入」的核心套件，其餘依賴仍由 Vite 按需分割，
+ * 避免把主題的動態元件（部落格、圖表等）拉進首屏。
+ */
+const VUE_VENDOR = /[\\/]node_modules[\\/](?:vue|vue-router|@vue)[\\/]/u;
+
+const splitVueVendor = (
+  id: string,
+): string | undefined => (VUE_VENDOR.test(id) ? "vue" : undefined);
+
 export default defineUserConfig({
   base: "/",
   shouldPrefetch: false,
-  pagePatterns: ["**/*.md", "!.vuepress", "!.vuepress/dist/**"],
+  pagePatterns: ["**/*.md", "!.vuepress"],
   bundler: viteBundler({
-    configureVite: (config) => {
+    configureVite: (config, isServer) => {
       const existing = (config.resolve?.alias ?? []) as AliasEntry[];
 
       config.resolve ??= {};
@@ -54,6 +70,23 @@ export default defineUserConfig({
 
       config.ssr ??= {};
       config.ssr.noExternal = [...noExternal, "@vuepress/search-helper"];
+
+      /* SSR 產物是單一 bundle，不需要（也不應該）手動分塊 */
+      if (!isServer) {
+        config.build ??= {};
+        config.build.rollupOptions ??= {};
+
+        const { rollupOptions } = config.build;
+        const outputs = Array.isArray(rollupOptions.output)
+          ? rollupOptions.output
+          : [rollupOptions.output ?? {}];
+
+        for (const output of outputs) output.manualChunks = splitVueVendor;
+
+        rollupOptions.output = Array.isArray(rollupOptions.output)
+          ? outputs
+          : outputs[0];
+      }
 
       config.plugins ??= [];
       config.plugins.push(slimsearchDevWorkerPlugin());
@@ -77,36 +110,6 @@ export default defineUserConfig({
     [
       "link",
       { rel: "describedby", type: "text/markdown", href: "/llms.txt" },
-    ],
-    ["script", {}, 'document.documentElement.dataset.theme="light";'],
-    [
-      "script",
-      {},
-      // 全文索引較大，但 worker 只在「開啟搜尋」時才建立，不下載就不佔首屏。
-      // 預載分兩層：頁面空閒時低優先預載（讓首次搜尋幾乎零等待），
-      // 以及 hover / focus / touch / 快捷鍵等「即將搜尋」訊號立即補載。
-      // 2G 與省流量模式完全不預載，只在真正開啟搜尋時才下載。
-      '(function(){var d=!1,c=navigator.connection,' +
-        'eType=c&&c.effectiveType||"",' +
-        'slow=!!(c&&(c.saveData||/^(slow-)?2g$/.test(eType))),' +
-        'fast=!c||!/^(2g|3g)$/.test(eType),' +
-        'w=function(){if(d||slow)return;d=!0;' +
-        'var l=document.createElement("link");l.rel="prefetch";' +
-        'l.href="/slimsearch.worker.js";document.head.appendChild(l)},' +
-        'h=function(e){var t=e.target;t&&t.closest&&t.closest(".vp-search-button")&&w()},' +
-        'idle=function(){if(!fast)return;' +
-        'try{if(sessionStorage.getItem("pasthk-sw"))return;' +
-        'sessionStorage.setItem("pasthk-sw","1")}catch(e){}' +
-        'if("requestIdleCallback" in window)' +
-        'requestIdleCallback(w,{timeout:5000});else setTimeout(w,3000)};' +
-        'addEventListener("pointerover",h,{passive:!0,capture:!0});' +
-        'addEventListener("focusin",h,{passive:!0,capture:!0});' +
-        'addEventListener("touchstart",h,{passive:!0,capture:!0});' +
-        'addEventListener("keydown",function(e){' +
-        '(e.ctrlKey||e.metaKey)&&(e.key==="k"||e.key==="/")&&w()},' +
-        '{passive:!0,capture:!0});' +
-        'if(document.readyState==="complete")idle();' +
-        'else addEventListener("load",idle,{once:!0})})();',
     ],
     [
       "script",

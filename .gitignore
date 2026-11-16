@@ -7,3 +7,5 @@ src/.vuepress/dist/
 
 .workbuddy-ai/
 scripts/
+
+.workbuddy/

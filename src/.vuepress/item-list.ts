@@ -1,6 +1,7 @@
 import { posix } from "node:path";
 import type { App, Page } from "vuepress/core";
 
+import { normalizeSpace } from "./format.js";
 import {
   isListedPage,
   isSourceDocument,
@@ -57,7 +58,7 @@ export const linkEntries = (page: Page): ListEntry[] => {
     if (!path || seen.has(path)) continue;
 
     seen.add(path);
-    found.push({ path, label: label.replace(/\s+/gu, " ").trim() });
+    found.push({ path, label: normalizeSpace(label) });
   }
 
   linkCache.set(page, found);

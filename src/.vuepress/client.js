@@ -2,6 +2,7 @@ import { defineClientConfig } from "vuepress/client";
 import { defineSearchConfig } from "@vuepress/plugin-slimsearch/client";
 import Layout from "./layouts/Layout.vue";
 import ReferenceBox from "./components/ReferenceBox.vue";
+import { installSearchPrefetch } from "./search-prefetch";
 import { splitQuery } from "./search-tokenize";
 
 const MAX_CONTENTS_PER_RESULT = 5;
@@ -114,5 +115,8 @@ export default defineClientConfig({
   },
   enhance: ({ app }) => {
     app.component("ReferenceBox", ReferenceBox);
+
+    /* 僅在瀏覽器端執行；SSR 不應觸及 navigator / document */
+    installSearchPrefetch();
   },
 });

@@ -7,6 +7,7 @@ import {
 import type { Page } from "vuepress/core";
 
 import { chapters, pathSegments } from "./chapters.js";
+import { firstClause, normalizeSpace } from "./format.js";
 import { volumesFor } from "./llms-volumes.js";
 import { pushTo } from "./map-utils.js";
 import {
@@ -23,6 +24,9 @@ import { HOSTNAME, SITE_NAME } from "./site.js";
 const SUMMARY = `> 以歷史事件為核心的香港文獻索引。轉錄十九世紀後期至二十世紀的香港舊報紙、政府公報、調查報告與研究論著原文，按事件集中編排，每篇保留報刊名稱、日期、版次與頁碼，可直接引用。
 >
 > An event-centred documentary index of Hong Kong history: full-text transcriptions of Hong Kong newspapers (late 19th to 20th century), government reports and scholarly works, grouped by event, with newspaper title, date, edition and page number preserved for citation.`;
+
+/** 目錄條目簡述的最長字數（超過時截斷並加省略號） */
+const TOC_CLAUSE_LENGTH = 48;
 
 function buildOptional(pages: LLMPage[]): string {
   const volumes = volumesFor(pages.map((page) => page.path));
@@ -116,12 +120,9 @@ ${SITE_NAME}，${HOSTNAME}/archaeology/lei-cheng-uk-han-tomb/19550810-wah-kiu-ya
 }
 
 function brief(description: unknown): string {
-  if (typeof description !== "string") return "";
-
-  const [clause] = description.replace(/\s+/g, " ").trim().split(/[，。；：]/);
-  const text = clause?.trim() ?? "";
-
-  return text.length > 48 ? `${text.slice(0, 47)}…` : text;
+  return typeof description === "string"
+    ? firstClause(description, TOC_CLAUSE_LENGTH)
+    : "";
 }
 
 function provenance(markdown: string, page: Page): string {
@@ -134,12 +135,10 @@ function provenance(markdown: string, page: Page): string {
   const clean = replaceReferenceBoxes(markdown, (inner) => {
     if (!captured) {
       captured = true;
-      citation =
-        inner.replace(/<[^>]+>/g, " ").replace(/\s+/g, " ").trim() ||
-        undefined;
+      citation = normalizeSpace(inner.replace(/<[^>]+>/g, " ")) || undefined;
     }
 
-    return `> 引用：${inner.replace(/\s+/g, " ").trim()}`;
+    return `> 引用：${normalizeSpace(inner)}`;
   }).replace(/\\\*\\\*/gu, "**");
 
   const lines = published

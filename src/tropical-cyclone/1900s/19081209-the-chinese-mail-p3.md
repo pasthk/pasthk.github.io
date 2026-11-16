@@ -1,0 +1,15 @@
+---
+title: 天文台報告
+date: 2026-11-16
+dateCreated: "2026-11-16"
+datePublished: "1908-12-09"
+description: 
+excerpted: true
+proofread: false
+---
+
+天文台報告云十五日上午十一句零五十五分鐘風雨表慢升於香港及非臘濱之南畧降於台灣之南颶風在北呂宋島之西已轉向東北吹去　〇報風號經已落下　〇十五日上午十句鐘以前二十四點鐘內本港共得雨四分二厘
+
+<ReferenceBox>
+香港華字日報，1908年12月9日，頁3。
+</ReferenceBox>

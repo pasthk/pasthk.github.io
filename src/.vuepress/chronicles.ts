@@ -1,6 +1,8 @@
 import type { Plugin } from "vuepress/core";
 import { warn } from "vuepress/utils";
 
+import { headingAnchorId } from "./format.js";
+
 /** 編年頁時間軸容器：以純 Markdown 輸入，轉成與 page-index.ts 相同的 DOM */
 const OPEN = "::: timeline";
 const CLOSE = ":::";
@@ -13,13 +15,6 @@ interface TimelineEvent {
   title: string;
   source: string;
 }
-
-/** 與 page-index.ts 的 yearAnchorId 一致：數字開頭的 slug 需補底線 */
-const anchorId = (label: string): string => {
-  const slug = label.trim().replace(/\s+/gu, "-");
-
-  return /^\d/u.test(slug) ? `_${slug}` : slug;
-};
 
 const escapeText = (value: string): string =>
   value
@@ -79,7 +74,7 @@ const renderTimeline = (lines: string[], filePath: string): string => {
       out.push(
         '<section class="browse-year">',
         "",
-        `<h2 id="${escapeText(anchorId(label))}" class="browse-year-title"><span class="browse-year-label">${renderWithNote(label)}</span></h2>`,
+        `<h2 id="${escapeText(headingAnchorId(label))}" class="browse-year-title"><span class="browse-year-label">${renderWithNote(label)}</span></h2>`,
         "",
       );
       continue;

@@ -1,5 +1,6 @@
 import type { App, Page } from "vuepress/core";
 
+import { toIsoTimestamp as toIso } from "./format.js";
 import {
   createdDate,
   isListedPage,
@@ -7,25 +8,6 @@ import {
   pageDataExtras,
   type Frontmatter,
 } from "./page-meta.js";
-
-
-const toIso = (value: unknown): string => {
-  if (value instanceof Date) {
-    return Number.isNaN(value.getTime()) ? "" : value.toISOString();
-  }
-
-  if (typeof value === "number" && Number.isFinite(value)) {
-    const date = new Date(value);
-
-    return Number.isNaN(date.getTime()) ? "" : date.toISOString();
-  }
-
-  if (typeof value !== "string" || !value.trim()) return "";
-
-  const date = new Date(value.trim());
-
-  return Number.isNaN(date.getTime()) ? "" : date.toISOString();
-};
 
 const sourceModifiedTime = (page: Page): string => {
   const frontmatter = page.frontmatter as Frontmatter;

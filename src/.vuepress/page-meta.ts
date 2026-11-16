@@ -1,8 +1,10 @@
 import type { Page } from "vuepress/core";
 
 import {
+  normalizeSpace,
   parseDateValue,
   splitCitation,
+  splitCitationParts,
   stripFrontmatter,
 } from "./format.js";
 import { absoluteUrl } from "./site.js";
@@ -44,14 +46,14 @@ export const pageDataExtras = (data: unknown): PageDataExtras =>
   data as PageDataExtras;
 
 const visibleContentLength = (content: string): number => {
-  const text = stripFrontmatter(content)
-    .replace(/^\s{0,3}#{1,6}\s.*$/gmu, "")
-    .replace(/<[^>]+>/gu, " ")
-    .replace(/!\[[^\]]*\]\([^)]*\)/gu, "")
-    .replace(/\[([^\]]+)\]\([^)]*\)/gu, "$1")
-    .replace(/[*_>`|]/gu, "")
-    .replace(/\s+/gu, " ")
-    .trim();
+  const text = normalizeSpace(
+    stripFrontmatter(content)
+      .replace(/^\s{0,3}#{1,6}\s.*$/gmu, "")
+      .replace(/<[^>]+>/gu, " ")
+      .replace(/!\[[^\]]*\]\([^)]*\)/gu, "")
+      .replace(/\[([^\]]+)\]\([^)]*\)/gu, "$1")
+      .replace(/[*_>`|]/gu, ""),
+  );
 
   return text.length;
 };
@@ -142,12 +144,25 @@ export const replaceReferenceBoxes = (
   );
 
 export const citationOf = (markdown: string): string | undefined => {
-  const text = REFERENCE_BOX.exec(markdown)?.[1]
-    .replace(/<[^>]+>/g, " ")
-    .replace(/\s+/g, " ")
-    .trim();
+  const text = normalizeSpace(
+    REFERENCE_BOX.exec(markdown)?.[1].replace(/<[^>]+>/g, " ") ?? "",
+  );
 
   return text || undefined;
+};
+
+/**
+ * 引用字串的短摘要（`報刊 · 日期 · 版次`），供 OG 卡片第二行使用。
+ * 只有一段時回 undefined，讓卡片改用其他來源（篇數、出版日、description）。
+ */
+export const citationSummary = (markdown: string): string | undefined => {
+  const text = citationOf(markdown);
+
+  if (!text) return undefined;
+
+  const parts = splitCitationParts(text.replace(/。\s*$/u, ""));
+
+  return parts.length > 1 ? parts.join(" · ") : undefined;
 };
 
 interface SourceInfo {
@@ -165,10 +180,7 @@ const sourceOf = (markdown: string): SourceInfo | undefined => {
     .source.replace(/[。.\s]+$/u, "")
     .trim();
 
-  const parts = text
-    .split(/[，,]/u)
-    .map((part) => part.trim())
-    .filter(Boolean);
+  const parts = splitCitationParts(text);
 
   const publication = parts[0]
     ?.replace(/^[「『"《]|["」』》]$/gu, "")
