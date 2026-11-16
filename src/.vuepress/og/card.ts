@@ -1,4 +1,3 @@
-
 /** 輸出 PNG 尺寸；meta.ts 的 og:image:width/height 也由此產生。 */
 export const CARD_WIDTH = 800;
 export const CARD_HEIGHT = 800;

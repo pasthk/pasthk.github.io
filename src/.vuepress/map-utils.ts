@@ -1,3 +1,6 @@
+import { readdir, readFile } from "node:fs/promises";
+import { join } from "node:path";
+
 export const pushTo = <K, V>(map: Map<K, V[]>, key: K, value: V): void => {
   const list = map.get(key);
 
@@ -30,4 +33,36 @@ export const mapInBatches = async <T, R>(
   }
 
   return results;
+};
+
+/** 遞迴收集輸出目錄下指定副檔名的檔案；目錄本身不論名稱都會往下走 */
+export const walkFiles = async (
+  dir: string,
+  extension: string,
+): Promise<string[]> => {
+  const entries = await readdir(dir, { withFileTypes: true });
+  const groups = await Promise.all(
+    entries.map(async (entry): Promise<string[]> => {
+      const full = join(dir, entry.name);
+
+      if (entry.isDirectory()) return walkFiles(full, extension);
+
+      return entry.isFile() && entry.name.endsWith(extension) ? [full] : [];
+    }),
+  );
+
+  return groups.flat();
+};
+
+/** 讀取可選檔案：不存在時回 undefined，其他錯誤照常拋出 */
+export const readOptional = async (
+  path: string,
+): Promise<string | undefined> => {
+  try {
+    return await readFile(path, "utf8");
+  } catch (error) {
+    if ((error as NodeJS.ErrnoException).code === "ENOENT") return undefined;
+
+    throw error;
+  }
 };

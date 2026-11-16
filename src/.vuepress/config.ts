@@ -17,6 +17,7 @@ import { llmsCanonicalPlugin } from "./llms-canonical.js";
 import { pageIndexPlugin } from "./page-index.js";
 import { referenceBoxPlugin } from "./reference-box.js";
 import { relatedDocumentsPlugin } from "./related-documents.js";
+import { searchIndexPlugin } from "./search-index.js";
 import { SITE_NAME, SITE_TAGLINE } from "./site.js";
 import { slimsearchDevWorkerPlugin } from "./slimsearch-dev-worker-plugin.js";
 import { stripUnusedFonts } from "./strip-unused-fonts.js";
@@ -131,6 +132,7 @@ export default defineUserConfig({
     llmsCanonicalPlugin(),
     ogImagePlugin(),
     outputCleanupPlugin(),
+    searchIndexPlugin(),
     breadcrumbPlugin(),
     referenceBoxPlugin(),
     adEligibilityPlugin(),

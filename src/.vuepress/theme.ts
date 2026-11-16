@@ -70,17 +70,19 @@ const cardUrl = (page: Page): string =>
     ? ogImageUrl(hostname, "/")
     : ogImageUrl(hostname, page.path);
 
+/** 麵包屑只取有實際連結的層級（首頁另計，不重複放入） */
+const linkedTrail = (trail: TrailItem[] = []): TrailItem[] =>
+  trail.filter((entry) => entry.link && entry.link !== "/");
+
 function buildBreadcrumb(page: Page, url: string, trail: TrailItem[]) {
   if (page.path === "/" || !page.title) return null;
 
   const items = [
     { name: "首頁", item: `${hostname}/` },
-    ...trail
-      .filter((entry) => entry.link && entry.link !== "/")
-      .map((entry) => ({
-        name: entry.text,
-        item: absoluteUrl(entry.link as string),
-      })),
+    ...linkedTrail(trail).map((entry) => ({
+      name: entry.text,
+      item: absoluteUrl(entry.link as string),
+    })),
     { name: page.title, item: url },
   ];
 
@@ -236,10 +238,7 @@ export default hopeTheme(
           const trails = breadcrumbTrails(app);
           const [dir] = pathSegments(page.path);
           const chapter = chapterOfPath(page.path);
-          const topic = trails
-            .get(page.path)
-            ?.filter((entry) => entry.link && entry.link !== "/")
-            .at(-1)?.text;
+          const topic = linkedTrail(trails.get(page.path)).at(-1)?.text;
           const about = [...new Set([chapter, topic].filter(Boolean))] as string[];
 
           if (about.length) {
@@ -276,7 +275,7 @@ export default hopeTheme(
           );
 
           if (breadcrumb) main.breadcrumb = { "@id": breadcrumb["@id"] };
-          if (collection) main.mainEntity = collection.itemList;
+          if (collection) main.mainEntity = collection;
 
           return {
             "@context": "https://schema.org",

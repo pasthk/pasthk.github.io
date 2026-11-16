@@ -8,23 +8,22 @@ interface Volume {
   file: string;
 }
 
-export const volumeKey = (value: string): string => {
-  let path = value;
+/** 絕對網址只取路徑部分；無法解析時退回原字串，交由 pathSegments 決定 */
+const keyPath = (value: string): string => {
+  if (!/^https?:\/\//u.test(value)) return value;
 
-  if (/^https?:\/\//u.test(path)) {
-    try {
-      path = new URL(path).pathname;
-    } catch {
-    }
+  try {
+    return new URL(value).pathname;
+  } catch {
+    return value;
   }
+};
 
-  const [first] = pathSegments(path);
+export const volumeKey = (value: string): string => {
+  const [first] = pathSegments(keyPath(value));
 
   return first && !first.endsWith(".html") ? first : OVERVIEW_KEY;
 };
-
-const volumeFile = (key: string): string =>
-  `${VOLUME_DIR}/${key}.txt`;
 
 export const volumesFor = (paths: string[]): Volume[] => {
   const keys = new Set(paths.map(volumeKey));
@@ -43,6 +42,6 @@ export const volumesFor = (paths: string[]): Volume[] => {
       key === OVERVIEW_KEY
         ? "總覽與說明"
         : (chapterName(key) ?? key),
-    file: volumeFile(key),
+    file: `${VOLUME_DIR}/${key}.txt`,
   }));
 };

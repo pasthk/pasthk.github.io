@@ -1,9 +1,9 @@
-import { mkdir, readFile, readdir, writeFile } from "node:fs/promises";
+import { mkdir, readFile, writeFile } from "node:fs/promises";
 import { dirname, join } from "node:path";
 import type { App, HeadConfig, Plugin } from "vuepress/core";
 
 import { chapterName } from "./chapters.js";
-import { mapInBatches, pushTo } from "./map-utils.js";
+import { mapInBatches, pushTo, walkFiles } from "./map-utils.js";
 import {
   OVERVIEW_KEY,
   VOLUME_DIR,
@@ -11,7 +11,6 @@ import {
 } from "./llms-volumes.js";
 import { canonicalUrl, isListedPage, isLlmsPage } from "./page-meta.js";
 import { HOSTNAME, SITE_NAME } from "./site.js";
-
 
 const URL_LINE = /^url:[^\n]*(?:\n[ \t]+[^\n]*)?/gm;
 const FRONTMATTER = /^---\n[\s\S]*?\n---\n/u;
@@ -26,21 +25,6 @@ const rewriteUrlLines = (
 
     return canonical ? `url: ${canonical}` : line;
   });
-
-async function markdownFiles(dir: string): Promise<string[]> {
-  const entries = await readdir(dir, { withFileTypes: true });
-  const groups = await Promise.all(
-    entries.map(async (entry): Promise<string[]> => {
-      const full = join(dir, entry.name);
-
-      if (entry.isDirectory()) return markdownFiles(full);
-
-      return entry.isFile() && entry.name.endsWith(".md") ? [full] : [];
-    }),
-  );
-
-  return groups.flat();
-}
 
 const SECTION_START = /^---\nurl: /gmu;
 
@@ -146,7 +130,7 @@ export const llmsCanonicalPlugin = (): Plugin => ({
 
     const dest = dirname(app.dir.dest("llms-full.txt"));
 
-    await mapInBatches(await markdownFiles(dest), async (file) => {
+    await mapInBatches(await walkFiles(dest, ".md"), async (file) => {
       const content = await readFile(file, "utf8");
 
       if (!content.startsWith("---\n")) return;

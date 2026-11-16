@@ -143,7 +143,8 @@ export const replaceReferenceBoxes = (
     format(inner),
   );
 
-export const citationOf = (markdown: string): string | undefined => {
+/** 取出第一個引用框的純文字（僅本模組內部使用：摘要與來源解析共用） */
+const citationOf = (markdown: string): string | undefined => {
   const text = normalizeSpace(
     REFERENCE_BOX.exec(markdown)?.[1].replace(/<[^>]+>/g, " ") ?? "",
   );

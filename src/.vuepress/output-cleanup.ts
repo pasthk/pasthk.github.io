@@ -1,19 +1,8 @@
-import { readdir, readFile, writeFile } from "node:fs/promises";
-import { join } from "node:path";
+import { readFile, writeFile } from "node:fs/promises";
 import type { App, Plugin } from "vuepress/core";
 import { success, warn } from "vuepress/utils";
 
-import { mapInBatches } from "./map-utils.js";
-
-const readOptional = async (path: string): Promise<string | undefined> => {
-  try {
-    return await readFile(path, "utf8");
-  } catch (error) {
-    if ((error as NodeJS.ErrnoException).code === "ENOENT") return undefined;
-
-    throw error;
-  }
-};
+import { mapInBatches, readOptional, walkFiles } from "./map-utils.js";
 
 /**
  * vuepress-theme-hope 的 build 範本會在 <head> 內固定注入兩段程式碼：
@@ -36,23 +25,8 @@ const DARK_INIT_SCRIPT =
 
 const DARK_MODE_ENABLED = /<html[^>]*\sdata-theme="dark"/u;
 
-const htmlFiles = async (dir: string): Promise<string[]> => {
-  const entries = await readdir(dir, { withFileTypes: true });
-  const groups = await Promise.all(
-    entries.map(async (entry): Promise<string[]> => {
-      const full = join(dir, entry.name);
-
-      if (entry.isDirectory()) return htmlFiles(full);
-
-      return entry.name.endsWith(".html") ? [full] : [];
-    }),
-  );
-
-  return groups.flat();
-};
-
 async function stripDarkModeInit(app: App): Promise<void> {
-  const files = await htmlFiles(app.dir.dest());
+  const files = await walkFiles(app.dir.dest(), ".html");
   let stripped = 0;
   const missed: string[] = [];
 

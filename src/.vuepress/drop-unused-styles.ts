@@ -5,7 +5,6 @@ import { fileURLToPath } from "node:url";
 import type { Plugin } from "vite";
 import type { App, Plugin as VuePressPlugin } from "vuepress/core";
 
-
 const SRC_DIR = fileURLToPath(new URL("../", import.meta.url));
 
 const DROP_PATHS = [

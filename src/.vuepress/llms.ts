@@ -119,12 +119,6 @@ ${SITE_NAME}，${HOSTNAME}/archaeology/lei-cheng-uk-han-tomb/19550810-wah-kiu-ya
 - 支持本站：${HOSTNAME}/support.html`;
 }
 
-function brief(description: unknown): string {
-  return typeof description === "string"
-    ? firstClause(description, TOC_CLAUSE_LENGTH)
-    : "";
-}
-
 function provenance(markdown: string, page: Page): string {
   const url = canonicalUrl(page);
   const published = publishedDate(page);
@@ -161,10 +155,14 @@ function provenance(markdown: string, page: Page): string {
 
 function tocLine(page: LLMPage, state: LLMState): string {
   const url = generateLink(page.htmlFilePathRelative, state);
-  const description = brief(page.frontmatter.description);
+  const { description } = page.frontmatter;
+  const brief =
+    typeof description === "string"
+      ? firstClause(description, TOC_CLAUSE_LENGTH)
+      : "";
   const label = page.path === "/" ? "首頁" : page.title;
 
-  return `- [${label}](${url})${description ? `: ${description}` : ""}`;
+  return `- [${label}](${url})${brief ? `: ${brief}` : ""}`;
 }
 
 function buildToc(pages: LLMPage[], state: LLMState): string {

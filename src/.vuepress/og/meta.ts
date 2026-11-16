@@ -1,4 +1,3 @@
-
 import { CARD_HEIGHT, CARD_WIDTH } from "./card.js";
 
 export const socialTags = (

@@ -1,4 +1,3 @@
-
 export function ogFileName(pagePath: string): string {
   const slug = pagePath
     .replace(/^\//, "")

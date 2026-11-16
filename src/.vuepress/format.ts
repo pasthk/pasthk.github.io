@@ -1,4 +1,3 @@
-
 interface DateValue {
   text: string;
   year: string;
@@ -149,7 +148,7 @@ export const splitCitationParts = (text: string): string[] =>
  * 讓 `#_1874年` 這類既有深層連結在虛擬頁與 Markdown 頁之間保持一致。
  */
 export const headingAnchorId = (label: string): string => {
-  const slug = normalizeSpace(label).replace(WHITESPACE, "-");
+  const slug = label.trim().replace(WHITESPACE, "-");
 
   return /^\d/u.test(slug) ? `_${slug}` : slug;
 };

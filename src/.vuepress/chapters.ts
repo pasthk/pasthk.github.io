@@ -63,11 +63,8 @@ export const chapters: Chapter[] = [
 
 const byDir = new Map(chapters.map((chapter) => [chapter.dir, chapter]));
 
-const chapterMeta = (dir: string): Chapter | undefined =>
-  byDir.get(dir);
-
 export const chapterName = (dir: string): string | undefined =>
-  chapterMeta(dir)?.name;
+  byDir.get(dir)?.name;
 
 const segmentCache = new Map<string, string[]>();
 

@@ -26,9 +26,6 @@ import { absoluteUrl, HOSTNAME, SITE_NAME } from "./site.js";
 const PAGE_TITLE = "文獻綜覽";
 const TIMELINE_TITLE = "資料時間軸";
 
-/** 新網址為唯一正式入口；舊網址由 redirect 外掛靜態導向此頁 */
-const INDEX_PATH = TIMELINE_PATH;
-
 interface DatedPage {
   page: Page;
   date: string;
@@ -143,7 +140,7 @@ export const pageIndexPlugin = (): Plugin => ({
   name: "page-index",
 
   async onInitialized(app: App) {
-    if (app.pages.some((item) => item.path === INDEX_PATH)) return;
+    if (app.pages.some((item) => item.path === TIMELINE_PATH)) return;
 
     const stats = siteStats(app.pages as StatsInput[]);
     const { content, pages: listed } = buildContent(app, stats);
@@ -157,19 +154,19 @@ export const pageIndexPlugin = (): Plugin => ({
       url: absoluteUrl(item.path),
     }));
 
-    const url = absoluteUrl(INDEX_PATH);
+    const url = absoluteUrl(TIMELINE_PATH);
     const head = collectionHead({
       url,
       title: PAGE_TITLE,
       description,
-      image: ogImageUrl(HOSTNAME, INDEX_PATH),
+      image: ogImageUrl(HOSTNAME, TIMELINE_PATH),
       items,
       wordCount: visibleLengthOf({ content }),
     });
 
     app.pages.push(
       await createPage(app, {
-        path: INDEX_PATH,
+        path: TIMELINE_PATH,
         content: `${content}\n`,
         frontmatter: {
           title: PAGE_TITLE,

@@ -1,16 +1,16 @@
 /**
- * 搜尋 worker 的預載策略。
+ * 搜尋索引的預載策略。
  *
- * 全文索引較大（約 1.3 MB），但 worker 只在「開啟搜尋」時才建立，不下載就不佔
- * 首屏。這裡分兩層預載：
+ * 索引本身約 3.6 MB 原文（gzip 後約 930 KB），只由 worker 在「開啟搜尋」時
+ * 抓取，不下載就不佔首屏。這裡分兩層預載：
  *   1. 頁面空閒時低優先預載，讓首次搜尋幾乎零等待；
  *   2. hover / focus / touch / 快捷鍵等「即將搜尋」訊號立即補載。
  * 2G 與省流量模式完全不預載，只在真正開啟搜尋時才下載。
  *
- * 這段邏輯原本內聯在每一頁的 <head>，會重複出現在 365 個 HTML 檔；
+ * 這段邏輯原本內聯在每一頁的 <head>，會重複出現在三百多個 HTML 檔；
  * 移入客戶端 bundle 後只下載一次，且可隨 app.js 長期快取。
  */
-const WORKER_URL = "/slimsearch.worker.js";
+const INDEX_URL = "/slimsearch.index.json";
 
 const LOW_BANDWIDTH = /^(slow-)?2g$/u;
 const UNRELIABLE = /^(2g|3g)$/u;
@@ -18,6 +18,9 @@ const UNRELIABLE = /^(2g|3g)$/u;
 export function installSearchPrefetch() {
   /* enhance 在建置期（SSR）也會被呼叫，那裡沒有 navigator / document */
   if (typeof window === "undefined") return;
+
+  /* 開發模式下索引仍內嵌在 worker 檔裡，沒有獨立索引檔可抓 */
+  if (typeof __VUEPRESS_DEV__ !== "undefined" && __VUEPRESS_DEV__) return;
 
   const connection = navigator.connection;
   const effectiveType = connection?.effectiveType ?? "";
@@ -39,7 +42,7 @@ export function installSearchPrefetch() {
     const link = document.createElement("link");
 
     link.rel = "prefetch";
-    link.href = WORKER_URL;
+    link.href = INDEX_URL;
     document.head.appendChild(link);
   };
 

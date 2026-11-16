@@ -11,7 +11,6 @@ import {
 } from "./page-meta.js";
 import { sidebarLinks } from "./sidebar.js";
 
-
 const MAX_SAMPLES = 12;
 
 const sample = (paths: string[]): string =>

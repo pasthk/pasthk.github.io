@@ -10,7 +10,6 @@ import {
 } from "./page-meta.js";
 import { absoluteUrl } from "./site.js";
 
-
 const LINK = /\[([^\]]+)\]\(([^)\s]+?)(?:\s+"[^"]*")?\)/gu;
 
 const MIN_ITEMS = 2;
@@ -86,10 +85,6 @@ export const itemListNode = (
   })),
 });
 
-interface ItemListResult {
-  itemList: Record<string, unknown>;
-}
-
 const titlesCache = new WeakMap<
   App,
   { size: number; titles: Map<string, string> }
@@ -111,7 +106,7 @@ const titlesFor = (app: App): Map<string, string> => {
 export const collectionItems = (
   page: Page,
   app: App,
-): ItemListResult | undefined => {
+): Record<string, unknown> | undefined => {
   if (
     isSourceDocument(page) ||
     !isListedPage(page) ||
@@ -126,13 +121,11 @@ export const collectionItems = (
 
   if (entries.length < MIN_ITEMS) return undefined;
 
-  return {
-    itemList: itemListNode(
-      absoluteUrl(page.path),
-      entries.map(({ path, label }) => ({
-        name: titles.get(path) || label,
-        url: absoluteUrl(path),
-      })),
-    ),
-  };
+  return itemListNode(
+    absoluteUrl(page.path),
+    entries.map(({ path, label }) => ({
+      name: titles.get(path) || label,
+      url: absoluteUrl(path),
+    })),
+  );
 };
