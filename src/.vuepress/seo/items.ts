@@ -1,69 +1,16 @@
-import { posix } from "node:path";
 import type { App, Page } from "vuepress/core";
 
-import { normalizeSpace } from "./format.js";
 import {
   isListedPage,
   isSourceDocument,
   isTimelineIndex,
+  linkEntries,
   pageTitleMap,
-} from "./page-meta.js";
-import { absoluteUrl } from "./site.js";
+} from "../page-meta.js";
+import { absoluteUrl } from "../site.js";
 
-const LINK = /\[([^\]]+)\]\(([^)\s]+?)(?:\s+"[^"]*")?\)/gu;
-
+/** 少於此數的連結視為「不是集合頁」，不輸出 ItemList */
 const MIN_ITEMS = 2;
-
-interface ListEntry {
-  path: string;
-  label: string;
-}
-
-const toPagePath = (href: string, pagePath: string): string | undefined => {
-  const [raw] = href.split("#");
-
-  if (!raw || /^[a-z][a-z\d+.-]*:/iu.test(raw)) return undefined;
-  if (raw.startsWith("//")) return undefined;
-
-  const ext = raw.endsWith(".md")
-    ? ".md"
-    : raw.endsWith(".html")
-      ? ".html"
-      : undefined;
-
-  if (!ext) return undefined;
-
-  const normalized = `${raw.slice(0, -ext.length)}.html`;
-
-  return normalized.startsWith("/")
-    ? posix.normalize(normalized)
-    : posix.normalize(posix.resolve(posix.dirname(pagePath), normalized));
-};
-
-const linkCache = new WeakMap<Page, ListEntry[]>();
-
-export const linkEntries = (page: Page): ListEntry[] => {
-  const cached = linkCache.get(page);
-
-  if (cached) return cached;
-
-  const found: ListEntry[] = [];
-  const seen = new Set<string>([page.path]);
-
-  for (const match of page.content.matchAll(LINK)) {
-    const [, label, href] = match;
-    const path = toPagePath(href, page.path);
-
-    if (!path || seen.has(path)) continue;
-
-    seen.add(path);
-    found.push({ path, label: normalizeSpace(label) });
-  }
-
-  linkCache.set(page, found);
-
-  return found;
-};
 
 export interface ListItem {
   name: string;
@@ -103,6 +50,10 @@ const titlesFor = (app: App): Map<string, string> => {
   return titles;
 };
 
+/**
+ * 由頁面正文的連結推導集合頁的 ItemList。
+ * 只在「可收錄、非史料、非時間軸、非首頁」的頁面成立。
+ */
 export const collectionItems = (
   page: Page,
   app: App,

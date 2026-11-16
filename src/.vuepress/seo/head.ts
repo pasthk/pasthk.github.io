@@ -1,8 +1,9 @@
 import type { HeadConfig } from "vuepress/core";
 
-import { itemListNode, type ListItem } from "./item-list.js";
-import { socialTags } from "./og/meta.js";
-import { AUTHOR_NODE, HOSTNAME, SITE_NAME } from "./site.js";
+import { AUTHOR_NODE, SITE_NAME } from "../site.js";
+import { jsonLdGraph, ORGANIZATION_ID, WEBSITE_ID } from "./graph.js";
+import { itemListNode, type ListItem } from "./items.js";
+import { socialTags } from "./social.js";
 
 interface CollectionMeta {
   url: string;
@@ -14,6 +15,10 @@ interface CollectionMeta {
   wordCount?: number;
 }
 
+/**
+ * 虛擬頁（如文獻綜覽）的完整 head：canonical、JSON-LD 與 OG 標籤。
+ * 與主題逐頁產生的 head 共用同一個圖譜建構器與站級節點。
+ */
 export const collectionHead = ({
   url,
   title,
@@ -31,29 +36,19 @@ export const collectionHead = ({
     ...socialTags(image, title),
   };
 
-  const jsonLd = {
-    "@context": "https://schema.org",
+  const jsonLd = jsonLdGraph({
     "@type": "CollectionPage",
     "@id": `${url}#webpage`,
     url,
     name: title,
     description,
     inLanguage: "zh-Hant",
-    isPartOf: {
-      "@type": "WebSite",
-      "@id": `${HOSTNAME}/#website`,
-      url: `${HOSTNAME}/`,
-      name: SITE_NAME,
-    },
-    publisher: {
-      "@type": "Organization",
-      name: SITE_NAME,
-      url: `${HOSTNAME}/`,
-    },
+    isPartOf: { "@id": WEBSITE_ID },
+    publisher: { "@id": ORGANIZATION_ID },
     author: AUTHOR_NODE,
     ...(wordCount === undefined ? {} : { wordCount }),
     ...(items.length ? { mainEntity: itemListNode(url, items) } : {}),
-  };
+  });
 
   return [
     ["link", { rel: "canonical", href: url }],

@@ -1,26 +1,23 @@
 import { fileURLToPath } from "node:url";
 import { viteBundler } from "@vuepress/bundler-vite";
 import { defineUserConfig } from "vuepress";
-import { adEligibilityPlugin } from "./ad-eligibility.js";
+
 import { breadcrumbPlugin } from "./breadcrumb.js";
-import { chaptersGuardPlugin } from "./chapters.js";
-import { contentGuardPlugin } from "./content-guard.js";
-import {
-  dropUnusedStyles,
-  verifyDroppedStyles,
-} from "./drop-unused-styles.js";
+import { cleanupPlugin } from "./build/cleanup.js";
+import { dropUnusedStyles, verifyDroppedStyles } from "./build/drop-styles.js";
+import { stripUnusedFonts } from "./build/fonts.js";
+import { slimPageDataPlugin } from "./build/page-data.js";
+import { checksPlugin } from "./checks.js";
 import { chroniclesPlugin } from "./chronicles.js";
+import { llms } from "./llms/index.js";
+import { llmsCanonicalPlugin } from "./llms/markdown.js";
 import { ogImagePlugin } from "./og/plugin.js";
-import { outputCleanupPlugin } from "./output-cleanup.js";
-import { llms } from "./llms.js";
-import { llmsCanonicalPlugin } from "./llms-canonical.js";
 import { pageIndexPlugin } from "./page-index.js";
 import { referenceBoxPlugin } from "./reference-box.js";
 import { relatedDocumentsPlugin } from "./related-documents.js";
-import { searchIndexPlugin } from "./search-index.js";
+import { slimsearchDevWorkerPlugin } from "./search/dev-worker.js";
+import { searchIndexPlugin } from "./search/index.js";
 import { SITE_NAME, SITE_TAGLINE } from "./site.js";
-import { slimsearchDevWorkerPlugin } from "./slimsearch-dev-worker-plugin.js";
-import { stripUnusedFonts } from "./strip-unused-fonts.js";
 import theme from "./theme.js";
 
 type AliasEntry = { find: string | RegExp; replacement: string };
@@ -92,6 +89,9 @@ export default defineUserConfig({
       config.plugins ??= [];
       config.plugins.push(slimsearchDevWorkerPlugin());
 
+      /* JSON-LD 與 git 只供建置期使用，客戶端 chunk 不必內嵌 */
+      if (!isServer) config.plugins.push(slimPageDataPlugin());
+
       config.plugins.push(stripUnusedFonts());
 
       config.plugins.push(dropUnusedStyles());
@@ -123,19 +123,17 @@ export default defineUserConfig({
   ],
   theme,
   plugins: [
-    chaptersGuardPlugin(),
-    contentGuardPlugin(),
     chroniclesPlugin(),
     pageIndexPlugin(),
     relatedDocumentsPlugin(),
     llms,
     llmsCanonicalPlugin(),
     ogImagePlugin(),
-    outputCleanupPlugin(),
+    cleanupPlugin(),
     searchIndexPlugin(),
     breadcrumbPlugin(),
     referenceBoxPlugin(),
-    adEligibilityPlugin(),
+    checksPlugin(),
     verifyDroppedStyles(),
   ],
 });

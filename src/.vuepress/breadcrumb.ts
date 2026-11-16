@@ -1,6 +1,7 @@
 import type { App, Plugin } from "vuepress/core";
 
-import { pushTo } from "./map-utils.js";
+import { pushTo } from "./utils.js";
+import { pagePathOfLink } from "./site.js";
 import sidebar from "./sidebar.js";
 
 export interface TrailItem {
@@ -15,15 +16,6 @@ type SidebarNode = {
 };
 
 const HOME: TrailItem = { text: "首頁", link: "/" };
-
-export const pagePathOfLink = (link: string): string => {
-  let path = link.replace(/\.md$/, ".html");
-
-  if (path.endsWith("/README.html")) path = path.slice(0, -"README.html".length);
-  else if (path.endsWith("/index.html")) path = path.slice(0, -"index.html".length);
-
-  return path;
-};
 
 const roots = Object.keys(sidebar).sort((a, b) => b.length - a.length);
 

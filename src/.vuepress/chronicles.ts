@@ -2,6 +2,14 @@ import type { Plugin } from "vuepress/core";
 import { warn } from "vuepress/utils";
 
 import { headingAnchorId } from "./format.js";
+import {
+  TIMELINE_CLOSE,
+  TIMELINE_OPEN,
+  YEAR_CLOSE,
+  YEAR_OPEN,
+  timelineEntry,
+  yearHeading,
+} from "./timeline.js";
 
 /** 編年頁時間軸容器：以純 Markdown 輸入，轉成與 page-index.ts 相同的 DOM */
 const OPEN = "::: timeline";
@@ -47,7 +55,7 @@ const parseEvent = (body: string): TimelineEvent => {
 };
 
 const renderTimeline = (lines: string[], filePath: string): string => {
-  const out = ['<div class="browse-timeline">', ""];
+  const out = [TIMELINE_OPEN, ""];
   const ignored: string[] = [];
   let inYear = false;
   let lastDate = "";
@@ -55,7 +63,7 @@ const renderTimeline = (lines: string[], filePath: string): string => {
   const closeYear = (): void => {
     if (!inYear) return;
 
-    out.push("", "</section>");
+    out.push("", YEAR_CLOSE);
   };
 
   for (const raw of lines) {
@@ -72,9 +80,12 @@ const renderTimeline = (lines: string[], filePath: string): string => {
       lastDate = "";
       inYear = true;
       out.push(
-        '<section class="browse-year">',
+        YEAR_OPEN,
         "",
-        `<h2 id="${escapeText(headingAnchorId(label))}" class="browse-year-title"><span class="browse-year-label">${renderWithNote(label)}</span></h2>`,
+        yearHeading(
+          escapeText(headingAnchorId(label)),
+          renderWithNote(label),
+        ),
         "",
       );
       continue;
@@ -95,21 +106,18 @@ const renderTimeline = (lines: string[], filePath: string): string => {
 
     if (!title) continue;
 
-    /* 同一日期只顯示一次；後續條目不帶日期，標題左緣才會對齊 */
-    const prefix =
-      date && date !== lastDate
-        ? `<span class="browse-timeline-date">${renderWithNote(date)}</span> `
-        : "";
-    const suffix = source
-      ? ` <span class="browse-timeline-source">${source}</span>`
-      : "";
-
-    out.push(`- ${prefix}${title}${suffix}`);
+    out.push(
+      timelineEntry(
+        title,
+        date && date !== lastDate ? renderWithNote(date) : undefined,
+        source || undefined,
+      ),
+    );
     if (date) lastDate = date;
   }
 
   closeYear();
-  out.push("", "</div>");
+  out.push("", TIMELINE_CLOSE);
 
   if (ignored.length)
     warn(

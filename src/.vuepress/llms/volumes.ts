@@ -1,4 +1,4 @@
-import { chapterName, chapters, pathSegments } from "./chapters.js";
+import { chapterName, chapters, pathSegments } from "../chapters.js";
 
 export const VOLUME_DIR = "llms-full";
 export const OVERVIEW_KEY = "overview";

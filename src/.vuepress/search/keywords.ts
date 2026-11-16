@@ -1,7 +1,7 @@
 import type { Page } from "vuepress/core";
 
-import { chapterOfPath } from "./chapters.js";
-import { publishedDate, sourceOfPage } from "./page-meta.js";
+import { chapterOfPath } from "../chapters.js";
+import { publishedDate, sourceOfPage } from "../page-meta.js";
 
 /**
  * 搜尋索引的自訂關鍵詞：章節、報刊、原始出版日與 description。

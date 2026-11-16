@@ -10,7 +10,7 @@ const UPSTREAM_WORKER = "dist/client/worker/dev.js";
 
 export function slimsearchDevWorkerPlugin(): Plugin {
   const shim = fileURLToPath(
-    new URL("./slimsearch-dev-worker.js", import.meta.url),
+    new URL("./dev-worker.shim.js", import.meta.url),
   );
 
   return {

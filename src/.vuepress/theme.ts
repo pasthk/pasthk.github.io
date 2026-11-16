@@ -5,9 +5,6 @@ import navbar from "./navbar.js";
 import sidebar from "./sidebar.js";
 import { breadcrumbTrails, type TrailItem } from "./breadcrumb.js";
 import { chapterOfPath, pathSegments } from "./chapters.js";
-import { collectionItems } from "./item-list.js";
-import { socialTags } from "./og/meta.js";
-import { ogImageUrl } from "./og/paths.js";
 import {
   canonicalUrl,
   createdDate,
@@ -18,8 +15,11 @@ import {
   LEGACY_INDEX_PATH,
   TIMELINE_PATH,
 } from "./page-meta.js";
-import { searchKeywords } from "./search-keywords.js";
-import { tokenizeForIndex } from "./search-tokenize.js";
+import { searchKeywords } from "./search/keywords.js";
+import { tokenizeForIndex } from "./search/tokenize.js";
+import { collectionItems } from "./seo/items.js";
+import { jsonLdGraph, ORGANIZATION_ID, WEBSITE_ID } from "./seo/graph.js";
+import { socialTags } from "./seo/social.js";
 import { sitemapModifiedTime } from "./sitemap.js";
 import {
   absoluteUrl,
@@ -27,43 +27,10 @@ import {
   AUTHOR_NODE,
   AUTHOR_URL,
   HOSTNAME as hostname,
+  ogImageUrl,
   SITE_NAME,
-  SITE_NAME_EN,
   SITE_TAGLINE,
 } from "./site.js";
-
-const ORGANIZATION_ID = `${hostname}/#organization`;
-const WEBSITE_ID = `${hostname}/#website`;
-
-const organization = {
-  "@type": "Organization",
-  "@id": ORGANIZATION_ID,
-  name: SITE_NAME,
-  alternateName: SITE_NAME_EN,
-  url: hostname,
-  logo: {
-    "@type": "ImageObject",
-    url: `${hostname}/favicon.png`,
-    width: 268,
-    height: 268,
-  },
-  email: "pasthk@outlook.com",
-  sameAs: ["https://github.com/pasthk/pasthk.github.io"],
-};
-
-const person = {
-  ...AUTHOR_NODE,
-  email: "pasthk@outlook.com",
-};
-
-const website = {
-  "@type": "WebSite",
-  "@id": WEBSITE_ID,
-  url: `${hostname}/`,
-  name: SITE_NAME,
-  inLanguage: "zh-Hant",
-  publisher: { "@id": ORGANIZATION_ID },
-};
 
 const cardUrl = (page: Page): string =>
   page.frontmatter.sitemap === false
@@ -132,8 +99,8 @@ export default hopeTheme(
         // 只排除 404；其餘頁面（含 noindex 年度索引頁）維持原本的搜尋結果
         filter: (page) => page.path !== "/404.html",
         // 全文檢索：標題、各級標題與整篇史料正文都進索引（主題預設）。
-        // 體積較大但 worker 只在「開啟搜尋」時才建立，且由 config.ts 在
-        // 頁面空閒時低優先預載，不佔首屏關鍵路徑。
+        // 體積較大但 worker 只在「開啟搜尋」時才建立；search-prefetch 亦只在
+        // hover／focus／Ctrl-K 等明確意圖出現時才預抓，不用搜尋的訪客完全不載。
         indexOptions: { tokenize: tokenizeForIndex },
         // 章節／報刊／出版日／description 作為高權重關鍵詞；正文已全文索引，
         // 不再重複塞入摘要，避免雙倍 postings。
@@ -277,16 +244,7 @@ export default hopeTheme(
           if (breadcrumb) main.breadcrumb = { "@id": breadcrumb["@id"] };
           if (collection) main.mainEntity = collection;
 
-          return {
-            "@context": "https://schema.org",
-            "@graph": [
-              main,
-              ...(breadcrumb ? [breadcrumb] : []),
-              organization,
-              person,
-              website,
-            ],
-          } as unknown as typeof jsonLd;
+          return jsonLdGraph(main, [breadcrumb]) as unknown as typeof jsonLd;
         },
       },
       sitemap: {

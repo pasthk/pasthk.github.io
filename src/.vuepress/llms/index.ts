@@ -6,20 +6,20 @@ import {
 } from "@vuepress/plugin-llms";
 import type { Page } from "vuepress/core";
 
-import { chapters, pathSegments } from "./chapters.js";
-import { firstClause, normalizeSpace } from "./format.js";
-import { volumesFor } from "./llms-volumes.js";
-import { pushTo } from "./map-utils.js";
+import { chapters, pathSegments } from "../chapters.js";
+import { firstClause, normalizeSpace } from "../format.js";
+import { volumesFor } from "./volumes.js";
+import { pushTo } from "../utils.js";
 import {
   canonicalUrl,
   isLlmsPage,
   publishedDate,
   replaceReferenceBoxes,
   TIMELINE_PATH,
-} from "./page-meta.js";
-import { relatedMarkdown } from "./related-documents.js";
-import { describeSite, siteStats, type StatsInput } from "./site-stats.js";
-import { HOSTNAME, SITE_NAME } from "./site.js";
+} from "../page-meta.js";
+import { relatedMarkdown } from "../related-documents.js";
+import { describeSite, siteStats, type StatsInput } from "../site-stats.js";
+import { HOSTNAME, SITE_NAME } from "../site.js";
 
 const SUMMARY = `> 以歷史事件為核心的香港文獻索引。轉錄十九世紀後期至二十世紀的香港舊報紙、政府公報、調查報告與研究論著原文，按事件集中編排，每篇保留報刊名稱、日期、版次與頁碼，可直接引用。
 >

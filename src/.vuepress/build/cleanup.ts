@@ -1,8 +1,9 @@
-import { readFile, writeFile } from "node:fs/promises";
+import { writeFile } from "node:fs/promises";
 import type { App, Plugin } from "vuepress/core";
 import { success, warn } from "vuepress/utils";
 
-import { mapInBatches, readOptional, walkFiles } from "./map-utils.js";
+import { readOptional } from "../utils.js";
+import { rewriteHtmlFiles } from "./html.js";
 
 /**
  * vuepress-theme-hope 的 build 範本會在 <head> 內固定注入兩段程式碼：
@@ -26,32 +27,27 @@ const DARK_INIT_SCRIPT =
 const DARK_MODE_ENABLED = /<html[^>]*\sdata-theme="dark"/u;
 
 async function stripDarkModeInit(app: App): Promise<void> {
-  const files = await walkFiles(app.dir.dest(), ".html");
-  let stripped = 0;
   const missed: string[] = [];
 
-  await mapInBatches(files, async (file) => {
-    const html = await readFile(file, "utf8");
-
+  const stripped = await rewriteHtmlFiles(app, (html, file) => {
     /* 深色模式已啟用：保留範本注入的初始化邏輯 */
-    if (DARK_MODE_ENABLED.test(html)) return;
+    if (DARK_MODE_ENABLED.test(html)) return undefined;
 
     const next = html.replace(DARK_STYLE, "").replace(DARK_INIT_SCRIPT, "");
 
     if (next === html) {
       if (html.includes("vuepress-theme-hope-scheme")) missed.push(file);
 
-      return;
+      return undefined;
     }
 
-    await writeFile(file, next, "utf8");
-    stripped += 1;
+    return next;
   });
 
   if (missed.length) {
     warn(
       `有 ${missed.length} 頁仍含主題注入的深色模式腳本，但格式與預期不同，未剝除。` +
-        `請更新 output-cleanup.ts 的 DARK_STYLE／DARK_INIT_SCRIPT（例：${missed[0]}）。`,
+        `請更新 build/cleanup.ts 的 DARK_STYLE／DARK_INIT_SCRIPT（例：${missed[0]}）。`,
     );
   }
 
@@ -60,7 +56,7 @@ async function stripDarkModeInit(app: App): Promise<void> {
   }
 }
 
-export const outputCleanupPlugin = (): Plugin => ({
+export const cleanupPlugin = (): Plugin => ({
   name: "output-cleanup",
 
   async onGenerated(app: App): Promise<void> {

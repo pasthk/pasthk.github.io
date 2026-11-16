@@ -1,13 +1,11 @@
 import { createPage, type App, type Page, type Plugin } from "vuepress/core";
 
-import { collectionHead } from "./collection-head.js";
 import {
   dateOrderOf,
   formatMonthDay,
   headingAnchorId,
   parseDateValue,
 } from "./format.js";
-import { ogImageUrl } from "./og/paths.js";
 import {
   isIndexablePage,
   publishedDate,
@@ -15,13 +13,22 @@ import {
   visibleLengthOf,
   TIMELINE_PATH,
 } from "./page-meta.js";
+import { collectionHead } from "./seo/head.js";
+import { absoluteUrl, HOSTNAME, ogImageUrl, SITE_NAME } from "./site.js";
 import {
   describeSite,
   siteStats,
   type SiteStats,
   type StatsInput,
 } from "./site-stats.js";
-import { absoluteUrl, HOSTNAME, SITE_NAME } from "./site.js";
+import {
+  TIMELINE_CLOSE,
+  TIMELINE_OPEN,
+  YEAR_CLOSE,
+  YEAR_OPEN,
+  timelineEntry,
+  yearHeading,
+} from "./timeline.js";
 
 const PAGE_TITLE = "文獻綜覽";
 const TIMELINE_TITLE = "資料時間軸";
@@ -39,58 +46,41 @@ const sourceLabel = (page: Page): string | undefined =>
   sourceOfPage(page)?.publication;
 
 /**
- * 日期放在條目最前，由 CSS 定位到軸線左側。
- * 同一日期只輸出一次；後續條目不帶日期，形成同一天的分組。
- */
-const timelineLine = (page: Page, dateLabel?: string): string => {
-  const prefix = dateLabel
-    ? `<span class="browse-timeline-date">${dateLabel}</span> `
-    : "";
-  const source = sourceLabel(page);
-  const suffix = source
-    ? ` <span class="browse-timeline-source">${source}</span>`
-    : "";
-
-  return `- ${prefix}[${page.title}](${page.path})${suffix}`;
-};
-
-/**
  * 整頁共用一條軸線；年份為實心節點，其下條目為空心圓點。
  * 每個年份各自包在 section 內，貼頂的年份標題才會被下一節推走、隨捲動切換。
  */
 const timelineMarkdown = (dated: DatedPage[]): string => {
-  const lines = ['<div class="browse-timeline">', ""];
+  const lines = [TIMELINE_OPEN, ""];
   let year = "";
   let lastDate = "";
 
   for (const entry of dated) {
     if (entry.year !== year) {
-      if (year) lines.push("", "</section>", "");
+      if (year) lines.push("", YEAR_CLOSE, "");
       year = entry.year;
       /* 年份已由分組標題呈現，日期只留月日；換節後第一條必定顯示日期 */
       lastDate = "";
       /* 年份標題為純文字（無錨點連結），但保留 id 供深層連結定位 */
       const label = `${year}年`;
 
-      lines.push(
-        '<section class="browse-year">',
-        "",
-        `<h2 id="${headingAnchorId(label)}" class="browse-year-title"><span class="browse-year-label">${label}</span></h2>`,
-        "",
-      );
+      lines.push(YEAR_OPEN, "", yearHeading(headingAnchorId(label), label), "");
     }
 
     const dateLabel = formatMonthDay(entry.date);
 
     lines.push(
-      timelineLine(entry.page, dateLabel === lastDate ? undefined : dateLabel),
+      timelineEntry(
+        `[${entry.page.title}](${entry.page.path})`,
+        dateLabel === lastDate ? undefined : dateLabel,
+        sourceLabel(entry.page),
+      ),
     );
     lastDate = dateLabel;
   }
 
-  if (year) lines.push("", "</section>");
+  if (year) lines.push("", YEAR_CLOSE);
 
-  lines.push("", "</div>");
+  lines.push("", TIMELINE_CLOSE);
 
   return lines.join("\n");
 };

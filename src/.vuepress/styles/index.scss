@@ -237,12 +237,28 @@ body {
   margin: 0 auto 1.25rem;
 }
 
+/* 廣告腳本被攔截或未填充：收起整個廣告位（含「廣告」標籤），不留空白帶。
+   由 AdTop.vue 在填充失敗後加上，填充成功的廣告不受影響。 */
+.ad-top-wrap.ad-top-collapsed {
+  display: none;
+}
+
+/* 廣告由 AdSense 非同步填充，先依容器寬度預留高度，避免填充瞬間把正文推開（CLS）。
+   窄屏用 3:1 隨寬縮放；寬屏的響應式橫幅高度多為 90–100px，改用固定下限，
+   以免 780px 寬的內容欄被 3:1 撐到 260px 而長期留白。 */
 .ad-top {
   margin: 0;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
+  aspect-ratio: 3 / 1;
+  min-height: 90px;
+
+  @media (min-width: 720px) {
+    aspect-ratio: auto;
+    min-height: 100px;
+  }
 }
 
 .ad-top > ins.adsbygoogle {

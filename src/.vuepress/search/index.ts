@@ -3,7 +3,7 @@ import { inflateSync } from "node:zlib";
 import type { App, Plugin } from "vuepress/core";
 import { success, warn } from "vuepress/utils";
 
-import { readOptional } from "./map-utils.js";
+import { readOptional } from "../utils.js";
 
 /**
  * 把搜尋索引從 worker 檔裡拆出來。

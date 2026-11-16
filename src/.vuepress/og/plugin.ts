@@ -7,15 +7,14 @@ import { success, warn } from "vuepress/utils";
 
 import { chapterOfPath, pathSegments } from "../chapters.js";
 import { firstClause, normalizeSpace } from "../format.js";
-import { mapInBatches } from "../map-utils.js";
+import { mapInBatches } from "../utils.js";
 import { citationSummary } from "../page-meta.js";
-import { HOST, SITE_NAME, SITE_NAME_EN } from "../site.js";
+import { HOST, ogFileName, SITE_NAME, SITE_NAME_EN } from "../site.js";
 import {
   buildCardSvg,
   CARD_FONT_FAMILY,
   type CardContent,
 } from "./card.js";
-import { ogFileName } from "./paths.js";
 
 const HOME_CARD_META = "香港歷史文獻索引";
 

@@ -1,3 +1,4 @@
+import { posix } from "node:path";
 import type { Page } from "vuepress/core";
 
 import {
@@ -129,6 +130,71 @@ export const visibleLengthOf = (page: PageLike): number => {
 
   return length;
 };
+
+/* ---- 頁面內容解析：連結抽取 ---- */
+
+/** Markdown 行內連結：`[標籤](目標 "可選標題")` */
+const LINK = /\[([^\]]+)\]\(([^)\s]+?)(?:\s+"[^"]*")?\)/gu;
+
+export interface PageLink {
+  path: string;
+  label: string;
+}
+
+/** 把正文連結正規化為頁面路徑；外部連結、錨點與非 .md／.html 目標一律略過 */
+const toPagePath = (href: string, pagePath: string): string | undefined => {
+  const [raw] = href.split("#");
+
+  if (!raw || /^[a-z][a-z\d+.-]*:/iu.test(raw)) return undefined;
+  if (raw.startsWith("//")) return undefined;
+
+  const ext = raw.endsWith(".md")
+    ? ".md"
+    : raw.endsWith(".html")
+      ? ".html"
+      : undefined;
+
+  if (!ext) return undefined;
+
+  const normalized = `${raw.slice(0, -ext.length)}.html`;
+
+  return normalized.startsWith("/")
+    ? posix.normalize(normalized)
+    : posix.normalize(posix.resolve(posix.dirname(pagePath), normalized));
+};
+
+const linkCache = new WeakMap<object, PageLink[]>();
+
+/**
+ * 頁面正文中指向其他頁面的連結（去重、保持出現順序）。
+ * 集合頁的 ItemList、薄內容判斷與死鏈檢查共用同一份結果。
+ */
+export const linkEntries = (page: PageLike): PageLink[] => {
+  const key = page as object;
+  const cached = linkCache.get(key);
+
+  if (cached) return cached;
+
+  const pagePath = page.path ?? "/";
+  const found: PageLink[] = [];
+  const seen = new Set<string>([pagePath]);
+
+  for (const match of (page.content ?? "").matchAll(LINK)) {
+    const [, label, href] = match;
+    const path = toPagePath(href, pagePath);
+
+    if (!path || seen.has(path)) continue;
+
+    seen.add(path);
+    found.push({ path, label: normalizeSpace(label) });
+  }
+
+  linkCache.set(key, found);
+
+  return found;
+};
+
+/* ---- 頁面內容解析：引用框 ---- */
 
 const REFERENCE_BOX = /<ReferenceBox>([\s\S]*?)<\/ReferenceBox>/u;
 

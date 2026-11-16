@@ -1,16 +1,18 @@
 import { mkdir, readFile, writeFile } from "node:fs/promises";
-import { dirname, join } from "node:path";
-import type { App, HeadConfig, Plugin } from "vuepress/core";
+import { dirname, join, relative, sep } from "node:path";
+import type { App, Plugin } from "vuepress/core";
+import { success } from "vuepress/utils";
 
-import { chapterName } from "./chapters.js";
-import { mapInBatches, pushTo, walkFiles } from "./map-utils.js";
+import { chapterName } from "../chapters.js";
+import { insertBeforeHeadClose } from "../build/html.js";
+import { mapInBatches, pushTo, readOptional, walkFiles } from "../utils.js";
 import {
   OVERVIEW_KEY,
   VOLUME_DIR,
   volumeKey,
-} from "./llms-volumes.js";
-import { canonicalUrl, isListedPage, isLlmsPage } from "./page-meta.js";
-import { HOSTNAME, SITE_NAME } from "./site.js";
+} from "./volumes.js";
+import { canonicalUrl, isListedPage } from "../page-meta.js";
+import { HOSTNAME, SITE_NAME } from "../site.js";
 
 const URL_LINE = /^url:[^\n]*(?:\n[ \t]+[^\n]*)?/gm;
 const FRONTMATTER = /^---\n[\s\S]*?\n---\n/u;
@@ -74,35 +76,35 @@ async function writeVolumes(dest: string, full: string): Promise<void> {
   });
 }
 
+/**
+ * 把 Markdown 鏡像的 alternate 連結補進 HTML 的 <head>。
+ *
+ * 原先是 onInitialized 把 link 推進 page.frontmatter.head，代價是這條只有
+ * 爬蟲會讀的連結被內嵌進每頁的客戶端 chunk（page data 的 head 欄位）。
+ * 改在輸出階段補上：page data 保持乾淨，HTML 結果與原本一致。
+ */
+const alternateLink = (href: string): string =>
+  `<link rel="alternate" type="text/markdown" href="${href}">`;
+
+async function addAlternateLink(
+  htmlPath: string,
+  href: string,
+): Promise<boolean> {
+  const html = await readOptional(htmlPath);
+
+  if (html === undefined || html.includes(`href="${href}"`)) return false;
+
+  const next = insertBeforeHeadClose(html, alternateLink(href));
+
+  if (next === undefined) return false;
+
+  await writeFile(htmlPath, next, "utf8");
+
+  return true;
+}
+
 export const llmsCanonicalPlugin = (): Plugin => ({
   name: "llms-canonical",
-
-  onInitialized(app: App): void {
-    for (const page of app.pages) {
-      if (!isLlmsPage(page)) continue;
-
-      const html = page.htmlFilePathRelative;
-
-      if (!html) continue;
-
-      const href = `/${html.replace(/\.html$/u, ".md")}`;
-      const head = (page.frontmatter.head ??= []) as HeadConfig[];
-
-      if (
-        head.some(
-          (item) =>
-            item[0] === "link" &&
-            (item[1] as Record<string, string>)?.href === href,
-        )
-      )
-        continue;
-
-      head.push([
-        "link",
-        { rel: "alternate", type: "text/markdown", href },
-      ]);
-    }
-  },
 
   async onGenerated(app: App): Promise<void> {
     const canonicals = new Map<string, string>();
@@ -129,8 +131,16 @@ export const llmsCanonicalPlugin = (): Plugin => ({
     };
 
     const dest = dirname(app.dir.dest("llms-full.txt"));
+    let linked = 0;
 
+    /* 每個 .md 鏡像都有一個同名的 .html，逐頁補上 alternate 連結 */
     await mapInBatches(await walkFiles(dest, ".md"), async (file) => {
+      const href = `/${relative(dest, file).split(sep).join("/")}`;
+
+      if (await addAlternateLink(file.replace(/\.md$/u, ".html"), href)) {
+        linked += 1;
+      }
+
       const content = await readFile(file, "utf8");
 
       if (!content.startsWith("---\n")) return;
@@ -141,6 +151,8 @@ export const llmsCanonicalPlugin = (): Plugin => ({
 
       if (next !== content) await writeFile(file, next, "utf8");
     });
+
+    if (linked) success(`已在 ${linked} 頁補上 Markdown 鏡像的 alternate 連結`);
 
     const fullPath = app.dir.dest("llms-full.txt");
     const full = await readFile(fullPath, "utf8");

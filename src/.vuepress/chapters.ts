@@ -1,7 +1,9 @@
-import { readdirSync } from "node:fs";
-import type { App, Plugin } from "vuepress/core";
-import { warn } from "vuepress/utils";
-
+/**
+ * 章節登記表：頂層目錄 → 對外名稱與說明。
+ *
+ * 這裡只放資料與查詢。目錄是否齊全的建置期檢查在 checks.ts，
+ * 讓「資料」與「守衛」分開，新增章節不必改動任何程式碼。
+ */
 interface Chapter {
   dir: string;
   name: string;
@@ -83,39 +85,3 @@ export const pathSegments = (path: string): string[] => {
 
 export const chapterOfPath = (path: string): string | undefined =>
   chapterName(pathSegments(path)[0] ?? "");
-
-export const chaptersGuardPlugin = (): Plugin => ({
-  name: "chapters-guard",
-
-  onInitialized(app: App): void {
-    const actual = readdirSync(app.dir.source(), { withFileTypes: true })
-      .filter((entry) => entry.isDirectory() && !entry.name.startsWith("."))
-      .map((entry) => entry.name);
-
-    const unlisted = actual.filter((dir) => !byDir.has(dir));
-    const missing = chapters
-      .map((chapter) => chapter.dir)
-      .filter((dir) => !actual.includes(dir));
-    const duplicated = chapters
-      .map((chapter) => chapter.dir)
-      .filter((dir, index, all) => all.indexOf(dir) !== index);
-
-    if (unlisted.length) {
-      warn(
-        `chapters.ts 未登記這些頂層目錄：${unlisted.join("、")}。` +
-          `它們會以目錄名出現在 llms.txt 與分冊檔頭，OG 卡也沒有章節標籤。`,
-      );
-    }
-
-    if (missing.length) {
-      warn(
-        `chapters.ts 登記了不存在的目錄：${missing.join("、")}。` +
-          `對外文案的章節數會多算。`,
-      );
-    }
-
-    if (duplicated.length) {
-      warn(`chapters.ts 有重複的 dir：${duplicated.join("、")}，後者會被忽略。`);
-    }
-  },
-});

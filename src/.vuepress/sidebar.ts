@@ -1,6 +1,6 @@
 import { sidebar } from "vuepress-theme-hope";
 
-import { pushTo } from "./map-utils.js";
+import { pushTo } from "./utils.js";
 
 const signalYears = [
   1897,

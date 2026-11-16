@@ -5,6 +5,8 @@ sitemap: false
 llmstxt: false
 index: false
 pageInfo: false
+next: false
+prev: false
 toc: false
 head:
   - - meta

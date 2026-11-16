@@ -1,5 +1,9 @@
-import { CARD_HEIGHT, CARD_WIDTH } from "./card.js";
+import { CARD_HEIGHT, CARD_WIDTH } from "../og/card.js";
 
+/**
+ * OG／Twitter 卡片標籤。逐頁 head（theme）與虛擬頁 head（collectionHead）
+ * 共用同一份尺寸宣告，避免卡片比例與 og/card.ts 的實際畫布脫節。
+ */
 export const socialTags = (
   image: string,
   alt: string,

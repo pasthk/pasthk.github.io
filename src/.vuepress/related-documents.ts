@@ -2,7 +2,7 @@ import type { App, Page, Plugin } from "vuepress/core";
 
 import { chapterName, pathSegments } from "./chapters.js";
 import { dateOrder } from "./format.js";
-import { pushTo } from "./map-utils.js";
+import { pushTo } from "./utils.js";
 import {
   isIndexablePage,
   isSourceDocument,
