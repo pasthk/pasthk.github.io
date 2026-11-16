@@ -1,6 +1,15 @@
 
-export const CARD_WIDTH = 1200;
-export const CARD_HEIGHT = 1200;
+/** 輸出 PNG 尺寸；meta.ts 的 og:image:width/height 也由此產生。 */
+export const CARD_WIDTH = 800;
+export const CARD_HEIGHT = 800;
+
+/**
+ * 設計座標系：版面所有座標、字級與邊距皆以 1200×1200 為基準，
+ * 由 SVG viewBox 等比縮放到輸出尺寸。調整輸出大小時不需重排文字，
+ * 也不會讓頁尾／分隔線被裁切。
+ */
+const DESIGN_WIDTH = 1200;
+const DESIGN_HEIGHT = 1200;
 
 export const CARD_FONT_FAMILY = "Noto Serif TC ExtraLight";
 
@@ -14,7 +23,7 @@ const COLOR = {
 
 const PAD_LEFT = 96;
 const PAD_RIGHT = 96;
-const CONTENT_WIDTH = CARD_WIDTH - PAD_LEFT - PAD_RIGHT;
+const CONTENT_WIDTH = DESIGN_WIDTH - PAD_LEFT - PAD_RIGHT;
 
 const WRAP_WIDTH = CONTENT_WIDTH * 0.9;
 
@@ -212,7 +221,7 @@ export function buildCardSvg({
 
   const sectionMarkup = section
     ? draw(section, {
-        x: CARD_WIDTH - PAD_RIGHT,
+        x: DESIGN_WIDTH - PAD_RIGHT,
         y: 98,
         size: 26,
         fill: COLOR.muted,
@@ -254,7 +263,7 @@ export function buildCardSvg({
   });
 
   const taglineMarkup = draw("認識香港，從文獻開始", {
-    x: CARD_WIDTH - PAD_RIGHT,
+    x: DESIGN_WIDTH - PAD_RIGHT,
     y: 1130,
     size: 24,
     fill: COLOR.muted,
@@ -264,16 +273,16 @@ export function buildCardSvg({
 
   const accessibleTitle = escapeXml(meta ? `${title} — ${meta}` : title);
 
-  return `<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="${CARD_WIDTH}" height="${CARD_HEIGHT}" viewBox="0 0 ${CARD_WIDTH} ${CARD_HEIGHT}" role="img" aria-label="${accessibleTitle}">
+  return `<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="${CARD_WIDTH}" height="${CARD_HEIGHT}" viewBox="0 0 ${DESIGN_WIDTH} ${DESIGN_HEIGHT}" role="img" aria-label="${accessibleTitle}">
 <title>${accessibleTitle}</title>
-<rect width="${CARD_WIDTH}" height="${CARD_HEIGHT}" fill="${COLOR.bg}"/>
-<rect x="0" y="0" width="14" height="${CARD_HEIGHT}" fill="${COLOR.accent}"/>
+<rect width="${DESIGN_WIDTH}" height="${DESIGN_HEIGHT}" fill="${COLOR.bg}"/>
+<rect x="0" y="0" width="14" height="${DESIGN_HEIGHT}" fill="${COLOR.accent}"/>
 ${headerMarkup}
 ${sectionMarkup}
-<line x1="${PAD_LEFT}" y1="132" x2="${CARD_WIDTH - PAD_RIGHT}" y2="132" stroke="${COLOR.rule}" stroke-width="1.5"/>
+<line x1="${PAD_LEFT}" y1="132" x2="${DESIGN_WIDTH - PAD_RIGHT}" y2="132" stroke="${COLOR.rule}" stroke-width="1.5"/>
 ${titleMarkup}
 ${metaMarkup}
-<line x1="${PAD_LEFT}" y1="1080" x2="${CARD_WIDTH - PAD_RIGHT}" y2="1080" stroke="${COLOR.rule}" stroke-width="1.5"/>
+<line x1="${PAD_LEFT}" y1="1080" x2="${DESIGN_WIDTH - PAD_RIGHT}" y2="1080" stroke="${COLOR.rule}" stroke-width="1.5"/>
 ${footerMarkup}
 ${taglineMarkup}
 </svg>`;
