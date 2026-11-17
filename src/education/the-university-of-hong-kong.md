@@ -2,9 +2,13 @@
 title: 香港大學
 date: 2026-09-13
 description: 香港大學校史文獻索引，收錄1908年至1960年《香港華字日報》《工商日報》《華僑日報》等40篇報道，按籌辦事宜、中文部及校務發展分編。
+pageInfo: false
 ---
 
-## 籌辦事宜
+## 香港醫學堂
+1. 〈[學醫須知](./the-university-of-hong-kong/19091022-the-chinese-mail-p3.md)〉，《香港華字日報》，1909年10月22日，頁3。
+
+## 籌辦香港大學堂
 ### 新聞報道
 1. 〈[擬創設香港大學堂](./the-university-of-hong-kong/19080912-the-chinese-mail-p3.md)〉，《香港華字日報》，1908年9月12日，頁3。
 2. 〈[港督盧制軍香港大學勸捐啟](./the-university-of-hong-kong/19090216-the-chinese-mail-p3.md)〉，《香港華字日報》，1909年2月16日，頁3。

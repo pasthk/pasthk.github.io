@@ -69,11 +69,11 @@ const timelineMarkdown = (dated: DatedPage[]): string => {
     const dateLabel = formatMonthDay(entry.date);
 
     lines.push(
-      timelineEntry(
-        `[${entry.page.title}](${entry.page.path})`,
-        dateLabel === lastDate ? undefined : dateLabel,
-        sourceLabel(entry.page),
-      ),
+      timelineEntry({
+        title: `[${entry.page.title}](${entry.page.path})`,
+        date: dateLabel === lastDate ? undefined : dateLabel,
+        source: sourceLabel(entry.page),
+      }),
     );
     lastDate = dateLabel;
   }

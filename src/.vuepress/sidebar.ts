@@ -5,7 +5,7 @@ import { pushTo } from "./utils.js";
 const signalYears = [
   1897,
   1901, 1902, 1904, 1905, 1906, 1907, 1908, 1909,
-  1918, 1919,
+  1910, 1918, 1919,
   1924, 1926, 1927, 1928,
   1930, 1931, 1932, 1935,
   1946, 1947, 1948, 1949,
@@ -51,6 +51,7 @@ const sidebarConfig: Record<string, SidebarNode[]> = {
         "/archaeology/hong-kong-archaeological-survey-1997-1998.md",
       ]),
       group("新石器時代", [
+        "/archaeology/shek-pik-tung-wan-site.md",
         "/archaeology/sha-ha-site.md",
         "/archaeology/lung-kwu-chau-site.md",
         "/archaeology/lung-kwu-tan-site.md",

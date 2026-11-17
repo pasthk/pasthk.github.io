@@ -18,8 +18,16 @@ const YEAR_HEADING = /^#{2,4}\s+(.+?)\s*#*\s*$/u;
 const EVENT_ITEM = /^[-*]\s+(.+)$/u;
 const FENCE = /^(`{3,}|~{3,})/u;
 
+/**
+ * 日期欄的區間分隔符。事件若持續一段時間，起訖日期之間用波浪線或箭頭隔開
+ * （`1946年4月3日 ~ 1950年1月5日`）。只認這幾種符號，避免正文裡的破折號、
+ * 「至」字被誤判成日期區間。
+ */
+const RANGE_SEP = /\s*(?:~|～|→)\s*/u;
+
 interface TimelineEvent {
   date: string;
+  endDate: string;
   title: string;
   source: string;
 }
@@ -47,16 +55,19 @@ const parseEvent = (body: string): TimelineEvent => {
   const parts = body.split("|").map((part) => part.trim());
 
   if (parts.length === 1)
-    return { date: "", title: parts[0], source: "" };
-  if (parts.length === 2)
-    return { date: parts[0], title: parts[1], source: "" };
+    return { date: "", endDate: "", title: parts[0], source: "" };
 
-  return { date: parts[0], title: parts[1], source: parts.slice(2).join(" | ") };
+  const [date, endDate = ""] = parts[0].split(RANGE_SEP);
+  const title = parts[1] ?? "";
+  const source = parts.length > 2 ? parts.slice(2).join(" | ") : "";
+
+  return { date: date.trim(), endDate: endDate.trim(), title, source };
 };
 
 const renderTimeline = (lines: string[], filePath: string): string => {
   const out = [TIMELINE_OPEN, ""];
   const ignored: string[] = [];
+  const badRange: string[] = [];
   let inYear = false;
   let lastDate = "";
 
@@ -102,17 +113,27 @@ const renderTimeline = (lines: string[], filePath: string): string => {
 
     if (!inYear) continue;
 
-    const { date, title, source } = parseEvent(item[1]);
+    const { date, endDate, title, source } = parseEvent(item[1]);
 
     if (!title) continue;
 
+    /* 起日與上一條相同（或本來就沒寫）時省略，日期欄只留「至 結束日期」；
+       單點事件沿用「同一日期只顯示一次」 */
+    const showStart = Boolean(date) && date !== lastDate;
+    /* 起日省略、上一條又沒有日期，跨期無從參照，退回無日期條目 */
+    const dangling = Boolean(endDate) && !date && !lastDate;
+
+    if (dangling) badRange.push(item[1]);
+
     out.push(
-      timelineEntry(
+      timelineEntry({
         title,
-        date && date !== lastDate ? renderWithNote(date) : undefined,
-        source || undefined,
-      ),
+        date: showStart ? renderWithNote(date) : undefined,
+        endDate: endDate && !dangling ? renderWithNote(endDate) : undefined,
+        source: source || undefined,
+      }),
     );
+
     if (date) lastDate = date;
   }
 
@@ -122,6 +143,11 @@ const renderTimeline = (lines: string[], filePath: string): string => {
   if (ignored.length)
     warn(
       `chronicles：${filePath || "頁面"} 的 ::: timeline 內有 ${ignored.length} 行不是年份標題或事件清單，已忽略（例：${ignored[0]}）。請移到容器外。`,
+    );
+
+  if (badRange.length)
+    warn(
+      `chronicles：${filePath || "頁面"} 有 ${badRange.length} 條跨期事件省略了起始日期，但上一條也沒有日期，無從參照，已按無日期處理（例：${badRange[0]}）。請補上起始日期。`,
     );
 
   return out.join("\n");

@@ -418,6 +418,43 @@ body {
   opacity: 0.75;
 }
 
+/* 跨期事件（有起訖日期）：日期欄由單行擴為兩行 —— 起始日期在上，
+   「至 + 結束日期」在下，兩行都右對齊貼近軸線，仍是「起 至 止」一組。
+   行高收緊，避免兩行把條目拉得比實際內容高太多。 */
+.browse-timeline-date.browse-timeline-range {
+  line-height: 1.5;
+}
+
+.browse-timeline-range > .browse-range-start,
+.browse-timeline-range > .browse-range-end {
+  display: block;
+}
+
+/* 連接詞縮小並降低對比，讓兩端日期成為視覺主體；與結束日期之間留足
+   間距（間距用 rem 而非 em，才不會跟著縮小的字號一起變窄）。
+   字號用 em：0.85em 讓「至」與日期文字維持固定比例。基準是日期欄字號，
+   而日期欄在桌面與窄屏皆繼承條目正文字號（未分斷點調整），故橫豎屏
+   算出的像素值相同；窄屏不再另設字號，共用此值。
+   注意「至」嵌在 .browse-range-end 之內，故用後代選擇器而非 >。 */
+.browse-timeline-range .browse-range-sep {
+  margin-right: 0.5rem;
+  font-size: 0.85em;
+  opacity: 0.55;
+}
+
+/* 跨期事件的軸線節點由空心圓點改為短豎條，示意事件持續一段時間。
+   以 :has() 判斷；不支援的瀏覽器退回圓點，資訊仍完整表達於日期欄。 */
+@supports selector(:has(*)) {
+  .browse-timeline li:has(.browse-timeline-range)::before {
+    width: 3px;
+    height: 1.25rem;
+    border: 0;
+    border-radius: 1px;
+    background: var(--vp-c-text-mute, #888);
+    opacity: 0.7;
+  }
+}
+
 @media (max-width: 719px) {
   .browse-timeline {
     --browse-mobile-date-width: 5rem;
@@ -453,5 +490,32 @@ body {
     width: auto;
     margin-left: 0;
     text-align: start;
+  }
+
+  /* 窄屏日期欄僅 5rem，放不下「1928年10月」這類跨年寫法（會被拆成兩行、
+     「至」字擠成一團）。跨期條目改為「起 至 止」獨占一行、落在標題之前：
+     取消浮動並改回 block，再以負 margin 抵銷日期欄內距，讓這一行從軸線
+     右側起排；標題仍留在原內距，與上下條目的標題左緣對齊。
+     不支援 :has() 時退回桌上版的兩行日期欄。 */
+  @supports selector(:has(*)) {
+    .browse-timeline-date.browse-timeline-range {
+      display: block;
+      float: none;
+      width: auto;
+      margin: 0 0 0.15rem calc(1.15rem - var(--browse-mobile-indent));
+      line-height: 1.6;
+      text-align: start;
+    }
+
+    .browse-timeline-range > .browse-range-start,
+    .browse-timeline-range > .browse-range-end {
+      display: inline;
+    }
+
+    /* 只補 inline 排版時的左右間距；字號與對比沿用基礎規則，
+       橫豎屏才會呈現同一個「至」 */
+    .browse-timeline-range .browse-range-sep {
+      margin: 0 0.5rem;
+    }
   }
 }
