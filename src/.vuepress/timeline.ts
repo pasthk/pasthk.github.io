@@ -31,6 +31,21 @@ export interface TimelineEntryParts {
   source?: string;
 }
 
+/** 窄屏日期欄寬 5rem；超過這個估計寬度的日期標籤改由 CSS 另起一行 */
+const LONG_DATE_EM = 4.6;
+
+/**
+ * 粗估標籤寬度（漢字、全形標點計 1em，數字與拉丁字母計 0.55em）。
+ * 標籤可能含 `<span class="browse-note">` 等行內標記，先去掉標籤再算。
+ */
+const visualWidth = (html: string): number =>
+  [...html.replace(/<[^>]*>/gu, "")].reduce(
+    (sum, char) => sum + (/[\u2E80-\u9FFF\uFF00-\uFFEF]/u.test(char) ? 1 : 0.55),
+    0,
+  );
+
+const isLongDate = (date: string): boolean => visualWidth(date) > LONG_DATE_EM;
+
 /**
  * 單一條目。日期放在最前，由 CSS 定位到軸線左側；同一日期只輸出一次，
  * 後續條目省略日期，標題左緣才會對齊。來源置於條目末端。
@@ -51,7 +66,7 @@ export const timelineEntry = ({
       `<span class="browse-range-end"><span class="browse-range-sep">至</span>${endDate}</span>` +
       `</span> `
     : date
-      ? `<span class="browse-timeline-date">${date}</span> `
+      ? `<span class="browse-timeline-date${isLongDate(date) ? " browse-timeline-long" : ""}">${date}</span> `
       : "";
 
   return (

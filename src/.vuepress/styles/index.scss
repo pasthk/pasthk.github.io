@@ -924,12 +924,14 @@ body {
   }
 
   /* 窄屏日期欄僅 5rem，放不下「1928年10月」這類跨年寫法（會被拆成兩行、
-     「至」字擠成一團）。跨期條目改為「起 至 止」獨占一行、落在標題之前：
-     取消浮動並改回 block，再以負 margin 抵銷日期欄內距，讓這一行從軸線
-     右側起排；標題仍留在原內距，與上下條目的標題左緣對齊。
+     「至」字擠成一團），也放不下「公元前1300年」這類長年份。兩種情形都改為
+     獨占一行、落在標題之前：取消浮動並改回 block，再以負 margin 抵銷日期欄
+     內距，讓這一行從軸線右側起排；標題仍留在原內距，與上下條目的標題左緣
+     對齊。長年份由 timeline.ts 依估計寬度加上 .browse-timeline-long。
      不支援 :has() 時退回桌上版的兩行日期欄。 */
   @supports selector(:has(*)) {
-    .browse-timeline-date.browse-timeline-range {
+    .browse-timeline-date.browse-timeline-range,
+    .browse-timeline-date.browse-timeline-long {
       display: block;
       float: none;
       width: auto;
