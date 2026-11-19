@@ -44,6 +44,57 @@ $browse-source-size: 1rem;
   border-bottom: none;
 }
 
+/* Portfolio 各章節的分割線，一律畫在 h2 上方。
+   h2 的 padding-top 是主題為錨點預留的空間，若把線放在 border 上會落進上一節
+   內容，故保留原有間距，改用偽元素在文字上方補一條線；位置由同一組變數推算，
+   換斷點或改導覽列高度都會跟著走。
+   緊貼頁首的第一節不畫：頁首自帶底線，兩線相距僅三十餘像素，會讀成重複的雙線。
+   條目列（.pf-entries）原本自帶 border-top，線移上來後就不再重複畫。 */
+[vp-content] #markdown-content > .pf-hero ~ h2:not(.pf-hero + h2) {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset-inline: 0;
+    top: calc(var(--navbar-height) + 0.1rem);
+    height: 1px;
+    background: var(--vp-c-border);
+  }
+}
+
+[vp-content]
+  #markdown-content
+  > .pf-hero
+  ~ h2:not(.pf-hero + h2)
+  + .pf-entries {
+  border-top: none;
+}
+
+/* 團隊入口頁：各節「標題 → 內容」的間距統一。
+   各區塊自帶不同的上內距——卡片有 21px 的框內留白、條目列每列 21.6px、
+   流程列 17.4px，而普通段落只有半行距的 3px——若各自沿用原有 margin，
+   標題到首行文字的距離會從 24px 一路差到 48px。
+   這裡按區塊補償，使「標題文字底 → 內容首行」一律約 44px：
+   卡片與條目列收到 1.25rem、流程列放寬到 1.5rem、段落則需 2.4rem。
+   以 .tm-name 認頁（只有團隊入口頁的頁首用 h2 寫組名）。 */
+@supports selector(:has(*)) {
+  #markdown-content:has(> .pf-hero > .tm-name) {
+    > .pf-hero ~ h2 + .pf-grid,
+    > .pf-hero ~ h2 + .pf-entries {
+      margin-top: 1.25rem;
+    }
+
+    > .pf-hero ~ h2 + .tm-steps {
+      margin-top: 1.5rem;
+    }
+
+    > .pf-hero ~ h2 + p {
+      margin-top: 2.4rem;
+    }
+  }
+}
+
 // 上一頁／下一頁導覽列：移除主題預設的頂部分隔線，保留連結各自的外框
 .vp-page-nav {
   border-top: none;
@@ -218,6 +269,372 @@ body {
   margin: 1rem auto 0;
 }
 
+/* ---- 作品集／個人檔案（portfolio.md） ----
+   版式沿用站內既有語言：細邊卡片（同 .sponsor-method）、
+   年份左欄（同時間軸日期欄的右對齊小字）、深綠只留給連結。
+   全部只依賴 CSS 變數，不新增顏色。 */
+
+/* 正文的兩端對齊（[vp-content] 的 :is(p, li) 規則）不適用於此頁：
+   卡片、年份欄、清單都很窄，撐開字距會散架。加 .vp-page 前綴提高權重壓過它。 */
+.vp-page :is(.pf-hero, .pf-grid, .pf-entries, .pf-now, .pf-tags) :is(p, li, h3) {
+  text-align: start;
+}
+
+/* 頁首：職稱小標 → 導語 → 事實列，以一條細線與正文分隔 */
+.pf-hero {
+  margin: 1.25rem 0 2.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--vp-c-border);
+}
+
+.pf-role {
+  margin: 0 0 0.9rem;
+  font-size: 0.95rem;
+  letter-spacing: 0.16em;
+  text-align: start;
+  opacity: 0.65;
+}
+
+/* 導語與「聯繫」正文同用此類：字級、行高與條目正文（.pf-entry-body > p）
+   一致，頁首讀起來才不會比正文大一號。
+   選擇器要帶 .vp-page，否則主題給內文 p 的 1.8 行高（權重 0,1,1）會蓋過單類名。 */
+.vp-page .pf-lede {
+  margin: 0 0 1.4rem;
+  font-size: 1rem;
+  line-height: 1.75;
+  text-align: start;
+}
+
+/* 頁首引言：導語與聯絡同屬一個雙欄塊，兩者共用 .pf-lede，
+   字號與行高不必各寫一次；窄屏（≤959px）疊成單欄 */
+.pf-hero-main {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+  gap: 2.5rem;
+  align-items: stretch;
+  margin-bottom: 1.4rem;
+}
+
+/* 兩欄同構：皆為「小標 .pf-role 在上、正文 .pf-lede 在下」，
+   左右小標因此同高同字級，正文也在同一橫線上；外距交由外層統一控制 */
+.pf-hero-main .pf-lede {
+  margin-bottom: 0;
+}
+
+/* 副欄：小標在上、正文在下；正文區撐滿剩餘高度，豎線才由正文起、
+   一路到底，起點與左欄導語同一高度（不靠固定數值推算小標高度） */
+.pf-aside {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.pf-aside-body {
+  position: relative;
+  flex: 1;
+}
+
+.pf-aside-body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -1.25rem;
+  width: 1px;
+  background: var(--vp-c-border);
+}
+
+/* 側欄收起、正文變窄時回到單欄，豎線一併收起 */
+@media (max-width: 959px) {
+  .pf-hero-main {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1.35rem;
+    align-items: start;
+  }
+
+  .pf-aside-body::before {
+    display: none;
+  }
+}
+
+/* 事實列：標籤淡、值濃；窄屏自動換行成多列 */
+.pf-facts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 2.25rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.pf-facts li {
+  display: flex;
+  gap: 0.6rem;
+  align-items: baseline;
+}
+
+.pf-facts li > span {
+  flex: none;
+  font-size: 0.9rem;
+  letter-spacing: 0.08em;
+  opacity: 0.55;
+}
+
+/* 卡片網格：與贊助頁同一組數值，維持全站卡片手感一致 */
+.pf-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr));
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.pf-card {
+  padding: 1.25rem;
+  border: 1px solid var(--vp-c-border);
+  border-radius: 0.75rem;
+  background: var(--vp-c-bg);
+}
+
+.pf-card h3 {
+  margin: 0 0 0.55rem;
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+
+/* 卡片窄，兩端對齊會撐出大片字距，改為左對齊 */
+.pf-card p {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.75;
+  text-align: start;
+}
+
+/* 條目列：左欄放年份或年期，右對齊、貼近內容欄，與時間軸日期欄同一讀法。
+   代表成果、教育經歷、工作經歷共用這一套結構，差別只在左欄字串長短；
+   欄寬取年期的長度（如「2019—2022」），單一年份靠右對齊自然收貼。 */
+.pf-entries {
+  margin: 1.25rem 0;
+  border-top: 1px solid var(--vp-c-border);
+}
+
+.pf-entry {
+  display: grid;
+  grid-template-columns: 6.5rem minmax(0, 1fr);
+  gap: 0 1.25rem;
+  padding: 1.35rem 0;
+}
+
+/* 左欄右對齊貼近內容欄；權重需高於上方統一的 start 規則。
+   年份用正文色而非淡化：淡化後與右欄標題落差太大，年份讀起來像附註。
+   字級與右欄 <h3> 一致，行高同步，第一行基線才會自然對齊，不必再補 padding。 */
+.vp-page .pf-entry > .pf-entry-label {
+  margin: 0;
+  padding-top: 0;
+  font-size: 1.15rem;
+  line-height: 1.5;
+  font-variant-numeric: tabular-nums;
+  text-align: right;
+  color: var(--vp-c-text);
+}
+
+.pf-entry-body > h3 {
+  margin: 0 0 0.4rem;
+  font-size: 1.15rem;
+  line-height: 1.5;
+}
+
+.pf-entry .pf-entry-meta {
+  margin: 0 0 0.6rem;
+  font-size: 0.95rem;
+  text-align: start;
+  opacity: 0.6;
+}
+
+.pf-entry-body > p {
+  margin: 0 0 0.5rem;
+  font-size: 1rem;
+  line-height: 1.75;
+  text-align: start;
+}
+
+.pf-entry-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 1.25rem;
+  font-size: 0.95rem;
+}
+
+/* 進行中清單：短句並列，行距放鬆避免擠成一片 */
+.pf-now {
+  margin: 1.25rem 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* 用正常文本流而非 flex：標題與說明要能自然接續、跨行，flex 會把說明
+   當成不可分割的一項而擠成兩欄。破折號改為絕對定位，脫離文流。 */
+.pf-now > li {
+  position: relative;
+  padding: 0.6rem 0 0.6rem 1.35rem;
+  border-bottom: 1px  var(--vp-c-border);
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.pf-now > li::before {
+  content: "—";
+  position: absolute;
+  left: 0;
+  opacity: 0.4;
+}
+
+/* 標題與說明之間留出停頓，讀起來才不會連成一句 */
+.pf-now strong {
+  margin-inline-end: 0.35em;
+}
+
+/* 標籤：細框膠囊，比正文小一級 */
+.pf-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1.25rem 0;
+  padding: 0;
+  list-style: none;
+}
+
+.pf-tags > li {
+  padding: 0.15rem 0.7rem;
+  border: 1px solid var(--vp-c-border);
+  border-radius: 999px;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  opacity: 0.85;
+}
+
+/* 窄屏：年份移到標題上方，成果條目回到單欄。
+   導語已與正文同級（1rem），不再需要縮小，故不覆寫。 */
+@media (max-width: 719px) {
+  .pf-hero {
+    margin-bottom: 2rem;
+  }
+
+  .pf-facts {
+    flex-direction: column;
+    gap: 0.35rem;
+  }
+
+  .pf-entry {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0.15rem;
+    padding: 1.15rem 0;
+  }
+
+  .vp-page .pf-entry > .pf-entry-label {
+    padding-top: 0;
+    text-align: start;
+  }
+}
+
+/* ---- 團隊檔案（team.md）----
+   頁首、卡片、條目沿用 portfolio 的版式基元（pf- = profile），
+   團隊頁只補四樣：團隊名、成員卡欄寬、角色標籤、帶編號的協作流程。 */
+
+.pf-hero > .tm-name {
+  margin: 0 0 0.9rem;
+  font-size: 1.55rem;
+  line-height: 1.4;
+}
+
+/* 成員卡比研究領域卡多一行責任說明，兩列排四人才不會落單 */
+.pf-grid.tm-grid {
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 19rem), 1fr));
+}
+
+/* 角色標籤：細框膠囊，比正文小一級，與標籤列同一手感 */
+.pf-card .tm-role {
+  display: inline-block;
+  margin: 0 0 0.1rem;
+  padding: 0.1rem 0.6rem;
+  border: 1px solid var(--vp-c-border);
+  border-radius: 999px;
+  font-size: 0.82rem;
+  line-height: 1.7;
+  letter-spacing: 0.04em;
+  text-align: start;
+  opacity: 0.7;
+}
+
+.pf-card .tm-duty {
+  margin: 0.6rem 0 0;
+  font-size: 1rem;
+  line-height: 1.75;
+  text-align: start;
+}
+
+/* 成員卡：只有姓名本身是連結，卡片其餘部分不可點。
+   姓名沿用標題的黑字，hover／focus 才轉為強調色並加下線，
+   因此卡面不會整片變成連結色，也無須再收回外框與底線。 */
+.pf-card.tm-card h3 > a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.pf-card.tm-card h3 > a:hover,
+.pf-card.tm-card h3 > a:focus-visible {
+  color: var(--vp-c-accent);
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+}
+
+/* 協作流程：編號絕對定位、其餘留給正文自然換行，
+   與「進行中的工作」同一種清單節奏 */
+.tm-steps {
+  margin: 1.25rem 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: tm-step;
+}
+
+.tm-steps > li {
+  counter-increment: tm-step;
+  position: relative;
+  padding: 0.9rem 0 0.9rem 2.75rem;
+  border-bottom: 1px dashed var(--vp-c-border);
+  font-size: 1rem;
+  line-height: 1.75;
+  text-align: start;
+}
+
+/* 序號字級與條目左欄的年份（.pf-entry-label）一致。
+   top 取 li 的 padding-top（0.9rem）：兩者字族相同、行高相近，
+   首行基線便自然對齊，不必再為新字級另配一個偏移值。 */
+.tm-steps > li::before {
+  content: counter(tm-step, decimal-leading-zero);
+  position: absolute;
+  left: 0;
+  top: 0.9rem;
+  font-size: 1.15rem;
+  line-height: 1.5;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.06em;
+  opacity: 0.45;
+}
+
+/* 標題與說明之間留出停頓，讀起來才不會連成一句 */
+.tm-steps strong {
+  margin-inline-end: 0.35em;
+}
+
+@media (max-width: 719px) {
+  .pf-hero > .tm-name {
+    font-size: 1.35rem;
+  }
+}
+
 .vp-page-meta .edit-link {
   order: 2;
   flex-grow: 0;
@@ -245,23 +662,37 @@ body {
 
 /* 廣告由 AdSense 非同步填充，先依容器寬度預留高度，避免填充瞬間把正文推開（CLS）。
    窄屏用 3:1 隨寬縮放；寬屏的響應式橫幅高度多為 90–100px，改用固定下限，
-   以免 780px 寬的內容欄被 3:1 撐到 260px 而長期留白。 */
+   以免 780px 寬的內容欄被 3:1 撐到 260px 而長期留白。
+
+   預留高度改用「同格佔位」而非掛在容器上的 aspect-ratio：aspect-ratio 會把
+   盒高鎖死在寬度的三分之一（390px 寬 → 114px），而 AdSense 在窄屏實際可能
+   回 250–280px 的廣告，多出來的部分會從容器上下溢出——向上壓住「相關文獻」，
+   向下蓋住頁腳資訊與翻頁列。改成 grid 同格疊放後，容器高度取佔位與廣告的
+   較大者：廣告小於佔位就居中留白，大於佔位就自然長高，兩種情況都不會壓到別人。
+   佔位是偽元素，不吃 width、不影響廣告的可用寬度。 */
 .ad-top {
   margin: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: 100%;
+  place-items: center;
   text-align: center;
-  aspect-ratio: 3 / 1;
-  min-height: 90px;
 
-  @media (min-width: 720px) {
-    aspect-ratio: auto;
-    min-height: 100px;
+  &::before {
+    content: "";
+    grid-area: 1 / 1;
+    width: 100%;
+    aspect-ratio: 3 / 1;
+    min-height: 90px;
+
+    @media (min-width: 720px) {
+      aspect-ratio: auto;
+      min-height: 100px;
+    }
   }
 }
 
 .ad-top > ins.adsbygoogle {
+  grid-area: 1 / 1;
   width: 100%;
 }
 
