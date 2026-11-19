@@ -3,13 +3,8 @@ title: 安陽史年表
 description: 
 sitemap: false
 llmstxt: false
-index: false
 pageInfo: false
 toc: false
-head:
-  - - meta
-    - name: robots
-      content: noindex
 ---
 
 <!-- 編輯說明（本段不會顯示在頁面上，資料填妥後可整段刪除）
@@ -54,6 +49,8 @@ description，再視需要在 navbar.ts 或 sidebar.ts 加上連結。
 - 8月12日 | 董作賓到達安陽。 | 〈民國十七年十月試掘安陽小屯報告書〉
 - 10月31日 | 董作賓帶領工人第一次發掘殷墟。 | 〈民國十七年十月試掘安陽小屯報告書〉
 
+## 1976年
+- 5月17日 ~ 6月7日 | 中國社會科學院考古研究所安陽工作隊鄭振香領隊發掘殷墟小屯五號墓（76AXTM5，婦好墓）。 | 《殷墟婦好墓》 
 
 ## 2006年
 - 7月13日 | 殷墟正式被列入《世界文化遺產名錄》。 | [聯合國教科文組織第三十屆世界遺產大會](https://whc.unesco.org/en/sessions/30COM/)
