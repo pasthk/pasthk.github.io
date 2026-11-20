@@ -13,7 +13,9 @@ import { llms } from "./llms/index.js";
 import { llmsCanonicalPlugin } from "./llms/markdown.js";
 import { ogImagePlugin } from "./og/plugin.js";
 import { pageIndexPlugin } from "./page-index.js";
+import { pfBlocksPlugin } from "./pf-blocks.js";
 import { referenceBoxPlugin } from "./reference-box.js";
+import { robotsMetaPlugin } from "./robots-meta.js";
 import { relatedDocumentsPlugin } from "./related-documents.js";
 import { slimsearchDevWorkerPlugin } from "./search/dev-worker.js";
 import { searchIndexPlugin } from "./search/index.js";
@@ -133,6 +135,8 @@ export default defineUserConfig({
     searchIndexPlugin(),
     breadcrumbPlugin(),
     referenceBoxPlugin(),
+    pfBlocksPlugin(),
+    robotsMetaPlugin(),
     checksPlugin(),
     verifyDroppedStyles(),
   ],
