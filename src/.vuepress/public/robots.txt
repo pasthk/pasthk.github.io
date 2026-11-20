@@ -1,12 +1,24 @@
 # 香港文獻類編 https://www.pasthk.com
-# 本站為史料轉錄，歡迎搜尋引擎與 AI 檢索索引、引用。
-# 機器可讀索引：https://www.pasthk.com/llms.txt（各頁另有 .md 純文字鏡像）
+#
+# 本站是香港史料的一級轉錄，全文以伺服器端渲染的靜態 HTML 提供，不依賴
+# JavaScript 即可取得完整正文。歡迎搜尋引擎與各 AI 引擎檢索、索引、引用、
+# 訓練；頁面底部皆有可直接複製的引用字串。
+#
+# 給爬蟲的四個入口（都在 Allow: / 範圍內，無需另外授權）：
+#   全站索引   https://www.pasthk.com/llms.txt          330 個頁面的標題、簡述、分類
+#   全站全文   https://www.pasthk.com/llms-full.txt     一次抓完 1.2 MB 純文字（約 38 萬 tokens）
+#   逐頁鏡像   任一 .html 的同名 .md                    只含正文，最省 token 的取法
+#   站點地圖   https://www.pasthk.com/sitemap.xml       含 lastmod
+#
+# 本檔不設 Crawl-delay：站點為靜態檔，請以合理頻率抓取即可；要一次補齊
+# 全站內容，抓 llms-full.txt 比分頁抓 330 個 HTML 更省請求。
 
 User-agent: *
 Allow: /
 
-# .md 是對應 .html 的純文字鏡像，內容相同。不讓通用爬蟲收錄，
-# 避免重複內容分散排名；下列列名的 AI 爬蟲各自成組，不受此限制。
+# .md 是對應 .html 的純文字鏡像，內容相同。通用爬蟲不收錄，避免重複內容
+# 分散排名；下面逐一列名的 AI 引擎各自成組（只有 Allow: /），不受此限——
+# 讓它們用最省的格式取全文，是本站願意付出的成本。
 Disallow: /*.md$
 
 # --- Google 廣告審核／品質爬蟲 ---
@@ -26,7 +38,8 @@ User-agent: Mediapartners-Google
 Allow: /
 Disallow: /*.md$
 
-# --- AI 搜尋索引爬蟲（決定是否出現在生成式搜尋結果）---
+# --- AI 搜尋索引（決定會不會出現在生成式搜尋結果並被引用）---
+# 這組最要緊：擋掉任何一個，等於在該引擎的回答裡消失。
 
 User-agent: OAI-SearchBot
 Allow: /
@@ -37,10 +50,48 @@ Allow: /
 User-agent: PerplexityBot
 Allow: /
 
+User-agent: meta-webindexer
+Allow: /
+
+User-agent: YouBot
+Allow: /
+
 User-agent: Applebot
 Allow: /
 
-# --- AI 訓練／資料採集爬蟲 ---
+# Googlebot、bingbot、Baiduspider、PetalBot 等搜尋引擎爬蟲未逐一列名，
+# 走 User-agent: * 的 Allow: / ——同樣可完整抓取 HTML（只排除 .md 鏡像）。
+
+# --- 使用者提問觸發的按需取回（不是自動爬取）---
+# 使用者貼上本站網址提問時，這些抓取器會即時取一頁來回答。
+# OpenAI、Perplexity、Meta 官方都說明 robots.txt 對此類請求未必適用；
+# 明確列名一方面是表態歡迎，一方面避免日後被 WAF／CDN 的 bot 規則誤封。
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+User-agent: MistralAI-User
+Allow: /
+
+User-agent: meta-externalfetcher
+Allow: /
+
+User-agent: Google-CloudVertexBot
+Allow: /
+
+User-agent: DuckAssistBot
+Allow: /
+
+# --- AI 訓練／資料集採集 ---
+# 本站同意用於模型訓練：史料轉錄的價值在於被讀到，不在於被鎖住。
+# 若要改為只允許檢索、不允許訓練，把本節各組改為 Disallow: / 即可，
+# 上面的搜尋索引與按需取回不受影響。
 
 User-agent: GPTBot
 Allow: /
@@ -57,26 +108,36 @@ Allow: /
 User-agent: meta-externalagent
 Allow: /
 
-# --- 使用者觸發的按需取回（非自動爬取）---
-# OpenAI、Perplexity 官方說明指出 robots.txt 對此類請求可能不適用；
-# 明確列出只是避免日後被 WAF／CDN 規則誤封。
-
-User-agent: ChatGPT-User
+User-agent: Bytespider
 Allow: /
 
-User-agent: Claude-User
+User-agent: cohere-ai
 Allow: /
 
-User-agent: Perplexity-User
+User-agent: AI2Bot
 Allow: /
 
-# 刻意不列為 User-agent 的名稱：
-# - Google-Extended、Applebot-Extended 是訓練偏好／退出信號，不是會發出
-#   請求的 HTTP User-Agent；Apple 官方明言 Applebot-Extended 不會抓取網頁。
-#   Google 搜尋收錄一律由 Googlebot 處理，已受 User-agent: * 允許。
-# - anthropic-ai、Claude-Web 為舊稱；Anthropic 現行名稱是
-#   ClaudeBot／Claude-User／Claude-SearchBot。
-# - ChatGPT-User、Claude-User、Perplexity-User 由使用者提問觸發，
-#   不是搜尋索引訊號；能否出現在搜尋結果取決於上面各 SearchBot。
+User-agent: MistralAI-Index
+Allow: /
+
+User-agent: MistralAI-Training
+Allow: /
+
+# --- 使用權杖（不是爬蟲，只影響既有內容能否用於 AI）---
+# 這兩個名稱不會發出 HTTP 請求，Google 與 Apple 用它們決定 Googlebot／
+# Applebot 已抓到的內容可否用於 Gemini、Vertex AI、Apple Intelligence。
+# 不寫等同預設允許；這裡明寫 Allow，是為了在日後收緊 User-agent: * 時
+# 仍保有明確授權紀錄。
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+# 未列名的舊稱與旁支，一律走 User-agent: *（等於允許，但只能讀 HTML）：
+#   anthropic-ai、Claude-Web    Anthropic 舊稱，現行是 ClaudeBot／Claude-User／Claude-SearchBot
+#   GoogleOther                 Google 內部研究用途抓取
+#   FacebookBot、facebookexternalhit  連結預覽，非 AI 訓練
 
 Sitemap: https://www.pasthk.com/sitemap.xml
