@@ -1,4 +1,4 @@
-import type { App, Plugin } from "vuepress/core";
+import type { App, Page, Plugin } from "vuepress/core";
 
 import { pushTo } from "./utils.js";
 import { pagePathOfLink } from "./site.js";
@@ -16,6 +16,42 @@ type SidebarNode = {
 };
 
 const HOME: TrailItem = { text: "首頁", link: "/" };
+
+/**
+ * 未收進側欄的頁面（如編者檔案）可在 frontmatter 自備路徑：
+ *
+ * ```yaml
+ * breadcrumbTrail:
+ *   - text: 編者檔案
+ * ```
+ *
+ * 只影響宣告了這個欄位的頁面，其餘頁面照舊由側欄推導，
+ * 所以新增一頁作品集不必為它改 sidebar 樹。
+ */
+const declaredTrail = (page: Page): TrailItem[] | undefined => {
+  const raw = page.frontmatter?.breadcrumbTrail;
+
+  if (!Array.isArray(raw) || !raw.length) return undefined;
+
+  const items: TrailItem[] = [];
+
+  for (const entry of raw) {
+    if (typeof entry === "string") {
+      if (entry) items.push({ text: entry });
+      continue;
+    }
+
+    if (!entry || typeof entry !== "object") continue;
+
+    const { text, link } = entry as { text?: unknown; link?: unknown };
+
+    if (typeof text !== "string" || !text) continue;
+
+    items.push(typeof link === "string" ? { text, link } : { text });
+  }
+
+  return items.length ? items : undefined;
+};
 
 const roots = Object.keys(sidebar).sort((a, b) => b.length - a.length);
 
@@ -161,9 +197,11 @@ export const breadcrumbTrails = (app: App): Map<string, TrailItem[]> => {
   const result = new Map<string, TrailItem[]>();
 
   for (const page of app.pages) {
-    const trail = [HOME, ...buildTrail(page.path, index)].filter(
-      (item) => item.link !== page.path,
-    );
+    const own = declaredTrail(page);
+    const trail = [
+      HOME,
+      ...(own ?? buildTrail(page.path, index)),
+    ].filter((item) => item.link !== page.path);
 
     if (trail.length > 1) result.set(page.path, trail);
   }
