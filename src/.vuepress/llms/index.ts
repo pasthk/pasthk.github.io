@@ -46,7 +46,16 @@ function buildOptional(pages: LLMPage[]): string {
   ].join("\n");
 }
 
-function buildDetails(pages: LLMPage[]): string {
+/** 格式說明：目錄只列 .html，鏡像的存在與取法在這裡一次交代清楚 */
+function formatLine(state: LLMState): string {
+  const base = "- 格式：目錄連結均為 .html，是正式版本，引用請用此網址";
+
+  return state.linkExtension === ".md"
+    ? `${base}；另備同名 .md 純文字鏡像，把網址結尾的 .html 換成 .md 即得，只含正文，取全文時較省 token`
+    : base;
+}
+
+function buildDetails(pages: LLMPage[], state: LLMState): string {
   const stats = siteStats(pages as StatsInput[]);
 
   return `- 網址：${HOSTNAME}
@@ -54,6 +63,7 @@ function buildDetails(pages: LLMPage[]): string {
 - 編者：NG, KIN CHUNG
 - 內容：${describeSite(stats)}
 - 呈現方式：全部為伺服器端渲染的靜態 HTML，無需 JavaScript 即可取得全文
+${formatLine(state)}
 - 版權與使用：${HOSTNAME}/about.html
 
 **本站性質**
@@ -153,8 +163,19 @@ function provenance(markdown: string, page: Page): string {
   return `${lines.join("\n")}\n\n${clean}${links ? `\n${links}` : ""}`;
 }
 
+/**
+ * 目錄條目：每頁只給一個 .html 網址。
+ *
+ * 用 .html 而不列 .md，一來它是可供人查核、引用時該用的規範網址，
+ * 二來條目不必為鏡像多帶一段括號——三百多條加起來就是三萬多 bytes。
+ * 純文字版的存在改在 details 用一句話交代（把 .html 換成 .md 即得），
+ * 模型讀得到，檔案卻回到 70KB 左右。
+ */
 function tocLine(page: LLMPage, state: LLMState): string {
-  const url = generateLink(page.htmlFilePathRelative, state);
+  const htmlUrl = generateLink(page.htmlFilePathRelative, state).replace(
+    /\.md$/u,
+    ".html",
+  );
   const { description } = page.frontmatter;
   const brief =
     typeof description === "string"
@@ -162,7 +183,7 @@ function tocLine(page: LLMPage, state: LLMState): string {
       : "";
   const label = page.path === "/" ? "首頁" : page.title;
 
-  return `- [${label}](${url})${brief ? `: ${brief}` : ""}`;
+  return `- [${label}](${htmlUrl})${brief ? `: ${brief}` : ""}`;
 }
 
 function buildToc(pages: LLMPage[], state: LLMState): string {
