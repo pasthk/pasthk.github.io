@@ -9,6 +9,9 @@ head:
   - - meta
     - name: robots
       content: noindex
+  - - script
+    - {}
+    - 'try{var l=new URLSearchParams(location.search).get("lang")||localStorage.getItem("pf-lang");if(l==="en"||l==="zh")document.documentElement.setAttribute("data-pf-lang",l)}catch(e){}'
 breadcrumbTrail:
   - text: 團隊檔案
     link: /team.html
@@ -17,7 +20,15 @@ breadcrumbTrail:
 
 <!-- 個人檔案版式：::: 容器見 .vuepress/pf-blocks.ts 開頭的說明。
      頁首的 role／lede／aside／aside-text 為單行鍵值，`- 標籤：內容` 為事實列；
-     條目一律「一行一段」，首行 `**年份** 標題`，斜體段落為副註。 -->
+     條目一律「一行一段」，首行 `**年份** 標題`，斜體段落為副註。
+
+     全頁雙語：`:::: lang zh` 與 `:::: lang en` 各包一份全文，兩份都輸出，
+     由頁名右端的切換鈕改 <html data-pf-lang> 決定顯示哪一份（見 index.scss）。
+     外層刻意用四個冒號：內層容器收尾用三個，四個才不會被誤認為外層的結尾。 -->
+
+<LangSwitch />
+
+:::: lang zh
 
 ::: hero
 role: 中國社會科學院研究生院歷史學碩士
@@ -73,5 +84,70 @@ aside-text: 電郵：[kinchung.ng@outlook.com](mailto:kinchung.ng@outlook.com)
 ## 參與項目
 
 ::: entries
-- **1940** 年代報刊補遺核對戰時缺期，補入先前未能查得日期的報道。
+- **1940年代** 報刊補遺
+  核對戰時缺期，補入先前未能查得日期的報道。
 :::
+
+::::
+
+:::: lang en
+
+::: hero
+role: M.Phil. in History, Chinese Academy of Social Sciences
+lede: Archaeology of the Xia–Shang–Zhou, archaeology of architecture, archaeology of Hong Kong
+aside: Contact
+aside-text: Email [kinchung.ng@outlook.com](mailto:kinchung.ng@outlook.com)
+:::
+
+## Research Areas
+
+::: cards
+- **Hong Kong's Early Newspapers**
+  News reports, notices and advertisements are culled from *Wah Tsz Yat Po*, *Wah Kiu Yat Po*, *Ta Kung Pao* and other papers, then reassembled into event-based sequences of time — supplying the everyday life of the city that formal histories leave unrecorded.
+:::
+
+## Education
+
+::: entries
+- **2026—** Research Center for Archaeological Technology Innovation, SUSTech
+  *Visiting Student*
+- **2022–2026** Research Center for Cultural Heritage, SUSTech
+  *Visiting Student*
+- **2022—** School of Archaeology and Museology, Peking University
+  *Ph.D. candidate in Archaeology*
+  Neolithic and Xia–Shang–Zhou archaeology
+- **2015–2018** Institute of Archaeology, Graduate School of the Chinese Academy of Social Sciences
+  *M.Phil. in History*
+  Xia–Shang–Zhou archaeology
+- **2011–2014** City University of Hong Kong
+  *B.A. (Hons)*
+  Culture and Cultural Industries Management
+:::
+
+## Professional Experience
+
+::: entries
+- **2019—2021** Hong Kong Chronicles Institute
+  Hong Kong · Assistant Editor
+  Editor
+- **2018—2019** Heritage Lab, SUSTech
+  *Shenzhen · Research Assistant*
+  Archaeology and cultural heritage projects
+:::
+
+## Publications
+
+::: entries
+- **2026** [Thematic Compilation of Hong Kong Archives](/)
+  *Digital documentary index · ongoing*
+  Some three hundred entries arranged by event and theme, each keeping its title, newspaper, date and page number, with a timeline threading together the separate reports of the same event.
+:::
+
+## Projects
+
+::: entries
+- **1940s** Newspaper Addenda
+  Wartime gaps in the holdings were checked, and reports whose dates had previously been untraceable were added.
+:::
+
+::::
