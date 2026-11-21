@@ -49,8 +49,14 @@ $browse-source-size: 1rem;
    內容，故保留原有間距，改用偽元素在文字上方補一條線；位置由同一組變數推算，
    換斷點或改導覽列高度都會跟著走。
    緊貼頁首的第一節不畫：頁首自帶底線，兩線相距僅三十餘像素，會讀成重複的雙線。
-   條目列（.pf-entries）原本自帶 border-top，線移上來後就不再重複畫。 */
-[vp-content] #markdown-content > .pf-hero ~ h2:not(.pf-hero + h2) {
+   條目列（.pf-entries）原本自帶 border-top，線移上來後就不再重複畫。
+   單頁雙語的頁面多包了一層 .pf-lang（兩種語言各一份），故另補同構的選擇器。 */
+[vp-content] #markdown-content > .pf-hero ~ h2:not(.pf-hero + h2),
+[vp-content]
+  #markdown-content
+  > .pf-lang
+  > .pf-hero
+  ~ h2:not(.pf-hero + h2) {
   position: relative;
 
   &::before {
@@ -65,6 +71,12 @@ $browse-source-size: 1rem;
 
 [vp-content]
   #markdown-content
+  > .pf-hero
+  ~ h2:not(.pf-hero + h2)
+  + .pf-entries,
+[vp-content]
+  #markdown-content
+  > .pf-lang
   > .pf-hero
   ~ h2:not(.pf-hero + h2)
   + .pf-entries {
@@ -538,6 +550,94 @@ body {
   }
 }
 
+/* ---- 單頁雙語（ng-kin-chung.md）----
+   正文寫成 `:::: lang zh` 與 `:::: lang en` 兩份，全部輸出，切換時只改
+   <html data-pf-lang>，由這裡決定顯示哪一份。預設（無屬性）顯示中文：
+   沒有腳本或腳本被攔截時，讀者看到的仍是中文原文，不會兩份疊在一起。 */
+
+.pf-lang[data-lang="en"] {
+  display: none;
+}
+
+html[data-pf-lang="en"] {
+  .pf-lang[data-lang="zh"] {
+    display: none;
+  }
+
+  .pf-lang[data-lang="en"] {
+    display: block;
+  }
+}
+
+/* 小標的字距是為漢字留白而設（0.16em），套在英文長句上會散開，略收一半 */
+.pf-lang[lang="en"] .pf-role {
+  letter-spacing: 0.06em;
+}
+
+/* 切換鈕：放在頁名那一行的最右端，由 LangSwitch 以 Teleport 掛進 .vp-page-title。
+   標題區改為兩欄網格：h1 佔左欄，鈕佔右欄，hr 跨兩欄留在下一行。兩者在同一列、
+   垂直居中，鈕就自然與姓名同高；姓名再長也只會在左欄內摺行，不會壓到鈕。
+   h1 上的負 margin 與等量 padding-top 是主題為標題錨點預留的滾動空間，兩者相抵，
+   文字位置不變；這裡歸零，h1 的高度才等於行高，居中才是對齊「姓名」而不是對齊
+   那 60px 的空白。右內距同理歸零，鈕才能貼齊內容欄右緣（與 h1 下的分隔線同寬）。 */
+.pf-langswitch {
+  padding: 0.28rem 0.7rem;
+  border: 1px solid var(--vp-c-border);
+  border-radius: 999px;
+  background: var(--vp-c-bg);
+  color: var(--vp-c-text-mute);
+  font: inherit;
+  font-size: 0.8rem;
+  line-height: 1.4;
+  letter-spacing: 0.08em;
+  cursor: pointer;
+  transition:
+    color 0.2s,
+    border-color 0.2s;
+
+  &:hover,
+  &:focus-visible {
+    color: var(--vp-c-text);
+    border-color: var(--vp-c-accent);
+  }
+
+  @media print {
+    display: none;
+  }
+}
+
+@supports selector(:has(*)) {
+  .vp-page-title:has(.pf-langswitch) {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    column-gap: 1rem;
+    /* 標題與分隔線之間原本由 h1 的 margin-bottom 撐開，改用列距，
+       兩者的距離才不會算進第一列，害居中對齊偏下 */
+    row-gap: 1rem;
+
+    > h1 {
+      grid-column: 1;
+      margin-top: 0 !important;
+      margin-bottom: 0 !important;
+      padding-top: 0 !important;
+      padding-inline-end: 0;
+    }
+
+    > .pf-langswitch {
+      grid-column: 2;
+      justify-self: end;
+    }
+
+    /* hr 預設左右 margin 是 auto，網格項不會被拉滿，會縮成一條 0 寬的線 */
+    > hr {
+      grid-column: 1 / -1;
+      justify-self: stretch;
+      margin: 0;
+    }
+  }
+}
+
 /* ---- 團隊檔案（team.md）----
    頁首、卡片、條目沿用 portfolio 的版式基元（pf- = profile），
    團隊頁只補四樣：團隊名、成員卡欄寬、角色標籤、帶編號的協作流程。 */
@@ -713,6 +813,8 @@ body {
 /* 文獻綜覽：資料時間軸，與「相關文獻」時間軸共用同一視覺語言 */
 .browse-timeline {
   --browse-date-offset: 10.5rem;
+  /* 年份標題左欄比事件日期欄多出的寬度，用來容納「公元前5000年」這類長年份 */
+  --browse-year-extra: 2.5rem;
 
   margin: 0.75rem 0 1.5rem var(--browse-date-offset);
   padding: 0;
@@ -726,9 +828,19 @@ body {
     /* 以 #_1874年 這類深層連結跳轉時，標題不要被固定導覽列蓋住 */
     scroll-margin-top: $browse-sticky-top;
 
-    /* 負 margin 抵銷 padding：底色左緣長到日期欄，文字位置不變 */
-    margin: 0 0 0 $browse-date-neg;
-    padding: 0 0 0 calc(var(--browse-date-offset) + 1.15rem);
+    /* 兩欄：左欄日期貼軸右對齊，右欄括號註記貼軸左對齊，實心圓點落在
+       兩欄之間。欄寬與間距相加後，右欄起點正好在軸線右 1.15rem，與事件
+       標題同一個左緣。註記垂直居中，與圓點同一水平線。 */
+    display: grid;
+    grid-template-columns:
+      calc(var(--browse-date-offset) - 0.9rem + var(--browse-year-extra))
+      minmax(0, 1fr);
+    column-gap: 2.05rem;
+    align-items: center;
+
+    /* 負 margin 讓貼頂底色與左欄一起長到軸線左側 */
+    margin: 0 0 0 calc(-1 * var(--browse-date-offset) - var(--browse-year-extra));
+    padding: 0;
 
     border: 0;
     font-size: 1.5rem;
@@ -745,20 +857,40 @@ body {
     margin: 0;
   }
 
-  /* 年份為純文字（無錨點連結）：不可點、不可拖選，仍置於軸線左側並與日期欄右對齊。
-     長年份（如「1842年（道光二十二年）」）須在日期欄內換行；nowrap 會向右溢出
-     跨過軸線、實心圓點並壓到事件標題，故改用可斷行的 normal + anywhere。 */
+  /* 左欄年份為純文字（無錨點連結）：不可點、不可拖選，右對齊貼近軸線。
+     長年份須在欄內換行；nowrap 會向右溢出跨過軸線與圓點，故用 normal + anywhere。 */
   h2 .browse-year-label {
     display: block;
-    width: $browse-date-width;
-    margin-left: calc(-1 * var(--browse-date-offset) - 1.15rem);
     text-align: right;
     white-space: normal;
     overflow-wrap: anywhere;
     pointer-events: none;
   }
 
-  /* 括號註記整組自動換行：年份標題與左側日期欄共用，折行策略見 browse-atom-wrap。
+  /* 右欄：Markdown 以 `|` 分隔的備註（年號、朝代、分期）。字級與行高刻意
+     不加修飾，直接沿用 H2，兩欄看起來才是同一個標題的兩半。 */
+  h2 .browse-year-side {
+    display: block;
+    min-width: 0;
+    text-align: start;
+    overflow-wrap: anywhere;
+  }
+
+  /* 時段日期在左欄自成兩行：「起年」一行，「至 + 止年」一行，與事件日期欄
+     的跨期寫法同構；「至」沿用事件日期欄的處理（0.85em、對比 0.55），
+     讓兩端年份成為視覺主體。間距用 rem，不隨字級縮小。 */
+  h2 .browse-year-end {
+    display: block;
+  }
+
+  h2 .browse-year-sep {
+    margin-right: 0.4rem;
+    font-size: 0.85em;
+    opacity: 0.55;
+  }
+
+  /* 括號註記整組自動換行，折行策略見 browse-atom-wrap。僅用於事件日期欄
+     （年份標題的右欄由 `|` 分隔、字級與左欄相同，不再套這條）。
      括號字級與「資料來源」一致，共用 $browse-source-size。 */
   .browse-note {
     @include browse-atom-wrap;
@@ -775,10 +907,11 @@ body {
     border-radius: 50%;
   }
 
-  /* 年份節點：實心圓點，隨 H2 字號垂直置中（底色已左延，圓點需回到軸線上） */
+  /* 年份節點：實心圓點，隨 H2 字號垂直置中；h2 左緣在軸線左
+     (日期欄 + 年份欄加寬)，故要加回加寬量才落在軸線上 */
   h2::before {
     top: 50%;
-    left: calc(var(--browse-date-offset) - 6px);
+    left: calc(var(--browse-date-offset) + var(--browse-year-extra) - 6px);
     width: 11px;
     height: 11px;
     border: 1px solid var(--vp-c-text, #000);
@@ -849,6 +982,21 @@ body {
   opacity: 0.75;
 }
 
+/* 條目末尾的任期注記（「（任期至1844年5月8日）。」連同句號）：整段連同句號
+   一起不可斷，否則窄屏會把「（任」留在行尾，或讓句號孤零零掉到下一行。
+   720 起側欄進場、條目欄反而變窄（實測 720 時僅約 200px），767 以下退回
+   可斷行（只在詞組邊界折），不以 nowrap 撐破版面。 */
+.browse-tenure {
+  white-space: nowrap;
+
+  @media (max-width: 767px) {
+    white-space: normal;
+    word-break: keep-all;
+    /* 折行時不讓「。」落到行首（避頭尾），寧可把「）。」一起帶到下一行 */
+    line-break: strict;
+  }
+}
+
 /* 跨期事件（有起訖日期）：日期欄由單行擴為兩行 —— 起始日期在上，
    「至 + 結束日期」在下，兩行都右對齊貼近軸線，仍是「起 至 止」一組。
    行高收緊，避免兩行把條目拉得比實際內容高太多。 */
@@ -907,8 +1055,9 @@ body {
     text-align: start;
   }
 
-  /* 窄屏無左側日期欄，年份回到軸線右側 */
+  /* 窄屏無左側日期欄，年份回到軸線右側；兩欄改回單欄，止年接在年份之後 */
   .browse-timeline h2 {
+    display: block;
     margin-left: 0;
     padding-left: 1.15rem;
   }
@@ -917,10 +1066,25 @@ body {
     left: -6px;
   }
 
+  /* 窄屏改回單欄：年份與「至 止年」同一行，label 需轉回行內才不會先占滿一行 */
   .browse-timeline h2 .browse-year-label {
+    display: inline;
     width: auto;
     margin-left: 0;
     text-align: start;
+  }
+
+  /* 單欄時日期回到一行，日期與右欄備註之間補一個間距。備註用 inline-block
+     自成一個盒子：整行放不下時它整塊跳到下一行，不會把「新石器時代」拆成
+     「新石器時／代」；真的比一行還寬時仍可內部換行。 */
+  .browse-timeline h2 .browse-year-side {
+    display: inline-block;
+    margin-left: 0.4rem;
+  }
+
+  .browse-timeline h2 .browse-year-end {
+    display: inline;
+    margin-left: 0.4rem;
   }
 
   /* 窄屏日期欄僅 5rem，放不下「1928年10月」這類跨年寫法（會被拆成兩行、
