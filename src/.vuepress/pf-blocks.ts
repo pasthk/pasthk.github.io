@@ -38,6 +38,9 @@ import type { Plugin } from "vuepress/core";
  *   姓名即該頁入口（卡片其他部分不可點）。
  * - `now`／`tags`／`steps`：清單原樣輸出，只補上 `pf-now`／`pf-tags`／`tm-steps`
  *   類名，清單項內照常寫 `**標題**說明`。
+ * - `lang`：`::: lang zh` 與 `::: lang en` 各包一份全文，內層照常寫上述容器與標題。
+ *   兩份都會輸出，由 CSS 依 <html data-pf-lang> 只顯示一份（見 index.scss 的
+ *   .pf-lang）。包裝層只影響直屬選擇器，故 h2 分割線另補一條 .pf-lang 版。
  *
  * 之所以自行解析而不引入 markdown-it-container：本專案的容器都不需要嵌套，
  * 內層另外交給 `md.parse` 處理即可，省一個相依套件，也便於逐個容器自訂輸出。
@@ -373,6 +376,23 @@ const renderMembers = (ctx: Context): string => {
   return `<div class="pf-grid tm-grid">${cards}</div>`;
 };
 
+/**
+ * 語言分區：整份譯文包一層，前端只切換 <html data-pf-lang>，不重繪內容。
+ *
+ * 內文照常交給 markdown 處理（與其他容器不同，這裡要的是整段輸出而非逐項解析），
+ * 故直接 `md.render`：標題錨點、站內連結改寫、外連 target 都由同一套規則產生，
+ * 兩份譯文的結構才會完全一致。
+ */
+const renderLang = (ctx: Context): string => {
+  const code = ctx.info.trim().toLowerCase() === "en" ? "en" : "zh";
+  const tag = code === "en" ? "en" : "zh-Hant";
+
+  return (
+    `<div class="pf-lang" data-lang="${code}" lang="${tag}">` +
+    `${ctx.md.render(ctx.body, ctx.env).trimEnd()}</div>`
+  );
+};
+
 /** `now`／`tags`／`steps`：清單原樣輸出，只補類名 */
 const listRenderer =
   (ordered: boolean, className: string) =>
@@ -397,6 +417,7 @@ const RENDERERS: Record<string, (ctx: Context) => string> = {
   now: listRenderer(false, "pf-now"),
   tags: listRenderer(false, "pf-tags"),
   steps: listRenderer(true, "tm-steps"),
+  lang: renderLang,
 };
 
 const containerRule = (
