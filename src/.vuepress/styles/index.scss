@@ -1074,12 +1074,19 @@ html[data-pf-lang="en"] {
     text-align: start;
   }
 
-  /* 單欄時日期回到一行，日期與右欄備註之間補一個間距。備註用 inline-block
-     自成一個盒子：整行放不下時它整塊跳到下一行，不會把「新石器時代」拆成
-     「新石器時／代」；真的比一行還寬時仍可內部換行。 */
+  /* 單欄時日期回到一行，年份與年號之間用一個全角空格（U+3000）隔開，不用
+     margin：全角空格隨字級縮放，寬度與漢字字距一致。空格掛在年份之後而非
+     年號之前——年號放不下而整塊換行時，空格留在上一行末尾，第二行才不會
+     莫名縮進一格。桌上版兩欄不套此規則，備註開頭不會多一個空白。
+     備註仍用 inline-block 自成一個盒子：整行放不下時它整塊跳到下一行，
+     不會把「新石器時代」拆成「新石器時／代」；真的比一行還寬時仍可內部
+     換行。 */
+  .browse-timeline h2 .browse-year-label::after {
+    content: "\3000";
+  }
+
   .browse-timeline h2 .browse-year-side {
     display: inline-block;
-    margin-left: 0.4rem;
   }
 
   .browse-timeline h2 .browse-year-end {
