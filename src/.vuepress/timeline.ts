@@ -13,9 +13,31 @@ export const TIMELINE_CLOSE = "</div>";
 export const YEAR_OPEN = '<section class="browse-year">';
 export const YEAR_CLOSE = "</section>";
 
-/** 年份標題；`label` 需已轉義，可含括號註記等行內標記 */
-export const yearHeading = (id: string, label: string): string =>
-  `<h2 id="${id}" class="browse-year-title"><span class="browse-year-label">${label}</span></h2>`;
+/** 時段標題的連接詞（如「公元前5000年 至 公元前4000年」），前後至少一個空白才算 */
+const RANGE_JOINER = /\s+至\s+/u;
+
+/**
+ * 年份標題；`date`、`side` 需已轉義。
+ *
+ * Markdown 以 `|` 分欄（`## 公元前214年 | 秦始皇三十三年`），這裡只負責把
+ * 兩欄排成同一行的 DOM：左欄日期，右欄備註；兩欄字級相同，在 CSS 裡分居
+ * 軸線左右，實心圓點落在中間。時段寫成「起年／至 止年」兩行，與事件日期
+ * 欄同構。`side` 已由呼叫方切走，故日期內的「至元」這類年號不會被拆。
+ */
+export const yearHeading = (id: string, date: string, side?: string): string => {
+  const [start, end] = date.split(RANGE_JOINER);
+  const body =
+    end === undefined
+      ? date
+      : `${start}<span class="browse-year-end"><span class="browse-year-sep">至</span>${end}</span>`;
+
+  return (
+    `<h2 id="${id}" class="browse-year-title">` +
+    `<span class="browse-year-label">${body}</span>` +
+    (side ? `<span class="browse-year-side">${side}</span>` : "") +
+    `</h2>`
+  );
+};
 
 export interface TimelineEntryParts {
   /** 條目標題，可含行內標記 */
