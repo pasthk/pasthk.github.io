@@ -6,6 +6,11 @@ src/.vuepress/dist/
 .DS_Store
 
 .workbuddy-ai/
-scripts/
+
+# scripts/ 只收錄建置與檢查會用到的工具，本地臨時腳本仍不進版本庫
+scripts/*
+!scripts/build-og-fonts.py
+!scripts/check-descriptions.mjs
+!scripts/description-style.md
 
 .workbuddy/
