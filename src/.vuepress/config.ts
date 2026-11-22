@@ -4,18 +4,21 @@ import { defineUserConfig } from "vuepress";
 
 import { breadcrumbPlugin } from "./breadcrumb.js";
 import { cleanupPlugin } from "./build/cleanup.js";
-import { dropUnusedStyles, verifyDroppedStyles } from "./build/drop-styles.js";
-import { stripUnusedFonts } from "./build/fonts.js";
+import {
+  dropUnusedStylesPlugin,
+  verifyDroppedStylesPlugin,
+} from "./build/drop-styles.js";
+import { stripUnusedFontsPlugin } from "./build/fonts.js";
 import { slimPageDataPlugin } from "./build/page-data.js";
 import { checksPlugin } from "./checks.js";
-import { chroniclesPlugin } from "./chronicles.js";
+import { timelinePlugin } from "./timeline.js";
 import { llms } from "./llms/index.js";
 import { llmsCanonicalPlugin } from "./llms/markdown.js";
 import { ogImagePlugin } from "./og/plugin.js";
 import { pageIndexPlugin } from "./page-index.js";
 import { pfBlocksPlugin } from "./pf-blocks.js";
 import { referenceBoxPlugin } from "./reference-box.js";
-import { robotsMetaPlugin } from "./robots-meta.js";
+import { robotsMetaPlugin } from "./seo/crawl.js";
 import { relatedDocumentsPlugin } from "./related-documents.js";
 import { slimsearchDevWorkerPlugin } from "./search/dev-worker.js";
 import { searchIndexPlugin } from "./search/index.js";
@@ -94,9 +97,9 @@ export default defineUserConfig({
       /* JSON-LD 與 git 只供建置期使用，客戶端 chunk 不必內嵌 */
       if (!isServer) config.plugins.push(slimPageDataPlugin());
 
-      config.plugins.push(stripUnusedFonts());
+      config.plugins.push(stripUnusedFontsPlugin());
 
-      config.plugins.push(dropUnusedStyles());
+      config.plugins.push(dropUnusedStylesPlugin());
     },
   }),
   lang: "zh-Hant",
@@ -125,7 +128,7 @@ export default defineUserConfig({
   ],
   theme,
   plugins: [
-    chroniclesPlugin(),
+    timelinePlugin(),
     pageIndexPlugin(),
     relatedDocumentsPlugin(),
     llms,
@@ -138,6 +141,6 @@ export default defineUserConfig({
     pfBlocksPlugin(),
     robotsMetaPlugin(),
     checksPlugin(),
-    verifyDroppedStyles(),
+    verifyDroppedStylesPlugin(),
   ],
 });
