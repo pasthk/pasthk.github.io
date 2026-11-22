@@ -84,7 +84,7 @@ function shouldDrop(): boolean {
   return dropCache;
 }
 
-export function dropUnusedStyles(): Plugin {
+export function dropUnusedStylesPlugin(): Plugin {
   return {
     name: "pasthk:drop-unused-styles",
     enforce: "pre",
@@ -104,7 +104,7 @@ export function dropUnusedStyles(): Plugin {
   };
 }
 
-export function verifyDroppedStyles(): VuePressPlugin {
+export function verifyDroppedStylesPlugin(): VuePressPlugin {
   return {
     name: "pasthk:verify-dropped-styles",
 
