@@ -1,6 +1,6 @@
 import type { Plugin } from "vite";
 
-export function stripUnusedFonts(): Plugin {
+export function stripUnusedFontsPlugin(): Plugin {
   return {
     name: "pasthk:strip-unused-fonts",
     enforce: "post",
