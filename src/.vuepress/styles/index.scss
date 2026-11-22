@@ -288,7 +288,7 @@ body {
 
 /* 正文的兩端對齊（[vp-content] 的 :is(p, li) 規則）不適用於此頁：
    卡片、年份欄、清單都很窄，撐開字距會散架。加 .vp-page 前綴提高權重壓過它。 */
-.vp-page :is(.pf-hero, .pf-grid, .pf-entries, .pf-now, .pf-tags) :is(p, li, h3) {
+.vp-page :is(.pf-hero, .pf-grid, .pf-entries) :is(p, li, h3) {
   text-align: start;
 }
 
@@ -476,54 +476,6 @@ body {
   flex-wrap: wrap;
   gap: 0.35rem 1.25rem;
   font-size: 0.95rem;
-}
-
-/* 進行中清單：短句並列，行距放鬆避免擠成一片 */
-.pf-now {
-  margin: 1.25rem 0;
-  padding: 0;
-  list-style: none;
-}
-
-/* 用正常文本流而非 flex：標題與說明要能自然接續、跨行，flex 會把說明
-   當成不可分割的一項而擠成兩欄。破折號改為絕對定位，脫離文流。 */
-.pf-now > li {
-  position: relative;
-  padding: 0.6rem 0 0.6rem 1.35rem;
-  border-bottom: 1px  var(--vp-c-border);
-  font-size: 1rem;
-  line-height: 1.7;
-}
-
-.pf-now > li::before {
-  content: "—";
-  position: absolute;
-  left: 0;
-  opacity: 0.4;
-}
-
-/* 標題與說明之間留出停頓，讀起來才不會連成一句 */
-.pf-now strong {
-  margin-inline-end: 0.35em;
-}
-
-/* 標籤：細框膠囊，比正文小一級 */
-.pf-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  margin: 1.25rem 0;
-  padding: 0;
-  list-style: none;
-}
-
-.pf-tags > li {
-  padding: 0.15rem 0.7rem;
-  border: 1px solid var(--vp-c-border);
-  border-radius: 999px;
-  font-size: 0.9rem;
-  line-height: 1.6;
-  opacity: 0.85;
 }
 
 /* 窄屏：年份移到標題上方，成果條目回到單欄。
@@ -980,21 +932,6 @@ html[data-pf-lang="en"] {
   font-size: $browse-source-size;
   color: var(--vp-c-text-mute);
   opacity: 0.75;
-}
-
-/* 條目末尾的任期注記（「（任期至1844年5月8日）。」連同句號）：整段連同句號
-   一起不可斷，否則窄屏會把「（任」留在行尾，或讓句號孤零零掉到下一行。
-   720 起側欄進場、條目欄反而變窄（實測 720 時僅約 200px），767 以下退回
-   可斷行（只在詞組邊界折），不以 nowrap 撐破版面。 */
-.browse-tenure {
-  white-space: nowrap;
-
-  @media (max-width: 767px) {
-    white-space: normal;
-    word-break: keep-all;
-    /* 折行時不讓「。」落到行首（避頭尾），寧可把「）。」一起帶到下一行 */
-    line-break: strict;
-  }
 }
 
 /* 跨期事件（有起訖日期）：日期欄由單行擴為兩行 —— 起始日期在上，
