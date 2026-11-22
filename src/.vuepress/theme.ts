@@ -1,7 +1,6 @@
 import type { Page } from "vuepress/core";
-import { hopeTheme } from "vuepress-theme-hope";
+import { hopeTheme, navbar as navbarConfig } from "vuepress-theme-hope";
 
-import navbar from "./navbar.js";
 import sidebar from "./sidebar.js";
 import { breadcrumbTrails, type TrailItem } from "./breadcrumb.js";
 import { chapterOfPath, pathSegments } from "./chapters.js";
@@ -15,12 +14,15 @@ import {
   LEGACY_INDEX_PATH,
   TIMELINE_PATH,
 } from "./page-meta.js";
-import { searchKeywords } from "./search/keywords.js";
-import { tokenizeForIndex } from "./search/tokenize.js";
-import { collectionItems } from "./seo/items.js";
-import { jsonLdGraph, ORGANIZATION_ID, WEBSITE_ID } from "./seo/graph.js";
-import { socialTags } from "./seo/social.js";
-import { sitemapModifiedTime } from "./sitemap.js";
+import { tokenizeForIndex } from "./search/text.js";
+import {
+  collectionItems,
+  jsonLdGraph,
+  ORGANIZATION_ID,
+  WEBSITE_ID,
+} from "./seo/graph.js";
+import { socialTags } from "./seo/head.js";
+import { sitemapModifiedTime } from "./seo/crawl.js";
 import {
   absoluteUrl,
   AUTHOR_NAME,
@@ -31,6 +33,22 @@ import {
   SITE_NAME,
   SITE_TAGLINE,
 } from "./site.js";
+
+/** 頂部導覽：入口頁只留三項，其餘主題交給首頁與側邊欄 */
+const navbar = navbarConfig([
+  {
+    text: "閱讀說明",
+    link: "/reading-notes.html",
+  },
+  {
+    text: "文獻綜覽",
+    link: TIMELINE_PATH,
+  },
+  {
+    text: "其他項目",
+    children: ["/project/ay1928/"],
+  },
+]);
 
 const cardUrl = (page: Page): string =>
   page.frontmatter.sitemap === false
@@ -64,6 +82,24 @@ function buildBreadcrumb(page: Page, url: string, trail: TrailItem[]) {
     })),
   };
 }
+
+/**
+ * 搜尋索引的高權重關鍵詞：章節、報刊、原始出版日與 description。
+ *
+ * 標題、各級標題與整篇正文由 slimsearch 自行索引，這裡不重複正文，避免
+ * 雙倍 postings。組裝擺在建置側（本檔），因為要用到 `page-meta` 的檔案
+ * 系統資訊；`search/text.ts` 要進瀏覽器 bundle，不能碰這些模組。
+ */
+const searchKeywords = (page: Page): string[] => {
+  const description = page.frontmatter.description;
+
+  return [
+    chapterOfPath(page.path),
+    typeof description === "string" ? description.trim() : undefined,
+    sourceOfPage(page)?.publication,
+    publishedDate(page),
+  ].filter((value): value is string => Boolean(value));
+};
 
 export default hopeTheme(
   {
