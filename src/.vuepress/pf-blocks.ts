@@ -36,8 +36,8 @@ import type { Plugin } from "vuepress/core";
  * - `cards`：清單每一項為一張卡，首行粗體為卡名（h3），其餘段落為說明。
  * - `members`：同上，但首行粗體須為連結 `**[姓名](/team/頁面.html)** 職務`，
  *   姓名即該頁入口（卡片其他部分不可點）。
- * - `now`／`tags`／`steps`：清單原樣輸出，只補上 `pf-now`／`pf-tags`／`tm-steps`
- *   類名，清單項內照常寫 `**標題**說明`。
+ * - `steps`：清單原樣輸出，只補上 `tm-steps` 類名，清單項內照常寫
+ *   `**標題**說明`。
  * - `lang`：`::: lang zh` 與 `::: lang en` 各包一份全文，內層照常寫上述容器與標題。
  *   兩份都會輸出，由 CSS 依 <html data-pf-lang> 只顯示一份（見 index.scss 的
  *   .pf-lang）。包裝層只影響直屬選擇器，故 h2 分割線另補一條 .pf-lang 版。
@@ -393,7 +393,7 @@ const renderLang = (ctx: Context): string => {
   );
 };
 
-/** `now`／`tags`／`steps`：清單原樣輸出，只補類名 */
+/** `steps`：有序清單原樣輸出，只補類名 */
 const listRenderer =
   (ordered: boolean, className: string) =>
   (ctx: Context): string => {
@@ -414,8 +414,6 @@ const RENDERERS: Record<string, (ctx: Context) => string> = {
   entries: renderEntries,
   cards: renderCards,
   members: renderMembers,
-  now: listRenderer(false, "pf-now"),
-  tags: listRenderer(false, "pf-tags"),
   steps: listRenderer(true, "tm-steps"),
   lang: renderLang,
 };
