@@ -4,7 +4,7 @@ import Layout from "./layouts/Layout.vue";
 import LangSwitch from "./components/LangSwitch.vue";
 import ReferenceBox from "./components/ReferenceBox.vue";
 import { installSearchPrefetch } from "./search/prefetch";
-import { splitQuery } from "./search/tokenize";
+import { splitQuery } from "./search/text";
 
 const MAX_CONTENTS_PER_RESULT = 5;
 
